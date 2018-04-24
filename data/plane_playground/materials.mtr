@@ -1,0 +1,45 @@
+//----------------------------------------------------------
+// File:		materials.mtr
+// Author:		BootEdit DAE Importer (: Kevin Bray's proxy :)
+// Copyright (C) 2004 Bootstrap Games.  All rights reserved.
+//----------------------------------------------------------
+data/plane_playground/textures/stones01_c
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		BumpMap					data/plane_playground/textures/floor_h.tga
+		NormalMap				data/plane_playground/textures/floor_n.tga
+		DiffuseMap				data/plane_playground/textures/floor_c.tga
+		SpecularMap				data/plane_playground/textures/floor_s.tga
+	}
+}
+
+data/plane_playground/textures/wallplate01_c
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		BumpMap					data/plane_playground/textures/wallplate01_h.tga
+		NormalMap				data/plane_playground/textures/wallplate01_n.tga
+		DiffuseMap				data/plane_playground/textures/wallplate01_c.tga
+		SpecularMap				data/plane_playground/textures/wallplate01_s.tga
+	}
+}
+
+data/plane_playground/textures/speeder_c
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		Bump
+		{
+			Map						data/plane_playground/textures/speeder_h4.tga [ Guess ]
+			ColorAdd				-0.000608, -0.000608, -0.000608, -0.000608
+		}
+		NormalMap				data/plane_playground/textures/speeder_n3.tga
+		DiffuseMap				data/plane_playground/textures/speeder_c.tga
+		SpecularMap				data/plane_playground/textures/speeder_s2.tga
+	}
+}
+
