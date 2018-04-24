@@ -1,0 +1,211 @@
+\hypertarget{class_gr_render_interaction}{
+\section{GrRenderInteraction Class Reference}
+\label{class_gr_render_interaction}\index{GrRenderInteraction@{GrRenderInteraction}}
+}
+{\tt \#include $<$GrRenderInteraction.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+enum \hyperlink{class_gr_render_interaction_c3028f317e185680efe057ea4df4cfd1}{ERENDERMODE} \{ \hyperlink{class_gr_render_interaction_c3028f317e185680efe057ea4df4cfd108df4903737965003ffb5d775bea155a}{ERM\_\-DEPTH}, 
+\hyperlink{class_gr_render_interaction_c3028f317e185680efe057ea4df4cfd19f9d5a94aa2941cc7cab943aef59172a}{ERM\_\-AMBIENT}, 
+\hyperlink{class_gr_render_interaction_c3028f317e185680efe057ea4df4cfd1a8f5a9c5dffa2c09e96bd12d119428f1}{ERM\_\-LIGHT}
+ \}
+\item 
+enum \hyperlink{class_gr_render_interaction_4d421ff0cd482c24f75c5337174b5938}{ETRANSFORMMODE} \{ \hyperlink{class_gr_render_interaction_4d421ff0cd482c24f75c5337174b59385ee8a001357a25c9db4cd8c2aa5a9d53}{ETM\_\-MODEL}, 
+\hyperlink{class_gr_render_interaction_4d421ff0cd482c24f75c5337174b59384041211e60e02f4da656fa38609ae8b8}{ETM\_\-WORLD}
+ \}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_render_interaction_d73d649007ba8056e0531f41b6496aba}{GrRenderInteraction} ()
+\item 
+\hyperlink{class_gr_render_interaction_570089439862a3a1d444108a4263069b}{$\sim$GrRenderInteraction} ()
+\item 
+void \hyperlink{class_gr_render_interaction_4acbd37e6393d7c7b7ed2e01258a4c25}{BeginRender} ()
+\item 
+void \hyperlink{class_gr_render_interaction_642460b8e369c750b07f01311e420881}{EndRender} ()
+\item 
+void \hyperlink{class_gr_render_interaction_ee21a51db085ea59af7a2cdd0b5fdd58}{SetRenderMode} (\hyperlink{class_gr_render_interaction_c3028f317e185680efe057ea4df4cfd1}{ERENDERMODE} \hyperlink{glext__bak_8h_1e71d9c196e4683cc06c4b54d53f7ef5}{mode})
+\item 
+void \hyperlink{class_gr_render_interaction_29c894cb71437e178f517197209b6323}{SetTransformMode} (\hyperlink{class_gr_render_interaction_4d421ff0cd482c24f75c5337174b5938}{ETRANSFORMMODE} \hyperlink{glext__bak_8h_1e71d9c196e4683cc06c4b54d53f7ef5}{mode})
+\item 
+void \hyperlink{class_gr_render_interaction_8ffc348f96b4ab387fcd52dc1a229880}{SetCamera} (const \hyperlink{class_gr_camera}{GrCamera} $\ast$camera)
+\item 
+void \hyperlink{class_gr_render_interaction_83f3aad936c6f009ddefd6178a9861c4}{SetLight} (const \hyperlink{class_gr_light}{GrLight} $\ast$light)
+\item 
+void \hyperlink{class_gr_render_interaction_0d365eacc1fa2057eba4c4589842a377}{SetMaterialPass} (\hyperlink{class_gr_material_pass}{GrMaterialPass} $\ast$materialPass)
+\item 
+void \hyperlink{class_gr_render_interaction_17cb9298a3a360436a57eeb2b3759f69}{SetTransform} (const \hyperlink{class_m_mat4x4}{MMat4x4} \&modelToWorld)
+\item 
+void \hyperlink{class_gr_render_interaction_3542d05d0d9bd8f3ef237d46c518c2d4}{Render} (const \hyperlink{class_gr_mesh}{GrMesh} $\ast$mesh, unsigned int \hyperlink{glext__bak_8h_7b8ad0b27a927682837f95528fa454f5}{range})
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 29 of file GrRenderInteraction.h.
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_gr_render_interaction_c3028f317e185680efe057ea4df4cfd1}{
+\index{GrRenderInteraction@{GrRenderInteraction}!ERENDERMODE@{ERENDERMODE}}
+\index{ERENDERMODE@{ERENDERMODE}!GrRenderInteraction@{GrRenderInteraction}}
+\subsubsection[{ERENDERMODE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GrRenderInteraction::ERENDERMODE}}}
+\label{class_gr_render_interaction_c3028f317e185680efe057ea4df4cfd1}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{ERM\_\-DEPTH@{ERM\_\-DEPTH}!GrRenderInteraction@{GrRenderInteraction}}\index{GrRenderInteraction@{GrRenderInteraction}!ERM\_\-DEPTH@{ERM\_\-DEPTH}}\item[{\em 
+\hypertarget{class_gr_render_interaction_c3028f317e185680efe057ea4df4cfd108df4903737965003ffb5d775bea155a}{
+ERM\_\-DEPTH}
+\label{class_gr_render_interaction_c3028f317e185680efe057ea4df4cfd108df4903737965003ffb5d775bea155a}
+}]\index{ERM\_\-AMBIENT@{ERM\_\-AMBIENT}!GrRenderInteraction@{GrRenderInteraction}}\index{GrRenderInteraction@{GrRenderInteraction}!ERM\_\-AMBIENT@{ERM\_\-AMBIENT}}\item[{\em 
+\hypertarget{class_gr_render_interaction_c3028f317e185680efe057ea4df4cfd19f9d5a94aa2941cc7cab943aef59172a}{
+ERM\_\-AMBIENT}
+\label{class_gr_render_interaction_c3028f317e185680efe057ea4df4cfd19f9d5a94aa2941cc7cab943aef59172a}
+}]\index{ERM\_\-LIGHT@{ERM\_\-LIGHT}!GrRenderInteraction@{GrRenderInteraction}}\index{GrRenderInteraction@{GrRenderInteraction}!ERM\_\-LIGHT@{ERM\_\-LIGHT}}\item[{\em 
+\hypertarget{class_gr_render_interaction_c3028f317e185680efe057ea4df4cfd1a8f5a9c5dffa2c09e96bd12d119428f1}{
+ERM\_\-LIGHT}
+\label{class_gr_render_interaction_c3028f317e185680efe057ea4df4cfd1a8f5a9c5dffa2c09e96bd12d119428f1}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 35 of file GrRenderInteraction.h.\hypertarget{class_gr_render_interaction_4d421ff0cd482c24f75c5337174b5938}{
+\index{GrRenderInteraction@{GrRenderInteraction}!ETRANSFORMMODE@{ETRANSFORMMODE}}
+\index{ETRANSFORMMODE@{ETRANSFORMMODE}!GrRenderInteraction@{GrRenderInteraction}}
+\subsubsection[{ETRANSFORMMODE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GrRenderInteraction::ETRANSFORMMODE}}}
+\label{class_gr_render_interaction_4d421ff0cd482c24f75c5337174b5938}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{ETM\_\-MODEL@{ETM\_\-MODEL}!GrRenderInteraction@{GrRenderInteraction}}\index{GrRenderInteraction@{GrRenderInteraction}!ETM\_\-MODEL@{ETM\_\-MODEL}}\item[{\em 
+\hypertarget{class_gr_render_interaction_4d421ff0cd482c24f75c5337174b59385ee8a001357a25c9db4cd8c2aa5a9d53}{
+ETM\_\-MODEL}
+\label{class_gr_render_interaction_4d421ff0cd482c24f75c5337174b59385ee8a001357a25c9db4cd8c2aa5a9d53}
+}]\index{ETM\_\-WORLD@{ETM\_\-WORLD}!GrRenderInteraction@{GrRenderInteraction}}\index{GrRenderInteraction@{GrRenderInteraction}!ETM\_\-WORLD@{ETM\_\-WORLD}}\item[{\em 
+\hypertarget{class_gr_render_interaction_4d421ff0cd482c24f75c5337174b59384041211e60e02f4da656fa38609ae8b8}{
+ETM\_\-WORLD}
+\label{class_gr_render_interaction_4d421ff0cd482c24f75c5337174b59384041211e60e02f4da656fa38609ae8b8}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 42 of file GrRenderInteraction.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_render_interaction_d73d649007ba8056e0531f41b6496aba}{
+\index{GrRenderInteraction@{GrRenderInteraction}!GrRenderInteraction@{GrRenderInteraction}}
+\index{GrRenderInteraction@{GrRenderInteraction}!GrRenderInteraction@{GrRenderInteraction}}
+\subsubsection[{GrRenderInteraction}]{\setlength{\rightskip}{0pt plus 5cm}GrRenderInteraction::GrRenderInteraction ()}}
+\label{class_gr_render_interaction_d73d649007ba8056e0531f41b6496aba}
+
+
+
+
+Definition at line 23 of file GrRenderInteraction.cpp.\hypertarget{class_gr_render_interaction_570089439862a3a1d444108a4263069b}{
+\index{GrRenderInteraction@{GrRenderInteraction}!$\sim$GrRenderInteraction@{$\sim$GrRenderInteraction}}
+\index{$\sim$GrRenderInteraction@{$\sim$GrRenderInteraction}!GrRenderInteraction@{GrRenderInteraction}}
+\subsubsection[{$\sim$GrRenderInteraction}]{\setlength{\rightskip}{0pt plus 5cm}GrRenderInteraction::$\sim$GrRenderInteraction ()}}
+\label{class_gr_render_interaction_570089439862a3a1d444108a4263069b}
+
+
+
+
+Definition at line 31 of file GrRenderInteraction.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_render_interaction_4acbd37e6393d7c7b7ed2e01258a4c25}{
+\index{GrRenderInteraction@{GrRenderInteraction}!BeginRender@{BeginRender}}
+\index{BeginRender@{BeginRender}!GrRenderInteraction@{GrRenderInteraction}}
+\subsubsection[{BeginRender}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderInteraction::BeginRender ()}}
+\label{class_gr_render_interaction_4acbd37e6393d7c7b7ed2e01258a4c25}
+
+
+
+
+Definition at line 43 of file GrRenderInteraction.cpp.\hypertarget{class_gr_render_interaction_642460b8e369c750b07f01311e420881}{
+\index{GrRenderInteraction@{GrRenderInteraction}!EndRender@{EndRender}}
+\index{EndRender@{EndRender}!GrRenderInteraction@{GrRenderInteraction}}
+\subsubsection[{EndRender}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderInteraction::EndRender ()}}
+\label{class_gr_render_interaction_642460b8e369c750b07f01311e420881}
+
+
+
+
+Definition at line 52 of file GrRenderInteraction.cpp.\hypertarget{class_gr_render_interaction_3542d05d0d9bd8f3ef237d46c518c2d4}{
+\index{GrRenderInteraction@{GrRenderInteraction}!Render@{Render}}
+\index{Render@{Render}!GrRenderInteraction@{GrRenderInteraction}}
+\subsubsection[{Render}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderInteraction::Render (const {\bf GrMesh} $\ast$ {\em mesh}, \/  unsigned int {\em range})}}
+\label{class_gr_render_interaction_3542d05d0d9bd8f3ef237d46c518c2d4}
+
+
+
+
+Definition at line 109 of file GrRenderInteraction.cpp.\hypertarget{class_gr_render_interaction_8ffc348f96b4ab387fcd52dc1a229880}{
+\index{GrRenderInteraction@{GrRenderInteraction}!SetCamera@{SetCamera}}
+\index{SetCamera@{SetCamera}!GrRenderInteraction@{GrRenderInteraction}}
+\subsubsection[{SetCamera}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderInteraction::SetCamera (const {\bf GrCamera} $\ast$ {\em camera})}}
+\label{class_gr_render_interaction_8ffc348f96b4ab387fcd52dc1a229880}
+
+
+
+
+Definition at line 81 of file GrRenderInteraction.cpp.\hypertarget{class_gr_render_interaction_83f3aad936c6f009ddefd6178a9861c4}{
+\index{GrRenderInteraction@{GrRenderInteraction}!SetLight@{SetLight}}
+\index{SetLight@{SetLight}!GrRenderInteraction@{GrRenderInteraction}}
+\subsubsection[{SetLight}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderInteraction::SetLight (const {\bf GrLight} $\ast$ {\em light})}}
+\label{class_gr_render_interaction_83f3aad936c6f009ddefd6178a9861c4}
+
+
+
+
+Definition at line 88 of file GrRenderInteraction.cpp.\hypertarget{class_gr_render_interaction_0d365eacc1fa2057eba4c4589842a377}{
+\index{GrRenderInteraction@{GrRenderInteraction}!SetMaterialPass@{SetMaterialPass}}
+\index{SetMaterialPass@{SetMaterialPass}!GrRenderInteraction@{GrRenderInteraction}}
+\subsubsection[{SetMaterialPass}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderInteraction::SetMaterialPass ({\bf GrMaterialPass} $\ast$ {\em materialPass})}}
+\label{class_gr_render_interaction_0d365eacc1fa2057eba4c4589842a377}
+
+
+
+
+Definition at line 95 of file GrRenderInteraction.cpp.\hypertarget{class_gr_render_interaction_ee21a51db085ea59af7a2cdd0b5fdd58}{
+\index{GrRenderInteraction@{GrRenderInteraction}!SetRenderMode@{SetRenderMode}}
+\index{SetRenderMode@{SetRenderMode}!GrRenderInteraction@{GrRenderInteraction}}
+\subsubsection[{SetRenderMode}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderInteraction::SetRenderMode ({\bf ERENDERMODE} {\em mode})}}
+\label{class_gr_render_interaction_ee21a51db085ea59af7a2cdd0b5fdd58}
+
+
+
+
+Definition at line 67 of file GrRenderInteraction.cpp.\hypertarget{class_gr_render_interaction_17cb9298a3a360436a57eeb2b3759f69}{
+\index{GrRenderInteraction@{GrRenderInteraction}!SetTransform@{SetTransform}}
+\index{SetTransform@{SetTransform}!GrRenderInteraction@{GrRenderInteraction}}
+\subsubsection[{SetTransform}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderInteraction::SetTransform (const {\bf MMat4x4} \& {\em modelToWorld})}}
+\label{class_gr_render_interaction_17cb9298a3a360436a57eeb2b3759f69}
+
+
+
+
+Definition at line 102 of file GrRenderInteraction.cpp.\hypertarget{class_gr_render_interaction_29c894cb71437e178f517197209b6323}{
+\index{GrRenderInteraction@{GrRenderInteraction}!SetTransformMode@{SetTransformMode}}
+\index{SetTransformMode@{SetTransformMode}!GrRenderInteraction@{GrRenderInteraction}}
+\subsubsection[{SetTransformMode}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderInteraction::SetTransformMode ({\bf ETRANSFORMMODE} {\em mode})}}
+\label{class_gr_render_interaction_29c894cb71437e178f517197209b6323}
+
+
+
+
+Definition at line 74 of file GrRenderInteraction.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_render_interaction_8h}{GrRenderInteraction.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_render_interaction_8cpp}{GrRenderInteraction.cpp}\end{CompactItemize}

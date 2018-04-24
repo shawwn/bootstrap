@@ -1,0 +1,279 @@
+\hypertarget{_u_t_x_8h}{
+\section{C:/Bootstrap/ProjectBX/Engine/UberTexture/UTX.h File Reference}
+\label{_u_t_x_8h}\index{C:/Bootstrap/ProjectBX/Engine/UberTexture/UTX.h@{C:/Bootstrap/ProjectBX/Engine/UberTexture/UTX.h}}
+}
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+struct \hyperlink{struct_u_t_x__stream__t}{UTX\_\-stream\_\-t}
+\end{CompactItemize}
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \hyperlink{_u_t_x_8h_7d9767a167aefa9e7e28e2341fc7764e}{UTX\_\-FLAGS\_\-RGBA}~1
+\item 
+\#define \hyperlink{_u_t_x_8h_c68cf4dc7e3f0cd82eb7ed4aa04ce4bb}{UTX\_\-FLAGS\_\-FINALIZED}~2
+\item 
+\#define \hyperlink{_u_t_x_8h_8242dce7f62c1845e2fa89daaa70de58}{UTX\_\-CHANNELFLAGS\_\-SUBSAMPLED}~1
+\item 
+\#define \hyperlink{_u_t_x_8h_ae849206cfa9af81f5d7eec9d3d4b596}{UTX\_\-CHANNELFLAGS\_\-DCT}~2
+\item 
+\#define \hyperlink{_u_t_x_8h_a254d9bac3ece6a9d99def539e8a80eb}{\_\-\_\-int64}~long long
+\end{CompactItemize}
+\subsection*{Typedefs}
+\begin{CompactItemize}
+\item 
+typedef unsigned int \hyperlink{_u_t_x_8h_27fe6e33ffe813fb674e2a97982670dd}{UTFlags}
+\item 
+typedef unsigned int \hyperlink{_u_t_x_8h_cffa144f9ef0c71c122e3ff954aee5b1}{UTChannelFlags}
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+void \hyperlink{_u_t_x_8h_434445d232888dc6c74be835e952e412}{UTX\_\-InitStream} (\hyperlink{struct_u_t_x__stream__t}{UTX\_\-stream\_\-t} $\ast$stream)
+\item 
+bool \hyperlink{_u_t_x_8h_ee152529d6efb39095f4174c0c5f34be}{UTX\_\-IsStream} (\hyperlink{struct_u_t_x__stream__t}{UTX\_\-stream\_\-t} $\ast$stream)
+\item 
+bool \hyperlink{_u_t_x_8h_b09944ed77293f89ab3258cd4e9eb6ed}{UTX\_\-CreateStream} (\hyperlink{struct_u_t_x__stream__t}{UTX\_\-stream\_\-t} $\ast$stream, const char $\ast$fileName, int \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, int \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height}, int stageCount, \hyperlink{_u_t_x_8h_27fe6e33ffe813fb674e2a97982670dd}{UTFlags} $\ast$\hyperlink{_u_t_message_8h_0a3c0b351ab09281b662a9ff4f900a53}{flags}, int $\ast$channels)
+\item 
+bool \hyperlink{_u_t_x_8h_91f39300c901600165dd5368628859d6}{UTX\_\-OpenStream} (\hyperlink{struct_u_t_x__stream__t}{UTX\_\-stream\_\-t} $\ast$stream, const char $\ast$fileName)
+\item 
+bool \hyperlink{_u_t_x_8h_948bec9c20341be4c0458de77aa18fd4}{UTX\_\-FinalizeStream} (\hyperlink{struct_u_t_x__stream__t}{UTX\_\-stream\_\-t} $\ast$stream, \hyperlink{_u_t_x_8h_cffa144f9ef0c71c122e3ff954aee5b1}{UTChannelFlags} $\ast$channelFlags, unsigned int quality)
+\item 
+int \hyperlink{_u_t_x_8h_46220537d288704530ee6e83c8360630}{UTX\_\-GetWidth} (\hyperlink{struct_u_t_x__stream__t}{UTX\_\-stream\_\-t} $\ast$stream)
+\item 
+int \hyperlink{_u_t_x_8h_27d64cf1b9f14aef03dcceb808ac65b3}{UTX\_\-GetHeight} (\hyperlink{struct_u_t_x__stream__t}{UTX\_\-stream\_\-t} $\ast$stream)
+\item 
+int \hyperlink{_u_t_x_8h_0ec987ddd21b653b93603a9079d613b1}{UTX\_\-NumStages} (\hyperlink{struct_u_t_x__stream__t}{UTX\_\-stream\_\-t} $\ast$stream)
+\item 
+\hyperlink{_u_t_x_8h_27fe6e33ffe813fb674e2a97982670dd}{UTFlags} \hyperlink{_u_t_x_8h_fbad157df3f1ed3f3276a45d085e0a81}{UTX\_\-GetStageFlags} (\hyperlink{struct_u_t_x__stream__t}{UTX\_\-stream\_\-t} $\ast$stream, int stage)
+\item 
+int \hyperlink{_u_t_x_8h_5b1ac8457a9c4189b73359ca1b1874b5}{UTX\_\-NumStageChannels} (\hyperlink{struct_u_t_x__stream__t}{UTX\_\-stream\_\-t} $\ast$stream, int stage)
+\item 
+int \hyperlink{_u_t_x_8h_e2176b26dba88c88fa14e2f2200899b6}{UTX\_\-CalcStageTileSize} (\hyperlink{struct_u_t_x__stream__t}{UTX\_\-stream\_\-t} $\ast$stream, int stage)
+\item 
+int \hyperlink{_u_t_x_8h_f7a7076f23b911b670fbe3cbcde010f4}{UTX\_\-CalcTileSize} (\hyperlink{struct_u_t_x__stream__t}{UTX\_\-stream\_\-t} $\ast$stream)
+\item 
+void \hyperlink{_u_t_x_8h_e3804d41d2c4e516ce0b408aae566baf}{UTX\_\-CloseStream} (\hyperlink{struct_u_t_x__stream__t}{UTX\_\-stream\_\-t} $\ast$stream)
+\item 
+void \hyperlink{_u_t_x_8h_ee9c7baf302016961caf315ba52bc777}{UTX\_\-OptimizeReadOrder} (\hyperlink{struct_u_t_x__stream__t}{UTX\_\-stream\_\-t} $\ast$stream, unsigned int $\ast$packedTiles, unsigned int \hyperlink{wglext_8h_98d18d6b4e3ba4ed266c6fb54c839d70}{count})
+\item 
+bool \hyperlink{_u_t_x_8h_d7b1c4103e1beef2d9e4dd9a6eeaad6b}{UTX\_\-ReadTile} (\hyperlink{struct_u_t_x__stream__t}{UTX\_\-stream\_\-t} $\ast$stream, void $\ast$dest, int \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x}, int \hyperlink{wglext_8h_9298c7ad619074f5285b32c6b72bfdea}{y}, int mipLevel, int $\ast$bytesRead=0)
+\item 
+bool \hyperlink{_u_t_x_8h_6197bad61382d6463b8b41a38477fecd}{UTX\_\-WriteTile} (\hyperlink{struct_u_t_x__stream__t}{UTX\_\-stream\_\-t} $\ast$stream, int \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x}, int \hyperlink{wglext_8h_9298c7ad619074f5285b32c6b72bfdea}{y}, int mipLevel, const void $\ast$\hyperlink{glext__bak_8h_fd3b198d09b41a863127e5e2b29c4e53}{source}, int $\ast$bytesWritten=0)
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_u_t_x_8h_a254d9bac3ece6a9d99def539e8a80eb}{
+\index{UTX.h@{UTX.h}!\_\-\_\-int64@{\_\-\_\-int64}}
+\index{\_\-\_\-int64@{\_\-\_\-int64}!UTX.h@{UTX.h}}
+\subsubsection[{\_\-\_\-int64}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \_\-\_\-int64}~long long}}
+\label{_u_t_x_8h_a254d9bac3ece6a9d99def539e8a80eb}
+
+
+
+
+Definition at line 58 of file UTX.h.\hypertarget{_u_t_x_8h_ae849206cfa9af81f5d7eec9d3d4b596}{
+\index{UTX.h@{UTX.h}!UTX\_\-CHANNELFLAGS\_\-DCT@{UTX\_\-CHANNELFLAGS\_\-DCT}}
+\index{UTX\_\-CHANNELFLAGS\_\-DCT@{UTX\_\-CHANNELFLAGS\_\-DCT}!UTX.h@{UTX.h}}
+\subsubsection[{UTX\_\-CHANNELFLAGS\_\-DCT}]{\setlength{\rightskip}{0pt plus 5cm}\#define UTX\_\-CHANNELFLAGS\_\-DCT~2}}
+\label{_u_t_x_8h_ae849206cfa9af81f5d7eec9d3d4b596}
+
+
+
+
+Definition at line 55 of file UTX.h.\hypertarget{_u_t_x_8h_8242dce7f62c1845e2fa89daaa70de58}{
+\index{UTX.h@{UTX.h}!UTX\_\-CHANNELFLAGS\_\-SUBSAMPLED@{UTX\_\-CHANNELFLAGS\_\-SUBSAMPLED}}
+\index{UTX\_\-CHANNELFLAGS\_\-SUBSAMPLED@{UTX\_\-CHANNELFLAGS\_\-SUBSAMPLED}!UTX.h@{UTX.h}}
+\subsubsection[{UTX\_\-CHANNELFLAGS\_\-SUBSAMPLED}]{\setlength{\rightskip}{0pt plus 5cm}\#define UTX\_\-CHANNELFLAGS\_\-SUBSAMPLED~1}}
+\label{_u_t_x_8h_8242dce7f62c1845e2fa89daaa70de58}
+
+
+
+
+Definition at line 51 of file UTX.h.\hypertarget{_u_t_x_8h_c68cf4dc7e3f0cd82eb7ed4aa04ce4bb}{
+\index{UTX.h@{UTX.h}!UTX\_\-FLAGS\_\-FINALIZED@{UTX\_\-FLAGS\_\-FINALIZED}}
+\index{UTX\_\-FLAGS\_\-FINALIZED@{UTX\_\-FLAGS\_\-FINALIZED}!UTX.h@{UTX.h}}
+\subsubsection[{UTX\_\-FLAGS\_\-FINALIZED}]{\setlength{\rightskip}{0pt plus 5cm}\#define UTX\_\-FLAGS\_\-FINALIZED~2}}
+\label{_u_t_x_8h_c68cf4dc7e3f0cd82eb7ed4aa04ce4bb}
+
+
+
+
+Definition at line 42 of file UTX.h.\hypertarget{_u_t_x_8h_7d9767a167aefa9e7e28e2341fc7764e}{
+\index{UTX.h@{UTX.h}!UTX\_\-FLAGS\_\-RGBA@{UTX\_\-FLAGS\_\-RGBA}}
+\index{UTX\_\-FLAGS\_\-RGBA@{UTX\_\-FLAGS\_\-RGBA}!UTX.h@{UTX.h}}
+\subsubsection[{UTX\_\-FLAGS\_\-RGBA}]{\setlength{\rightskip}{0pt plus 5cm}\#define UTX\_\-FLAGS\_\-RGBA~1}}
+\label{_u_t_x_8h_7d9767a167aefa9e7e28e2341fc7764e}
+
+
+
+
+Definition at line 38 of file UTX.h.
+
+\subsection{Typedef Documentation}
+\hypertarget{_u_t_x_8h_cffa144f9ef0c71c122e3ff954aee5b1}{
+\index{UTX.h@{UTX.h}!UTChannelFlags@{UTChannelFlags}}
+\index{UTChannelFlags@{UTChannelFlags}!UTX.h@{UTX.h}}
+\subsubsection[{UTChannelFlags}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int {\bf UTChannelFlags}}}
+\label{_u_t_x_8h_cffa144f9ef0c71c122e3ff954aee5b1}
+
+
+
+
+Definition at line 47 of file UTX.h.\hypertarget{_u_t_x_8h_27fe6e33ffe813fb674e2a97982670dd}{
+\index{UTX.h@{UTX.h}!UTFlags@{UTFlags}}
+\index{UTFlags@{UTFlags}!UTX.h@{UTX.h}}
+\subsubsection[{UTFlags}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int {\bf UTFlags}}}
+\label{_u_t_x_8h_27fe6e33ffe813fb674e2a97982670dd}
+
+
+
+
+Definition at line 17 of file UTX.h.
+
+\subsection{Function Documentation}
+\hypertarget{_u_t_x_8h_e2176b26dba88c88fa14e2f2200899b6}{
+\index{UTX.h@{UTX.h}!UTX\_\-CalcStageTileSize@{UTX\_\-CalcStageTileSize}}
+\index{UTX\_\-CalcStageTileSize@{UTX\_\-CalcStageTileSize}!UTX.h@{UTX.h}}
+\subsubsection[{UTX\_\-CalcStageTileSize}]{\setlength{\rightskip}{0pt plus 5cm}int UTX\_\-CalcStageTileSize ({\bf UTX\_\-stream\_\-t} $\ast$ {\em stream}, \/  int {\em stage})}}
+\label{_u_t_x_8h_e2176b26dba88c88fa14e2f2200899b6}
+
+
+
+
+Definition at line 488 of file UTX.cpp.\hypertarget{_u_t_x_8h_f7a7076f23b911b670fbe3cbcde010f4}{
+\index{UTX.h@{UTX.h}!UTX\_\-CalcTileSize@{UTX\_\-CalcTileSize}}
+\index{UTX\_\-CalcTileSize@{UTX\_\-CalcTileSize}!UTX.h@{UTX.h}}
+\subsubsection[{UTX\_\-CalcTileSize}]{\setlength{\rightskip}{0pt plus 5cm}int UTX\_\-CalcTileSize ({\bf UTX\_\-stream\_\-t} $\ast$ {\em stream})}}
+\label{_u_t_x_8h_f7a7076f23b911b670fbe3cbcde010f4}
+
+
+
+
+Definition at line 495 of file UTX.cpp.\hypertarget{_u_t_x_8h_e3804d41d2c4e516ce0b408aae566baf}{
+\index{UTX.h@{UTX.h}!UTX\_\-CloseStream@{UTX\_\-CloseStream}}
+\index{UTX\_\-CloseStream@{UTX\_\-CloseStream}!UTX.h@{UTX.h}}
+\subsubsection[{UTX\_\-CloseStream}]{\setlength{\rightskip}{0pt plus 5cm}void UTX\_\-CloseStream ({\bf UTX\_\-stream\_\-t} $\ast$ {\em stream})}}
+\label{_u_t_x_8h_e3804d41d2c4e516ce0b408aae566baf}
+
+
+
+
+Definition at line 508 of file UTX.cpp.\hypertarget{_u_t_x_8h_b09944ed77293f89ab3258cd4e9eb6ed}{
+\index{UTX.h@{UTX.h}!UTX\_\-CreateStream@{UTX\_\-CreateStream}}
+\index{UTX\_\-CreateStream@{UTX\_\-CreateStream}!UTX.h@{UTX.h}}
+\subsubsection[{UTX\_\-CreateStream}]{\setlength{\rightskip}{0pt plus 5cm}bool UTX\_\-CreateStream ({\bf UTX\_\-stream\_\-t} $\ast$ {\em stream}, \/  const char $\ast$ {\em fileName}, \/  int {\em width}, \/  int {\em height}, \/  int {\em stageCount}, \/  {\bf UTFlags} $\ast$ {\em flags}, \/  int $\ast$ {\em channels})}}
+\label{_u_t_x_8h_b09944ed77293f89ab3258cd4e9eb6ed}
+
+
+
+
+Definition at line 224 of file UTX.cpp.\hypertarget{_u_t_x_8h_948bec9c20341be4c0458de77aa18fd4}{
+\index{UTX.h@{UTX.h}!UTX\_\-FinalizeStream@{UTX\_\-FinalizeStream}}
+\index{UTX\_\-FinalizeStream@{UTX\_\-FinalizeStream}!UTX.h@{UTX.h}}
+\subsubsection[{UTX\_\-FinalizeStream}]{\setlength{\rightskip}{0pt plus 5cm}bool UTX\_\-FinalizeStream ({\bf UTX\_\-stream\_\-t} $\ast$ {\em stream}, \/  {\bf UTChannelFlags} $\ast$ {\em channelFlags}, \/  unsigned int {\em quality})}}
+\label{_u_t_x_8h_948bec9c20341be4c0458de77aa18fd4}
+
+
+\hypertarget{_u_t_x_8h_27d64cf1b9f14aef03dcceb808ac65b3}{
+\index{UTX.h@{UTX.h}!UTX\_\-GetHeight@{UTX\_\-GetHeight}}
+\index{UTX\_\-GetHeight@{UTX\_\-GetHeight}!UTX.h@{UTX.h}}
+\subsubsection[{UTX\_\-GetHeight}]{\setlength{\rightskip}{0pt plus 5cm}int UTX\_\-GetHeight ({\bf UTX\_\-stream\_\-t} $\ast$ {\em stream})}}
+\label{_u_t_x_8h_27d64cf1b9f14aef03dcceb808ac65b3}
+
+
+
+
+Definition at line 458 of file UTX.cpp.\hypertarget{_u_t_x_8h_fbad157df3f1ed3f3276a45d085e0a81}{
+\index{UTX.h@{UTX.h}!UTX\_\-GetStageFlags@{UTX\_\-GetStageFlags}}
+\index{UTX\_\-GetStageFlags@{UTX\_\-GetStageFlags}!UTX.h@{UTX.h}}
+\subsubsection[{UTX\_\-GetStageFlags}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UTFlags} UTX\_\-GetStageFlags ({\bf UTX\_\-stream\_\-t} $\ast$ {\em stream}, \/  int {\em stage})}}
+\label{_u_t_x_8h_fbad157df3f1ed3f3276a45d085e0a81}
+
+
+
+
+Definition at line 474 of file UTX.cpp.\hypertarget{_u_t_x_8h_46220537d288704530ee6e83c8360630}{
+\index{UTX.h@{UTX.h}!UTX\_\-GetWidth@{UTX\_\-GetWidth}}
+\index{UTX\_\-GetWidth@{UTX\_\-GetWidth}!UTX.h@{UTX.h}}
+\subsubsection[{UTX\_\-GetWidth}]{\setlength{\rightskip}{0pt plus 5cm}int UTX\_\-GetWidth ({\bf UTX\_\-stream\_\-t} $\ast$ {\em stream})}}
+\label{_u_t_x_8h_46220537d288704530ee6e83c8360630}
+
+
+
+
+Definition at line 450 of file UTX.cpp.\hypertarget{_u_t_x_8h_434445d232888dc6c74be835e952e412}{
+\index{UTX.h@{UTX.h}!UTX\_\-InitStream@{UTX\_\-InitStream}}
+\index{UTX\_\-InitStream@{UTX\_\-InitStream}!UTX.h@{UTX.h}}
+\subsubsection[{UTX\_\-InitStream}]{\setlength{\rightskip}{0pt plus 5cm}void UTX\_\-InitStream ({\bf UTX\_\-stream\_\-t} $\ast$ {\em stream})}}
+\label{_u_t_x_8h_434445d232888dc6c74be835e952e412}
+
+
+
+
+Definition at line 206 of file UTX.cpp.\hypertarget{_u_t_x_8h_ee152529d6efb39095f4174c0c5f34be}{
+\index{UTX.h@{UTX.h}!UTX\_\-IsStream@{UTX\_\-IsStream}}
+\index{UTX\_\-IsStream@{UTX\_\-IsStream}!UTX.h@{UTX.h}}
+\subsubsection[{UTX\_\-IsStream}]{\setlength{\rightskip}{0pt plus 5cm}bool UTX\_\-IsStream ({\bf UTX\_\-stream\_\-t} $\ast$ {\em stream})}}
+\label{_u_t_x_8h_ee152529d6efb39095f4174c0c5f34be}
+
+
+
+
+Definition at line 217 of file UTX.cpp.\hypertarget{_u_t_x_8h_5b1ac8457a9c4189b73359ca1b1874b5}{
+\index{UTX.h@{UTX.h}!UTX\_\-NumStageChannels@{UTX\_\-NumStageChannels}}
+\index{UTX\_\-NumStageChannels@{UTX\_\-NumStageChannels}!UTX.h@{UTX.h}}
+\subsubsection[{UTX\_\-NumStageChannels}]{\setlength{\rightskip}{0pt plus 5cm}int UTX\_\-NumStageChannels ({\bf UTX\_\-stream\_\-t} $\ast$ {\em stream}, \/  int {\em stage})}}
+\label{_u_t_x_8h_5b1ac8457a9c4189b73359ca1b1874b5}
+
+
+
+
+Definition at line 481 of file UTX.cpp.\hypertarget{_u_t_x_8h_0ec987ddd21b653b93603a9079d613b1}{
+\index{UTX.h@{UTX.h}!UTX\_\-NumStages@{UTX\_\-NumStages}}
+\index{UTX\_\-NumStages@{UTX\_\-NumStages}!UTX.h@{UTX.h}}
+\subsubsection[{UTX\_\-NumStages}]{\setlength{\rightskip}{0pt plus 5cm}int UTX\_\-NumStages ({\bf UTX\_\-stream\_\-t} $\ast$ {\em stream})}}
+\label{_u_t_x_8h_0ec987ddd21b653b93603a9079d613b1}
+
+
+
+
+Definition at line 466 of file UTX.cpp.\hypertarget{_u_t_x_8h_91f39300c901600165dd5368628859d6}{
+\index{UTX.h@{UTX.h}!UTX\_\-OpenStream@{UTX\_\-OpenStream}}
+\index{UTX\_\-OpenStream@{UTX\_\-OpenStream}!UTX.h@{UTX.h}}
+\subsubsection[{UTX\_\-OpenStream}]{\setlength{\rightskip}{0pt plus 5cm}bool UTX\_\-OpenStream ({\bf UTX\_\-stream\_\-t} $\ast$ {\em stream}, \/  const char $\ast$ {\em fileName})}}
+\label{_u_t_x_8h_91f39300c901600165dd5368628859d6}
+
+
+
+
+Definition at line 368 of file UTX.cpp.\hypertarget{_u_t_x_8h_ee9c7baf302016961caf315ba52bc777}{
+\index{UTX.h@{UTX.h}!UTX\_\-OptimizeReadOrder@{UTX\_\-OptimizeReadOrder}}
+\index{UTX\_\-OptimizeReadOrder@{UTX\_\-OptimizeReadOrder}!UTX.h@{UTX.h}}
+\subsubsection[{UTX\_\-OptimizeReadOrder}]{\setlength{\rightskip}{0pt plus 5cm}void UTX\_\-OptimizeReadOrder ({\bf UTX\_\-stream\_\-t} $\ast$ {\em stream}, \/  unsigned int $\ast$ {\em packedTiles}, \/  unsigned int {\em count})}}
+\label{_u_t_x_8h_ee9c7baf302016961caf315ba52bc777}
+
+
+
+
+Definition at line 526 of file UTX.cpp.\hypertarget{_u_t_x_8h_d7b1c4103e1beef2d9e4dd9a6eeaad6b}{
+\index{UTX.h@{UTX.h}!UTX\_\-ReadTile@{UTX\_\-ReadTile}}
+\index{UTX\_\-ReadTile@{UTX\_\-ReadTile}!UTX.h@{UTX.h}}
+\subsubsection[{UTX\_\-ReadTile}]{\setlength{\rightskip}{0pt plus 5cm}bool UTX\_\-ReadTile ({\bf UTX\_\-stream\_\-t} $\ast$ {\em stream}, \/  void $\ast$ {\em dest}, \/  int {\em x}, \/  int {\em y}, \/  int {\em mipLevel}, \/  int $\ast$ {\em bytesRead} = {\tt 0})}}
+\label{_u_t_x_8h_d7b1c4103e1beef2d9e4dd9a6eeaad6b}
+
+
+
+
+Definition at line 557 of file UTX.cpp.\hypertarget{_u_t_x_8h_6197bad61382d6463b8b41a38477fecd}{
+\index{UTX.h@{UTX.h}!UTX\_\-WriteTile@{UTX\_\-WriteTile}}
+\index{UTX\_\-WriteTile@{UTX\_\-WriteTile}!UTX.h@{UTX.h}}
+\subsubsection[{UTX\_\-WriteTile}]{\setlength{\rightskip}{0pt plus 5cm}bool UTX\_\-WriteTile ({\bf UTX\_\-stream\_\-t} $\ast$ {\em stream}, \/  int {\em x}, \/  int {\em y}, \/  int {\em mipLevel}, \/  const void $\ast$ {\em source}, \/  int $\ast$ {\em bytesWritten} = {\tt 0})}}
+\label{_u_t_x_8h_6197bad61382d6463b8b41a38477fecd}
+
+
+
+
+Definition at line 644 of file UTX.cpp.

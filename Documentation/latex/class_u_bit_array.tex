@@ -1,0 +1,191 @@
+\hypertarget{class_u_bit_array}{
+\section{UBitArray Class Reference}
+\label{class_u_bit_array}\index{UBitArray@{UBitArray}}
+}
+{\tt \#include $<$UBitArray.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_u_bit_array_f83313fac0dd451a572604c516e241e0}{UBitArray} ()
+\item 
+\hyperlink{class_u_bit_array_02dc5ddf7cbc7d723dc93ea490de48bb}{UBitArray} (unsigned char $\ast$\hyperlink{glext__bak_8h_69926c009f2d52c6b6d2c76784af8c64}{data}, unsigned int bitCount)
+\item 
+\hyperlink{class_u_bit_array_745b48ebd9c9588d615961ffd86ddeed}{$\sim$UBitArray} ()
+\item 
+void \hyperlink{class_u_bit_array_d6e3884e3d3cc1f8c2882c0e3d181b89}{Resize} (unsigned int newSize)
+\item 
+void \hyperlink{class_u_bit_array_65be0cc53c2ee958106162939cfd303a}{PushBit} (unsigned int \hyperlink{glext__bak_8h_6a4f8a1a444e9080b297963b3db29fe0}{value})
+\item 
+void \hyperlink{class_u_bit_array_4f1baeb839a973bacdb02ffffe2bd6a8}{PushBits} (unsigned int \hyperlink{glext__bak_8h_6a4f8a1a444e9080b297963b3db29fe0}{value}, unsigned int \hyperlink{wglext_8h_98d18d6b4e3ba4ed266c6fb54c839d70}{count})
+\item 
+void \hyperlink{class_u_bit_array_7a8e2cda64a7b0813a78520e3d4e7174}{PushBits} (int \hyperlink{glext__bak_8h_6a4f8a1a444e9080b297963b3db29fe0}{value}, unsigned int \hyperlink{wglext_8h_98d18d6b4e3ba4ed266c6fb54c839d70}{count})
+\item 
+unsigned int \hyperlink{class_u_bit_array_6329080b1012d67e42fa707ad2d3473f}{PopBit} ()
+\item 
+unsigned int \hyperlink{class_u_bit_array_cce4aede040372fb8c2db3e60d09b4f7}{PopBits} (unsigned int \hyperlink{wglext_8h_98d18d6b4e3ba4ed266c6fb54c839d70}{count})
+\item 
+int \hyperlink{class_u_bit_array_03fdd22136b0cb1db321c9ded22d6d04}{PopBitsSignExtend} (unsigned int \hyperlink{wglext_8h_98d18d6b4e3ba4ed266c6fb54c839d70}{count})
+\item 
+unsigned int \hyperlink{class_u_bit_array_e560511d0cc3b130dd181f9e6ce576f1}{PeekTopBit} ()
+\item 
+void \hyperlink{class_u_bit_array_a265435baf940dc2f48ba9b38b51229f}{SetBitValue} (unsigned int idx, unsigned int \hyperlink{glext__bak_8h_6a4f8a1a444e9080b297963b3db29fe0}{value})
+\item 
+unsigned int \hyperlink{class_u_bit_array_6654e49916d787d8a50242bde1c581c7}{GetBitValue} (unsigned int idx) const 
+\item 
+const unsigned char $\ast$ \hyperlink{class_u_bit_array_6452f2d20fe94f2de39da8b927c8bbc7}{GetBits} () const 
+\item 
+unsigned int \hyperlink{class_u_bit_array_c6cf3c780c9bb99533551ce7b766b740}{GetBitCount} () const 
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 18 of file UBitArray.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_u_bit_array_f83313fac0dd451a572604c516e241e0}{
+\index{UBitArray@{UBitArray}!UBitArray@{UBitArray}}
+\index{UBitArray@{UBitArray}!UBitArray@{UBitArray}}
+\subsubsection[{UBitArray}]{\setlength{\rightskip}{0pt plus 5cm}UBitArray::UBitArray ()}}
+\label{class_u_bit_array_f83313fac0dd451a572604c516e241e0}
+
+
+
+
+Definition at line 24 of file UBitArray.cpp.\hypertarget{class_u_bit_array_02dc5ddf7cbc7d723dc93ea490de48bb}{
+\index{UBitArray@{UBitArray}!UBitArray@{UBitArray}}
+\index{UBitArray@{UBitArray}!UBitArray@{UBitArray}}
+\subsubsection[{UBitArray}]{\setlength{\rightskip}{0pt plus 5cm}UBitArray::UBitArray (unsigned char $\ast$ {\em data}, \/  unsigned int {\em bitCount})}}
+\label{class_u_bit_array_02dc5ddf7cbc7d723dc93ea490de48bb}
+
+
+
+
+Definition at line 32 of file UBitArray.cpp.\hypertarget{class_u_bit_array_745b48ebd9c9588d615961ffd86ddeed}{
+\index{UBitArray@{UBitArray}!$\sim$UBitArray@{$\sim$UBitArray}}
+\index{$\sim$UBitArray@{$\sim$UBitArray}!UBitArray@{UBitArray}}
+\subsubsection[{$\sim$UBitArray}]{\setlength{\rightskip}{0pt plus 5cm}UBitArray::$\sim$UBitArray ()}}
+\label{class_u_bit_array_745b48ebd9c9588d615961ffd86ddeed}
+
+
+
+
+Definition at line 40 of file UBitArray.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_u_bit_array_c6cf3c780c9bb99533551ce7b766b740}{
+\index{UBitArray@{UBitArray}!GetBitCount@{GetBitCount}}
+\index{GetBitCount@{GetBitCount}!UBitArray@{UBitArray}}
+\subsubsection[{GetBitCount}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int UBitArray::GetBitCount () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_bit_array_c6cf3c780c9bb99533551ce7b766b740}
+
+
+
+
+Definition at line 43 of file UBitArray.h.\hypertarget{class_u_bit_array_6452f2d20fe94f2de39da8b927c8bbc7}{
+\index{UBitArray@{UBitArray}!GetBits@{GetBits}}
+\index{GetBits@{GetBits}!UBitArray@{UBitArray}}
+\subsubsection[{GetBits}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned char$\ast$ UBitArray::GetBits () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_bit_array_6452f2d20fe94f2de39da8b927c8bbc7}
+
+
+
+
+Definition at line 42 of file UBitArray.h.\hypertarget{class_u_bit_array_6654e49916d787d8a50242bde1c581c7}{
+\index{UBitArray@{UBitArray}!GetBitValue@{GetBitValue}}
+\index{GetBitValue@{GetBitValue}!UBitArray@{UBitArray}}
+\subsubsection[{GetBitValue}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int UBitArray::GetBitValue (unsigned int {\em idx}) const}}
+\label{class_u_bit_array_6654e49916d787d8a50242bde1c581c7}
+
+
+
+
+Definition at line 158 of file UBitArray.cpp.\hypertarget{class_u_bit_array_e560511d0cc3b130dd181f9e6ce576f1}{
+\index{UBitArray@{UBitArray}!PeekTopBit@{PeekTopBit}}
+\index{PeekTopBit@{PeekTopBit}!UBitArray@{UBitArray}}
+\subsubsection[{PeekTopBit}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int UBitArray::PeekTopBit ()}}
+\label{class_u_bit_array_e560511d0cc3b130dd181f9e6ce576f1}
+
+
+
+
+Definition at line 132 of file UBitArray.cpp.\hypertarget{class_u_bit_array_6329080b1012d67e42fa707ad2d3473f}{
+\index{UBitArray@{UBitArray}!PopBit@{PopBit}}
+\index{PopBit@{PopBit}!UBitArray@{UBitArray}}
+\subsubsection[{PopBit}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int UBitArray::PopBit ()}}
+\label{class_u_bit_array_6329080b1012d67e42fa707ad2d3473f}
+
+
+
+
+Definition at line 88 of file UBitArray.cpp.\hypertarget{class_u_bit_array_cce4aede040372fb8c2db3e60d09b4f7}{
+\index{UBitArray@{UBitArray}!PopBits@{PopBits}}
+\index{PopBits@{PopBits}!UBitArray@{UBitArray}}
+\subsubsection[{PopBits}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int UBitArray::PopBits (unsigned int {\em count})}}
+\label{class_u_bit_array_cce4aede040372fb8c2db3e60d09b4f7}
+
+
+
+
+Definition at line 104 of file UBitArray.cpp.\hypertarget{class_u_bit_array_03fdd22136b0cb1db321c9ded22d6d04}{
+\index{UBitArray@{UBitArray}!PopBitsSignExtend@{PopBitsSignExtend}}
+\index{PopBitsSignExtend@{PopBitsSignExtend}!UBitArray@{UBitArray}}
+\subsubsection[{PopBitsSignExtend}]{\setlength{\rightskip}{0pt plus 5cm}int UBitArray::PopBitsSignExtend (unsigned int {\em count})}}
+\label{class_u_bit_array_03fdd22136b0cb1db321c9ded22d6d04}
+
+
+
+
+Definition at line 114 of file UBitArray.cpp.\hypertarget{class_u_bit_array_65be0cc53c2ee958106162939cfd303a}{
+\index{UBitArray@{UBitArray}!PushBit@{PushBit}}
+\index{PushBit@{PushBit}!UBitArray@{UBitArray}}
+\subsubsection[{PushBit}]{\setlength{\rightskip}{0pt plus 5cm}void UBitArray::PushBit (unsigned int {\em value})}}
+\label{class_u_bit_array_65be0cc53c2ee958106162939cfd303a}
+
+
+
+
+Definition at line 60 of file UBitArray.cpp.\hypertarget{class_u_bit_array_7a8e2cda64a7b0813a78520e3d4e7174}{
+\index{UBitArray@{UBitArray}!PushBits@{PushBits}}
+\index{PushBits@{PushBits}!UBitArray@{UBitArray}}
+\subsubsection[{PushBits}]{\setlength{\rightskip}{0pt plus 5cm}void UBitArray::PushBits (int {\em value}, \/  unsigned int {\em count})}}
+\label{class_u_bit_array_7a8e2cda64a7b0813a78520e3d4e7174}
+
+
+
+
+Definition at line 81 of file UBitArray.cpp.\hypertarget{class_u_bit_array_4f1baeb839a973bacdb02ffffe2bd6a8}{
+\index{UBitArray@{UBitArray}!PushBits@{PushBits}}
+\index{PushBits@{PushBits}!UBitArray@{UBitArray}}
+\subsubsection[{PushBits}]{\setlength{\rightskip}{0pt plus 5cm}void UBitArray::PushBits (unsigned int {\em value}, \/  unsigned int {\em count})}}
+\label{class_u_bit_array_4f1baeb839a973bacdb02ffffe2bd6a8}
+
+
+
+
+Definition at line 73 of file UBitArray.cpp.\hypertarget{class_u_bit_array_d6e3884e3d3cc1f8c2882c0e3d181b89}{
+\index{UBitArray@{UBitArray}!Resize@{Resize}}
+\index{Resize@{Resize}!UBitArray@{UBitArray}}
+\subsubsection[{Resize}]{\setlength{\rightskip}{0pt plus 5cm}void UBitArray::Resize (unsigned int {\em newSize})}}
+\label{class_u_bit_array_d6e3884e3d3cc1f8c2882c0e3d181b89}
+
+
+
+
+Definition at line 52 of file UBitArray.cpp.\hypertarget{class_u_bit_array_a265435baf940dc2f48ba9b38b51229f}{
+\index{UBitArray@{UBitArray}!SetBitValue@{SetBitValue}}
+\index{SetBitValue@{SetBitValue}!UBitArray@{UBitArray}}
+\subsubsection[{SetBitValue}]{\setlength{\rightskip}{0pt plus 5cm}void UBitArray::SetBitValue (unsigned int {\em idx}, \/  unsigned int {\em value})}}
+\label{class_u_bit_array_a265435baf940dc2f48ba9b38b51229f}
+
+
+
+
+Definition at line 140 of file UBitArray.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_u_bit_array_8h}{UBitArray.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_u_bit_array_8cpp}{UBitArray.cpp}\end{CompactItemize}

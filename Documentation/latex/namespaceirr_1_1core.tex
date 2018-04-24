@@ -1,0 +1,148 @@
+\hypertarget{namespaceirr_1_1core}{
+\section{irr::core Namespace Reference}
+\label{namespaceirr_1_1core}\index{irr::core@{irr::core}}
+}
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+class \hyperlink{classirr_1_1core_1_1array}{array}
+\begin{CompactList}\small\item\em Self reallocating template \hyperlink{classirr_1_1core_1_1array}{array} (like stl vector) with additional features. \item\end{CompactList}\item 
+class \hyperlink{classirr_1_1core_1_1string}{string}
+\begin{CompactList}\small\item\em Very simple \hyperlink{classirr_1_1core_1_1string}{string} class with some useful features. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Typedefs}
+\begin{CompactItemize}
+\item 
+typedef \hyperlink{classirr_1_1core_1_1string}{string}$<$ \hyperlink{namespaceirr_9395eaea339bcb546b319e9c96bf7410}{irr::c8} $>$ \hyperlink{namespaceirr_1_1core_996ee8f29e0c934ab4b7b6087d09f5f5}{stringc}
+\begin{CompactList}\small\item\em Typedef for character strings. \item\end{CompactList}\item 
+typedef \hyperlink{classirr_1_1core_1_1string}{string}$<$ wchar\_\-t $>$ \hyperlink{namespaceirr_1_1core_ef83fafbb1b36fcce44c07c9be23a7f2}{stringw}
+\begin{CompactList}\small\item\em Typedef for wide character strings. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+char $\ast$ \hyperlink{namespaceirr_1_1core_6256e94cb35bb421e71505abe0a6b137}{fast\_\-atof\_\-move} (char $\ast$\hyperlink{glext__bak_8h_4c662e60c03c48f5718de0c175211fb0}{c}, float \&out)
+\item 
+const char $\ast$ \hyperlink{namespaceirr_1_1core_b092292087196d1b1e19b80b7cdaf05d}{fast\_\-atof\_\-move\_\-const} (const char $\ast$\hyperlink{glext__bak_8h_4c662e60c03c48f5718de0c175211fb0}{c}, float \&out)
+\item 
+float \hyperlink{namespaceirr_1_1core_5af60e435db3af3df0bf89e1d2f55aa7}{fast\_\-atof} (const char $\ast$\hyperlink{glext__bak_8h_4c662e60c03c48f5718de0c175211fb0}{c})
+\item 
+{\footnotesize template$<$class T $>$ }\\void \hyperlink{namespaceirr_1_1core_d22e0ca7ac302752a27dc29f35a21ec6}{heapsink} (T $\ast$\hyperlink{classirr_1_1core_1_1array}{array}, \hyperlink{namespaceirr_c66849b7a6ed16e30ebede579f9b47c6}{s32} element, \hyperlink{namespaceirr_c66849b7a6ed16e30ebede579f9b47c6}{s32} max)
+\begin{CompactList}\small\item\em Sinks an element into the heap. \item\end{CompactList}\item 
+{\footnotesize template$<$class T $>$ }\\void \hyperlink{namespaceirr_1_1core_4f062bd63b7d3048b4af2127e4a708c5}{heapsort} (T $\ast$array\_\-, \hyperlink{namespaceirr_c66849b7a6ed16e30ebede579f9b47c6}{s32} \hyperlink{glext__bak_8h_3d1e3edfcf61ca2d831883e1afbad89e}{size})
+\begin{CompactList}\small\item\em Sorts an \hyperlink{classirr_1_1core_1_1array}{array} with size 'size' using heapsort. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+const float \hyperlink{namespaceirr_1_1core_92c5412fe484f856839d848f0b5e3aba}{fast\_\-atof\_\-table} \mbox{[}$\,$\mbox{]}
+\end{CompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{namespaceirr_1_1core_996ee8f29e0c934ab4b7b6087d09f5f5}{
+\index{irr::core@{irr::core}!stringc@{stringc}}
+\index{stringc@{stringc}!irr::core@{irr::core}}
+\subsubsection[{stringc}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf string}$<${\bf irr::c8}$>$ {\bf irr::core::stringc}}}
+\label{namespaceirr_1_1core_996ee8f29e0c934ab4b7b6087d09f5f5}
+
+
+Typedef for character strings. 
+
+
+
+Definition at line 655 of file irrString.h.\hypertarget{namespaceirr_1_1core_ef83fafbb1b36fcce44c07c9be23a7f2}{
+\index{irr::core@{irr::core}!stringw@{stringw}}
+\index{stringw@{stringw}!irr::core@{irr::core}}
+\subsubsection[{stringw}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf string}$<$wchar\_\-t$>$ {\bf irr::core::stringw}}}
+\label{namespaceirr_1_1core_ef83fafbb1b36fcce44c07c9be23a7f2}
+
+
+Typedef for wide character strings. 
+
+
+
+Definition at line 658 of file irrString.h.
+
+\subsection{Function Documentation}
+\hypertarget{namespaceirr_1_1core_5af60e435db3af3df0bf89e1d2f55aa7}{
+\index{irr::core@{irr::core}!fast\_\-atof@{fast\_\-atof}}
+\index{fast\_\-atof@{fast\_\-atof}!irr::core@{irr::core}}
+\subsubsection[{fast\_\-atof}]{\setlength{\rightskip}{0pt plus 5cm}float irr::core::fast\_\-atof (const char $\ast$ {\em c})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{namespaceirr_1_1core_5af60e435db3af3df0bf89e1d2f55aa7}
+
+
+
+
+Definition at line 128 of file fast\_\-atof.h.\hypertarget{namespaceirr_1_1core_6256e94cb35bb421e71505abe0a6b137}{
+\index{irr::core@{irr::core}!fast\_\-atof\_\-move@{fast\_\-atof\_\-move}}
+\index{fast\_\-atof\_\-move@{fast\_\-atof\_\-move}!irr::core@{irr::core}}
+\subsubsection[{fast\_\-atof\_\-move}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ irr::core::fast\_\-atof\_\-move (char $\ast$ {\em c}, \/  float \& {\em out})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{namespaceirr_1_1core_6256e94cb35bb421e71505abe0a6b137}
+
+
+Provides a fast function for converting a \hyperlink{classirr_1_1core_1_1string}{string} into a float, about 6 times faster than atof in win32. 
+
+Definition at line 38 of file fast\_\-atof.h.\hypertarget{namespaceirr_1_1core_b092292087196d1b1e19b80b7cdaf05d}{
+\index{irr::core@{irr::core}!fast\_\-atof\_\-move\_\-const@{fast\_\-atof\_\-move\_\-const}}
+\index{fast\_\-atof\_\-move\_\-const@{fast\_\-atof\_\-move\_\-const}!irr::core@{irr::core}}
+\subsubsection[{fast\_\-atof\_\-move\_\-const}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ irr::core::fast\_\-atof\_\-move\_\-const (const char $\ast$ {\em c}, \/  float \& {\em out})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{namespaceirr_1_1core_b092292087196d1b1e19b80b7cdaf05d}
+
+
+Provides a fast function for converting a \hyperlink{classirr_1_1core_1_1string}{string} into a float, about 6 times faster than atof in win32. 
+
+Definition at line 84 of file fast\_\-atof.h.\hypertarget{namespaceirr_1_1core_d22e0ca7ac302752a27dc29f35a21ec6}{
+\index{irr::core@{irr::core}!heapsink@{heapsink}}
+\index{heapsink@{heapsink}!irr::core@{irr::core}}
+\subsubsection[{heapsink}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void irr::core::heapsink (T $\ast$ {\em array}, \/  s32 {\em element}, \/  s32 {\em max})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{namespaceirr_1_1core_d22e0ca7ac302752a27dc29f35a21ec6}
+
+
+Sinks an element into the heap. 
+
+
+
+Definition at line 17 of file heapsort.h.\hypertarget{namespaceirr_1_1core_4f062bd63b7d3048b4af2127e4a708c5}{
+\index{irr::core@{irr::core}!heapsort@{heapsort}}
+\index{heapsort@{heapsort}!irr::core@{irr::core}}
+\subsubsection[{heapsort}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void irr::core::heapsort (T $\ast$ {\em array\_\-}, \/  s32 {\em size})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{namespaceirr_1_1core_4f062bd63b7d3048b4af2127e4a708c5}
+
+
+Sorts an \hyperlink{classirr_1_1core_1_1array}{array} with size 'size' using heapsort. 
+
+
+
+Definition at line 41 of file heapsort.h.
+
+\subsection{Variable Documentation}
+\hypertarget{namespaceirr_1_1core_92c5412fe484f856839d848f0b5e3aba}{
+\index{irr::core@{irr::core}!fast\_\-atof\_\-table@{fast\_\-atof\_\-table}}
+\index{fast\_\-atof\_\-table@{fast\_\-atof\_\-table}!irr::core@{irr::core}}
+\subsubsection[{fast\_\-atof\_\-table}]{\setlength{\rightskip}{0pt plus 5cm}const float {\bf irr::core::fast\_\-atof\_\-table}\mbox{[}$\,$\mbox{]}}}
+\label{namespaceirr_1_1core_92c5412fe484f856839d848f0b5e3aba}
+
+
+\textbf{Initial value:}
+
+\begin{Code}\begin{verbatim}        {
+                                                                                0.f,
+                                                                                0.1f,
+                                                                                0.01f,
+                                                                                0.001f,
+                                                                                0.0001f,
+                                                                                0.00001f,
+                                                                                0.000001f,
+                                                                                0.0000001f,
+                                                                                0.00000001f,
+                                                                                0.000000001f,
+                                                                                0.0000000001f,
+                                                                                0.00000000001f,
+                                                                                0.000000000001f,
+                                                                                0.0000000000001f,
+                                                                                0.00000000000001f,
+                                                                                0.000000000000001f
+                                                                        }
+\end{verbatim}
+\end{Code}
+
+
+Definition at line 16 of file fast\_\-atof.h.

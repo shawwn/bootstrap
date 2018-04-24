@@ -1,0 +1,130 @@
+\hypertarget{class_gr_shader_mgr}{
+\section{GrShaderMgr Class Reference}
+\label{class_gr_shader_mgr}\index{GrShaderMgr@{GrShaderMgr}}
+}
+{\tt \#include $<$GrShaderMgr.h$>$}
+
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+struct \textbf{SShaderEntry}
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_shader_mgr_fe39fc50ee4650c4966fe29225708954}{GrShaderMgr} ()
+\item 
+\hyperlink{class_gr_shader_mgr_7bd37ffc68abeae00188cb7acfcc5f45}{$\sim$GrShaderMgr} ()
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_shader}{GrShader} $>$ \hyperlink{class_gr_shader_mgr_808c8e1152500a452398977b1b1ff650}{GetShader} (const \hyperlink{class_u_path}{UPath} \&\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name})
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_shader}{GrShader} $>$ \hyperlink{class_gr_shader_mgr_4faff2000dae06eedcfe5c0d355cf4a9}{GetShader} (const \hyperlink{class_u_path}{UPath} \&\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, const char $\ast$vertexShader, const char $\ast$fragmentShader)
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_shader}{GrShader} $>$ \hyperlink{class_gr_shader_mgr_995feafb4bceced19755f92e010c002c}{FindShader} (const \hyperlink{class_u_path}{UPath} \&\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name})
+\item 
+void \hyperlink{class_gr_shader_mgr_ff45e5ef3d72acfa36df2a286c27a954}{ReloadShaders} ()
+\item 
+void \hyperlink{class_gr_shader_mgr_a7e5765aee3b61abbae8be39ffea63ad}{PreContextReset} ()
+\item 
+void \hyperlink{class_gr_shader_mgr_2d61b25bed57a4bda589fea72d232d37}{PostContextReset} ()
+\item 
+void \hyperlink{class_gr_shader_mgr_2478fc2631d56f5e376ecd3a58b0b855}{BindErrorShader} ()
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 23 of file GrShaderMgr.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_shader_mgr_fe39fc50ee4650c4966fe29225708954}{
+\index{GrShaderMgr@{GrShaderMgr}!GrShaderMgr@{GrShaderMgr}}
+\index{GrShaderMgr@{GrShaderMgr}!GrShaderMgr@{GrShaderMgr}}
+\subsubsection[{GrShaderMgr}]{\setlength{\rightskip}{0pt plus 5cm}GrShaderMgr::GrShaderMgr ()}}
+\label{class_gr_shader_mgr_fe39fc50ee4650c4966fe29225708954}
+
+
+
+
+Definition at line 54 of file GrShaderMgr.cpp.\hypertarget{class_gr_shader_mgr_7bd37ffc68abeae00188cb7acfcc5f45}{
+\index{GrShaderMgr@{GrShaderMgr}!$\sim$GrShaderMgr@{$\sim$GrShaderMgr}}
+\index{$\sim$GrShaderMgr@{$\sim$GrShaderMgr}!GrShaderMgr@{GrShaderMgr}}
+\subsubsection[{$\sim$GrShaderMgr}]{\setlength{\rightskip}{0pt plus 5cm}GrShaderMgr::$\sim$GrShaderMgr ()}}
+\label{class_gr_shader_mgr_7bd37ffc68abeae00188cb7acfcc5f45}
+
+
+
+
+Definition at line 65 of file GrShaderMgr.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_shader_mgr_2478fc2631d56f5e376ecd3a58b0b855}{
+\index{GrShaderMgr@{GrShaderMgr}!BindErrorShader@{BindErrorShader}}
+\index{BindErrorShader@{BindErrorShader}!GrShaderMgr@{GrShaderMgr}}
+\subsubsection[{BindErrorShader}]{\setlength{\rightskip}{0pt plus 5cm}void GrShaderMgr::BindErrorShader ()}}
+\label{class_gr_shader_mgr_2478fc2631d56f5e376ecd3a58b0b855}
+
+
+
+
+Definition at line 195 of file GrShaderMgr.cpp.\hypertarget{class_gr_shader_mgr_995feafb4bceced19755f92e010c002c}{
+\index{GrShaderMgr@{GrShaderMgr}!FindShader@{FindShader}}
+\index{FindShader@{FindShader}!GrShaderMgr@{GrShaderMgr}}
+\subsubsection[{FindShader}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrShader} $>$ GrShaderMgr::FindShader (const {\bf UPath} \& {\em name})}}
+\label{class_gr_shader_mgr_995feafb4bceced19755f92e010c002c}
+
+
+
+
+Definition at line 142 of file GrShaderMgr.cpp.\hypertarget{class_gr_shader_mgr_4faff2000dae06eedcfe5c0d355cf4a9}{
+\index{GrShaderMgr@{GrShaderMgr}!GetShader@{GetShader}}
+\index{GetShader@{GetShader}!GrShaderMgr@{GrShaderMgr}}
+\subsubsection[{GetShader}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrShader} $>$ GrShaderMgr::GetShader (const {\bf UPath} \& {\em name}, \/  const char $\ast$ {\em vertexShader}, \/  const char $\ast$ {\em fragmentShader})}}
+\label{class_gr_shader_mgr_4faff2000dae06eedcfe5c0d355cf4a9}
+
+
+
+
+Definition at line 119 of file GrShaderMgr.cpp.\hypertarget{class_gr_shader_mgr_808c8e1152500a452398977b1b1ff650}{
+\index{GrShaderMgr@{GrShaderMgr}!GetShader@{GetShader}}
+\index{GetShader@{GetShader}!GrShaderMgr@{GrShaderMgr}}
+\subsubsection[{GetShader}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrShader} $>$ GrShaderMgr::GetShader (const {\bf UPath} \& {\em name})}}
+\label{class_gr_shader_mgr_808c8e1152500a452398977b1b1ff650}
+
+
+
+
+Definition at line 78 of file GrShaderMgr.cpp.\hypertarget{class_gr_shader_mgr_2d61b25bed57a4bda589fea72d232d37}{
+\index{GrShaderMgr@{GrShaderMgr}!PostContextReset@{PostContextReset}}
+\index{PostContextReset@{PostContextReset}!GrShaderMgr@{GrShaderMgr}}
+\subsubsection[{PostContextReset}]{\setlength{\rightskip}{0pt plus 5cm}void GrShaderMgr::PostContextReset ()}}
+\label{class_gr_shader_mgr_2d61b25bed57a4bda589fea72d232d37}
+
+
+
+
+Definition at line 181 of file GrShaderMgr.cpp.\hypertarget{class_gr_shader_mgr_a7e5765aee3b61abbae8be39ffea63ad}{
+\index{GrShaderMgr@{GrShaderMgr}!PreContextReset@{PreContextReset}}
+\index{PreContextReset@{PreContextReset}!GrShaderMgr@{GrShaderMgr}}
+\subsubsection[{PreContextReset}]{\setlength{\rightskip}{0pt plus 5cm}void GrShaderMgr::PreContextReset ()}}
+\label{class_gr_shader_mgr_a7e5765aee3b61abbae8be39ffea63ad}
+
+
+
+
+Definition at line 171 of file GrShaderMgr.cpp.\hypertarget{class_gr_shader_mgr_ff45e5ef3d72acfa36df2a286c27a954}{
+\index{GrShaderMgr@{GrShaderMgr}!ReloadShaders@{ReloadShaders}}
+\index{ReloadShaders@{ReloadShaders}!GrShaderMgr@{GrShaderMgr}}
+\subsubsection[{ReloadShaders}]{\setlength{\rightskip}{0pt plus 5cm}void GrShaderMgr::ReloadShaders ()}}
+\label{class_gr_shader_mgr_ff45e5ef3d72acfa36df2a286c27a954}
+
+
+
+
+Definition at line 153 of file GrShaderMgr.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_shader_mgr_8h}{GrShaderMgr.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_shader_mgr_8cpp}{GrShaderMgr.cpp}\end{CompactItemize}

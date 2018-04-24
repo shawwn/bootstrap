@@ -1,0 +1,128 @@
+\hypertarget{class_u_expr_term}{
+\section{UExprTerm Class Reference}
+\label{class_u_expr_term}\index{UExprTerm@{UExprTerm}}
+}
+{\tt \#include $<$UExprTerm.h$>$}
+
+Inheritance diagram for UExprTerm::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{class_u_expr_term}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+enum \hyperlink{class_u_expr_term_20f132fb3c5e0228623e4268ba0d06c2}{ETYPE} \{ \hyperlink{class_u_expr_term_20f132fb3c5e0228623e4268ba0d06c270b8888e77ec8fedf43bf0a9edd90a09}{ET\_\-EXPR}, 
+\hyperlink{class_u_expr_term_20f132fb3c5e0228623e4268ba0d06c2b73bfabbecee933a6a87b71896ce29e9}{ET\_\-NUMBER}, 
+\hyperlink{class_u_expr_term_20f132fb3c5e0228623e4268ba0d06c235b8b423cb038cdf3cd6284529840883}{ET\_\-CALLBACK}, 
+\hyperlink{class_u_expr_term_20f132fb3c5e0228623e4268ba0d06c243a480eaeeefdb64f0e41ffc3956b9eb}{ET\_\-ARRAYREF}
+ \}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_u_expr_term_a3d517174174a67f8991f3da8dc42df0}{UExprTerm} ()
+\item 
+virtual \hyperlink{class_u_expr_term_4043e63cb432640ba504864e31a62af3}{$\sim$UExprTerm} ()
+\item 
+virtual float \hyperlink{class_u_expr_term_85274403764fb0e4cc701a0374fd6592}{GetValue} () const =0
+\item 
+virtual bool \hyperlink{class_u_expr_term_0b0a24c60fecb1a7388e4b01e2f73572}{IsDynamic} () const =0
+\item 
+virtual \hyperlink{class_u_expr_term_20f132fb3c5e0228623e4268ba0d06c2}{ETYPE} \hyperlink{class_u_expr_term_fc66ae4dfe6a112d107183840d753562}{GetType} () const =0
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 18 of file UExprTerm.h.
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_u_expr_term_20f132fb3c5e0228623e4268ba0d06c2}{
+\index{UExprTerm@{UExprTerm}!ETYPE@{ETYPE}}
+\index{ETYPE@{ETYPE}!UExprTerm@{UExprTerm}}
+\subsubsection[{ETYPE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf UExprTerm::ETYPE}}}
+\label{class_u_expr_term_20f132fb3c5e0228623e4268ba0d06c2}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{ET\_\-EXPR@{ET\_\-EXPR}!UExprTerm@{UExprTerm}}\index{UExprTerm@{UExprTerm}!ET\_\-EXPR@{ET\_\-EXPR}}\item[{\em 
+\hypertarget{class_u_expr_term_20f132fb3c5e0228623e4268ba0d06c270b8888e77ec8fedf43bf0a9edd90a09}{
+ET\_\-EXPR}
+\label{class_u_expr_term_20f132fb3c5e0228623e4268ba0d06c270b8888e77ec8fedf43bf0a9edd90a09}
+}]\index{ET\_\-NUMBER@{ET\_\-NUMBER}!UExprTerm@{UExprTerm}}\index{UExprTerm@{UExprTerm}!ET\_\-NUMBER@{ET\_\-NUMBER}}\item[{\em 
+\hypertarget{class_u_expr_term_20f132fb3c5e0228623e4268ba0d06c2b73bfabbecee933a6a87b71896ce29e9}{
+ET\_\-NUMBER}
+\label{class_u_expr_term_20f132fb3c5e0228623e4268ba0d06c2b73bfabbecee933a6a87b71896ce29e9}
+}]\index{ET\_\-CALLBACK@{ET\_\-CALLBACK}!UExprTerm@{UExprTerm}}\index{UExprTerm@{UExprTerm}!ET\_\-CALLBACK@{ET\_\-CALLBACK}}\item[{\em 
+\hypertarget{class_u_expr_term_20f132fb3c5e0228623e4268ba0d06c235b8b423cb038cdf3cd6284529840883}{
+ET\_\-CALLBACK}
+\label{class_u_expr_term_20f132fb3c5e0228623e4268ba0d06c235b8b423cb038cdf3cd6284529840883}
+}]\index{ET\_\-ARRAYREF@{ET\_\-ARRAYREF}!UExprTerm@{UExprTerm}}\index{UExprTerm@{UExprTerm}!ET\_\-ARRAYREF@{ET\_\-ARRAYREF}}\item[{\em 
+\hypertarget{class_u_expr_term_20f132fb3c5e0228623e4268ba0d06c243a480eaeeefdb64f0e41ffc3956b9eb}{
+ET\_\-ARRAYREF}
+\label{class_u_expr_term_20f132fb3c5e0228623e4268ba0d06c243a480eaeeefdb64f0e41ffc3956b9eb}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 21 of file UExprTerm.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_u_expr_term_a3d517174174a67f8991f3da8dc42df0}{
+\index{UExprTerm@{UExprTerm}!UExprTerm@{UExprTerm}}
+\index{UExprTerm@{UExprTerm}!UExprTerm@{UExprTerm}}
+\subsubsection[{UExprTerm}]{\setlength{\rightskip}{0pt plus 5cm}UExprTerm::UExprTerm ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_expr_term_a3d517174174a67f8991f3da8dc42df0}
+
+
+
+
+Definition at line 29 of file UExprTerm.h.\hypertarget{class_u_expr_term_4043e63cb432640ba504864e31a62af3}{
+\index{UExprTerm@{UExprTerm}!$\sim$UExprTerm@{$\sim$UExprTerm}}
+\index{$\sim$UExprTerm@{$\sim$UExprTerm}!UExprTerm@{UExprTerm}}
+\subsubsection[{$\sim$UExprTerm}]{\setlength{\rightskip}{0pt plus 5cm}virtual UExprTerm::$\sim$UExprTerm ()\hspace{0.3cm}{\tt  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_u_expr_term_4043e63cb432640ba504864e31a62af3}
+
+
+
+
+Definition at line 30 of file UExprTerm.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_u_expr_term_fc66ae4dfe6a112d107183840d753562}{
+\index{UExprTerm@{UExprTerm}!GetType@{GetType}}
+\index{GetType@{GetType}!UExprTerm@{UExprTerm}}
+\subsubsection[{GetType}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf ETYPE} UExprTerm::GetType () const\hspace{0.3cm}{\tt  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_u_expr_term_fc66ae4dfe6a112d107183840d753562}
+
+
+
+
+Implemented in \hyperlink{class_u_expr_ff255fe132b396d771c34978d6e048f9}{UExpr}, \hyperlink{class_u_expr_array_ref_89284f8ec703cb0dd7314a731c593f3d}{UExprArrayRef}, \hyperlink{class_u_expr_callback_231e95e9e737d1ecfa27c5bb6a660be8}{UExprCallback}, and \hyperlink{class_u_expr_number_e0235cdd37c30e7cfa51bb3f8a739e05}{UExprNumber}.\hypertarget{class_u_expr_term_85274403764fb0e4cc701a0374fd6592}{
+\index{UExprTerm@{UExprTerm}!GetValue@{GetValue}}
+\index{GetValue@{GetValue}!UExprTerm@{UExprTerm}}
+\subsubsection[{GetValue}]{\setlength{\rightskip}{0pt plus 5cm}virtual float UExprTerm::GetValue () const\hspace{0.3cm}{\tt  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_u_expr_term_85274403764fb0e4cc701a0374fd6592}
+
+
+
+
+Implemented in \hyperlink{class_u_expr_0f499790b77709e3e29d845570e4f523}{UExpr}, \hyperlink{class_u_expr_array_ref_de2f52b193a937e90bf8ceb1dd99ca40}{UExprArrayRef}, \hyperlink{class_u_expr_callback_22d3eb12a6a7176ba982a4b6b7c56029}{UExprCallback}, and \hyperlink{class_u_expr_number_bbbd099fb6900e6f749774b37599a64b}{UExprNumber}.\hypertarget{class_u_expr_term_0b0a24c60fecb1a7388e4b01e2f73572}{
+\index{UExprTerm@{UExprTerm}!IsDynamic@{IsDynamic}}
+\index{IsDynamic@{IsDynamic}!UExprTerm@{UExprTerm}}
+\subsubsection[{IsDynamic}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool UExprTerm::IsDynamic () const\hspace{0.3cm}{\tt  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_u_expr_term_0b0a24c60fecb1a7388e4b01e2f73572}
+
+
+
+
+Implemented in \hyperlink{class_u_expr_3c36d1cce1d3c4d2f5870fc5ced16d09}{UExpr}, \hyperlink{class_u_expr_array_ref_f5b291cf643bde2446086dabf8227ce8}{UExprArrayRef}, \hyperlink{class_u_expr_callback_eaae0abe4fc4f6c9a1bda718a6d61977}{UExprCallback}, and \hyperlink{class_u_expr_number_497a19a47c735974f54b0a50b8e2d869}{UExprNumber}.
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_u_expr_term_8h}{UExprTerm.h}\end{CompactItemize}

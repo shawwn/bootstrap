@@ -1,0 +1,88 @@
+\hypertarget{_gr_scene_8cpp}{
+\section{C:/Bootstrap/ProjectBX/Engine/Graphics/GrScene.cpp File Reference}
+\label{_gr_scene_8cpp}\index{C:/Bootstrap/ProjectBX/Engine/Graphics/GrScene.cpp@{C:/Bootstrap/ProjectBX/Engine/Graphics/GrScene.cpp}}
+}
+{\tt \#include \char`\"{}graphics\_\-afx.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrScene.h\char`\"{}}\par
+{\tt \#include \char`\"{}RRsrcMgr.h\char`\"{}}\par
+{\tt \#include \char`\"{}UExprCallback.h\char`\"{}}\par
+{\tt \#include \char`\"{}UExprMgr.h\char`\"{}}\par
+{\tt \#include \char`\"{}UWriter.h\char`\"{}}\par
+{\tt \#include \char`\"{}UReader.h\char`\"{}}\par
+{\tt \#include \char`\"{}MVec3.h\char`\"{}}\par
+{\tt \#include \char`\"{}MRay.h\char`\"{}}\par
+{\tt \#include \char`\"{}ThSection.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrLight.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrCamera.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrBSPSplit.h\char`\"{}}\par
+{\tt \#include \char`\"{}GLSubsys.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrFramebuffer.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrMeshInst.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrUtil.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrTextureCube.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrSceneRender.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrModel.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrModelNode.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrLightMgr.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrBSPTree.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrRenderer.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrTexGen.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrTextureMgr.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrParse.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_model_node}{GrModelNode} $\ast$ \hyperlink{_gr_scene_8cpp_86ec1cdac499883ef93f6367c377359b}{FindModelNodeThatContainsMeshInstIter} (\hyperlink{class_gr_model_node}{GrModelNode} $\ast$root, \hyperlink{class_gr_mesh_inst}{GrMeshInst} $\ast$meshInst)
+\item 
+\hyperlink{class_gr_model_node}{GrModelNode} $\ast$ \hyperlink{_gr_scene_8cpp_2ce12c10fee50008d8990a7d68518b76}{FindModelNodeThatContainsMeshInst} (\hyperlink{class_gr_model}{GrModel} $\ast$root, \hyperlink{class_gr_mesh_inst}{GrMeshInst} $\ast$meshInst)
+\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_scene}{GrScene} $\ast$ \hyperlink{_gr_scene_8cpp_61317b03beb338f79e32ea73a3e8276b}{gGrScene} = 0
+\item 
+const float \hyperlink{_gr_scene_8cpp_a104c0d26b31639eea0eb632284e5c76}{\_\-clearColor} \mbox{[}4\mbox{]} = \{ 0.0f, 0.0f, 0.0f, 0.0f \}
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_gr_scene_8cpp_2ce12c10fee50008d8990a7d68518b76}{
+\index{GrScene.cpp@{GrScene.cpp}!FindModelNodeThatContainsMeshInst@{FindModelNodeThatContainsMeshInst}}
+\index{FindModelNodeThatContainsMeshInst@{FindModelNodeThatContainsMeshInst}!GrScene.cpp@{GrScene.cpp}}
+\subsubsection[{FindModelNodeThatContainsMeshInst}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrModelNode}$\ast$ FindModelNodeThatContainsMeshInst ({\bf GrModel} $\ast$ {\em root}, \/  {\bf GrMeshInst} $\ast$ {\em meshInst})}}
+\label{_gr_scene_8cpp_2ce12c10fee50008d8990a7d68518b76}
+
+
+
+
+Definition at line 65 of file GrScene.cpp.\hypertarget{_gr_scene_8cpp_86ec1cdac499883ef93f6367c377359b}{
+\index{GrScene.cpp@{GrScene.cpp}!FindModelNodeThatContainsMeshInstIter@{FindModelNodeThatContainsMeshInstIter}}
+\index{FindModelNodeThatContainsMeshInstIter@{FindModelNodeThatContainsMeshInstIter}!GrScene.cpp@{GrScene.cpp}}
+\subsubsection[{FindModelNodeThatContainsMeshInstIter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrModelNode} $\ast$ FindModelNodeThatContainsMeshInstIter ({\bf GrModelNode} $\ast$ {\em root}, \/  {\bf GrMeshInst} $\ast$ {\em meshInst})}}
+\label{_gr_scene_8cpp_86ec1cdac499883ef93f6367c377359b}
+
+
+
+
+Definition at line 92 of file GrScene.cpp.
+
+\subsection{Variable Documentation}
+\hypertarget{_gr_scene_8cpp_a104c0d26b31639eea0eb632284e5c76}{
+\index{GrScene.cpp@{GrScene.cpp}!\_\-clearColor@{\_\-clearColor}}
+\index{\_\-clearColor@{\_\-clearColor}!GrScene.cpp@{GrScene.cpp}}
+\subsubsection[{\_\-clearColor}]{\setlength{\rightskip}{0pt plus 5cm}const float {\bf \_\-clearColor}\mbox{[}4\mbox{]} = \{ 0.0f, 0.0f, 0.0f, 0.0f \}}}
+\label{_gr_scene_8cpp_a104c0d26b31639eea0eb632284e5c76}
+
+
+
+
+Definition at line 52 of file GrScene.cpp.\hypertarget{_gr_scene_8cpp_61317b03beb338f79e32ea73a3e8276b}{
+\index{GrScene.cpp@{GrScene.cpp}!gGrScene@{gGrScene}}
+\index{gGrScene@{gGrScene}!GrScene.cpp@{GrScene.cpp}}
+\subsubsection[{gGrScene}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrScene}$\ast$ {\bf gGrScene} = 0}}
+\label{_gr_scene_8cpp_61317b03beb338f79e32ea73a3e8276b}
+
+
+
+
+Definition at line 47 of file GrScene.cpp.

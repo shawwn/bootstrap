@@ -1,0 +1,158 @@
+\hypertarget{class_gr_polygon_uber_u_v_mapper}{
+\section{GrPolygonUberUVMapper Class Reference}
+\label{class_gr_polygon_uber_u_v_mapper}\index{GrPolygonUberUVMapper@{GrPolygonUberUVMapper}}
+}
+{\tt \#include $<$GrPolygonUberUVMapper.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+enum \hyperlink{class_gr_polygon_uber_u_v_mapper_a69a4db116a89f2e1d789954220ee4ac}{EPLANE} \{ \hyperlink{class_gr_polygon_uber_u_v_mapper_a69a4db116a89f2e1d789954220ee4ac1161d6c0a1b5de467129eac750cb6d24}{EP\_\-XY}, 
+\hyperlink{class_gr_polygon_uber_u_v_mapper_a69a4db116a89f2e1d789954220ee4ac4c6ad56dcb36d9b886f74b17edfe0fc6}{EP\_\-XZ}, 
+\hyperlink{class_gr_polygon_uber_u_v_mapper_a69a4db116a89f2e1d789954220ee4ac40025b3183b072e100d713063f3bdec1}{EP\_\-YZ}
+ \}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_polygon_uber_u_v_mapper_62445ba98a0326933278328d68aced62}{GrPolygonUberUVMapper} ()
+\item 
+\hyperlink{class_gr_polygon_uber_u_v_mapper_64f19e9773d0da6f67365c2ec30ee345}{$\sim$GrPolygonUberUVMapper} ()
+\item 
+void \hyperlink{class_gr_polygon_uber_u_v_mapper_fa0335ced5f8d354def36aceac076856}{PlaceCoplanarGroups} (std::vector$<$ \hyperlink{class_gr_polygon_uber_patch_group}{GrPolygonUberPatchGroup} $\ast$ $>$ groups, \hyperlink{class_gr_polygon_uber_u_v_mapper_a69a4db116a89f2e1d789954220ee4ac}{EPLANE} mappingPlane)
+\item 
+void \hyperlink{class_gr_polygon_uber_u_v_mapper_ba7a0c7dc52e9109bf8f55e9e447a7a8}{PlaceGroupsSlow} (std::vector$<$ \hyperlink{class_gr_polygon_uber_patch_group}{GrPolygonUberPatchGroup} $\ast$ $>$ groups, \hyperlink{class_gr_polygon_uber_u_v_mapper_a69a4db116a89f2e1d789954220ee4ac}{EPLANE} movementPlane, float gridEntrySize)
+\item 
+void \hyperlink{class_gr_polygon_uber_u_v_mapper_0562d503abc18609adbfcd5634ac1d67}{PlaceGroupsByPath} (std::vector$<$ \hyperlink{class_gr_polygon_uber_patch_group}{GrPolygonUberPatchGroup} $\ast$ $>$ groups, const \hyperlink{class_m_vec3}{MVec3} $\ast$path, int numLines, float stepSize)
+\item 
+unsigned int \hyperlink{class_gr_polygon_uber_u_v_mapper_1b1c2e827d9afdf7256660cd3059181b}{GetTexturesRequired} () const 
+\item 
+void \hyperlink{class_gr_polygon_uber_u_v_mapper_d602be70fe9a07805413c93844ff42c8}{GenUberTextures} (const \hyperlink{class_u_path}{UPath} \&basePath)
+\item 
+unsigned int \hyperlink{class_gr_polygon_uber_u_v_mapper_20d074282fcd83d769fdb08d13d410a2}{GetUberTextureCount} () const 
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_uber_texture}{GrUberTexture} $>$ \hyperlink{class_gr_polygon_uber_u_v_mapper_053a382364662fe61fdc108fd98d9adb}{GetUberTexture} (unsigned int idx) const 
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 26 of file GrPolygonUberUVMapper.h.
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_gr_polygon_uber_u_v_mapper_a69a4db116a89f2e1d789954220ee4ac}{
+\index{GrPolygonUberUVMapper@{GrPolygonUberUVMapper}!EPLANE@{EPLANE}}
+\index{EPLANE@{EPLANE}!GrPolygonUberUVMapper@{GrPolygonUberUVMapper}}
+\subsubsection[{EPLANE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GrPolygonUberUVMapper::EPLANE}}}
+\label{class_gr_polygon_uber_u_v_mapper_a69a4db116a89f2e1d789954220ee4ac}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{EP\_\-XY@{EP\_\-XY}!GrPolygonUberUVMapper@{GrPolygonUberUVMapper}}\index{GrPolygonUberUVMapper@{GrPolygonUberUVMapper}!EP\_\-XY@{EP\_\-XY}}\item[{\em 
+\hypertarget{class_gr_polygon_uber_u_v_mapper_a69a4db116a89f2e1d789954220ee4ac1161d6c0a1b5de467129eac750cb6d24}{
+EP\_\-XY}
+\label{class_gr_polygon_uber_u_v_mapper_a69a4db116a89f2e1d789954220ee4ac1161d6c0a1b5de467129eac750cb6d24}
+}]\index{EP\_\-XZ@{EP\_\-XZ}!GrPolygonUberUVMapper@{GrPolygonUberUVMapper}}\index{GrPolygonUberUVMapper@{GrPolygonUberUVMapper}!EP\_\-XZ@{EP\_\-XZ}}\item[{\em 
+\hypertarget{class_gr_polygon_uber_u_v_mapper_a69a4db116a89f2e1d789954220ee4ac4c6ad56dcb36d9b886f74b17edfe0fc6}{
+EP\_\-XZ}
+\label{class_gr_polygon_uber_u_v_mapper_a69a4db116a89f2e1d789954220ee4ac4c6ad56dcb36d9b886f74b17edfe0fc6}
+}]\index{EP\_\-YZ@{EP\_\-YZ}!GrPolygonUberUVMapper@{GrPolygonUberUVMapper}}\index{GrPolygonUberUVMapper@{GrPolygonUberUVMapper}!EP\_\-YZ@{EP\_\-YZ}}\item[{\em 
+\hypertarget{class_gr_polygon_uber_u_v_mapper_a69a4db116a89f2e1d789954220ee4ac40025b3183b072e100d713063f3bdec1}{
+EP\_\-YZ}
+\label{class_gr_polygon_uber_u_v_mapper_a69a4db116a89f2e1d789954220ee4ac40025b3183b072e100d713063f3bdec1}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 32 of file GrPolygonUberUVMapper.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_polygon_uber_u_v_mapper_62445ba98a0326933278328d68aced62}{
+\index{GrPolygonUberUVMapper@{GrPolygonUberUVMapper}!GrPolygonUberUVMapper@{GrPolygonUberUVMapper}}
+\index{GrPolygonUberUVMapper@{GrPolygonUberUVMapper}!GrPolygonUberUVMapper@{GrPolygonUberUVMapper}}
+\subsubsection[{GrPolygonUberUVMapper}]{\setlength{\rightskip}{0pt plus 5cm}GrPolygonUberUVMapper::GrPolygonUberUVMapper ()}}
+\label{class_gr_polygon_uber_u_v_mapper_62445ba98a0326933278328d68aced62}
+
+
+
+
+Definition at line 71 of file GrPolygonUberUVMapper.cpp.\hypertarget{class_gr_polygon_uber_u_v_mapper_64f19e9773d0da6f67365c2ec30ee345}{
+\index{GrPolygonUberUVMapper@{GrPolygonUberUVMapper}!$\sim$GrPolygonUberUVMapper@{$\sim$GrPolygonUberUVMapper}}
+\index{$\sim$GrPolygonUberUVMapper@{$\sim$GrPolygonUberUVMapper}!GrPolygonUberUVMapper@{GrPolygonUberUVMapper}}
+\subsubsection[{$\sim$GrPolygonUberUVMapper}]{\setlength{\rightskip}{0pt plus 5cm}GrPolygonUberUVMapper::$\sim$GrPolygonUberUVMapper ()}}
+\label{class_gr_polygon_uber_u_v_mapper_64f19e9773d0da6f67365c2ec30ee345}
+
+
+
+
+Definition at line 77 of file GrPolygonUberUVMapper.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_polygon_uber_u_v_mapper_d602be70fe9a07805413c93844ff42c8}{
+\index{GrPolygonUberUVMapper@{GrPolygonUberUVMapper}!GenUberTextures@{GenUberTextures}}
+\index{GenUberTextures@{GenUberTextures}!GrPolygonUberUVMapper@{GrPolygonUberUVMapper}}
+\subsubsection[{GenUberTextures}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonUberUVMapper::GenUberTextures (const {\bf UPath} \& {\em basePath})}}
+\label{class_gr_polygon_uber_u_v_mapper_d602be70fe9a07805413c93844ff42c8}
+
+
+
+
+Definition at line 184 of file GrPolygonUberUVMapper.cpp.\hypertarget{class_gr_polygon_uber_u_v_mapper_1b1c2e827d9afdf7256660cd3059181b}{
+\index{GrPolygonUberUVMapper@{GrPolygonUberUVMapper}!GetTexturesRequired@{GetTexturesRequired}}
+\index{GetTexturesRequired@{GetTexturesRequired}!GrPolygonUberUVMapper@{GrPolygonUberUVMapper}}
+\subsubsection[{GetTexturesRequired}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrPolygonUberUVMapper::GetTexturesRequired () const}}
+\label{class_gr_polygon_uber_u_v_mapper_1b1c2e827d9afdf7256660cd3059181b}
+
+
+
+
+Definition at line 177 of file GrPolygonUberUVMapper.cpp.\hypertarget{class_gr_polygon_uber_u_v_mapper_053a382364662fe61fdc108fd98d9adb}{
+\index{GrPolygonUberUVMapper@{GrPolygonUberUVMapper}!GetUberTexture@{GetUberTexture}}
+\index{GetUberTexture@{GetUberTexture}!GrPolygonUberUVMapper@{GrPolygonUberUVMapper}}
+\subsubsection[{GetUberTexture}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrUberTexture} $>$ GrPolygonUberUVMapper::GetUberTexture (unsigned int {\em idx}) const}}
+\label{class_gr_polygon_uber_u_v_mapper_053a382364662fe61fdc108fd98d9adb}
+
+
+
+
+Definition at line 212 of file GrPolygonUberUVMapper.cpp.\hypertarget{class_gr_polygon_uber_u_v_mapper_20d074282fcd83d769fdb08d13d410a2}{
+\index{GrPolygonUberUVMapper@{GrPolygonUberUVMapper}!GetUberTextureCount@{GetUberTextureCount}}
+\index{GetUberTextureCount@{GetUberTextureCount}!GrPolygonUberUVMapper@{GrPolygonUberUVMapper}}
+\subsubsection[{GetUberTextureCount}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrPolygonUberUVMapper::GetUberTextureCount () const}}
+\label{class_gr_polygon_uber_u_v_mapper_20d074282fcd83d769fdb08d13d410a2}
+
+
+
+
+Definition at line 205 of file GrPolygonUberUVMapper.cpp.\hypertarget{class_gr_polygon_uber_u_v_mapper_fa0335ced5f8d354def36aceac076856}{
+\index{GrPolygonUberUVMapper@{GrPolygonUberUVMapper}!PlaceCoplanarGroups@{PlaceCoplanarGroups}}
+\index{PlaceCoplanarGroups@{PlaceCoplanarGroups}!GrPolygonUberUVMapper@{GrPolygonUberUVMapper}}
+\subsubsection[{PlaceCoplanarGroups}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonUberUVMapper::PlaceCoplanarGroups (std::vector$<$ {\bf GrPolygonUberPatchGroup} $\ast$ $>$ {\em groups}, \/  {\bf EPLANE} {\em mappingPlane})}}
+\label{class_gr_polygon_uber_u_v_mapper_fa0335ced5f8d354def36aceac076856}
+
+
+\hypertarget{class_gr_polygon_uber_u_v_mapper_0562d503abc18609adbfcd5634ac1d67}{
+\index{GrPolygonUberUVMapper@{GrPolygonUberUVMapper}!PlaceGroupsByPath@{PlaceGroupsByPath}}
+\index{PlaceGroupsByPath@{PlaceGroupsByPath}!GrPolygonUberUVMapper@{GrPolygonUberUVMapper}}
+\subsubsection[{PlaceGroupsByPath}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonUberUVMapper::PlaceGroupsByPath (std::vector$<$ {\bf GrPolygonUberPatchGroup} $\ast$ $>$ {\em groups}, \/  const {\bf MVec3} $\ast$ {\em path}, \/  int {\em numLines}, \/  float {\em stepSize})}}
+\label{class_gr_polygon_uber_u_v_mapper_0562d503abc18609adbfcd5634ac1d67}
+
+
+\hypertarget{class_gr_polygon_uber_u_v_mapper_ba7a0c7dc52e9109bf8f55e9e447a7a8}{
+\index{GrPolygonUberUVMapper@{GrPolygonUberUVMapper}!PlaceGroupsSlow@{PlaceGroupsSlow}}
+\index{PlaceGroupsSlow@{PlaceGroupsSlow}!GrPolygonUberUVMapper@{GrPolygonUberUVMapper}}
+\subsubsection[{PlaceGroupsSlow}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonUberUVMapper::PlaceGroupsSlow (std::vector$<$ {\bf GrPolygonUberPatchGroup} $\ast$ $>$ {\em groups}, \/  {\bf EPLANE} {\em movementPlane}, \/  float {\em gridEntrySize})}}
+\label{class_gr_polygon_uber_u_v_mapper_ba7a0c7dc52e9109bf8f55e9e447a7a8}
+
+
+
+
+Definition at line 91 of file GrPolygonUberUVMapper.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_polygon_uber_u_v_mapper_8h}{GrPolygonUberUVMapper.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_polygon_uber_u_v_mapper_8cpp}{GrPolygonUberUVMapper.cpp}\end{CompactItemize}

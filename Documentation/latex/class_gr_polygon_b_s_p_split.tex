@@ -1,0 +1,211 @@
+\hypertarget{class_gr_polygon_b_s_p_split}{
+\section{GrPolygonBSPSplit Class Reference}
+\label{class_gr_polygon_b_s_p_split}\index{GrPolygonBSPSplit@{GrPolygonBSPSplit}}
+}
+{\tt \#include $<$GrPolygonBSPSplit.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_polygon_b_s_p_split_b4581d78385c38f4e55618f5ca6f3d1f}{GrPolygonBSPSplit} ()
+\item 
+\hyperlink{class_gr_polygon_b_s_p_split_27240e6e1d1ae6f058d9cfc2f4e3539c}{GrPolygonBSPSplit} (const \hyperlink{class_gr_polygon_group}{GrPolygonGroup} \&hullPolygons, const \hyperlink{class_gr_polygon_group}{GrPolygonGroup} \&propPolygons, \hyperlink{class_gr_polygon_uber_u_v_mapper}{GrPolygonUberUVMapper} \&mapper, bool calcPVS, bool uberTexture, float uberTexelsPerMeter)
+\item 
+\hyperlink{class_gr_polygon_b_s_p_split_bc3191cb222385455c374f5d7a3d4d56}{GrPolygonBSPSplit} (\hyperlink{class_u_reader}{UReader} \&reader, \hyperlink{class_gr_polygon_b_s_p_split}{GrPolygonBSPSplit} $\ast$parent=0)
+\item 
+\hyperlink{class_gr_polygon_b_s_p_split_4976f28cdf9918a062268bf48bc33169}{$\sim$GrPolygonBSPSplit} ()
+\item 
+\hyperlink{class_gr_polygon_b_s_p_split_97acdea709174afce4d84deb115abc9b}{GrPolygonBSPSplit} (const \hyperlink{class_m_plane}{MPlane} \&plane)
+\item 
+void \hyperlink{class_gr_polygon_b_s_p_split_cb59fb26224b90718ee2152591ce1689}{GenUberMappings} (const \hyperlink{class_gr_polygon_uber_u_v_mapper}{GrPolygonUberUVMapper} \&mapper)
+\item 
+void \hyperlink{class_gr_polygon_b_s_p_split_39017ae93b1f5f803a48e40f16ab5458}{GetVisibilityData} (const \hyperlink{class_m_vec3}{MVec3} \&viewPos, const std::vector$<$ unsigned int $>$ $\ast$$\ast$pvsIndices)
+\item 
+const \hyperlink{class_m_plane}{MPlane} \& \hyperlink{class_gr_polygon_b_s_p_split_1ccd3b94364851f152fb982679c2b348}{GetPlane} () const 
+\item 
+\hyperlink{class_gr_polygon_b_s_p_split}{GrPolygonBSPSplit} $\ast$ \hyperlink{class_gr_polygon_b_s_p_split_8a418bd7c053b3249cffedef4c13c74a}{GetFrontChild} () const 
+\item 
+\hyperlink{class_gr_polygon_b_s_p_split}{GrPolygonBSPSplit} $\ast$ \hyperlink{class_gr_polygon_b_s_p_split_015a96ec133801c0d49b3c3ef99d690d}{GetBackChild} () const 
+\item 
+\hyperlink{class_gr_polygon_b_s_p_area}{GrPolygonBSPArea} $\ast$ \hyperlink{class_gr_polygon_b_s_p_split_585ea05b4c4d67c5851c2176f902ccfd}{GetFrontLeaf} () const 
+\item 
+\hyperlink{class_gr_polygon_b_s_p_area}{GrPolygonBSPArea} $\ast$ \hyperlink{class_gr_polygon_b_s_p_split_f729026e82d6699b67523cec6fa8f4b6}{GetBackLeaf} () const 
+\item 
+void \hyperlink{class_gr_polygon_b_s_p_split_55b5ad7a259b99d040f6e933fce59c9e}{GetLeaves} (std::vector$<$ \hyperlink{class_gr_polygon_b_s_p_area}{GrPolygonBSPArea} $\ast$ $>$ \&leaves)
+\item 
+bool \hyperlink{class_gr_polygon_b_s_p_split_433757920d1eb0b2e0d97b2def097c2e}{GetIntersect} (\hyperlink{class_m_vec3}{MVec3} \&hitPos, const \hyperlink{class_m_ray}{MRay} \&ray, float maxDist)
+\item 
+void \hyperlink{class_gr_polygon_b_s_p_split_3644235a26f02d01f26b7c7d36b0f60a}{GetUberTexData} (std::vector$<$ \hyperlink{class_gr_polygon_uber_patch_group}{GrPolygonUberPatchGroup} $\ast$ $>$ \&dataArray) const 
+\item 
+void \hyperlink{class_gr_polygon_b_s_p_split_3e022c2366958ba8f17e642893f73603}{Save} (\hyperlink{class_u_writer}{UWriter} \&writer)
+\item 
+void \hyperlink{class_gr_polygon_b_s_p_split_35f582798698836db4462972f55fb8a9}{Load} (\hyperlink{class_u_reader}{UReader} \&reader)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 41 of file GrPolygonBSPSplit.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_polygon_b_s_p_split_b4581d78385c38f4e55618f5ca6f3d1f}{
+\index{GrPolygonBSPSplit@{GrPolygonBSPSplit}!GrPolygonBSPSplit@{GrPolygonBSPSplit}}
+\index{GrPolygonBSPSplit@{GrPolygonBSPSplit}!GrPolygonBSPSplit@{GrPolygonBSPSplit}}
+\subsubsection[{GrPolygonBSPSplit}]{\setlength{\rightskip}{0pt plus 5cm}GrPolygonBSPSplit::GrPolygonBSPSplit ()}}
+\label{class_gr_polygon_b_s_p_split_b4581d78385c38f4e55618f5ca6f3d1f}
+
+
+
+
+Definition at line 42 of file GrPolygonBSPSplit.cpp.\hypertarget{class_gr_polygon_b_s_p_split_27240e6e1d1ae6f058d9cfc2f4e3539c}{
+\index{GrPolygonBSPSplit@{GrPolygonBSPSplit}!GrPolygonBSPSplit@{GrPolygonBSPSplit}}
+\index{GrPolygonBSPSplit@{GrPolygonBSPSplit}!GrPolygonBSPSplit@{GrPolygonBSPSplit}}
+\subsubsection[{GrPolygonBSPSplit}]{\setlength{\rightskip}{0pt plus 5cm}GrPolygonBSPSplit::GrPolygonBSPSplit (const {\bf GrPolygonGroup} \& {\em hullPolygons}, \/  const {\bf GrPolygonGroup} \& {\em propPolygons}, \/  {\bf GrPolygonUberUVMapper} \& {\em mapper}, \/  bool {\em calcPVS}, \/  bool {\em uberTexture}, \/  float {\em uberTexelsPerMeter})}}
+\label{class_gr_polygon_b_s_p_split_27240e6e1d1ae6f058d9cfc2f4e3539c}
+
+
+
+
+Definition at line 53 of file GrPolygonBSPSplit.cpp.\hypertarget{class_gr_polygon_b_s_p_split_bc3191cb222385455c374f5d7a3d4d56}{
+\index{GrPolygonBSPSplit@{GrPolygonBSPSplit}!GrPolygonBSPSplit@{GrPolygonBSPSplit}}
+\index{GrPolygonBSPSplit@{GrPolygonBSPSplit}!GrPolygonBSPSplit@{GrPolygonBSPSplit}}
+\subsubsection[{GrPolygonBSPSplit}]{\setlength{\rightskip}{0pt plus 5cm}GrPolygonBSPSplit::GrPolygonBSPSplit ({\bf UReader} \& {\em reader}, \/  {\bf GrPolygonBSPSplit} $\ast$ {\em parent} = {\tt 0})}}
+\label{class_gr_polygon_b_s_p_split_bc3191cb222385455c374f5d7a3d4d56}
+
+
+
+
+Definition at line 173 of file GrPolygonBSPSplit.cpp.\hypertarget{class_gr_polygon_b_s_p_split_4976f28cdf9918a062268bf48bc33169}{
+\index{GrPolygonBSPSplit@{GrPolygonBSPSplit}!$\sim$GrPolygonBSPSplit@{$\sim$GrPolygonBSPSplit}}
+\index{$\sim$GrPolygonBSPSplit@{$\sim$GrPolygonBSPSplit}!GrPolygonBSPSplit@{GrPolygonBSPSplit}}
+\subsubsection[{$\sim$GrPolygonBSPSplit}]{\setlength{\rightskip}{0pt plus 5cm}GrPolygonBSPSplit::$\sim$GrPolygonBSPSplit ()}}
+\label{class_gr_polygon_b_s_p_split_4976f28cdf9918a062268bf48bc33169}
+
+
+
+
+Definition at line 184 of file GrPolygonBSPSplit.cpp.\hypertarget{class_gr_polygon_b_s_p_split_97acdea709174afce4d84deb115abc9b}{
+\index{GrPolygonBSPSplit@{GrPolygonBSPSplit}!GrPolygonBSPSplit@{GrPolygonBSPSplit}}
+\index{GrPolygonBSPSplit@{GrPolygonBSPSplit}!GrPolygonBSPSplit@{GrPolygonBSPSplit}}
+\subsubsection[{GrPolygonBSPSplit}]{\setlength{\rightskip}{0pt plus 5cm}GrPolygonBSPSplit::GrPolygonBSPSplit (const {\bf MPlane} \& {\em plane})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_polygon_b_s_p_split_97acdea709174afce4d84deb115abc9b}
+
+
+
+
+Definition at line 52 of file GrPolygonBSPSplit.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_polygon_b_s_p_split_cb59fb26224b90718ee2152591ce1689}{
+\index{GrPolygonBSPSplit@{GrPolygonBSPSplit}!GenUberMappings@{GenUberMappings}}
+\index{GenUberMappings@{GenUberMappings}!GrPolygonBSPSplit@{GrPolygonBSPSplit}}
+\subsubsection[{GenUberMappings}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonBSPSplit::GenUberMappings (const {\bf GrPolygonUberUVMapper} \& {\em mapper})}}
+\label{class_gr_polygon_b_s_p_split_cb59fb26224b90718ee2152591ce1689}
+
+
+\hypertarget{class_gr_polygon_b_s_p_split_015a96ec133801c0d49b3c3ef99d690d}{
+\index{GrPolygonBSPSplit@{GrPolygonBSPSplit}!GetBackChild@{GetBackChild}}
+\index{GetBackChild@{GetBackChild}!GrPolygonBSPSplit@{GrPolygonBSPSplit}}
+\subsubsection[{GetBackChild}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrPolygonBSPSplit}$\ast$ GrPolygonBSPSplit::GetBackChild () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_polygon_b_s_p_split_015a96ec133801c0d49b3c3ef99d690d}
+
+
+
+
+Definition at line 65 of file GrPolygonBSPSplit.h.\hypertarget{class_gr_polygon_b_s_p_split_f729026e82d6699b67523cec6fa8f4b6}{
+\index{GrPolygonBSPSplit@{GrPolygonBSPSplit}!GetBackLeaf@{GetBackLeaf}}
+\index{GetBackLeaf@{GetBackLeaf}!GrPolygonBSPSplit@{GrPolygonBSPSplit}}
+\subsubsection[{GetBackLeaf}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrPolygonBSPArea}$\ast$ GrPolygonBSPSplit::GetBackLeaf () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_polygon_b_s_p_split_f729026e82d6699b67523cec6fa8f4b6}
+
+
+
+
+Definition at line 69 of file GrPolygonBSPSplit.h.\hypertarget{class_gr_polygon_b_s_p_split_8a418bd7c053b3249cffedef4c13c74a}{
+\index{GrPolygonBSPSplit@{GrPolygonBSPSplit}!GetFrontChild@{GetFrontChild}}
+\index{GetFrontChild@{GetFrontChild}!GrPolygonBSPSplit@{GrPolygonBSPSplit}}
+\subsubsection[{GetFrontChild}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrPolygonBSPSplit}$\ast$ GrPolygonBSPSplit::GetFrontChild () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_polygon_b_s_p_split_8a418bd7c053b3249cffedef4c13c74a}
+
+
+
+
+Definition at line 64 of file GrPolygonBSPSplit.h.\hypertarget{class_gr_polygon_b_s_p_split_585ea05b4c4d67c5851c2176f902ccfd}{
+\index{GrPolygonBSPSplit@{GrPolygonBSPSplit}!GetFrontLeaf@{GetFrontLeaf}}
+\index{GetFrontLeaf@{GetFrontLeaf}!GrPolygonBSPSplit@{GrPolygonBSPSplit}}
+\subsubsection[{GetFrontLeaf}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrPolygonBSPArea}$\ast$ GrPolygonBSPSplit::GetFrontLeaf () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_polygon_b_s_p_split_585ea05b4c4d67c5851c2176f902ccfd}
+
+
+
+
+Definition at line 68 of file GrPolygonBSPSplit.h.\hypertarget{class_gr_polygon_b_s_p_split_433757920d1eb0b2e0d97b2def097c2e}{
+\index{GrPolygonBSPSplit@{GrPolygonBSPSplit}!GetIntersect@{GetIntersect}}
+\index{GetIntersect@{GetIntersect}!GrPolygonBSPSplit@{GrPolygonBSPSplit}}
+\subsubsection[{GetIntersect}]{\setlength{\rightskip}{0pt plus 5cm}bool GrPolygonBSPSplit::GetIntersect ({\bf MVec3} \& {\em hitPos}, \/  const {\bf MRay} \& {\em ray}, \/  float {\em maxDist})}}
+\label{class_gr_polygon_b_s_p_split_433757920d1eb0b2e0d97b2def097c2e}
+
+
+
+
+Definition at line 232 of file GrPolygonBSPSplit.cpp.\hypertarget{class_gr_polygon_b_s_p_split_55b5ad7a259b99d040f6e933fce59c9e}{
+\index{GrPolygonBSPSplit@{GrPolygonBSPSplit}!GetLeaves@{GetLeaves}}
+\index{GetLeaves@{GetLeaves}!GrPolygonBSPSplit@{GrPolygonBSPSplit}}
+\subsubsection[{GetLeaves}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonBSPSplit::GetLeaves (std::vector$<$ {\bf GrPolygonBSPArea} $\ast$ $>$ \& {\em leaves})}}
+\label{class_gr_polygon_b_s_p_split_55b5ad7a259b99d040f6e933fce59c9e}
+
+
+
+
+Definition at line 217 of file GrPolygonBSPSplit.cpp.\hypertarget{class_gr_polygon_b_s_p_split_1ccd3b94364851f152fb982679c2b348}{
+\index{GrPolygonBSPSplit@{GrPolygonBSPSplit}!GetPlane@{GetPlane}}
+\index{GetPlane@{GetPlane}!GrPolygonBSPSplit@{GrPolygonBSPSplit}}
+\subsubsection[{GetPlane}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MPlane}\& GrPolygonBSPSplit::GetPlane () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_polygon_b_s_p_split_1ccd3b94364851f152fb982679c2b348}
+
+
+
+
+Definition at line 61 of file GrPolygonBSPSplit.h.\hypertarget{class_gr_polygon_b_s_p_split_3644235a26f02d01f26b7c7d36b0f60a}{
+\index{GrPolygonBSPSplit@{GrPolygonBSPSplit}!GetUberTexData@{GetUberTexData}}
+\index{GetUberTexData@{GetUberTexData}!GrPolygonBSPSplit@{GrPolygonBSPSplit}}
+\subsubsection[{GetUberTexData}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonBSPSplit::GetUberTexData (std::vector$<$ {\bf GrPolygonUberPatchGroup} $\ast$ $>$ \& {\em dataArray}) const}}
+\label{class_gr_polygon_b_s_p_split_3644235a26f02d01f26b7c7d36b0f60a}
+
+
+
+
+Definition at line 313 of file GrPolygonBSPSplit.cpp.\hypertarget{class_gr_polygon_b_s_p_split_39017ae93b1f5f803a48e40f16ab5458}{
+\index{GrPolygonBSPSplit@{GrPolygonBSPSplit}!GetVisibilityData@{GetVisibilityData}}
+\index{GetVisibilityData@{GetVisibilityData}!GrPolygonBSPSplit@{GrPolygonBSPSplit}}
+\subsubsection[{GetVisibilityData}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonBSPSplit::GetVisibilityData (const {\bf MVec3} \& {\em viewPos}, \/  const std::vector$<$ unsigned int $>$ $\ast$$\ast$ {\em pvsIndices})}}
+\label{class_gr_polygon_b_s_p_split_39017ae93b1f5f803a48e40f16ab5458}
+
+
+
+
+Definition at line 196 of file GrPolygonBSPSplit.cpp.\hypertarget{class_gr_polygon_b_s_p_split_35f582798698836db4462972f55fb8a9}{
+\index{GrPolygonBSPSplit@{GrPolygonBSPSplit}!Load@{Load}}
+\index{Load@{Load}!GrPolygonBSPSplit@{GrPolygonBSPSplit}}
+\subsubsection[{Load}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonBSPSplit::Load ({\bf UReader} \& {\em reader})}}
+\label{class_gr_polygon_b_s_p_split_35f582798698836db4462972f55fb8a9}
+
+
+
+
+Definition at line 360 of file GrPolygonBSPSplit.cpp.\hypertarget{class_gr_polygon_b_s_p_split_3e022c2366958ba8f17e642893f73603}{
+\index{GrPolygonBSPSplit@{GrPolygonBSPSplit}!Save@{Save}}
+\index{Save@{Save}!GrPolygonBSPSplit@{GrPolygonBSPSplit}}
+\subsubsection[{Save}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonBSPSplit::Save ({\bf UWriter} \& {\em writer})}}
+\label{class_gr_polygon_b_s_p_split_3e022c2366958ba8f17e642893f73603}
+
+
+
+
+Definition at line 330 of file GrPolygonBSPSplit.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_polygon_b_s_p_split_8h}{GrPolygonBSPSplit.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_polygon_b_s_p_split_8cpp}{GrPolygonBSPSplit.cpp}\end{CompactItemize}

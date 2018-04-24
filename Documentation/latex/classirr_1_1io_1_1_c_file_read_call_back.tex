@@ -1,0 +1,101 @@
+\hypertarget{classirr_1_1io_1_1_c_file_read_call_back}{
+\section{irr::io::CFileReadCallBack Class Reference}
+\label{classirr_1_1io_1_1_c_file_read_call_back}\index{irr::io::CFileReadCallBack@{irr::io::CFileReadCallBack}}
+}
+Implementation of the file read callback for ordinary files.  
+
+
+Inheritance diagram for irr::io::CFileReadCallBack::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classirr_1_1io_1_1_c_file_read_call_back}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{classirr_1_1io_1_1_c_file_read_call_back_abc79875f8e09ff21d9c2a01f1907eca}{CFileReadCallBack} (const char $\ast$filename)
+\begin{CompactList}\small\item\em construct from filename \item\end{CompactList}\item 
+\hyperlink{classirr_1_1io_1_1_c_file_read_call_back_19c2fe29ebd44f95b33ef85e26cd7ca9}{CFileReadCallBack} (FILE $\ast$file)
+\begin{CompactList}\small\item\em construct from FILE pointer \item\end{CompactList}\item 
+virtual \hyperlink{classirr_1_1io_1_1_c_file_read_call_back_ff501b54688e10c2cd0418f982f52799}{$\sim$CFileReadCallBack} ()
+\begin{CompactList}\small\item\em destructor \item\end{CompactList}\item 
+virtual int \hyperlink{classirr_1_1io_1_1_c_file_read_call_back_b2d4c4e10cd2b03af1173fbc25f87741}{read} (void $\ast$\hyperlink{glext__bak_8h_c4fdb15bdbcd63430bab668b5419ed9f}{buffer}, int sizeToRead)
+\begin{CompactList}\small\item\em Reads an amount of bytes from the file. \item\end{CompactList}\item 
+virtual int \hyperlink{classirr_1_1io_1_1_c_file_read_call_back_c84d10241c07f1a8f744ffaad6683eef}{getSize} ()
+\begin{CompactList}\small\item\em Returns size of file in bytes. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of the file read callback for ordinary files. 
+
+Definition at line 19 of file irrXML.cpp.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classirr_1_1io_1_1_c_file_read_call_back_abc79875f8e09ff21d9c2a01f1907eca}{
+\index{irr::io::CFileReadCallBack@{irr::io::CFileReadCallBack}!CFileReadCallBack@{CFileReadCallBack}}
+\index{CFileReadCallBack@{CFileReadCallBack}!irr::io::CFileReadCallBack@{irr::io::CFileReadCallBack}}
+\subsubsection[{CFileReadCallBack}]{\setlength{\rightskip}{0pt plus 5cm}irr::io::CFileReadCallBack::CFileReadCallBack (const char $\ast$ {\em filename})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1io_1_1_c_file_read_call_back_abc79875f8e09ff21d9c2a01f1907eca}
+
+
+construct from filename 
+
+
+
+Definition at line 24 of file irrXML.cpp.\hypertarget{classirr_1_1io_1_1_c_file_read_call_back_19c2fe29ebd44f95b33ef85e26cd7ca9}{
+\index{irr::io::CFileReadCallBack@{irr::io::CFileReadCallBack}!CFileReadCallBack@{CFileReadCallBack}}
+\index{CFileReadCallBack@{CFileReadCallBack}!irr::io::CFileReadCallBack@{irr::io::CFileReadCallBack}}
+\subsubsection[{CFileReadCallBack}]{\setlength{\rightskip}{0pt plus 5cm}irr::io::CFileReadCallBack::CFileReadCallBack (FILE $\ast$ {\em file})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1io_1_1_c_file_read_call_back_19c2fe29ebd44f95b33ef85e26cd7ca9}
+
+
+construct from FILE pointer 
+
+
+
+Definition at line 35 of file irrXML.cpp.\hypertarget{classirr_1_1io_1_1_c_file_read_call_back_ff501b54688e10c2cd0418f982f52799}{
+\index{irr::io::CFileReadCallBack@{irr::io::CFileReadCallBack}!$\sim$CFileReadCallBack@{$\sim$CFileReadCallBack}}
+\index{$\sim$CFileReadCallBack@{$\sim$CFileReadCallBack}!irr::io::CFileReadCallBack@{irr::io::CFileReadCallBack}}
+\subsubsection[{$\sim$CFileReadCallBack}]{\setlength{\rightskip}{0pt plus 5cm}virtual irr::io::CFileReadCallBack::$\sim$CFileReadCallBack ()\hspace{0.3cm}{\tt  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classirr_1_1io_1_1_c_file_read_call_back_ff501b54688e10c2cd0418f982f52799}
+
+
+destructor 
+
+
+
+Definition at line 43 of file irrXML.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{classirr_1_1io_1_1_c_file_read_call_back_c84d10241c07f1a8f744ffaad6683eef}{
+\index{irr::io::CFileReadCallBack@{irr::io::CFileReadCallBack}!getSize@{getSize}}
+\index{getSize@{getSize}!irr::io::CFileReadCallBack@{irr::io::CFileReadCallBack}}
+\subsubsection[{getSize}]{\setlength{\rightskip}{0pt plus 5cm}virtual int irr::io::CFileReadCallBack::getSize ()\hspace{0.3cm}{\tt  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classirr_1_1io_1_1_c_file_read_call_back_c84d10241c07f1a8f744ffaad6683eef}
+
+
+Returns size of file in bytes. 
+
+
+
+Implements \hyperlink{classirr_1_1io_1_1_i_file_read_call_back_51e3ae6f16cf3058800cb905f3b21b23}{irr::io::IFileReadCallBack}.
+
+Definition at line 59 of file irrXML.cpp.\hypertarget{classirr_1_1io_1_1_c_file_read_call_back_b2d4c4e10cd2b03af1173fbc25f87741}{
+\index{irr::io::CFileReadCallBack@{irr::io::CFileReadCallBack}!read@{read}}
+\index{read@{read}!irr::io::CFileReadCallBack@{irr::io::CFileReadCallBack}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}virtual int irr::io::CFileReadCallBack::read (void $\ast$ {\em buffer}, \/  int {\em sizeToRead})\hspace{0.3cm}{\tt  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classirr_1_1io_1_1_c_file_read_call_back_b2d4c4e10cd2b03af1173fbc25f87741}
+
+
+Reads an amount of bytes from the file. 
+
+
+
+Implements \hyperlink{classirr_1_1io_1_1_i_file_read_call_back_e8c57b8454078aa2acd39772a6aa4439}{irr::io::IFileReadCallBack}.
+
+Definition at line 50 of file irrXML.cpp.
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Common/IrrXML/\hyperlink{irr_x_m_l_8cpp}{irrXML.cpp}\end{CompactItemize}

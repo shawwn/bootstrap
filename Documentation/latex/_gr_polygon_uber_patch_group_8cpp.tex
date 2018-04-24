@@ -1,0 +1,83 @@
+\hypertarget{_gr_polygon_uber_patch_group_8cpp}{
+\section{C:/Bootstrap/ProjectBX/Engine/Graphics/GrPolygonUberPatchGroup.cpp File Reference}
+\label{_gr_polygon_uber_patch_group_8cpp}\index{C:/Bootstrap/ProjectBX/Engine/Graphics/GrPolygonUberPatchGroup.cpp@{C:/Bootstrap/ProjectBX/Engine/Graphics/GrPolygonUberPatchGroup.cpp}}
+}
+{\tt \#include \char`\"{}graphics\_\-afx.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrPolygonUberPatchGroup.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrPolygonUberPatch.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrPolygonGroup.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrPolygon.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrPolygonEdgeList.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrConfig.h\char`\"{}}\par
+{\tt \#include \char`\"{}ULRUHash.h\char`\"{}}\par
+{\tt \#include \char`\"{}MSVD.h\char`\"{}}\par
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \hyperlink{_gr_polygon_uber_patch_group_8cpp_350d377ba286985ba2617e8239e40160}{POLY\_\-STATE\_\-VISITED}~255
+\item 
+\#define \hyperlink{_gr_polygon_uber_patch_group_8cpp_8fb28fd46186ac74d519f124a7eda798}{MAX\_\-PATCH\_\-SIZE}~256
+\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+const float \hyperlink{_gr_polygon_uber_patch_group_8cpp_95f07ce3eba2af3ed3560bc45a12e23e}{kMatTable} \mbox{[}6\mbox{]}\mbox{[}16\mbox{]}
+\item 
+const float \hyperlink{_gr_polygon_uber_patch_group_8cpp_343dc24d4665e52477a8f5e4d0baf355}{kPlaneNormalTable} \mbox{[}6\mbox{]}\mbox{[}3\mbox{]}
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_gr_polygon_uber_patch_group_8cpp_8fb28fd46186ac74d519f124a7eda798}{
+\index{GrPolygonUberPatchGroup.cpp@{GrPolygonUberPatchGroup.cpp}!MAX\_\-PATCH\_\-SIZE@{MAX\_\-PATCH\_\-SIZE}}
+\index{MAX\_\-PATCH\_\-SIZE@{MAX\_\-PATCH\_\-SIZE}!GrPolygonUberPatchGroup.cpp@{GrPolygonUberPatchGroup.cpp}}
+\subsubsection[{MAX\_\-PATCH\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAX\_\-PATCH\_\-SIZE~256}}
+\label{_gr_polygon_uber_patch_group_8cpp_8fb28fd46186ac74d519f124a7eda798}
+
+
+
+
+Definition at line 26 of file GrPolygonUberPatchGroup.cpp.\hypertarget{_gr_polygon_uber_patch_group_8cpp_350d377ba286985ba2617e8239e40160}{
+\index{GrPolygonUberPatchGroup.cpp@{GrPolygonUberPatchGroup.cpp}!POLY\_\-STATE\_\-VISITED@{POLY\_\-STATE\_\-VISITED}}
+\index{POLY\_\-STATE\_\-VISITED@{POLY\_\-STATE\_\-VISITED}!GrPolygonUberPatchGroup.cpp@{GrPolygonUberPatchGroup.cpp}}
+\subsubsection[{POLY\_\-STATE\_\-VISITED}]{\setlength{\rightskip}{0pt plus 5cm}\#define POLY\_\-STATE\_\-VISITED~255}}
+\label{_gr_polygon_uber_patch_group_8cpp_350d377ba286985ba2617e8239e40160}
+
+
+
+
+Definition at line 22 of file GrPolygonUberPatchGroup.cpp.
+
+\subsection{Variable Documentation}
+\hypertarget{_gr_polygon_uber_patch_group_8cpp_95f07ce3eba2af3ed3560bc45a12e23e}{
+\index{GrPolygonUberPatchGroup.cpp@{GrPolygonUberPatchGroup.cpp}!kMatTable@{kMatTable}}
+\index{kMatTable@{kMatTable}!GrPolygonUberPatchGroup.cpp@{GrPolygonUberPatchGroup.cpp}}
+\subsubsection[{kMatTable}]{\setlength{\rightskip}{0pt plus 5cm}const float {\bf kMatTable}\mbox{[}6\mbox{]}\mbox{[}16\mbox{]}}}
+\label{_gr_polygon_uber_patch_group_8cpp_95f07ce3eba2af3ed3560bc45a12e23e}
+
+
+
+
+Definition at line 29 of file GrPolygonUberPatchGroup.cpp.\hypertarget{_gr_polygon_uber_patch_group_8cpp_343dc24d4665e52477a8f5e4d0baf355}{
+\index{GrPolygonUberPatchGroup.cpp@{GrPolygonUberPatchGroup.cpp}!kPlaneNormalTable@{kPlaneNormalTable}}
+\index{kPlaneNormalTable@{kPlaneNormalTable}!GrPolygonUberPatchGroup.cpp@{GrPolygonUberPatchGroup.cpp}}
+\subsubsection[{kPlaneNormalTable}]{\setlength{\rightskip}{0pt plus 5cm}const float {\bf kPlaneNormalTable}\mbox{[}6\mbox{]}\mbox{[}3\mbox{]}}}
+\label{_gr_polygon_uber_patch_group_8cpp_343dc24d4665e52477a8f5e4d0baf355}
+
+
+\textbf{Initial value:}
+
+\begin{Code}\begin{verbatim}
+{
+        { -1.0f,  0.0f,  0.0f },                        
+        {  1.0f,  0.0f,  0.0f },                        
+        {  0.0f, -1.0f,  0.0f },                        
+        {  0.0f,  1.0f,  0.0f },                        
+        {  0.0f,  0.0f, -1.0f },                        
+        {  0.0f,  0.0f,  1.0f },                        
+}
+\end{verbatim}
+\end{Code}
+
+
+Definition at line 69 of file GrPolygonUberPatchGroup.cpp.

@@ -1,0 +1,389 @@
+\hypertarget{class_m_mat3x3}{
+\section{MMat3x3 Class Reference}
+\label{class_m_mat3x3}\index{MMat3x3@{MMat3x3}}
+}
+{\tt \#include $<$MMat3x3.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_m_mat3x3_f7123b5212981cb6a5267a8dbf8e86ec}{MMat3x3} ()
+\item 
+\hyperlink{class_m_mat3x3_f751a2f8378abde20ffe3fcfc39a726b}{MMat3x3} (float \hyperlink{wglext_8h_9298c7ad619074f5285b32c6b72bfdea}{y}, float \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x}, float \hyperlink{glext__bak_8h_5b27107fca91cf19a778530405575b37}{z})
+\item 
+\hyperlink{class_m_mat3x3_f53f2aa6c4d47b4f44580574299800ef}{MMat3x3} (float \_\-11, float \_\-12, float \_\-13, float \_\-21, float \_\-22, float \_\-23, float \_\-31, float \_\-32, float \_\-33)
+\item 
+\hyperlink{class_m_mat3x3_f3b19cba8bce9dd0916fdc214faee6cb}{MMat3x3} (const \hyperlink{class_m_vec3}{MVec3} \&axis, float \hyperlink{glext_8h_9e06c1f76a20fed54ca742cd25cb02c4}{angle})
+\item 
+\hyperlink{class_m_mat3x3_5940f6a8f9f4a0d11fd737a9b8f78c85}{MMat3x3} (const \hyperlink{class_m_vec3}{MVec3} \&row0, const \hyperlink{class_m_vec3}{MVec3} \&row1, const \hyperlink{class_m_vec3}{MVec3} \&row2)
+\item 
+\hyperlink{class_m_mat3x3_be15ae144f6155954faf29c683f9fe72}{MMat3x3} (const \hyperlink{class_m_mat3x3}{MMat3x3} \&mat)
+\item 
+\hyperlink{class_m_mat3x3_b08b8249982271bc69924bbb325037ba}{$\sim$MMat3x3} ()
+\item 
+\hyperlink{class_m_mat3x3}{MMat3x3} \& \hyperlink{class_m_mat3x3_893b3d2e337be1b09d3d694c23c0c3e6}{operator=} (const \hyperlink{class_m_mat3x3}{MMat3x3} \&mat)
+\item 
+void \hyperlink{class_m_mat3x3_10714e78ed687e30e915ef75c34c5cbb}{ToEulerYXZ} (float \&\hyperlink{wglext_8h_9298c7ad619074f5285b32c6b72bfdea}{y}, float \&\hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x}, float \&\hyperlink{glext__bak_8h_5b27107fca91cf19a778530405575b37}{z})
+\item 
+void \hyperlink{class_m_mat3x3_b28ee4ae5b4e8278bdad52dfc62d70d7}{FromEulerYXZ} (float \hyperlink{wglext_8h_9298c7ad619074f5285b32c6b72bfdea}{y}, float \hyperlink{glext__bak_8h_5b27107fca91cf19a778530405575b37}{z}, float \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x})
+\item 
+void \hyperlink{class_m_mat3x3_bd1bb896aeeaf05ec76624c5e996818b}{MakeXRotation} (float angleInRad)
+\item 
+void \hyperlink{class_m_mat3x3_772a24dfb662f3348eaf19c5e57b578b}{MakeYRotation} (float angleInRad)
+\item 
+void \hyperlink{class_m_mat3x3_34c3fe8d743433b98bd1cdf0eb053224}{MakeZRotation} (float angleInRad)
+\item 
+void \hyperlink{class_m_mat3x3_1513b85723e4ab41feb71d56db6aa625}{MakeRotation} (const \hyperlink{class_m_vec3}{MVec3} \&axis, float \hyperlink{glext_8h_9e06c1f76a20fed54ca742cd25cb02c4}{angle})
+\item 
+\hyperlink{class_m_vec3}{MVec3} \hyperlink{class_m_mat3x3_84fad6815686a050837119f242650324}{RotatePoint} (const \hyperlink{class_m_vec3}{MVec3} \&point) const 
+\item 
+void \hyperlink{class_m_mat3x3_15242b646b6462a0f6fa44b324ff009c}{RotatePointFast} (\hyperlink{class_m_vec3}{MVec3} \&point) const 
+\item 
+void \hyperlink{class_m_mat3x3_1cd3b344fa0732e7be859ce95f35f063}{SetRow} (unsigned int i, const \hyperlink{class_m_vec3}{MVec3} \&\hyperlink{glext__bak_8h_08e0b6bb56b39ff71be380b4cdf5ec33}{row})
+\item 
+void \hyperlink{class_m_mat3x3_a4ca3211b668abaa0ce6cefb4792dd1f}{GetRow} (\hyperlink{class_m_vec3}{MVec3} \&rowOut, unsigned int i) const 
+\item 
+\hyperlink{class_m_vec3}{MVec3} \hyperlink{class_m_mat3x3_31977832772ce75b2ad0d494e6bbcd30}{GetRow} (unsigned int i) const 
+\item 
+void \hyperlink{class_m_mat3x3_7f30bf03e58ead2cd8d781234be60868}{SetCol} (unsigned int i, const \hyperlink{class_m_vec3}{MVec3} \&col)
+\item 
+void \hyperlink{class_m_mat3x3_287d293d9d309a9991ffb4cae6652998}{GetCol} (\hyperlink{class_m_vec3}{MVec3} \&colOut, unsigned int i) const 
+\item 
+\hyperlink{class_m_vec3}{MVec3} \hyperlink{class_m_mat3x3_fec431f74f2796faa5abfdffd767f841}{GetCol} (unsigned int i) const 
+\item 
+void \hyperlink{class_m_mat3x3_d7c9471fbcf788b8140a336ad7139a21}{Transpose} ()
+\item 
+\hyperlink{class_m_mat3x3}{MMat3x3} \hyperlink{class_m_mat3x3_a01f61e6a6c501a6d777a6d8c980736d}{Transposed} () const 
+\item 
+bool \hyperlink{class_m_mat3x3_b4b44fc1b81ea6b43cc272ed9433e584}{Inverse} ()
+\item 
+bool \hyperlink{class_m_mat3x3_b2aa137135d4743f57910a2958eacd2b}{InverseTransposed} (\hyperlink{class_m_mat3x3}{MMat3x3} \&output) const 
+\item 
+float \& \hyperlink{class_m_mat3x3_31c4291012e2002e0840a9d744c29f83}{operator()} (unsigned int i, unsigned int j)
+\item 
+float \hyperlink{class_m_mat3x3_41deda72139584e5d8f2d6191387f0aa}{operator()} (unsigned int i, unsigned int j) const 
+\item 
+\hyperlink{class_m_mat3x3}{MMat3x3} \hyperlink{class_m_mat3x3_41ee55d1d606a5018fe404e0e4938b84}{operator$\ast$} (const \hyperlink{class_m_mat3x3}{MMat3x3} \&mat) const 
+\item 
+const float $\ast$ \hyperlink{class_m_mat3x3_604ffd6c5ec41b1912146e692074bab0}{GetDataStart} () const 
+\item 
+\hyperlink{class_m_mat3x3_95b4cd80d8d663a4210f8645ee91bc7b}{operator const float $\ast$} () const 
+\item 
+void \hyperlink{class_m_mat3x3_fda8bdfde06537ba03acee59fbffc41a}{Save} (\hyperlink{class_u_writer}{UWriter} \&writer) const 
+\item 
+void \hyperlink{class_m_mat3x3_00cd1ab58183f2bacce2e2e38ac77363}{Load} (\hyperlink{class_u_reader}{UReader} \&reader)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 19 of file MMat3x3.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_m_mat3x3_f7123b5212981cb6a5267a8dbf8e86ec}{
+\index{MMat3x3@{MMat3x3}!MMat3x3@{MMat3x3}}
+\index{MMat3x3@{MMat3x3}!MMat3x3@{MMat3x3}}
+\subsubsection[{MMat3x3}]{\setlength{\rightskip}{0pt plus 5cm}MMat3x3::MMat3x3 ()}}
+\label{class_m_mat3x3_f7123b5212981cb6a5267a8dbf8e86ec}
+
+
+
+
+Definition at line 29 of file MMat3x3.cpp.\hypertarget{class_m_mat3x3_f751a2f8378abde20ffe3fcfc39a726b}{
+\index{MMat3x3@{MMat3x3}!MMat3x3@{MMat3x3}}
+\index{MMat3x3@{MMat3x3}!MMat3x3@{MMat3x3}}
+\subsubsection[{MMat3x3}]{\setlength{\rightskip}{0pt plus 5cm}MMat3x3::MMat3x3 (float {\em y}, \/  float {\em x}, \/  float {\em z})}}
+\label{class_m_mat3x3_f751a2f8378abde20ffe3fcfc39a726b}
+
+
+
+
+Definition at line 44 of file MMat3x3.cpp.\hypertarget{class_m_mat3x3_f53f2aa6c4d47b4f44580574299800ef}{
+\index{MMat3x3@{MMat3x3}!MMat3x3@{MMat3x3}}
+\index{MMat3x3@{MMat3x3}!MMat3x3@{MMat3x3}}
+\subsubsection[{MMat3x3}]{\setlength{\rightskip}{0pt plus 5cm}MMat3x3::MMat3x3 (float {\em \_\-11}, \/  float {\em \_\-12}, \/  float {\em \_\-13}, \/  float {\em \_\-21}, \/  float {\em \_\-22}, \/  float {\em \_\-23}, \/  float {\em \_\-31}, \/  float {\em \_\-32}, \/  float {\em \_\-33})}}
+\label{class_m_mat3x3_f53f2aa6c4d47b4f44580574299800ef}
+
+
+
+
+Definition at line 50 of file MMat3x3.cpp.\hypertarget{class_m_mat3x3_f3b19cba8bce9dd0916fdc214faee6cb}{
+\index{MMat3x3@{MMat3x3}!MMat3x3@{MMat3x3}}
+\index{MMat3x3@{MMat3x3}!MMat3x3@{MMat3x3}}
+\subsubsection[{MMat3x3}]{\setlength{\rightskip}{0pt plus 5cm}MMat3x3::MMat3x3 (const {\bf MVec3} \& {\em axis}, \/  float {\em angle})}}
+\label{class_m_mat3x3_f3b19cba8bce9dd0916fdc214faee6cb}
+
+
+
+
+Definition at line 72 of file MMat3x3.cpp.\hypertarget{class_m_mat3x3_5940f6a8f9f4a0d11fd737a9b8f78c85}{
+\index{MMat3x3@{MMat3x3}!MMat3x3@{MMat3x3}}
+\index{MMat3x3@{MMat3x3}!MMat3x3@{MMat3x3}}
+\subsubsection[{MMat3x3}]{\setlength{\rightskip}{0pt plus 5cm}MMat3x3::MMat3x3 (const {\bf MVec3} \& {\em row0}, \/  const {\bf MVec3} \& {\em row1}, \/  const {\bf MVec3} \& {\em row2})}}
+\label{class_m_mat3x3_5940f6a8f9f4a0d11fd737a9b8f78c85}
+
+
+
+
+Definition at line 78 of file MMat3x3.cpp.\hypertarget{class_m_mat3x3_be15ae144f6155954faf29c683f9fe72}{
+\index{MMat3x3@{MMat3x3}!MMat3x3@{MMat3x3}}
+\index{MMat3x3@{MMat3x3}!MMat3x3@{MMat3x3}}
+\subsubsection[{MMat3x3}]{\setlength{\rightskip}{0pt plus 5cm}MMat3x3::MMat3x3 (const {\bf MMat3x3} \& {\em mat})}}
+\label{class_m_mat3x3_be15ae144f6155954faf29c683f9fe72}
+
+
+
+
+Definition at line 86 of file MMat3x3.cpp.\hypertarget{class_m_mat3x3_b08b8249982271bc69924bbb325037ba}{
+\index{MMat3x3@{MMat3x3}!$\sim$MMat3x3@{$\sim$MMat3x3}}
+\index{$\sim$MMat3x3@{$\sim$MMat3x3}!MMat3x3@{MMat3x3}}
+\subsubsection[{$\sim$MMat3x3}]{\setlength{\rightskip}{0pt plus 5cm}MMat3x3::$\sim$MMat3x3 ()}}
+\label{class_m_mat3x3_b08b8249982271bc69924bbb325037ba}
+
+
+
+
+Definition at line 93 of file MMat3x3.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_m_mat3x3_b28ee4ae5b4e8278bdad52dfc62d70d7}{
+\index{MMat3x3@{MMat3x3}!FromEulerYXZ@{FromEulerYXZ}}
+\index{FromEulerYXZ@{FromEulerYXZ}!MMat3x3@{MMat3x3}}
+\subsubsection[{FromEulerYXZ}]{\setlength{\rightskip}{0pt plus 5cm}void MMat3x3::FromEulerYXZ (float {\em y}, \/  float {\em z}, \/  float {\em x})}}
+\label{class_m_mat3x3_b28ee4ae5b4e8278bdad52dfc62d70d7}
+
+
+
+
+Definition at line 139 of file MMat3x3.cpp.\hypertarget{class_m_mat3x3_fec431f74f2796faa5abfdffd767f841}{
+\index{MMat3x3@{MMat3x3}!GetCol@{GetCol}}
+\index{GetCol@{GetCol}!MMat3x3@{MMat3x3}}
+\subsubsection[{GetCol}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MVec3} MMat3x3::GetCol (unsigned int {\em i}) const}}
+\label{class_m_mat3x3_fec431f74f2796faa5abfdffd767f841}
+
+
+
+
+Definition at line 318 of file MMat3x3.cpp.\hypertarget{class_m_mat3x3_287d293d9d309a9991ffb4cae6652998}{
+\index{MMat3x3@{MMat3x3}!GetCol@{GetCol}}
+\index{GetCol@{GetCol}!MMat3x3@{MMat3x3}}
+\subsubsection[{GetCol}]{\setlength{\rightskip}{0pt plus 5cm}void MMat3x3::GetCol ({\bf MVec3} \& {\em colOut}, \/  unsigned int {\em i}) const}}
+\label{class_m_mat3x3_287d293d9d309a9991ffb4cae6652998}
+
+
+
+
+Definition at line 309 of file MMat3x3.cpp.\hypertarget{class_m_mat3x3_604ffd6c5ec41b1912146e692074bab0}{
+\index{MMat3x3@{MMat3x3}!GetDataStart@{GetDataStart}}
+\index{GetDataStart@{GetDataStart}!MMat3x3@{MMat3x3}}
+\subsubsection[{GetDataStart}]{\setlength{\rightskip}{0pt plus 5cm}const float$\ast$ MMat3x3::GetDataStart () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_mat3x3_604ffd6c5ec41b1912146e692074bab0}
+
+
+
+
+Definition at line 60 of file MMat3x3.h.\hypertarget{class_m_mat3x3_31977832772ce75b2ad0d494e6bbcd30}{
+\index{MMat3x3@{MMat3x3}!GetRow@{GetRow}}
+\index{GetRow@{GetRow}!MMat3x3@{MMat3x3}}
+\subsubsection[{GetRow}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MVec3} MMat3x3::GetRow (unsigned int {\em i}) const}}
+\label{class_m_mat3x3_31977832772ce75b2ad0d494e6bbcd30}
+
+
+
+
+Definition at line 292 of file MMat3x3.cpp.\hypertarget{class_m_mat3x3_a4ca3211b668abaa0ce6cefb4792dd1f}{
+\index{MMat3x3@{MMat3x3}!GetRow@{GetRow}}
+\index{GetRow@{GetRow}!MMat3x3@{MMat3x3}}
+\subsubsection[{GetRow}]{\setlength{\rightskip}{0pt plus 5cm}void MMat3x3::GetRow ({\bf MVec3} \& {\em rowOut}, \/  unsigned int {\em i}) const}}
+\label{class_m_mat3x3_a4ca3211b668abaa0ce6cefb4792dd1f}
+
+
+
+
+Definition at line 282 of file MMat3x3.cpp.\hypertarget{class_m_mat3x3_b4b44fc1b81ea6b43cc272ed9433e584}{
+\index{MMat3x3@{MMat3x3}!Inverse@{Inverse}}
+\index{Inverse@{Inverse}!MMat3x3@{MMat3x3}}
+\subsubsection[{Inverse}]{\setlength{\rightskip}{0pt plus 5cm}bool MMat3x3::Inverse ()}}
+\label{class_m_mat3x3_b4b44fc1b81ea6b43cc272ed9433e584}
+
+
+
+
+Definition at line 343 of file MMat3x3.cpp.\hypertarget{class_m_mat3x3_b2aa137135d4743f57910a2958eacd2b}{
+\index{MMat3x3@{MMat3x3}!InverseTransposed@{InverseTransposed}}
+\index{InverseTransposed@{InverseTransposed}!MMat3x3@{MMat3x3}}
+\subsubsection[{InverseTransposed}]{\setlength{\rightskip}{0pt plus 5cm}bool MMat3x3::InverseTransposed ({\bf MMat3x3} \& {\em output}) const}}
+\label{class_m_mat3x3_b2aa137135d4743f57910a2958eacd2b}
+
+
+
+
+Definition at line 375 of file MMat3x3.cpp.\hypertarget{class_m_mat3x3_00cd1ab58183f2bacce2e2e38ac77363}{
+\index{MMat3x3@{MMat3x3}!Load@{Load}}
+\index{Load@{Load}!MMat3x3@{MMat3x3}}
+\subsubsection[{Load}]{\setlength{\rightskip}{0pt plus 5cm}void MMat3x3::Load ({\bf UReader} \& {\em reader})}}
+\label{class_m_mat3x3_00cd1ab58183f2bacce2e2e38ac77363}
+
+
+
+
+Definition at line 521 of file MMat3x3.cpp.\hypertarget{class_m_mat3x3_1513b85723e4ab41feb71d56db6aa625}{
+\index{MMat3x3@{MMat3x3}!MakeRotation@{MakeRotation}}
+\index{MakeRotation@{MakeRotation}!MMat3x3@{MMat3x3}}
+\subsubsection[{MakeRotation}]{\setlength{\rightskip}{0pt plus 5cm}void MMat3x3::MakeRotation (const {\bf MVec3} \& {\em axis}, \/  float {\em angle})}}
+\label{class_m_mat3x3_1513b85723e4ab41feb71d56db6aa625}
+
+
+
+
+Definition at line 207 of file MMat3x3.cpp.\hypertarget{class_m_mat3x3_bd1bb896aeeaf05ec76624c5e996818b}{
+\index{MMat3x3@{MMat3x3}!MakeXRotation@{MakeXRotation}}
+\index{MakeXRotation@{MakeXRotation}!MMat3x3@{MMat3x3}}
+\subsubsection[{MakeXRotation}]{\setlength{\rightskip}{0pt plus 5cm}void MMat3x3::MakeXRotation (float {\em angleInRad})}}
+\label{class_m_mat3x3_bd1bb896aeeaf05ec76624c5e996818b}
+
+
+
+
+Definition at line 162 of file MMat3x3.cpp.\hypertarget{class_m_mat3x3_772a24dfb662f3348eaf19c5e57b578b}{
+\index{MMat3x3@{MMat3x3}!MakeYRotation@{MakeYRotation}}
+\index{MakeYRotation@{MakeYRotation}!MMat3x3@{MMat3x3}}
+\subsubsection[{MakeYRotation}]{\setlength{\rightskip}{0pt plus 5cm}void MMat3x3::MakeYRotation (float {\em angleInRad})}}
+\label{class_m_mat3x3_772a24dfb662f3348eaf19c5e57b578b}
+
+
+
+
+Definition at line 177 of file MMat3x3.cpp.\hypertarget{class_m_mat3x3_34c3fe8d743433b98bd1cdf0eb053224}{
+\index{MMat3x3@{MMat3x3}!MakeZRotation@{MakeZRotation}}
+\index{MakeZRotation@{MakeZRotation}!MMat3x3@{MMat3x3}}
+\subsubsection[{MakeZRotation}]{\setlength{\rightskip}{0pt plus 5cm}void MMat3x3::MakeZRotation (float {\em angleInRad})}}
+\label{class_m_mat3x3_34c3fe8d743433b98bd1cdf0eb053224}
+
+
+
+
+Definition at line 192 of file MMat3x3.cpp.\hypertarget{class_m_mat3x3_95b4cd80d8d663a4210f8645ee91bc7b}{
+\index{MMat3x3@{MMat3x3}!operator const float $\ast$@{operator const float $\ast$}}
+\index{operator const float $\ast$@{operator const float $\ast$}!MMat3x3@{MMat3x3}}
+\subsubsection[{operator const float $\ast$}]{\setlength{\rightskip}{0pt plus 5cm}MMat3x3::operator const float $\ast$ () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_mat3x3_95b4cd80d8d663a4210f8645ee91bc7b}
+
+
+
+
+Definition at line 61 of file MMat3x3.h.\hypertarget{class_m_mat3x3_41deda72139584e5d8f2d6191387f0aa}{
+\index{MMat3x3@{MMat3x3}!operator()@{operator()}}
+\index{operator()@{operator()}!MMat3x3@{MMat3x3}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}float MMat3x3::operator() (unsigned int {\em i}, \/  unsigned int {\em j}) const}}
+\label{class_m_mat3x3_41deda72139584e5d8f2d6191387f0aa}
+
+
+
+
+Definition at line 396 of file MMat3x3.cpp.\hypertarget{class_m_mat3x3_31c4291012e2002e0840a9d744c29f83}{
+\index{MMat3x3@{MMat3x3}!operator()@{operator()}}
+\index{operator()@{operator()}!MMat3x3@{MMat3x3}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}float \& MMat3x3::operator() (unsigned int {\em i}, \/  unsigned int {\em j})}}
+\label{class_m_mat3x3_31c4291012e2002e0840a9d744c29f83}
+
+
+
+
+Definition at line 387 of file MMat3x3.cpp.\hypertarget{class_m_mat3x3_41ee55d1d606a5018fe404e0e4938b84}{
+\index{MMat3x3@{MMat3x3}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!MMat3x3@{MMat3x3}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MMat3x3} MMat3x3::operator$\ast$ (const {\bf MMat3x3} \& {\em mat}) const}}
+\label{class_m_mat3x3_41ee55d1d606a5018fe404e0e4938b84}
+
+
+
+
+Definition at line 406 of file MMat3x3.cpp.\hypertarget{class_m_mat3x3_893b3d2e337be1b09d3d694c23c0c3e6}{
+\index{MMat3x3@{MMat3x3}!operator=@{operator=}}
+\index{operator=@{operator=}!MMat3x3@{MMat3x3}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MMat3x3} \& MMat3x3::operator= (const {\bf MMat3x3} \& {\em mat})}}
+\label{class_m_mat3x3_893b3d2e337be1b09d3d694c23c0c3e6}
+
+
+
+
+Definition at line 105 of file MMat3x3.cpp.\hypertarget{class_m_mat3x3_84fad6815686a050837119f242650324}{
+\index{MMat3x3@{MMat3x3}!RotatePoint@{RotatePoint}}
+\index{RotatePoint@{RotatePoint}!MMat3x3@{MMat3x3}}
+\subsubsection[{RotatePoint}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MVec3} MMat3x3::RotatePoint (const {\bf MVec3} \& {\em point}) const}}
+\label{class_m_mat3x3_84fad6815686a050837119f242650324}
+
+
+
+
+Definition at line 251 of file MMat3x3.cpp.\hypertarget{class_m_mat3x3_15242b646b6462a0f6fa44b324ff009c}{
+\index{MMat3x3@{MMat3x3}!RotatePointFast@{RotatePointFast}}
+\index{RotatePointFast@{RotatePointFast}!MMat3x3@{MMat3x3}}
+\subsubsection[{RotatePointFast}]{\setlength{\rightskip}{0pt plus 5cm}void MMat3x3::RotatePointFast ({\bf MVec3} \& {\em point}) const}}
+\label{class_m_mat3x3_15242b646b6462a0f6fa44b324ff009c}
+
+
+
+
+Definition at line 260 of file MMat3x3.cpp.\hypertarget{class_m_mat3x3_fda8bdfde06537ba03acee59fbffc41a}{
+\index{MMat3x3@{MMat3x3}!Save@{Save}}
+\index{Save@{Save}!MMat3x3@{MMat3x3}}
+\subsubsection[{Save}]{\setlength{\rightskip}{0pt plus 5cm}void MMat3x3::Save ({\bf UWriter} \& {\em writer}) const}}
+\label{class_m_mat3x3_fda8bdfde06537ba03acee59fbffc41a}
+
+
+
+
+Definition at line 506 of file MMat3x3.cpp.\hypertarget{class_m_mat3x3_7f30bf03e58ead2cd8d781234be60868}{
+\index{MMat3x3@{MMat3x3}!SetCol@{SetCol}}
+\index{SetCol@{SetCol}!MMat3x3@{MMat3x3}}
+\subsubsection[{SetCol}]{\setlength{\rightskip}{0pt plus 5cm}void MMat3x3::SetCol (unsigned int {\em i}, \/  const {\bf MVec3} \& {\em col})}}
+\label{class_m_mat3x3_7f30bf03e58ead2cd8d781234be60868}
+
+
+
+
+Definition at line 300 of file MMat3x3.cpp.\hypertarget{class_m_mat3x3_1cd3b344fa0732e7be859ce95f35f063}{
+\index{MMat3x3@{MMat3x3}!SetRow@{SetRow}}
+\index{SetRow@{SetRow}!MMat3x3@{MMat3x3}}
+\subsubsection[{SetRow}]{\setlength{\rightskip}{0pt plus 5cm}void MMat3x3::SetRow (unsigned int {\em i}, \/  const {\bf MVec3} \& {\em row})}}
+\label{class_m_mat3x3_1cd3b344fa0732e7be859ce95f35f063}
+
+
+
+
+Definition at line 272 of file MMat3x3.cpp.\hypertarget{class_m_mat3x3_10714e78ed687e30e915ef75c34c5cbb}{
+\index{MMat3x3@{MMat3x3}!ToEulerYXZ@{ToEulerYXZ}}
+\index{ToEulerYXZ@{ToEulerYXZ}!MMat3x3@{MMat3x3}}
+\subsubsection[{ToEulerYXZ}]{\setlength{\rightskip}{0pt plus 5cm}void MMat3x3::ToEulerYXZ (float \& {\em y}, \/  float \& {\em x}, \/  float \& {\em z})}}
+\label{class_m_mat3x3_10714e78ed687e30e915ef75c34c5cbb}
+
+
+
+
+Definition at line 113 of file MMat3x3.cpp.\hypertarget{class_m_mat3x3_d7c9471fbcf788b8140a336ad7139a21}{
+\index{MMat3x3@{MMat3x3}!Transpose@{Transpose}}
+\index{Transpose@{Transpose}!MMat3x3@{MMat3x3}}
+\subsubsection[{Transpose}]{\setlength{\rightskip}{0pt plus 5cm}void MMat3x3::Transpose ()}}
+\label{class_m_mat3x3_d7c9471fbcf788b8140a336ad7139a21}
+
+
+
+
+Definition at line 325 of file MMat3x3.cpp.\hypertarget{class_m_mat3x3_a01f61e6a6c501a6d777a6d8c980736d}{
+\index{MMat3x3@{MMat3x3}!Transposed@{Transposed}}
+\index{Transposed@{Transposed}!MMat3x3@{MMat3x3}}
+\subsubsection[{Transposed}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MMat3x3} MMat3x3::Transposed () const}}
+\label{class_m_mat3x3_a01f61e6a6c501a6d777a6d8c980736d}
+
+
+
+
+Definition at line 334 of file MMat3x3.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_m_mat3x3_8h}{MMat3x3.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_m_mat3x3_8cpp}{MMat3x3.cpp}\end{CompactItemize}

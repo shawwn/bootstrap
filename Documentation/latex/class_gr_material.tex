@@ -1,0 +1,440 @@
+\hypertarget{class_gr_material}{
+\section{GrMaterial Class Reference}
+\label{class_gr_material}\index{GrMaterial@{GrMaterial}}
+}
+{\tt \#include $<$GrMaterial.h$>$}
+
+Inheritance diagram for GrMaterial::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_gr_material}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+struct \hyperlink{struct_gr_material_1_1_s_info}{SInfo}
+\end{CompactItemize}
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+enum \hyperlink{class_gr_material_0277ae85793f8cce8f8e3939fb5540e9}{ESORTTYPE} \{ \hyperlink{class_gr_material_0277ae85793f8cce8f8e3939fb5540e9436e9e42d8c25cd09c6c644af3555a9d}{EST\_\-OPAQUE}, 
+\hyperlink{class_gr_material_0277ae85793f8cce8f8e3939fb5540e995e2b6a86e1a95f130349230b2617099}{EST\_\-DECAL}, 
+\hyperlink{class_gr_material_0277ae85793f8cce8f8e3939fb5540e9039f83ee3083c5992195476daad9cfcf}{EST\_\-ALPHA}
+ \}
+\item 
+typedef \hyperlink{class_u_fast_array}{UFastArray}$<$ \hyperlink{class_gr_deformer}{GrDeformer} $\ast$ $>$ \hyperlink{class_gr_material_3c4945ac4c9276c13a3737a9223c479c}{DeformerArray}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_material_8bbcfb4cdb8c56150d2b4142619e7b98}{GrMaterial} (const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, const \hyperlink{struct_gr_material_1_1_s_info}{SInfo} \&matInfo)
+\item 
+\hyperlink{class_gr_material_ee72e9c9a2cff2ecb9d7db20a415e10b}{$\sim$GrMaterial} ()
+\item 
+void \hyperlink{class_gr_material_c259581fc8c8a6485d0a103a6007271b}{Rebuild} (const \hyperlink{struct_gr_material_1_1_s_info}{SInfo} \&matInfo)
+\item 
+void \hyperlink{class_gr_material_1e2106f701778cdda09a4f9d2618d664}{AddPass} (\hyperlink{struct_s_material_pass_info}{SMaterialPassInfo} \&passInfo)
+\item 
+void \hyperlink{class_gr_material_694068e7681feea901fe455e15008f6b}{AddPostProcessPass} (\hyperlink{struct_s_material_pass_info}{SMaterialPassInfo} \&passInfo)
+\item 
+void \hyperlink{class_gr_material_81b2787260c41c2581a762b04cc6c3f4}{DeletePass} (unsigned int passIdx)
+\item 
+void \hyperlink{class_gr_material_fc785b8aa612256266c37eb1d482f287}{DeletePostProcessPass} (unsigned int passIdx)
+\item 
+const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \& \hyperlink{class_gr_material_f795daba144a86beb2d2baa22bc69b44}{GetName} () const 
+\item 
+const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \& \hyperlink{class_gr_material_b90ae0e999f14823f9aeebd447a52fd8}{GetShortName} () const 
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_material}{GrMaterial} $>$ \hyperlink{class_gr_material_1eb04141be03a81d722d927286f9b6b3}{Clone} () const 
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_material}{GrMaterial} $>$ \hyperlink{class_gr_material_24474e6210348ad3a58ae6032238fc1b}{Clone} (const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}) const 
+\item 
+bool \hyperlink{class_gr_material_209457388b0f29c4d36089d6c3bffd3a}{HasDeformers} () const 
+\item 
+const \hyperlink{class_u_fast_array}{DeformerArray} \& \hyperlink{class_gr_material_9d986c1ed00c9c7f3212c9d1f1233582}{GetDeformers} () const 
+\item 
+unsigned int \hyperlink{class_gr_material_c5afd8886b80a26cb67430eb48ba8bf7}{GetPassCount} () const 
+\item 
+\hyperlink{class_gr_material_pass}{GrMaterialPass} $\ast$ \hyperlink{class_gr_material_d1d9f753c4b3875f7d2b361bcf8cf99a}{GetPass} (unsigned int pass)
+\item 
+const \hyperlink{class_gr_material_pass}{GrMaterialPass} $\ast$ \hyperlink{class_gr_material_8be12969be7c362332fe9ccf19b0c367}{GetPass} (unsigned int pass) const 
+\item 
+\hyperlink{class_gr_texture_stage_60f59a039bf1c95b76659752ff1bf7d6}{GrTextureStage::GenTextureFlag} \hyperlink{class_gr_material_7751843be737d70abaf404d4955c9000}{GetGenTextureFlags} () const 
+\item 
+unsigned int \hyperlink{class_gr_material_ec2234608525b1f9b306990871cd984a}{GetPostProcessPassCount} () const 
+\item 
+\hyperlink{class_gr_material_pass}{GrMaterialPass} $\ast$ \hyperlink{class_gr_material_41f016d8810c0dddd346de241ef18a4f}{GetPostProcessPass} (unsigned int pass)
+\item 
+const \hyperlink{class_gr_material_pass}{GrMaterialPass} $\ast$ \hyperlink{class_gr_material_f0cd019c82baf63e7a837b400486e31e}{GetPostProcessPass} (unsigned int pass) const 
+\item 
+\hyperlink{class_gr_material_0277ae85793f8cce8f8e3939fb5540e9}{ESORTTYPE} \hyperlink{class_gr_material_2ead7b081144beb220be74c2516d9832}{GetSortType} () const 
+\item 
+void \hyperlink{class_gr_material_30d3155b74b31be33ecf73b341743303}{SetSortType} (\hyperlink{class_gr_material_0277ae85793f8cce8f8e3939fb5540e9}{ESORTTYPE} \hyperlink{glext__bak_8h_7d05960f4f1c1b11f3177dc963a45d86}{type})
+\item 
+void \hyperlink{class_gr_material_a45596ed0f7f0ddfffcde7169f7a4975}{SetCastShadow} (bool castShadow)
+\item 
+void \hyperlink{class_gr_material_31e817784139a59b314f36f761ea0031}{SetReceiveShadow} (bool receiveShadow)
+\item 
+void \hyperlink{class_gr_material_a6b79d8b969bce300de861d05bd94907}{SetStipple} (bool stipple)
+\item 
+bool \hyperlink{class_gr_material_1d5920d3a45dfcf1f233209ec74c5fa8}{GetCastShadow} () const 
+\item 
+bool \hyperlink{class_gr_material_eb0504c0f3e86635d4a0b56745beab79}{GetReceiveShadow} () const 
+\item 
+bool \hyperlink{class_gr_material_1a03f69a955aaf5d8a2c6094685a710a}{GetStipple} () const 
+\item 
+bool \hyperlink{class_gr_material_25a173f7ea53817987aca0ff8924112a}{AlphaTest} () const 
+\item 
+bool \hyperlink{class_gr_material_9f2498b4265e1c59a1abdaf03792b23a}{CastShadow} () const 
+\item 
+bool \hyperlink{class_gr_material_c4ef3f9a72931e59ce603dc68b2d1317}{ReceiveShadow} () const 
+\item 
+void \hyperlink{class_gr_material_c03bcd63f4d03a169dfe91ddcea07a12}{Update} ()
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 45 of file GrMaterial.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_gr_material_3c4945ac4c9276c13a3737a9223c479c}{
+\index{GrMaterial@{GrMaterial}!DeformerArray@{DeformerArray}}
+\index{DeformerArray@{DeformerArray}!GrMaterial@{GrMaterial}}
+\subsubsection[{DeformerArray}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf UFastArray}$<$ {\bf GrDeformer}$\ast$ $>$ {\bf GrMaterial::DeformerArray}}}
+\label{class_gr_material_3c4945ac4c9276c13a3737a9223c479c}
+
+
+
+
+Definition at line 48 of file GrMaterial.h.
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_gr_material_0277ae85793f8cce8f8e3939fb5540e9}{
+\index{GrMaterial@{GrMaterial}!ESORTTYPE@{ESORTTYPE}}
+\index{ESORTTYPE@{ESORTTYPE}!GrMaterial@{GrMaterial}}
+\subsubsection[{ESORTTYPE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GrMaterial::ESORTTYPE}}}
+\label{class_gr_material_0277ae85793f8cce8f8e3939fb5540e9}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{EST\_\-OPAQUE@{EST\_\-OPAQUE}!GrMaterial@{GrMaterial}}\index{GrMaterial@{GrMaterial}!EST\_\-OPAQUE@{EST\_\-OPAQUE}}\item[{\em 
+\hypertarget{class_gr_material_0277ae85793f8cce8f8e3939fb5540e9436e9e42d8c25cd09c6c644af3555a9d}{
+EST\_\-OPAQUE}
+\label{class_gr_material_0277ae85793f8cce8f8e3939fb5540e9436e9e42d8c25cd09c6c644af3555a9d}
+}]\index{EST\_\-DECAL@{EST\_\-DECAL}!GrMaterial@{GrMaterial}}\index{GrMaterial@{GrMaterial}!EST\_\-DECAL@{EST\_\-DECAL}}\item[{\em 
+\hypertarget{class_gr_material_0277ae85793f8cce8f8e3939fb5540e995e2b6a86e1a95f130349230b2617099}{
+EST\_\-DECAL}
+\label{class_gr_material_0277ae85793f8cce8f8e3939fb5540e995e2b6a86e1a95f130349230b2617099}
+}]\index{EST\_\-ALPHA@{EST\_\-ALPHA}!GrMaterial@{GrMaterial}}\index{GrMaterial@{GrMaterial}!EST\_\-ALPHA@{EST\_\-ALPHA}}\item[{\em 
+\hypertarget{class_gr_material_0277ae85793f8cce8f8e3939fb5540e9039f83ee3083c5992195476daad9cfcf}{
+EST\_\-ALPHA}
+\label{class_gr_material_0277ae85793f8cce8f8e3939fb5540e9039f83ee3083c5992195476daad9cfcf}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 50 of file GrMaterial.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_material_8bbcfb4cdb8c56150d2b4142619e7b98}{
+\index{GrMaterial@{GrMaterial}!GrMaterial@{GrMaterial}}
+\index{GrMaterial@{GrMaterial}!GrMaterial@{GrMaterial}}
+\subsubsection[{GrMaterial}]{\setlength{\rightskip}{0pt plus 5cm}GrMaterial::GrMaterial (const {\bf tstring} \& {\em name}, \/  const {\bf SInfo} \& {\em matInfo})}}
+\label{class_gr_material_8bbcfb4cdb8c56150d2b4142619e7b98}
+
+
+
+
+Definition at line 32 of file GrMaterial.cpp.\hypertarget{class_gr_material_ee72e9c9a2cff2ecb9d7db20a415e10b}{
+\index{GrMaterial@{GrMaterial}!$\sim$GrMaterial@{$\sim$GrMaterial}}
+\index{$\sim$GrMaterial@{$\sim$GrMaterial}!GrMaterial@{GrMaterial}}
+\subsubsection[{$\sim$GrMaterial}]{\setlength{\rightskip}{0pt plus 5cm}GrMaterial::$\sim$GrMaterial ()}}
+\label{class_gr_material_ee72e9c9a2cff2ecb9d7db20a415e10b}
+
+
+
+
+Definition at line 63 of file GrMaterial.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_material_1e2106f701778cdda09a4f9d2618d664}{
+\index{GrMaterial@{GrMaterial}!AddPass@{AddPass}}
+\index{AddPass@{AddPass}!GrMaterial@{GrMaterial}}
+\subsubsection[{AddPass}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterial::AddPass ({\bf SMaterialPassInfo} \& {\em passInfo})}}
+\label{class_gr_material_1e2106f701778cdda09a4f9d2618d664}
+
+
+
+
+Definition at line 92 of file GrMaterial.cpp.\hypertarget{class_gr_material_694068e7681feea901fe455e15008f6b}{
+\index{GrMaterial@{GrMaterial}!AddPostProcessPass@{AddPostProcessPass}}
+\index{AddPostProcessPass@{AddPostProcessPass}!GrMaterial@{GrMaterial}}
+\subsubsection[{AddPostProcessPass}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterial::AddPostProcessPass ({\bf SMaterialPassInfo} \& {\em passInfo})}}
+\label{class_gr_material_694068e7681feea901fe455e15008f6b}
+
+
+
+
+Definition at line 109 of file GrMaterial.cpp.\hypertarget{class_gr_material_25a173f7ea53817987aca0ff8924112a}{
+\index{GrMaterial@{GrMaterial}!AlphaTest@{AlphaTest}}
+\index{AlphaTest@{AlphaTest}!GrMaterial@{GrMaterial}}
+\subsubsection[{AlphaTest}]{\setlength{\rightskip}{0pt plus 5cm}bool GrMaterial::AlphaTest () const}}
+\label{class_gr_material_25a173f7ea53817987aca0ff8924112a}
+
+
+
+
+Definition at line 235 of file GrMaterial.cpp.\hypertarget{class_gr_material_9f2498b4265e1c59a1abdaf03792b23a}{
+\index{GrMaterial@{GrMaterial}!CastShadow@{CastShadow}}
+\index{CastShadow@{CastShadow}!GrMaterial@{GrMaterial}}
+\subsubsection[{CastShadow}]{\setlength{\rightskip}{0pt plus 5cm}bool GrMaterial::CastShadow () const}}
+\label{class_gr_material_9f2498b4265e1c59a1abdaf03792b23a}
+
+
+
+
+Definition at line 246 of file GrMaterial.cpp.\hypertarget{class_gr_material_24474e6210348ad3a58ae6032238fc1b}{
+\index{GrMaterial@{GrMaterial}!Clone@{Clone}}
+\index{Clone@{Clone}!GrMaterial@{GrMaterial}}
+\subsubsection[{Clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrMaterial} $>$ GrMaterial::Clone (const {\bf tstring} \& {\em name}) const}}
+\label{class_gr_material_24474e6210348ad3a58ae6032238fc1b}
+
+
+
+
+Definition at line 157 of file GrMaterial.cpp.\hypertarget{class_gr_material_1eb04141be03a81d722d927286f9b6b3}{
+\index{GrMaterial@{GrMaterial}!Clone@{Clone}}
+\index{Clone@{Clone}!GrMaterial@{GrMaterial}}
+\subsubsection[{Clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrMaterial} $>$ GrMaterial::Clone () const}}
+\label{class_gr_material_1eb04141be03a81d722d927286f9b6b3}
+
+
+
+
+Definition at line 150 of file GrMaterial.cpp.\hypertarget{class_gr_material_81b2787260c41c2581a762b04cc6c3f4}{
+\index{GrMaterial@{GrMaterial}!DeletePass@{DeletePass}}
+\index{DeletePass@{DeletePass}!GrMaterial@{GrMaterial}}
+\subsubsection[{DeletePass}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterial::DeletePass (unsigned int {\em passIdx})}}
+\label{class_gr_material_81b2787260c41c2581a762b04cc6c3f4}
+
+
+
+
+Definition at line 126 of file GrMaterial.cpp.\hypertarget{class_gr_material_fc785b8aa612256266c37eb1d482f287}{
+\index{GrMaterial@{GrMaterial}!DeletePostProcessPass@{DeletePostProcessPass}}
+\index{DeletePostProcessPass@{DeletePostProcessPass}!GrMaterial@{GrMaterial}}
+\subsubsection[{DeletePostProcessPass}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterial::DeletePostProcessPass (unsigned int {\em passIdx})}}
+\label{class_gr_material_fc785b8aa612256266c37eb1d482f287}
+
+
+
+
+Definition at line 138 of file GrMaterial.cpp.\hypertarget{class_gr_material_1d5920d3a45dfcf1f233209ec74c5fa8}{
+\index{GrMaterial@{GrMaterial}!GetCastShadow@{GetCastShadow}}
+\index{GetCastShadow@{GetCastShadow}!GrMaterial@{GrMaterial}}
+\subsubsection[{GetCastShadow}]{\setlength{\rightskip}{0pt plus 5cm}bool GrMaterial::GetCastShadow () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_1d5920d3a45dfcf1f233209ec74c5fa8}
+
+
+
+
+Definition at line 131 of file GrMaterial.h.\hypertarget{class_gr_material_9d986c1ed00c9c7f3212c9d1f1233582}{
+\index{GrMaterial@{GrMaterial}!GetDeformers@{GetDeformers}}
+\index{GetDeformers@{GetDeformers}!GrMaterial@{GrMaterial}}
+\subsubsection[{GetDeformers}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf DeformerArray}\& GrMaterial::GetDeformers () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_9d986c1ed00c9c7f3212c9d1f1233582}
+
+
+
+
+Definition at line 103 of file GrMaterial.h.\hypertarget{class_gr_material_7751843be737d70abaf404d4955c9000}{
+\index{GrMaterial@{GrMaterial}!GetGenTextureFlags@{GetGenTextureFlags}}
+\index{GetGenTextureFlags@{GetGenTextureFlags}!GrMaterial@{GrMaterial}}
+\subsubsection[{GetGenTextureFlags}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrTextureStage::GenTextureFlag} GrMaterial::GetGenTextureFlags () const}}
+\label{class_gr_material_7751843be737d70abaf404d4955c9000}
+
+
+
+
+Definition at line 201 of file GrMaterial.cpp.\hypertarget{class_gr_material_f795daba144a86beb2d2baa22bc69b44}{
+\index{GrMaterial@{GrMaterial}!GetName@{GetName}}
+\index{GetName@{GetName}!GrMaterial@{GrMaterial}}
+\subsubsection[{GetName}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf tstring}\& GrMaterial::GetName () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_f795daba144a86beb2d2baa22bc69b44}
+
+
+
+
+Definition at line 94 of file GrMaterial.h.\hypertarget{class_gr_material_8be12969be7c362332fe9ccf19b0c367}{
+\index{GrMaterial@{GrMaterial}!GetPass@{GetPass}}
+\index{GetPass@{GetPass}!GrMaterial@{GrMaterial}}
+\subsubsection[{GetPass}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf GrMaterialPass} $\ast$ GrMaterial::GetPass (unsigned int {\em pass}) const}}
+\label{class_gr_material_8be12969be7c362332fe9ccf19b0c367}
+
+
+
+
+Definition at line 193 of file GrMaterial.cpp.\hypertarget{class_gr_material_d1d9f753c4b3875f7d2b361bcf8cf99a}{
+\index{GrMaterial@{GrMaterial}!GetPass@{GetPass}}
+\index{GetPass@{GetPass}!GrMaterial@{GrMaterial}}
+\subsubsection[{GetPass}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrMaterialPass} $\ast$ GrMaterial::GetPass (unsigned int {\em pass})}}
+\label{class_gr_material_d1d9f753c4b3875f7d2b361bcf8cf99a}
+
+
+
+
+Definition at line 185 of file GrMaterial.cpp.\hypertarget{class_gr_material_c5afd8886b80a26cb67430eb48ba8bf7}{
+\index{GrMaterial@{GrMaterial}!GetPassCount@{GetPassCount}}
+\index{GetPassCount@{GetPassCount}!GrMaterial@{GrMaterial}}
+\subsubsection[{GetPassCount}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrMaterial::GetPassCount () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_c5afd8886b80a26cb67430eb48ba8bf7}
+
+
+
+
+Definition at line 106 of file GrMaterial.h.\hypertarget{class_gr_material_f0cd019c82baf63e7a837b400486e31e}{
+\index{GrMaterial@{GrMaterial}!GetPostProcessPass@{GetPostProcessPass}}
+\index{GetPostProcessPass@{GetPostProcessPass}!GrMaterial@{GrMaterial}}
+\subsubsection[{GetPostProcessPass}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf GrMaterialPass} $\ast$ GrMaterial::GetPostProcessPass (unsigned int {\em pass}) const}}
+\label{class_gr_material_f0cd019c82baf63e7a837b400486e31e}
+
+
+
+
+Definition at line 227 of file GrMaterial.cpp.\hypertarget{class_gr_material_41f016d8810c0dddd346de241ef18a4f}{
+\index{GrMaterial@{GrMaterial}!GetPostProcessPass@{GetPostProcessPass}}
+\index{GetPostProcessPass@{GetPostProcessPass}!GrMaterial@{GrMaterial}}
+\subsubsection[{GetPostProcessPass}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrMaterialPass} $\ast$ GrMaterial::GetPostProcessPass (unsigned int {\em pass})}}
+\label{class_gr_material_41f016d8810c0dddd346de241ef18a4f}
+
+
+
+
+Definition at line 219 of file GrMaterial.cpp.\hypertarget{class_gr_material_ec2234608525b1f9b306990871cd984a}{
+\index{GrMaterial@{GrMaterial}!GetPostProcessPassCount@{GetPostProcessPassCount}}
+\index{GetPostProcessPassCount@{GetPostProcessPassCount}!GrMaterial@{GrMaterial}}
+\subsubsection[{GetPostProcessPassCount}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrMaterial::GetPostProcessPassCount () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_ec2234608525b1f9b306990871cd984a}
+
+
+
+
+Definition at line 117 of file GrMaterial.h.\hypertarget{class_gr_material_eb0504c0f3e86635d4a0b56745beab79}{
+\index{GrMaterial@{GrMaterial}!GetReceiveShadow@{GetReceiveShadow}}
+\index{GetReceiveShadow@{GetReceiveShadow}!GrMaterial@{GrMaterial}}
+\subsubsection[{GetReceiveShadow}]{\setlength{\rightskip}{0pt plus 5cm}bool GrMaterial::GetReceiveShadow () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_eb0504c0f3e86635d4a0b56745beab79}
+
+
+
+
+Definition at line 132 of file GrMaterial.h.\hypertarget{class_gr_material_b90ae0e999f14823f9aeebd447a52fd8}{
+\index{GrMaterial@{GrMaterial}!GetShortName@{GetShortName}}
+\index{GetShortName@{GetShortName}!GrMaterial@{GrMaterial}}
+\subsubsection[{GetShortName}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf tstring}\& GrMaterial::GetShortName () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_b90ae0e999f14823f9aeebd447a52fd8}
+
+
+
+
+Definition at line 95 of file GrMaterial.h.\hypertarget{class_gr_material_2ead7b081144beb220be74c2516d9832}{
+\index{GrMaterial@{GrMaterial}!GetSortType@{GetSortType}}
+\index{GetSortType@{GetSortType}!GrMaterial@{GrMaterial}}
+\subsubsection[{GetSortType}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ESORTTYPE} GrMaterial::GetSortType () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_2ead7b081144beb220be74c2516d9832}
+
+
+
+
+Definition at line 123 of file GrMaterial.h.\hypertarget{class_gr_material_1a03f69a955aaf5d8a2c6094685a710a}{
+\index{GrMaterial@{GrMaterial}!GetStipple@{GetStipple}}
+\index{GetStipple@{GetStipple}!GrMaterial@{GrMaterial}}
+\subsubsection[{GetStipple}]{\setlength{\rightskip}{0pt plus 5cm}bool GrMaterial::GetStipple () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_1a03f69a955aaf5d8a2c6094685a710a}
+
+
+
+
+Definition at line 133 of file GrMaterial.h.\hypertarget{class_gr_material_209457388b0f29c4d36089d6c3bffd3a}{
+\index{GrMaterial@{GrMaterial}!HasDeformers@{HasDeformers}}
+\index{HasDeformers@{HasDeformers}!GrMaterial@{GrMaterial}}
+\subsubsection[{HasDeformers}]{\setlength{\rightskip}{0pt plus 5cm}bool GrMaterial::HasDeformers () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_209457388b0f29c4d36089d6c3bffd3a}
+
+
+
+
+Definition at line 102 of file GrMaterial.h.\hypertarget{class_gr_material_c259581fc8c8a6485d0a103a6007271b}{
+\index{GrMaterial@{GrMaterial}!Rebuild@{Rebuild}}
+\index{Rebuild@{Rebuild}!GrMaterial@{GrMaterial}}
+\subsubsection[{Rebuild}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterial::Rebuild (const {\bf SInfo} \& {\em matInfo})}}
+\label{class_gr_material_c259581fc8c8a6485d0a103a6007271b}
+
+
+
+
+Definition at line 76 of file GrMaterial.cpp.\hypertarget{class_gr_material_c4ef3f9a72931e59ce603dc68b2d1317}{
+\index{GrMaterial@{GrMaterial}!ReceiveShadow@{ReceiveShadow}}
+\index{ReceiveShadow@{ReceiveShadow}!GrMaterial@{GrMaterial}}
+\subsubsection[{ReceiveShadow}]{\setlength{\rightskip}{0pt plus 5cm}bool GrMaterial::ReceiveShadow () const}}
+\label{class_gr_material_c4ef3f9a72931e59ce603dc68b2d1317}
+
+
+
+
+Definition at line 261 of file GrMaterial.cpp.\hypertarget{class_gr_material_a45596ed0f7f0ddfffcde7169f7a4975}{
+\index{GrMaterial@{GrMaterial}!SetCastShadow@{SetCastShadow}}
+\index{SetCastShadow@{SetCastShadow}!GrMaterial@{GrMaterial}}
+\subsubsection[{SetCastShadow}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterial::SetCastShadow (bool {\em castShadow})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_a45596ed0f7f0ddfffcde7169f7a4975}
+
+
+
+
+Definition at line 127 of file GrMaterial.h.\hypertarget{class_gr_material_31e817784139a59b314f36f761ea0031}{
+\index{GrMaterial@{GrMaterial}!SetReceiveShadow@{SetReceiveShadow}}
+\index{SetReceiveShadow@{SetReceiveShadow}!GrMaterial@{GrMaterial}}
+\subsubsection[{SetReceiveShadow}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterial::SetReceiveShadow (bool {\em receiveShadow})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_31e817784139a59b314f36f761ea0031}
+
+
+
+
+Definition at line 128 of file GrMaterial.h.\hypertarget{class_gr_material_30d3155b74b31be33ecf73b341743303}{
+\index{GrMaterial@{GrMaterial}!SetSortType@{SetSortType}}
+\index{SetSortType@{SetSortType}!GrMaterial@{GrMaterial}}
+\subsubsection[{SetSortType}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterial::SetSortType ({\bf ESORTTYPE} {\em type})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_30d3155b74b31be33ecf73b341743303}
+
+
+
+
+Definition at line 124 of file GrMaterial.h.\hypertarget{class_gr_material_a6b79d8b969bce300de861d05bd94907}{
+\index{GrMaterial@{GrMaterial}!SetStipple@{SetStipple}}
+\index{SetStipple@{SetStipple}!GrMaterial@{GrMaterial}}
+\subsubsection[{SetStipple}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterial::SetStipple (bool {\em stipple})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_a6b79d8b969bce300de861d05bd94907}
+
+
+
+
+Definition at line 129 of file GrMaterial.h.\hypertarget{class_gr_material_c03bcd63f4d03a169dfe91ddcea07a12}{
+\index{GrMaterial@{GrMaterial}!Update@{Update}}
+\index{Update@{Update}!GrMaterial@{GrMaterial}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterial::Update ()}}
+\label{class_gr_material_c03bcd63f4d03a169dfe91ddcea07a12}
+
+
+
+
+Definition at line 276 of file GrMaterial.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_material_8h}{GrMaterial.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_material_8cpp}{GrMaterial.cpp}\end{CompactItemize}

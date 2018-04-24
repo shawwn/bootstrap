@@ -1,0 +1,260 @@
+\hypertarget{struct_s_material_pass_info}{
+\section{SMaterialPassInfo Struct Reference}
+\label{struct_s_material_pass_info}\index{SMaterialPassInfo@{SMaterialPassInfo}}
+}
+{\tt \#include $<$GrMaterialPass.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{struct_s_material_pass_info_188cd731132ec93cdb46f1b94a34d9eb}{SMaterialPassInfo} ()
+\item 
+\hyperlink{struct_s_material_pass_info_2c919007aec4f01db30c5eaa03d5470c}{$\sim$SMaterialPassInfo} ()
+\end{CompactItemize}
+\subsection*{Public Attributes}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_shader}{GrShader} $>$ \hyperlink{struct_s_material_pass_info_88f257e5b6e6b9e21392219be74df05c}{shader}
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_shader}{GrShader} $>$ \hyperlink{struct_s_material_pass_info_b355f2664fb9a12aaf019c80a5b54a03}{ambientShader}
+\item 
+\hyperlink{class_gr_texture_set}{GrTextureSet} \hyperlink{struct_s_material_pass_info_3696de9c4421b3ff40036e84bde3e630}{textures}
+\item 
+\hyperlink{class_gr_color}{GrColor} \hyperlink{struct_s_material_pass_info_a129865ee753ac3056cd69490330f782}{vertexColorMod}
+\item 
+\hyperlink{class_gr_color}{GrColor} \hyperlink{struct_s_material_pass_info_8d6e08ed3afd1c51ea0320bd485dadf5}{vertexColorAdd}
+\item 
+\hyperlink{class_gr_color}{GrColor} \hyperlink{struct_s_material_pass_info_ac97ff420977ef457316e478e8827cda}{minLightResponse}
+\item 
+\hyperlink{class_gr_color}{GrColor} \hyperlink{struct_s_material_pass_info_5ee16644b6f677c6eae42bf410a43dfd}{maxLightResponse}
+\item 
+\hyperlink{_gr_util_8h_abff98128b1f220d1ceff538f4abdef3}{EGRALPHATESTMODE} \hyperlink{struct_s_material_pass_info_8c047353d3e838c5a3d11ba448847d23}{alphaTestMode}
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_u_expr_term}{UExprTerm} $>$ \hyperlink{struct_s_material_pass_info_9209733df2e6a655d595dfc1d810b28f}{alphaTestRef}
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_u_expr_term}{UExprTerm} $>$ \hyperlink{struct_s_material_pass_info_47066b32f4d65c956ec8789a7ec14fb2}{passEnable}
+\item 
+float \hyperlink{struct_s_material_pass_info_43b0b16486a5a825210158b5c55db342}{slopeBias}
+\item 
+float \hyperlink{struct_s_material_pass_info_e2071f6643a25e1f3866adb9b33c5079}{constBias}
+\item 
+\hyperlink{struct_s_material_pass_blend_states}{SMaterialPassBlendStates} \hyperlink{struct_s_material_pass_info_855f746e614b3eb8146603d2efe46663}{ambBlendStates}
+\item 
+\hyperlink{struct_s_material_pass_blend_states}{SMaterialPassBlendStates} \hyperlink{struct_s_material_pass_info_1bb1369eafd762e7b2adc9b456fae885}{lightBlendStates}
+\item 
+unsigned int \hyperlink{struct_s_material_pass_info_b4f60776995332748e40270d6c2dc318}{enableState}
+\item 
+unsigned int \hyperlink{struct_s_material_pass_info_06ba69d3100e1ce0a27d8da74c1f342d}{writeMask}
+\item 
+\hyperlink{_gr_util_8h_ea790ef067767354691d0d60c51542fe}{EGRCULLMODE} \hyperlink{struct_s_material_pass_info_1c5a2ded6a57901feed193d620db014e}{cullMode}
+\item 
+bool \hyperlink{struct_s_material_pass_info_47b874b3efb05afc0ccbecc01ebf62bc}{receiveShadow}
+\item 
+bool \hyperlink{struct_s_material_pass_info_148b9b02c76e38c6be30dc599ad35dad}{castShadow}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 56 of file GrMaterialPass.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{struct_s_material_pass_info_188cd731132ec93cdb46f1b94a34d9eb}{
+\index{SMaterialPassInfo@{SMaterialPassInfo}!SMaterialPassInfo@{SMaterialPassInfo}}
+\index{SMaterialPassInfo@{SMaterialPassInfo}!SMaterialPassInfo@{SMaterialPassInfo}}
+\subsubsection[{SMaterialPassInfo}]{\setlength{\rightskip}{0pt plus 5cm}SMaterialPassInfo::SMaterialPassInfo ()}}
+\label{struct_s_material_pass_info_188cd731132ec93cdb46f1b94a34d9eb}
+
+
+
+
+Definition at line 43 of file GrMaterialPass.cpp.\hypertarget{struct_s_material_pass_info_2c919007aec4f01db30c5eaa03d5470c}{
+\index{SMaterialPassInfo@{SMaterialPassInfo}!$\sim$SMaterialPassInfo@{$\sim$SMaterialPassInfo}}
+\index{$\sim$SMaterialPassInfo@{$\sim$SMaterialPassInfo}!SMaterialPassInfo@{SMaterialPassInfo}}
+\subsubsection[{$\sim$SMaterialPassInfo}]{\setlength{\rightskip}{0pt plus 5cm}SMaterialPassInfo::$\sim$SMaterialPassInfo ()}}
+\label{struct_s_material_pass_info_2c919007aec4f01db30c5eaa03d5470c}
+
+
+
+
+Definition at line 65 of file GrMaterialPass.cpp.
+
+\subsection{Member Data Documentation}
+\hypertarget{struct_s_material_pass_info_8c047353d3e838c5a3d11ba448847d23}{
+\index{SMaterialPassInfo@{SMaterialPassInfo}!alphaTestMode@{alphaTestMode}}
+\index{alphaTestMode@{alphaTestMode}!SMaterialPassInfo@{SMaterialPassInfo}}
+\subsubsection[{alphaTestMode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf EGRALPHATESTMODE} {\bf SMaterialPassInfo::alphaTestMode}}}
+\label{struct_s_material_pass_info_8c047353d3e838c5a3d11ba448847d23}
+
+
+
+
+Definition at line 82 of file GrMaterialPass.h.\hypertarget{struct_s_material_pass_info_9209733df2e6a655d595dfc1d810b28f}{
+\index{SMaterialPassInfo@{SMaterialPassInfo}!alphaTestRef@{alphaTestRef}}
+\index{alphaTestRef@{alphaTestRef}!SMaterialPassInfo@{SMaterialPassInfo}}
+\subsubsection[{alphaTestRef}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf UExprTerm} $>$ {\bf SMaterialPassInfo::alphaTestRef}}}
+\label{struct_s_material_pass_info_9209733df2e6a655d595dfc1d810b28f}
+
+
+
+
+Definition at line 83 of file GrMaterialPass.h.\hypertarget{struct_s_material_pass_info_855f746e614b3eb8146603d2efe46663}{
+\index{SMaterialPassInfo@{SMaterialPassInfo}!ambBlendStates@{ambBlendStates}}
+\index{ambBlendStates@{ambBlendStates}!SMaterialPassInfo@{SMaterialPassInfo}}
+\subsubsection[{ambBlendStates}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SMaterialPassBlendStates} {\bf SMaterialPassInfo::ambBlendStates}}}
+\label{struct_s_material_pass_info_855f746e614b3eb8146603d2efe46663}
+
+
+
+
+Definition at line 93 of file GrMaterialPass.h.\hypertarget{struct_s_material_pass_info_b355f2664fb9a12aaf019c80a5b54a03}{
+\index{SMaterialPassInfo@{SMaterialPassInfo}!ambientShader@{ambientShader}}
+\index{ambientShader@{ambientShader}!SMaterialPassInfo@{SMaterialPassInfo}}
+\subsubsection[{ambientShader}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrShader} $>$ {\bf SMaterialPassInfo::ambientShader}}}
+\label{struct_s_material_pass_info_b355f2664fb9a12aaf019c80a5b54a03}
+
+
+
+
+Definition at line 67 of file GrMaterialPass.h.\hypertarget{struct_s_material_pass_info_148b9b02c76e38c6be30dc599ad35dad}{
+\index{SMaterialPassInfo@{SMaterialPassInfo}!castShadow@{castShadow}}
+\index{castShadow@{castShadow}!SMaterialPassInfo@{SMaterialPassInfo}}
+\subsubsection[{castShadow}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf SMaterialPassInfo::castShadow}}}
+\label{struct_s_material_pass_info_148b9b02c76e38c6be30dc599ad35dad}
+
+
+
+
+Definition at line 105 of file GrMaterialPass.h.\hypertarget{struct_s_material_pass_info_e2071f6643a25e1f3866adb9b33c5079}{
+\index{SMaterialPassInfo@{SMaterialPassInfo}!constBias@{constBias}}
+\index{constBias@{constBias}!SMaterialPassInfo@{SMaterialPassInfo}}
+\subsubsection[{constBias}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf SMaterialPassInfo::constBias}}}
+\label{struct_s_material_pass_info_e2071f6643a25e1f3866adb9b33c5079}
+
+
+
+
+Definition at line 90 of file GrMaterialPass.h.\hypertarget{struct_s_material_pass_info_1c5a2ded6a57901feed193d620db014e}{
+\index{SMaterialPassInfo@{SMaterialPassInfo}!cullMode@{cullMode}}
+\index{cullMode@{cullMode}!SMaterialPassInfo@{SMaterialPassInfo}}
+\subsubsection[{cullMode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf EGRCULLMODE} {\bf SMaterialPassInfo::cullMode}}}
+\label{struct_s_material_pass_info_1c5a2ded6a57901feed193d620db014e}
+
+
+
+
+Definition at line 101 of file GrMaterialPass.h.\hypertarget{struct_s_material_pass_info_b4f60776995332748e40270d6c2dc318}{
+\index{SMaterialPassInfo@{SMaterialPassInfo}!enableState@{enableState}}
+\index{enableState@{enableState}!SMaterialPassInfo@{SMaterialPassInfo}}
+\subsubsection[{enableState}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf SMaterialPassInfo::enableState}}}
+\label{struct_s_material_pass_info_b4f60776995332748e40270d6c2dc318}
+
+
+
+
+Definition at line 97 of file GrMaterialPass.h.\hypertarget{struct_s_material_pass_info_1bb1369eafd762e7b2adc9b456fae885}{
+\index{SMaterialPassInfo@{SMaterialPassInfo}!lightBlendStates@{lightBlendStates}}
+\index{lightBlendStates@{lightBlendStates}!SMaterialPassInfo@{SMaterialPassInfo}}
+\subsubsection[{lightBlendStates}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SMaterialPassBlendStates} {\bf SMaterialPassInfo::lightBlendStates}}}
+\label{struct_s_material_pass_info_1bb1369eafd762e7b2adc9b456fae885}
+
+
+
+
+Definition at line 94 of file GrMaterialPass.h.\hypertarget{struct_s_material_pass_info_5ee16644b6f677c6eae42bf410a43dfd}{
+\index{SMaterialPassInfo@{SMaterialPassInfo}!maxLightResponse@{maxLightResponse}}
+\index{maxLightResponse@{maxLightResponse}!SMaterialPassInfo@{SMaterialPassInfo}}
+\subsubsection[{maxLightResponse}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrColor} {\bf SMaterialPassInfo::maxLightResponse}}}
+\label{struct_s_material_pass_info_5ee16644b6f677c6eae42bf410a43dfd}
+
+
+
+
+Definition at line 79 of file GrMaterialPass.h.\hypertarget{struct_s_material_pass_info_ac97ff420977ef457316e478e8827cda}{
+\index{SMaterialPassInfo@{SMaterialPassInfo}!minLightResponse@{minLightResponse}}
+\index{minLightResponse@{minLightResponse}!SMaterialPassInfo@{SMaterialPassInfo}}
+\subsubsection[{minLightResponse}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrColor} {\bf SMaterialPassInfo::minLightResponse}}}
+\label{struct_s_material_pass_info_ac97ff420977ef457316e478e8827cda}
+
+
+
+
+Definition at line 78 of file GrMaterialPass.h.\hypertarget{struct_s_material_pass_info_47066b32f4d65c956ec8789a7ec14fb2}{
+\index{SMaterialPassInfo@{SMaterialPassInfo}!passEnable@{passEnable}}
+\index{passEnable@{passEnable}!SMaterialPassInfo@{SMaterialPassInfo}}
+\subsubsection[{passEnable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf UExprTerm} $>$ {\bf SMaterialPassInfo::passEnable}}}
+\label{struct_s_material_pass_info_47066b32f4d65c956ec8789a7ec14fb2}
+
+
+
+
+Definition at line 86 of file GrMaterialPass.h.\hypertarget{struct_s_material_pass_info_47b874b3efb05afc0ccbecc01ebf62bc}{
+\index{SMaterialPassInfo@{SMaterialPassInfo}!receiveShadow@{receiveShadow}}
+\index{receiveShadow@{receiveShadow}!SMaterialPassInfo@{SMaterialPassInfo}}
+\subsubsection[{receiveShadow}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf SMaterialPassInfo::receiveShadow}}}
+\label{struct_s_material_pass_info_47b874b3efb05afc0ccbecc01ebf62bc}
+
+
+
+
+Definition at line 104 of file GrMaterialPass.h.\hypertarget{struct_s_material_pass_info_88f257e5b6e6b9e21392219be74df05c}{
+\index{SMaterialPassInfo@{SMaterialPassInfo}!shader@{shader}}
+\index{shader@{shader}!SMaterialPassInfo@{SMaterialPassInfo}}
+\subsubsection[{shader}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrShader} $>$ {\bf SMaterialPassInfo::shader}}}
+\label{struct_s_material_pass_info_88f257e5b6e6b9e21392219be74df05c}
+
+
+
+
+Definition at line 62 of file GrMaterialPass.h.\hypertarget{struct_s_material_pass_info_43b0b16486a5a825210158b5c55db342}{
+\index{SMaterialPassInfo@{SMaterialPassInfo}!slopeBias@{slopeBias}}
+\index{slopeBias@{slopeBias}!SMaterialPassInfo@{SMaterialPassInfo}}
+\subsubsection[{slopeBias}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf SMaterialPassInfo::slopeBias}}}
+\label{struct_s_material_pass_info_43b0b16486a5a825210158b5c55db342}
+
+
+
+
+Definition at line 89 of file GrMaterialPass.h.\hypertarget{struct_s_material_pass_info_3696de9c4421b3ff40036e84bde3e630}{
+\index{SMaterialPassInfo@{SMaterialPassInfo}!textures@{textures}}
+\index{textures@{textures}!SMaterialPassInfo@{SMaterialPassInfo}}
+\subsubsection[{textures}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrTextureSet} {\bf SMaterialPassInfo::textures}}}
+\label{struct_s_material_pass_info_3696de9c4421b3ff40036e84bde3e630}
+
+
+
+
+Definition at line 71 of file GrMaterialPass.h.\hypertarget{struct_s_material_pass_info_8d6e08ed3afd1c51ea0320bd485dadf5}{
+\index{SMaterialPassInfo@{SMaterialPassInfo}!vertexColorAdd@{vertexColorAdd}}
+\index{vertexColorAdd@{vertexColorAdd}!SMaterialPassInfo@{SMaterialPassInfo}}
+\subsubsection[{vertexColorAdd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrColor} {\bf SMaterialPassInfo::vertexColorAdd}}}
+\label{struct_s_material_pass_info_8d6e08ed3afd1c51ea0320bd485dadf5}
+
+
+
+
+Definition at line 75 of file GrMaterialPass.h.\hypertarget{struct_s_material_pass_info_a129865ee753ac3056cd69490330f782}{
+\index{SMaterialPassInfo@{SMaterialPassInfo}!vertexColorMod@{vertexColorMod}}
+\index{vertexColorMod@{vertexColorMod}!SMaterialPassInfo@{SMaterialPassInfo}}
+\subsubsection[{vertexColorMod}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrColor} {\bf SMaterialPassInfo::vertexColorMod}}}
+\label{struct_s_material_pass_info_a129865ee753ac3056cd69490330f782}
+
+
+
+
+Definition at line 74 of file GrMaterialPass.h.\hypertarget{struct_s_material_pass_info_06ba69d3100e1ce0a27d8da74c1f342d}{
+\index{SMaterialPassInfo@{SMaterialPassInfo}!writeMask@{writeMask}}
+\index{writeMask@{writeMask}!SMaterialPassInfo@{SMaterialPassInfo}}
+\subsubsection[{writeMask}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf SMaterialPassInfo::writeMask}}}
+\label{struct_s_material_pass_info_06ba69d3100e1ce0a27d8da74c1f342d}
+
+
+
+
+Definition at line 98 of file GrMaterialPass.h.
+
+The documentation for this struct was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_material_pass_8h}{GrMaterialPass.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_material_pass_8cpp}{GrMaterialPass.cpp}\end{CompactItemize}

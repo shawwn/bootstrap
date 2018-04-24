@@ -1,0 +1,156 @@
+\hypertarget{class_gr_uber_texture}{
+\section{GrUberTexture Class Reference}
+\label{class_gr_uber_texture}\index{GrUberTexture@{GrUberTexture}}
+}
+{\tt \#include $<$GrUberTexture.h$>$}
+
+Inheritance diagram for GrUberTexture::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_gr_uber_texture}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+struct \textbf{SAtlasErase}
+\item 
+struct \textbf{STileData}
+\item 
+union \textbf{STileKey}
+\end{CompactItemize}
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+enum \hyperlink{class_gr_uber_texture_cf01f354c19dd4a9b9f75f10a61ea3f7}{ECONSTANTS} \{ \hyperlink{class_gr_uber_texture_cf01f354c19dd4a9b9f75f10a61ea3f76604deb9de1a47ec948a512b8b4ee5f4}{MAX\_\-ATLAS\_\-WRITES} =  4096
+ \}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_uber_texture_8609b300da5232cf6e8ebdfe7b90aac5}{GrUberTexture} (const \hyperlink{class_u_path}{UPath} \&filePath)
+\item 
+\hyperlink{class_gr_uber_texture_0e23ddce6edf3799c7f6674609f69161}{GrUberTexture} (const \hyperlink{class_u_path}{UPath} \&filePath, const void $\ast$tileUsageBitmap, const char $\ast$metaData=0, unsigned int metaDataSize=0)
+\item 
+\hyperlink{class_gr_uber_texture_56e4aea92ddd87bcf5b87915a6673513}{$\sim$GrUberTexture} ()
+\item 
+const \hyperlink{class_u_path}{UPath} \& \hyperlink{class_gr_uber_texture_09ce3a1b790e26b3e5ad49b04e56ec23}{GetName} () const 
+\item 
+bool \hyperlink{class_gr_uber_texture_5ed66bd64c78acc1976f4819151a0d9c}{IsValid} () const 
+\item 
+void \hyperlink{class_gr_uber_texture_066a12f3119df39f9d3ba6140f41f419}{CacheDetailTiles} (unsigned int startMip, unsigned int \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x}, unsigned int \hyperlink{wglext_8h_9298c7ad619074f5285b32c6b72bfdea}{y}, unsigned int \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, unsigned int \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height}, unsigned int clipMinX, unsigned int clipMinY, unsigned int clipMaxX, unsigned int clipMaxY)
+\item 
+void \hyperlink{class_gr_uber_texture_13ff60984b63487fa9532e0668acafbb}{BindLowResTextures} (unsigned int bumpSampler, unsigned int diffuseSampler, unsigned int specularSampler)
+\item 
+void \hyperlink{class_gr_uber_texture_7052df4bf8cbc24f0e9ef47265fd5015}{ResetAtlas} ()
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 25 of file GrUberTexture.h.
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_gr_uber_texture_cf01f354c19dd4a9b9f75f10a61ea3f7}{
+\index{GrUberTexture@{GrUberTexture}!ECONSTANTS@{ECONSTANTS}}
+\index{ECONSTANTS@{ECONSTANTS}!GrUberTexture@{GrUberTexture}}
+\subsubsection[{ECONSTANTS}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GrUberTexture::ECONSTANTS}}}
+\label{class_gr_uber_texture_cf01f354c19dd4a9b9f75f10a61ea3f7}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{MAX\_\-ATLAS\_\-WRITES@{MAX\_\-ATLAS\_\-WRITES}!GrUberTexture@{GrUberTexture}}\index{GrUberTexture@{GrUberTexture}!MAX\_\-ATLAS\_\-WRITES@{MAX\_\-ATLAS\_\-WRITES}}\item[{\em 
+\hypertarget{class_gr_uber_texture_cf01f354c19dd4a9b9f75f10a61ea3f76604deb9de1a47ec948a512b8b4ee5f4}{
+MAX\_\-ATLAS\_\-WRITES}
+\label{class_gr_uber_texture_cf01f354c19dd4a9b9f75f10a61ea3f76604deb9de1a47ec948a512b8b4ee5f4}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 28 of file GrUberTexture.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_uber_texture_8609b300da5232cf6e8ebdfe7b90aac5}{
+\index{GrUberTexture@{GrUberTexture}!GrUberTexture@{GrUberTexture}}
+\index{GrUberTexture@{GrUberTexture}!GrUberTexture@{GrUberTexture}}
+\subsubsection[{GrUberTexture}]{\setlength{\rightskip}{0pt plus 5cm}GrUberTexture::GrUberTexture (const {\bf UPath} \& {\em filePath})}}
+\label{class_gr_uber_texture_8609b300da5232cf6e8ebdfe7b90aac5}
+
+
+
+
+Definition at line 63 of file GrUberTexture.cpp.\hypertarget{class_gr_uber_texture_0e23ddce6edf3799c7f6674609f69161}{
+\index{GrUberTexture@{GrUberTexture}!GrUberTexture@{GrUberTexture}}
+\index{GrUberTexture@{GrUberTexture}!GrUberTexture@{GrUberTexture}}
+\subsubsection[{GrUberTexture}]{\setlength{\rightskip}{0pt plus 5cm}GrUberTexture::GrUberTexture (const {\bf UPath} \& {\em filePath}, \/  const void $\ast$ {\em tileUsageBitmap}, \/  const char $\ast$ {\em metaData} = {\tt 0}, \/  unsigned int {\em metaDataSize} = {\tt 0})}}
+\label{class_gr_uber_texture_0e23ddce6edf3799c7f6674609f69161}
+
+
+
+
+Definition at line 86 of file GrUberTexture.cpp.\hypertarget{class_gr_uber_texture_56e4aea92ddd87bcf5b87915a6673513}{
+\index{GrUberTexture@{GrUberTexture}!$\sim$GrUberTexture@{$\sim$GrUberTexture}}
+\index{$\sim$GrUberTexture@{$\sim$GrUberTexture}!GrUberTexture@{GrUberTexture}}
+\subsubsection[{$\sim$GrUberTexture}]{\setlength{\rightskip}{0pt plus 5cm}GrUberTexture::$\sim$GrUberTexture ()}}
+\label{class_gr_uber_texture_56e4aea92ddd87bcf5b87915a6673513}
+
+
+
+
+Definition at line 112 of file GrUberTexture.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_uber_texture_13ff60984b63487fa9532e0668acafbb}{
+\index{GrUberTexture@{GrUberTexture}!BindLowResTextures@{BindLowResTextures}}
+\index{BindLowResTextures@{BindLowResTextures}!GrUberTexture@{GrUberTexture}}
+\subsubsection[{BindLowResTextures}]{\setlength{\rightskip}{0pt plus 5cm}void GrUberTexture::BindLowResTextures (unsigned int {\em bumpSampler}, \/  unsigned int {\em diffuseSampler}, \/  unsigned int {\em specularSampler})}}
+\label{class_gr_uber_texture_13ff60984b63487fa9532e0668acafbb}
+
+
+
+
+Definition at line 231 of file GrUberTexture.cpp.\hypertarget{class_gr_uber_texture_066a12f3119df39f9d3ba6140f41f419}{
+\index{GrUberTexture@{GrUberTexture}!CacheDetailTiles@{CacheDetailTiles}}
+\index{CacheDetailTiles@{CacheDetailTiles}!GrUberTexture@{GrUberTexture}}
+\subsubsection[{CacheDetailTiles}]{\setlength{\rightskip}{0pt plus 5cm}void GrUberTexture::CacheDetailTiles (unsigned int {\em startMip}, \/  unsigned int {\em x}, \/  unsigned int {\em y}, \/  unsigned int {\em width}, \/  unsigned int {\em height}, \/  unsigned int {\em clipMinX}, \/  unsigned int {\em clipMinY}, \/  unsigned int {\em clipMaxX}, \/  unsigned int {\em clipMaxY})}}
+\label{class_gr_uber_texture_066a12f3119df39f9d3ba6140f41f419}
+
+
+
+
+Definition at line 148 of file GrUberTexture.cpp.\hypertarget{class_gr_uber_texture_09ce3a1b790e26b3e5ad49b04e56ec23}{
+\index{GrUberTexture@{GrUberTexture}!GetName@{GetName}}
+\index{GetName@{GetName}!GrUberTexture@{GrUberTexture}}
+\subsubsection[{GetName}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf UPath}\& GrUberTexture::GetName () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_uber_texture_09ce3a1b790e26b3e5ad49b04e56ec23}
+
+
+
+
+Definition at line 39 of file GrUberTexture.h.\hypertarget{class_gr_uber_texture_5ed66bd64c78acc1976f4819151a0d9c}{
+\index{GrUberTexture@{GrUberTexture}!IsValid@{IsValid}}
+\index{IsValid@{IsValid}!GrUberTexture@{GrUberTexture}}
+\subsubsection[{IsValid}]{\setlength{\rightskip}{0pt plus 5cm}bool GrUberTexture::IsValid () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_uber_texture_5ed66bd64c78acc1976f4819151a0d9c}
+
+
+
+
+Definition at line 42 of file GrUberTexture.h.\hypertarget{class_gr_uber_texture_7052df4bf8cbc24f0e9ef47265fd5015}{
+\index{GrUberTexture@{GrUberTexture}!ResetAtlas@{ResetAtlas}}
+\index{ResetAtlas@{ResetAtlas}!GrUberTexture@{GrUberTexture}}
+\subsubsection[{ResetAtlas}]{\setlength{\rightskip}{0pt plus 5cm}void GrUberTexture::ResetAtlas ()}}
+\label{class_gr_uber_texture_7052df4bf8cbc24f0e9ef47265fd5015}
+
+
+
+
+Definition at line 242 of file GrUberTexture.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_uber_texture_8h}{GrUberTexture.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_uber_texture_8cpp}{GrUberTexture.cpp}\end{CompactItemize}

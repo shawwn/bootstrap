@@ -1,0 +1,429 @@
+\hypertarget{class_gr_polygon_group}{
+\section{GrPolygonGroup Class Reference}
+\label{class_gr_polygon_group}\index{GrPolygonGroup@{GrPolygonGroup}}
+}
+{\tt \#include $<$GrPolygonGroup.h$>$}
+
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+struct \hyperlink{struct_gr_polygon_group_1_1_s_edge}{SEdge}
+\end{CompactItemize}
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef std::vector$<$ \hyperlink{class_gr_polygon}{GrPolygon} $\ast$ $>$ \hyperlink{class_gr_polygon_group_af5dedb77a4dc642d9fcca85710c3cf5}{PolygonVec}
+\item 
+typedef std::vector$<$ \hyperlink{struct_gr_polygon_group_1_1_s_edge}{SEdge} $>$ \hyperlink{class_gr_polygon_group_8b3e2128f854d70f9d500ae00dafe5bd}{EdgeVec}
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_polygon_group_aa3b23b7e01fc2b036a5b9826f95948a}{GrPolygonGroup} ()
+\item 
+\hyperlink{class_gr_polygon_group_be9925f6b0511d2130e51891e6e685b5}{GrPolygonGroup} (const \hyperlink{class_gr_polygon_group_af5dedb77a4dc642d9fcca85710c3cf5}{PolygonVec} \&list)
+\item 
+\hyperlink{class_gr_polygon_group_b2c44b09732752e66e66bad26b06d65a}{GrPolygonGroup} (const \hyperlink{class_gr_polygon_group}{GrPolygonGroup} \&\hyperlink{wglext_8h_69cec9b28d037f2272131b4fcd148620}{group})
+\item 
+\hyperlink{class_gr_polygon_group_d8d202f8e381f757ce2f9591e84b3142}{$\sim$GrPolygonGroup} ()
+\item 
+unsigned int \hyperlink{class_gr_polygon_group_c8abcd749d8ba99fca070795ca770b2b}{GetVertexCount} () const 
+\item 
+\hyperlink{class_m_sphere}{MSphere} \hyperlink{class_gr_polygon_group_ebce104e3d59538c74e2701e98542afa}{GetBoundingSphere} () const 
+\item 
+const \hyperlink{class_m_a_a_box}{MAABox} \& \hyperlink{class_gr_polygon_group_f036e17871ac905b28a8e9c90da6d0e6}{GetAABox} () const 
+\item 
+unsigned int \hyperlink{class_gr_polygon_group_3e0a4ae8030ded12301495eed40135df}{GetPolygonCount} () const 
+\item 
+const \hyperlink{class_gr_polygon}{GrPolygon} \& \hyperlink{class_gr_polygon_group_267706848b196a4f1b7b0ebdeeb7188e}{GetPolygon} (unsigned int i) const 
+\item 
+void \hyperlink{class_gr_polygon_group_cc582187546be8c5c3d412c5980a9029}{SetPolygonMaterial} (unsigned int i, \hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_material}{GrMaterial} $>$ material)
+\item 
+void \hyperlink{class_gr_polygon_group_011cfe165e7b23f6b1a3710e63be95ec}{SetPolygonUserData} (unsigned int i, unsigned int userData)
+\item 
+void \hyperlink{class_gr_polygon_group_4385ad81ad1653c24b7a5a18018bb7a5}{SetGroupUserData} (unsigned int userData)
+\item 
+void \hyperlink{class_gr_polygon_group_33200fb9c4556c940a842f9504bd2a85}{SetPolygonUV} (unsigned int polygonIdx, unsigned int vertexIdx, const \hyperlink{struct_s_vec2}{SVec2} \&uv) const 
+\item 
+void \hyperlink{class_gr_polygon_group_95956f1b189590a55244810b49610fe3}{GenFaceNormals} ()
+\item 
+void \hyperlink{class_gr_polygon_group_976f3a77c1696b3bc1b0797ad6d4e2ca}{GenTSBasis} ()
+\item 
+void \hyperlink{class_gr_polygon_group_bd4a96665b406a9694b87f950abc7b10}{GenPlanarUVMap} (const \hyperlink{class_m_plane}{MPlane} \&projectionPlane)
+\item 
+void \hyperlink{class_gr_polygon_group_a6fbc43f25738738b71f89be14c4de7a}{GenEdgeList} (\hyperlink{class_gr_polygon_group_8b3e2128f854d70f9d500ae00dafe5bd}{EdgeVec} \&edges)
+\item 
+void \hyperlink{class_gr_polygon_group_8f80c6de500f8d0bed5e3fcb676494ae}{GenAOMapping} (float worldTexelSize, unsigned int textureSize)
+\item 
+void \hyperlink{class_gr_polygon_group_364fa33e341e4462ccbb76061843ff4e}{AddToUniqueUVMapper} (GrPolygonUVMapper \&mapper)
+\item 
+void \hyperlink{class_gr_polygon_group_2f06fcddd6fd04a28b8ae8682a36d508}{AddPolygon} (const \hyperlink{class_gr_polygon}{GrPolygon} \&polygon)
+\item 
+void \hyperlink{class_gr_polygon_group_3a7869b9ff3ae864be0aa71efcca2def}{AddGroup} (const \hyperlink{class_gr_polygon_group}{GrPolygonGroup} \&\hyperlink{wglext_8h_69cec9b28d037f2272131b4fcd148620}{group})
+\item 
+void \hyperlink{class_gr_polygon_group_852fd667f43f1ceabf80ceb8d86168d6}{AddGroup} (const \hyperlink{class_gr_polygon_group}{GrPolygonGroup} \&\hyperlink{wglext_8h_69cec9b28d037f2272131b4fcd148620}{group}, const \hyperlink{class_m_mat4x4}{MMat4x4} \&\hyperlink{glext__bak_8h_07993c0d92c1aeeb357ba0495c8b5325}{transform}, const \hyperlink{class_m_mat3x3}{MMat3x3} \&normalRot)
+\item 
+void \hyperlink{class_gr_polygon_group_a3bcc378c3f94203ec19e897361ae164}{Clear} ()
+\item 
+bool \hyperlink{class_gr_polygon_group_021374f6a34f0df6d401a8bcfde8c30b}{IsSkinned} () const 
+\item 
+void \hyperlink{class_gr_polygon_group_04f5e9959c34e61726e25ff80d120989}{SetSkinningInfo} (\hyperlink{struct_s_polygon_skin_vertex}{SPolygonSkinVertex} $\ast$skinVertArray, \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} $\ast$boneNames, \hyperlink{class_m_mat4x4}{MMat4x4} $\ast$invBindMatrices, unsigned int \hyperlink{wglext_8h_98d18d6b4e3ba4ed266c6fb54c839d70}{count})
+\item 
+void \hyperlink{class_gr_polygon_group_887ed72b43c9832341bd9059fb43d123}{OptimizePolygons} (float epsilon, float distEpsilonSqr)
+\item 
+void \hyperlink{class_gr_polygon_group_e361b892b9d9a739c82679e67eb689e7}{WeldVertices} (float distEpsilonSqr)
+\item 
+void \hyperlink{class_gr_polygon_group_1f1f0c55854848f37a12efe4f0bb1819}{FixTJuncs} (const \hyperlink{class_gr_polygon_group}{GrPolygonGroup} \&\hyperlink{wglext_8h_69cec9b28d037f2272131b4fcd148620}{group}, float epsilon)
+\item 
+void \hyperlink{class_gr_polygon_group_78b2f9321b1e04e636a5ea434326a010}{GenPlaneList} (std::vector$<$ \hyperlink{class_m_plane}{MPlane} $>$ \&planes, float epsilon) const 
+\item 
+int \hyperlink{class_gr_polygon_group_740ca90b8b5492d1da5b4195d9f2e82c}{Split} (\hyperlink{class_gr_polygon_group}{GrPolygonGroup} \&front, \hyperlink{class_gr_polygon_group}{GrPolygonGroup} \&back, const \hyperlink{class_m_plane}{MPlane} \&plane, float epsilon) const 
+\item 
+int \hyperlink{class_gr_polygon_group_7e0719fa01ae4b03cd135fdc91ff4697}{Classify} (\hyperlink{class_gr_polygon_group}{GrPolygonGroup} \&front, \hyperlink{class_gr_polygon_group}{GrPolygonGroup} \&back, const \hyperlink{class_m_plane}{MPlane} \&plane) const 
+\item 
+bool \hyperlink{class_gr_polygon_group_d158b0569c3feb64ba0bc71091eb3605}{IsConvexSet} (float epsilon) const 
+\item 
+void \hyperlink{class_gr_polygon_group_487e928a1d486489a0e0005cc0eb8669}{GenMeshes} (std::vector$<$ \hyperlink{class_gr_mesh_inst}{GrMeshInst} $\ast$ $>$ \&meshes, const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, bool genVertexColors=false, bool vboEnable=true, unsigned int maxVertexCount=30000) const 
+\item 
+\hyperlink{class_gr_polygon_group}{GrPolygonGroup} \& \hyperlink{class_gr_polygon_group_8142b681cb13a758fa82422c13506f00}{operator=} (const \hyperlink{class_gr_polygon_group}{GrPolygonGroup} \&\hyperlink{wglext_8h_69cec9b28d037f2272131b4fcd148620}{group})
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 33 of file GrPolygonGroup.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_gr_polygon_group_8b3e2128f854d70f9d500ae00dafe5bd}{
+\index{GrPolygonGroup@{GrPolygonGroup}!EdgeVec@{EdgeVec}}
+\index{EdgeVec@{EdgeVec}!GrPolygonGroup@{GrPolygonGroup}}
+\subsubsection[{EdgeVec}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<$ {\bf SEdge} $>$ {\bf GrPolygonGroup::EdgeVec}}}
+\label{class_gr_polygon_group_8b3e2128f854d70f9d500ae00dafe5bd}
+
+
+
+
+Definition at line 47 of file GrPolygonGroup.h.\hypertarget{class_gr_polygon_group_af5dedb77a4dc642d9fcca85710c3cf5}{
+\index{GrPolygonGroup@{GrPolygonGroup}!PolygonVec@{PolygonVec}}
+\index{PolygonVec@{PolygonVec}!GrPolygonGroup@{GrPolygonGroup}}
+\subsubsection[{PolygonVec}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<$ {\bf GrPolygon}$\ast$ $>$ {\bf GrPolygonGroup::PolygonVec}}}
+\label{class_gr_polygon_group_af5dedb77a4dc642d9fcca85710c3cf5}
+
+
+
+
+Definition at line 40 of file GrPolygonGroup.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_polygon_group_aa3b23b7e01fc2b036a5b9826f95948a}{
+\index{GrPolygonGroup@{GrPolygonGroup}!GrPolygonGroup@{GrPolygonGroup}}
+\index{GrPolygonGroup@{GrPolygonGroup}!GrPolygonGroup@{GrPolygonGroup}}
+\subsubsection[{GrPolygonGroup}]{\setlength{\rightskip}{0pt plus 5cm}GrPolygonGroup::GrPolygonGroup ()}}
+\label{class_gr_polygon_group_aa3b23b7e01fc2b036a5b9826f95948a}
+
+
+
+
+Definition at line 105 of file GrPolygonGroup.cpp.\hypertarget{class_gr_polygon_group_be9925f6b0511d2130e51891e6e685b5}{
+\index{GrPolygonGroup@{GrPolygonGroup}!GrPolygonGroup@{GrPolygonGroup}}
+\index{GrPolygonGroup@{GrPolygonGroup}!GrPolygonGroup@{GrPolygonGroup}}
+\subsubsection[{GrPolygonGroup}]{\setlength{\rightskip}{0pt plus 5cm}GrPolygonGroup::GrPolygonGroup (const {\bf PolygonVec} \& {\em list})}}
+\label{class_gr_polygon_group_be9925f6b0511d2130e51891e6e685b5}
+
+
+
+
+Definition at line 117 of file GrPolygonGroup.cpp.\hypertarget{class_gr_polygon_group_b2c44b09732752e66e66bad26b06d65a}{
+\index{GrPolygonGroup@{GrPolygonGroup}!GrPolygonGroup@{GrPolygonGroup}}
+\index{GrPolygonGroup@{GrPolygonGroup}!GrPolygonGroup@{GrPolygonGroup}}
+\subsubsection[{GrPolygonGroup}]{\setlength{\rightskip}{0pt plus 5cm}GrPolygonGroup::GrPolygonGroup (const {\bf GrPolygonGroup} \& {\em group})}}
+\label{class_gr_polygon_group_b2c44b09732752e66e66bad26b06d65a}
+
+
+
+
+Definition at line 129 of file GrPolygonGroup.cpp.\hypertarget{class_gr_polygon_group_d8d202f8e381f757ce2f9591e84b3142}{
+\index{GrPolygonGroup@{GrPolygonGroup}!$\sim$GrPolygonGroup@{$\sim$GrPolygonGroup}}
+\index{$\sim$GrPolygonGroup@{$\sim$GrPolygonGroup}!GrPolygonGroup@{GrPolygonGroup}}
+\subsubsection[{$\sim$GrPolygonGroup}]{\setlength{\rightskip}{0pt plus 5cm}GrPolygonGroup::$\sim$GrPolygonGroup ()}}
+\label{class_gr_polygon_group_d8d202f8e381f757ce2f9591e84b3142}
+
+
+
+
+Definition at line 139 of file GrPolygonGroup.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_polygon_group_852fd667f43f1ceabf80ceb8d86168d6}{
+\index{GrPolygonGroup@{GrPolygonGroup}!AddGroup@{AddGroup}}
+\index{AddGroup@{AddGroup}!GrPolygonGroup@{GrPolygonGroup}}
+\subsubsection[{AddGroup}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonGroup::AddGroup (const {\bf GrPolygonGroup} \& {\em group}, \/  const {\bf MMat4x4} \& {\em transform}, \/  const {\bf MMat3x3} \& {\em normalRot})}}
+\label{class_gr_polygon_group_852fd667f43f1ceabf80ceb8d86168d6}
+
+
+
+
+Definition at line 748 of file GrPolygonGroup.cpp.\hypertarget{class_gr_polygon_group_3a7869b9ff3ae864be0aa71efcca2def}{
+\index{GrPolygonGroup@{GrPolygonGroup}!AddGroup@{AddGroup}}
+\index{AddGroup@{AddGroup}!GrPolygonGroup@{GrPolygonGroup}}
+\subsubsection[{AddGroup}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonGroup::AddGroup (const {\bf GrPolygonGroup} \& {\em group})}}
+\label{class_gr_polygon_group_3a7869b9ff3ae864be0aa71efcca2def}
+
+
+
+
+Definition at line 667 of file GrPolygonGroup.cpp.\hypertarget{class_gr_polygon_group_2f06fcddd6fd04a28b8ae8682a36d508}{
+\index{GrPolygonGroup@{GrPolygonGroup}!AddPolygon@{AddPolygon}}
+\index{AddPolygon@{AddPolygon}!GrPolygonGroup@{GrPolygonGroup}}
+\subsubsection[{AddPolygon}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonGroup::AddPolygon (const {\bf GrPolygon} \& {\em polygon})}}
+\label{class_gr_polygon_group_2f06fcddd6fd04a28b8ae8682a36d508}
+
+
+
+
+Definition at line 653 of file GrPolygonGroup.cpp.\hypertarget{class_gr_polygon_group_364fa33e341e4462ccbb76061843ff4e}{
+\index{GrPolygonGroup@{GrPolygonGroup}!AddToUniqueUVMapper@{AddToUniqueUVMapper}}
+\index{AddToUniqueUVMapper@{AddToUniqueUVMapper}!GrPolygonGroup@{GrPolygonGroup}}
+\subsubsection[{AddToUniqueUVMapper}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonGroup::AddToUniqueUVMapper (GrPolygonUVMapper \& {\em mapper})}}
+\label{class_gr_polygon_group_364fa33e341e4462ccbb76061843ff4e}
+
+
+\hypertarget{class_gr_polygon_group_7e0719fa01ae4b03cd135fdc91ff4697}{
+\index{GrPolygonGroup@{GrPolygonGroup}!Classify@{Classify}}
+\index{Classify@{Classify}!GrPolygonGroup@{GrPolygonGroup}}
+\subsubsection[{Classify}]{\setlength{\rightskip}{0pt plus 5cm}int GrPolygonGroup::Classify ({\bf GrPolygonGroup} \& {\em front}, \/  {\bf GrPolygonGroup} \& {\em back}, \/  const {\bf MPlane} \& {\em plane}) const}}
+\label{class_gr_polygon_group_7e0719fa01ae4b03cd135fdc91ff4697}
+
+
+
+
+Definition at line 992 of file GrPolygonGroup.cpp.\hypertarget{class_gr_polygon_group_a3bcc378c3f94203ec19e897361ae164}{
+\index{GrPolygonGroup@{GrPolygonGroup}!Clear@{Clear}}
+\index{Clear@{Clear}!GrPolygonGroup@{GrPolygonGroup}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonGroup::Clear ()}}
+\label{class_gr_polygon_group_a3bcc378c3f94203ec19e897361ae164}
+
+
+
+
+Definition at line 768 of file GrPolygonGroup.cpp.\hypertarget{class_gr_polygon_group_1f1f0c55854848f37a12efe4f0bb1819}{
+\index{GrPolygonGroup@{GrPolygonGroup}!FixTJuncs@{FixTJuncs}}
+\index{FixTJuncs@{FixTJuncs}!GrPolygonGroup@{GrPolygonGroup}}
+\subsubsection[{FixTJuncs}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonGroup::FixTJuncs (const {\bf GrPolygonGroup} \& {\em group}, \/  float {\em epsilon})}}
+\label{class_gr_polygon_group_1f1f0c55854848f37a12efe4f0bb1819}
+
+
+
+
+Definition at line 857 of file GrPolygonGroup.cpp.\hypertarget{class_gr_polygon_group_8f80c6de500f8d0bed5e3fcb676494ae}{
+\index{GrPolygonGroup@{GrPolygonGroup}!GenAOMapping@{GenAOMapping}}
+\index{GenAOMapping@{GenAOMapping}!GrPolygonGroup@{GrPolygonGroup}}
+\subsubsection[{GenAOMapping}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonGroup::GenAOMapping (float {\em worldTexelSize}, \/  unsigned int {\em textureSize})}}
+\label{class_gr_polygon_group_8f80c6de500f8d0bed5e3fcb676494ae}
+
+
+\hypertarget{class_gr_polygon_group_a6fbc43f25738738b71f89be14c4de7a}{
+\index{GrPolygonGroup@{GrPolygonGroup}!GenEdgeList@{GenEdgeList}}
+\index{GenEdgeList@{GenEdgeList}!GrPolygonGroup@{GrPolygonGroup}}
+\subsubsection[{GenEdgeList}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonGroup::GenEdgeList ({\bf EdgeVec} \& {\em edges})}}
+\label{class_gr_polygon_group_a6fbc43f25738738b71f89be14c4de7a}
+
+
+
+
+Definition at line 609 of file GrPolygonGroup.cpp.\hypertarget{class_gr_polygon_group_95956f1b189590a55244810b49610fe3}{
+\index{GrPolygonGroup@{GrPolygonGroup}!GenFaceNormals@{GenFaceNormals}}
+\index{GenFaceNormals@{GenFaceNormals}!GrPolygonGroup@{GrPolygonGroup}}
+\subsubsection[{GenFaceNormals}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonGroup::GenFaceNormals ()}}
+\label{class_gr_polygon_group_95956f1b189590a55244810b49610fe3}
+
+
+
+
+Definition at line 215 of file GrPolygonGroup.cpp.\hypertarget{class_gr_polygon_group_487e928a1d486489a0e0005cc0eb8669}{
+\index{GrPolygonGroup@{GrPolygonGroup}!GenMeshes@{GenMeshes}}
+\index{GenMeshes@{GenMeshes}!GrPolygonGroup@{GrPolygonGroup}}
+\subsubsection[{GenMeshes}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonGroup::GenMeshes (std::vector$<$ {\bf GrMeshInst} $\ast$ $>$ \& {\em meshes}, \/  const {\bf tstring} \& {\em name}, \/  bool {\em genVertexColors} = {\tt false}, \/  bool {\em vboEnable} = {\tt true}, \/  unsigned int {\em maxVertexCount} = {\tt 30000}) const}}
+\label{class_gr_polygon_group_487e928a1d486489a0e0005cc0eb8669}
+
+
+
+
+Definition at line 1052 of file GrPolygonGroup.cpp.\hypertarget{class_gr_polygon_group_bd4a96665b406a9694b87f950abc7b10}{
+\index{GrPolygonGroup@{GrPolygonGroup}!GenPlanarUVMap@{GenPlanarUVMap}}
+\index{GenPlanarUVMap@{GenPlanarUVMap}!GrPolygonGroup@{GrPolygonGroup}}
+\subsubsection[{GenPlanarUVMap}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonGroup::GenPlanarUVMap (const {\bf MPlane} \& {\em projectionPlane})}}
+\label{class_gr_polygon_group_bd4a96665b406a9694b87f950abc7b10}
+
+
+
+
+Definition at line 529 of file GrPolygonGroup.cpp.\hypertarget{class_gr_polygon_group_78b2f9321b1e04e636a5ea434326a010}{
+\index{GrPolygonGroup@{GrPolygonGroup}!GenPlaneList@{GenPlaneList}}
+\index{GenPlaneList@{GenPlaneList}!GrPolygonGroup@{GrPolygonGroup}}
+\subsubsection[{GenPlaneList}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonGroup::GenPlaneList (std::vector$<$ {\bf MPlane} $>$ \& {\em planes}, \/  float {\em epsilon}) const}}
+\label{class_gr_polygon_group_78b2f9321b1e04e636a5ea434326a010}
+
+
+
+
+Definition at line 912 of file GrPolygonGroup.cpp.\hypertarget{class_gr_polygon_group_976f3a77c1696b3bc1b0797ad6d4e2ca}{
+\index{GrPolygonGroup@{GrPolygonGroup}!GenTSBasis@{GenTSBasis}}
+\index{GenTSBasis@{GenTSBasis}!GrPolygonGroup@{GrPolygonGroup}}
+\subsubsection[{GenTSBasis}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonGroup::GenTSBasis ()}}
+\label{class_gr_polygon_group_976f3a77c1696b3bc1b0797ad6d4e2ca}
+
+
+
+
+Definition at line 238 of file GrPolygonGroup.cpp.\hypertarget{class_gr_polygon_group_f036e17871ac905b28a8e9c90da6d0e6}{
+\index{GrPolygonGroup@{GrPolygonGroup}!GetAABox@{GetAABox}}
+\index{GetAABox@{GetAABox}!GrPolygonGroup@{GrPolygonGroup}}
+\subsubsection[{GetAABox}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MAABox} \& GrPolygonGroup::GetAABox () const}}
+\label{class_gr_polygon_group_f036e17871ac905b28a8e9c90da6d0e6}
+
+
+
+
+Definition at line 161 of file GrPolygonGroup.cpp.\hypertarget{class_gr_polygon_group_ebce104e3d59538c74e2701e98542afa}{
+\index{GrPolygonGroup@{GrPolygonGroup}!GetBoundingSphere@{GetBoundingSphere}}
+\index{GetBoundingSphere@{GetBoundingSphere}!GrPolygonGroup@{GrPolygonGroup}}
+\subsubsection[{GetBoundingSphere}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MSphere} GrPolygonGroup::GetBoundingSphere () const}}
+\label{class_gr_polygon_group_ebce104e3d59538c74e2701e98542afa}
+
+
+
+
+Definition at line 151 of file GrPolygonGroup.cpp.\hypertarget{class_gr_polygon_group_267706848b196a4f1b7b0ebdeeb7188e}{
+\index{GrPolygonGroup@{GrPolygonGroup}!GetPolygon@{GetPolygon}}
+\index{GetPolygon@{GetPolygon}!GrPolygonGroup@{GrPolygonGroup}}
+\subsubsection[{GetPolygon}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf GrPolygon} \& GrPolygonGroup::GetPolygon (unsigned int {\em i}) const}}
+\label{class_gr_polygon_group_267706848b196a4f1b7b0ebdeeb7188e}
+
+
+
+
+Definition at line 169 of file GrPolygonGroup.cpp.\hypertarget{class_gr_polygon_group_3e0a4ae8030ded12301495eed40135df}{
+\index{GrPolygonGroup@{GrPolygonGroup}!GetPolygonCount@{GetPolygonCount}}
+\index{GetPolygonCount@{GetPolygonCount}!GrPolygonGroup@{GrPolygonGroup}}
+\subsubsection[{GetPolygonCount}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrPolygonGroup::GetPolygonCount () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_polygon_group_3e0a4ae8030ded12301495eed40135df}
+
+
+
+
+Definition at line 62 of file GrPolygonGroup.h.\hypertarget{class_gr_polygon_group_c8abcd749d8ba99fca070795ca770b2b}{
+\index{GrPolygonGroup@{GrPolygonGroup}!GetVertexCount@{GetVertexCount}}
+\index{GetVertexCount@{GetVertexCount}!GrPolygonGroup@{GrPolygonGroup}}
+\subsubsection[{GetVertexCount}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrPolygonGroup::GetVertexCount () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_polygon_group_c8abcd749d8ba99fca070795ca770b2b}
+
+
+
+
+Definition at line 55 of file GrPolygonGroup.h.\hypertarget{class_gr_polygon_group_d158b0569c3feb64ba0bc71091eb3605}{
+\index{GrPolygonGroup@{GrPolygonGroup}!IsConvexSet@{IsConvexSet}}
+\index{IsConvexSet@{IsConvexSet}!GrPolygonGroup@{GrPolygonGroup}}
+\subsubsection[{IsConvexSet}]{\setlength{\rightskip}{0pt plus 5cm}bool GrPolygonGroup::IsConvexSet (float {\em epsilon}) const}}
+\label{class_gr_polygon_group_d158b0569c3feb64ba0bc71091eb3605}
+
+
+
+
+Definition at line 1029 of file GrPolygonGroup.cpp.\hypertarget{class_gr_polygon_group_021374f6a34f0df6d401a8bcfde8c30b}{
+\index{GrPolygonGroup@{GrPolygonGroup}!IsSkinned@{IsSkinned}}
+\index{IsSkinned@{IsSkinned}!GrPolygonGroup@{GrPolygonGroup}}
+\subsubsection[{IsSkinned}]{\setlength{\rightskip}{0pt plus 5cm}bool GrPolygonGroup::IsSkinned () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_polygon_group_021374f6a34f0df6d401a8bcfde8c30b}
+
+
+
+
+Definition at line 94 of file GrPolygonGroup.h.\hypertarget{class_gr_polygon_group_8142b681cb13a758fa82422c13506f00}{
+\index{GrPolygonGroup@{GrPolygonGroup}!operator=@{operator=}}
+\index{operator=@{operator=}!GrPolygonGroup@{GrPolygonGroup}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrPolygonGroup}\& GrPolygonGroup::operator= (const {\bf GrPolygonGroup} \& {\em group})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_polygon_group_8142b681cb13a758fa82422c13506f00}
+
+
+
+
+Definition at line 136 of file GrPolygonGroup.h.\hypertarget{class_gr_polygon_group_887ed72b43c9832341bd9059fb43d123}{
+\index{GrPolygonGroup@{GrPolygonGroup}!OptimizePolygons@{OptimizePolygons}}
+\index{OptimizePolygons@{OptimizePolygons}!GrPolygonGroup@{GrPolygonGroup}}
+\subsubsection[{OptimizePolygons}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonGroup::OptimizePolygons (float {\em epsilon}, \/  float {\em distEpsilonSqr})}}
+\label{class_gr_polygon_group_887ed72b43c9832341bd9059fb43d123}
+
+
+
+
+Definition at line 820 of file GrPolygonGroup.cpp.\hypertarget{class_gr_polygon_group_4385ad81ad1653c24b7a5a18018bb7a5}{
+\index{GrPolygonGroup@{GrPolygonGroup}!SetGroupUserData@{SetGroupUserData}}
+\index{SetGroupUserData@{SetGroupUserData}!GrPolygonGroup@{GrPolygonGroup}}
+\subsubsection[{SetGroupUserData}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonGroup::SetGroupUserData (unsigned int {\em userData})}}
+\label{class_gr_polygon_group_4385ad81ad1653c24b7a5a18018bb7a5}
+
+
+
+
+Definition at line 193 of file GrPolygonGroup.cpp.\hypertarget{class_gr_polygon_group_cc582187546be8c5c3d412c5980a9029}{
+\index{GrPolygonGroup@{GrPolygonGroup}!SetPolygonMaterial@{SetPolygonMaterial}}
+\index{SetPolygonMaterial@{SetPolygonMaterial}!GrPolygonGroup@{GrPolygonGroup}}
+\subsubsection[{SetPolygonMaterial}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonGroup::SetPolygonMaterial (unsigned int {\em i}, \/  {\bf URef}$<$ {\bf GrMaterial} $>$ {\em material})}}
+\label{class_gr_polygon_group_cc582187546be8c5c3d412c5980a9029}
+
+
+
+
+Definition at line 177 of file GrPolygonGroup.cpp.\hypertarget{class_gr_polygon_group_011cfe165e7b23f6b1a3710e63be95ec}{
+\index{GrPolygonGroup@{GrPolygonGroup}!SetPolygonUserData@{SetPolygonUserData}}
+\index{SetPolygonUserData@{SetPolygonUserData}!GrPolygonGroup@{GrPolygonGroup}}
+\subsubsection[{SetPolygonUserData}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonGroup::SetPolygonUserData (unsigned int {\em i}, \/  unsigned int {\em userData})}}
+\label{class_gr_polygon_group_011cfe165e7b23f6b1a3710e63be95ec}
+
+
+
+
+Definition at line 185 of file GrPolygonGroup.cpp.\hypertarget{class_gr_polygon_group_33200fb9c4556c940a842f9504bd2a85}{
+\index{GrPolygonGroup@{GrPolygonGroup}!SetPolygonUV@{SetPolygonUV}}
+\index{SetPolygonUV@{SetPolygonUV}!GrPolygonGroup@{GrPolygonGroup}}
+\subsubsection[{SetPolygonUV}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonGroup::SetPolygonUV (unsigned int {\em polygonIdx}, \/  unsigned int {\em vertexIdx}, \/  const {\bf SVec2} \& {\em uv}) const}}
+\label{class_gr_polygon_group_33200fb9c4556c940a842f9504bd2a85}
+
+
+
+
+Definition at line 202 of file GrPolygonGroup.cpp.\hypertarget{class_gr_polygon_group_04f5e9959c34e61726e25ff80d120989}{
+\index{GrPolygonGroup@{GrPolygonGroup}!SetSkinningInfo@{SetSkinningInfo}}
+\index{SetSkinningInfo@{SetSkinningInfo}!GrPolygonGroup@{GrPolygonGroup}}
+\subsubsection[{SetSkinningInfo}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonGroup::SetSkinningInfo ({\bf SPolygonSkinVertex} $\ast$ {\em skinVertArray}, \/  {\bf tstring} $\ast$ {\em boneNames}, \/  {\bf MMat4x4} $\ast$ {\em invBindMatrices}, \/  unsigned int {\em count})}}
+\label{class_gr_polygon_group_04f5e9959c34e61726e25ff80d120989}
+
+
+
+
+Definition at line 786 of file GrPolygonGroup.cpp.\hypertarget{class_gr_polygon_group_740ca90b8b5492d1da5b4195d9f2e82c}{
+\index{GrPolygonGroup@{GrPolygonGroup}!Split@{Split}}
+\index{Split@{Split}!GrPolygonGroup@{GrPolygonGroup}}
+\subsubsection[{Split}]{\setlength{\rightskip}{0pt plus 5cm}int GrPolygonGroup::Split ({\bf GrPolygonGroup} \& {\em front}, \/  {\bf GrPolygonGroup} \& {\em back}, \/  const {\bf MPlane} \& {\em plane}, \/  float {\em epsilon}) const}}
+\label{class_gr_polygon_group_740ca90b8b5492d1da5b4195d9f2e82c}
+
+
+
+
+Definition at line 965 of file GrPolygonGroup.cpp.\hypertarget{class_gr_polygon_group_e361b892b9d9a739c82679e67eb689e7}{
+\index{GrPolygonGroup@{GrPolygonGroup}!WeldVertices@{WeldVertices}}
+\index{WeldVertices@{WeldVertices}!GrPolygonGroup@{GrPolygonGroup}}
+\subsubsection[{WeldVertices}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonGroup::WeldVertices (float {\em distEpsilonSqr})}}
+\label{class_gr_polygon_group_e361b892b9d9a739c82679e67eb689e7}
+
+
+
+
+Definition at line 843 of file GrPolygonGroup.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_polygon_group_8h}{GrPolygonGroup.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_polygon_group_8cpp}{GrPolygonGroup.cpp}\end{CompactItemize}

@@ -1,0 +1,350 @@
+\hypertarget{class_gr_mesh_inst}{
+\section{GrMeshInst Class Reference}
+\label{class_gr_mesh_inst}\index{GrMeshInst@{GrMeshInst}}
+}
+{\tt \#include $<$GrMeshInst.h$>$}
+
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+struct \textbf{SBoundsInfo}
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_mesh_inst_cefd284db81d59a5b3a5ec94c264bbc6}{GrMeshInst} (\hyperlink{class_u_reader}{UReader} \&reader, const \hyperlink{class_u_fast_array}{UFastArray}$<$ \hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_mesh}{GrMesh} $>$ $>$ \&meshArray)
+\item 
+\hyperlink{class_gr_mesh_inst_151b8cdec16292044f816c74e6d24728}{GrMeshInst} (\hyperlink{class_u_reader}{UReader} \&reader, \hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_mesh}{GrMesh} $>$ mesh)
+\item 
+\hyperlink{class_gr_mesh_inst_f9d8e471f792ed098eb6659bbc509bdf}{GrMeshInst} (\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_mesh}{GrMesh} $>$ mesh, const \hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_material}{GrMaterial} $>$ $\ast$matInfo, const \hyperlink{class_m_mat4x4}{MMat4x4} \&\hyperlink{glext__bak_8h_07993c0d92c1aeeb357ba0495c8b5325}{transform})
+\item 
+\hyperlink{class_gr_mesh_inst_f18054641cab00c250bc12ff3c08bd68}{$\sim$GrMeshInst} ()
+\item 
+\hyperlink{class_gr_mesh_inst}{GrMeshInst} $\ast$ \hyperlink{class_gr_mesh_inst_bf9b7e7034565212105f98fedc9553cf}{Clone} (bool deep)
+\item 
+void \hyperlink{class_gr_mesh_inst_4c6828378720aba2c1d44fc5fbc57abc}{Cache} ()
+\item 
+void \hyperlink{class_gr_mesh_inst_68b3d9c5002c1aee40039aa74a3773e5}{Evict} ()
+\item 
+void \hyperlink{class_gr_mesh_inst_ebabf6ad0f5987ec8b68248762c9f993}{SetMesh} (\hyperlink{class_gr_mesh}{GrMesh} $\ast$mesh, const \hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_material}{GrMaterial} $>$ $\ast$matInfo)
+\item 
+void \hyperlink{class_gr_mesh_inst_2707fa3259b8562e464c9f538a3b54ff}{SetMaterial} (unsigned int \hyperlink{glext__bak_8h_7b8ad0b27a927682837f95528fa454f5}{range}, \hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_material}{GrMaterial} $>$ material)
+\item 
+void \hyperlink{class_gr_mesh_inst_537661a0767b6c95785f95088325d80d}{SetTransform} (const \hyperlink{class_m_mat4x4}{MMat4x4} \&\hyperlink{glext__bak_8h_07993c0d92c1aeeb357ba0495c8b5325}{transform})
+\item 
+unsigned int \hyperlink{class_gr_mesh_inst_cbd495c05b5c83745059b6d842470607}{GetRangeCount} () const 
+\item 
+\hyperlink{class_gr_mesh}{GrMesh} $\ast$ \hyperlink{class_gr_mesh_inst_afe9b877585d9b86d1f464595b65e91c}{GetMesh} () const 
+\item 
+\hyperlink{class_gr_material}{GrMaterial} $\ast$ \hyperlink{class_gr_mesh_inst_b9f9406eba85a291edbbe2e9bf0a07bd}{GetMaterial} (unsigned int \hyperlink{glext__bak_8h_7b8ad0b27a927682837f95528fa454f5}{range}) const 
+\item 
+const \hyperlink{class_m_mat4x4}{MMat4x4} \& \hyperlink{class_gr_mesh_inst_bc956297c8b4dc6cae1e16f04f949bf6}{GetTransform} () const 
+\item 
+const \hyperlink{class_m_mat4x4}{MMat4x4} \& \hyperlink{class_gr_mesh_inst_34b8224971a8f2756d1eadb4af5e9124}{GetInvTransform} () const 
+\item 
+const \hyperlink{class_m_mat3x3}{MMat3x3} \& \hyperlink{class_gr_mesh_inst_ffeb25d628443c633d75de24cc236355}{GetInvTransposeRot} () const 
+\item 
+const \hyperlink{class_m_sphere}{MSphere} \& \hyperlink{class_gr_mesh_inst_1990762b53bf2a9b8bfdf205606d160b}{GetBoundingSphere} () const 
+\item 
+const \hyperlink{class_m_o_box}{MOBox} \& \hyperlink{class_gr_mesh_inst_c73cc039d7f4221dfb637efce6431d3e}{GetOBox} () const 
+\item 
+const \hyperlink{class_m_sphere}{MSphere} \& \hyperlink{class_gr_mesh_inst_e5687fcc93bae7444ae3d2be48ca5dea}{GetRangeBoundingSphere} (unsigned int \hyperlink{glext__bak_8h_7b8ad0b27a927682837f95528fa454f5}{range}) const 
+\item 
+const \hyperlink{class_m_o_box}{MOBox} \& \hyperlink{class_gr_mesh_inst_13b6763be580263b74c247723329d226}{GetRangeOBox} (unsigned int \hyperlink{glext__bak_8h_7b8ad0b27a927682837f95528fa454f5}{range}) const 
+\item 
+void \hyperlink{class_gr_mesh_inst_338043d8bfbf7e611c6770bacc83cb2a}{GetRangePlane} (\hyperlink{class_m_plane}{MPlane} \&plane, \hyperlink{class_m_vec3}{MVec3} \&pointOnPlane, unsigned int \hyperlink{glext__bak_8h_7b8ad0b27a927682837f95528fa454f5}{range}) const 
+\item 
+\hyperlink{class_gr_skin_inst}{GrSkinInst} $\ast$ \hyperlink{class_gr_mesh_inst_08eab6fa5c82f0c5a0b1bbe86f4f6dac}{GetSkinInst} () const 
+\item 
+void \hyperlink{class_gr_mesh_inst_9cafeacbe639f49a1e379df6a675cc34}{Save} (\hyperlink{class_u_writer}{UWriter} \&writer) const 
+\item 
+void \hyperlink{class_gr_mesh_inst_4f5bd87c312707f1c3b4f04f30eeb06a}{Load} (\hyperlink{class_u_reader}{UReader} \&reader, const \hyperlink{class_u_fast_array}{UFastArray}$<$ \hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_mesh}{GrMesh} $>$ $>$ \&meshArray)
+\item 
+void \hyperlink{class_gr_mesh_inst_4dbbdac352eec02a919c9d7c449663b3}{Update} (unsigned int frameTime)
+\item 
+bool \hyperlink{class_gr_mesh_inst_5c7494299c0668f3114a1bccb8722bf2}{Pick} (float \&dist, const \hyperlink{class_m_ray}{MRay} \&ray) const 
+\item 
+bool \hyperlink{class_gr_mesh_inst_35ce724ce4bdf76802f3f3a846b499f8}{Pick} (\hyperlink{struct_gr_mesh_1_1_s_tri_collision}{GrMesh::STriCollision} \&triHit, const \hyperlink{class_m_ray}{MRay} \&ray) const 
+\item 
+void \hyperlink{class_gr_mesh_inst_ca05d2e8e1fbaecd7902301797a1586b}{RenderRange} (unsigned int \hyperlink{glext__bak_8h_7b8ad0b27a927682837f95528fa454f5}{range}, unsigned int vertexComponents, unsigned int frameTime)
+\item 
+unsigned int \hyperlink{class_gr_mesh_inst_cc009c82642378bb9e6640fe329b0584}{BatchRange} (\hyperlink{class_gr_streaming_i_b}{GrStreamingIB} \&streamingIB, unsigned int \hyperlink{glext__bak_8h_7b8ad0b27a927682837f95528fa454f5}{range}, unsigned int frameTime)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 33 of file GrMeshInst.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_mesh_inst_cefd284db81d59a5b3a5ec94c264bbc6}{
+\index{GrMeshInst@{GrMeshInst}!GrMeshInst@{GrMeshInst}}
+\index{GrMeshInst@{GrMeshInst}!GrMeshInst@{GrMeshInst}}
+\subsubsection[{GrMeshInst}]{\setlength{\rightskip}{0pt plus 5cm}GrMeshInst::GrMeshInst ({\bf UReader} \& {\em reader}, \/  const {\bf UFastArray}$<$ {\bf URef}$<$ {\bf GrMesh} $>$ $>$ \& {\em meshArray})}}
+\label{class_gr_mesh_inst_cefd284db81d59a5b3a5ec94c264bbc6}
+
+
+
+
+Definition at line 43 of file GrMeshInst.cpp.\hypertarget{class_gr_mesh_inst_151b8cdec16292044f816c74e6d24728}{
+\index{GrMeshInst@{GrMeshInst}!GrMeshInst@{GrMeshInst}}
+\index{GrMeshInst@{GrMeshInst}!GrMeshInst@{GrMeshInst}}
+\subsubsection[{GrMeshInst}]{\setlength{\rightskip}{0pt plus 5cm}GrMeshInst::GrMeshInst ({\bf UReader} \& {\em reader}, \/  {\bf URef}$<$ {\bf GrMesh} $>$ {\em mesh})}}
+\label{class_gr_mesh_inst_151b8cdec16292044f816c74e6d24728}
+
+
+
+
+Definition at line 54 of file GrMeshInst.cpp.\hypertarget{class_gr_mesh_inst_f9d8e471f792ed098eb6659bbc509bdf}{
+\index{GrMeshInst@{GrMeshInst}!GrMeshInst@{GrMeshInst}}
+\index{GrMeshInst@{GrMeshInst}!GrMeshInst@{GrMeshInst}}
+\subsubsection[{GrMeshInst}]{\setlength{\rightskip}{0pt plus 5cm}GrMeshInst::GrMeshInst ({\bf URef}$<$ {\bf GrMesh} $>$ {\em mesh}, \/  const {\bf URef}$<$ {\bf GrMaterial} $>$ $\ast$ {\em matInfo}, \/  const {\bf MMat4x4} \& {\em transform})}}
+\label{class_gr_mesh_inst_f9d8e471f792ed098eb6659bbc509bdf}
+
+
+
+
+Definition at line 68 of file GrMeshInst.cpp.\hypertarget{class_gr_mesh_inst_f18054641cab00c250bc12ff3c08bd68}{
+\index{GrMeshInst@{GrMeshInst}!$\sim$GrMeshInst@{$\sim$GrMeshInst}}
+\index{$\sim$GrMeshInst@{$\sim$GrMeshInst}!GrMeshInst@{GrMeshInst}}
+\subsubsection[{$\sim$GrMeshInst}]{\setlength{\rightskip}{0pt plus 5cm}GrMeshInst::$\sim$GrMeshInst ()}}
+\label{class_gr_mesh_inst_f18054641cab00c250bc12ff3c08bd68}
+
+
+
+
+Definition at line 112 of file GrMeshInst.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_mesh_inst_cc009c82642378bb9e6640fe329b0584}{
+\index{GrMeshInst@{GrMeshInst}!BatchRange@{BatchRange}}
+\index{BatchRange@{BatchRange}!GrMeshInst@{GrMeshInst}}
+\subsubsection[{BatchRange}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrMeshInst::BatchRange ({\bf GrStreamingIB} \& {\em streamingIB}, \/  unsigned int {\em range}, \/  unsigned int {\em frameTime})}}
+\label{class_gr_mesh_inst_cc009c82642378bb9e6640fe329b0584}
+
+
+
+
+Definition at line 522 of file GrMeshInst.cpp.\hypertarget{class_gr_mesh_inst_4c6828378720aba2c1d44fc5fbc57abc}{
+\index{GrMeshInst@{GrMeshInst}!Cache@{Cache}}
+\index{Cache@{Cache}!GrMeshInst@{GrMeshInst}}
+\subsubsection[{Cache}]{\setlength{\rightskip}{0pt plus 5cm}void GrMeshInst::Cache ()}}
+\label{class_gr_mesh_inst_4c6828378720aba2c1d44fc5fbc57abc}
+
+
+
+
+Definition at line 154 of file GrMeshInst.cpp.\hypertarget{class_gr_mesh_inst_bf9b7e7034565212105f98fedc9553cf}{
+\index{GrMeshInst@{GrMeshInst}!Clone@{Clone}}
+\index{Clone@{Clone}!GrMeshInst@{GrMeshInst}}
+\subsubsection[{Clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrMeshInst} $\ast$ GrMeshInst::Clone (bool {\em deep})}}
+\label{class_gr_mesh_inst_bf9b7e7034565212105f98fedc9553cf}
+
+
+
+
+Definition at line 137 of file GrMeshInst.cpp.\hypertarget{class_gr_mesh_inst_68b3d9c5002c1aee40039aa74a3773e5}{
+\index{GrMeshInst@{GrMeshInst}!Evict@{Evict}}
+\index{Evict@{Evict}!GrMeshInst@{GrMeshInst}}
+\subsubsection[{Evict}]{\setlength{\rightskip}{0pt plus 5cm}void GrMeshInst::Evict ()}}
+\label{class_gr_mesh_inst_68b3d9c5002c1aee40039aa74a3773e5}
+
+
+
+
+Definition at line 166 of file GrMeshInst.cpp.\hypertarget{class_gr_mesh_inst_1990762b53bf2a9b8bfdf205606d160b}{
+\index{GrMeshInst@{GrMeshInst}!GetBoundingSphere@{GetBoundingSphere}}
+\index{GetBoundingSphere@{GetBoundingSphere}!GrMeshInst@{GrMeshInst}}
+\subsubsection[{GetBoundingSphere}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MSphere} \& GrMeshInst::GetBoundingSphere () const}}
+\label{class_gr_mesh_inst_1990762b53bf2a9b8bfdf205606d160b}
+
+
+
+
+Definition at line 245 of file GrMeshInst.cpp.\hypertarget{class_gr_mesh_inst_34b8224971a8f2756d1eadb4af5e9124}{
+\index{GrMeshInst@{GrMeshInst}!GetInvTransform@{GetInvTransform}}
+\index{GetInvTransform@{GetInvTransform}!GrMeshInst@{GrMeshInst}}
+\subsubsection[{GetInvTransform}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MMat4x4}\& GrMeshInst::GetInvTransform () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_mesh_inst_34b8224971a8f2756d1eadb4af5e9124}
+
+
+
+
+Definition at line 60 of file GrMeshInst.h.\hypertarget{class_gr_mesh_inst_ffeb25d628443c633d75de24cc236355}{
+\index{GrMeshInst@{GrMeshInst}!GetInvTransposeRot@{GetInvTransposeRot}}
+\index{GetInvTransposeRot@{GetInvTransposeRot}!GrMeshInst@{GrMeshInst}}
+\subsubsection[{GetInvTransposeRot}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MMat3x3}\& GrMeshInst::GetInvTransposeRot () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_mesh_inst_ffeb25d628443c633d75de24cc236355}
+
+
+
+
+Definition at line 61 of file GrMeshInst.h.\hypertarget{class_gr_mesh_inst_b9f9406eba85a291edbbe2e9bf0a07bd}{
+\index{GrMeshInst@{GrMeshInst}!GetMaterial@{GetMaterial}}
+\index{GetMaterial@{GetMaterial}!GrMeshInst@{GrMeshInst}}
+\subsubsection[{GetMaterial}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrMaterial} $\ast$ GrMeshInst::GetMaterial (unsigned int {\em range}) const}}
+\label{class_gr_mesh_inst_b9f9406eba85a291edbbe2e9bf0a07bd}
+
+
+
+
+Definition at line 237 of file GrMeshInst.cpp.\hypertarget{class_gr_mesh_inst_afe9b877585d9b86d1f464595b65e91c}{
+\index{GrMeshInst@{GrMeshInst}!GetMesh@{GetMesh}}
+\index{GetMesh@{GetMesh}!GrMeshInst@{GrMeshInst}}
+\subsubsection[{GetMesh}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrMesh}$\ast$ GrMeshInst::GetMesh () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_mesh_inst_afe9b877585d9b86d1f464595b65e91c}
+
+
+
+
+Definition at line 57 of file GrMeshInst.h.\hypertarget{class_gr_mesh_inst_c73cc039d7f4221dfb637efce6431d3e}{
+\index{GrMeshInst@{GrMeshInst}!GetOBox@{GetOBox}}
+\index{GetOBox@{GetOBox}!GrMeshInst@{GrMeshInst}}
+\subsubsection[{GetOBox}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MOBox}\& GrMeshInst::GetOBox () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_mesh_inst_c73cc039d7f4221dfb637efce6431d3e}
+
+
+
+
+Definition at line 65 of file GrMeshInst.h.\hypertarget{class_gr_mesh_inst_e5687fcc93bae7444ae3d2be48ca5dea}{
+\index{GrMeshInst@{GrMeshInst}!GetRangeBoundingSphere@{GetRangeBoundingSphere}}
+\index{GetRangeBoundingSphere@{GetRangeBoundingSphere}!GrMeshInst@{GrMeshInst}}
+\subsubsection[{GetRangeBoundingSphere}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MSphere} \& GrMeshInst::GetRangeBoundingSphere (unsigned int {\em range}) const}}
+\label{class_gr_mesh_inst_e5687fcc93bae7444ae3d2be48ca5dea}
+
+
+
+
+Definition at line 252 of file GrMeshInst.cpp.\hypertarget{class_gr_mesh_inst_cbd495c05b5c83745059b6d842470607}{
+\index{GrMeshInst@{GrMeshInst}!GetRangeCount@{GetRangeCount}}
+\index{GetRangeCount@{GetRangeCount}!GrMeshInst@{GrMeshInst}}
+\subsubsection[{GetRangeCount}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrMeshInst::GetRangeCount () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_mesh_inst_cbd495c05b5c83745059b6d842470607}
+
+
+
+
+Definition at line 56 of file GrMeshInst.h.\hypertarget{class_gr_mesh_inst_13b6763be580263b74c247723329d226}{
+\index{GrMeshInst@{GrMeshInst}!GetRangeOBox@{GetRangeOBox}}
+\index{GetRangeOBox@{GetRangeOBox}!GrMeshInst@{GrMeshInst}}
+\subsubsection[{GetRangeOBox}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MOBox} \& GrMeshInst::GetRangeOBox (unsigned int {\em range}) const}}
+\label{class_gr_mesh_inst_13b6763be580263b74c247723329d226}
+
+
+
+
+Definition at line 262 of file GrMeshInst.cpp.\hypertarget{class_gr_mesh_inst_338043d8bfbf7e611c6770bacc83cb2a}{
+\index{GrMeshInst@{GrMeshInst}!GetRangePlane@{GetRangePlane}}
+\index{GetRangePlane@{GetRangePlane}!GrMeshInst@{GrMeshInst}}
+\subsubsection[{GetRangePlane}]{\setlength{\rightskip}{0pt plus 5cm}void GrMeshInst::GetRangePlane ({\bf MPlane} \& {\em plane}, \/  {\bf MVec3} \& {\em pointOnPlane}, \/  unsigned int {\em range}) const}}
+\label{class_gr_mesh_inst_338043d8bfbf7e611c6770bacc83cb2a}
+
+
+
+
+Definition at line 270 of file GrMeshInst.cpp.\hypertarget{class_gr_mesh_inst_08eab6fa5c82f0c5a0b1bbe86f4f6dac}{
+\index{GrMeshInst@{GrMeshInst}!GetSkinInst@{GetSkinInst}}
+\index{GetSkinInst@{GetSkinInst}!GrMeshInst@{GrMeshInst}}
+\subsubsection[{GetSkinInst}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrSkinInst}$\ast$ GrMeshInst::GetSkinInst () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_mesh_inst_08eab6fa5c82f0c5a0b1bbe86f4f6dac}
+
+
+
+
+Definition at line 71 of file GrMeshInst.h.\hypertarget{class_gr_mesh_inst_bc956297c8b4dc6cae1e16f04f949bf6}{
+\index{GrMeshInst@{GrMeshInst}!GetTransform@{GetTransform}}
+\index{GetTransform@{GetTransform}!GrMeshInst@{GrMeshInst}}
+\subsubsection[{GetTransform}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MMat4x4}\& GrMeshInst::GetTransform () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_mesh_inst_bc956297c8b4dc6cae1e16f04f949bf6}
+
+
+
+
+Definition at line 59 of file GrMeshInst.h.\hypertarget{class_gr_mesh_inst_4f5bd87c312707f1c3b4f04f30eeb06a}{
+\index{GrMeshInst@{GrMeshInst}!Load@{Load}}
+\index{Load@{Load}!GrMeshInst@{GrMeshInst}}
+\subsubsection[{Load}]{\setlength{\rightskip}{0pt plus 5cm}void GrMeshInst::Load ({\bf UReader} \& {\em reader}, \/  const {\bf UFastArray}$<$ {\bf URef}$<$ {\bf GrMesh} $>$ $>$ \& {\em meshArray})}}
+\label{class_gr_mesh_inst_4f5bd87c312707f1c3b4f04f30eeb06a}
+
+
+
+
+Definition at line 342 of file GrMeshInst.cpp.\hypertarget{class_gr_mesh_inst_35ce724ce4bdf76802f3f3a846b499f8}{
+\index{GrMeshInst@{GrMeshInst}!Pick@{Pick}}
+\index{Pick@{Pick}!GrMeshInst@{GrMeshInst}}
+\subsubsection[{Pick}]{\setlength{\rightskip}{0pt plus 5cm}bool GrMeshInst::Pick ({\bf GrMesh::STriCollision} \& {\em triHit}, \/  const {\bf MRay} \& {\em ray}) const}}
+\label{class_gr_mesh_inst_35ce724ce4bdf76802f3f3a846b499f8}
+
+
+
+
+Definition at line 453 of file GrMeshInst.cpp.\hypertarget{class_gr_mesh_inst_5c7494299c0668f3114a1bccb8722bf2}{
+\index{GrMeshInst@{GrMeshInst}!Pick@{Pick}}
+\index{Pick@{Pick}!GrMeshInst@{GrMeshInst}}
+\subsubsection[{Pick}]{\setlength{\rightskip}{0pt plus 5cm}bool GrMeshInst::Pick (float \& {\em dist}, \/  const {\bf MRay} \& {\em ray}) const}}
+\label{class_gr_mesh_inst_5c7494299c0668f3114a1bccb8722bf2}
+
+
+
+
+Definition at line 437 of file GrMeshInst.cpp.\hypertarget{class_gr_mesh_inst_ca05d2e8e1fbaecd7902301797a1586b}{
+\index{GrMeshInst@{GrMeshInst}!RenderRange@{RenderRange}}
+\index{RenderRange@{RenderRange}!GrMeshInst@{GrMeshInst}}
+\subsubsection[{RenderRange}]{\setlength{\rightskip}{0pt plus 5cm}void GrMeshInst::RenderRange (unsigned int {\em range}, \/  unsigned int {\em vertexComponents}, \/  unsigned int {\em frameTime})}}
+\label{class_gr_mesh_inst_ca05d2e8e1fbaecd7902301797a1586b}
+
+
+
+
+Definition at line 497 of file GrMeshInst.cpp.\hypertarget{class_gr_mesh_inst_9cafeacbe639f49a1e379df6a675cc34}{
+\index{GrMeshInst@{GrMeshInst}!Save@{Save}}
+\index{Save@{Save}!GrMeshInst@{GrMeshInst}}
+\subsubsection[{Save}]{\setlength{\rightskip}{0pt plus 5cm}void GrMeshInst::Save ({\bf UWriter} \& {\em writer}) const}}
+\label{class_gr_mesh_inst_9cafeacbe639f49a1e379df6a675cc34}
+
+
+
+
+Definition at line 318 of file GrMeshInst.cpp.\hypertarget{class_gr_mesh_inst_2707fa3259b8562e464c9f538a3b54ff}{
+\index{GrMeshInst@{GrMeshInst}!SetMaterial@{SetMaterial}}
+\index{SetMaterial@{SetMaterial}!GrMeshInst@{GrMeshInst}}
+\subsubsection[{SetMaterial}]{\setlength{\rightskip}{0pt plus 5cm}void GrMeshInst::SetMaterial (unsigned int {\em range}, \/  {\bf URef}$<$ {\bf GrMaterial} $>$ {\em material})}}
+\label{class_gr_mesh_inst_2707fa3259b8562e464c9f538a3b54ff}
+
+
+
+
+Definition at line 209 of file GrMeshInst.cpp.\hypertarget{class_gr_mesh_inst_ebabf6ad0f5987ec8b68248762c9f993}{
+\index{GrMeshInst@{GrMeshInst}!SetMesh@{SetMesh}}
+\index{SetMesh@{SetMesh}!GrMeshInst@{GrMeshInst}}
+\subsubsection[{SetMesh}]{\setlength{\rightskip}{0pt plus 5cm}void GrMeshInst::SetMesh ({\bf GrMesh} $\ast$ {\em mesh}, \/  const {\bf URef}$<$ {\bf GrMaterial} $>$ $\ast$ {\em matInfo})}}
+\label{class_gr_mesh_inst_ebabf6ad0f5987ec8b68248762c9f993}
+
+
+
+
+Definition at line 178 of file GrMeshInst.cpp.\hypertarget{class_gr_mesh_inst_537661a0767b6c95785f95088325d80d}{
+\index{GrMeshInst@{GrMeshInst}!SetTransform@{SetTransform}}
+\index{SetTransform@{SetTransform}!GrMeshInst@{GrMeshInst}}
+\subsubsection[{SetTransform}]{\setlength{\rightskip}{0pt plus 5cm}void GrMeshInst::SetTransform (const {\bf MMat4x4} \& {\em transform})}}
+\label{class_gr_mesh_inst_537661a0767b6c95785f95088325d80d}
+
+
+
+
+Definition at line 223 of file GrMeshInst.cpp.\hypertarget{class_gr_mesh_inst_4dbbdac352eec02a919c9d7c449663b3}{
+\index{GrMeshInst@{GrMeshInst}!Update@{Update}}
+\index{Update@{Update}!GrMeshInst@{GrMeshInst}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void GrMeshInst::Update (unsigned int {\em frameTime})}}
+\label{class_gr_mesh_inst_4dbbdac352eec02a919c9d7c449663b3}
+
+
+
+
+Definition at line 404 of file GrMeshInst.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_mesh_inst_8h}{GrMeshInst.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_mesh_inst_8cpp}{GrMeshInst.cpp}\end{CompactItemize}

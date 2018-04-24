@@ -1,0 +1,400 @@
+\hypertarget{class_gr_camera}{
+\section{GrCamera Class Reference}
+\label{class_gr_camera}\index{GrCamera@{GrCamera}}
+}
+{\tt \#include $<$GrCamera.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_camera_06a0223e496154f4b35e4a81038c8cf1}{GrCamera} ()
+\item 
+\hyperlink{class_gr_camera_1dde80de1939b3d6c7b974688dcde414}{GrCamera} (const \hyperlink{class_m_vec3}{MVec3} \&pos, const \hyperlink{class_m_mat3x3}{MMat3x3} \&rot, float fov, float farClip, float aspectRatio)
+\item 
+\hyperlink{class_gr_camera_f2e9d46db59e3f9bdddcf2b07c76c3e3}{GrCamera} (const \hyperlink{class_m_vec3}{MVec3} \&pos, const \hyperlink{class_m_mat3x3}{MMat3x3} \&rot, float farCull, float fov, float farClip, float aspectRatio)
+\item 
+\hyperlink{class_gr_camera_bc7e35d6d71f0dadd62220bf3e7d66a3}{GrCamera} (const \hyperlink{class_m_vec3}{MVec3} \&pos, const \hyperlink{class_m_mat3x3}{MMat3x3} \&rot, const \hyperlink{class_gr_projection}{GrProjection} \&proj)
+\item 
+\hyperlink{class_gr_camera_c11424288ad427b92ea62aa4e55cf947}{GrCamera} (const \hyperlink{class_m_vec3}{MVec3} \&pos, float \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, float \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height}, float farClip)
+\item 
+\hyperlink{class_gr_camera_f5b22b62e8bc91b53d64080b65a0ec68}{GrCamera} (const \hyperlink{class_m_vec3}{MVec3} \&pos, float \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, float \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height}, float farCull, float farClip)
+\item 
+\hyperlink{class_gr_camera_43ac986a04d8a1c7c993344f190b230f}{$\sim$GrCamera} ()
+\item 
+void \hyperlink{class_gr_camera_75ce5e2e567fbce90d92d8048b33c1b4}{SetPos} (const \hyperlink{class_m_vec3}{MVec3} \&pos)
+\item 
+void \hyperlink{class_gr_camera_8c8f33ad67141bad930c367ffa9db7ac}{SetRot} (const \hyperlink{class_m_mat3x3}{MMat3x3} \&rot)
+\item 
+void \hyperlink{class_gr_camera_2a10b8915e3841e221e4f7c4effedab0}{Look} (const \hyperlink{class_m_vec3}{MVec3} \&direction)
+\item 
+void \hyperlink{class_gr_camera_8106933669523efe81e1eef160d16d21}{LookAt} (const \hyperlink{class_m_vec3}{MVec3} \&pos, const \hyperlink{class_m_vec3}{MVec3} \&\hyperlink{glext_8h_f9d0cbbbeb7414e786c41899e5a856d7}{target})
+\item 
+void \hyperlink{class_gr_camera_d131bbb579ce7b219f113831f4ba3238}{SetFarCull} (float farCull)
+\item 
+void \hyperlink{class_gr_camera_56911b628538fe22dc75e9847cc93250}{SetProj} (const \hyperlink{class_gr_projection}{GrProjection} \&proj)
+\item 
+void \hyperlink{class_gr_camera_66224fc504eb32b51038fd50b23d29d0}{SetProjFOV} (float fov)
+\item 
+void \hyperlink{class_gr_camera_9396b50cce353396f3d8c7b9527632bb}{SetProjNearClip} (const \hyperlink{class_m_plane}{MPlane} \&nearPlane)
+\item 
+void \hyperlink{class_gr_camera_66c885e3c1bb18de63f4d21500565600}{SetProjFarClip} (float farDist)
+\item 
+void \hyperlink{class_gr_camera_56203851672d7957e5d0c0638e35475f}{SetProjAspectRatio} (float ratio)
+\item 
+void \hyperlink{class_gr_camera_3f8fbce375833a8c7e183c6a30f2e9f6}{BuildRay} (\hyperlink{class_m_ray}{MRay} \&ray, float \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x}, float \hyperlink{wglext_8h_9298c7ad619074f5285b32c6b72bfdea}{y})
+\item 
+\hyperlink{class_gr_camera}{GrCamera} \hyperlink{class_gr_camera_582cf3fc4ef7a58ede09464e80f05ade}{BuildReflectedCamera} (const \hyperlink{class_m_plane}{MPlane} \&plane) const 
+\item 
+const \hyperlink{class_m_vec3}{MVec3} \& \hyperlink{class_gr_camera_8cda9065741c39d298fe54d5ef0c3705}{GetPos} () const 
+\item 
+const \hyperlink{class_m_mat3x3}{MMat3x3} \& \hyperlink{class_gr_camera_466d702e7317ebe56a863745680e0133}{GetRot} () const 
+\item 
+const \hyperlink{class_gr_projection}{GrProjection} \& \hyperlink{class_gr_camera_c4d5422b4554d779a1810e7beebc8e4e}{GetProj} () const 
+\item 
+\hyperlink{class_m_mat4x4}{MMat4x4} \hyperlink{class_gr_camera_fbfe693f3ba2ae3b77de5c6886f72631}{BuildWorldMatrix} () const 
+\item 
+const \hyperlink{class_m_mat4x4}{MMat4x4} \& \hyperlink{class_gr_camera_792760eaf71f2eb7d7d92fca1897de35}{GetViewMatrix} () const 
+\item 
+const \hyperlink{class_m_mat4x4}{MMat4x4} \& \hyperlink{class_gr_camera_b8bc71a443e47f9a2accb9c1106ee9e7}{GetInvViewMatrix} () const 
+\item 
+const \hyperlink{class_m_mat4x4}{MMat4x4} \& \hyperlink{class_gr_camera_e9e5e952d4db5e02b0b120a049fb445a}{GetProjMatrix} () const 
+\item 
+const \hyperlink{class_m_mat4x4}{MMat4x4} \& \hyperlink{class_gr_camera_a9a8ab5d4d339a769d58e0fa4f1bc823}{GetViewProjMatrix} () const 
+\item 
+const \hyperlink{class_m_mat3x3}{MMat3x3} \& \hyperlink{class_gr_camera_64e5f5d575f17151768cc1a2ce65ab85}{GetNormalMatrix} () const 
+\item 
+const \hyperlink{class_gr_frustum}{GrFrustum} \& \hyperlink{class_gr_camera_2ac192689362a2d6227aaae330f08473}{GetFrustum} () const 
+\item 
+\hyperlink{class_m_vec3}{MVec3} \hyperlink{class_gr_camera_c6d5b9f6b4756f788cf1754b68564241}{GetSideDir} () const 
+\item 
+\hyperlink{class_m_vec3}{MVec3} \hyperlink{class_gr_camera_7a50df3ed83d8b43e146cb26f07482f5}{GetUpDir} () const 
+\item 
+\hyperlink{class_m_vec3}{MVec3} \hyperlink{class_gr_camera_44d0c54e506b49a0e894700d6366741e}{GetLookDir} () const 
+\item 
+void \hyperlink{class_gr_camera_1b10bccef56e0cc3072df740388adc71}{AddUserFrustumPlane} (const \hyperlink{class_m_plane}{MPlane} \&plane)
+\item 
+\hyperlink{class_gr_camera}{GrCamera} \& \hyperlink{class_gr_camera_84bbadfceeb70f60ff81775d85a21a1f}{operator=} (const \hyperlink{class_gr_camera}{GrCamera} \&rhs)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 24 of file GrCamera.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_camera_06a0223e496154f4b35e4a81038c8cf1}{
+\index{GrCamera@{GrCamera}!GrCamera@{GrCamera}}
+\index{GrCamera@{GrCamera}!GrCamera@{GrCamera}}
+\subsubsection[{GrCamera}]{\setlength{\rightskip}{0pt plus 5cm}GrCamera::GrCamera ()}}
+\label{class_gr_camera_06a0223e496154f4b35e4a81038c8cf1}
+
+
+
+
+Definition at line 29 of file GrCamera.cpp.\hypertarget{class_gr_camera_1dde80de1939b3d6c7b974688dcde414}{
+\index{GrCamera@{GrCamera}!GrCamera@{GrCamera}}
+\index{GrCamera@{GrCamera}!GrCamera@{GrCamera}}
+\subsubsection[{GrCamera}]{\setlength{\rightskip}{0pt plus 5cm}GrCamera::GrCamera (const {\bf MVec3} \& {\em pos}, \/  const {\bf MMat3x3} \& {\em rot}, \/  float {\em fov}, \/  float {\em farClip}, \/  float {\em aspectRatio})}}
+\label{class_gr_camera_1dde80de1939b3d6c7b974688dcde414}
+
+
+
+
+Definition at line 38 of file GrCamera.cpp.\hypertarget{class_gr_camera_f2e9d46db59e3f9bdddcf2b07c76c3e3}{
+\index{GrCamera@{GrCamera}!GrCamera@{GrCamera}}
+\index{GrCamera@{GrCamera}!GrCamera@{GrCamera}}
+\subsubsection[{GrCamera}]{\setlength{\rightskip}{0pt plus 5cm}GrCamera::GrCamera (const {\bf MVec3} \& {\em pos}, \/  const {\bf MMat3x3} \& {\em rot}, \/  float {\em farCull}, \/  float {\em fov}, \/  float {\em farClip}, \/  float {\em aspectRatio})}}
+\label{class_gr_camera_f2e9d46db59e3f9bdddcf2b07c76c3e3}
+
+
+
+
+Definition at line 60 of file GrCamera.cpp.\hypertarget{class_gr_camera_bc7e35d6d71f0dadd62220bf3e7d66a3}{
+\index{GrCamera@{GrCamera}!GrCamera@{GrCamera}}
+\index{GrCamera@{GrCamera}!GrCamera@{GrCamera}}
+\subsubsection[{GrCamera}]{\setlength{\rightskip}{0pt plus 5cm}GrCamera::GrCamera (const {\bf MVec3} \& {\em pos}, \/  const {\bf MMat3x3} \& {\em rot}, \/  const {\bf GrProjection} \& {\em proj})}}
+\label{class_gr_camera_bc7e35d6d71f0dadd62220bf3e7d66a3}
+
+
+
+
+Definition at line 49 of file GrCamera.cpp.\hypertarget{class_gr_camera_c11424288ad427b92ea62aa4e55cf947}{
+\index{GrCamera@{GrCamera}!GrCamera@{GrCamera}}
+\index{GrCamera@{GrCamera}!GrCamera@{GrCamera}}
+\subsubsection[{GrCamera}]{\setlength{\rightskip}{0pt plus 5cm}GrCamera::GrCamera (const {\bf MVec3} \& {\em pos}, \/  float {\em width}, \/  float {\em height}, \/  float {\em farClip})}}
+\label{class_gr_camera_c11424288ad427b92ea62aa4e55cf947}
+
+
+
+
+Definition at line 71 of file GrCamera.cpp.\hypertarget{class_gr_camera_f5b22b62e8bc91b53d64080b65a0ec68}{
+\index{GrCamera@{GrCamera}!GrCamera@{GrCamera}}
+\index{GrCamera@{GrCamera}!GrCamera@{GrCamera}}
+\subsubsection[{GrCamera}]{\setlength{\rightskip}{0pt plus 5cm}GrCamera::GrCamera (const {\bf MVec3} \& {\em pos}, \/  float {\em width}, \/  float {\em height}, \/  float {\em farCull}, \/  float {\em farClip})}}
+\label{class_gr_camera_f5b22b62e8bc91b53d64080b65a0ec68}
+
+
+
+
+Definition at line 81 of file GrCamera.cpp.\hypertarget{class_gr_camera_43ac986a04d8a1c7c993344f190b230f}{
+\index{GrCamera@{GrCamera}!$\sim$GrCamera@{$\sim$GrCamera}}
+\index{$\sim$GrCamera@{$\sim$GrCamera}!GrCamera@{GrCamera}}
+\subsubsection[{$\sim$GrCamera}]{\setlength{\rightskip}{0pt plus 5cm}GrCamera::$\sim$GrCamera ()}}
+\label{class_gr_camera_43ac986a04d8a1c7c993344f190b230f}
+
+
+
+
+Definition at line 91 of file GrCamera.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_camera_1b10bccef56e0cc3072df740388adc71}{
+\index{GrCamera@{GrCamera}!AddUserFrustumPlane@{AddUserFrustumPlane}}
+\index{AddUserFrustumPlane@{AddUserFrustumPlane}!GrCamera@{GrCamera}}
+\subsubsection[{AddUserFrustumPlane}]{\setlength{\rightskip}{0pt plus 5cm}void GrCamera::AddUserFrustumPlane (const {\bf MPlane} \& {\em plane})}}
+\label{class_gr_camera_1b10bccef56e0cc3072df740388adc71}
+
+
+
+
+Definition at line 327 of file GrCamera.cpp.\hypertarget{class_gr_camera_3f8fbce375833a8c7e183c6a30f2e9f6}{
+\index{GrCamera@{GrCamera}!BuildRay@{BuildRay}}
+\index{BuildRay@{BuildRay}!GrCamera@{GrCamera}}
+\subsubsection[{BuildRay}]{\setlength{\rightskip}{0pt plus 5cm}void GrCamera::BuildRay ({\bf MRay} \& {\em ray}, \/  float {\em x}, \/  float {\em y})}}
+\label{class_gr_camera_3f8fbce375833a8c7e183c6a30f2e9f6}
+
+
+
+
+Definition at line 216 of file GrCamera.cpp.\hypertarget{class_gr_camera_582cf3fc4ef7a58ede09464e80f05ade}{
+\index{GrCamera@{GrCamera}!BuildReflectedCamera@{BuildReflectedCamera}}
+\index{BuildReflectedCamera@{BuildReflectedCamera}!GrCamera@{GrCamera}}
+\subsubsection[{BuildReflectedCamera}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrCamera} GrCamera::BuildReflectedCamera (const {\bf MPlane} \& {\em plane}) const}}
+\label{class_gr_camera_582cf3fc4ef7a58ede09464e80f05ade}
+
+
+
+
+Definition at line 241 of file GrCamera.cpp.\hypertarget{class_gr_camera_fbfe693f3ba2ae3b77de5c6886f72631}{
+\index{GrCamera@{GrCamera}!BuildWorldMatrix@{BuildWorldMatrix}}
+\index{BuildWorldMatrix@{BuildWorldMatrix}!GrCamera@{GrCamera}}
+\subsubsection[{BuildWorldMatrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MMat4x4} GrCamera::BuildWorldMatrix () const}}
+\label{class_gr_camera_fbfe693f3ba2ae3b77de5c6886f72631}
+
+
+
+
+Definition at line 275 of file GrCamera.cpp.\hypertarget{class_gr_camera_2ac192689362a2d6227aaae330f08473}{
+\index{GrCamera@{GrCamera}!GetFrustum@{GetFrustum}}
+\index{GetFrustum@{GetFrustum}!GrCamera@{GrCamera}}
+\subsubsection[{GetFrustum}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf GrFrustum} \& GrCamera::GetFrustum () const}}
+\label{class_gr_camera_2ac192689362a2d6227aaae330f08473}
+
+
+
+
+Definition at line 318 of file GrCamera.cpp.\hypertarget{class_gr_camera_b8bc71a443e47f9a2accb9c1106ee9e7}{
+\index{GrCamera@{GrCamera}!GetInvViewMatrix@{GetInvViewMatrix}}
+\index{GetInvViewMatrix@{GetInvViewMatrix}!GrCamera@{GrCamera}}
+\subsubsection[{GetInvViewMatrix}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MMat4x4} \& GrCamera::GetInvViewMatrix () const}}
+\label{class_gr_camera_b8bc71a443e47f9a2accb9c1106ee9e7}
+
+
+
+
+Definition at line 291 of file GrCamera.cpp.\hypertarget{class_gr_camera_44d0c54e506b49a0e894700d6366741e}{
+\index{GrCamera@{GrCamera}!GetLookDir@{GetLookDir}}
+\index{GetLookDir@{GetLookDir}!GrCamera@{GrCamera}}
+\subsubsection[{GetLookDir}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MVec3} GrCamera::GetLookDir () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_camera_44d0c54e506b49a0e894700d6366741e}
+
+
+
+
+Definition at line 71 of file GrCamera.h.\hypertarget{class_gr_camera_64e5f5d575f17151768cc1a2ce65ab85}{
+\index{GrCamera@{GrCamera}!GetNormalMatrix@{GetNormalMatrix}}
+\index{GetNormalMatrix@{GetNormalMatrix}!GrCamera@{GrCamera}}
+\subsubsection[{GetNormalMatrix}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MMat3x3} \& GrCamera::GetNormalMatrix () const}}
+\label{class_gr_camera_64e5f5d575f17151768cc1a2ce65ab85}
+
+
+
+
+Definition at line 309 of file GrCamera.cpp.\hypertarget{class_gr_camera_8cda9065741c39d298fe54d5ef0c3705}{
+\index{GrCamera@{GrCamera}!GetPos@{GetPos}}
+\index{GetPos@{GetPos}!GrCamera@{GrCamera}}
+\subsubsection[{GetPos}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MVec3}\& GrCamera::GetPos () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_camera_8cda9065741c39d298fe54d5ef0c3705}
+
+
+
+
+Definition at line 55 of file GrCamera.h.\hypertarget{class_gr_camera_c4d5422b4554d779a1810e7beebc8e4e}{
+\index{GrCamera@{GrCamera}!GetProj@{GetProj}}
+\index{GetProj@{GetProj}!GrCamera@{GrCamera}}
+\subsubsection[{GetProj}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf GrProjection}\& GrCamera::GetProj () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_camera_c4d5422b4554d779a1810e7beebc8e4e}
+
+
+
+
+Definition at line 57 of file GrCamera.h.\hypertarget{class_gr_camera_e9e5e952d4db5e02b0b120a049fb445a}{
+\index{GrCamera@{GrCamera}!GetProjMatrix@{GetProjMatrix}}
+\index{GetProjMatrix@{GetProjMatrix}!GrCamera@{GrCamera}}
+\subsubsection[{GetProjMatrix}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MMat4x4}\& GrCamera::GetProjMatrix () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_camera_e9e5e952d4db5e02b0b120a049fb445a}
+
+
+
+
+Definition at line 63 of file GrCamera.h.\hypertarget{class_gr_camera_466d702e7317ebe56a863745680e0133}{
+\index{GrCamera@{GrCamera}!GetRot@{GetRot}}
+\index{GetRot@{GetRot}!GrCamera@{GrCamera}}
+\subsubsection[{GetRot}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MMat3x3}\& GrCamera::GetRot () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_camera_466d702e7317ebe56a863745680e0133}
+
+
+
+
+Definition at line 56 of file GrCamera.h.\hypertarget{class_gr_camera_c6d5b9f6b4756f788cf1754b68564241}{
+\index{GrCamera@{GrCamera}!GetSideDir@{GetSideDir}}
+\index{GetSideDir@{GetSideDir}!GrCamera@{GrCamera}}
+\subsubsection[{GetSideDir}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MVec3} GrCamera::GetSideDir () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_camera_c6d5b9f6b4756f788cf1754b68564241}
+
+
+
+
+Definition at line 69 of file GrCamera.h.\hypertarget{class_gr_camera_7a50df3ed83d8b43e146cb26f07482f5}{
+\index{GrCamera@{GrCamera}!GetUpDir@{GetUpDir}}
+\index{GetUpDir@{GetUpDir}!GrCamera@{GrCamera}}
+\subsubsection[{GetUpDir}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MVec3} GrCamera::GetUpDir () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_camera_7a50df3ed83d8b43e146cb26f07482f5}
+
+
+
+
+Definition at line 70 of file GrCamera.h.\hypertarget{class_gr_camera_792760eaf71f2eb7d7d92fca1897de35}{
+\index{GrCamera@{GrCamera}!GetViewMatrix@{GetViewMatrix}}
+\index{GetViewMatrix@{GetViewMatrix}!GrCamera@{GrCamera}}
+\subsubsection[{GetViewMatrix}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MMat4x4} \& GrCamera::GetViewMatrix () const}}
+\label{class_gr_camera_792760eaf71f2eb7d7d92fca1897de35}
+
+
+
+
+Definition at line 282 of file GrCamera.cpp.\hypertarget{class_gr_camera_a9a8ab5d4d339a769d58e0fa4f1bc823}{
+\index{GrCamera@{GrCamera}!GetViewProjMatrix@{GetViewProjMatrix}}
+\index{GetViewProjMatrix@{GetViewProjMatrix}!GrCamera@{GrCamera}}
+\subsubsection[{GetViewProjMatrix}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MMat4x4} \& GrCamera::GetViewProjMatrix () const}}
+\label{class_gr_camera_a9a8ab5d4d339a769d58e0fa4f1bc823}
+
+
+
+
+Definition at line 300 of file GrCamera.cpp.\hypertarget{class_gr_camera_2a10b8915e3841e221e4f7c4effedab0}{
+\index{GrCamera@{GrCamera}!Look@{Look}}
+\index{Look@{Look}!GrCamera@{GrCamera}}
+\subsubsection[{Look}]{\setlength{\rightskip}{0pt plus 5cm}void GrCamera::Look (const {\bf MVec3} \& {\em direction})}}
+\label{class_gr_camera_2a10b8915e3841e221e4f7c4effedab0}
+
+
+
+
+Definition at line 134 of file GrCamera.cpp.\hypertarget{class_gr_camera_8106933669523efe81e1eef160d16d21}{
+\index{GrCamera@{GrCamera}!LookAt@{LookAt}}
+\index{LookAt@{LookAt}!GrCamera@{GrCamera}}
+\subsubsection[{LookAt}]{\setlength{\rightskip}{0pt plus 5cm}void GrCamera::LookAt (const {\bf MVec3} \& {\em pos}, \/  const {\bf MVec3} \& {\em target})}}
+\label{class_gr_camera_8106933669523efe81e1eef160d16d21}
+
+
+
+
+Definition at line 119 of file GrCamera.cpp.\hypertarget{class_gr_camera_84bbadfceeb70f60ff81775d85a21a1f}{
+\index{GrCamera@{GrCamera}!operator=@{operator=}}
+\index{operator=@{operator=}!GrCamera@{GrCamera}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrCamera} \& GrCamera::operator= (const {\bf GrCamera} \& {\em rhs})}}
+\label{class_gr_camera_84bbadfceeb70f60ff81775d85a21a1f}
+
+
+
+
+Definition at line 337 of file GrCamera.cpp.\hypertarget{class_gr_camera_d131bbb579ce7b219f113831f4ba3238}{
+\index{GrCamera@{GrCamera}!SetFarCull@{SetFarCull}}
+\index{SetFarCull@{SetFarCull}!GrCamera@{GrCamera}}
+\subsubsection[{SetFarCull}]{\setlength{\rightskip}{0pt plus 5cm}void GrCamera::SetFarCull (float {\em farCull})}}
+\label{class_gr_camera_d131bbb579ce7b219f113831f4ba3238}
+
+
+
+
+Definition at line 168 of file GrCamera.cpp.\hypertarget{class_gr_camera_75ce5e2e567fbce90d92d8048b33c1b4}{
+\index{GrCamera@{GrCamera}!SetPos@{SetPos}}
+\index{SetPos@{SetPos}!GrCamera@{GrCamera}}
+\subsubsection[{SetPos}]{\setlength{\rightskip}{0pt plus 5cm}void GrCamera::SetPos (const {\bf MVec3} \& {\em pos})}}
+\label{class_gr_camera_75ce5e2e567fbce90d92d8048b33c1b4}
+
+
+
+
+Definition at line 103 of file GrCamera.cpp.\hypertarget{class_gr_camera_56911b628538fe22dc75e9847cc93250}{
+\index{GrCamera@{GrCamera}!SetProj@{SetProj}}
+\index{SetProj@{SetProj}!GrCamera@{GrCamera}}
+\subsubsection[{SetProj}]{\setlength{\rightskip}{0pt plus 5cm}void GrCamera::SetProj (const {\bf GrProjection} \& {\em proj})}}
+\label{class_gr_camera_56911b628538fe22dc75e9847cc93250}
+
+
+
+
+Definition at line 176 of file GrCamera.cpp.\hypertarget{class_gr_camera_56203851672d7957e5d0c0638e35475f}{
+\index{GrCamera@{GrCamera}!SetProjAspectRatio@{SetProjAspectRatio}}
+\index{SetProjAspectRatio@{SetProjAspectRatio}!GrCamera@{GrCamera}}
+\subsubsection[{SetProjAspectRatio}]{\setlength{\rightskip}{0pt plus 5cm}void GrCamera::SetProjAspectRatio (float {\em ratio})}}
+\label{class_gr_camera_56203851672d7957e5d0c0638e35475f}
+
+
+
+
+Definition at line 208 of file GrCamera.cpp.\hypertarget{class_gr_camera_66c885e3c1bb18de63f4d21500565600}{
+\index{GrCamera@{GrCamera}!SetProjFarClip@{SetProjFarClip}}
+\index{SetProjFarClip@{SetProjFarClip}!GrCamera@{GrCamera}}
+\subsubsection[{SetProjFarClip}]{\setlength{\rightskip}{0pt plus 5cm}void GrCamera::SetProjFarClip (float {\em farDist})}}
+\label{class_gr_camera_66c885e3c1bb18de63f4d21500565600}
+
+
+
+
+Definition at line 200 of file GrCamera.cpp.\hypertarget{class_gr_camera_66224fc504eb32b51038fd50b23d29d0}{
+\index{GrCamera@{GrCamera}!SetProjFOV@{SetProjFOV}}
+\index{SetProjFOV@{SetProjFOV}!GrCamera@{GrCamera}}
+\subsubsection[{SetProjFOV}]{\setlength{\rightskip}{0pt plus 5cm}void GrCamera::SetProjFOV (float {\em fov})}}
+\label{class_gr_camera_66224fc504eb32b51038fd50b23d29d0}
+
+
+
+
+Definition at line 184 of file GrCamera.cpp.\hypertarget{class_gr_camera_9396b50cce353396f3d8c7b9527632bb}{
+\index{GrCamera@{GrCamera}!SetProjNearClip@{SetProjNearClip}}
+\index{SetProjNearClip@{SetProjNearClip}!GrCamera@{GrCamera}}
+\subsubsection[{SetProjNearClip}]{\setlength{\rightskip}{0pt plus 5cm}void GrCamera::SetProjNearClip (const {\bf MPlane} \& {\em nearPlane})}}
+\label{class_gr_camera_9396b50cce353396f3d8c7b9527632bb}
+
+
+
+
+Definition at line 192 of file GrCamera.cpp.\hypertarget{class_gr_camera_8c8f33ad67141bad930c367ffa9db7ac}{
+\index{GrCamera@{GrCamera}!SetRot@{SetRot}}
+\index{SetRot@{SetRot}!GrCamera@{GrCamera}}
+\subsubsection[{SetRot}]{\setlength{\rightskip}{0pt plus 5cm}void GrCamera::SetRot (const {\bf MMat3x3} \& {\em rot})}}
+\label{class_gr_camera_8c8f33ad67141bad930c367ffa9db7ac}
+
+
+
+
+Definition at line 111 of file GrCamera.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_camera_8h}{GrCamera.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_camera_8cpp}{GrCamera.cpp}\end{CompactItemize}

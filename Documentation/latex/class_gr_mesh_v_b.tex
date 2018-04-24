@@ -1,0 +1,291 @@
+\hypertarget{class_gr_mesh_v_b}{
+\section{GrMeshVB Class Reference}
+\label{class_gr_mesh_v_b}\index{GrMeshVB@{GrMeshVB}}
+}
+{\tt \#include $<$GrMeshVB.h$>$}
+
+Inheritance diagram for GrMeshVB::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_gr_mesh_v_b}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_mesh_v_b_0d3edf08e72919b89d6a1195459dcd4f}{GrMeshVB} (unsigned int vertexCount, const \hyperlink{struct_s_vec3}{SVec3} $\ast$positions, const \hyperlink{struct_s_vec3}{SVec3} $\ast$normals, const \hyperlink{struct_s_vec3}{SVec3} $\ast$biNormals, const \hyperlink{struct_s_vec3}{SVec3} $\ast$tangents, const unsigned long $\ast$colors, const \hyperlink{struct_s_vec2}{SVec2} $\ast$texCoords, unsigned int \hyperlink{_u_t_message_8h_0a3c0b351ab09281b662a9ff4f900a53}{flags}, unsigned int maxVertexCount=0, bool cacheData=true)
+\item 
+\hyperlink{class_gr_mesh_v_b_fcd057b800d11fa70e1fd977df27d278}{GrMeshVB} (unsigned int vertexCount, unsigned int usedComponents, unsigned int \hyperlink{_u_t_message_8h_0a3c0b351ab09281b662a9ff4f900a53}{flags}, bool cacheData=true)
+\item 
+\hyperlink{class_gr_mesh_v_b_f6686b7165c23fc5236d81ecb715e1ed}{$\sim$GrMeshVB} ()
+\item 
+unsigned int \hyperlink{class_gr_mesh_v_b_c0e59bbbe7c8d4e6421733e77db0e3e1}{GetVertexCount} () const 
+\item 
+unsigned int \hyperlink{class_gr_mesh_v_b_44d690384a6aa9f08cf5a9dc9916cf53}{GetMaxVertexCount} () const 
+\item 
+void \hyperlink{class_gr_mesh_v_b_c19226bb73e91cba8be18520a8f8749f}{AdjustVertexCount} (int growSize)
+\item 
+unsigned int \hyperlink{class_gr_mesh_v_b_a9b69737d099558bab475e194f0d6048}{GetUsedComponents} () const 
+\item 
+unsigned int \hyperlink{class_gr_mesh_v_b_81536894ff71ce167c18ca1067e85f63}{GetFlags} () const 
+\item 
+\hyperlink{struct_s_vec3}{SVec3} $\ast$ \hyperlink{class_gr_mesh_v_b_3c4fc1231bfcca44bf3a4d8427d2774a}{GetVertices} () const 
+\item 
+\hyperlink{struct_s_vec3}{SVec3} $\ast$ \hyperlink{class_gr_mesh_v_b_6b7123162415ba4473262949117cf4bc}{GetNormals} () const 
+\item 
+\hyperlink{struct_s_vec3}{SVec3} $\ast$ \hyperlink{class_gr_mesh_v_b_f52a7b54ced28a889947a58929290d1e}{GetBiNormals} () const 
+\item 
+\hyperlink{struct_s_vec3}{SVec3} $\ast$ \hyperlink{class_gr_mesh_v_b_70c4f13e33162b71528a02287a33a744}{GetTangents} () const 
+\item 
+unsigned long $\ast$ \hyperlink{class_gr_mesh_v_b_0caa0721a0588ac2a22980ba8059d8a9}{GetColors} () const 
+\item 
+\hyperlink{struct_s_vec2}{SVec2} $\ast$ \hyperlink{class_gr_mesh_v_b_da0cf2fb2929b3f307067f3ec4a7f298}{GetTexCoords} () const 
+\item 
+void \hyperlink{class_gr_mesh_v_b_c30d2e051d289b7142588421ba53154d}{MarkAsDirty} (unsigned int \hyperlink{glext__bak_8h_452b9ab10170c96a9bef2657c036a2c0}{components})
+\item 
+void \hyperlink{class_gr_mesh_v_b_a9fc0e3fbcc1d0aeaba5b489ed72f8af}{UploadUncached} (unsigned int writeOffset, const void $\ast$\hyperlink{glext__bak_8h_fd3b198d09b41a863127e5e2b29c4e53}{source}, unsigned int sourceSize)
+\item 
+void \hyperlink{class_gr_mesh_v_b_d89095e9dbcb97718889fc4096c5a9d2}{Cache} ()
+\item 
+void \hyperlink{class_gr_mesh_v_b_ee65428228e554cd769c6b0af3ff9c13}{Evict} ()
+\item 
+void \hyperlink{class_gr_mesh_v_b_0be3a29d9a24b3766140acaa31f5064d}{Bind} (unsigned int \hyperlink{glext__bak_8h_452b9ab10170c96a9bef2657c036a2c0}{components})
+\item 
+void \hyperlink{class_gr_mesh_v_b_ee2b47b8a2756a126ad6cb9dd42584fa}{PreContextReset} ()
+\item 
+void \hyperlink{class_gr_mesh_v_b_63b7a4882edf12152408e75e19d4df90}{PostContextReset} ()
+\item 
+void \hyperlink{class_gr_mesh_v_b_00dead254e2ce78b7929a3daa3556a08}{PretransformVertices} (\hyperlink{class_u_fast_array}{UFastArray}$<$ \hyperlink{struct_s_vec3}{SVec3} $>$ \&results, const \hyperlink{class_m_mat4x4}{MMat4x4} \&\hyperlink{glext__bak_8h_07993c0d92c1aeeb357ba0495c8b5325}{transform})
+\end{CompactItemize}
+\subsection*{Static Public Attributes}
+\begin{CompactItemize}
+\item 
+static const unsigned int \hyperlink{class_gr_mesh_v_b_2af3fdf0087d2543d2861bd677139cdc}{kDynamic} = 1
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 25 of file GrMeshVB.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_mesh_v_b_0d3edf08e72919b89d6a1195459dcd4f}{
+\index{GrMeshVB@{GrMeshVB}!GrMeshVB@{GrMeshVB}}
+\index{GrMeshVB@{GrMeshVB}!GrMeshVB@{GrMeshVB}}
+\subsubsection[{GrMeshVB}]{\setlength{\rightskip}{0pt plus 5cm}GrMeshVB::GrMeshVB (unsigned int {\em vertexCount}, \/  const {\bf SVec3} $\ast$ {\em positions}, \/  const {\bf SVec3} $\ast$ {\em normals}, \/  const {\bf SVec3} $\ast$ {\em biNormals}, \/  const {\bf SVec3} $\ast$ {\em tangents}, \/  const unsigned long $\ast$ {\em colors}, \/  const {\bf SVec2} $\ast$ {\em texCoords}, \/  unsigned int {\em flags}, \/  unsigned int {\em maxVertexCount} = {\tt 0}, \/  bool {\em cacheData} = {\tt true})}}
+\label{class_gr_mesh_v_b_0d3edf08e72919b89d6a1195459dcd4f}
+
+
+
+
+Definition at line 37 of file GrMeshVB.cpp.\hypertarget{class_gr_mesh_v_b_fcd057b800d11fa70e1fd977df27d278}{
+\index{GrMeshVB@{GrMeshVB}!GrMeshVB@{GrMeshVB}}
+\index{GrMeshVB@{GrMeshVB}!GrMeshVB@{GrMeshVB}}
+\subsubsection[{GrMeshVB}]{\setlength{\rightskip}{0pt plus 5cm}GrMeshVB::GrMeshVB (unsigned int {\em vertexCount}, \/  unsigned int {\em usedComponents}, \/  unsigned int {\em flags}, \/  bool {\em cacheData} = {\tt true})}}
+\label{class_gr_mesh_v_b_fcd057b800d11fa70e1fd977df27d278}
+
+
+
+
+Definition at line 108 of file GrMeshVB.cpp.\hypertarget{class_gr_mesh_v_b_f6686b7165c23fc5236d81ecb715e1ed}{
+\index{GrMeshVB@{GrMeshVB}!$\sim$GrMeshVB@{$\sim$GrMeshVB}}
+\index{$\sim$GrMeshVB@{$\sim$GrMeshVB}!GrMeshVB@{GrMeshVB}}
+\subsubsection[{$\sim$GrMeshVB}]{\setlength{\rightskip}{0pt plus 5cm}GrMeshVB::$\sim$GrMeshVB ()}}
+\label{class_gr_mesh_v_b_f6686b7165c23fc5236d81ecb715e1ed}
+
+
+
+
+Definition at line 183 of file GrMeshVB.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_mesh_v_b_c19226bb73e91cba8be18520a8f8749f}{
+\index{GrMeshVB@{GrMeshVB}!AdjustVertexCount@{AdjustVertexCount}}
+\index{AdjustVertexCount@{AdjustVertexCount}!GrMeshVB@{GrMeshVB}}
+\subsubsection[{AdjustVertexCount}]{\setlength{\rightskip}{0pt plus 5cm}void GrMeshVB::AdjustVertexCount (int {\em growSize})}}
+\label{class_gr_mesh_v_b_c19226bb73e91cba8be18520a8f8749f}
+
+
+
+
+Definition at line 203 of file GrMeshVB.cpp.\hypertarget{class_gr_mesh_v_b_0be3a29d9a24b3766140acaa31f5064d}{
+\index{GrMeshVB@{GrMeshVB}!Bind@{Bind}}
+\index{Bind@{Bind}!GrMeshVB@{GrMeshVB}}
+\subsubsection[{Bind}]{\setlength{\rightskip}{0pt plus 5cm}void GrMeshVB::Bind (unsigned int {\em components})}}
+\label{class_gr_mesh_v_b_0be3a29d9a24b3766140acaa31f5064d}
+
+
+
+
+Definition at line 263 of file GrMeshVB.cpp.\hypertarget{class_gr_mesh_v_b_d89095e9dbcb97718889fc4096c5a9d2}{
+\index{GrMeshVB@{GrMeshVB}!Cache@{Cache}}
+\index{Cache@{Cache}!GrMeshVB@{GrMeshVB}}
+\subsubsection[{Cache}]{\setlength{\rightskip}{0pt plus 5cm}void GrMeshVB::Cache ()}}
+\label{class_gr_mesh_v_b_d89095e9dbcb97718889fc4096c5a9d2}
+
+
+
+
+Definition at line 235 of file GrMeshVB.cpp.\hypertarget{class_gr_mesh_v_b_ee65428228e554cd769c6b0af3ff9c13}{
+\index{GrMeshVB@{GrMeshVB}!Evict@{Evict}}
+\index{Evict@{Evict}!GrMeshVB@{GrMeshVB}}
+\subsubsection[{Evict}]{\setlength{\rightskip}{0pt plus 5cm}void GrMeshVB::Evict ()}}
+\label{class_gr_mesh_v_b_ee65428228e554cd769c6b0af3ff9c13}
+
+
+
+
+Definition at line 252 of file GrMeshVB.cpp.\hypertarget{class_gr_mesh_v_b_f52a7b54ced28a889947a58929290d1e}{
+\index{GrMeshVB@{GrMeshVB}!GetBiNormals@{GetBiNormals}}
+\index{GetBiNormals@{GetBiNormals}!GrMeshVB@{GrMeshVB}}
+\subsubsection[{GetBiNormals}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SVec3}$\ast$ GrMeshVB::GetBiNormals () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_mesh_v_b_f52a7b54ced28a889947a58929290d1e}
+
+
+
+
+Definition at line 55 of file GrMeshVB.h.\hypertarget{class_gr_mesh_v_b_0caa0721a0588ac2a22980ba8059d8a9}{
+\index{GrMeshVB@{GrMeshVB}!GetColors@{GetColors}}
+\index{GetColors@{GetColors}!GrMeshVB@{GrMeshVB}}
+\subsubsection[{GetColors}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long$\ast$ GrMeshVB::GetColors () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_mesh_v_b_0caa0721a0588ac2a22980ba8059d8a9}
+
+
+
+
+Definition at line 57 of file GrMeshVB.h.\hypertarget{class_gr_mesh_v_b_81536894ff71ce167c18ca1067e85f63}{
+\index{GrMeshVB@{GrMeshVB}!GetFlags@{GetFlags}}
+\index{GetFlags@{GetFlags}!GrMeshVB@{GrMeshVB}}
+\subsubsection[{GetFlags}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrMeshVB::GetFlags () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_mesh_v_b_81536894ff71ce167c18ca1067e85f63}
+
+
+
+
+Definition at line 49 of file GrMeshVB.h.\hypertarget{class_gr_mesh_v_b_44d690384a6aa9f08cf5a9dc9916cf53}{
+\index{GrMeshVB@{GrMeshVB}!GetMaxVertexCount@{GetMaxVertexCount}}
+\index{GetMaxVertexCount@{GetMaxVertexCount}!GrMeshVB@{GrMeshVB}}
+\subsubsection[{GetMaxVertexCount}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrMeshVB::GetMaxVertexCount () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_mesh_v_b_44d690384a6aa9f08cf5a9dc9916cf53}
+
+
+
+
+Definition at line 40 of file GrMeshVB.h.\hypertarget{class_gr_mesh_v_b_6b7123162415ba4473262949117cf4bc}{
+\index{GrMeshVB@{GrMeshVB}!GetNormals@{GetNormals}}
+\index{GetNormals@{GetNormals}!GrMeshVB@{GrMeshVB}}
+\subsubsection[{GetNormals}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SVec3}$\ast$ GrMeshVB::GetNormals () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_mesh_v_b_6b7123162415ba4473262949117cf4bc}
+
+
+
+
+Definition at line 54 of file GrMeshVB.h.\hypertarget{class_gr_mesh_v_b_70c4f13e33162b71528a02287a33a744}{
+\index{GrMeshVB@{GrMeshVB}!GetTangents@{GetTangents}}
+\index{GetTangents@{GetTangents}!GrMeshVB@{GrMeshVB}}
+\subsubsection[{GetTangents}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SVec3}$\ast$ GrMeshVB::GetTangents () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_mesh_v_b_70c4f13e33162b71528a02287a33a744}
+
+
+
+
+Definition at line 56 of file GrMeshVB.h.\hypertarget{class_gr_mesh_v_b_da0cf2fb2929b3f307067f3ec4a7f298}{
+\index{GrMeshVB@{GrMeshVB}!GetTexCoords@{GetTexCoords}}
+\index{GetTexCoords@{GetTexCoords}!GrMeshVB@{GrMeshVB}}
+\subsubsection[{GetTexCoords}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SVec2}$\ast$ GrMeshVB::GetTexCoords () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_mesh_v_b_da0cf2fb2929b3f307067f3ec4a7f298}
+
+
+
+
+Definition at line 58 of file GrMeshVB.h.\hypertarget{class_gr_mesh_v_b_a9b69737d099558bab475e194f0d6048}{
+\index{GrMeshVB@{GrMeshVB}!GetUsedComponents@{GetUsedComponents}}
+\index{GetUsedComponents@{GetUsedComponents}!GrMeshVB@{GrMeshVB}}
+\subsubsection[{GetUsedComponents}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrMeshVB::GetUsedComponents () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_mesh_v_b_a9b69737d099558bab475e194f0d6048}
+
+
+
+
+Definition at line 46 of file GrMeshVB.h.\hypertarget{class_gr_mesh_v_b_c0e59bbbe7c8d4e6421733e77db0e3e1}{
+\index{GrMeshVB@{GrMeshVB}!GetVertexCount@{GetVertexCount}}
+\index{GetVertexCount@{GetVertexCount}!GrMeshVB@{GrMeshVB}}
+\subsubsection[{GetVertexCount}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrMeshVB::GetVertexCount () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_mesh_v_b_c0e59bbbe7c8d4e6421733e77db0e3e1}
+
+
+
+
+Definition at line 37 of file GrMeshVB.h.\hypertarget{class_gr_mesh_v_b_3c4fc1231bfcca44bf3a4d8427d2774a}{
+\index{GrMeshVB@{GrMeshVB}!GetVertices@{GetVertices}}
+\index{GetVertices@{GetVertices}!GrMeshVB@{GrMeshVB}}
+\subsubsection[{GetVertices}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SVec3}$\ast$ GrMeshVB::GetVertices () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_mesh_v_b_3c4fc1231bfcca44bf3a4d8427d2774a}
+
+
+
+
+Definition at line 53 of file GrMeshVB.h.\hypertarget{class_gr_mesh_v_b_c30d2e051d289b7142588421ba53154d}{
+\index{GrMeshVB@{GrMeshVB}!MarkAsDirty@{MarkAsDirty}}
+\index{MarkAsDirty@{MarkAsDirty}!GrMeshVB@{GrMeshVB}}
+\subsubsection[{MarkAsDirty}]{\setlength{\rightskip}{0pt plus 5cm}void GrMeshVB::MarkAsDirty (unsigned int {\em components})}}
+\label{class_gr_mesh_v_b_c30d2e051d289b7142588421ba53154d}
+
+
+
+
+Definition at line 218 of file GrMeshVB.cpp.\hypertarget{class_gr_mesh_v_b_63b7a4882edf12152408e75e19d4df90}{
+\index{GrMeshVB@{GrMeshVB}!PostContextReset@{PostContextReset}}
+\index{PostContextReset@{PostContextReset}!GrMeshVB@{GrMeshVB}}
+\subsubsection[{PostContextReset}]{\setlength{\rightskip}{0pt plus 5cm}void GrMeshVB::PostContextReset ()}}
+\label{class_gr_mesh_v_b_63b7a4882edf12152408e75e19d4df90}
+
+
+
+
+Definition at line 317 of file GrMeshVB.cpp.\hypertarget{class_gr_mesh_v_b_ee2b47b8a2756a126ad6cb9dd42584fa}{
+\index{GrMeshVB@{GrMeshVB}!PreContextReset@{PreContextReset}}
+\index{PreContextReset@{PreContextReset}!GrMeshVB@{GrMeshVB}}
+\subsubsection[{PreContextReset}]{\setlength{\rightskip}{0pt plus 5cm}void GrMeshVB::PreContextReset ()}}
+\label{class_gr_mesh_v_b_ee2b47b8a2756a126ad6cb9dd42584fa}
+
+
+
+
+Definition at line 308 of file GrMeshVB.cpp.\hypertarget{class_gr_mesh_v_b_00dead254e2ce78b7929a3daa3556a08}{
+\index{GrMeshVB@{GrMeshVB}!PretransformVertices@{PretransformVertices}}
+\index{PretransformVertices@{PretransformVertices}!GrMeshVB@{GrMeshVB}}
+\subsubsection[{PretransformVertices}]{\setlength{\rightskip}{0pt plus 5cm}void GrMeshVB::PretransformVertices ({\bf UFastArray}$<$ {\bf SVec3} $>$ \& {\em results}, \/  const {\bf MMat4x4} \& {\em transform})}}
+\label{class_gr_mesh_v_b_00dead254e2ce78b7929a3daa3556a08}
+
+
+
+
+Definition at line 396 of file GrMeshVB.cpp.\hypertarget{class_gr_mesh_v_b_a9fc0e3fbcc1d0aeaba5b489ed72f8af}{
+\index{GrMeshVB@{GrMeshVB}!UploadUncached@{UploadUncached}}
+\index{UploadUncached@{UploadUncached}!GrMeshVB@{GrMeshVB}}
+\subsubsection[{UploadUncached}]{\setlength{\rightskip}{0pt plus 5cm}void GrMeshVB::UploadUncached (unsigned int {\em writeOffset}, \/  const void $\ast$ {\em source}, \/  unsigned int {\em sourceSize})}}
+\label{class_gr_mesh_v_b_a9fc0e3fbcc1d0aeaba5b489ed72f8af}
+
+
+
+
+Definition at line 226 of file GrMeshVB.cpp.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_gr_mesh_v_b_2af3fdf0087d2543d2861bd677139cdc}{
+\index{GrMeshVB@{GrMeshVB}!kDynamic@{kDynamic}}
+\index{kDynamic@{kDynamic}!GrMeshVB@{GrMeshVB}}
+\subsubsection[{kDynamic}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int {\bf GrMeshVB::kDynamic} = 1\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_gr_mesh_v_b_2af3fdf0087d2543d2861bd677139cdc}
+
+
+
+
+Definition at line 28 of file GrMeshVB.h.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_mesh_v_b_8h}{GrMeshVB.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_mesh_v_b_8cpp}{GrMeshVB.cpp}\end{CompactItemize}

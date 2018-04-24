@@ -1,0 +1,136 @@
+\hypertarget{class_m_o_box}{
+\section{MOBox Class Reference}
+\label{class_m_o_box}\index{MOBox@{MOBox}}
+}
+{\tt \#include $<$MOBox.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_m_o_box_7bf83cd9171ed3f579582c063f9c5cc9}{MOBox} ()
+\item 
+\hyperlink{class_m_o_box_d49b5de844f48790b8fe784d0f07d388}{MOBox} (const \hyperlink{class_m_a_a_box}{MAABox} \&aaBox)
+\item 
+\hyperlink{class_m_o_box_7f53529680eb35e91d981ab83d0f4bb8}{MOBox} (const \hyperlink{class_m_mat4x4}{MMat4x4} \&\hyperlink{glext__bak_8h_07993c0d92c1aeeb357ba0495c8b5325}{transform}, const \hyperlink{class_m_a_a_box}{MAABox} \&aaBox)
+\item 
+\hyperlink{class_m_o_box_9c3fbd1a7b8484cc2ebaefdee6ed1238}{MOBox} (const \hyperlink{class_m_mat4x4}{MMat4x4} \&\hyperlink{glext__bak_8h_07993c0d92c1aeeb357ba0495c8b5325}{transform}, const \hyperlink{class_m_vec3}{MVec3} \&halfExts)
+\item 
+\hyperlink{class_m_o_box_5d831d82a6f18ceb4ded4f0aead4d37e}{$\sim$MOBox} ()
+\item 
+void \hyperlink{class_m_o_box_95a1b5fadc347c528687342a48b66bb4}{SetTransform} (const \hyperlink{class_m_mat4x4}{MMat4x4} \&\hyperlink{glext__bak_8h_07993c0d92c1aeeb357ba0495c8b5325}{transform})
+\item 
+const \hyperlink{class_m_mat4x4}{MMat4x4} \& \hyperlink{class_m_o_box_1460a55261c4b5dbd9238e8c5c7371f4}{GetTransform} () const 
+\item 
+const \hyperlink{class_m_vec3}{MVec3} \& \hyperlink{class_m_o_box_1f3cab4b1e09c90769183721f3e3d06b}{GetHalfExts} () const 
+\item 
+void \hyperlink{class_m_o_box_d0f5c304ee93de82dedace046647df4d}{SetHalfExts} (const \hyperlink{class_m_vec3}{MVec3} \&halfExts)
+\item 
+void \hyperlink{class_m_o_box_d4ab62fb0cb55df4774b656c8c99e51f}{GetCorners} (\hyperlink{class_m_vec3}{MVec3} $\ast$corners) const 
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 19 of file MOBox.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_m_o_box_7bf83cd9171ed3f579582c063f9c5cc9}{
+\index{MOBox@{MOBox}!MOBox@{MOBox}}
+\index{MOBox@{MOBox}!MOBox@{MOBox}}
+\subsubsection[{MOBox}]{\setlength{\rightskip}{0pt plus 5cm}MOBox::MOBox ()}}
+\label{class_m_o_box_7bf83cd9171ed3f579582c063f9c5cc9}
+
+
+
+
+Definition at line 24 of file MOBox.cpp.\hypertarget{class_m_o_box_d49b5de844f48790b8fe784d0f07d388}{
+\index{MOBox@{MOBox}!MOBox@{MOBox}}
+\index{MOBox@{MOBox}!MOBox@{MOBox}}
+\subsubsection[{MOBox}]{\setlength{\rightskip}{0pt plus 5cm}MOBox::MOBox (const {\bf MAABox} \& {\em aaBox})}}
+\label{class_m_o_box_d49b5de844f48790b8fe784d0f07d388}
+
+
+
+
+Definition at line 30 of file MOBox.cpp.\hypertarget{class_m_o_box_7f53529680eb35e91d981ab83d0f4bb8}{
+\index{MOBox@{MOBox}!MOBox@{MOBox}}
+\index{MOBox@{MOBox}!MOBox@{MOBox}}
+\subsubsection[{MOBox}]{\setlength{\rightskip}{0pt plus 5cm}MOBox::MOBox (const {\bf MMat4x4} \& {\em transform}, \/  const {\bf MAABox} \& {\em aaBox})}}
+\label{class_m_o_box_7f53529680eb35e91d981ab83d0f4bb8}
+
+
+
+
+Definition at line 37 of file MOBox.cpp.\hypertarget{class_m_o_box_9c3fbd1a7b8484cc2ebaefdee6ed1238}{
+\index{MOBox@{MOBox}!MOBox@{MOBox}}
+\index{MOBox@{MOBox}!MOBox@{MOBox}}
+\subsubsection[{MOBox}]{\setlength{\rightskip}{0pt plus 5cm}MOBox::MOBox (const {\bf MMat4x4} \& {\em transform}, \/  const {\bf MVec3} \& {\em halfExts})}}
+\label{class_m_o_box_9c3fbd1a7b8484cc2ebaefdee6ed1238}
+
+
+
+
+Definition at line 45 of file MOBox.cpp.\hypertarget{class_m_o_box_5d831d82a6f18ceb4ded4f0aead4d37e}{
+\index{MOBox@{MOBox}!$\sim$MOBox@{$\sim$MOBox}}
+\index{$\sim$MOBox@{$\sim$MOBox}!MOBox@{MOBox}}
+\subsubsection[{$\sim$MOBox}]{\setlength{\rightskip}{0pt plus 5cm}MOBox::$\sim$MOBox ()}}
+\label{class_m_o_box_5d831d82a6f18ceb4ded4f0aead4d37e}
+
+
+
+
+Definition at line 53 of file MOBox.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_m_o_box_d4ab62fb0cb55df4774b656c8c99e51f}{
+\index{MOBox@{MOBox}!GetCorners@{GetCorners}}
+\index{GetCorners@{GetCorners}!MOBox@{MOBox}}
+\subsubsection[{GetCorners}]{\setlength{\rightskip}{0pt plus 5cm}void MOBox::GetCorners ({\bf MVec3} $\ast$ {\em corners}) const}}
+\label{class_m_o_box_d4ab62fb0cb55df4774b656c8c99e51f}
+
+
+
+
+Definition at line 65 of file MOBox.cpp.\hypertarget{class_m_o_box_1f3cab4b1e09c90769183721f3e3d06b}{
+\index{MOBox@{MOBox}!GetHalfExts@{GetHalfExts}}
+\index{GetHalfExts@{GetHalfExts}!MOBox@{MOBox}}
+\subsubsection[{GetHalfExts}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MVec3}\& MOBox::GetHalfExts () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_o_box_1f3cab4b1e09c90769183721f3e3d06b}
+
+
+
+
+Definition at line 31 of file MOBox.h.\hypertarget{class_m_o_box_1460a55261c4b5dbd9238e8c5c7371f4}{
+\index{MOBox@{MOBox}!GetTransform@{GetTransform}}
+\index{GetTransform@{GetTransform}!MOBox@{MOBox}}
+\subsubsection[{GetTransform}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MMat4x4}\& MOBox::GetTransform () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_o_box_1460a55261c4b5dbd9238e8c5c7371f4}
+
+
+
+
+Definition at line 29 of file MOBox.h.\hypertarget{class_m_o_box_d0f5c304ee93de82dedace046647df4d}{
+\index{MOBox@{MOBox}!SetHalfExts@{SetHalfExts}}
+\index{SetHalfExts@{SetHalfExts}!MOBox@{MOBox}}
+\subsubsection[{SetHalfExts}]{\setlength{\rightskip}{0pt plus 5cm}void MOBox::SetHalfExts (const {\bf MVec3} \& {\em halfExts})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_o_box_d0f5c304ee93de82dedace046647df4d}
+
+
+
+
+Definition at line 32 of file MOBox.h.\hypertarget{class_m_o_box_95a1b5fadc347c528687342a48b66bb4}{
+\index{MOBox@{MOBox}!SetTransform@{SetTransform}}
+\index{SetTransform@{SetTransform}!MOBox@{MOBox}}
+\subsubsection[{SetTransform}]{\setlength{\rightskip}{0pt plus 5cm}void MOBox::SetTransform (const {\bf MMat4x4} \& {\em transform})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_o_box_95a1b5fadc347c528687342a48b66bb4}
+
+
+
+
+Definition at line 28 of file MOBox.h.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_m_o_box_8h}{MOBox.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_m_o_box_8cpp}{MOBox.cpp}\end{CompactItemize}

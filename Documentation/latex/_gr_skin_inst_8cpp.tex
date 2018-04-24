@@ -1,0 +1,43 @@
+\hypertarget{_gr_skin_inst_8cpp}{
+\section{C:/Bootstrap/ProjectBX/Engine/Graphics/GrSkinInst.cpp File Reference}
+\label{_gr_skin_inst_8cpp}\index{C:/Bootstrap/ProjectBX/Engine/Graphics/GrSkinInst.cpp@{C:/Bootstrap/ProjectBX/Engine/Graphics/GrSkinInst.cpp}}
+}
+{\tt \#include \char`\"{}graphics\_\-afx.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrSkinInst.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrSkin.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrMesh.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrMeshInst.h\char`\"{}}\par
+{\tt \#include \char`\"{}MMat4x4.h\char`\"{}}\par
+{\tt \#include \char`\"{}MMat3x3.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrTypes.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrConfig.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrMeshVB.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrMeshIB.h\char`\"{}}\par
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \hyperlink{_gr_skin_inst_8cpp_48a8c47649520d07fd21fb83838ae145}{VecMinMax}(curMin, curMax, vec)
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_gr_skin_inst_8cpp_48a8c47649520d07fd21fb83838ae145}{
+\index{GrSkinInst.cpp@{GrSkinInst.cpp}!VecMinMax@{VecMinMax}}
+\index{VecMinMax@{VecMinMax}!GrSkinInst.cpp@{GrSkinInst.cpp}}
+\subsubsection[{VecMinMax}]{\setlength{\rightskip}{0pt plus 5cm}\#define VecMinMax(curMin, \/  curMax, \/  vec)}}
+\label{_gr_skin_inst_8cpp_48a8c47649520d07fd21fb83838ae145}
+
+
+\textbf{Value:}
+
+\begin{Code}\begin{verbatim}curMin.x = Min( curMin.x, vec.x );              \
+        curMin.y = Min( curMin.y, vec.y );              \
+        curMin.z = Min( curMin.z, vec.z );              \
+        curMax.x = Max( curMax.x, vec.x );              \
+        curMax.y = Max( curMax.y, vec.y );              \
+        curMax.z = Max( curMax.z, vec.z )
+\end{verbatim}
+\end{Code}
+
+
+Definition at line 23 of file GrSkinInst.cpp.

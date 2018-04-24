@@ -1,0 +1,2095 @@
+\hypertarget{_g_l_aux_8h}{
+\section{C:/Bootstrap/ProjectBX/Engine/Graphics/GLAux.h File Reference}
+\label{_g_l_aux_8h}\index{C:/Bootstrap/ProjectBX/Engine/Graphics/GLAux.h@{C:/Bootstrap/ProjectBX/Engine/Graphics/GLAux.h}}
+}
+{\tt \#include $<$windows.h$>$}\par
+{\tt \#include $<$GL/gl.h$>$}\par
+{\tt \#include $<$GL/glu.h$>$}\par
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+struct \hyperlink{struct___a_u_x___e_v_e_n_t_r_e_c}{\_\-AUX\_\-EVENTREC}
+\item 
+struct \hyperlink{struct___a_u_x___r_g_b_image_rec}{\_\-AUX\_\-RGBImageRec}
+\end{CompactItemize}
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \hyperlink{_g_l_aux_8h_599fa91549a5cf62e685112f6ce8af81}{AUX\_\-RGB}~0
+\item 
+\#define \hyperlink{_g_l_aux_8h_6987632620a4d5987227de9e4d4fe846}{AUX\_\-RGBA}~AUX\_\-RGB
+\item 
+\#define \hyperlink{_g_l_aux_8h_f5bcf845a61c2e78069ddc6c8d61b62e}{AUX\_\-INDEX}~1
+\item 
+\#define \hyperlink{_g_l_aux_8h_3023ea73b514f78227e193bbd918c8a3}{AUX\_\-SINGLE}~0
+\item 
+\#define \hyperlink{_g_l_aux_8h_e8895527e132f869bd2ec24808e1ffce}{AUX\_\-DOUBLE}~2
+\item 
+\#define \hyperlink{_g_l_aux_8h_3417ab80215da4d8ea182d6e78cbacdd}{AUX\_\-DIRECT}~0
+\item 
+\#define \hyperlink{_g_l_aux_8h_5c44457a70c5e4ccc68b17089f6e3f4b}{AUX\_\-INDIRECT}~4
+\item 
+\#define \hyperlink{_g_l_aux_8h_9da80a3ebeb65a322b47021127dffc62}{AUX\_\-ACCUM}~8
+\item 
+\#define \hyperlink{_g_l_aux_8h_40173bd3828183b161b5f06f58673129}{AUX\_\-ALPHA}~16
+\item 
+\#define \hyperlink{_g_l_aux_8h_90d817a20e10a3392cf9cc0ec7b5d996}{AUX\_\-DEPTH24}~32
+\item 
+\#define \hyperlink{_g_l_aux_8h_75c7f27c6d443cd9fd0b647bc82e7b10}{AUX\_\-STENCIL}~64
+\item 
+\#define \hyperlink{_g_l_aux_8h_ea376ab489a167fe8691f9f91283e3ac}{AUX\_\-AUX}~128
+\item 
+\#define \hyperlink{_g_l_aux_8h_e2c23a8887425153b8e41d997139c430}{AUX\_\-DEPTH16}~256
+\item 
+\#define \hyperlink{_g_l_aux_8h_e890d47cb827ba9024280fc6679118c4}{AUX\_\-FIXED\_\-332\_\-PAL}~512
+\item 
+\#define \hyperlink{_g_l_aux_8h_09295df151e60f9b6d1298eee65f7d7f}{AUX\_\-DEPTH}~AUX\_\-DEPTH16
+\item 
+\#define \hyperlink{_g_l_aux_8h_7440c65182572fd720ffcb60ee31aa58}{AUX\_\-WIND\_\-IS\_\-RGB}(\hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x})~( ( ( \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x} ) \& AUX\_\-INDEX ) == 0 )
+\item 
+\#define \hyperlink{_g_l_aux_8h_ccd18dd73545b9591a71a8212b474883}{AUX\_\-WIND\_\-IS\_\-INDEX}(\hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x})~( ( ( \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x} ) \& AUX\_\-INDEX ) != 0 )
+\item 
+\#define \hyperlink{_g_l_aux_8h_5cb5a031015c8ebcdd0e599d398fd592}{AUX\_\-WIND\_\-IS\_\-SINGLE}(\hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x})~( ( ( \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x} ) \& AUX\_\-DOUBLE ) == 0 )
+\item 
+\#define \hyperlink{_g_l_aux_8h_a066920a3bdd29eb774cebde438d163a}{AUX\_\-WIND\_\-IS\_\-DOUBLE}(\hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x})~( ( ( \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x} ) \& AUX\_\-DOUBLE ) != 0 )
+\item 
+\#define \hyperlink{_g_l_aux_8h_b183c14ae40b111c92eeacc8243e754c}{AUX\_\-WIND\_\-IS\_\-INDIRECT}(\hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x})~( ( ( \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x} ) \& AUX\_\-INDIRECT ) != 0 )
+\item 
+\#define \hyperlink{_g_l_aux_8h_3af47f55928746dc3849afc829eff75f}{AUX\_\-WIND\_\-IS\_\-DIRECT}(\hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x})~( ( ( \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x} ) \& AUX\_\-INDIRECT ) == 0 )
+\item 
+\#define \hyperlink{_g_l_aux_8h_1c50f149177f07a0af375b68a33c2ccd}{AUX\_\-WIND\_\-HAS\_\-ACCUM}(\hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x})~( ( ( \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x} ) \& AUX\_\-ACCUM ) != 0 )
+\item 
+\#define \hyperlink{_g_l_aux_8h_7b0948287e247d0a80d77435a6801fa4}{AUX\_\-WIND\_\-HAS\_\-ALPHA}(\hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x})~( ( ( \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x} ) \& AUX\_\-ALPHA ) != 0 )
+\item 
+\#define \hyperlink{_g_l_aux_8h_e91a5dc163cc9b80c8a9eabd5fe229ed}{AUX\_\-WIND\_\-HAS\_\-DEPTH}(\hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x})~( ( ( \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x} ) \& ( AUX\_\-DEPTH24 $|$ AUX\_\-DEPTH16 ) ) != 0 )
+\item 
+\#define \hyperlink{_g_l_aux_8h_f090d3d502bcf3030832430e7d70fae0}{AUX\_\-WIND\_\-HAS\_\-STENCIL}(\hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x})~( ( ( \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x} ) \& AUX\_\-STENCIL ) != 0 )
+\item 
+\#define \hyperlink{_g_l_aux_8h_12ecc59b786b507892d8e38f1b1951c6}{AUX\_\-WIND\_\-USES\_\-FIXED\_\-332\_\-PAL}(\hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x})~( ( ( \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x} ) \& AUX\_\-FIXED\_\-332\_\-PAL ) != 0 )
+\item 
+\#define \hyperlink{_g_l_aux_8h_26ca0e06c33f5257ee6d8d5b08680d9c}{AUX\_\-EXPOSE}~1
+\item 
+\#define \hyperlink{_g_l_aux_8h_67a8650a221c2ef6e66be6ea3dac6ed3}{AUX\_\-CONFIG}~2
+\item 
+\#define \hyperlink{_g_l_aux_8h_9651b2f0a62bdf67bdecec600870eb59}{AUX\_\-DRAW}~4
+\item 
+\#define \hyperlink{_g_l_aux_8h_97b4c4da3fa52e77dcb48eb165333eb2}{AUX\_\-KEYEVENT}~8
+\item 
+\#define \hyperlink{_g_l_aux_8h_9876fbfea2de42d436d5adb4b22c5967}{AUX\_\-MOUSEDOWN}~16
+\item 
+\#define \hyperlink{_g_l_aux_8h_fef1f1aa0489a6ff275a48c40bccafba}{AUX\_\-MOUSEUP}~32
+\item 
+\#define \hyperlink{_g_l_aux_8h_a85955cdb7630697d5a2279ffb7ca485}{AUX\_\-MOUSELOC}~64
+\item 
+\#define \hyperlink{_g_l_aux_8h_c3f4038b269f12cb609c09141fa40afa}{AUX\_\-WINDOWX}~0
+\item 
+\#define \hyperlink{_g_l_aux_8h_b555ec1d1fe04540c5c1a2c3e99e4daf}{AUX\_\-WINDOWY}~1
+\item 
+\#define \hyperlink{_g_l_aux_8h_9aad1fb7d9189d8f99c9a20d3a8a3784}{AUX\_\-MOUSEX}~0
+\item 
+\#define \hyperlink{_g_l_aux_8h_3279938435843b1936b556298beca9fa}{AUX\_\-MOUSEY}~1
+\item 
+\#define \hyperlink{_g_l_aux_8h_d18fdbb4dce0114f4d6b1778b7def819}{AUX\_\-MOUSESTATUS}~3
+\item 
+\#define \hyperlink{_g_l_aux_8h_47bdb783fcba517aa11104d0b6a07a02}{AUX\_\-KEY}~0
+\item 
+\#define \hyperlink{_g_l_aux_8h_a802fc3e74523873fc6138e6c20890b9}{AUX\_\-KEYSTATUS}~1
+\item 
+\#define \hyperlink{_g_l_aux_8h_ba4c5643ea2ec281baf8715c93581388}{AUX\_\-LEFTBUTTON}~1
+\item 
+\#define \hyperlink{_g_l_aux_8h_7e606444b8e686898d01f275c4d5b878}{AUX\_\-RIGHTBUTTON}~2
+\item 
+\#define \hyperlink{_g_l_aux_8h_6072a049d4f6fc4348e226a3498b15d7}{AUX\_\-MIDDLEBUTTON}~4
+\item 
+\#define \hyperlink{_g_l_aux_8h_f36de7127f2ca348cc8a6d766cbf1ca5}{AUX\_\-SHIFT}~1
+\item 
+\#define \hyperlink{_g_l_aux_8h_e44f29254e1319b075152ed231e1545a}{AUX\_\-CONTROL}~2
+\item 
+\#define \hyperlink{_g_l_aux_8h_baf3c051f478841058694a0702de5803}{AUX\_\-RETURN}~0x0D
+\item 
+\#define \hyperlink{_g_l_aux_8h_c07d2e97de4ffb33412ef5c308f797e2}{AUX\_\-ESCAPE}~0x1B
+\item 
+\#define \hyperlink{_g_l_aux_8h_7f7d165365d15cf2bd6d3f6c16c902c4}{AUX\_\-SPACE}~0x20
+\item 
+\#define \hyperlink{_g_l_aux_8h_b2f1ba1b07c0e522f0d2fcf42620d34a}{AUX\_\-LEFT}~0x25
+\item 
+\#define \hyperlink{_g_l_aux_8h_c7f028a42cb36dc228e2c9f421626b97}{AUX\_\-UP}~0x26
+\item 
+\#define \hyperlink{_g_l_aux_8h_a926e66a781cf69d59027deec92fced8}{AUX\_\-RIGHT}~0x27
+\item 
+\#define \hyperlink{_g_l_aux_8h_8b6e5509f44b6d36b3b31b99fe9533ee}{AUX\_\-DOWN}~0x28
+\item 
+\#define \hyperlink{_g_l_aux_8h_b7e7d59176082f60937071195c621741}{AUX\_\-A}~'A'
+\item 
+\#define \hyperlink{_g_l_aux_8h_e80cbdcc693b21c986cbb6b2db98b767}{AUX\_\-B}~'B'
+\item 
+\#define \hyperlink{_g_l_aux_8h_86a1941ae7f5ae070e6ed1c62cdce6e7}{AUX\_\-C}~'C'
+\item 
+\#define \hyperlink{_g_l_aux_8h_ba096eaa7c34786545d27bd978024f32}{AUX\_\-D}~'D'
+\item 
+\#define \hyperlink{_g_l_aux_8h_4464984e19d7f62081dc657362a3520d}{AUX\_\-E}~'E'
+\item 
+\#define \hyperlink{_g_l_aux_8h_d9cec851d74c94614e5f0f04c48ee0b7}{AUX\_\-F}~'F'
+\item 
+\#define \hyperlink{_g_l_aux_8h_fda29f9f9539e57fa3fb13c931d76bf5}{AUX\_\-G}~'G'
+\item 
+\#define \hyperlink{_g_l_aux_8h_2ee4e67cdb4cdd4a8eedc9e2bb9a7194}{AUX\_\-H}~'H'
+\item 
+\#define \hyperlink{_g_l_aux_8h_be726a8bd439bae9e75250eb9f4c43e4}{AUX\_\-I}~'I'
+\item 
+\#define \hyperlink{_g_l_aux_8h_c00ea3a37a3c57138b4c4f47f36dd1ea}{AUX\_\-J}~'J'
+\item 
+\#define \hyperlink{_g_l_aux_8h_ec98eb5b146f5e0893452cbbe45ac004}{AUX\_\-K}~'K'
+\item 
+\#define \hyperlink{_g_l_aux_8h_dd25f27dd75ab350c1c5ff772c1b47ad}{AUX\_\-L}~'L'
+\item 
+\#define \hyperlink{_g_l_aux_8h_d103e42e72859cdcb9e9e4531782fb54}{AUX\_\-M}~'M'
+\item 
+\#define \hyperlink{_g_l_aux_8h_486f291e4af81fc5013329fe00fe68d6}{AUX\_\-N}~'N'
+\item 
+\#define \hyperlink{_g_l_aux_8h_339db87a1a1c4da2db9112941afa5f43}{AUX\_\-O}~'O'
+\item 
+\#define \hyperlink{_g_l_aux_8h_542a1ece14aa6d9e781522b8f670b154}{AUX\_\-P}~'P'
+\item 
+\#define \hyperlink{_g_l_aux_8h_5e9558ea361a310729b6d0f0ba0a5a08}{AUX\_\-Q}~'Q'
+\item 
+\#define \hyperlink{_g_l_aux_8h_fa0f4a3fade5f58c137507e704d1054e}{AUX\_\-R}~'R'
+\item 
+\#define \hyperlink{_g_l_aux_8h_66230c3ded2b064c0930904b8aaf4474}{AUX\_\-S}~'S'
+\item 
+\#define \hyperlink{_g_l_aux_8h_add66d2c1e99d0c5d097c75585985bab}{AUX\_\-T}~'T'
+\item 
+\#define \hyperlink{_g_l_aux_8h_7f596af5dbbfd8a08a98a903cc6f5fc5}{AUX\_\-U}~'U'
+\item 
+\#define \hyperlink{_g_l_aux_8h_a626f0b990c3825d2fc689e02126154d}{AUX\_\-V}~'V'
+\item 
+\#define \hyperlink{_g_l_aux_8h_2f71d60020738dc38f38e3643c37a6ff}{AUX\_\-W}~'W'
+\item 
+\#define \hyperlink{_g_l_aux_8h_cafe9da17b7211ed34ae2f72b99b48ba}{AUX\_\-X}~'X'
+\item 
+\#define \hyperlink{_g_l_aux_8h_2a83e72a452ce807242f7a5a3e7fc5e2}{AUX\_\-Y}~'Y'
+\item 
+\#define \hyperlink{_g_l_aux_8h_7f886f4448a5e8571f4d6d1d99d837ac}{AUX\_\-Z}~'Z'
+\item 
+\#define \hyperlink{_g_l_aux_8h_759398b5f05ccb991166bcf8edfa4f0c}{AUX\_\-a}~'\hyperlink{glext__bak_8h_3309789fc188587d666cda5ece79cf82}{a}'
+\item 
+\#define \hyperlink{_g_l_aux_8h_ee37e2c53c06de78eb4872204a0e7859}{AUX\_\-b}~'\hyperlink{glext__bak_8h_0f71581a41fd2264c8944126dabbd010}{b}'
+\item 
+\#define \hyperlink{_g_l_aux_8h_35e2d56f86dec1da5f3a4e311608259c}{AUX\_\-c}~'\hyperlink{glext__bak_8h_4c662e60c03c48f5718de0c175211fb0}{c}'
+\item 
+\#define \hyperlink{_g_l_aux_8h_23b677310c3c3209f63c9e227997f8fe}{AUX\_\-d}~'d'
+\item 
+\#define \hyperlink{_g_l_aux_8h_417f6c32883c84064459b66d71425ca2}{AUX\_\-e}~'e'
+\item 
+\#define \hyperlink{_g_l_aux_8h_63801961c62690c117dce68da51ffd12}{AUX\_\-f}~'f'
+\item 
+\#define \hyperlink{_g_l_aux_8h_3cf6899a2a9030175fc8848ec1cca48e}{AUX\_\-g}~'\hyperlink{glext__bak_8h_caceb3a655ff28b75259860bcb868f9f}{g}'
+\item 
+\#define \hyperlink{_g_l_aux_8h_84ba918c2c5e4596f74226db49b4c8e7}{AUX\_\-h}~'h'
+\item 
+\#define \hyperlink{_g_l_aux_8h_93e158858f591eb8b07ea7512a8d9450}{AUX\_\-i}~'i'
+\item 
+\#define \hyperlink{_g_l_aux_8h_d73bbc6f8e4b6aaeb92d0e5ea8d34ec6}{AUX\_\-j}~'j'
+\item 
+\#define \hyperlink{_g_l_aux_8h_62581452faa01b34eb5cdb8bb7808120}{AUX\_\-k}~'k'
+\item 
+\#define \hyperlink{_g_l_aux_8h_120d4e445dd02bd8e1b7ca3524305dbd}{AUX\_\-l}~'l'
+\item 
+\#define \hyperlink{_g_l_aux_8h_61be7dda360ed1c0b0e3e71af87f204f}{AUX\_\-m}~'\hyperlink{glext_8h_f593500c283bf1a787a6f947f503a5c2}{m}'
+\item 
+\#define \hyperlink{_g_l_aux_8h_5b0227fa2c0e04cbf7866e96af9e4c45}{AUX\_\-n}~'\hyperlink{glext__bak_8h_0788d3762d0c3c76e4c094d8078b4c27}{n}'
+\item 
+\#define \hyperlink{_g_l_aux_8h_9ce6cab0d2a79effebc4335a5c1bef8c}{AUX\_\-o}~'o'
+\item 
+\#define \hyperlink{_g_l_aux_8h_2cdfc0d92dfd5e4c23a1bda20b5461fc}{AUX\_\-p}~'\hyperlink{glext__bak_8h_a5367c14d90f462230c2611b81b41d23}{p}'
+\item 
+\#define \hyperlink{_g_l_aux_8h_28e487fad56a78f5ab36ee9a13c8ad49}{AUX\_\-q}~'\hyperlink{glext__bak_8h_fb30bc844faa48275d1c84294956a44b}{q}'
+\item 
+\#define \hyperlink{_g_l_aux_8h_89b41e8dc71690efa53fc1e2dbd8322a}{AUX\_\-r}~'\hyperlink{glext__bak_8h_31034e24af8271ed8267858116fe2e48}{r}'
+\item 
+\#define \hyperlink{_g_l_aux_8h_48c7fbdea93e7be5a7d0de55d7f41ef5}{AUX\_\-s}~'\hyperlink{glext__bak_8h_d585a1393cfa368fa9dc3d8ebff640d5}{s}'
+\item 
+\#define \hyperlink{_g_l_aux_8h_385701570f2ea71594ec25cfcb8c76fa}{AUX\_\-t}~'\hyperlink{glext__bak_8h_00140d6f5c548b26daf170bf16e86a6d}{t}'
+\item 
+\#define \hyperlink{_g_l_aux_8h_ccf4438f5547b23ae95424613a2bc78b}{AUX\_\-u}~'u'
+\item 
+\#define \hyperlink{_g_l_aux_8h_5ad8e53ddc9f9c6ca5f8933a60860159}{AUX\_\-v}~'\hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v}'
+\item 
+\#define \hyperlink{_g_l_aux_8h_91eb4efa4b3be60333e4d9c5bfcd5903}{AUX\_\-w}~'\hyperlink{glext__bak_8h_d47d000a8e40b26a33682e10ae32a1b6}{w}'
+\item 
+\#define \hyperlink{_g_l_aux_8h_9b040467005f7569cc52376069176521}{AUX\_\-x}~'\hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x}'
+\item 
+\#define \hyperlink{_g_l_aux_8h_755a9ab93d55d591244dbe9843c498f0}{AUX\_\-y}~'\hyperlink{wglext_8h_9298c7ad619074f5285b32c6b72bfdea}{y}'
+\item 
+\#define \hyperlink{_g_l_aux_8h_1ce1b79dd0f31c9e6491ce09eee7022d}{AUX\_\-z}~'\hyperlink{glext__bak_8h_5b27107fca91cf19a778530405575b37}{z}'
+\item 
+\#define \hyperlink{_g_l_aux_8h_de5c2a82559409fcf3ecc28a2f47b517}{AUX\_\-0}~'0'
+\item 
+\#define \hyperlink{_g_l_aux_8h_c16c9e844771883d09de072a93ab46c4}{AUX\_\-1}~'1'
+\item 
+\#define \hyperlink{_g_l_aux_8h_3719112785d221707723d32062ecc1f3}{AUX\_\-2}~'2'
+\item 
+\#define \hyperlink{_g_l_aux_8h_e48360753cd192cd2b07c17081901b7e}{AUX\_\-3}~'3'
+\item 
+\#define \hyperlink{_g_l_aux_8h_9c9d59c0e98f6be261e8d0fcbbbca634}{AUX\_\-4}~'4'
+\item 
+\#define \hyperlink{_g_l_aux_8h_0b23f662ceba41dd97628c447a38061e}{AUX\_\-5}~'5'
+\item 
+\#define \hyperlink{_g_l_aux_8h_c83889d95169395c2c4f12a651ca9665}{AUX\_\-6}~'6'
+\item 
+\#define \hyperlink{_g_l_aux_8h_c2b089d91c7fdedb7b226c0158f144c0}{AUX\_\-7}~'7'
+\item 
+\#define \hyperlink{_g_l_aux_8h_6ed1383b0bb156452151ec31cd85ebd9}{AUX\_\-8}~'8'
+\item 
+\#define \hyperlink{_g_l_aux_8h_bfdbe6468ed025695c07a9b3a27f536e}{AUX\_\-9}~'9'
+\item 
+\#define \hyperlink{_g_l_aux_8h_08fbede3674cb458749dc8c6bd8a604d}{AUX\_\-FD}~1
+\item 
+\#define \hyperlink{_g_l_aux_8h_593d0f880895732d1e5af8a8170e1b76}{AUX\_\-COLORMAP}~3
+\item 
+\#define \hyperlink{_g_l_aux_8h_674abf201af340d7c0e1b7c905c392a5}{AUX\_\-GREYSCALEMAP}~4
+\item 
+\#define \hyperlink{_g_l_aux_8h_a06e35770e8c54c0b82c7e90e294474c}{AUX\_\-FOGMAP}~5
+\item 
+\#define \hyperlink{_g_l_aux_8h_c013270240294ea83f34465186cf56ad}{AUX\_\-ONECOLOR}~6
+\item 
+\#define \hyperlink{_g_l_aux_8h_81a2a041429d74bf4288bf0f4bf15f5d}{AUX\_\-BLACK}~0
+\item 
+\#define \hyperlink{_g_l_aux_8h_d394af57fc9bc5f866eb6d4084460b41}{AUX\_\-RED}~13
+\item 
+\#define \hyperlink{_g_l_aux_8h_f4cc81c0998c7db475a52aa7faeab55d}{AUX\_\-GREEN}~14
+\item 
+\#define \hyperlink{_g_l_aux_8h_17ccf0e5aa4b1c785b4bef4ff99d52fd}{AUX\_\-YELLOW}~15
+\item 
+\#define \hyperlink{_g_l_aux_8h_c485794e651f1e54690e6dee6728d4ad}{AUX\_\-BLUE}~16
+\item 
+\#define \hyperlink{_g_l_aux_8h_22d9475c2fe73f12e75946c2d0ba05db}{AUX\_\-MAGENTA}~17
+\item 
+\#define \hyperlink{_g_l_aux_8h_b51a74fab4f5be5a86687838aaf3d557}{AUX\_\-CYAN}~18
+\item 
+\#define \hyperlink{_g_l_aux_8h_5ca8d2cc1213f1995b8a3b912e15c8b3}{AUX\_\-WHITE}~19
+\item 
+\#define \hyperlink{_g_l_aux_8h_0d02931899139434dcc846f76ec69da6}{AUX\_\-SETCOLOR}(\hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x}, \hyperlink{wglext_8h_9298c7ad619074f5285b32c6b72bfdea}{y})
+\item 
+\#define \hyperlink{_g_l_aux_8h_3cf5fff52dde52ee7ff764952ecb56b7}{auxInitWindow}~auxInitWindowA
+\item 
+\#define \hyperlink{_g_l_aux_8h_a954aff6435974547053d2a8279f28a5}{auxRGBImageLoad}~auxRGBImageLoadA
+\item 
+\#define \hyperlink{_g_l_aux_8h_8863b52672bbcd78a168c9a3d41dd3b3}{auxDIBImageLoad}~auxDIBImageLoadA
+\item 
+\#define \hyperlink{_g_l_aux_8h_5828be05074d5c3e03e9f976c1e97821}{auxDrawStr}~auxDrawStrA
+\end{CompactItemize}
+\subsection*{Typedefs}
+\begin{CompactItemize}
+\item 
+typedef struct \hyperlink{struct___a_u_x___e_v_e_n_t_r_e_c}{\_\-AUX\_\-EVENTREC} \hyperlink{_g_l_aux_8h_d6464e4cdb035523df31ecde59672eba}{AUX\_\-EVENTREC}
+\item 
+typedef struct \hyperlink{struct___a_u_x___r_g_b_image_rec}{\_\-AUX\_\-RGBImageRec} \hyperlink{_g_l_aux_8h_ed556feeb8eff8473a77d0a0b07cd1d2}{AUX\_\-RGBImageRec}
+\end{CompactItemize}
+\subsection*{Enumerations}
+\begin{CompactItemize}
+\item 
+enum \{ \hyperlink{_g_l_aux_8h_06fc87d81c62e9abb8790b6e5713c55b37bd44fb4913ef16ef50fa9d1040e2c2}{AUX\_\-USE\_\-ID} =  1, 
+\hyperlink{_g_l_aux_8h_06fc87d81c62e9abb8790b6e5713c55b8cfe38e56e44d67880e556f7a562de78}{AUX\_\-EXACT\_\-MATCH}, 
+\hyperlink{_g_l_aux_8h_06fc87d81c62e9abb8790b6e5713c55b67513440ac4b7a4ec05b3d4a4b1ab038}{AUX\_\-MINIMUM\_\-CRITERIA}
+ \}
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+void APIENTRY \hyperlink{_g_l_aux_8h_ce0550fae353243e1b057e59c1ec004c}{auxInitDisplayMode} (GLenum)
+\item 
+void APIENTRY \hyperlink{_g_l_aux_8h_f5a1a760986846e8d00e9c762dd2abfd}{auxInitPosition} (int, int, int, int)
+\item 
+GLenum APIENTRY \hyperlink{_g_l_aux_8h_965a0d35ad19dac096e6be66cec774f5}{auxInitWindowA} (LPCSTR)
+\item 
+GLenum APIENTRY \hyperlink{_g_l_aux_8h_7df9d1c81c8814a6fef3d898a58d0237}{auxInitWindowW} (LPCWSTR)
+\item 
+void APIENTRY \hyperlink{_g_l_aux_8h_c2526d9a16ee0c8f893111689ceb229a}{auxCloseWindow} (void)
+\item 
+void APIENTRY \hyperlink{_g_l_aux_8h_44af2c60d9077726450429c8d9e3b54a}{auxQuit} (void)
+\item 
+void APIENTRY \hyperlink{_g_l_aux_8h_e5e9d5232ee1ab8deff4b1d2a312f698}{auxSwapBuffers} (void)
+\item 
+typedef \hyperlink{_g_l_aux_8h_4e6d7c86ccfbd75ed1dd51962882fc7b}{void} (CALLBACK $\ast$AUXMAINPROC)(void)
+\item 
+void APIENTRY \hyperlink{_g_l_aux_8h_e4e73453d09a505fa4f5af6b54e6a725}{auxMainLoop} (AUXMAINPROC)
+\item 
+void APIENTRY \hyperlink{_g_l_aux_8h_690165aadd2170453c76d78b948e3a66}{auxExposeFunc} (AUXEXPOSEPROC)
+\item 
+void APIENTRY \hyperlink{_g_l_aux_8h_ed8927182546e3814d3577fcf2dd4fb1}{auxReshapeFunc} (AUXRESHAPEPROC)
+\item 
+void APIENTRY \hyperlink{_g_l_aux_8h_c67f3a5579ab06be51031ab94828cefa}{auxIdleFunc} (AUXIDLEPROC)
+\item 
+void APIENTRY \hyperlink{_g_l_aux_8h_03b12f4411358b5e9d604d0ce9e8e291}{auxKeyFunc} (int, AUXKEYPROC)
+\item 
+void APIENTRY \hyperlink{_g_l_aux_8h_6d3bb35410be3d635a3e538be301b5b8}{auxMouseFunc} (int, int, AUXMOUSEPROC)
+\item 
+int APIENTRY \hyperlink{_g_l_aux_8h_aea350a72bc5f8afbd337a6a07ce544f}{auxGetColorMapSize} (void)
+\item 
+void APIENTRY \hyperlink{_g_l_aux_8h_6145125bee5486742d5b1180f405a759}{auxGetMouseLoc} (int $\ast$, int $\ast$)
+\item 
+void APIENTRY \hyperlink{_g_l_aux_8h_72af4628dad7ce0da16d3f9b3dd843c1}{auxSetOneColor} (int, float, float, float)
+\item 
+void APIENTRY \hyperlink{_g_l_aux_8h_c5b7e372da3d4d18d5c97e6b90664c28}{auxSetFogRamp} (int, int)
+\item 
+void APIENTRY \hyperlink{_g_l_aux_8h_b28d83bb674c580db8aef7b9da28c1e2}{auxSetGreyRamp} (void)
+\item 
+void APIENTRY \hyperlink{_g_l_aux_8h_c9933ab73c9bba640f8be0f3ae6ee7fc}{auxSetRGBMap} (int, float $\ast$)
+\item 
+\hyperlink{struct___a_u_x___r_g_b_image_rec}{AUX\_\-RGBImageRec} $\ast$APIENTRY \hyperlink{_g_l_aux_8h_6fa9e36b62b075d17796478fa4a0988f}{auxRGBImageLoadA} (LPCSTR)
+\item 
+\hyperlink{struct___a_u_x___r_g_b_image_rec}{AUX\_\-RGBImageRec} $\ast$APIENTRY \hyperlink{_g_l_aux_8h_c43a1ab547b14d35a82adbc6ae59937f}{auxRGBImageLoadW} (LPCWSTR)
+\item 
+\hyperlink{struct___a_u_x___r_g_b_image_rec}{AUX\_\-RGBImageRec} $\ast$APIENTRY \hyperlink{_g_l_aux_8h_d9a6466ca365391066c723903d6e33a9}{auxDIBImageLoadA} (LPCSTR)
+\item 
+\hyperlink{struct___a_u_x___r_g_b_image_rec}{AUX\_\-RGBImageRec} $\ast$APIENTRY \hyperlink{_g_l_aux_8h_f3c4876f04826a192550300bb7397dfc}{auxDIBImageLoadW} (LPCWSTR)
+\item 
+void APIENTRY \hyperlink{_g_l_aux_8h_8eeb87134f444fba9737554caf7e98db}{auxCreateFont} (void)
+\item 
+void APIENTRY \hyperlink{_g_l_aux_8h_4b4d45d9d98088beb3a37f7013d8cfd0}{auxDrawStrA} (LPCSTR)
+\item 
+void APIENTRY \hyperlink{_g_l_aux_8h_ef5ccebb44fa5c66c7655f304b468dab}{auxDrawStrW} (LPCWSTR)
+\item 
+void APIENTRY \hyperlink{_g_l_aux_8h_7eb0a533f72ce999a7663444ae6f56dd}{auxWireSphere} (\hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble})
+\item 
+void APIENTRY \hyperlink{_g_l_aux_8h_63113d1b915222e00d9b8d66c182d5b5}{auxSolidSphere} (\hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble})
+\item 
+void APIENTRY \hyperlink{_g_l_aux_8h_09e2df9260bd41f10c70624a7f9ba838}{auxWireCube} (\hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble})
+\item 
+void APIENTRY \hyperlink{_g_l_aux_8h_f3b018e75a5633e4cfeb6b1384a3ee34}{auxSolidCube} (\hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble})
+\item 
+void APIENTRY \hyperlink{_g_l_aux_8h_83fe279e8a7fdfa2b107987d84ed0845}{auxWireBox} (\hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble}, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble}, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble})
+\item 
+void APIENTRY \hyperlink{_g_l_aux_8h_e024ee8a373b6d26cdbcfbca0ed4e16a}{auxSolidBox} (\hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble}, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble}, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble})
+\item 
+void APIENTRY \hyperlink{_g_l_aux_8h_0a7188edd6636bdf4c991856492accbd}{auxWireTorus} (\hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble}, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble})
+\item 
+void APIENTRY \hyperlink{_g_l_aux_8h_a435ea9b0949a42ce81fc330304688e6}{auxSolidTorus} (\hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble}, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble})
+\item 
+void APIENTRY \hyperlink{_g_l_aux_8h_e98c0a3b42ff17ca0d7fcd480ea1c6e7}{auxWireCylinder} (\hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble}, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble})
+\item 
+void APIENTRY \hyperlink{_g_l_aux_8h_5fce0a3de2f0c9f9b1f2d7bc1366eeb0}{auxSolidCylinder} (\hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble}, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble})
+\item 
+void APIENTRY \hyperlink{_g_l_aux_8h_5aaa583c5d3d9436657b73a5a921aaed}{auxWireIcosahedron} (\hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble})
+\item 
+void APIENTRY \hyperlink{_g_l_aux_8h_38be60cdea986f67bceac56cf5ab9703}{auxSolidIcosahedron} (\hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble})
+\item 
+void APIENTRY \hyperlink{_g_l_aux_8h_b05b4f06ee7b854db35bced1ff4e8f78}{auxWireOctahedron} (\hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble})
+\item 
+void APIENTRY \hyperlink{_g_l_aux_8h_bf9d774217253f002d77bf2c89bc3d56}{auxSolidOctahedron} (\hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble})
+\item 
+void APIENTRY \hyperlink{_g_l_aux_8h_4e6306aa6d237d81a11986a791a75b16}{auxWireTetrahedron} (\hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble})
+\item 
+void APIENTRY \hyperlink{_g_l_aux_8h_cfb2d5eecfc519c76f8d82bb219ceb1f}{auxSolidTetrahedron} (\hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble})
+\item 
+void APIENTRY \hyperlink{_g_l_aux_8h_99397f542dff50a91d11ff3021a5d0ff}{auxWireDodecahedron} (\hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble})
+\item 
+void APIENTRY \hyperlink{_g_l_aux_8h_599856bb39bc514f7f84d9163dec257e}{auxSolidDodecahedron} (\hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble})
+\item 
+void APIENTRY \hyperlink{_g_l_aux_8h_8006d1aabfa50d69dcd6a12ce45ed641}{auxWireCone} (\hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble}, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble})
+\item 
+void APIENTRY \hyperlink{_g_l_aux_8h_a13d81c01810862f848a93f4b83c6fbe}{auxSolidCone} (\hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble}, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble})
+\item 
+void APIENTRY \hyperlink{_g_l_aux_8h_99691d62a5e68784aa7ee1c99d3609c0}{auxWireTeapot} (\hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble})
+\item 
+void APIENTRY \hyperlink{_g_l_aux_8h_2c6b66872e398e17e5a828bfe7b74c3d}{auxSolidTeapot} (\hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble})
+\item 
+HWND APIENTRY \hyperlink{_g_l_aux_8h_90baf79c43026f7c5e5e976d4f55f7ad}{auxGetHWND} (void)
+\item 
+HDC APIENTRY \hyperlink{_g_l_aux_8h_b89370aa958a73bc01d4315b87bebd83}{auxGetHDC} (void)
+\item 
+HGLRC APIENTRY \hyperlink{_g_l_aux_8h_ff776c4a80f7d1ccfa297981c06f7188}{auxGetHGLRC} (void)
+\item 
+void APIENTRY \hyperlink{_g_l_aux_8h_0c97a9f7d581136bde751fdd299d2c15}{auxInitDisplayModePolicy} (GLenum)
+\item 
+GLenum APIENTRY \hyperlink{_g_l_aux_8h_60e8a354876eebb1b31b4443877ac131}{auxInitDisplayModeID} (GLint)
+\item 
+GLenum APIENTRY \hyperlink{_g_l_aux_8h_924158a9c590d3744ff5d3e180ae5676}{auxGetDisplayModePolicy} (void)
+\item 
+GLint APIENTRY \hyperlink{_g_l_aux_8h_aeea547f0e110fd68a60166892688f76}{auxGetDisplayModeID} (void)
+\item 
+GLenum APIENTRY \hyperlink{_g_l_aux_8h_889e17460c7f8879d7055f32ae0b0c4b}{auxGetDisplayMode} (void)
+\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+float \hyperlink{_g_l_aux_8h_e9881ba2dc016525c1153e4b9e4bf241}{auxRGBMap} \mbox{[}20\mbox{]}\mbox{[}3\mbox{]}
+\item 
+typedef \hyperlink{_g_l_aux_8h_b832c174e145540d491b0830fc05dbb1}{int}
+\item 
+typedef \hyperlink{_g_l_aux_8h_66bf6d04b6bb5492406481593db9fc94}{GLsizei}
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_g_l_aux_8h_de5c2a82559409fcf3ecc28a2f47b517}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-0@{AUX\_\-0}}
+\index{AUX\_\-0@{AUX\_\-0}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-0}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-0~'0'}}
+\label{_g_l_aux_8h_de5c2a82559409fcf3ecc28a2f47b517}
+
+
+
+
+Definition at line 204 of file GLAux.h.\hypertarget{_g_l_aux_8h_c16c9e844771883d09de072a93ab46c4}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-1@{AUX\_\-1}}
+\index{AUX\_\-1@{AUX\_\-1}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-1~'1'}}
+\label{_g_l_aux_8h_c16c9e844771883d09de072a93ab46c4}
+
+
+
+
+Definition at line 205 of file GLAux.h.\hypertarget{_g_l_aux_8h_3719112785d221707723d32062ecc1f3}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-2@{AUX\_\-2}}
+\index{AUX\_\-2@{AUX\_\-2}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-2~'2'}}
+\label{_g_l_aux_8h_3719112785d221707723d32062ecc1f3}
+
+
+
+
+Definition at line 206 of file GLAux.h.\hypertarget{_g_l_aux_8h_e48360753cd192cd2b07c17081901b7e}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-3@{AUX\_\-3}}
+\index{AUX\_\-3@{AUX\_\-3}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-3}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-3~'3'}}
+\label{_g_l_aux_8h_e48360753cd192cd2b07c17081901b7e}
+
+
+
+
+Definition at line 207 of file GLAux.h.\hypertarget{_g_l_aux_8h_9c9d59c0e98f6be261e8d0fcbbbca634}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-4@{AUX\_\-4}}
+\index{AUX\_\-4@{AUX\_\-4}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-4}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-4~'4'}}
+\label{_g_l_aux_8h_9c9d59c0e98f6be261e8d0fcbbbca634}
+
+
+
+
+Definition at line 208 of file GLAux.h.\hypertarget{_g_l_aux_8h_0b23f662ceba41dd97628c447a38061e}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-5@{AUX\_\-5}}
+\index{AUX\_\-5@{AUX\_\-5}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-5}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-5~'5'}}
+\label{_g_l_aux_8h_0b23f662ceba41dd97628c447a38061e}
+
+
+
+
+Definition at line 209 of file GLAux.h.\hypertarget{_g_l_aux_8h_c83889d95169395c2c4f12a651ca9665}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-6@{AUX\_\-6}}
+\index{AUX\_\-6@{AUX\_\-6}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-6}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-6~'6'}}
+\label{_g_l_aux_8h_c83889d95169395c2c4f12a651ca9665}
+
+
+
+
+Definition at line 210 of file GLAux.h.\hypertarget{_g_l_aux_8h_c2b089d91c7fdedb7b226c0158f144c0}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-7@{AUX\_\-7}}
+\index{AUX\_\-7@{AUX\_\-7}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-7}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-7~'7'}}
+\label{_g_l_aux_8h_c2b089d91c7fdedb7b226c0158f144c0}
+
+
+
+
+Definition at line 211 of file GLAux.h.\hypertarget{_g_l_aux_8h_6ed1383b0bb156452151ec31cd85ebd9}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-8@{AUX\_\-8}}
+\index{AUX\_\-8@{AUX\_\-8}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-8}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-8~'8'}}
+\label{_g_l_aux_8h_6ed1383b0bb156452151ec31cd85ebd9}
+
+
+
+
+Definition at line 212 of file GLAux.h.\hypertarget{_g_l_aux_8h_bfdbe6468ed025695c07a9b3a27f536e}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-9@{AUX\_\-9}}
+\index{AUX\_\-9@{AUX\_\-9}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-9}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-9~'9'}}
+\label{_g_l_aux_8h_bfdbe6468ed025695c07a9b3a27f536e}
+
+
+
+
+Definition at line 213 of file GLAux.h.\hypertarget{_g_l_aux_8h_759398b5f05ccb991166bcf8edfa4f0c}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-a@{AUX\_\-a}}
+\index{AUX\_\-a@{AUX\_\-a}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-a}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-a~'{\bf a}'}}
+\label{_g_l_aux_8h_759398b5f05ccb991166bcf8edfa4f0c}
+
+
+
+
+Definition at line 178 of file GLAux.h.\hypertarget{_g_l_aux_8h_b7e7d59176082f60937071195c621741}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-A@{AUX\_\-A}}
+\index{AUX\_\-A@{AUX\_\-A}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-A~'A'}}
+\label{_g_l_aux_8h_b7e7d59176082f60937071195c621741}
+
+
+
+
+Definition at line 152 of file GLAux.h.\hypertarget{_g_l_aux_8h_9da80a3ebeb65a322b47021127dffc62}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-ACCUM@{AUX\_\-ACCUM}}
+\index{AUX\_\-ACCUM@{AUX\_\-ACCUM}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-ACCUM}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-ACCUM~8}}
+\label{_g_l_aux_8h_9da80a3ebeb65a322b47021127dffc62}
+
+
+
+
+Definition at line 77 of file GLAux.h.\hypertarget{_g_l_aux_8h_40173bd3828183b161b5f06f58673129}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-ALPHA@{AUX\_\-ALPHA}}
+\index{AUX\_\-ALPHA@{AUX\_\-ALPHA}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-ALPHA}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-ALPHA~16}}
+\label{_g_l_aux_8h_40173bd3828183b161b5f06f58673129}
+
+
+
+
+Definition at line 78 of file GLAux.h.\hypertarget{_g_l_aux_8h_ea376ab489a167fe8691f9f91283e3ac}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-AUX@{AUX\_\-AUX}}
+\index{AUX\_\-AUX@{AUX\_\-AUX}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-AUX}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-AUX~128}}
+\label{_g_l_aux_8h_ea376ab489a167fe8691f9f91283e3ac}
+
+
+
+
+Definition at line 81 of file GLAux.h.\hypertarget{_g_l_aux_8h_ee37e2c53c06de78eb4872204a0e7859}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-b@{AUX\_\-b}}
+\index{AUX\_\-b@{AUX\_\-b}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-b}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-b~'{\bf b}'}}
+\label{_g_l_aux_8h_ee37e2c53c06de78eb4872204a0e7859}
+
+
+
+
+Definition at line 179 of file GLAux.h.\hypertarget{_g_l_aux_8h_e80cbdcc693b21c986cbb6b2db98b767}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-B@{AUX\_\-B}}
+\index{AUX\_\-B@{AUX\_\-B}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-B}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-B~'B'}}
+\label{_g_l_aux_8h_e80cbdcc693b21c986cbb6b2db98b767}
+
+
+
+
+Definition at line 153 of file GLAux.h.\hypertarget{_g_l_aux_8h_81a2a041429d74bf4288bf0f4bf15f5d}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-BLACK@{AUX\_\-BLACK}}
+\index{AUX\_\-BLACK@{AUX\_\-BLACK}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-BLACK}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-BLACK~0}}
+\label{_g_l_aux_8h_81a2a041429d74bf4288bf0f4bf15f5d}
+
+
+
+
+Definition at line 228 of file GLAux.h.\hypertarget{_g_l_aux_8h_c485794e651f1e54690e6dee6728d4ad}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-BLUE@{AUX\_\-BLUE}}
+\index{AUX\_\-BLUE@{AUX\_\-BLUE}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-BLUE}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-BLUE~16}}
+\label{_g_l_aux_8h_c485794e651f1e54690e6dee6728d4ad}
+
+
+
+
+Definition at line 232 of file GLAux.h.\hypertarget{_g_l_aux_8h_35e2d56f86dec1da5f3a4e311608259c}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-c@{AUX\_\-c}}
+\index{AUX\_\-c@{AUX\_\-c}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-c}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-c~'{\bf c}'}}
+\label{_g_l_aux_8h_35e2d56f86dec1da5f3a4e311608259c}
+
+
+
+
+Definition at line 180 of file GLAux.h.\hypertarget{_g_l_aux_8h_86a1941ae7f5ae070e6ed1c62cdce6e7}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-C@{AUX\_\-C}}
+\index{AUX\_\-C@{AUX\_\-C}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-C~'C'}}
+\label{_g_l_aux_8h_86a1941ae7f5ae070e6ed1c62cdce6e7}
+
+
+
+
+Definition at line 154 of file GLAux.h.\hypertarget{_g_l_aux_8h_593d0f880895732d1e5af8a8170e1b76}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-COLORMAP@{AUX\_\-COLORMAP}}
+\index{AUX\_\-COLORMAP@{AUX\_\-COLORMAP}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-COLORMAP}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-COLORMAP~3}}
+\label{_g_l_aux_8h_593d0f880895732d1e5af8a8170e1b76}
+
+
+
+
+Definition at line 219 of file GLAux.h.\hypertarget{_g_l_aux_8h_67a8650a221c2ef6e66be6ea3dac6ed3}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-CONFIG@{AUX\_\-CONFIG}}
+\index{AUX\_\-CONFIG@{AUX\_\-CONFIG}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-CONFIG}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-CONFIG~2}}
+\label{_g_l_aux_8h_67a8650a221c2ef6e66be6ea3dac6ed3}
+
+
+
+
+Definition at line 115 of file GLAux.h.\hypertarget{_g_l_aux_8h_e44f29254e1319b075152ed231e1545a}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-CONTROL@{AUX\_\-CONTROL}}
+\index{AUX\_\-CONTROL@{AUX\_\-CONTROL}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-CONTROL}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-CONTROL~2}}
+\label{_g_l_aux_8h_e44f29254e1319b075152ed231e1545a}
+
+
+
+
+Definition at line 140 of file GLAux.h.\hypertarget{_g_l_aux_8h_b51a74fab4f5be5a86687838aaf3d557}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-CYAN@{AUX\_\-CYAN}}
+\index{AUX\_\-CYAN@{AUX\_\-CYAN}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-CYAN}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-CYAN~18}}
+\label{_g_l_aux_8h_b51a74fab4f5be5a86687838aaf3d557}
+
+
+
+
+Definition at line 234 of file GLAux.h.\hypertarget{_g_l_aux_8h_23b677310c3c3209f63c9e227997f8fe}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-d@{AUX\_\-d}}
+\index{AUX\_\-d@{AUX\_\-d}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-d}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-d~'d'}}
+\label{_g_l_aux_8h_23b677310c3c3209f63c9e227997f8fe}
+
+
+
+
+Definition at line 181 of file GLAux.h.\hypertarget{_g_l_aux_8h_ba096eaa7c34786545d27bd978024f32}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-D@{AUX\_\-D}}
+\index{AUX\_\-D@{AUX\_\-D}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-D~'D'}}
+\label{_g_l_aux_8h_ba096eaa7c34786545d27bd978024f32}
+
+
+
+
+Definition at line 155 of file GLAux.h.\hypertarget{_g_l_aux_8h_09295df151e60f9b6d1298eee65f7d7f}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-DEPTH@{AUX\_\-DEPTH}}
+\index{AUX\_\-DEPTH@{AUX\_\-DEPTH}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-DEPTH}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-DEPTH~AUX\_\-DEPTH16}}
+\label{_g_l_aux_8h_09295df151e60f9b6d1298eee65f7d7f}
+
+
+
+
+Definition at line 84 of file GLAux.h.\hypertarget{_g_l_aux_8h_e2c23a8887425153b8e41d997139c430}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-DEPTH16@{AUX\_\-DEPTH16}}
+\index{AUX\_\-DEPTH16@{AUX\_\-DEPTH16}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-DEPTH16}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-DEPTH16~256}}
+\label{_g_l_aux_8h_e2c23a8887425153b8e41d997139c430}
+
+
+
+
+Definition at line 82 of file GLAux.h.\hypertarget{_g_l_aux_8h_90d817a20e10a3392cf9cc0ec7b5d996}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-DEPTH24@{AUX\_\-DEPTH24}}
+\index{AUX\_\-DEPTH24@{AUX\_\-DEPTH24}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-DEPTH24}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-DEPTH24~32}}
+\label{_g_l_aux_8h_90d817a20e10a3392cf9cc0ec7b5d996}
+
+
+
+
+Definition at line 79 of file GLAux.h.\hypertarget{_g_l_aux_8h_3417ab80215da4d8ea182d6e78cbacdd}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-DIRECT@{AUX\_\-DIRECT}}
+\index{AUX\_\-DIRECT@{AUX\_\-DIRECT}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-DIRECT}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-DIRECT~0}}
+\label{_g_l_aux_8h_3417ab80215da4d8ea182d6e78cbacdd}
+
+
+
+
+Definition at line 74 of file GLAux.h.\hypertarget{_g_l_aux_8h_e8895527e132f869bd2ec24808e1ffce}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-DOUBLE@{AUX\_\-DOUBLE}}
+\index{AUX\_\-DOUBLE@{AUX\_\-DOUBLE}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-DOUBLE}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-DOUBLE~2}}
+\label{_g_l_aux_8h_e8895527e132f869bd2ec24808e1ffce}
+
+
+
+
+Definition at line 73 of file GLAux.h.\hypertarget{_g_l_aux_8h_8b6e5509f44b6d36b3b31b99fe9533ee}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-DOWN@{AUX\_\-DOWN}}
+\index{AUX\_\-DOWN@{AUX\_\-DOWN}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-DOWN}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-DOWN~0x28}}
+\label{_g_l_aux_8h_8b6e5509f44b6d36b3b31b99fe9533ee}
+
+
+
+
+Definition at line 151 of file GLAux.h.\hypertarget{_g_l_aux_8h_9651b2f0a62bdf67bdecec600870eb59}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-DRAW@{AUX\_\-DRAW}}
+\index{AUX\_\-DRAW@{AUX\_\-DRAW}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-DRAW}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-DRAW~4}}
+\label{_g_l_aux_8h_9651b2f0a62bdf67bdecec600870eb59}
+
+
+
+
+Definition at line 116 of file GLAux.h.\hypertarget{_g_l_aux_8h_417f6c32883c84064459b66d71425ca2}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-e@{AUX\_\-e}}
+\index{AUX\_\-e@{AUX\_\-e}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-e}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-e~'e'}}
+\label{_g_l_aux_8h_417f6c32883c84064459b66d71425ca2}
+
+
+
+
+Definition at line 182 of file GLAux.h.\hypertarget{_g_l_aux_8h_4464984e19d7f62081dc657362a3520d}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-E@{AUX\_\-E}}
+\index{AUX\_\-E@{AUX\_\-E}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-E~'E'}}
+\label{_g_l_aux_8h_4464984e19d7f62081dc657362a3520d}
+
+
+
+
+Definition at line 156 of file GLAux.h.\hypertarget{_g_l_aux_8h_c07d2e97de4ffb33412ef5c308f797e2}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-ESCAPE@{AUX\_\-ESCAPE}}
+\index{AUX\_\-ESCAPE@{AUX\_\-ESCAPE}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-ESCAPE}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-ESCAPE~0x1B}}
+\label{_g_l_aux_8h_c07d2e97de4ffb33412ef5c308f797e2}
+
+
+
+
+Definition at line 146 of file GLAux.h.\hypertarget{_g_l_aux_8h_26ca0e06c33f5257ee6d8d5b08680d9c}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-EXPOSE@{AUX\_\-EXPOSE}}
+\index{AUX\_\-EXPOSE@{AUX\_\-EXPOSE}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-EXPOSE}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-EXPOSE~1}}
+\label{_g_l_aux_8h_26ca0e06c33f5257ee6d8d5b08680d9c}
+
+
+
+
+Definition at line 114 of file GLAux.h.\hypertarget{_g_l_aux_8h_63801961c62690c117dce68da51ffd12}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-f@{AUX\_\-f}}
+\index{AUX\_\-f@{AUX\_\-f}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-f}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-f~'f'}}
+\label{_g_l_aux_8h_63801961c62690c117dce68da51ffd12}
+
+
+
+
+Definition at line 183 of file GLAux.h.\hypertarget{_g_l_aux_8h_d9cec851d74c94614e5f0f04c48ee0b7}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-F@{AUX\_\-F}}
+\index{AUX\_\-F@{AUX\_\-F}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-F~'F'}}
+\label{_g_l_aux_8h_d9cec851d74c94614e5f0f04c48ee0b7}
+
+
+
+
+Definition at line 157 of file GLAux.h.\hypertarget{_g_l_aux_8h_08fbede3674cb458749dc8c6bd8a604d}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-FD@{AUX\_\-FD}}
+\index{AUX\_\-FD@{AUX\_\-FD}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-FD}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-FD~1}}
+\label{_g_l_aux_8h_08fbede3674cb458749dc8c6bd8a604d}
+
+
+
+
+Definition at line 218 of file GLAux.h.\hypertarget{_g_l_aux_8h_e890d47cb827ba9024280fc6679118c4}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-FIXED\_\-332\_\-PAL@{AUX\_\-FIXED\_\-332\_\-PAL}}
+\index{AUX\_\-FIXED\_\-332\_\-PAL@{AUX\_\-FIXED\_\-332\_\-PAL}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-FIXED\_\-332\_\-PAL}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-FIXED\_\-332\_\-PAL~512}}
+\label{_g_l_aux_8h_e890d47cb827ba9024280fc6679118c4}
+
+
+
+
+Definition at line 83 of file GLAux.h.\hypertarget{_g_l_aux_8h_a06e35770e8c54c0b82c7e90e294474c}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-FOGMAP@{AUX\_\-FOGMAP}}
+\index{AUX\_\-FOGMAP@{AUX\_\-FOGMAP}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-FOGMAP}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-FOGMAP~5}}
+\label{_g_l_aux_8h_a06e35770e8c54c0b82c7e90e294474c}
+
+
+
+
+Definition at line 221 of file GLAux.h.\hypertarget{_g_l_aux_8h_3cf6899a2a9030175fc8848ec1cca48e}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-g@{AUX\_\-g}}
+\index{AUX\_\-g@{AUX\_\-g}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-g}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-g~'{\bf g}'}}
+\label{_g_l_aux_8h_3cf6899a2a9030175fc8848ec1cca48e}
+
+
+
+
+Definition at line 184 of file GLAux.h.\hypertarget{_g_l_aux_8h_fda29f9f9539e57fa3fb13c931d76bf5}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-G@{AUX\_\-G}}
+\index{AUX\_\-G@{AUX\_\-G}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-G~'G'}}
+\label{_g_l_aux_8h_fda29f9f9539e57fa3fb13c931d76bf5}
+
+
+
+
+Definition at line 158 of file GLAux.h.\hypertarget{_g_l_aux_8h_f4cc81c0998c7db475a52aa7faeab55d}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-GREEN@{AUX\_\-GREEN}}
+\index{AUX\_\-GREEN@{AUX\_\-GREEN}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-GREEN}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-GREEN~14}}
+\label{_g_l_aux_8h_f4cc81c0998c7db475a52aa7faeab55d}
+
+
+
+
+Definition at line 230 of file GLAux.h.\hypertarget{_g_l_aux_8h_674abf201af340d7c0e1b7c905c392a5}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-GREYSCALEMAP@{AUX\_\-GREYSCALEMAP}}
+\index{AUX\_\-GREYSCALEMAP@{AUX\_\-GREYSCALEMAP}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-GREYSCALEMAP}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-GREYSCALEMAP~4}}
+\label{_g_l_aux_8h_674abf201af340d7c0e1b7c905c392a5}
+
+
+
+
+Definition at line 220 of file GLAux.h.\hypertarget{_g_l_aux_8h_84ba918c2c5e4596f74226db49b4c8e7}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-h@{AUX\_\-h}}
+\index{AUX\_\-h@{AUX\_\-h}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-h}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-h~'h'}}
+\label{_g_l_aux_8h_84ba918c2c5e4596f74226db49b4c8e7}
+
+
+
+
+Definition at line 185 of file GLAux.h.\hypertarget{_g_l_aux_8h_2ee4e67cdb4cdd4a8eedc9e2bb9a7194}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-H@{AUX\_\-H}}
+\index{AUX\_\-H@{AUX\_\-H}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-H~'H'}}
+\label{_g_l_aux_8h_2ee4e67cdb4cdd4a8eedc9e2bb9a7194}
+
+
+
+
+Definition at line 159 of file GLAux.h.\hypertarget{_g_l_aux_8h_93e158858f591eb8b07ea7512a8d9450}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-i@{AUX\_\-i}}
+\index{AUX\_\-i@{AUX\_\-i}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-i}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-i~'i'}}
+\label{_g_l_aux_8h_93e158858f591eb8b07ea7512a8d9450}
+
+
+
+
+Definition at line 186 of file GLAux.h.\hypertarget{_g_l_aux_8h_be726a8bd439bae9e75250eb9f4c43e4}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-I@{AUX\_\-I}}
+\index{AUX\_\-I@{AUX\_\-I}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-I}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-I~'I'}}
+\label{_g_l_aux_8h_be726a8bd439bae9e75250eb9f4c43e4}
+
+
+
+
+Definition at line 160 of file GLAux.h.\hypertarget{_g_l_aux_8h_f5bcf845a61c2e78069ddc6c8d61b62e}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-INDEX@{AUX\_\-INDEX}}
+\index{AUX\_\-INDEX@{AUX\_\-INDEX}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-INDEX}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-INDEX~1}}
+\label{_g_l_aux_8h_f5bcf845a61c2e78069ddc6c8d61b62e}
+
+
+
+
+Definition at line 71 of file GLAux.h.\hypertarget{_g_l_aux_8h_5c44457a70c5e4ccc68b17089f6e3f4b}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-INDIRECT@{AUX\_\-INDIRECT}}
+\index{AUX\_\-INDIRECT@{AUX\_\-INDIRECT}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-INDIRECT}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-INDIRECT~4}}
+\label{_g_l_aux_8h_5c44457a70c5e4ccc68b17089f6e3f4b}
+
+
+
+
+Definition at line 75 of file GLAux.h.\hypertarget{_g_l_aux_8h_d73bbc6f8e4b6aaeb92d0e5ea8d34ec6}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-j@{AUX\_\-j}}
+\index{AUX\_\-j@{AUX\_\-j}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-j}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-j~'j'}}
+\label{_g_l_aux_8h_d73bbc6f8e4b6aaeb92d0e5ea8d34ec6}
+
+
+
+
+Definition at line 187 of file GLAux.h.\hypertarget{_g_l_aux_8h_c00ea3a37a3c57138b4c4f47f36dd1ea}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-J@{AUX\_\-J}}
+\index{AUX\_\-J@{AUX\_\-J}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-J}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-J~'J'}}
+\label{_g_l_aux_8h_c00ea3a37a3c57138b4c4f47f36dd1ea}
+
+
+
+
+Definition at line 161 of file GLAux.h.\hypertarget{_g_l_aux_8h_62581452faa01b34eb5cdb8bb7808120}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-k@{AUX\_\-k}}
+\index{AUX\_\-k@{AUX\_\-k}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-k}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-k~'k'}}
+\label{_g_l_aux_8h_62581452faa01b34eb5cdb8bb7808120}
+
+
+
+
+Definition at line 188 of file GLAux.h.\hypertarget{_g_l_aux_8h_ec98eb5b146f5e0893452cbbe45ac004}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-K@{AUX\_\-K}}
+\index{AUX\_\-K@{AUX\_\-K}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-K~'K'}}
+\label{_g_l_aux_8h_ec98eb5b146f5e0893452cbbe45ac004}
+
+
+
+
+Definition at line 162 of file GLAux.h.\hypertarget{_g_l_aux_8h_47bdb783fcba517aa11104d0b6a07a02}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-KEY@{AUX\_\-KEY}}
+\index{AUX\_\-KEY@{AUX\_\-KEY}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-KEY}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-KEY~0}}
+\label{_g_l_aux_8h_47bdb783fcba517aa11104d0b6a07a02}
+
+
+
+
+Definition at line 130 of file GLAux.h.\hypertarget{_g_l_aux_8h_97b4c4da3fa52e77dcb48eb165333eb2}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-KEYEVENT@{AUX\_\-KEYEVENT}}
+\index{AUX\_\-KEYEVENT@{AUX\_\-KEYEVENT}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-KEYEVENT}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-KEYEVENT~8}}
+\label{_g_l_aux_8h_97b4c4da3fa52e77dcb48eb165333eb2}
+
+
+
+
+Definition at line 117 of file GLAux.h.\hypertarget{_g_l_aux_8h_a802fc3e74523873fc6138e6c20890b9}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-KEYSTATUS@{AUX\_\-KEYSTATUS}}
+\index{AUX\_\-KEYSTATUS@{AUX\_\-KEYSTATUS}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-KEYSTATUS}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-KEYSTATUS~1}}
+\label{_g_l_aux_8h_a802fc3e74523873fc6138e6c20890b9}
+
+
+
+
+Definition at line 131 of file GLAux.h.\hypertarget{_g_l_aux_8h_120d4e445dd02bd8e1b7ca3524305dbd}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-l@{AUX\_\-l}}
+\index{AUX\_\-l@{AUX\_\-l}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-l}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-l~'l'}}
+\label{_g_l_aux_8h_120d4e445dd02bd8e1b7ca3524305dbd}
+
+
+
+
+Definition at line 189 of file GLAux.h.\hypertarget{_g_l_aux_8h_dd25f27dd75ab350c1c5ff772c1b47ad}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-L@{AUX\_\-L}}
+\index{AUX\_\-L@{AUX\_\-L}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-L~'L'}}
+\label{_g_l_aux_8h_dd25f27dd75ab350c1c5ff772c1b47ad}
+
+
+
+
+Definition at line 163 of file GLAux.h.\hypertarget{_g_l_aux_8h_b2f1ba1b07c0e522f0d2fcf42620d34a}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-LEFT@{AUX\_\-LEFT}}
+\index{AUX\_\-LEFT@{AUX\_\-LEFT}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-LEFT}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-LEFT~0x25}}
+\label{_g_l_aux_8h_b2f1ba1b07c0e522f0d2fcf42620d34a}
+
+
+
+
+Definition at line 148 of file GLAux.h.\hypertarget{_g_l_aux_8h_ba4c5643ea2ec281baf8715c93581388}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-LEFTBUTTON@{AUX\_\-LEFTBUTTON}}
+\index{AUX\_\-LEFTBUTTON@{AUX\_\-LEFTBUTTON}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-LEFTBUTTON}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-LEFTBUTTON~1}}
+\label{_g_l_aux_8h_ba4c5643ea2ec281baf8715c93581388}
+
+
+
+
+Definition at line 136 of file GLAux.h.\hypertarget{_g_l_aux_8h_61be7dda360ed1c0b0e3e71af87f204f}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-m@{AUX\_\-m}}
+\index{AUX\_\-m@{AUX\_\-m}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-m}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-m~'{\bf m}'}}
+\label{_g_l_aux_8h_61be7dda360ed1c0b0e3e71af87f204f}
+
+
+
+
+Definition at line 190 of file GLAux.h.\hypertarget{_g_l_aux_8h_d103e42e72859cdcb9e9e4531782fb54}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-M@{AUX\_\-M}}
+\index{AUX\_\-M@{AUX\_\-M}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-M~'M'}}
+\label{_g_l_aux_8h_d103e42e72859cdcb9e9e4531782fb54}
+
+
+
+
+Definition at line 164 of file GLAux.h.\hypertarget{_g_l_aux_8h_22d9475c2fe73f12e75946c2d0ba05db}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-MAGENTA@{AUX\_\-MAGENTA}}
+\index{AUX\_\-MAGENTA@{AUX\_\-MAGENTA}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-MAGENTA}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-MAGENTA~17}}
+\label{_g_l_aux_8h_22d9475c2fe73f12e75946c2d0ba05db}
+
+
+
+
+Definition at line 233 of file GLAux.h.\hypertarget{_g_l_aux_8h_6072a049d4f6fc4348e226a3498b15d7}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-MIDDLEBUTTON@{AUX\_\-MIDDLEBUTTON}}
+\index{AUX\_\-MIDDLEBUTTON@{AUX\_\-MIDDLEBUTTON}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-MIDDLEBUTTON}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-MIDDLEBUTTON~4}}
+\label{_g_l_aux_8h_6072a049d4f6fc4348e226a3498b15d7}
+
+
+
+
+Definition at line 138 of file GLAux.h.\hypertarget{_g_l_aux_8h_9876fbfea2de42d436d5adb4b22c5967}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-MOUSEDOWN@{AUX\_\-MOUSEDOWN}}
+\index{AUX\_\-MOUSEDOWN@{AUX\_\-MOUSEDOWN}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-MOUSEDOWN}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-MOUSEDOWN~16}}
+\label{_g_l_aux_8h_9876fbfea2de42d436d5adb4b22c5967}
+
+
+
+
+Definition at line 118 of file GLAux.h.\hypertarget{_g_l_aux_8h_a85955cdb7630697d5a2279ffb7ca485}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-MOUSELOC@{AUX\_\-MOUSELOC}}
+\index{AUX\_\-MOUSELOC@{AUX\_\-MOUSELOC}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-MOUSELOC}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-MOUSELOC~64}}
+\label{_g_l_aux_8h_a85955cdb7630697d5a2279ffb7ca485}
+
+
+
+
+Definition at line 120 of file GLAux.h.\hypertarget{_g_l_aux_8h_d18fdbb4dce0114f4d6b1778b7def819}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-MOUSESTATUS@{AUX\_\-MOUSESTATUS}}
+\index{AUX\_\-MOUSESTATUS@{AUX\_\-MOUSESTATUS}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-MOUSESTATUS}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-MOUSESTATUS~3}}
+\label{_g_l_aux_8h_d18fdbb4dce0114f4d6b1778b7def819}
+
+
+
+
+Definition at line 129 of file GLAux.h.\hypertarget{_g_l_aux_8h_fef1f1aa0489a6ff275a48c40bccafba}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-MOUSEUP@{AUX\_\-MOUSEUP}}
+\index{AUX\_\-MOUSEUP@{AUX\_\-MOUSEUP}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-MOUSEUP}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-MOUSEUP~32}}
+\label{_g_l_aux_8h_fef1f1aa0489a6ff275a48c40bccafba}
+
+
+
+
+Definition at line 119 of file GLAux.h.\hypertarget{_g_l_aux_8h_9aad1fb7d9189d8f99c9a20d3a8a3784}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-MOUSEX@{AUX\_\-MOUSEX}}
+\index{AUX\_\-MOUSEX@{AUX\_\-MOUSEX}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-MOUSEX}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-MOUSEX~0}}
+\label{_g_l_aux_8h_9aad1fb7d9189d8f99c9a20d3a8a3784}
+
+
+
+
+Definition at line 127 of file GLAux.h.\hypertarget{_g_l_aux_8h_3279938435843b1936b556298beca9fa}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-MOUSEY@{AUX\_\-MOUSEY}}
+\index{AUX\_\-MOUSEY@{AUX\_\-MOUSEY}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-MOUSEY}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-MOUSEY~1}}
+\label{_g_l_aux_8h_3279938435843b1936b556298beca9fa}
+
+
+
+
+Definition at line 128 of file GLAux.h.\hypertarget{_g_l_aux_8h_5b0227fa2c0e04cbf7866e96af9e4c45}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-n@{AUX\_\-n}}
+\index{AUX\_\-n@{AUX\_\-n}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-n}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-n~'{\bf n}'}}
+\label{_g_l_aux_8h_5b0227fa2c0e04cbf7866e96af9e4c45}
+
+
+
+
+Definition at line 191 of file GLAux.h.\hypertarget{_g_l_aux_8h_486f291e4af81fc5013329fe00fe68d6}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-N@{AUX\_\-N}}
+\index{AUX\_\-N@{AUX\_\-N}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-N~'N'}}
+\label{_g_l_aux_8h_486f291e4af81fc5013329fe00fe68d6}
+
+
+
+
+Definition at line 165 of file GLAux.h.\hypertarget{_g_l_aux_8h_9ce6cab0d2a79effebc4335a5c1bef8c}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-o@{AUX\_\-o}}
+\index{AUX\_\-o@{AUX\_\-o}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-o}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-o~'o'}}
+\label{_g_l_aux_8h_9ce6cab0d2a79effebc4335a5c1bef8c}
+
+
+
+
+Definition at line 192 of file GLAux.h.\hypertarget{_g_l_aux_8h_339db87a1a1c4da2db9112941afa5f43}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-O@{AUX\_\-O}}
+\index{AUX\_\-O@{AUX\_\-O}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-O~'O'}}
+\label{_g_l_aux_8h_339db87a1a1c4da2db9112941afa5f43}
+
+
+
+
+Definition at line 166 of file GLAux.h.\hypertarget{_g_l_aux_8h_c013270240294ea83f34465186cf56ad}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-ONECOLOR@{AUX\_\-ONECOLOR}}
+\index{AUX\_\-ONECOLOR@{AUX\_\-ONECOLOR}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-ONECOLOR}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-ONECOLOR~6}}
+\label{_g_l_aux_8h_c013270240294ea83f34465186cf56ad}
+
+
+
+
+Definition at line 222 of file GLAux.h.\hypertarget{_g_l_aux_8h_2cdfc0d92dfd5e4c23a1bda20b5461fc}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-p@{AUX\_\-p}}
+\index{AUX\_\-p@{AUX\_\-p}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-p}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-p~'{\bf p}'}}
+\label{_g_l_aux_8h_2cdfc0d92dfd5e4c23a1bda20b5461fc}
+
+
+
+
+Definition at line 193 of file GLAux.h.\hypertarget{_g_l_aux_8h_542a1ece14aa6d9e781522b8f670b154}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-P@{AUX\_\-P}}
+\index{AUX\_\-P@{AUX\_\-P}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-P~'P'}}
+\label{_g_l_aux_8h_542a1ece14aa6d9e781522b8f670b154}
+
+
+
+
+Definition at line 167 of file GLAux.h.\hypertarget{_g_l_aux_8h_28e487fad56a78f5ab36ee9a13c8ad49}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-q@{AUX\_\-q}}
+\index{AUX\_\-q@{AUX\_\-q}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-q}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-q~'{\bf q}'}}
+\label{_g_l_aux_8h_28e487fad56a78f5ab36ee9a13c8ad49}
+
+
+
+
+Definition at line 194 of file GLAux.h.\hypertarget{_g_l_aux_8h_5e9558ea361a310729b6d0f0ba0a5a08}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-Q@{AUX\_\-Q}}
+\index{AUX\_\-Q@{AUX\_\-Q}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-Q}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-Q~'Q'}}
+\label{_g_l_aux_8h_5e9558ea361a310729b6d0f0ba0a5a08}
+
+
+
+
+Definition at line 168 of file GLAux.h.\hypertarget{_g_l_aux_8h_89b41e8dc71690efa53fc1e2dbd8322a}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-r@{AUX\_\-r}}
+\index{AUX\_\-r@{AUX\_\-r}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-r}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-r~'{\bf r}'}}
+\label{_g_l_aux_8h_89b41e8dc71690efa53fc1e2dbd8322a}
+
+
+
+
+Definition at line 195 of file GLAux.h.\hypertarget{_g_l_aux_8h_fa0f4a3fade5f58c137507e704d1054e}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-R@{AUX\_\-R}}
+\index{AUX\_\-R@{AUX\_\-R}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-R~'R'}}
+\label{_g_l_aux_8h_fa0f4a3fade5f58c137507e704d1054e}
+
+
+
+
+Definition at line 169 of file GLAux.h.\hypertarget{_g_l_aux_8h_d394af57fc9bc5f866eb6d4084460b41}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-RED@{AUX\_\-RED}}
+\index{AUX\_\-RED@{AUX\_\-RED}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-RED}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-RED~13}}
+\label{_g_l_aux_8h_d394af57fc9bc5f866eb6d4084460b41}
+
+
+
+
+Definition at line 229 of file GLAux.h.\hypertarget{_g_l_aux_8h_baf3c051f478841058694a0702de5803}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-RETURN@{AUX\_\-RETURN}}
+\index{AUX\_\-RETURN@{AUX\_\-RETURN}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-RETURN}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-RETURN~0x0D}}
+\label{_g_l_aux_8h_baf3c051f478841058694a0702de5803}
+
+
+
+
+Definition at line 145 of file GLAux.h.\hypertarget{_g_l_aux_8h_599fa91549a5cf62e685112f6ce8af81}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-RGB@{AUX\_\-RGB}}
+\index{AUX\_\-RGB@{AUX\_\-RGB}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-RGB}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-RGB~0}}
+\label{_g_l_aux_8h_599fa91549a5cf62e685112f6ce8af81}
+
+
+
+
+Definition at line 69 of file GLAux.h.\hypertarget{_g_l_aux_8h_6987632620a4d5987227de9e4d4fe846}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-RGBA@{AUX\_\-RGBA}}
+\index{AUX\_\-RGBA@{AUX\_\-RGBA}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-RGBA}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-RGBA~AUX\_\-RGB}}
+\label{_g_l_aux_8h_6987632620a4d5987227de9e4d4fe846}
+
+
+
+
+Definition at line 70 of file GLAux.h.\hypertarget{_g_l_aux_8h_a926e66a781cf69d59027deec92fced8}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-RIGHT@{AUX\_\-RIGHT}}
+\index{AUX\_\-RIGHT@{AUX\_\-RIGHT}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-RIGHT}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-RIGHT~0x27}}
+\label{_g_l_aux_8h_a926e66a781cf69d59027deec92fced8}
+
+
+
+
+Definition at line 150 of file GLAux.h.\hypertarget{_g_l_aux_8h_7e606444b8e686898d01f275c4d5b878}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-RIGHTBUTTON@{AUX\_\-RIGHTBUTTON}}
+\index{AUX\_\-RIGHTBUTTON@{AUX\_\-RIGHTBUTTON}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-RIGHTBUTTON}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-RIGHTBUTTON~2}}
+\label{_g_l_aux_8h_7e606444b8e686898d01f275c4d5b878}
+
+
+
+
+Definition at line 137 of file GLAux.h.\hypertarget{_g_l_aux_8h_48c7fbdea93e7be5a7d0de55d7f41ef5}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-s@{AUX\_\-s}}
+\index{AUX\_\-s@{AUX\_\-s}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-s}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-s~'{\bf s}'}}
+\label{_g_l_aux_8h_48c7fbdea93e7be5a7d0de55d7f41ef5}
+
+
+
+
+Definition at line 196 of file GLAux.h.\hypertarget{_g_l_aux_8h_66230c3ded2b064c0930904b8aaf4474}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-S@{AUX\_\-S}}
+\index{AUX\_\-S@{AUX\_\-S}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-S~'S'}}
+\label{_g_l_aux_8h_66230c3ded2b064c0930904b8aaf4474}
+
+
+
+
+Definition at line 170 of file GLAux.h.\hypertarget{_g_l_aux_8h_0d02931899139434dcc846f76ec69da6}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-SETCOLOR@{AUX\_\-SETCOLOR}}
+\index{AUX\_\-SETCOLOR@{AUX\_\-SETCOLOR}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-SETCOLOR}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-SETCOLOR({\bf x}, \/  {\bf y})}}
+\label{_g_l_aux_8h_0d02931899139434dcc846f76ec69da6}
+
+
+\textbf{Value:}
+
+\begin{Code}\begin{verbatim}( AUX_WIND_IS_RGB( ( x ) ) ? \
+                           glColor3fv( auxRGBMap[ ( y ) ] ) : glIndexf( ( y ) ) )
+\end{verbatim}
+\end{Code}
+
+
+Definition at line 239 of file GLAux.h.\hypertarget{_g_l_aux_8h_f36de7127f2ca348cc8a6d766cbf1ca5}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-SHIFT@{AUX\_\-SHIFT}}
+\index{AUX\_\-SHIFT@{AUX\_\-SHIFT}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-SHIFT}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-SHIFT~1}}
+\label{_g_l_aux_8h_f36de7127f2ca348cc8a6d766cbf1ca5}
+
+
+
+
+Definition at line 139 of file GLAux.h.\hypertarget{_g_l_aux_8h_3023ea73b514f78227e193bbd918c8a3}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-SINGLE@{AUX\_\-SINGLE}}
+\index{AUX\_\-SINGLE@{AUX\_\-SINGLE}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-SINGLE}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-SINGLE~0}}
+\label{_g_l_aux_8h_3023ea73b514f78227e193bbd918c8a3}
+
+
+
+
+Definition at line 72 of file GLAux.h.\hypertarget{_g_l_aux_8h_7f7d165365d15cf2bd6d3f6c16c902c4}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-SPACE@{AUX\_\-SPACE}}
+\index{AUX\_\-SPACE@{AUX\_\-SPACE}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-SPACE}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-SPACE~0x20}}
+\label{_g_l_aux_8h_7f7d165365d15cf2bd6d3f6c16c902c4}
+
+
+
+
+Definition at line 147 of file GLAux.h.\hypertarget{_g_l_aux_8h_75c7f27c6d443cd9fd0b647bc82e7b10}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-STENCIL@{AUX\_\-STENCIL}}
+\index{AUX\_\-STENCIL@{AUX\_\-STENCIL}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-STENCIL}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-STENCIL~64}}
+\label{_g_l_aux_8h_75c7f27c6d443cd9fd0b647bc82e7b10}
+
+
+
+
+Definition at line 80 of file GLAux.h.\hypertarget{_g_l_aux_8h_385701570f2ea71594ec25cfcb8c76fa}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-t@{AUX\_\-t}}
+\index{AUX\_\-t@{AUX\_\-t}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-t~'{\bf t}'}}
+\label{_g_l_aux_8h_385701570f2ea71594ec25cfcb8c76fa}
+
+
+
+
+Definition at line 197 of file GLAux.h.\hypertarget{_g_l_aux_8h_add66d2c1e99d0c5d097c75585985bab}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-T@{AUX\_\-T}}
+\index{AUX\_\-T@{AUX\_\-T}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-T~'T'}}
+\label{_g_l_aux_8h_add66d2c1e99d0c5d097c75585985bab}
+
+
+
+
+Definition at line 171 of file GLAux.h.\hypertarget{_g_l_aux_8h_ccf4438f5547b23ae95424613a2bc78b}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-u@{AUX\_\-u}}
+\index{AUX\_\-u@{AUX\_\-u}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-u}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-u~'u'}}
+\label{_g_l_aux_8h_ccf4438f5547b23ae95424613a2bc78b}
+
+
+
+
+Definition at line 198 of file GLAux.h.\hypertarget{_g_l_aux_8h_7f596af5dbbfd8a08a98a903cc6f5fc5}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-U@{AUX\_\-U}}
+\index{AUX\_\-U@{AUX\_\-U}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-U}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-U~'U'}}
+\label{_g_l_aux_8h_7f596af5dbbfd8a08a98a903cc6f5fc5}
+
+
+
+
+Definition at line 172 of file GLAux.h.\hypertarget{_g_l_aux_8h_c7f028a42cb36dc228e2c9f421626b97}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-UP@{AUX\_\-UP}}
+\index{AUX\_\-UP@{AUX\_\-UP}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-UP}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-UP~0x26}}
+\label{_g_l_aux_8h_c7f028a42cb36dc228e2c9f421626b97}
+
+
+
+
+Definition at line 149 of file GLAux.h.\hypertarget{_g_l_aux_8h_5ad8e53ddc9f9c6ca5f8933a60860159}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-v@{AUX\_\-v}}
+\index{AUX\_\-v@{AUX\_\-v}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-v}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-v~'{\bf v}'}}
+\label{_g_l_aux_8h_5ad8e53ddc9f9c6ca5f8933a60860159}
+
+
+
+
+Definition at line 199 of file GLAux.h.\hypertarget{_g_l_aux_8h_a626f0b990c3825d2fc689e02126154d}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-V@{AUX\_\-V}}
+\index{AUX\_\-V@{AUX\_\-V}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-V}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-V~'V'}}
+\label{_g_l_aux_8h_a626f0b990c3825d2fc689e02126154d}
+
+
+
+
+Definition at line 173 of file GLAux.h.\hypertarget{_g_l_aux_8h_91eb4efa4b3be60333e4d9c5bfcd5903}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-w@{AUX\_\-w}}
+\index{AUX\_\-w@{AUX\_\-w}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-w}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-w~'{\bf w}'}}
+\label{_g_l_aux_8h_91eb4efa4b3be60333e4d9c5bfcd5903}
+
+
+
+
+Definition at line 200 of file GLAux.h.\hypertarget{_g_l_aux_8h_2f71d60020738dc38f38e3643c37a6ff}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-W@{AUX\_\-W}}
+\index{AUX\_\-W@{AUX\_\-W}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-W}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-W~'W'}}
+\label{_g_l_aux_8h_2f71d60020738dc38f38e3643c37a6ff}
+
+
+
+
+Definition at line 174 of file GLAux.h.\hypertarget{_g_l_aux_8h_5ca8d2cc1213f1995b8a3b912e15c8b3}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-WHITE@{AUX\_\-WHITE}}
+\index{AUX\_\-WHITE@{AUX\_\-WHITE}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-WHITE}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-WHITE~19}}
+\label{_g_l_aux_8h_5ca8d2cc1213f1995b8a3b912e15c8b3}
+
+
+
+
+Definition at line 235 of file GLAux.h.\hypertarget{_g_l_aux_8h_1c50f149177f07a0af375b68a33c2ccd}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-WIND\_\-HAS\_\-ACCUM@{AUX\_\-WIND\_\-HAS\_\-ACCUM}}
+\index{AUX\_\-WIND\_\-HAS\_\-ACCUM@{AUX\_\-WIND\_\-HAS\_\-ACCUM}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-WIND\_\-HAS\_\-ACCUM}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-WIND\_\-HAS\_\-ACCUM({\bf x})~( ( ( {\bf x} ) \& AUX\_\-ACCUM ) != 0 )}}
+\label{_g_l_aux_8h_1c50f149177f07a0af375b68a33c2ccd}
+
+
+
+
+Definition at line 96 of file GLAux.h.\hypertarget{_g_l_aux_8h_7b0948287e247d0a80d77435a6801fa4}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-WIND\_\-HAS\_\-ALPHA@{AUX\_\-WIND\_\-HAS\_\-ALPHA}}
+\index{AUX\_\-WIND\_\-HAS\_\-ALPHA@{AUX\_\-WIND\_\-HAS\_\-ALPHA}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-WIND\_\-HAS\_\-ALPHA}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-WIND\_\-HAS\_\-ALPHA({\bf x})~( ( ( {\bf x} ) \& AUX\_\-ALPHA ) != 0 )}}
+\label{_g_l_aux_8h_7b0948287e247d0a80d77435a6801fa4}
+
+
+
+
+Definition at line 97 of file GLAux.h.\hypertarget{_g_l_aux_8h_e91a5dc163cc9b80c8a9eabd5fe229ed}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-WIND\_\-HAS\_\-DEPTH@{AUX\_\-WIND\_\-HAS\_\-DEPTH}}
+\index{AUX\_\-WIND\_\-HAS\_\-DEPTH@{AUX\_\-WIND\_\-HAS\_\-DEPTH}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-WIND\_\-HAS\_\-DEPTH}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-WIND\_\-HAS\_\-DEPTH({\bf x})~( ( ( {\bf x} ) \& ( AUX\_\-DEPTH24 $|$ AUX\_\-DEPTH16 ) ) != 0 )}}
+\label{_g_l_aux_8h_e91a5dc163cc9b80c8a9eabd5fe229ed}
+
+
+
+
+Definition at line 98 of file GLAux.h.\hypertarget{_g_l_aux_8h_f090d3d502bcf3030832430e7d70fae0}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-WIND\_\-HAS\_\-STENCIL@{AUX\_\-WIND\_\-HAS\_\-STENCIL}}
+\index{AUX\_\-WIND\_\-HAS\_\-STENCIL@{AUX\_\-WIND\_\-HAS\_\-STENCIL}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-WIND\_\-HAS\_\-STENCIL}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-WIND\_\-HAS\_\-STENCIL({\bf x})~( ( ( {\bf x} ) \& AUX\_\-STENCIL ) != 0 )}}
+\label{_g_l_aux_8h_f090d3d502bcf3030832430e7d70fae0}
+
+
+
+
+Definition at line 99 of file GLAux.h.\hypertarget{_g_l_aux_8h_3af47f55928746dc3849afc829eff75f}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-WIND\_\-IS\_\-DIRECT@{AUX\_\-WIND\_\-IS\_\-DIRECT}}
+\index{AUX\_\-WIND\_\-IS\_\-DIRECT@{AUX\_\-WIND\_\-IS\_\-DIRECT}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-WIND\_\-IS\_\-DIRECT}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-WIND\_\-IS\_\-DIRECT({\bf x})~( ( ( {\bf x} ) \& AUX\_\-INDIRECT ) == 0 )}}
+\label{_g_l_aux_8h_3af47f55928746dc3849afc829eff75f}
+
+
+
+
+Definition at line 95 of file GLAux.h.\hypertarget{_g_l_aux_8h_a066920a3bdd29eb774cebde438d163a}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-WIND\_\-IS\_\-DOUBLE@{AUX\_\-WIND\_\-IS\_\-DOUBLE}}
+\index{AUX\_\-WIND\_\-IS\_\-DOUBLE@{AUX\_\-WIND\_\-IS\_\-DOUBLE}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-WIND\_\-IS\_\-DOUBLE}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-WIND\_\-IS\_\-DOUBLE({\bf x})~( ( ( {\bf x} ) \& AUX\_\-DOUBLE ) != 0 )}}
+\label{_g_l_aux_8h_a066920a3bdd29eb774cebde438d163a}
+
+
+
+
+Definition at line 93 of file GLAux.h.\hypertarget{_g_l_aux_8h_ccd18dd73545b9591a71a8212b474883}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-WIND\_\-IS\_\-INDEX@{AUX\_\-WIND\_\-IS\_\-INDEX}}
+\index{AUX\_\-WIND\_\-IS\_\-INDEX@{AUX\_\-WIND\_\-IS\_\-INDEX}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-WIND\_\-IS\_\-INDEX}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-WIND\_\-IS\_\-INDEX({\bf x})~( ( ( {\bf x} ) \& AUX\_\-INDEX ) != 0 )}}
+\label{_g_l_aux_8h_ccd18dd73545b9591a71a8212b474883}
+
+
+
+
+Definition at line 91 of file GLAux.h.\hypertarget{_g_l_aux_8h_b183c14ae40b111c92eeacc8243e754c}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-WIND\_\-IS\_\-INDIRECT@{AUX\_\-WIND\_\-IS\_\-INDIRECT}}
+\index{AUX\_\-WIND\_\-IS\_\-INDIRECT@{AUX\_\-WIND\_\-IS\_\-INDIRECT}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-WIND\_\-IS\_\-INDIRECT}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-WIND\_\-IS\_\-INDIRECT({\bf x})~( ( ( {\bf x} ) \& AUX\_\-INDIRECT ) != 0 )}}
+\label{_g_l_aux_8h_b183c14ae40b111c92eeacc8243e754c}
+
+
+
+
+Definition at line 94 of file GLAux.h.\hypertarget{_g_l_aux_8h_7440c65182572fd720ffcb60ee31aa58}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-WIND\_\-IS\_\-RGB@{AUX\_\-WIND\_\-IS\_\-RGB}}
+\index{AUX\_\-WIND\_\-IS\_\-RGB@{AUX\_\-WIND\_\-IS\_\-RGB}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-WIND\_\-IS\_\-RGB}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-WIND\_\-IS\_\-RGB({\bf x})~( ( ( {\bf x} ) \& AUX\_\-INDEX ) == 0 )}}
+\label{_g_l_aux_8h_7440c65182572fd720ffcb60ee31aa58}
+
+
+
+
+Definition at line 90 of file GLAux.h.\hypertarget{_g_l_aux_8h_5cb5a031015c8ebcdd0e599d398fd592}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-WIND\_\-IS\_\-SINGLE@{AUX\_\-WIND\_\-IS\_\-SINGLE}}
+\index{AUX\_\-WIND\_\-IS\_\-SINGLE@{AUX\_\-WIND\_\-IS\_\-SINGLE}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-WIND\_\-IS\_\-SINGLE}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-WIND\_\-IS\_\-SINGLE({\bf x})~( ( ( {\bf x} ) \& AUX\_\-DOUBLE ) == 0 )}}
+\label{_g_l_aux_8h_5cb5a031015c8ebcdd0e599d398fd592}
+
+
+
+
+Definition at line 92 of file GLAux.h.\hypertarget{_g_l_aux_8h_12ecc59b786b507892d8e38f1b1951c6}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-WIND\_\-USES\_\-FIXED\_\-332\_\-PAL@{AUX\_\-WIND\_\-USES\_\-FIXED\_\-332\_\-PAL}}
+\index{AUX\_\-WIND\_\-USES\_\-FIXED\_\-332\_\-PAL@{AUX\_\-WIND\_\-USES\_\-FIXED\_\-332\_\-PAL}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-WIND\_\-USES\_\-FIXED\_\-332\_\-PAL}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-WIND\_\-USES\_\-FIXED\_\-332\_\-PAL({\bf x})~( ( ( {\bf x} ) \& AUX\_\-FIXED\_\-332\_\-PAL ) != 0 )}}
+\label{_g_l_aux_8h_12ecc59b786b507892d8e38f1b1951c6}
+
+
+
+
+Definition at line 100 of file GLAux.h.\hypertarget{_g_l_aux_8h_c3f4038b269f12cb609c09141fa40afa}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-WINDOWX@{AUX\_\-WINDOWX}}
+\index{AUX\_\-WINDOWX@{AUX\_\-WINDOWX}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-WINDOWX}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-WINDOWX~0}}
+\label{_g_l_aux_8h_c3f4038b269f12cb609c09141fa40afa}
+
+
+
+
+Definition at line 125 of file GLAux.h.\hypertarget{_g_l_aux_8h_b555ec1d1fe04540c5c1a2c3e99e4daf}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-WINDOWY@{AUX\_\-WINDOWY}}
+\index{AUX\_\-WINDOWY@{AUX\_\-WINDOWY}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-WINDOWY}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-WINDOWY~1}}
+\label{_g_l_aux_8h_b555ec1d1fe04540c5c1a2c3e99e4daf}
+
+
+
+
+Definition at line 126 of file GLAux.h.\hypertarget{_g_l_aux_8h_9b040467005f7569cc52376069176521}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-x@{AUX\_\-x}}
+\index{AUX\_\-x@{AUX\_\-x}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-x}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-x~'{\bf x}'}}
+\label{_g_l_aux_8h_9b040467005f7569cc52376069176521}
+
+
+
+
+Definition at line 201 of file GLAux.h.\hypertarget{_g_l_aux_8h_cafe9da17b7211ed34ae2f72b99b48ba}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-X@{AUX\_\-X}}
+\index{AUX\_\-X@{AUX\_\-X}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-X~'X'}}
+\label{_g_l_aux_8h_cafe9da17b7211ed34ae2f72b99b48ba}
+
+
+
+
+Definition at line 175 of file GLAux.h.\hypertarget{_g_l_aux_8h_755a9ab93d55d591244dbe9843c498f0}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-y@{AUX\_\-y}}
+\index{AUX\_\-y@{AUX\_\-y}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-y}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-y~'{\bf y}'}}
+\label{_g_l_aux_8h_755a9ab93d55d591244dbe9843c498f0}
+
+
+
+
+Definition at line 202 of file GLAux.h.\hypertarget{_g_l_aux_8h_2a83e72a452ce807242f7a5a3e7fc5e2}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-Y@{AUX\_\-Y}}
+\index{AUX\_\-Y@{AUX\_\-Y}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-Y~'Y'}}
+\label{_g_l_aux_8h_2a83e72a452ce807242f7a5a3e7fc5e2}
+
+
+
+
+Definition at line 176 of file GLAux.h.\hypertarget{_g_l_aux_8h_17ccf0e5aa4b1c785b4bef4ff99d52fd}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-YELLOW@{AUX\_\-YELLOW}}
+\index{AUX\_\-YELLOW@{AUX\_\-YELLOW}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-YELLOW}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-YELLOW~15}}
+\label{_g_l_aux_8h_17ccf0e5aa4b1c785b4bef4ff99d52fd}
+
+
+
+
+Definition at line 231 of file GLAux.h.\hypertarget{_g_l_aux_8h_1ce1b79dd0f31c9e6491ce09eee7022d}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-z@{AUX\_\-z}}
+\index{AUX\_\-z@{AUX\_\-z}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-z}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-z~'{\bf z}'}}
+\label{_g_l_aux_8h_1ce1b79dd0f31c9e6491ce09eee7022d}
+
+
+
+
+Definition at line 203 of file GLAux.h.\hypertarget{_g_l_aux_8h_7f886f4448a5e8571f4d6d1d99d837ac}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-Z@{AUX\_\-Z}}
+\index{AUX\_\-Z@{AUX\_\-Z}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-Z}]{\setlength{\rightskip}{0pt plus 5cm}\#define AUX\_\-Z~'Z'}}
+\label{_g_l_aux_8h_7f886f4448a5e8571f4d6d1d99d837ac}
+
+
+
+
+Definition at line 177 of file GLAux.h.\hypertarget{_g_l_aux_8h_8863b52672bbcd78a168c9a3d41dd3b3}{
+\index{GLAux.h@{GLAux.h}!auxDIBImageLoad@{auxDIBImageLoad}}
+\index{auxDIBImageLoad@{auxDIBImageLoad}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxDIBImageLoad}]{\setlength{\rightskip}{0pt plus 5cm}\#define auxDIBImageLoad~auxDIBImageLoadA}}
+\label{_g_l_aux_8h_8863b52672bbcd78a168c9a3d41dd3b3}
+
+
+
+
+Definition at line 308 of file GLAux.h.\hypertarget{_g_l_aux_8h_5828be05074d5c3e03e9f976c1e97821}{
+\index{GLAux.h@{GLAux.h}!auxDrawStr@{auxDrawStr}}
+\index{auxDrawStr@{auxDrawStr}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxDrawStr}]{\setlength{\rightskip}{0pt plus 5cm}\#define auxDrawStr~auxDrawStrA}}
+\label{_g_l_aux_8h_5828be05074d5c3e03e9f976c1e97821}
+
+
+
+
+Definition at line 318 of file GLAux.h.\hypertarget{_g_l_aux_8h_3cf5fff52dde52ee7ff764952ecb56b7}{
+\index{GLAux.h@{GLAux.h}!auxInitWindow@{auxInitWindow}}
+\index{auxInitWindow@{auxInitWindow}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxInitWindow}]{\setlength{\rightskip}{0pt plus 5cm}\#define auxInitWindow~auxInitWindowA}}
+\label{_g_l_aux_8h_3cf5fff52dde52ee7ff764952ecb56b7}
+
+
+
+
+Definition at line 262 of file GLAux.h.\hypertarget{_g_l_aux_8h_a954aff6435974547053d2a8279f28a5}{
+\index{GLAux.h@{GLAux.h}!auxRGBImageLoad@{auxRGBImageLoad}}
+\index{auxRGBImageLoad@{auxRGBImageLoad}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxRGBImageLoad}]{\setlength{\rightskip}{0pt plus 5cm}\#define auxRGBImageLoad~auxRGBImageLoadA}}
+\label{_g_l_aux_8h_a954aff6435974547053d2a8279f28a5}
+
+
+
+
+Definition at line 300 of file GLAux.h.
+
+\subsection{Typedef Documentation}
+\hypertarget{_g_l_aux_8h_d6464e4cdb035523df31ecde59672eba}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-EVENTREC@{AUX\_\-EVENTREC}}
+\index{AUX\_\-EVENTREC@{AUX\_\-EVENTREC}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-EVENTREC}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \_\-AUX\_\-EVENTREC}  {\bf AUX\_\-EVENTREC}}}
+\label{_g_l_aux_8h_d6464e4cdb035523df31ecde59672eba}
+
+
+\hypertarget{_g_l_aux_8h_ed556feeb8eff8473a77d0a0b07cd1d2}{
+\index{GLAux.h@{GLAux.h}!AUX\_\-RGBImageRec@{AUX\_\-RGBImageRec}}
+\index{AUX\_\-RGBImageRec@{AUX\_\-RGBImageRec}!GLAux.h@{GLAux.h}}
+\subsubsection[{AUX\_\-RGBImageRec}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \_\-AUX\_\-RGBImageRec}  {\bf AUX\_\-RGBImageRec}}}
+\label{_g_l_aux_8h_ed556feeb8eff8473a77d0a0b07cd1d2}
+
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{_g_l_aux_8h_06fc87d81c62e9abb8790b6e5713c55b}{
+\subsubsection[{"@0}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}
+\label{_g_l_aux_8h_06fc87d81c62e9abb8790b6e5713c55b}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{AUX\_\-USE\_\-ID@{AUX\_\-USE\_\-ID}!GLAux.h@{GLAux.h}}\index{GLAux.h@{GLAux.h}!AUX\_\-USE\_\-ID@{AUX\_\-USE\_\-ID}}\item[{\em 
+\hypertarget{_g_l_aux_8h_06fc87d81c62e9abb8790b6e5713c55b37bd44fb4913ef16ef50fa9d1040e2c2}{
+AUX\_\-USE\_\-ID}
+\label{_g_l_aux_8h_06fc87d81c62e9abb8790b6e5713c55b37bd44fb4913ef16ef50fa9d1040e2c2}
+}]\index{AUX\_\-EXACT\_\-MATCH@{AUX\_\-EXACT\_\-MATCH}!GLAux.h@{GLAux.h}}\index{GLAux.h@{GLAux.h}!AUX\_\-EXACT\_\-MATCH@{AUX\_\-EXACT\_\-MATCH}}\item[{\em 
+\hypertarget{_g_l_aux_8h_06fc87d81c62e9abb8790b6e5713c55b8cfe38e56e44d67880e556f7a562de78}{
+AUX\_\-EXACT\_\-MATCH}
+\label{_g_l_aux_8h_06fc87d81c62e9abb8790b6e5713c55b8cfe38e56e44d67880e556f7a562de78}
+}]\index{AUX\_\-MINIMUM\_\-CRITERIA@{AUX\_\-MINIMUM\_\-CRITERIA}!GLAux.h@{GLAux.h}}\index{GLAux.h@{GLAux.h}!AUX\_\-MINIMUM\_\-CRITERIA@{AUX\_\-MINIMUM\_\-CRITERIA}}\item[{\em 
+\hypertarget{_g_l_aux_8h_06fc87d81c62e9abb8790b6e5713c55b67513440ac4b7a4ec05b3d4a4b1ab038}{
+AUX\_\-MINIMUM\_\-CRITERIA}
+\label{_g_l_aux_8h_06fc87d81c62e9abb8790b6e5713c55b67513440ac4b7a4ec05b3d4a4b1ab038}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 358 of file GLAux.h.
+
+\subsection{Function Documentation}
+\hypertarget{_g_l_aux_8h_c2526d9a16ee0c8f893111689ceb229a}{
+\index{GLAux.h@{GLAux.h}!auxCloseWindow@{auxCloseWindow}}
+\index{auxCloseWindow@{auxCloseWindow}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxCloseWindow}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY auxCloseWindow (void)}}
+\label{_g_l_aux_8h_c2526d9a16ee0c8f893111689ceb229a}
+
+
+\hypertarget{_g_l_aux_8h_8eeb87134f444fba9737554caf7e98db}{
+\index{GLAux.h@{GLAux.h}!auxCreateFont@{auxCreateFont}}
+\index{auxCreateFont@{auxCreateFont}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxCreateFont}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY auxCreateFont (void)}}
+\label{_g_l_aux_8h_8eeb87134f444fba9737554caf7e98db}
+
+
+\hypertarget{_g_l_aux_8h_d9a6466ca365391066c723903d6e33a9}{
+\index{GLAux.h@{GLAux.h}!auxDIBImageLoadA@{auxDIBImageLoadA}}
+\index{auxDIBImageLoadA@{auxDIBImageLoadA}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxDIBImageLoadA}]{\setlength{\rightskip}{0pt plus 5cm}{\bf AUX\_\-RGBImageRec}$\ast$ APIENTRY auxDIBImageLoadA (LPCSTR)}}
+\label{_g_l_aux_8h_d9a6466ca365391066c723903d6e33a9}
+
+
+\hypertarget{_g_l_aux_8h_f3c4876f04826a192550300bb7397dfc}{
+\index{GLAux.h@{GLAux.h}!auxDIBImageLoadW@{auxDIBImageLoadW}}
+\index{auxDIBImageLoadW@{auxDIBImageLoadW}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxDIBImageLoadW}]{\setlength{\rightskip}{0pt plus 5cm}{\bf AUX\_\-RGBImageRec}$\ast$ APIENTRY auxDIBImageLoadW (LPCWSTR)}}
+\label{_g_l_aux_8h_f3c4876f04826a192550300bb7397dfc}
+
+
+\hypertarget{_g_l_aux_8h_4b4d45d9d98088beb3a37f7013d8cfd0}{
+\index{GLAux.h@{GLAux.h}!auxDrawStrA@{auxDrawStrA}}
+\index{auxDrawStrA@{auxDrawStrA}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxDrawStrA}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY auxDrawStrA (LPCSTR)}}
+\label{_g_l_aux_8h_4b4d45d9d98088beb3a37f7013d8cfd0}
+
+
+\hypertarget{_g_l_aux_8h_ef5ccebb44fa5c66c7655f304b468dab}{
+\index{GLAux.h@{GLAux.h}!auxDrawStrW@{auxDrawStrW}}
+\index{auxDrawStrW@{auxDrawStrW}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxDrawStrW}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY auxDrawStrW (LPCWSTR)}}
+\label{_g_l_aux_8h_ef5ccebb44fa5c66c7655f304b468dab}
+
+
+\hypertarget{_g_l_aux_8h_690165aadd2170453c76d78b948e3a66}{
+\index{GLAux.h@{GLAux.h}!auxExposeFunc@{auxExposeFunc}}
+\index{auxExposeFunc@{auxExposeFunc}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxExposeFunc}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY auxExposeFunc (AUXEXPOSEPROC)}}
+\label{_g_l_aux_8h_690165aadd2170453c76d78b948e3a66}
+
+
+\hypertarget{_g_l_aux_8h_aea350a72bc5f8afbd337a6a07ce544f}{
+\index{GLAux.h@{GLAux.h}!auxGetColorMapSize@{auxGetColorMapSize}}
+\index{auxGetColorMapSize@{auxGetColorMapSize}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxGetColorMapSize}]{\setlength{\rightskip}{0pt plus 5cm}int APIENTRY auxGetColorMapSize (void)}}
+\label{_g_l_aux_8h_aea350a72bc5f8afbd337a6a07ce544f}
+
+
+\hypertarget{_g_l_aux_8h_889e17460c7f8879d7055f32ae0b0c4b}{
+\index{GLAux.h@{GLAux.h}!auxGetDisplayMode@{auxGetDisplayMode}}
+\index{auxGetDisplayMode@{auxGetDisplayMode}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxGetDisplayMode}]{\setlength{\rightskip}{0pt plus 5cm}GLenum APIENTRY auxGetDisplayMode (void)}}
+\label{_g_l_aux_8h_889e17460c7f8879d7055f32ae0b0c4b}
+
+
+\hypertarget{_g_l_aux_8h_aeea547f0e110fd68a60166892688f76}{
+\index{GLAux.h@{GLAux.h}!auxGetDisplayModeID@{auxGetDisplayModeID}}
+\index{auxGetDisplayModeID@{auxGetDisplayModeID}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxGetDisplayModeID}]{\setlength{\rightskip}{0pt plus 5cm}GLint APIENTRY auxGetDisplayModeID (void)}}
+\label{_g_l_aux_8h_aeea547f0e110fd68a60166892688f76}
+
+
+\hypertarget{_g_l_aux_8h_924158a9c590d3744ff5d3e180ae5676}{
+\index{GLAux.h@{GLAux.h}!auxGetDisplayModePolicy@{auxGetDisplayModePolicy}}
+\index{auxGetDisplayModePolicy@{auxGetDisplayModePolicy}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxGetDisplayModePolicy}]{\setlength{\rightskip}{0pt plus 5cm}GLenum APIENTRY auxGetDisplayModePolicy (void)}}
+\label{_g_l_aux_8h_924158a9c590d3744ff5d3e180ae5676}
+
+
+\hypertarget{_g_l_aux_8h_b89370aa958a73bc01d4315b87bebd83}{
+\index{GLAux.h@{GLAux.h}!auxGetHDC@{auxGetHDC}}
+\index{auxGetHDC@{auxGetHDC}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxGetHDC}]{\setlength{\rightskip}{0pt plus 5cm}HDC APIENTRY auxGetHDC (void)}}
+\label{_g_l_aux_8h_b89370aa958a73bc01d4315b87bebd83}
+
+
+\hypertarget{_g_l_aux_8h_ff776c4a80f7d1ccfa297981c06f7188}{
+\index{GLAux.h@{GLAux.h}!auxGetHGLRC@{auxGetHGLRC}}
+\index{auxGetHGLRC@{auxGetHGLRC}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxGetHGLRC}]{\setlength{\rightskip}{0pt plus 5cm}HGLRC APIENTRY auxGetHGLRC (void)}}
+\label{_g_l_aux_8h_ff776c4a80f7d1ccfa297981c06f7188}
+
+
+\hypertarget{_g_l_aux_8h_90baf79c43026f7c5e5e976d4f55f7ad}{
+\index{GLAux.h@{GLAux.h}!auxGetHWND@{auxGetHWND}}
+\index{auxGetHWND@{auxGetHWND}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxGetHWND}]{\setlength{\rightskip}{0pt plus 5cm}HWND APIENTRY auxGetHWND (void)}}
+\label{_g_l_aux_8h_90baf79c43026f7c5e5e976d4f55f7ad}
+
+
+\hypertarget{_g_l_aux_8h_6145125bee5486742d5b1180f405a759}{
+\index{GLAux.h@{GLAux.h}!auxGetMouseLoc@{auxGetMouseLoc}}
+\index{auxGetMouseLoc@{auxGetMouseLoc}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxGetMouseLoc}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY auxGetMouseLoc (int $\ast$, \/  int $\ast$)}}
+\label{_g_l_aux_8h_6145125bee5486742d5b1180f405a759}
+
+
+\hypertarget{_g_l_aux_8h_c67f3a5579ab06be51031ab94828cefa}{
+\index{GLAux.h@{GLAux.h}!auxIdleFunc@{auxIdleFunc}}
+\index{auxIdleFunc@{auxIdleFunc}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxIdleFunc}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY auxIdleFunc (AUXIDLEPROC)}}
+\label{_g_l_aux_8h_c67f3a5579ab06be51031ab94828cefa}
+
+
+\hypertarget{_g_l_aux_8h_ce0550fae353243e1b057e59c1ec004c}{
+\index{GLAux.h@{GLAux.h}!auxInitDisplayMode@{auxInitDisplayMode}}
+\index{auxInitDisplayMode@{auxInitDisplayMode}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxInitDisplayMode}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY auxInitDisplayMode (GLenum)}}
+\label{_g_l_aux_8h_ce0550fae353243e1b057e59c1ec004c}
+
+
+\hypertarget{_g_l_aux_8h_60e8a354876eebb1b31b4443877ac131}{
+\index{GLAux.h@{GLAux.h}!auxInitDisplayModeID@{auxInitDisplayModeID}}
+\index{auxInitDisplayModeID@{auxInitDisplayModeID}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxInitDisplayModeID}]{\setlength{\rightskip}{0pt plus 5cm}GLenum APIENTRY auxInitDisplayModeID (GLint)}}
+\label{_g_l_aux_8h_60e8a354876eebb1b31b4443877ac131}
+
+
+\hypertarget{_g_l_aux_8h_0c97a9f7d581136bde751fdd299d2c15}{
+\index{GLAux.h@{GLAux.h}!auxInitDisplayModePolicy@{auxInitDisplayModePolicy}}
+\index{auxInitDisplayModePolicy@{auxInitDisplayModePolicy}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxInitDisplayModePolicy}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY auxInitDisplayModePolicy (GLenum)}}
+\label{_g_l_aux_8h_0c97a9f7d581136bde751fdd299d2c15}
+
+
+\hypertarget{_g_l_aux_8h_f5a1a760986846e8d00e9c762dd2abfd}{
+\index{GLAux.h@{GLAux.h}!auxInitPosition@{auxInitPosition}}
+\index{auxInitPosition@{auxInitPosition}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxInitPosition}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY auxInitPosition (int, \/  int, \/  int, \/  int)}}
+\label{_g_l_aux_8h_f5a1a760986846e8d00e9c762dd2abfd}
+
+
+\hypertarget{_g_l_aux_8h_965a0d35ad19dac096e6be66cec774f5}{
+\index{GLAux.h@{GLAux.h}!auxInitWindowA@{auxInitWindowA}}
+\index{auxInitWindowA@{auxInitWindowA}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxInitWindowA}]{\setlength{\rightskip}{0pt plus 5cm}GLenum APIENTRY auxInitWindowA (LPCSTR)}}
+\label{_g_l_aux_8h_965a0d35ad19dac096e6be66cec774f5}
+
+
+\hypertarget{_g_l_aux_8h_7df9d1c81c8814a6fef3d898a58d0237}{
+\index{GLAux.h@{GLAux.h}!auxInitWindowW@{auxInitWindowW}}
+\index{auxInitWindowW@{auxInitWindowW}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxInitWindowW}]{\setlength{\rightskip}{0pt plus 5cm}GLenum APIENTRY auxInitWindowW (LPCWSTR)}}
+\label{_g_l_aux_8h_7df9d1c81c8814a6fef3d898a58d0237}
+
+
+\hypertarget{_g_l_aux_8h_03b12f4411358b5e9d604d0ce9e8e291}{
+\index{GLAux.h@{GLAux.h}!auxKeyFunc@{auxKeyFunc}}
+\index{auxKeyFunc@{auxKeyFunc}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxKeyFunc}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY auxKeyFunc (int, \/  AUXKEYPROC)}}
+\label{_g_l_aux_8h_03b12f4411358b5e9d604d0ce9e8e291}
+
+
+\hypertarget{_g_l_aux_8h_e4e73453d09a505fa4f5af6b54e6a725}{
+\index{GLAux.h@{GLAux.h}!auxMainLoop@{auxMainLoop}}
+\index{auxMainLoop@{auxMainLoop}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxMainLoop}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY auxMainLoop (AUXMAINPROC)}}
+\label{_g_l_aux_8h_e4e73453d09a505fa4f5af6b54e6a725}
+
+
+\hypertarget{_g_l_aux_8h_6d3bb35410be3d635a3e538be301b5b8}{
+\index{GLAux.h@{GLAux.h}!auxMouseFunc@{auxMouseFunc}}
+\index{auxMouseFunc@{auxMouseFunc}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxMouseFunc}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY auxMouseFunc (int, \/  int, \/  AUXMOUSEPROC)}}
+\label{_g_l_aux_8h_6d3bb35410be3d635a3e538be301b5b8}
+
+
+\hypertarget{_g_l_aux_8h_44af2c60d9077726450429c8d9e3b54a}{
+\index{GLAux.h@{GLAux.h}!auxQuit@{auxQuit}}
+\index{auxQuit@{auxQuit}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxQuit}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY auxQuit (void)}}
+\label{_g_l_aux_8h_44af2c60d9077726450429c8d9e3b54a}
+
+
+\hypertarget{_g_l_aux_8h_ed8927182546e3814d3577fcf2dd4fb1}{
+\index{GLAux.h@{GLAux.h}!auxReshapeFunc@{auxReshapeFunc}}
+\index{auxReshapeFunc@{auxReshapeFunc}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxReshapeFunc}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY auxReshapeFunc (AUXRESHAPEPROC)}}
+\label{_g_l_aux_8h_ed8927182546e3814d3577fcf2dd4fb1}
+
+
+\hypertarget{_g_l_aux_8h_6fa9e36b62b075d17796478fa4a0988f}{
+\index{GLAux.h@{GLAux.h}!auxRGBImageLoadA@{auxRGBImageLoadA}}
+\index{auxRGBImageLoadA@{auxRGBImageLoadA}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxRGBImageLoadA}]{\setlength{\rightskip}{0pt plus 5cm}{\bf AUX\_\-RGBImageRec}$\ast$ APIENTRY auxRGBImageLoadA (LPCSTR)}}
+\label{_g_l_aux_8h_6fa9e36b62b075d17796478fa4a0988f}
+
+
+\hypertarget{_g_l_aux_8h_c43a1ab547b14d35a82adbc6ae59937f}{
+\index{GLAux.h@{GLAux.h}!auxRGBImageLoadW@{auxRGBImageLoadW}}
+\index{auxRGBImageLoadW@{auxRGBImageLoadW}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxRGBImageLoadW}]{\setlength{\rightskip}{0pt plus 5cm}{\bf AUX\_\-RGBImageRec}$\ast$ APIENTRY auxRGBImageLoadW (LPCWSTR)}}
+\label{_g_l_aux_8h_c43a1ab547b14d35a82adbc6ae59937f}
+
+
+\hypertarget{_g_l_aux_8h_c5b7e372da3d4d18d5c97e6b90664c28}{
+\index{GLAux.h@{GLAux.h}!auxSetFogRamp@{auxSetFogRamp}}
+\index{auxSetFogRamp@{auxSetFogRamp}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxSetFogRamp}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY auxSetFogRamp (int, \/  int)}}
+\label{_g_l_aux_8h_c5b7e372da3d4d18d5c97e6b90664c28}
+
+
+\hypertarget{_g_l_aux_8h_b28d83bb674c580db8aef7b9da28c1e2}{
+\index{GLAux.h@{GLAux.h}!auxSetGreyRamp@{auxSetGreyRamp}}
+\index{auxSetGreyRamp@{auxSetGreyRamp}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxSetGreyRamp}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY auxSetGreyRamp (void)}}
+\label{_g_l_aux_8h_b28d83bb674c580db8aef7b9da28c1e2}
+
+
+\hypertarget{_g_l_aux_8h_72af4628dad7ce0da16d3f9b3dd843c1}{
+\index{GLAux.h@{GLAux.h}!auxSetOneColor@{auxSetOneColor}}
+\index{auxSetOneColor@{auxSetOneColor}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxSetOneColor}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY auxSetOneColor (int, \/  float, \/  float, \/  float)}}
+\label{_g_l_aux_8h_72af4628dad7ce0da16d3f9b3dd843c1}
+
+
+\hypertarget{_g_l_aux_8h_c9933ab73c9bba640f8be0f3ae6ee7fc}{
+\index{GLAux.h@{GLAux.h}!auxSetRGBMap@{auxSetRGBMap}}
+\index{auxSetRGBMap@{auxSetRGBMap}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxSetRGBMap}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY auxSetRGBMap (int, \/  float $\ast$)}}
+\label{_g_l_aux_8h_c9933ab73c9bba640f8be0f3ae6ee7fc}
+
+
+\hypertarget{_g_l_aux_8h_e024ee8a373b6d26cdbcfbca0ed4e16a}{
+\index{GLAux.h@{GLAux.h}!auxSolidBox@{auxSolidBox}}
+\index{auxSolidBox@{auxSolidBox}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxSolidBox}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY auxSolidBox ({\bf GLdouble}, \/  {\bf GLdouble}, \/  {\bf GLdouble})}}
+\label{_g_l_aux_8h_e024ee8a373b6d26cdbcfbca0ed4e16a}
+
+
+\hypertarget{_g_l_aux_8h_a13d81c01810862f848a93f4b83c6fbe}{
+\index{GLAux.h@{GLAux.h}!auxSolidCone@{auxSolidCone}}
+\index{auxSolidCone@{auxSolidCone}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxSolidCone}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY auxSolidCone ({\bf GLdouble}, \/  {\bf GLdouble})}}
+\label{_g_l_aux_8h_a13d81c01810862f848a93f4b83c6fbe}
+
+
+\hypertarget{_g_l_aux_8h_f3b018e75a5633e4cfeb6b1384a3ee34}{
+\index{GLAux.h@{GLAux.h}!auxSolidCube@{auxSolidCube}}
+\index{auxSolidCube@{auxSolidCube}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxSolidCube}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY auxSolidCube ({\bf GLdouble})}}
+\label{_g_l_aux_8h_f3b018e75a5633e4cfeb6b1384a3ee34}
+
+
+\hypertarget{_g_l_aux_8h_5fce0a3de2f0c9f9b1f2d7bc1366eeb0}{
+\index{GLAux.h@{GLAux.h}!auxSolidCylinder@{auxSolidCylinder}}
+\index{auxSolidCylinder@{auxSolidCylinder}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxSolidCylinder}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY auxSolidCylinder ({\bf GLdouble}, \/  {\bf GLdouble})}}
+\label{_g_l_aux_8h_5fce0a3de2f0c9f9b1f2d7bc1366eeb0}
+
+
+\hypertarget{_g_l_aux_8h_599856bb39bc514f7f84d9163dec257e}{
+\index{GLAux.h@{GLAux.h}!auxSolidDodecahedron@{auxSolidDodecahedron}}
+\index{auxSolidDodecahedron@{auxSolidDodecahedron}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxSolidDodecahedron}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY auxSolidDodecahedron ({\bf GLdouble})}}
+\label{_g_l_aux_8h_599856bb39bc514f7f84d9163dec257e}
+
+
+\hypertarget{_g_l_aux_8h_38be60cdea986f67bceac56cf5ab9703}{
+\index{GLAux.h@{GLAux.h}!auxSolidIcosahedron@{auxSolidIcosahedron}}
+\index{auxSolidIcosahedron@{auxSolidIcosahedron}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxSolidIcosahedron}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY auxSolidIcosahedron ({\bf GLdouble})}}
+\label{_g_l_aux_8h_38be60cdea986f67bceac56cf5ab9703}
+
+
+\hypertarget{_g_l_aux_8h_bf9d774217253f002d77bf2c89bc3d56}{
+\index{GLAux.h@{GLAux.h}!auxSolidOctahedron@{auxSolidOctahedron}}
+\index{auxSolidOctahedron@{auxSolidOctahedron}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxSolidOctahedron}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY auxSolidOctahedron ({\bf GLdouble})}}
+\label{_g_l_aux_8h_bf9d774217253f002d77bf2c89bc3d56}
+
+
+\hypertarget{_g_l_aux_8h_63113d1b915222e00d9b8d66c182d5b5}{
+\index{GLAux.h@{GLAux.h}!auxSolidSphere@{auxSolidSphere}}
+\index{auxSolidSphere@{auxSolidSphere}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxSolidSphere}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY auxSolidSphere ({\bf GLdouble})}}
+\label{_g_l_aux_8h_63113d1b915222e00d9b8d66c182d5b5}
+
+
+\hypertarget{_g_l_aux_8h_2c6b66872e398e17e5a828bfe7b74c3d}{
+\index{GLAux.h@{GLAux.h}!auxSolidTeapot@{auxSolidTeapot}}
+\index{auxSolidTeapot@{auxSolidTeapot}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxSolidTeapot}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY auxSolidTeapot ({\bf GLdouble})}}
+\label{_g_l_aux_8h_2c6b66872e398e17e5a828bfe7b74c3d}
+
+
+\hypertarget{_g_l_aux_8h_cfb2d5eecfc519c76f8d82bb219ceb1f}{
+\index{GLAux.h@{GLAux.h}!auxSolidTetrahedron@{auxSolidTetrahedron}}
+\index{auxSolidTetrahedron@{auxSolidTetrahedron}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxSolidTetrahedron}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY auxSolidTetrahedron ({\bf GLdouble})}}
+\label{_g_l_aux_8h_cfb2d5eecfc519c76f8d82bb219ceb1f}
+
+
+\hypertarget{_g_l_aux_8h_a435ea9b0949a42ce81fc330304688e6}{
+\index{GLAux.h@{GLAux.h}!auxSolidTorus@{auxSolidTorus}}
+\index{auxSolidTorus@{auxSolidTorus}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxSolidTorus}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY auxSolidTorus ({\bf GLdouble}, \/  {\bf GLdouble})}}
+\label{_g_l_aux_8h_a435ea9b0949a42ce81fc330304688e6}
+
+
+\hypertarget{_g_l_aux_8h_e5e9d5232ee1ab8deff4b1d2a312f698}{
+\index{GLAux.h@{GLAux.h}!auxSwapBuffers@{auxSwapBuffers}}
+\index{auxSwapBuffers@{auxSwapBuffers}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxSwapBuffers}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY auxSwapBuffers (void)}}
+\label{_g_l_aux_8h_e5e9d5232ee1ab8deff4b1d2a312f698}
+
+
+\hypertarget{_g_l_aux_8h_83fe279e8a7fdfa2b107987d84ed0845}{
+\index{GLAux.h@{GLAux.h}!auxWireBox@{auxWireBox}}
+\index{auxWireBox@{auxWireBox}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxWireBox}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY auxWireBox ({\bf GLdouble}, \/  {\bf GLdouble}, \/  {\bf GLdouble})}}
+\label{_g_l_aux_8h_83fe279e8a7fdfa2b107987d84ed0845}
+
+
+\hypertarget{_g_l_aux_8h_8006d1aabfa50d69dcd6a12ce45ed641}{
+\index{GLAux.h@{GLAux.h}!auxWireCone@{auxWireCone}}
+\index{auxWireCone@{auxWireCone}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxWireCone}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY auxWireCone ({\bf GLdouble}, \/  {\bf GLdouble})}}
+\label{_g_l_aux_8h_8006d1aabfa50d69dcd6a12ce45ed641}
+
+
+\hypertarget{_g_l_aux_8h_09e2df9260bd41f10c70624a7f9ba838}{
+\index{GLAux.h@{GLAux.h}!auxWireCube@{auxWireCube}}
+\index{auxWireCube@{auxWireCube}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxWireCube}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY auxWireCube ({\bf GLdouble})}}
+\label{_g_l_aux_8h_09e2df9260bd41f10c70624a7f9ba838}
+
+
+\hypertarget{_g_l_aux_8h_e98c0a3b42ff17ca0d7fcd480ea1c6e7}{
+\index{GLAux.h@{GLAux.h}!auxWireCylinder@{auxWireCylinder}}
+\index{auxWireCylinder@{auxWireCylinder}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxWireCylinder}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY auxWireCylinder ({\bf GLdouble}, \/  {\bf GLdouble})}}
+\label{_g_l_aux_8h_e98c0a3b42ff17ca0d7fcd480ea1c6e7}
+
+
+\hypertarget{_g_l_aux_8h_99397f542dff50a91d11ff3021a5d0ff}{
+\index{GLAux.h@{GLAux.h}!auxWireDodecahedron@{auxWireDodecahedron}}
+\index{auxWireDodecahedron@{auxWireDodecahedron}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxWireDodecahedron}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY auxWireDodecahedron ({\bf GLdouble})}}
+\label{_g_l_aux_8h_99397f542dff50a91d11ff3021a5d0ff}
+
+
+\hypertarget{_g_l_aux_8h_5aaa583c5d3d9436657b73a5a921aaed}{
+\index{GLAux.h@{GLAux.h}!auxWireIcosahedron@{auxWireIcosahedron}}
+\index{auxWireIcosahedron@{auxWireIcosahedron}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxWireIcosahedron}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY auxWireIcosahedron ({\bf GLdouble})}}
+\label{_g_l_aux_8h_5aaa583c5d3d9436657b73a5a921aaed}
+
+
+\hypertarget{_g_l_aux_8h_b05b4f06ee7b854db35bced1ff4e8f78}{
+\index{GLAux.h@{GLAux.h}!auxWireOctahedron@{auxWireOctahedron}}
+\index{auxWireOctahedron@{auxWireOctahedron}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxWireOctahedron}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY auxWireOctahedron ({\bf GLdouble})}}
+\label{_g_l_aux_8h_b05b4f06ee7b854db35bced1ff4e8f78}
+
+
+\hypertarget{_g_l_aux_8h_7eb0a533f72ce999a7663444ae6f56dd}{
+\index{GLAux.h@{GLAux.h}!auxWireSphere@{auxWireSphere}}
+\index{auxWireSphere@{auxWireSphere}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxWireSphere}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY auxWireSphere ({\bf GLdouble})}}
+\label{_g_l_aux_8h_7eb0a533f72ce999a7663444ae6f56dd}
+
+
+\hypertarget{_g_l_aux_8h_99691d62a5e68784aa7ee1c99d3609c0}{
+\index{GLAux.h@{GLAux.h}!auxWireTeapot@{auxWireTeapot}}
+\index{auxWireTeapot@{auxWireTeapot}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxWireTeapot}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY auxWireTeapot ({\bf GLdouble})}}
+\label{_g_l_aux_8h_99691d62a5e68784aa7ee1c99d3609c0}
+
+
+\hypertarget{_g_l_aux_8h_4e6306aa6d237d81a11986a791a75b16}{
+\index{GLAux.h@{GLAux.h}!auxWireTetrahedron@{auxWireTetrahedron}}
+\index{auxWireTetrahedron@{auxWireTetrahedron}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxWireTetrahedron}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY auxWireTetrahedron ({\bf GLdouble})}}
+\label{_g_l_aux_8h_4e6306aa6d237d81a11986a791a75b16}
+
+
+\hypertarget{_g_l_aux_8h_0a7188edd6636bdf4c991856492accbd}{
+\index{GLAux.h@{GLAux.h}!auxWireTorus@{auxWireTorus}}
+\index{auxWireTorus@{auxWireTorus}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxWireTorus}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY auxWireTorus ({\bf GLdouble}, \/  {\bf GLdouble})}}
+\label{_g_l_aux_8h_0a7188edd6636bdf4c991856492accbd}
+
+
+\hypertarget{_g_l_aux_8h_4e6d7c86ccfbd75ed1dd51962882fc7b}{
+\index{GLAux.h@{GLAux.h}!void@{void}}
+\index{void@{void}!GLAux.h@{GLAux.h}}
+\subsubsection[{void}]{\setlength{\rightskip}{0pt plus 5cm}typedef void (CALLBACK $\ast$ {\em AUXMAINPROC})}}
+\label{_g_l_aux_8h_4e6d7c86ccfbd75ed1dd51962882fc7b}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{_g_l_aux_8h_e9881ba2dc016525c1153e4b9e4bf241}{
+\index{GLAux.h@{GLAux.h}!auxRGBMap@{auxRGBMap}}
+\index{auxRGBMap@{auxRGBMap}!GLAux.h@{GLAux.h}}
+\subsubsection[{auxRGBMap}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf auxRGBMap}\mbox{[}20\mbox{]}\mbox{[}3\mbox{]}}}
+\label{_g_l_aux_8h_e9881ba2dc016525c1153e4b9e4bf241}
+
+
+\hypertarget{_g_l_aux_8h_66bf6d04b6bb5492406481593db9fc94}{
+\index{GLAux.h@{GLAux.h}!GLsizei@{GLsizei}}
+\index{GLsizei@{GLsizei}!GLAux.h@{GLAux.h}}
+\subsubsection[{GLsizei}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf GLsizei}}}
+\label{_g_l_aux_8h_66bf6d04b6bb5492406481593db9fc94}
+
+
+
+
+Definition at line 277 of file GLAux.h.\hypertarget{_g_l_aux_8h_b832c174e145540d491b0830fc05dbb1}{
+\index{GLAux.h@{GLAux.h}!int@{int}}
+\index{int@{int}!GLAux.h@{GLAux.h}}
+\subsubsection[{int}]{\setlength{\rightskip}{0pt plus 5cm}typedef int}}
+\label{_g_l_aux_8h_b832c174e145540d491b0830fc05dbb1}
+
+
+
+
+Definition at line 274 of file GLAux.h.

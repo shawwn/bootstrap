@@ -1,0 +1,82 @@
+\hypertarget{classirr_1_1io_1_1_i_file_read_call_back}{
+\section{irr::io::IFileReadCallBack Class Reference}
+\label{classirr_1_1io_1_1_i_file_read_call_back}\index{irr::io::IFileReadCallBack@{irr::io::IFileReadCallBack}}
+}
+Callback class for file read abstraction.  
+
+
+{\tt \#include $<$irrXML.h$>$}
+
+Inheritance diagram for irr::io::IFileReadCallBack::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classirr_1_1io_1_1_i_file_read_call_back}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+virtual \hyperlink{classirr_1_1io_1_1_i_file_read_call_back_91ace84f0a3966d88d78da5342eb9619}{$\sim$IFileReadCallBack} ()
+\begin{CompactList}\small\item\em virtual destructor \item\end{CompactList}\item 
+virtual int \hyperlink{classirr_1_1io_1_1_i_file_read_call_back_e8c57b8454078aa2acd39772a6aa4439}{read} (void $\ast$\hyperlink{glext__bak_8h_c4fdb15bdbcd63430bab668b5419ed9f}{buffer}, int sizeToRead)=0
+\begin{CompactList}\small\item\em Reads an amount of bytes from the file. \item\end{CompactList}\item 
+virtual int \hyperlink{classirr_1_1io_1_1_i_file_read_call_back_51e3ae6f16cf3058800cb905f3b21b23}{getSize} ()=0
+\begin{CompactList}\small\item\em Returns size of file in bytes. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Callback class for file read abstraction. 
+
+With this, it is possible to make the xml parser read in other things than just files. The Irrlicht engine is using this for example to read xml from compressed .zip files. To make the parser read in any other data, derive a class from this interface, implement the two methods to read your data and give a pointer to an instance of your implementation when calling \hyperlink{namespaceirr_1_1io_a79dd5b9dae1b75be3dec4374176a5ce}{createIrrXMLReader()}, \hyperlink{namespaceirr_1_1io_41c9d4c0d94702b3da2dca5799384443}{createIrrXMLReaderUTF16()} or \hyperlink{namespaceirr_1_1io_42c53128ecf88af927030b6b9ea5afc2}{createIrrXMLReaderUTF32()} 
+
+Definition at line 212 of file irrXML.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classirr_1_1io_1_1_i_file_read_call_back_91ace84f0a3966d88d78da5342eb9619}{
+\index{irr::io::IFileReadCallBack@{irr::io::IFileReadCallBack}!$\sim$IFileReadCallBack@{$\sim$IFileReadCallBack}}
+\index{$\sim$IFileReadCallBack@{$\sim$IFileReadCallBack}!irr::io::IFileReadCallBack@{irr::io::IFileReadCallBack}}
+\subsubsection[{$\sim$IFileReadCallBack}]{\setlength{\rightskip}{0pt plus 5cm}virtual irr::io::IFileReadCallBack::$\sim$IFileReadCallBack ()\hspace{0.3cm}{\tt  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classirr_1_1io_1_1_i_file_read_call_back_91ace84f0a3966d88d78da5342eb9619}
+
+
+virtual destructor 
+
+
+
+Definition at line 217 of file irrXML.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{classirr_1_1io_1_1_i_file_read_call_back_51e3ae6f16cf3058800cb905f3b21b23}{
+\index{irr::io::IFileReadCallBack@{irr::io::IFileReadCallBack}!getSize@{getSize}}
+\index{getSize@{getSize}!irr::io::IFileReadCallBack@{irr::io::IFileReadCallBack}}
+\subsubsection[{getSize}]{\setlength{\rightskip}{0pt plus 5cm}virtual int irr::io::IFileReadCallBack::getSize ()\hspace{0.3cm}{\tt  \mbox{[}pure virtual\mbox{]}}}}
+\label{classirr_1_1io_1_1_i_file_read_call_back_51e3ae6f16cf3058800cb905f3b21b23}
+
+
+Returns size of file in bytes. 
+
+
+
+Implemented in \hyperlink{classirr_1_1io_1_1_c_file_read_call_back_c84d10241c07f1a8f744ffaad6683eef}{irr::io::CFileReadCallBack}.\hypertarget{classirr_1_1io_1_1_i_file_read_call_back_e8c57b8454078aa2acd39772a6aa4439}{
+\index{irr::io::IFileReadCallBack@{irr::io::IFileReadCallBack}!read@{read}}
+\index{read@{read}!irr::io::IFileReadCallBack@{irr::io::IFileReadCallBack}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}virtual int irr::io::IFileReadCallBack::read (void $\ast$ {\em buffer}, \/  int {\em sizeToRead})\hspace{0.3cm}{\tt  \mbox{[}pure virtual\mbox{]}}}}
+\label{classirr_1_1io_1_1_i_file_read_call_back_e8c57b8454078aa2acd39772a6aa4439}
+
+
+Reads an amount of bytes from the file. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em buffer,:}]Pointer to buffer where to read bytes will be written to. \item[{\em sizeToRead,:}]Amount of bytes to read from the file. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Returns how much bytes were read. \end{Desc}
+
+
+Implemented in \hyperlink{classirr_1_1io_1_1_c_file_read_call_back_b2d4c4e10cd2b03af1173fbc25f87741}{irr::io::CFileReadCallBack}.
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Common/IrrXML/\hyperlink{irr_x_m_l_8h}{irrXML.h}\end{CompactItemize}

@@ -1,0 +1,382 @@
+\hypertarget{_bsc_lexer_8h}{
+\section{C:/Bootstrap/ProjectBX/Engine/Common/BscLexer.h File Reference}
+\label{_bsc_lexer_8h}\index{C:/Bootstrap/ProjectBX/Engine/Common/BscLexer.h@{C:/Bootstrap/ProjectBX/Engine/Common/BscLexer.h}}
+}
+{\tt \#include $<$vector$>$}\par
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+struct \hyperlink{struct_s_bsc_token}{SBscToken}
+\item 
+class \hyperlink{class_bsc_lexer}{BscLexer}
+\end{CompactItemize}
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \hyperlink{_bsc_lexer_8h_beacb5adf7776366620f484de4181715}{BL\_\-IDENTIFIER}~0x70000000
+\item 
+\#define \hyperlink{_bsc_lexer_8h_2a97eaf485271f44145c102dad2917c0}{BL\_\-NUMBER}~0x70000001
+\item 
+\#define \hyperlink{_bsc_lexer_8h_460b90cfc2ce66985f57577ba8652be0}{BL\_\-STRING}~0x70000002
+\item 
+\#define \hyperlink{_bsc_lexer_8h_4f268c34905007b17c81c8d3ee799eb3}{BL\_\-CHAR}~0x70000003
+\item 
+\#define \hyperlink{_bsc_lexer_8h_50403b96509db27112c819010a9ac9a3}{BL\_\-PLUS}~0x70000011
+\item 
+\#define \hyperlink{_bsc_lexer_8h_3340d30bfea194b81e0fc23ffb2b7e92}{BL\_\-MINUS}~0x70000012
+\item 
+\#define \hyperlink{_bsc_lexer_8h_b398783de74cf00dbd7911e7939c30ab}{BL\_\-ASTERISK}~0x70000013
+\item 
+\#define \hyperlink{_bsc_lexer_8h_703fccbef010a8cc63acec1e4f13f6e1}{BL\_\-SLASH}~0x70000014
+\item 
+\#define \hyperlink{_bsc_lexer_8h_0dd45bb85e495b397f4637bebfc3b29f}{BL\_\-PERCENT}~0x70000015
+\item 
+\#define \hyperlink{_bsc_lexer_8h_78198cbfcca3bebeee17a373343e9e25}{BL\_\-EQUALS}~0x70000016
+\item 
+\#define \hyperlink{_bsc_lexer_8h_eb3d5fc9048e3976061c043a20c20dd4}{BL\_\-AND}~0x70000017
+\item 
+\#define \hyperlink{_bsc_lexer_8h_813ec386e807deab778f58b0eadbd2d0}{BL\_\-OR}~0x70000018
+\item 
+\#define \hyperlink{_bsc_lexer_8h_a6c8ee0fa84d6ac387a60f54e898a968}{BL\_\-LSQUAREBRACE}~0x70000030
+\item 
+\#define \hyperlink{_bsc_lexer_8h_c258ce46e44d820fd8a95fc125d0e3f2}{BL\_\-RSQUAREBRACE}~0x70000031
+\item 
+\#define \hyperlink{_bsc_lexer_8h_4477033c00854c1846af2bcc8a1302b6}{BL\_\-LPAREN}~0x70000032
+\item 
+\#define \hyperlink{_bsc_lexer_8h_27e15fd382f693bb7e241f49a5d65192}{BL\_\-RPAREN}~0x70000033
+\item 
+\#define \hyperlink{_bsc_lexer_8h_788c833df7920e15497b848806c9650d}{BL\_\-LBRACE}~0x70000034
+\item 
+\#define \hyperlink{_bsc_lexer_8h_93b2a3d998a210cceab762bf0250fb70}{BL\_\-RBRACE}~0x70000035
+\item 
+\#define \hyperlink{_bsc_lexer_8h_bc6dcd678aa959e5d5401190bb334be3}{BL\_\-LESS}~0x70000040
+\item 
+\#define \hyperlink{_bsc_lexer_8h_326158e53db8695db1f06779ba274599}{BL\_\-GREATER}~0x70000041
+\item 
+\#define \hyperlink{_bsc_lexer_8h_fa3fb0b9ad247f5bd8a6ce243dcb673b}{BL\_\-LESSEQUAL}~0x70000042
+\item 
+\#define \hyperlink{_bsc_lexer_8h_7f057bfe96dcd6b7bdc27250e2953a3d}{BL\_\-GREATEREQUAL}~0x70000043
+\item 
+\#define \hyperlink{_bsc_lexer_8h_047f3ef170d8a2bec24a2e14f2f9527e}{BL\_\-NOT}~0x70000045
+\item 
+\#define \hyperlink{_bsc_lexer_8h_be36ea679fe844b0cfa5c4c27d765314}{BL\_\-NOTEQUAL}~0x70000044
+\item 
+\#define \hyperlink{_bsc_lexer_8h_6e8274cb63b775f1c019f5a9ed26e887}{BL\_\-ISEQUAL}~0x70000046
+\item 
+\#define \hyperlink{_bsc_lexer_8h_12188dcca7a4ee0d18b1fb339abd5e6e}{BL\_\-LOGICALAND}~0x70000047
+\item 
+\#define \hyperlink{_bsc_lexer_8h_f259c416431697430475da3bb3e04dcc}{BL\_\-LOGICALOR}~0x70000048
+\item 
+\#define \hyperlink{_bsc_lexer_8h_17a3930578ac82e27dc6cc22b9663614}{BL\_\-COMMA}~0x70000050
+\item 
+\#define \hyperlink{_bsc_lexer_8h_866457580af8eb3e2f12e3ca7fa0e8cd}{BL\_\-SEMICOLON}~0x70000051
+\item 
+\#define \hyperlink{_bsc_lexer_8h_ca9783808201b448114d8ed51b3360f2}{BL\_\-COLON}~0x70000052
+\item 
+\#define \hyperlink{_bsc_lexer_8h_8fef1d8b5e8838624d12c6a2833c4ff1}{BL\_\-PERIOD}~0x70000053
+\item 
+\#define \hyperlink{_bsc_lexer_8h_f3815e17a03d010630753b3148a4115c}{BL\_\-TEXT}~0x70000070
+\item 
+\#define \hyperlink{_bsc_lexer_8h_2cce38e12fcb458b1dd735d3ed38b7b7}{BL\_\-EOS}~0x700000FF
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_bsc_lexer_8h_eb3d5fc9048e3976061c043a20c20dd4}{
+\index{BscLexer.h@{BscLexer.h}!BL\_\-AND@{BL\_\-AND}}
+\index{BL\_\-AND@{BL\_\-AND}!BscLexer.h@{BscLexer.h}}
+\subsubsection[{BL\_\-AND}]{\setlength{\rightskip}{0pt plus 5cm}\#define BL\_\-AND~0x70000017}}
+\label{_bsc_lexer_8h_eb3d5fc9048e3976061c043a20c20dd4}
+
+
+
+
+Definition at line 33 of file BscLexer.h.\hypertarget{_bsc_lexer_8h_b398783de74cf00dbd7911e7939c30ab}{
+\index{BscLexer.h@{BscLexer.h}!BL\_\-ASTERISK@{BL\_\-ASTERISK}}
+\index{BL\_\-ASTERISK@{BL\_\-ASTERISK}!BscLexer.h@{BscLexer.h}}
+\subsubsection[{BL\_\-ASTERISK}]{\setlength{\rightskip}{0pt plus 5cm}\#define BL\_\-ASTERISK~0x70000013}}
+\label{_bsc_lexer_8h_b398783de74cf00dbd7911e7939c30ab}
+
+
+
+
+Definition at line 29 of file BscLexer.h.\hypertarget{_bsc_lexer_8h_4f268c34905007b17c81c8d3ee799eb3}{
+\index{BscLexer.h@{BscLexer.h}!BL\_\-CHAR@{BL\_\-CHAR}}
+\index{BL\_\-CHAR@{BL\_\-CHAR}!BscLexer.h@{BscLexer.h}}
+\subsubsection[{BL\_\-CHAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define BL\_\-CHAR~0x70000003}}
+\label{_bsc_lexer_8h_4f268c34905007b17c81c8d3ee799eb3}
+
+
+
+
+Definition at line 24 of file BscLexer.h.\hypertarget{_bsc_lexer_8h_ca9783808201b448114d8ed51b3360f2}{
+\index{BscLexer.h@{BscLexer.h}!BL\_\-COLON@{BL\_\-COLON}}
+\index{BL\_\-COLON@{BL\_\-COLON}!BscLexer.h@{BscLexer.h}}
+\subsubsection[{BL\_\-COLON}]{\setlength{\rightskip}{0pt plus 5cm}\#define BL\_\-COLON~0x70000052}}
+\label{_bsc_lexer_8h_ca9783808201b448114d8ed51b3360f2}
+
+
+
+
+Definition at line 58 of file BscLexer.h.\hypertarget{_bsc_lexer_8h_17a3930578ac82e27dc6cc22b9663614}{
+\index{BscLexer.h@{BscLexer.h}!BL\_\-COMMA@{BL\_\-COMMA}}
+\index{BL\_\-COMMA@{BL\_\-COMMA}!BscLexer.h@{BscLexer.h}}
+\subsubsection[{BL\_\-COMMA}]{\setlength{\rightskip}{0pt plus 5cm}\#define BL\_\-COMMA~0x70000050}}
+\label{_bsc_lexer_8h_17a3930578ac82e27dc6cc22b9663614}
+
+
+
+
+Definition at line 56 of file BscLexer.h.\hypertarget{_bsc_lexer_8h_2cce38e12fcb458b1dd735d3ed38b7b7}{
+\index{BscLexer.h@{BscLexer.h}!BL\_\-EOS@{BL\_\-EOS}}
+\index{BL\_\-EOS@{BL\_\-EOS}!BscLexer.h@{BscLexer.h}}
+\subsubsection[{BL\_\-EOS}]{\setlength{\rightskip}{0pt plus 5cm}\#define BL\_\-EOS~0x700000FF}}
+\label{_bsc_lexer_8h_2cce38e12fcb458b1dd735d3ed38b7b7}
+
+
+
+
+Definition at line 68 of file BscLexer.h.\hypertarget{_bsc_lexer_8h_78198cbfcca3bebeee17a373343e9e25}{
+\index{BscLexer.h@{BscLexer.h}!BL\_\-EQUALS@{BL\_\-EQUALS}}
+\index{BL\_\-EQUALS@{BL\_\-EQUALS}!BscLexer.h@{BscLexer.h}}
+\subsubsection[{BL\_\-EQUALS}]{\setlength{\rightskip}{0pt plus 5cm}\#define BL\_\-EQUALS~0x70000016}}
+\label{_bsc_lexer_8h_78198cbfcca3bebeee17a373343e9e25}
+
+
+
+
+Definition at line 32 of file BscLexer.h.\hypertarget{_bsc_lexer_8h_326158e53db8695db1f06779ba274599}{
+\index{BscLexer.h@{BscLexer.h}!BL\_\-GREATER@{BL\_\-GREATER}}
+\index{BL\_\-GREATER@{BL\_\-GREATER}!BscLexer.h@{BscLexer.h}}
+\subsubsection[{BL\_\-GREATER}]{\setlength{\rightskip}{0pt plus 5cm}\#define BL\_\-GREATER~0x70000041}}
+\label{_bsc_lexer_8h_326158e53db8695db1f06779ba274599}
+
+
+
+
+Definition at line 46 of file BscLexer.h.\hypertarget{_bsc_lexer_8h_7f057bfe96dcd6b7bdc27250e2953a3d}{
+\index{BscLexer.h@{BscLexer.h}!BL\_\-GREATEREQUAL@{BL\_\-GREATEREQUAL}}
+\index{BL\_\-GREATEREQUAL@{BL\_\-GREATEREQUAL}!BscLexer.h@{BscLexer.h}}
+\subsubsection[{BL\_\-GREATEREQUAL}]{\setlength{\rightskip}{0pt plus 5cm}\#define BL\_\-GREATEREQUAL~0x70000043}}
+\label{_bsc_lexer_8h_7f057bfe96dcd6b7bdc27250e2953a3d}
+
+
+
+
+Definition at line 48 of file BscLexer.h.\hypertarget{_bsc_lexer_8h_beacb5adf7776366620f484de4181715}{
+\index{BscLexer.h@{BscLexer.h}!BL\_\-IDENTIFIER@{BL\_\-IDENTIFIER}}
+\index{BL\_\-IDENTIFIER@{BL\_\-IDENTIFIER}!BscLexer.h@{BscLexer.h}}
+\subsubsection[{BL\_\-IDENTIFIER}]{\setlength{\rightskip}{0pt plus 5cm}\#define BL\_\-IDENTIFIER~0x70000000}}
+\label{_bsc_lexer_8h_beacb5adf7776366620f484de4181715}
+
+
+
+
+Definition at line 19 of file BscLexer.h.\hypertarget{_bsc_lexer_8h_6e8274cb63b775f1c019f5a9ed26e887}{
+\index{BscLexer.h@{BscLexer.h}!BL\_\-ISEQUAL@{BL\_\-ISEQUAL}}
+\index{BL\_\-ISEQUAL@{BL\_\-ISEQUAL}!BscLexer.h@{BscLexer.h}}
+\subsubsection[{BL\_\-ISEQUAL}]{\setlength{\rightskip}{0pt plus 5cm}\#define BL\_\-ISEQUAL~0x70000046}}
+\label{_bsc_lexer_8h_6e8274cb63b775f1c019f5a9ed26e887}
+
+
+
+
+Definition at line 51 of file BscLexer.h.\hypertarget{_bsc_lexer_8h_788c833df7920e15497b848806c9650d}{
+\index{BscLexer.h@{BscLexer.h}!BL\_\-LBRACE@{BL\_\-LBRACE}}
+\index{BL\_\-LBRACE@{BL\_\-LBRACE}!BscLexer.h@{BscLexer.h}}
+\subsubsection[{BL\_\-LBRACE}]{\setlength{\rightskip}{0pt plus 5cm}\#define BL\_\-LBRACE~0x70000034}}
+\label{_bsc_lexer_8h_788c833df7920e15497b848806c9650d}
+
+
+
+
+Definition at line 41 of file BscLexer.h.\hypertarget{_bsc_lexer_8h_bc6dcd678aa959e5d5401190bb334be3}{
+\index{BscLexer.h@{BscLexer.h}!BL\_\-LESS@{BL\_\-LESS}}
+\index{BL\_\-LESS@{BL\_\-LESS}!BscLexer.h@{BscLexer.h}}
+\subsubsection[{BL\_\-LESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define BL\_\-LESS~0x70000040}}
+\label{_bsc_lexer_8h_bc6dcd678aa959e5d5401190bb334be3}
+
+
+
+
+Definition at line 45 of file BscLexer.h.\hypertarget{_bsc_lexer_8h_fa3fb0b9ad247f5bd8a6ce243dcb673b}{
+\index{BscLexer.h@{BscLexer.h}!BL\_\-LESSEQUAL@{BL\_\-LESSEQUAL}}
+\index{BL\_\-LESSEQUAL@{BL\_\-LESSEQUAL}!BscLexer.h@{BscLexer.h}}
+\subsubsection[{BL\_\-LESSEQUAL}]{\setlength{\rightskip}{0pt plus 5cm}\#define BL\_\-LESSEQUAL~0x70000042}}
+\label{_bsc_lexer_8h_fa3fb0b9ad247f5bd8a6ce243dcb673b}
+
+
+
+
+Definition at line 47 of file BscLexer.h.\hypertarget{_bsc_lexer_8h_12188dcca7a4ee0d18b1fb339abd5e6e}{
+\index{BscLexer.h@{BscLexer.h}!BL\_\-LOGICALAND@{BL\_\-LOGICALAND}}
+\index{BL\_\-LOGICALAND@{BL\_\-LOGICALAND}!BscLexer.h@{BscLexer.h}}
+\subsubsection[{BL\_\-LOGICALAND}]{\setlength{\rightskip}{0pt plus 5cm}\#define BL\_\-LOGICALAND~0x70000047}}
+\label{_bsc_lexer_8h_12188dcca7a4ee0d18b1fb339abd5e6e}
+
+
+
+
+Definition at line 52 of file BscLexer.h.\hypertarget{_bsc_lexer_8h_f259c416431697430475da3bb3e04dcc}{
+\index{BscLexer.h@{BscLexer.h}!BL\_\-LOGICALOR@{BL\_\-LOGICALOR}}
+\index{BL\_\-LOGICALOR@{BL\_\-LOGICALOR}!BscLexer.h@{BscLexer.h}}
+\subsubsection[{BL\_\-LOGICALOR}]{\setlength{\rightskip}{0pt plus 5cm}\#define BL\_\-LOGICALOR~0x70000048}}
+\label{_bsc_lexer_8h_f259c416431697430475da3bb3e04dcc}
+
+
+
+
+Definition at line 53 of file BscLexer.h.\hypertarget{_bsc_lexer_8h_4477033c00854c1846af2bcc8a1302b6}{
+\index{BscLexer.h@{BscLexer.h}!BL\_\-LPAREN@{BL\_\-LPAREN}}
+\index{BL\_\-LPAREN@{BL\_\-LPAREN}!BscLexer.h@{BscLexer.h}}
+\subsubsection[{BL\_\-LPAREN}]{\setlength{\rightskip}{0pt plus 5cm}\#define BL\_\-LPAREN~0x70000032}}
+\label{_bsc_lexer_8h_4477033c00854c1846af2bcc8a1302b6}
+
+
+
+
+Definition at line 39 of file BscLexer.h.\hypertarget{_bsc_lexer_8h_a6c8ee0fa84d6ac387a60f54e898a968}{
+\index{BscLexer.h@{BscLexer.h}!BL\_\-LSQUAREBRACE@{BL\_\-LSQUAREBRACE}}
+\index{BL\_\-LSQUAREBRACE@{BL\_\-LSQUAREBRACE}!BscLexer.h@{BscLexer.h}}
+\subsubsection[{BL\_\-LSQUAREBRACE}]{\setlength{\rightskip}{0pt plus 5cm}\#define BL\_\-LSQUAREBRACE~0x70000030}}
+\label{_bsc_lexer_8h_a6c8ee0fa84d6ac387a60f54e898a968}
+
+
+
+
+Definition at line 37 of file BscLexer.h.\hypertarget{_bsc_lexer_8h_3340d30bfea194b81e0fc23ffb2b7e92}{
+\index{BscLexer.h@{BscLexer.h}!BL\_\-MINUS@{BL\_\-MINUS}}
+\index{BL\_\-MINUS@{BL\_\-MINUS}!BscLexer.h@{BscLexer.h}}
+\subsubsection[{BL\_\-MINUS}]{\setlength{\rightskip}{0pt plus 5cm}\#define BL\_\-MINUS~0x70000012}}
+\label{_bsc_lexer_8h_3340d30bfea194b81e0fc23ffb2b7e92}
+
+
+
+
+Definition at line 28 of file BscLexer.h.\hypertarget{_bsc_lexer_8h_047f3ef170d8a2bec24a2e14f2f9527e}{
+\index{BscLexer.h@{BscLexer.h}!BL\_\-NOT@{BL\_\-NOT}}
+\index{BL\_\-NOT@{BL\_\-NOT}!BscLexer.h@{BscLexer.h}}
+\subsubsection[{BL\_\-NOT}]{\setlength{\rightskip}{0pt plus 5cm}\#define BL\_\-NOT~0x70000045}}
+\label{_bsc_lexer_8h_047f3ef170d8a2bec24a2e14f2f9527e}
+
+
+
+
+Definition at line 49 of file BscLexer.h.\hypertarget{_bsc_lexer_8h_be36ea679fe844b0cfa5c4c27d765314}{
+\index{BscLexer.h@{BscLexer.h}!BL\_\-NOTEQUAL@{BL\_\-NOTEQUAL}}
+\index{BL\_\-NOTEQUAL@{BL\_\-NOTEQUAL}!BscLexer.h@{BscLexer.h}}
+\subsubsection[{BL\_\-NOTEQUAL}]{\setlength{\rightskip}{0pt plus 5cm}\#define BL\_\-NOTEQUAL~0x70000044}}
+\label{_bsc_lexer_8h_be36ea679fe844b0cfa5c4c27d765314}
+
+
+
+
+Definition at line 50 of file BscLexer.h.\hypertarget{_bsc_lexer_8h_2a97eaf485271f44145c102dad2917c0}{
+\index{BscLexer.h@{BscLexer.h}!BL\_\-NUMBER@{BL\_\-NUMBER}}
+\index{BL\_\-NUMBER@{BL\_\-NUMBER}!BscLexer.h@{BscLexer.h}}
+\subsubsection[{BL\_\-NUMBER}]{\setlength{\rightskip}{0pt plus 5cm}\#define BL\_\-NUMBER~0x70000001}}
+\label{_bsc_lexer_8h_2a97eaf485271f44145c102dad2917c0}
+
+
+
+
+Definition at line 22 of file BscLexer.h.\hypertarget{_bsc_lexer_8h_813ec386e807deab778f58b0eadbd2d0}{
+\index{BscLexer.h@{BscLexer.h}!BL\_\-OR@{BL\_\-OR}}
+\index{BL\_\-OR@{BL\_\-OR}!BscLexer.h@{BscLexer.h}}
+\subsubsection[{BL\_\-OR}]{\setlength{\rightskip}{0pt plus 5cm}\#define BL\_\-OR~0x70000018}}
+\label{_bsc_lexer_8h_813ec386e807deab778f58b0eadbd2d0}
+
+
+
+
+Definition at line 34 of file BscLexer.h.\hypertarget{_bsc_lexer_8h_0dd45bb85e495b397f4637bebfc3b29f}{
+\index{BscLexer.h@{BscLexer.h}!BL\_\-PERCENT@{BL\_\-PERCENT}}
+\index{BL\_\-PERCENT@{BL\_\-PERCENT}!BscLexer.h@{BscLexer.h}}
+\subsubsection[{BL\_\-PERCENT}]{\setlength{\rightskip}{0pt plus 5cm}\#define BL\_\-PERCENT~0x70000015}}
+\label{_bsc_lexer_8h_0dd45bb85e495b397f4637bebfc3b29f}
+
+
+
+
+Definition at line 31 of file BscLexer.h.\hypertarget{_bsc_lexer_8h_8fef1d8b5e8838624d12c6a2833c4ff1}{
+\index{BscLexer.h@{BscLexer.h}!BL\_\-PERIOD@{BL\_\-PERIOD}}
+\index{BL\_\-PERIOD@{BL\_\-PERIOD}!BscLexer.h@{BscLexer.h}}
+\subsubsection[{BL\_\-PERIOD}]{\setlength{\rightskip}{0pt plus 5cm}\#define BL\_\-PERIOD~0x70000053}}
+\label{_bsc_lexer_8h_8fef1d8b5e8838624d12c6a2833c4ff1}
+
+
+
+
+Definition at line 59 of file BscLexer.h.\hypertarget{_bsc_lexer_8h_50403b96509db27112c819010a9ac9a3}{
+\index{BscLexer.h@{BscLexer.h}!BL\_\-PLUS@{BL\_\-PLUS}}
+\index{BL\_\-PLUS@{BL\_\-PLUS}!BscLexer.h@{BscLexer.h}}
+\subsubsection[{BL\_\-PLUS}]{\setlength{\rightskip}{0pt plus 5cm}\#define BL\_\-PLUS~0x70000011}}
+\label{_bsc_lexer_8h_50403b96509db27112c819010a9ac9a3}
+
+
+
+
+Definition at line 27 of file BscLexer.h.\hypertarget{_bsc_lexer_8h_93b2a3d998a210cceab762bf0250fb70}{
+\index{BscLexer.h@{BscLexer.h}!BL\_\-RBRACE@{BL\_\-RBRACE}}
+\index{BL\_\-RBRACE@{BL\_\-RBRACE}!BscLexer.h@{BscLexer.h}}
+\subsubsection[{BL\_\-RBRACE}]{\setlength{\rightskip}{0pt plus 5cm}\#define BL\_\-RBRACE~0x70000035}}
+\label{_bsc_lexer_8h_93b2a3d998a210cceab762bf0250fb70}
+
+
+
+
+Definition at line 42 of file BscLexer.h.\hypertarget{_bsc_lexer_8h_27e15fd382f693bb7e241f49a5d65192}{
+\index{BscLexer.h@{BscLexer.h}!BL\_\-RPAREN@{BL\_\-RPAREN}}
+\index{BL\_\-RPAREN@{BL\_\-RPAREN}!BscLexer.h@{BscLexer.h}}
+\subsubsection[{BL\_\-RPAREN}]{\setlength{\rightskip}{0pt plus 5cm}\#define BL\_\-RPAREN~0x70000033}}
+\label{_bsc_lexer_8h_27e15fd382f693bb7e241f49a5d65192}
+
+
+
+
+Definition at line 40 of file BscLexer.h.\hypertarget{_bsc_lexer_8h_c258ce46e44d820fd8a95fc125d0e3f2}{
+\index{BscLexer.h@{BscLexer.h}!BL\_\-RSQUAREBRACE@{BL\_\-RSQUAREBRACE}}
+\index{BL\_\-RSQUAREBRACE@{BL\_\-RSQUAREBRACE}!BscLexer.h@{BscLexer.h}}
+\subsubsection[{BL\_\-RSQUAREBRACE}]{\setlength{\rightskip}{0pt plus 5cm}\#define BL\_\-RSQUAREBRACE~0x70000031}}
+\label{_bsc_lexer_8h_c258ce46e44d820fd8a95fc125d0e3f2}
+
+
+
+
+Definition at line 38 of file BscLexer.h.\hypertarget{_bsc_lexer_8h_866457580af8eb3e2f12e3ca7fa0e8cd}{
+\index{BscLexer.h@{BscLexer.h}!BL\_\-SEMICOLON@{BL\_\-SEMICOLON}}
+\index{BL\_\-SEMICOLON@{BL\_\-SEMICOLON}!BscLexer.h@{BscLexer.h}}
+\subsubsection[{BL\_\-SEMICOLON}]{\setlength{\rightskip}{0pt plus 5cm}\#define BL\_\-SEMICOLON~0x70000051}}
+\label{_bsc_lexer_8h_866457580af8eb3e2f12e3ca7fa0e8cd}
+
+
+
+
+Definition at line 57 of file BscLexer.h.\hypertarget{_bsc_lexer_8h_703fccbef010a8cc63acec1e4f13f6e1}{
+\index{BscLexer.h@{BscLexer.h}!BL\_\-SLASH@{BL\_\-SLASH}}
+\index{BL\_\-SLASH@{BL\_\-SLASH}!BscLexer.h@{BscLexer.h}}
+\subsubsection[{BL\_\-SLASH}]{\setlength{\rightskip}{0pt plus 5cm}\#define BL\_\-SLASH~0x70000014}}
+\label{_bsc_lexer_8h_703fccbef010a8cc63acec1e4f13f6e1}
+
+
+
+
+Definition at line 30 of file BscLexer.h.\hypertarget{_bsc_lexer_8h_460b90cfc2ce66985f57577ba8652be0}{
+\index{BscLexer.h@{BscLexer.h}!BL\_\-STRING@{BL\_\-STRING}}
+\index{BL\_\-STRING@{BL\_\-STRING}!BscLexer.h@{BscLexer.h}}
+\subsubsection[{BL\_\-STRING}]{\setlength{\rightskip}{0pt plus 5cm}\#define BL\_\-STRING~0x70000002}}
+\label{_bsc_lexer_8h_460b90cfc2ce66985f57577ba8652be0}
+
+
+
+
+Definition at line 23 of file BscLexer.h.\hypertarget{_bsc_lexer_8h_f3815e17a03d010630753b3148a4115c}{
+\index{BscLexer.h@{BscLexer.h}!BL\_\-TEXT@{BL\_\-TEXT}}
+\index{BL\_\-TEXT@{BL\_\-TEXT}!BscLexer.h@{BscLexer.h}}
+\subsubsection[{BL\_\-TEXT}]{\setlength{\rightskip}{0pt plus 5cm}\#define BL\_\-TEXT~0x70000070}}
+\label{_bsc_lexer_8h_f3815e17a03d010630753b3148a4115c}
+
+
+
+
+Definition at line 65 of file BscLexer.h.

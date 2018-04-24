@@ -1,0 +1,85 @@
+\hypertarget{_gr_render_util_8cpp}{
+\section{C:/Bootstrap/ProjectBX/Engine/Graphics/GrRenderUtil.cpp File Reference}
+\label{_gr_render_util_8cpp}\index{C:/Bootstrap/ProjectBX/Engine/Graphics/GrRenderUtil.cpp@{C:/Bootstrap/ProjectBX/Engine/Graphics/GrRenderUtil.cpp}}
+}
+{\tt \#include \char`\"{}graphics\_\-afx.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrRenderUtil.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrMeshBufferMgr.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrMeshVB.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrTypes.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrCamera.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrColor.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrShader.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrShaderMgr.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrConfig.h\char`\"{}}\par
+{\tt \#include \char`\"{}MAABox.h\char`\"{}}\par
+{\tt \#include \char`\"{}MOBox.h\char`\"{}}\par
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+struct \hyperlink{struct_s_tex_vertex}{STexVertex}
+\item 
+struct \hyperlink{struct_s_color_vertex}{SColorVertex}
+\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+const char $\ast$ \hyperlink{_gr_render_util_8cpp_683ee85ea07d9d589bf8d713a298b10f}{colorShaderVP}
+\item 
+const char $\ast$ \hyperlink{_gr_render_util_8cpp_3d68ddc8a510b6806fc825090163b351}{colorShaderFP}
+\item 
+\hyperlink{class_gr_render_util}{GrRenderUtil} $\ast$ \hyperlink{_gr_render_util_8cpp_fb34712df0783f1147102607ffa75997}{gGrRenderUtil} = 0
+\end{CompactItemize}
+
+
+\subsection{Variable Documentation}
+\hypertarget{_gr_render_util_8cpp_3d68ddc8a510b6806fc825090163b351}{
+\index{GrRenderUtil.cpp@{GrRenderUtil.cpp}!colorShaderFP@{colorShaderFP}}
+\index{colorShaderFP@{colorShaderFP}!GrRenderUtil.cpp@{GrRenderUtil.cpp}}
+\subsubsection[{colorShaderFP}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf colorShaderFP}}}
+\label{_gr_render_util_8cpp_3d68ddc8a510b6806fc825090163b351}
+
+
+\textbf{Initial value:}
+
+\begin{Code}\begin{verbatim} 
+"varying vec4 v_Color;\n"
+"void main() {\n"
+" gl_FragColor = v_Color;\n"
+"}\n"
+\end{verbatim}
+\end{Code}
+
+
+Definition at line 35 of file GrRenderUtil.cpp.\hypertarget{_gr_render_util_8cpp_683ee85ea07d9d589bf8d713a298b10f}{
+\index{GrRenderUtil.cpp@{GrRenderUtil.cpp}!colorShaderVP@{colorShaderVP}}
+\index{colorShaderVP@{colorShaderVP}!GrRenderUtil.cpp@{GrRenderUtil.cpp}}
+\subsubsection[{colorShaderVP}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf colorShaderVP}}}
+\label{_gr_render_util_8cpp_683ee85ea07d9d589bf8d713a298b10f}
+
+
+\textbf{Initial value:}
+
+\begin{Code}\begin{verbatim}
+"attribute vec3 a_Position;\n"
+"attribute vec4 a_Color;\n"
+"varying vec4 v_Color;\n"
+"uniform mat4 u_ModelViewProjectionMatrix;\n"
+"void main() {\n"
+" gl_Position = u_ModelViewProjectionMatrix * vec4( a_Position.xyz, 1.0 );\n"
+" v_Color = a_Color;\n"
+"}\n"
+\end{verbatim}
+\end{Code}
+
+
+Definition at line 25 of file GrRenderUtil.cpp.\hypertarget{_gr_render_util_8cpp_fb34712df0783f1147102607ffa75997}{
+\index{GrRenderUtil.cpp@{GrRenderUtil.cpp}!gGrRenderUtil@{gGrRenderUtil}}
+\index{gGrRenderUtil@{gGrRenderUtil}!GrRenderUtil.cpp@{GrRenderUtil.cpp}}
+\subsubsection[{gGrRenderUtil}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrRenderUtil}$\ast$ {\bf gGrRenderUtil} = 0}}
+\label{_gr_render_util_8cpp_fb34712df0783f1147102607ffa75997}
+
+
+
+
+Definition at line 54 of file GrRenderUtil.cpp.

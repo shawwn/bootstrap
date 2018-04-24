@@ -1,0 +1,329 @@
+\hypertarget{class_gr_model_node}{
+\section{GrModelNode Class Reference}
+\label{class_gr_model_node}\index{GrModelNode@{GrModelNode}}
+}
+{\tt \#include $<$GrModelNode.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef \hyperlink{class_u_fast_array}{UFastArray}$<$ \hyperlink{class_gr_mesh_inst}{GrMeshInst} $\ast$ $>$ \hyperlink{class_gr_model_node_7476f52e379fe6e8778e1f990343cee0}{MeshInstArray}
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_model_node_30cd7578448ddbb5b07276de2d96cfed}{GrModelNode} (\hyperlink{class_gr_model}{GrModel} $\ast$owner, \hyperlink{class_gr_model_node}{GrModelNode} $\ast$parent, const \hyperlink{class_m_mat4x4}{MMat4x4} \&local, \hyperlink{class_gr_mesh_inst}{GrMeshInst} $\ast$meshInst=0)
+\item 
+\hyperlink{class_gr_model_node_b63d4ab8c48384da1c14bc5032fde28d}{GrModelNode} (\hyperlink{class_gr_model}{GrModel} $\ast$owner, \hyperlink{class_gr_polygon_node}{GrPolygonNode} $\ast$fromTree)
+\item 
+\hyperlink{class_gr_model_node_391064a9dadfae2e8e0022a1f7009602}{GrModelNode} (\hyperlink{class_gr_model}{GrModel} $\ast$owner, \hyperlink{class_u_reader}{UReader} \&reader, const \hyperlink{class_u_fast_array}{UFastArray}$<$ \hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_mesh}{GrMesh} $>$ $>$ \&meshes, unsigned short majorVer, unsigned short minorVer)
+\item 
+\hyperlink{class_gr_model_node_2dfd62bcdf39b2c3004c762d865ffb0d}{$\sim$GrModelNode} ()
+\item 
+const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \& \hyperlink{class_gr_model_node_7cf09b5e2cf96cf2d1d797c2f569ea01}{GetName} () const 
+\item 
+\hyperlink{class_gr_model}{GrModel} $\ast$ \hyperlink{class_gr_model_node_f03b5dd5229d1c4f8f6232fd6d419335}{GetOwner} () const 
+\item 
+\hyperlink{class_gr_model_node}{GrModelNode} $\ast$ \hyperlink{class_gr_model_node_6bcd4b9a2763671b7bd20a5556aa1a22}{Clone} (\hyperlink{class_gr_model}{GrModel} $\ast$newOwner, bool deep=false, \hyperlink{class_gr_model_node}{GrModelNode} $\ast$parent=0)
+\item 
+void \hyperlink{class_gr_model_node_1de0741bd0fbf78cb7ef6802948b6080}{SetLocal} (const \hyperlink{class_m_mat4x4}{MMat4x4} \&local)
+\item 
+const \hyperlink{class_m_mat4x4}{MMat4x4} \& \hyperlink{class_gr_model_node_830a21b1037e3b0d6859626bc5bfcf74}{GetLocal} () const 
+\item 
+unsigned int \hyperlink{class_gr_model_node_a21248145ac1e276678ee4e8e1b02b0c}{GetChildCount} ()
+\item 
+\hyperlink{class_gr_model_node}{GrModelNode} $\ast$ \hyperlink{class_gr_model_node_5b6cf7fff3778f0c4411823132cb5c28}{GetChild} (unsigned int idx)
+\item 
+\hyperlink{class_gr_model_node}{GrModelNode} $\ast$ \hyperlink{class_gr_model_node_ea35f9469b11a8a8033f8ad1c7a54c24}{FindNode} (const char $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, bool ignoreCase)
+\item 
+\hyperlink{class_gr_model_node}{GrModelNode} $\ast$ \hyperlink{class_gr_model_node_e203953dfdbddbb5cf35859187a2e749}{GetParent} () const 
+\item 
+unsigned int \hyperlink{class_gr_model_node_34fb55f7a4af15a5d6f241117f62012f}{GetMeshInstCount} () const 
+\item 
+\hyperlink{class_gr_mesh_inst}{GrMeshInst} $\ast$ \hyperlink{class_gr_model_node_f5340d3bc303ba7f9211f89e791b013d}{GetMeshInst} (unsigned int idx) const 
+\item 
+void \hyperlink{class_gr_model_node_c5c58f7cd659b01c66e0f45054cd6200}{Update} (const \hyperlink{class_m_mat4x4}{MMat4x4} \&parentMatrix)
+\item 
+void \hyperlink{class_gr_model_node_91040763448f20348673c730e8e6fbf8}{CalcBounds} (\hyperlink{class_m_a_a_box}{MAABox} \&bounds)
+\item 
+bool \hyperlink{class_gr_model_node_3bc9a825d5c12c5f8484a869e992ac0f}{CalcBoundsExact} (\hyperlink{class_m_a_a_box}{MAABox} \&bounds, bool boundsInit=false)
+\item 
+const \hyperlink{class_m_mat4x4}{MMat4x4} \& \hyperlink{class_gr_model_node_2799107e185b3fb30a4429b1bb0cf1f9}{GetWorld} () const 
+\item 
+void \hyperlink{class_gr_model_node_65acb56567cf1c21de6124a9e3ef0b71}{SetWorld} (const \hyperlink{class_m_mat4x4}{MMat4x4} \&\hyperlink{glext__bak_8h_07993c0d92c1aeeb357ba0495c8b5325}{transform})
+\item 
+void \hyperlink{class_gr_model_node_2c131ad23d4aa9b499340a803690e3d0}{BuildMeshList} (\hyperlink{class_u_fast_array}{UFastArray}$<$ \hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_mesh}{GrMesh} $>$ $>$ \&meshes)
+\item 
+void \hyperlink{class_gr_model_node_6dd727604b84d6463b1ba282d0702b4a}{Optimize} ()
+\item 
+void \hyperlink{class_gr_model_node_8dfebc45736fa221d3988d7bc05f71bf}{Cache} ()
+\item 
+void \hyperlink{class_gr_model_node_598ada3ae0f7b3028d0b9f3cff6c1edd}{Evict} ()
+\item 
+void \hyperlink{class_gr_model_node_5232522d893c1b123115f95a6e1b1a7a}{Save} (\hyperlink{class_u_writer}{UWriter} \&writer) const 
+\item 
+void \hyperlink{class_gr_model_node_ad9c0636157e8cad390826cf91e16780}{GetRenderableObjects} (\hyperlink{class_gr_render_list}{GrRenderList} \&lightReceivers, \hyperlink{class_gr_render_list}{GrRenderList} $\ast$shadowCasters) const 
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 35 of file GrModelNode.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_gr_model_node_7476f52e379fe6e8778e1f990343cee0}{
+\index{GrModelNode@{GrModelNode}!MeshInstArray@{MeshInstArray}}
+\index{MeshInstArray@{MeshInstArray}!GrModelNode@{GrModelNode}}
+\subsubsection[{MeshInstArray}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf UFastArray}$<$ {\bf GrMeshInst}$\ast$ $>$ {\bf GrModelNode::MeshInstArray}}}
+\label{class_gr_model_node_7476f52e379fe6e8778e1f990343cee0}
+
+
+
+
+Definition at line 38 of file GrModelNode.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_model_node_30cd7578448ddbb5b07276de2d96cfed}{
+\index{GrModelNode@{GrModelNode}!GrModelNode@{GrModelNode}}
+\index{GrModelNode@{GrModelNode}!GrModelNode@{GrModelNode}}
+\subsubsection[{GrModelNode}]{\setlength{\rightskip}{0pt plus 5cm}GrModelNode::GrModelNode ({\bf GrModel} $\ast$ {\em owner}, \/  {\bf GrModelNode} $\ast$ {\em parent}, \/  const {\bf MMat4x4} \& {\em local}, \/  {\bf GrMeshInst} $\ast$ {\em meshInst} = {\tt 0})}}
+\label{class_gr_model_node_30cd7578448ddbb5b07276de2d96cfed}
+
+
+
+
+Definition at line 36 of file GrModelNode.cpp.\hypertarget{class_gr_model_node_b63d4ab8c48384da1c14bc5032fde28d}{
+\index{GrModelNode@{GrModelNode}!GrModelNode@{GrModelNode}}
+\index{GrModelNode@{GrModelNode}!GrModelNode@{GrModelNode}}
+\subsubsection[{GrModelNode}]{\setlength{\rightskip}{0pt plus 5cm}GrModelNode::GrModelNode ({\bf GrModel} $\ast$ {\em owner}, \/  {\bf GrPolygonNode} $\ast$ {\em fromTree})}}
+\label{class_gr_model_node_b63d4ab8c48384da1c14bc5032fde28d}
+
+
+
+
+Definition at line 45 of file GrModelNode.cpp.\hypertarget{class_gr_model_node_391064a9dadfae2e8e0022a1f7009602}{
+\index{GrModelNode@{GrModelNode}!GrModelNode@{GrModelNode}}
+\index{GrModelNode@{GrModelNode}!GrModelNode@{GrModelNode}}
+\subsubsection[{GrModelNode}]{\setlength{\rightskip}{0pt plus 5cm}GrModelNode::GrModelNode ({\bf GrModel} $\ast$ {\em owner}, \/  {\bf UReader} \& {\em reader}, \/  const {\bf UFastArray}$<$ {\bf URef}$<$ {\bf GrMesh} $>$ $>$ \& {\em meshes}, \/  unsigned short {\em majorVer}, \/  unsigned short {\em minorVer})}}
+\label{class_gr_model_node_391064a9dadfae2e8e0022a1f7009602}
+
+
+
+
+Definition at line 92 of file GrModelNode.cpp.\hypertarget{class_gr_model_node_2dfd62bcdf39b2c3004c762d865ffb0d}{
+\index{GrModelNode@{GrModelNode}!$\sim$GrModelNode@{$\sim$GrModelNode}}
+\index{$\sim$GrModelNode@{$\sim$GrModelNode}!GrModelNode@{GrModelNode}}
+\subsubsection[{$\sim$GrModelNode}]{\setlength{\rightskip}{0pt plus 5cm}GrModelNode::$\sim$GrModelNode ()}}
+\label{class_gr_model_node_2dfd62bcdf39b2c3004c762d865ffb0d}
+
+
+
+
+Definition at line 101 of file GrModelNode.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_model_node_2c131ad23d4aa9b499340a803690e3d0}{
+\index{GrModelNode@{GrModelNode}!BuildMeshList@{BuildMeshList}}
+\index{BuildMeshList@{BuildMeshList}!GrModelNode@{GrModelNode}}
+\subsubsection[{BuildMeshList}]{\setlength{\rightskip}{0pt plus 5cm}void GrModelNode::BuildMeshList ({\bf UFastArray}$<$ {\bf URef}$<$ {\bf GrMesh} $>$ $>$ \& {\em meshes})}}
+\label{class_gr_model_node_2c131ad23d4aa9b499340a803690e3d0}
+
+
+
+
+Definition at line 295 of file GrModelNode.cpp.\hypertarget{class_gr_model_node_8dfebc45736fa221d3988d7bc05f71bf}{
+\index{GrModelNode@{GrModelNode}!Cache@{Cache}}
+\index{Cache@{Cache}!GrModelNode@{GrModelNode}}
+\subsubsection[{Cache}]{\setlength{\rightskip}{0pt plus 5cm}void GrModelNode::Cache ()}}
+\label{class_gr_model_node_8dfebc45736fa221d3988d7bc05f71bf}
+
+
+
+
+Definition at line 327 of file GrModelNode.cpp.\hypertarget{class_gr_model_node_91040763448f20348673c730e8e6fbf8}{
+\index{GrModelNode@{GrModelNode}!CalcBounds@{CalcBounds}}
+\index{CalcBounds@{CalcBounds}!GrModelNode@{GrModelNode}}
+\subsubsection[{CalcBounds}]{\setlength{\rightskip}{0pt plus 5cm}void GrModelNode::CalcBounds ({\bf MAABox} \& {\em bounds})}}
+\label{class_gr_model_node_91040763448f20348673c730e8e6fbf8}
+
+
+
+
+Definition at line 208 of file GrModelNode.cpp.\hypertarget{class_gr_model_node_3bc9a825d5c12c5f8484a869e992ac0f}{
+\index{GrModelNode@{GrModelNode}!CalcBoundsExact@{CalcBoundsExact}}
+\index{CalcBoundsExact@{CalcBoundsExact}!GrModelNode@{GrModelNode}}
+\subsubsection[{CalcBoundsExact}]{\setlength{\rightskip}{0pt plus 5cm}bool GrModelNode::CalcBoundsExact ({\bf MAABox} \& {\em bounds}, \/  bool {\em boundsInit} = {\tt false})}}
+\label{class_gr_model_node_3bc9a825d5c12c5f8484a869e992ac0f}
+
+
+
+
+Definition at line 223 of file GrModelNode.cpp.\hypertarget{class_gr_model_node_6bcd4b9a2763671b7bd20a5556aa1a22}{
+\index{GrModelNode@{GrModelNode}!Clone@{Clone}}
+\index{Clone@{Clone}!GrModelNode@{GrModelNode}}
+\subsubsection[{Clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrModelNode} $\ast$ GrModelNode::Clone ({\bf GrModel} $\ast$ {\em newOwner}, \/  bool {\em deep} = {\tt false}, \/  {\bf GrModelNode} $\ast$ {\em parent} = {\tt 0})}}
+\label{class_gr_model_node_6bcd4b9a2763671b7bd20a5556aa1a22}
+
+
+
+
+Definition at line 119 of file GrModelNode.cpp.\hypertarget{class_gr_model_node_598ada3ae0f7b3028d0b9f3cff6c1edd}{
+\index{GrModelNode@{GrModelNode}!Evict@{Evict}}
+\index{Evict@{Evict}!GrModelNode@{GrModelNode}}
+\subsubsection[{Evict}]{\setlength{\rightskip}{0pt plus 5cm}void GrModelNode::Evict ()}}
+\label{class_gr_model_node_598ada3ae0f7b3028d0b9f3cff6c1edd}
+
+
+
+
+Definition at line 338 of file GrModelNode.cpp.\hypertarget{class_gr_model_node_ea35f9469b11a8a8033f8ad1c7a54c24}{
+\index{GrModelNode@{GrModelNode}!FindNode@{FindNode}}
+\index{FindNode@{FindNode}!GrModelNode@{GrModelNode}}
+\subsubsection[{FindNode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrModelNode} $\ast$ GrModelNode::FindNode (const char $\ast$ {\em name}, \/  bool {\em ignoreCase})}}
+\label{class_gr_model_node_ea35f9469b11a8a8033f8ad1c7a54c24}
+
+
+
+
+Definition at line 156 of file GrModelNode.cpp.\hypertarget{class_gr_model_node_5b6cf7fff3778f0c4411823132cb5c28}{
+\index{GrModelNode@{GrModelNode}!GetChild@{GetChild}}
+\index{GetChild@{GetChild}!GrModelNode@{GrModelNode}}
+\subsubsection[{GetChild}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrModelNode} $\ast$ GrModelNode::GetChild (unsigned int {\em idx})}}
+\label{class_gr_model_node_5b6cf7fff3778f0c4411823132cb5c28}
+
+
+
+
+Definition at line 148 of file GrModelNode.cpp.\hypertarget{class_gr_model_node_a21248145ac1e276678ee4e8e1b02b0c}{
+\index{GrModelNode@{GrModelNode}!GetChildCount@{GetChildCount}}
+\index{GetChildCount@{GetChildCount}!GrModelNode@{GrModelNode}}
+\subsubsection[{GetChildCount}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrModelNode::GetChildCount ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_model_node_a21248145ac1e276678ee4e8e1b02b0c}
+
+
+
+
+Definition at line 60 of file GrModelNode.h.\hypertarget{class_gr_model_node_830a21b1037e3b0d6859626bc5bfcf74}{
+\index{GrModelNode@{GrModelNode}!GetLocal@{GetLocal}}
+\index{GetLocal@{GetLocal}!GrModelNode@{GrModelNode}}
+\subsubsection[{GetLocal}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MMat4x4}\& GrModelNode::GetLocal () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_model_node_830a21b1037e3b0d6859626bc5bfcf74}
+
+
+
+
+Definition at line 57 of file GrModelNode.h.\hypertarget{class_gr_model_node_f5340d3bc303ba7f9211f89e791b013d}{
+\index{GrModelNode@{GrModelNode}!GetMeshInst@{GetMeshInst}}
+\index{GetMeshInst@{GetMeshInst}!GrModelNode@{GrModelNode}}
+\subsubsection[{GetMeshInst}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrMeshInst} $\ast$ GrModelNode::GetMeshInst (unsigned int {\em idx}) const}}
+\label{class_gr_model_node_f5340d3bc303ba7f9211f89e791b013d}
+
+
+
+
+Definition at line 183 of file GrModelNode.cpp.\hypertarget{class_gr_model_node_34fb55f7a4af15a5d6f241117f62012f}{
+\index{GrModelNode@{GrModelNode}!GetMeshInstCount@{GetMeshInstCount}}
+\index{GetMeshInstCount@{GetMeshInstCount}!GrModelNode@{GrModelNode}}
+\subsubsection[{GetMeshInstCount}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrModelNode::GetMeshInstCount () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_model_node_34fb55f7a4af15a5d6f241117f62012f}
+
+
+
+
+Definition at line 66 of file GrModelNode.h.\hypertarget{class_gr_model_node_7cf09b5e2cf96cf2d1d797c2f569ea01}{
+\index{GrModelNode@{GrModelNode}!GetName@{GetName}}
+\index{GetName@{GetName}!GrModelNode@{GrModelNode}}
+\subsubsection[{GetName}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf tstring}\& GrModelNode::GetName () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_model_node_7cf09b5e2cf96cf2d1d797c2f569ea01}
+
+
+
+
+Definition at line 48 of file GrModelNode.h.\hypertarget{class_gr_model_node_f03b5dd5229d1c4f8f6232fd6d419335}{
+\index{GrModelNode@{GrModelNode}!GetOwner@{GetOwner}}
+\index{GetOwner@{GetOwner}!GrModelNode@{GrModelNode}}
+\subsubsection[{GetOwner}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrModel}$\ast$ GrModelNode::GetOwner () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_model_node_f03b5dd5229d1c4f8f6232fd6d419335}
+
+
+
+
+Definition at line 50 of file GrModelNode.h.\hypertarget{class_gr_model_node_e203953dfdbddbb5cf35859187a2e749}{
+\index{GrModelNode@{GrModelNode}!GetParent@{GetParent}}
+\index{GetParent@{GetParent}!GrModelNode@{GrModelNode}}
+\subsubsection[{GetParent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrModelNode}$\ast$ GrModelNode::GetParent () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_model_node_e203953dfdbddbb5cf35859187a2e749}
+
+
+
+
+Definition at line 63 of file GrModelNode.h.\hypertarget{class_gr_model_node_ad9c0636157e8cad390826cf91e16780}{
+\index{GrModelNode@{GrModelNode}!GetRenderableObjects@{GetRenderableObjects}}
+\index{GetRenderableObjects@{GetRenderableObjects}!GrModelNode@{GrModelNode}}
+\subsubsection[{GetRenderableObjects}]{\setlength{\rightskip}{0pt plus 5cm}void GrModelNode::GetRenderableObjects ({\bf GrRenderList} \& {\em lightReceivers}, \/  {\bf GrRenderList} $\ast$ {\em shadowCasters}) const}}
+\label{class_gr_model_node_ad9c0636157e8cad390826cf91e16780}
+
+
+
+
+Definition at line 377 of file GrModelNode.cpp.\hypertarget{class_gr_model_node_2799107e185b3fb30a4429b1bb0cf1f9}{
+\index{GrModelNode@{GrModelNode}!GetWorld@{GetWorld}}
+\index{GetWorld@{GetWorld}!GrModelNode@{GrModelNode}}
+\subsubsection[{GetWorld}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MMat4x4} \& GrModelNode::GetWorld () const}}
+\label{class_gr_model_node_2799107e185b3fb30a4429b1bb0cf1f9}
+
+
+
+
+Definition at line 258 of file GrModelNode.cpp.\hypertarget{class_gr_model_node_6dd727604b84d6463b1ba282d0702b4a}{
+\index{GrModelNode@{GrModelNode}!Optimize@{Optimize}}
+\index{Optimize@{Optimize}!GrModelNode@{GrModelNode}}
+\subsubsection[{Optimize}]{\setlength{\rightskip}{0pt plus 5cm}void GrModelNode::Optimize ()}}
+\label{class_gr_model_node_6dd727604b84d6463b1ba282d0702b4a}
+
+
+
+
+Definition at line 319 of file GrModelNode.cpp.\hypertarget{class_gr_model_node_5232522d893c1b123115f95a6e1b1a7a}{
+\index{GrModelNode@{GrModelNode}!Save@{Save}}
+\index{Save@{Save}!GrModelNode@{GrModelNode}}
+\subsubsection[{Save}]{\setlength{\rightskip}{0pt plus 5cm}void GrModelNode::Save ({\bf UWriter} \& {\em writer}) const}}
+\label{class_gr_model_node_5232522d893c1b123115f95a6e1b1a7a}
+
+
+
+
+Definition at line 349 of file GrModelNode.cpp.\hypertarget{class_gr_model_node_1de0741bd0fbf78cb7ef6802948b6080}{
+\index{GrModelNode@{GrModelNode}!SetLocal@{SetLocal}}
+\index{SetLocal@{SetLocal}!GrModelNode@{GrModelNode}}
+\subsubsection[{SetLocal}]{\setlength{\rightskip}{0pt plus 5cm}void GrModelNode::SetLocal (const {\bf MMat4x4} \& {\em local})}}
+\label{class_gr_model_node_1de0741bd0fbf78cb7ef6802948b6080}
+
+
+
+
+Definition at line 139 of file GrModelNode.cpp.\hypertarget{class_gr_model_node_65acb56567cf1c21de6124a9e3ef0b71}{
+\index{GrModelNode@{GrModelNode}!SetWorld@{SetWorld}}
+\index{SetWorld@{SetWorld}!GrModelNode@{GrModelNode}}
+\subsubsection[{SetWorld}]{\setlength{\rightskip}{0pt plus 5cm}void GrModelNode::SetWorld (const {\bf MMat4x4} \& {\em transform})}}
+\label{class_gr_model_node_65acb56567cf1c21de6124a9e3ef0b71}
+
+
+
+
+Definition at line 265 of file GrModelNode.cpp.\hypertarget{class_gr_model_node_c5c58f7cd659b01c66e0f45054cd6200}{
+\index{GrModelNode@{GrModelNode}!Update@{Update}}
+\index{Update@{Update}!GrModelNode@{GrModelNode}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void GrModelNode::Update (const {\bf MMat4x4} \& {\em parentMatrix})}}
+\label{class_gr_model_node_c5c58f7cd659b01c66e0f45054cd6200}
+
+
+
+
+Definition at line 191 of file GrModelNode.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_model_node_8h}{GrModelNode.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_model_node_8cpp}{GrModelNode.cpp}\end{CompactItemize}

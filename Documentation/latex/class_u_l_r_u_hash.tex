@@ -1,0 +1,263 @@
+\hypertarget{class_u_l_r_u_hash}{
+\section{ULRUHash$<$ \_\-Key, \_\-T, \_\-KeyHash $>$ Class Template Reference}
+\label{class_u_l_r_u_hash}\index{ULRUHash@{ULRUHash}}
+}
+{\tt \#include $<$ULRUHash.h$>$}
+
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+struct \textbf{SBinItem}
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_u_l_r_u_hash_64b8501e537b7805aab37bd0d45ee5d0}{ULRUHash} (unsigned int sizePow2)
+\item 
+\hyperlink{class_u_l_r_u_hash_b208b6347de680be8a5fb0ac3459c908}{$\sim$ULRUHash} ()
+\item 
+unsigned int \hyperlink{class_u_l_r_u_hash_7d623f663f2644180432bd29c9fdd801}{GetSize} () const 
+\item 
+unsigned int \hyperlink{class_u_l_r_u_hash_a2e102da1f9a2579533a429b535e9ded}{GetElemCount} () const 
+\item 
+void $\ast$ \hyperlink{class_u_l_r_u_hash_ad3291d30433c9dfc058f4ea14f4aa52}{Insert} (\_\-KeyHash keyHash, const \_\-Key \&key, const \_\-T \&item)
+\item 
+void $\ast$ \hyperlink{class_u_l_r_u_hash_1f01c54091d166f1f32e4981f00a311b}{Insert} (\_\-T \&removed, \_\-KeyHash keyHash, const \_\-Key \&key, const \_\-T \&item)
+\item 
+void $\ast$ \hyperlink{class_u_l_r_u_hash_622e00cdeeb6004d61142319db0e1741}{Remove} (void $\ast$item)
+\item 
+void \hyperlink{class_u_l_r_u_hash_180a90b26ca19f3e6cba92080fd88f40}{Clear} ()
+\item 
+void $\ast$ \hyperlink{class_u_l_r_u_hash_6853ac9489e5fa1192f0ed080b149b1f}{FindFirst} (\_\-KeyHash keyHash) const 
+\item 
+void $\ast$ \hyperlink{class_u_l_r_u_hash_f12a2f713bc64feffdaa15cc64137a9e}{FindNext} (void $\ast$handle, \_\-KeyHash keyHash) const 
+\item 
+void $\ast$ \hyperlink{class_u_l_r_u_hash_90f2e020b3aad0abebf75c84de57cfbc}{Find} (\_\-KeyHash keyHash, const \_\-Key \&key) const 
+\item 
+void \hyperlink{class_u_l_r_u_hash_a4863fdfd290e1a381bcc77025698f11}{MarkUsed} (void $\ast$handle)
+\item 
+const \_\-Key \& \hyperlink{class_u_l_r_u_hash_654d4c16c061e15cd05d4b3a06720517}{GetKey} (void $\ast$handle) const 
+\item 
+\_\-KeyHash \hyperlink{class_u_l_r_u_hash_bef81214ae7f386a7259178ee4308b99}{GetKeyHash} (void $\ast$handle) const 
+\item 
+\_\-T \& \hyperlink{class_u_l_r_u_hash_956f682dbfdc15c021d6653e045b51fb}{GetValue} (void $\ast$handle)
+\item 
+const \_\-T \& \hyperlink{class_u_l_r_u_hash_84fe767898f076199811f7ad2bfe68f6}{GetValue} (void $\ast$handle) const 
+\item 
+void \hyperlink{class_u_l_r_u_hash_79fd6e7b60a39eb34eb0299c791d13b5}{SetValue} (void $\ast$handle, const \_\-T \&item)
+\item 
+void $\ast$ \hyperlink{class_u_l_r_u_hash_8c74e3de413f887f50782f56807261e5}{GetOldest} () const 
+\item 
+void $\ast$ \hyperlink{class_u_l_r_u_hash_059223a11ed06800c1a634e59197d8d7}{GetNewest} () const 
+\item 
+void $\ast$ \hyperlink{class_u_l_r_u_hash_b4b559b779b8c5872352e98b8ed3ed08}{GetOlder} (void $\ast$handle) const 
+\item 
+void $\ast$ \hyperlink{class_u_l_r_u_hash_87200ea360ecf08acd16f65883d7e3ae}{GetNewer} (void $\ast$handle) const 
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename \_\-Key, class \_\-T, typename \_\-KeyHash = unsigned int$>$ class ULRUHash$<$ \_\-Key, \_\-T, \_\-KeyHash $>$}
+
+
+
+Definition at line 19 of file ULRUHash.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_u_l_r_u_hash_64b8501e537b7805aab37bd0d45ee5d0}{
+\index{ULRUHash@{ULRUHash}!ULRUHash@{ULRUHash}}
+\index{ULRUHash@{ULRUHash}!ULRUHash@{ULRUHash}}
+\subsubsection[{ULRUHash}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-Key , class \_\-T , typename \_\-KeyHash $>$ {\bf ULRUHash}$<$ \_\-Key, \_\-T, \_\-KeyHash $>$::{\bf ULRUHash} (unsigned int {\em sizePow2})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_l_r_u_hash_64b8501e537b7805aab37bd0d45ee5d0}
+
+
+
+
+Definition at line 102 of file ULRUHash.h.\hypertarget{class_u_l_r_u_hash_b208b6347de680be8a5fb0ac3459c908}{
+\index{ULRUHash@{ULRUHash}!$\sim$ULRUHash@{$\sim$ULRUHash}}
+\index{$\sim$ULRUHash@{$\sim$ULRUHash}!ULRUHash@{ULRUHash}}
+\subsubsection[{$\sim$ULRUHash}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-Key , class \_\-T , typename \_\-KeyHash $>$ {\bf ULRUHash}$<$ \_\-Key, \_\-T, \_\-KeyHash $>$::$\sim${\bf ULRUHash} ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_l_r_u_hash_b208b6347de680be8a5fb0ac3459c908}
+
+
+
+
+Definition at line 124 of file ULRUHash.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_u_l_r_u_hash_180a90b26ca19f3e6cba92080fd88f40}{
+\index{ULRUHash@{ULRUHash}!Clear@{Clear}}
+\index{Clear@{Clear}!ULRUHash@{ULRUHash}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-Key , class \_\-T , typename \_\-KeyHash $>$ void {\bf ULRUHash}$<$ \_\-Key, \_\-T, \_\-KeyHash $>$::Clear ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_l_r_u_hash_180a90b26ca19f3e6cba92080fd88f40}
+
+
+
+
+Definition at line 260 of file ULRUHash.h.\hypertarget{class_u_l_r_u_hash_90f2e020b3aad0abebf75c84de57cfbc}{
+\index{ULRUHash@{ULRUHash}!Find@{Find}}
+\index{Find@{Find}!ULRUHash@{ULRUHash}}
+\subsubsection[{Find}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-Key, class \_\-T , typename \_\-KeyHash$>$ void $\ast$ {\bf ULRUHash}$<$ \_\-Key, \_\-T, \_\-KeyHash $>$::Find (\_\-KeyHash {\em keyHash}, \/  const \_\-Key \& {\em key}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_l_r_u_hash_90f2e020b3aad0abebf75c84de57cfbc}
+
+
+
+
+Definition at line 319 of file ULRUHash.h.\hypertarget{class_u_l_r_u_hash_6853ac9489e5fa1192f0ed080b149b1f}{
+\index{ULRUHash@{ULRUHash}!FindFirst@{FindFirst}}
+\index{FindFirst@{FindFirst}!ULRUHash@{ULRUHash}}
+\subsubsection[{FindFirst}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-Key , class \_\-T , typename \_\-KeyHash$>$ void $\ast$ {\bf ULRUHash}$<$ \_\-Key, \_\-T, \_\-KeyHash $>$::FindFirst (\_\-KeyHash {\em keyHash}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_l_r_u_hash_6853ac9489e5fa1192f0ed080b149b1f}
+
+
+
+
+Definition at line 274 of file ULRUHash.h.\hypertarget{class_u_l_r_u_hash_f12a2f713bc64feffdaa15cc64137a9e}{
+\index{ULRUHash@{ULRUHash}!FindNext@{FindNext}}
+\index{FindNext@{FindNext}!ULRUHash@{ULRUHash}}
+\subsubsection[{FindNext}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-Key , class \_\-T , typename \_\-KeyHash$>$ void $\ast$ {\bf ULRUHash}$<$ \_\-Key, \_\-T, \_\-KeyHash $>$::FindNext (void $\ast$ {\em handle}, \/  \_\-KeyHash {\em keyHash}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_l_r_u_hash_f12a2f713bc64feffdaa15cc64137a9e}
+
+
+
+
+Definition at line 296 of file ULRUHash.h.\hypertarget{class_u_l_r_u_hash_a2e102da1f9a2579533a429b535e9ded}{
+\index{ULRUHash@{ULRUHash}!GetElemCount@{GetElemCount}}
+\index{GetElemCount@{GetElemCount}!ULRUHash@{ULRUHash}}
+\subsubsection[{GetElemCount}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-Key, class \_\-T, typename \_\-KeyHash = unsigned int$>$ unsigned int {\bf ULRUHash}$<$ \_\-Key, \_\-T, \_\-KeyHash $>$::GetElemCount () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_l_r_u_hash_a2e102da1f9a2579533a429b535e9ded}
+
+
+
+
+Definition at line 30 of file ULRUHash.h.\hypertarget{class_u_l_r_u_hash_654d4c16c061e15cd05d4b3a06720517}{
+\index{ULRUHash@{ULRUHash}!GetKey@{GetKey}}
+\index{GetKey@{GetKey}!ULRUHash@{ULRUHash}}
+\subsubsection[{GetKey}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-Key , class \_\-T , typename \_\-KeyHash $>$ const \_\-Key \& {\bf ULRUHash}$<$ \_\-Key, \_\-T, \_\-KeyHash $>$::GetKey (void $\ast$ {\em handle}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_l_r_u_hash_654d4c16c061e15cd05d4b3a06720517}
+
+
+
+
+Definition at line 351 of file ULRUHash.h.\hypertarget{class_u_l_r_u_hash_bef81214ae7f386a7259178ee4308b99}{
+\index{ULRUHash@{ULRUHash}!GetKeyHash@{GetKeyHash}}
+\index{GetKeyHash@{GetKeyHash}!ULRUHash@{ULRUHash}}
+\subsubsection[{GetKeyHash}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-Key , class \_\-T , typename \_\-KeyHash $>$ \_\-KeyHash {\bf ULRUHash}$<$ \_\-Key, \_\-T, \_\-KeyHash $>$::GetKeyHash (void $\ast$ {\em handle}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_l_r_u_hash_bef81214ae7f386a7259178ee4308b99}
+
+
+
+
+Definition at line 360 of file ULRUHash.h.\hypertarget{class_u_l_r_u_hash_87200ea360ecf08acd16f65883d7e3ae}{
+\index{ULRUHash@{ULRUHash}!GetNewer@{GetNewer}}
+\index{GetNewer@{GetNewer}!ULRUHash@{ULRUHash}}
+\subsubsection[{GetNewer}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-Key , class \_\-T , typename \_\-KeyHash $>$ void $\ast$ {\bf ULRUHash}$<$ \_\-Key, \_\-T, \_\-KeyHash $>$::GetNewer (void $\ast$ {\em handle}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_l_r_u_hash_87200ea360ecf08acd16f65883d7e3ae}
+
+
+
+
+Definition at line 434 of file ULRUHash.h.\hypertarget{class_u_l_r_u_hash_059223a11ed06800c1a634e59197d8d7}{
+\index{ULRUHash@{ULRUHash}!GetNewest@{GetNewest}}
+\index{GetNewest@{GetNewest}!ULRUHash@{ULRUHash}}
+\subsubsection[{GetNewest}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-Key , class \_\-T , typename \_\-KeyHash $>$ void $\ast$ {\bf ULRUHash}$<$ \_\-Key, \_\-T, \_\-KeyHash $>$::GetNewest () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_l_r_u_hash_059223a11ed06800c1a634e59197d8d7}
+
+
+
+
+Definition at line 408 of file ULRUHash.h.\hypertarget{class_u_l_r_u_hash_b4b559b779b8c5872352e98b8ed3ed08}{
+\index{ULRUHash@{ULRUHash}!GetOlder@{GetOlder}}
+\index{GetOlder@{GetOlder}!ULRUHash@{ULRUHash}}
+\subsubsection[{GetOlder}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-Key , class \_\-T , typename \_\-KeyHash $>$ void $\ast$ {\bf ULRUHash}$<$ \_\-Key, \_\-T, \_\-KeyHash $>$::GetOlder (void $\ast$ {\em handle}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_l_r_u_hash_b4b559b779b8c5872352e98b8ed3ed08}
+
+
+
+
+Definition at line 420 of file ULRUHash.h.\hypertarget{class_u_l_r_u_hash_8c74e3de413f887f50782f56807261e5}{
+\index{ULRUHash@{ULRUHash}!GetOldest@{GetOldest}}
+\index{GetOldest@{GetOldest}!ULRUHash@{ULRUHash}}
+\subsubsection[{GetOldest}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-Key , class \_\-T , typename \_\-KeyHash $>$ void $\ast$ {\bf ULRUHash}$<$ \_\-Key, \_\-T, \_\-KeyHash $>$::GetOldest () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_l_r_u_hash_8c74e3de413f887f50782f56807261e5}
+
+
+
+
+Definition at line 396 of file ULRUHash.h.\hypertarget{class_u_l_r_u_hash_7d623f663f2644180432bd29c9fdd801}{
+\index{ULRUHash@{ULRUHash}!GetSize@{GetSize}}
+\index{GetSize@{GetSize}!ULRUHash@{ULRUHash}}
+\subsubsection[{GetSize}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-Key, class \_\-T, typename \_\-KeyHash = unsigned int$>$ unsigned int {\bf ULRUHash}$<$ \_\-Key, \_\-T, \_\-KeyHash $>$::GetSize () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_l_r_u_hash_7d623f663f2644180432bd29c9fdd801}
+
+
+
+
+Definition at line 27 of file ULRUHash.h.\hypertarget{class_u_l_r_u_hash_84fe767898f076199811f7ad2bfe68f6}{
+\index{ULRUHash@{ULRUHash}!GetValue@{GetValue}}
+\index{GetValue@{GetValue}!ULRUHash@{ULRUHash}}
+\subsubsection[{GetValue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-Key , class \_\-T , typename \_\-KeyHash $>$ const \_\-T \& {\bf ULRUHash}$<$ \_\-Key, \_\-T, \_\-KeyHash $>$::GetValue (void $\ast$ {\em handle}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_l_r_u_hash_84fe767898f076199811f7ad2bfe68f6}
+
+
+
+
+Definition at line 378 of file ULRUHash.h.\hypertarget{class_u_l_r_u_hash_956f682dbfdc15c021d6653e045b51fb}{
+\index{ULRUHash@{ULRUHash}!GetValue@{GetValue}}
+\index{GetValue@{GetValue}!ULRUHash@{ULRUHash}}
+\subsubsection[{GetValue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-Key , class \_\-T , typename \_\-KeyHash $>$ \_\-T \& {\bf ULRUHash}$<$ \_\-Key, \_\-T, \_\-KeyHash $>$::GetValue (void $\ast$ {\em handle})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_l_r_u_hash_956f682dbfdc15c021d6653e045b51fb}
+
+
+
+
+Definition at line 369 of file ULRUHash.h.\hypertarget{class_u_l_r_u_hash_1f01c54091d166f1f32e4981f00a311b}{
+\index{ULRUHash@{ULRUHash}!Insert@{Insert}}
+\index{Insert@{Insert}!ULRUHash@{ULRUHash}}
+\subsubsection[{Insert}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-Key, class \_\-T, typename \_\-KeyHash$>$ void $\ast$ {\bf ULRUHash}$<$ \_\-Key, \_\-T, \_\-KeyHash $>$::Insert (\_\-T \& {\em removed}, \/  \_\-KeyHash {\em keyHash}, \/  const \_\-Key \& {\em key}, \/  const \_\-T \& {\em item})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_l_r_u_hash_1f01c54091d166f1f32e4981f00a311b}
+
+
+
+
+Definition at line 176 of file ULRUHash.h.\hypertarget{class_u_l_r_u_hash_ad3291d30433c9dfc058f4ea14f4aa52}{
+\index{ULRUHash@{ULRUHash}!Insert@{Insert}}
+\index{Insert@{Insert}!ULRUHash@{ULRUHash}}
+\subsubsection[{Insert}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-Key, class \_\-T, typename \_\-KeyHash$>$ void $\ast$ {\bf ULRUHash}$<$ \_\-Key, \_\-T, \_\-KeyHash $>$::Insert (\_\-KeyHash {\em keyHash}, \/  const \_\-Key \& {\em key}, \/  const \_\-T \& {\em item})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_l_r_u_hash_ad3291d30433c9dfc058f4ea14f4aa52}
+
+
+
+
+Definition at line 139 of file ULRUHash.h.\hypertarget{class_u_l_r_u_hash_a4863fdfd290e1a381bcc77025698f11}{
+\index{ULRUHash@{ULRUHash}!MarkUsed@{MarkUsed}}
+\index{MarkUsed@{MarkUsed}!ULRUHash@{ULRUHash}}
+\subsubsection[{MarkUsed}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-Key , class \_\-T , typename \_\-KeyHash $>$ void {\bf ULRUHash}$<$ \_\-Key, \_\-T, \_\-KeyHash $>$::MarkUsed (void $\ast$ {\em handle})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_l_r_u_hash_a4863fdfd290e1a381bcc77025698f11}
+
+
+
+
+Definition at line 342 of file ULRUHash.h.\hypertarget{class_u_l_r_u_hash_622e00cdeeb6004d61142319db0e1741}{
+\index{ULRUHash@{ULRUHash}!Remove@{Remove}}
+\index{Remove@{Remove}!ULRUHash@{ULRUHash}}
+\subsubsection[{Remove}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-Key , class \_\-T , typename \_\-KeyHash $>$ void $\ast$ {\bf ULRUHash}$<$ \_\-Key, \_\-T, \_\-KeyHash $>$::Remove (void $\ast$ {\em item})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_l_r_u_hash_622e00cdeeb6004d61142319db0e1741}
+
+
+
+
+Definition at line 214 of file ULRUHash.h.\hypertarget{class_u_l_r_u_hash_79fd6e7b60a39eb34eb0299c791d13b5}{
+\index{ULRUHash@{ULRUHash}!SetValue@{SetValue}}
+\index{SetValue@{SetValue}!ULRUHash@{ULRUHash}}
+\subsubsection[{SetValue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-Key , class \_\-T, typename \_\-KeyHash $>$ void {\bf ULRUHash}$<$ \_\-Key, \_\-T, \_\-KeyHash $>$::SetValue (void $\ast$ {\em handle}, \/  const \_\-T \& {\em item})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_l_r_u_hash_79fd6e7b60a39eb34eb0299c791d13b5}
+
+
+
+
+Definition at line 387 of file ULRUHash.h.
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_u_l_r_u_hash_8h}{ULRUHash.h}\end{CompactItemize}

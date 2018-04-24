@@ -1,0 +1,706 @@
+\hypertarget{class_gr_polygon}{
+\section{GrPolygon Class Reference}
+\label{class_gr_polygon}\index{GrPolygon@{GrPolygon}}
+}
+{\tt \#include $<$GrPolygon.h$>$}
+
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+struct \hyperlink{struct_gr_polygon_1_1_s_ray_intersect_info}{SRayIntersectInfo}
+\end{CompactItemize}
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+enum \hyperlink{class_gr_polygon_836e951bdd2b98548ff07a856432365c}{EFLAGVALUE} \{ \hyperlink{class_gr_polygon_836e951bdd2b98548ff07a856432365c59f4225180877655ae73407b30696ada}{EFV\_\-EDGEPOLY} =  1
+ \}
+\item 
+enum \hyperlink{class_gr_polygon_3e8aa04f4841547a5c8a055e1722204b}{EPLANERELATION} \{ \hyperlink{class_gr_polygon_3e8aa04f4841547a5c8a055e1722204b8bc72f093b56434a0afe8bb6925a5524}{EPR\_\-BACK}, 
+\hyperlink{class_gr_polygon_3e8aa04f4841547a5c8a055e1722204beec95a9759db8e7ae6e00797e3eaa952}{EPR\_\-FRONT}, 
+\hyperlink{class_gr_polygon_3e8aa04f4841547a5c8a055e1722204b06455f448fa7ab97d7a136c65bfee546}{EPR\_\-SPLIT}, 
+\hyperlink{class_gr_polygon_3e8aa04f4841547a5c8a055e1722204ba1d03769a087145c9c8557d78bb99c38}{EPR\_\-COPLANAR}
+ \}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_polygon_128cdb94a468adfdae5b6fbf00a038f5}{GrPolygon} ()
+\item 
+\hyperlink{class_gr_polygon_8d47174424c6d59868900ca0a8707df2}{GrPolygon} (unsigned int \hyperlink{_u_t_message_8h_0a3c0b351ab09281b662a9ff4f900a53}{flags}, const \hyperlink{struct_s_polygon_vertex}{SPolygonVertex} $\ast$verts, unsigned int vertexCount, \hyperlink{class_gr_material}{GrMaterial} $\ast$material)
+\item 
+\hyperlink{class_gr_polygon_96d02ce6472ab3c9f0432a1bf5b20080}{GrPolygon} (unsigned int \hyperlink{_u_t_message_8h_0a3c0b351ab09281b662a9ff4f900a53}{flags}, const \hyperlink{struct_s_polygon_vertex}{SPolygonVertex} $\ast$verts, unsigned int vertexCount, \hyperlink{class_gr_material}{GrMaterial} $\ast$material, const \hyperlink{class_m_plane}{MPlane} \&plane)
+\item 
+\hyperlink{class_gr_polygon_1af2b8f57b49002d6918ebc9ccb97a86}{GrPolygon} (const \hyperlink{class_gr_polygon}{GrPolygon} \&polygon)
+\item 
+\hyperlink{class_gr_polygon_17a0c25129aef4a4b9da2a7190cc0a52}{GrPolygon} (\hyperlink{class_u_reader}{UReader} \&polygon)
+\item 
+\hyperlink{class_gr_polygon_ea7e55bfc699301c5c65b5f63cf17bc0}{GrPolygon} (unsigned int \hyperlink{_u_t_message_8h_0a3c0b351ab09281b662a9ff4f900a53}{flags}, const \hyperlink{struct_s_polygon_vertex}{SPolygonVertex} \&\hyperlink{glext__bak_8h_8f5597b6002609ead33af221dcf29790}{v0}, const \hyperlink{struct_s_polygon_vertex}{SPolygonVertex} \&\hyperlink{glext__bak_8h_435c176a02c061b43e19bdf7c86cceae}{v1}, const \hyperlink{struct_s_polygon_vertex}{SPolygonVertex} \&\hyperlink{glext__bak_8h_0928f6d0f0f794ba000a21dfae422136}{v2}, \hyperlink{class_gr_material}{GrMaterial} $\ast$material)
+\item 
+\hyperlink{class_gr_polygon_f97e8da5717982c01a838b9a48897a71}{$\sim$GrPolygon} ()
+\item 
+unsigned int \hyperlink{class_gr_polygon_d5cb84031e18ea044c44cb7e245b7fc2}{GetVertexFlags} () const 
+\item 
+void \hyperlink{class_gr_polygon_b710c1e840a9047a2288813fc005974d}{SetVertexFlags} (unsigned int \hyperlink{_u_t_message_8h_0a3c0b351ab09281b662a9ff4f900a53}{flags})
+\item 
+void \hyperlink{class_gr_polygon_434ae06262ce8bafdf6e9a5e24ec4d28}{SetVertices} (unsigned int \hyperlink{_u_t_message_8h_0a3c0b351ab09281b662a9ff4f900a53}{flags}, const \hyperlink{struct_s_polygon_vertex}{SPolygonVertex} $\ast$verts, unsigned int vertexCount, \hyperlink{class_gr_material}{GrMaterial} $\ast$material)
+\item 
+void \hyperlink{class_gr_polygon_beed17aedd971fa5874537a4b68d10be}{SetVertices} (unsigned int \hyperlink{_u_t_message_8h_0a3c0b351ab09281b662a9ff4f900a53}{flags}, const \hyperlink{struct_s_polygon_vertex}{SPolygonVertex} $\ast$verts, unsigned int vertexCount, \hyperlink{class_gr_material}{GrMaterial} $\ast$material, const \hyperlink{class_m_plane}{MPlane} \&plane)
+\item 
+void \hyperlink{class_gr_polygon_f46dd08b01dfa7b086ef3c3ec2531d9c}{SetSkinningInfo} (\hyperlink{struct_s_polygon_skin_vertex}{SPolygonSkinVertex} $\ast$skinVertArray)
+\item 
+void \hyperlink{class_gr_polygon_e51b46ace5d4dfc73396033fd4858c51}{RemapBoneIndices} (unsigned int $\ast$\hyperlink{glext__bak_8h_c4293d0f76770fe857be3431df25308d}{indices})
+\item 
+bool \hyperlink{class_gr_polygon_16dcd5af11fdb2e6278011e06c42e2e8}{IsSkinned} () const 
+\item 
+void \hyperlink{class_gr_polygon_9347a0c308ea32417e30a5d5ca3fa333}{SetUserFlag} (\hyperlink{class_gr_polygon_836e951bdd2b98548ff07a856432365c}{EFLAGVALUE} flagValue)
+\item 
+void \hyperlink{class_gr_polygon_4e04730f82ed09021a7d6532a0bb5c80}{ClearUserFlag} (\hyperlink{class_gr_polygon_836e951bdd2b98548ff07a856432365c}{EFLAGVALUE} flagValue)
+\item 
+unsigned int \hyperlink{class_gr_polygon_e84a5f1368f9741416f654a6d3d6c05a}{GetUserFlags} () const 
+\item 
+void \hyperlink{class_gr_polygon_7d5c9c2b213b88aead8530e6ef720ff7}{SetUserData} (unsigned int \hyperlink{glext__bak_8h_69926c009f2d52c6b6d2c76784af8c64}{data})
+\item 
+unsigned int \hyperlink{class_gr_polygon_04b63ed7546dbcef1df9eb1ebcf19161}{GetUserData} () const 
+\item 
+unsigned int \hyperlink{class_gr_polygon_ef233c1659fde726aa60a1718a4ea8a4}{GetVertexCount} () const 
+\item 
+const \hyperlink{struct_s_polygon_vertex}{SPolygonVertex} \& \hyperlink{class_gr_polygon_5af4ec7c3b097b081a44b79f904baacd}{GetVertex} (unsigned int i) const 
+\item 
+\hyperlink{struct_s_polygon_vertex}{SPolygonVertex} \& \hyperlink{class_gr_polygon_fad4b14c5d81b50c943d1576657a05f0}{GetVertex} (unsigned int i)
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_material}{GrMaterial} $>$ \hyperlink{class_gr_polygon_b4a64686345e7c952395fb5432822f7d}{GetMaterial} () const 
+\item 
+void \hyperlink{class_gr_polygon_486be53eb2a6e5f805972ac32a0011d2}{SetMaterial} (\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_material}{GrMaterial} $>$ material)
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_uber_texture}{GrUberTexture} $>$ \hyperlink{class_gr_polygon_7e2c3270815ee17025f222dc0c3be4ea}{GetUberTexture} () const 
+\item 
+void \hyperlink{class_gr_polygon_3b23c179792f596d818ecd94491c45a4}{SetUberTexture} (\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_uber_texture}{GrUberTexture} $>$ \hyperlink{glext__bak_8h_8f486379aef534669f4f06f515e7ce6c}{texture})
+\item 
+unsigned int \hyperlink{class_gr_polygon_18ae3ecb1015c722fb8379d8267b9464}{GetTriangleCount} () const 
+\item 
+void \hyperlink{class_gr_polygon_94c81cc3e6f419a814119a7dc3c4d78b}{Triangulate} (\hyperlink{struct_s_polygon_triangle}{SPolygonTriangle} $\ast$triangles, \hyperlink{struct_s_polygon_triangle_skin}{SPolygonTriangleSkin} $\ast$triangleSkinArray=0) const 
+\item 
+void \hyperlink{class_gr_polygon_762d861ad057a916daf5e6b376f31ec8}{Triangulate} (\hyperlink{struct_s_polygon_vertex}{SPolygonVertex} $\ast$triangleList) const 
+\item 
+const \hyperlink{class_m_plane}{MPlane} \& \hyperlink{class_gr_polygon_52de5745993a825a901f9fc39c7c0fe4}{GetPlane} () const 
+\item 
+const \hyperlink{class_m_vec3}{MVec3} \& \hyperlink{class_gr_polygon_36a40f8b1208bdcf5f39f1ff128bafc5}{GetNormal} () const 
+\item 
+bool \hyperlink{class_gr_polygon_45191c8b4b5ee1943e690e27e4110562}{Intersect} (\hyperlink{struct_gr_polygon_1_1_s_ray_intersect_info}{SRayIntersectInfo} \&info, const \hyperlink{struct_s_vec3}{SVec3} \&rayStart, const \hyperlink{struct_s_vec3}{SVec3} \&rayDir, float maxDist) const 
+\item 
+float \hyperlink{class_gr_polygon_94a66b2b31d98fb83f6f92a863946e8e}{IntersectFast} (const \hyperlink{struct_s_vec3}{SVec3} \&rayStart, const \hyperlink{struct_s_vec3}{SVec3} \&rayDir, float maxDist) const 
+\item 
+int \hyperlink{class_gr_polygon_71ca719cd4addf47d5c170691a1738f2}{Split} (\hyperlink{class_gr_polygon}{GrPolygon} \&front, \hyperlink{class_gr_polygon}{GrPolygon} \&back, const \hyperlink{class_m_plane}{MPlane} \&plane, float planeDistEpsilon) const 
+\item 
+\hyperlink{class_gr_polygon_3e8aa04f4841547a5c8a055e1722204b}{EPLANERELATION} \hyperlink{class_gr_polygon_fc680ccb262eb784f0ba74deac1c36b0}{CalcPlaneRelation} (const \hyperlink{class_m_plane}{MPlane} \&plane, float planeDistEpsilon) const 
+\item 
+bool \hyperlink{class_gr_polygon_30966480a994228549847bb03e9f1874}{CheckTJunc} (const \hyperlink{class_gr_polygon}{GrPolygon} \&polygon, float epsilon)
+\item 
+bool \hyperlink{class_gr_polygon_d87c32f12d3fd9419eb6e7f0a8415a38}{IsDegenerate} (float epsilon) const 
+\item 
+bool \hyperlink{class_gr_polygon_4a31719da237646860956200e58b0385}{RemoveDuplicateVerts} (float distEpsilonSqr)
+\item 
+void \hyperlink{class_gr_polygon_d590f512fd5dc8ff24377ed123df129a}{WeldVertices} (const \hyperlink{class_gr_polygon}{GrPolygon} \&polygon, float distEpsilonSqr)
+\item 
+void \hyperlink{class_gr_polygon_20c41a3935e2256793edd844b351b750}{ReverseWinding} ()
+\item 
+bool \hyperlink{class_gr_polygon_3946b5bfc9871915023821b963455b36}{IsEdgePolygon} (const \hyperlink{class_m_plane}{MPlane} \&plane, float planeDistEpsilon) const 
+\item 
+bool \hyperlink{class_gr_polygon_f6f970043ece48bc218ff5bc62fa66a5}{IsCoplanar} (const \hyperlink{class_m_plane}{MPlane} \&plane, float epsilon) const 
+\item 
+bool \hyperlink{class_gr_polygon_7cdc587de8a706861b8ebecb3078e0d0}{IsNeighbor} (const \hyperlink{class_gr_polygon}{GrPolygon} \&polygon, float epsilon=0.001f) const 
+\item 
+\hyperlink{class_gr_polygon}{GrPolygon} \hyperlink{class_gr_polygon_c8fc7a0caec236dfac7f44abc38a17e5}{Transform} (const \hyperlink{class_m_mat4x4}{MMat4x4} \&\hyperlink{glext__bak_8h_07993c0d92c1aeeb357ba0495c8b5325}{transform}, const \hyperlink{class_m_mat3x3}{MMat3x3} \&normalRot) const 
+\item 
+void \hyperlink{class_gr_polygon_312706662a832bd7fdc652fb55bcdd56}{TransformFast} (const \hyperlink{class_m_mat4x4}{MMat4x4} \&\hyperlink{glext__bak_8h_07993c0d92c1aeeb357ba0495c8b5325}{transform}, const \hyperlink{class_m_mat3x3}{MMat3x3} \&normalRot)
+\item 
+float \hyperlink{class_gr_polygon_9149e2e595486a8ac0259bc469418c1f}{GetArea} () const 
+\item 
+\hyperlink{class_gr_polygon}{GrPolygon} \& \hyperlink{class_gr_polygon_eb49875dbda2f349029f033612a987be}{operator=} (const \hyperlink{class_gr_polygon}{GrPolygon} \&polygon)
+\item 
+void \hyperlink{class_gr_polygon_8124d42ce98f591b5e75c63b1adc673c}{Save} (\hyperlink{class_u_writer}{UWriter} \&writer) const 
+\item 
+void \hyperlink{class_gr_polygon_c9a85b2f9ebbdc644bf51e738edde549}{Load} (\hyperlink{class_u_reader}{UReader} \&reader)
+\end{CompactItemize}
+\subsection*{Static Public Attributes}
+\begin{CompactItemize}
+\item 
+static const unsigned int \hyperlink{class_gr_polygon_f85991824f91a6724771e1ace01f1caf}{kNormal} = 0x01
+\item 
+static const unsigned int \hyperlink{class_gr_polygon_294f4e919c062a31183e59d05c2352ae}{kTangent} = 0x02
+\item 
+static const unsigned int \hyperlink{class_gr_polygon_8649525f9a18567bd50c87ab9436a9d9}{kBiNormal} = 0x04
+\item 
+static const unsigned int \hyperlink{class_gr_polygon_438f9ff37f015e22bd8e48f94637b766}{kColor} = 0x08
+\item 
+static const unsigned int \hyperlink{class_gr_polygon_f61ee04e7a4e4e076f5e4beb223d8fbc}{kUV} = 0x10
+\item 
+static const unsigned int \hyperlink{class_gr_polygon_a21eb256bb71553f0d7d9780371c21d0}{kUniqueUV} = 0x20
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 70 of file GrPolygon.h.
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_gr_polygon_836e951bdd2b98548ff07a856432365c}{
+\index{GrPolygon@{GrPolygon}!EFLAGVALUE@{EFLAGVALUE}}
+\index{EFLAGVALUE@{EFLAGVALUE}!GrPolygon@{GrPolygon}}
+\subsubsection[{EFLAGVALUE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GrPolygon::EFLAGVALUE}}}
+\label{class_gr_polygon_836e951bdd2b98548ff07a856432365c}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{EFV\_\-EDGEPOLY@{EFV\_\-EDGEPOLY}!GrPolygon@{GrPolygon}}\index{GrPolygon@{GrPolygon}!EFV\_\-EDGEPOLY@{EFV\_\-EDGEPOLY}}\item[{\em 
+\hypertarget{class_gr_polygon_836e951bdd2b98548ff07a856432365c59f4225180877655ae73407b30696ada}{
+EFV\_\-EDGEPOLY}
+\label{class_gr_polygon_836e951bdd2b98548ff07a856432365c59f4225180877655ae73407b30696ada}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 81 of file GrPolygon.h.\hypertarget{class_gr_polygon_3e8aa04f4841547a5c8a055e1722204b}{
+\index{GrPolygon@{GrPolygon}!EPLANERELATION@{EPLANERELATION}}
+\index{EPLANERELATION@{EPLANERELATION}!GrPolygon@{GrPolygon}}
+\subsubsection[{EPLANERELATION}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GrPolygon::EPLANERELATION}}}
+\label{class_gr_polygon_3e8aa04f4841547a5c8a055e1722204b}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{EPR\_\-BACK@{EPR\_\-BACK}!GrPolygon@{GrPolygon}}\index{GrPolygon@{GrPolygon}!EPR\_\-BACK@{EPR\_\-BACK}}\item[{\em 
+\hypertarget{class_gr_polygon_3e8aa04f4841547a5c8a055e1722204b8bc72f093b56434a0afe8bb6925a5524}{
+EPR\_\-BACK}
+\label{class_gr_polygon_3e8aa04f4841547a5c8a055e1722204b8bc72f093b56434a0afe8bb6925a5524}
+}]\index{EPR\_\-FRONT@{EPR\_\-FRONT}!GrPolygon@{GrPolygon}}\index{GrPolygon@{GrPolygon}!EPR\_\-FRONT@{EPR\_\-FRONT}}\item[{\em 
+\hypertarget{class_gr_polygon_3e8aa04f4841547a5c8a055e1722204beec95a9759db8e7ae6e00797e3eaa952}{
+EPR\_\-FRONT}
+\label{class_gr_polygon_3e8aa04f4841547a5c8a055e1722204beec95a9759db8e7ae6e00797e3eaa952}
+}]\index{EPR\_\-SPLIT@{EPR\_\-SPLIT}!GrPolygon@{GrPolygon}}\index{GrPolygon@{GrPolygon}!EPR\_\-SPLIT@{EPR\_\-SPLIT}}\item[{\em 
+\hypertarget{class_gr_polygon_3e8aa04f4841547a5c8a055e1722204b06455f448fa7ab97d7a136c65bfee546}{
+EPR\_\-SPLIT}
+\label{class_gr_polygon_3e8aa04f4841547a5c8a055e1722204b06455f448fa7ab97d7a136c65bfee546}
+}]\index{EPR\_\-COPLANAR@{EPR\_\-COPLANAR}!GrPolygon@{GrPolygon}}\index{GrPolygon@{GrPolygon}!EPR\_\-COPLANAR@{EPR\_\-COPLANAR}}\item[{\em 
+\hypertarget{class_gr_polygon_3e8aa04f4841547a5c8a055e1722204ba1d03769a087145c9c8557d78bb99c38}{
+EPR\_\-COPLANAR}
+\label{class_gr_polygon_3e8aa04f4841547a5c8a055e1722204ba1d03769a087145c9c8557d78bb99c38}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 86 of file GrPolygon.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_polygon_128cdb94a468adfdae5b6fbf00a038f5}{
+\index{GrPolygon@{GrPolygon}!GrPolygon@{GrPolygon}}
+\index{GrPolygon@{GrPolygon}!GrPolygon@{GrPolygon}}
+\subsubsection[{GrPolygon}]{\setlength{\rightskip}{0pt plus 5cm}GrPolygon::GrPolygon ()}}
+\label{class_gr_polygon_128cdb94a468adfdae5b6fbf00a038f5}
+
+
+
+
+Definition at line 90 of file GrPolygon.cpp.\hypertarget{class_gr_polygon_8d47174424c6d59868900ca0a8707df2}{
+\index{GrPolygon@{GrPolygon}!GrPolygon@{GrPolygon}}
+\index{GrPolygon@{GrPolygon}!GrPolygon@{GrPolygon}}
+\subsubsection[{GrPolygon}]{\setlength{\rightskip}{0pt plus 5cm}GrPolygon::GrPolygon (unsigned int {\em flags}, \/  const {\bf SPolygonVertex} $\ast$ {\em verts}, \/  unsigned int {\em vertexCount}, \/  {\bf GrMaterial} $\ast$ {\em material})}}
+\label{class_gr_polygon_8d47174424c6d59868900ca0a8707df2}
+
+
+
+
+Definition at line 101 of file GrPolygon.cpp.\hypertarget{class_gr_polygon_96d02ce6472ab3c9f0432a1bf5b20080}{
+\index{GrPolygon@{GrPolygon}!GrPolygon@{GrPolygon}}
+\index{GrPolygon@{GrPolygon}!GrPolygon@{GrPolygon}}
+\subsubsection[{GrPolygon}]{\setlength{\rightskip}{0pt plus 5cm}GrPolygon::GrPolygon (unsigned int {\em flags}, \/  const {\bf SPolygonVertex} $\ast$ {\em verts}, \/  unsigned int {\em vertexCount}, \/  {\bf GrMaterial} $\ast$ {\em material}, \/  const {\bf MPlane} \& {\em plane})}}
+\label{class_gr_polygon_96d02ce6472ab3c9f0432a1bf5b20080}
+
+
+
+
+Definition at line 113 of file GrPolygon.cpp.\hypertarget{class_gr_polygon_1af2b8f57b49002d6918ebc9ccb97a86}{
+\index{GrPolygon@{GrPolygon}!GrPolygon@{GrPolygon}}
+\index{GrPolygon@{GrPolygon}!GrPolygon@{GrPolygon}}
+\subsubsection[{GrPolygon}]{\setlength{\rightskip}{0pt plus 5cm}GrPolygon::GrPolygon (const {\bf GrPolygon} \& {\em polygon})}}
+\label{class_gr_polygon_1af2b8f57b49002d6918ebc9ccb97a86}
+
+
+
+
+Definition at line 126 of file GrPolygon.cpp.\hypertarget{class_gr_polygon_17a0c25129aef4a4b9da2a7190cc0a52}{
+\index{GrPolygon@{GrPolygon}!GrPolygon@{GrPolygon}}
+\index{GrPolygon@{GrPolygon}!GrPolygon@{GrPolygon}}
+\subsubsection[{GrPolygon}]{\setlength{\rightskip}{0pt plus 5cm}GrPolygon::GrPolygon ({\bf UReader} \& {\em polygon})}}
+\label{class_gr_polygon_17a0c25129aef4a4b9da2a7190cc0a52}
+
+
+
+
+Definition at line 140 of file GrPolygon.cpp.\hypertarget{class_gr_polygon_ea7e55bfc699301c5c65b5f63cf17bc0}{
+\index{GrPolygon@{GrPolygon}!GrPolygon@{GrPolygon}}
+\index{GrPolygon@{GrPolygon}!GrPolygon@{GrPolygon}}
+\subsubsection[{GrPolygon}]{\setlength{\rightskip}{0pt plus 5cm}GrPolygon::GrPolygon (unsigned int {\em flags}, \/  const {\bf SPolygonVertex} \& {\em v0}, \/  const {\bf SPolygonVertex} \& {\em v1}, \/  const {\bf SPolygonVertex} \& {\em v2}, \/  {\bf GrMaterial} $\ast$ {\em material})}}
+\label{class_gr_polygon_ea7e55bfc699301c5c65b5f63cf17bc0}
+
+
+
+
+Definition at line 151 of file GrPolygon.cpp.\hypertarget{class_gr_polygon_f97e8da5717982c01a838b9a48897a71}{
+\index{GrPolygon@{GrPolygon}!$\sim$GrPolygon@{$\sim$GrPolygon}}
+\index{$\sim$GrPolygon@{$\sim$GrPolygon}!GrPolygon@{GrPolygon}}
+\subsubsection[{$\sim$GrPolygon}]{\setlength{\rightskip}{0pt plus 5cm}GrPolygon::$\sim$GrPolygon ()}}
+\label{class_gr_polygon_f97e8da5717982c01a838b9a48897a71}
+
+
+
+
+Definition at line 168 of file GrPolygon.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_polygon_fc680ccb262eb784f0ba74deac1c36b0}{
+\index{GrPolygon@{GrPolygon}!CalcPlaneRelation@{CalcPlaneRelation}}
+\index{CalcPlaneRelation@{CalcPlaneRelation}!GrPolygon@{GrPolygon}}
+\subsubsection[{CalcPlaneRelation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrPolygon::EPLANERELATION} GrPolygon::CalcPlaneRelation (const {\bf MPlane} \& {\em plane}, \/  float {\em planeDistEpsilon}) const}}
+\label{class_gr_polygon_fc680ccb262eb784f0ba74deac1c36b0}
+
+
+
+
+Definition at line 470 of file GrPolygon.cpp.\hypertarget{class_gr_polygon_30966480a994228549847bb03e9f1874}{
+\index{GrPolygon@{GrPolygon}!CheckTJunc@{CheckTJunc}}
+\index{CheckTJunc@{CheckTJunc}!GrPolygon@{GrPolygon}}
+\subsubsection[{CheckTJunc}]{\setlength{\rightskip}{0pt plus 5cm}bool GrPolygon::CheckTJunc (const {\bf GrPolygon} \& {\em polygon}, \/  float {\em epsilon})}}
+\label{class_gr_polygon_30966480a994228549847bb03e9f1874}
+
+
+
+
+Definition at line 604 of file GrPolygon.cpp.\hypertarget{class_gr_polygon_4e04730f82ed09021a7d6532a0bb5c80}{
+\index{GrPolygon@{GrPolygon}!ClearUserFlag@{ClearUserFlag}}
+\index{ClearUserFlag@{ClearUserFlag}!GrPolygon@{GrPolygon}}
+\subsubsection[{ClearUserFlag}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygon::ClearUserFlag ({\bf EFLAGVALUE} {\em flagValue})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_polygon_4e04730f82ed09021a7d6532a0bb5c80}
+
+
+
+
+Definition at line 134 of file GrPolygon.h.\hypertarget{class_gr_polygon_9149e2e595486a8ac0259bc469418c1f}{
+\index{GrPolygon@{GrPolygon}!GetArea@{GetArea}}
+\index{GetArea@{GetArea}!GrPolygon@{GrPolygon}}
+\subsubsection[{GetArea}]{\setlength{\rightskip}{0pt plus 5cm}float GrPolygon::GetArea () const}}
+\label{class_gr_polygon_9149e2e595486a8ac0259bc469418c1f}
+
+
+
+
+Definition at line 857 of file GrPolygon.cpp.\hypertarget{class_gr_polygon_b4a64686345e7c952395fb5432822f7d}{
+\index{GrPolygon@{GrPolygon}!GetMaterial@{GetMaterial}}
+\index{GetMaterial@{GetMaterial}!GrPolygon@{GrPolygon}}
+\subsubsection[{GetMaterial}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrMaterial} $>$ GrPolygon::GetMaterial () const}}
+\label{class_gr_polygon_b4a64686345e7c952395fb5432822f7d}
+
+
+
+
+Definition at line 236 of file GrPolygon.cpp.\hypertarget{class_gr_polygon_36a40f8b1208bdcf5f39f1ff128bafc5}{
+\index{GrPolygon@{GrPolygon}!GetNormal@{GetNormal}}
+\index{GetNormal@{GetNormal}!GrPolygon@{GrPolygon}}
+\subsubsection[{GetNormal}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MVec3}\& GrPolygon::GetNormal () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_polygon_36a40f8b1208bdcf5f39f1ff128bafc5}
+
+
+
+
+Definition at line 162 of file GrPolygon.h.\hypertarget{class_gr_polygon_52de5745993a825a901f9fc39c7c0fe4}{
+\index{GrPolygon@{GrPolygon}!GetPlane@{GetPlane}}
+\index{GetPlane@{GetPlane}!GrPolygon@{GrPolygon}}
+\subsubsection[{GetPlane}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MPlane}\& GrPolygon::GetPlane () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_polygon_52de5745993a825a901f9fc39c7c0fe4}
+
+
+
+
+Definition at line 161 of file GrPolygon.h.\hypertarget{class_gr_polygon_18ae3ecb1015c722fb8379d8267b9464}{
+\index{GrPolygon@{GrPolygon}!GetTriangleCount@{GetTriangleCount}}
+\index{GetTriangleCount@{GetTriangleCount}!GrPolygon@{GrPolygon}}
+\subsubsection[{GetTriangleCount}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrPolygon::GetTriangleCount () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_polygon_18ae3ecb1015c722fb8379d8267b9464}
+
+
+
+
+Definition at line 156 of file GrPolygon.h.\hypertarget{class_gr_polygon_7e2c3270815ee17025f222dc0c3be4ea}{
+\index{GrPolygon@{GrPolygon}!GetUberTexture@{GetUberTexture}}
+\index{GetUberTexture@{GetUberTexture}!GrPolygon@{GrPolygon}}
+\subsubsection[{GetUberTexture}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrUberTexture} $>$ GrPolygon::GetUberTexture () const}}
+\label{class_gr_polygon_7e2c3270815ee17025f222dc0c3be4ea}
+
+
+
+
+Definition at line 250 of file GrPolygon.cpp.\hypertarget{class_gr_polygon_04b63ed7546dbcef1df9eb1ebcf19161}{
+\index{GrPolygon@{GrPolygon}!GetUserData@{GetUserData}}
+\index{GetUserData@{GetUserData}!GrPolygon@{GrPolygon}}
+\subsubsection[{GetUserData}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrPolygon::GetUserData () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_polygon_04b63ed7546dbcef1df9eb1ebcf19161}
+
+
+
+
+Definition at line 139 of file GrPolygon.h.\hypertarget{class_gr_polygon_e84a5f1368f9741416f654a6d3d6c05a}{
+\index{GrPolygon@{GrPolygon}!GetUserFlags@{GetUserFlags}}
+\index{GetUserFlags@{GetUserFlags}!GrPolygon@{GrPolygon}}
+\subsubsection[{GetUserFlags}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrPolygon::GetUserFlags () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_polygon_e84a5f1368f9741416f654a6d3d6c05a}
+
+
+
+
+Definition at line 135 of file GrPolygon.h.\hypertarget{class_gr_polygon_fad4b14c5d81b50c943d1576657a05f0}{
+\index{GrPolygon@{GrPolygon}!GetVertex@{GetVertex}}
+\index{GetVertex@{GetVertex}!GrPolygon@{GrPolygon}}
+\subsubsection[{GetVertex}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SPolygonVertex}\& GrPolygon::GetVertex (unsigned int {\em i})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_polygon_fad4b14c5d81b50c943d1576657a05f0}
+
+
+
+
+Definition at line 144 of file GrPolygon.h.\hypertarget{class_gr_polygon_5af4ec7c3b097b081a44b79f904baacd}{
+\index{GrPolygon@{GrPolygon}!GetVertex@{GetVertex}}
+\index{GetVertex@{GetVertex}!GrPolygon@{GrPolygon}}
+\subsubsection[{GetVertex}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf SPolygonVertex}\& GrPolygon::GetVertex (unsigned int {\em i}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_polygon_5af4ec7c3b097b081a44b79f904baacd}
+
+
+
+
+Definition at line 143 of file GrPolygon.h.\hypertarget{class_gr_polygon_ef233c1659fde726aa60a1718a4ea8a4}{
+\index{GrPolygon@{GrPolygon}!GetVertexCount@{GetVertexCount}}
+\index{GetVertexCount@{GetVertexCount}!GrPolygon@{GrPolygon}}
+\subsubsection[{GetVertexCount}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrPolygon::GetVertexCount () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_polygon_ef233c1659fde726aa60a1718a4ea8a4}
+
+
+
+
+Definition at line 142 of file GrPolygon.h.\hypertarget{class_gr_polygon_d5cb84031e18ea044c44cb7e245b7fc2}{
+\index{GrPolygon@{GrPolygon}!GetVertexFlags@{GetVertexFlags}}
+\index{GetVertexFlags@{GetVertexFlags}!GrPolygon@{GrPolygon}}
+\subsubsection[{GetVertexFlags}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrPolygon::GetVertexFlags () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_polygon_d5cb84031e18ea044c44cb7e245b7fc2}
+
+
+
+
+Definition at line 117 of file GrPolygon.h.\hypertarget{class_gr_polygon_45191c8b4b5ee1943e690e27e4110562}{
+\index{GrPolygon@{GrPolygon}!Intersect@{Intersect}}
+\index{Intersect@{Intersect}!GrPolygon@{GrPolygon}}
+\subsubsection[{Intersect}]{\setlength{\rightskip}{0pt plus 5cm}bool GrPolygon::Intersect ({\bf SRayIntersectInfo} \& {\em info}, \/  const {\bf SVec3} \& {\em rayStart}, \/  const {\bf SVec3} \& {\em rayDir}, \/  float {\em maxDist}) const}}
+\label{class_gr_polygon_45191c8b4b5ee1943e690e27e4110562}
+
+
+
+
+Definition at line 307 of file GrPolygon.cpp.\hypertarget{class_gr_polygon_94a66b2b31d98fb83f6f92a863946e8e}{
+\index{GrPolygon@{GrPolygon}!IntersectFast@{IntersectFast}}
+\index{IntersectFast@{IntersectFast}!GrPolygon@{GrPolygon}}
+\subsubsection[{IntersectFast}]{\setlength{\rightskip}{0pt plus 5cm}float GrPolygon::IntersectFast (const {\bf SVec3} \& {\em rayStart}, \/  const {\bf SVec3} \& {\em rayDir}, \/  float {\em maxDist}) const}}
+\label{class_gr_polygon_94a66b2b31d98fb83f6f92a863946e8e}
+
+
+
+
+Definition at line 399 of file GrPolygon.cpp.\hypertarget{class_gr_polygon_f6f970043ece48bc218ff5bc62fa66a5}{
+\index{GrPolygon@{GrPolygon}!IsCoplanar@{IsCoplanar}}
+\index{IsCoplanar@{IsCoplanar}!GrPolygon@{GrPolygon}}
+\subsubsection[{IsCoplanar}]{\setlength{\rightskip}{0pt plus 5cm}bool GrPolygon::IsCoplanar (const {\bf MPlane} \& {\em plane}, \/  float {\em epsilon}) const}}
+\label{class_gr_polygon_f6f970043ece48bc218ff5bc62fa66a5}
+
+
+
+
+Definition at line 756 of file GrPolygon.cpp.\hypertarget{class_gr_polygon_d87c32f12d3fd9419eb6e7f0a8415a38}{
+\index{GrPolygon@{GrPolygon}!IsDegenerate@{IsDegenerate}}
+\index{IsDegenerate@{IsDegenerate}!GrPolygon@{GrPolygon}}
+\subsubsection[{IsDegenerate}]{\setlength{\rightskip}{0pt plus 5cm}bool GrPolygon::IsDegenerate (float {\em epsilon}) const}}
+\label{class_gr_polygon_d87c32f12d3fd9419eb6e7f0a8415a38}
+
+
+
+
+Definition at line 672 of file GrPolygon.cpp.\hypertarget{class_gr_polygon_3946b5bfc9871915023821b963455b36}{
+\index{GrPolygon@{GrPolygon}!IsEdgePolygon@{IsEdgePolygon}}
+\index{IsEdgePolygon@{IsEdgePolygon}!GrPolygon@{GrPolygon}}
+\subsubsection[{IsEdgePolygon}]{\setlength{\rightskip}{0pt plus 5cm}bool GrPolygon::IsEdgePolygon (const {\bf MPlane} \& {\em plane}, \/  float {\em planeDistEpsilon}) const}}
+\label{class_gr_polygon_3946b5bfc9871915023821b963455b36}
+
+
+
+
+Definition at line 736 of file GrPolygon.cpp.\hypertarget{class_gr_polygon_7cdc587de8a706861b8ebecb3078e0d0}{
+\index{GrPolygon@{GrPolygon}!IsNeighbor@{IsNeighbor}}
+\index{IsNeighbor@{IsNeighbor}!GrPolygon@{GrPolygon}}
+\subsubsection[{IsNeighbor}]{\setlength{\rightskip}{0pt plus 5cm}bool GrPolygon::IsNeighbor (const {\bf GrPolygon} \& {\em polygon}, \/  float {\em epsilon} = {\tt 0.001f}) const}}
+\label{class_gr_polygon_7cdc587de8a706861b8ebecb3078e0d0}
+
+
+
+
+Definition at line 776 of file GrPolygon.cpp.\hypertarget{class_gr_polygon_16dcd5af11fdb2e6278011e06c42e2e8}{
+\index{GrPolygon@{GrPolygon}!IsSkinned@{IsSkinned}}
+\index{IsSkinned@{IsSkinned}!GrPolygon@{GrPolygon}}
+\subsubsection[{IsSkinned}]{\setlength{\rightskip}{0pt plus 5cm}bool GrPolygon::IsSkinned () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_polygon_16dcd5af11fdb2e6278011e06c42e2e8}
+
+
+
+
+Definition at line 130 of file GrPolygon.h.\hypertarget{class_gr_polygon_c9a85b2f9ebbdc644bf51e738edde549}{
+\index{GrPolygon@{GrPolygon}!Load@{Load}}
+\index{Load@{Load}!GrPolygon@{GrPolygon}}
+\subsubsection[{Load}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygon::Load ({\bf UReader} \& {\em reader})}}
+\label{class_gr_polygon_c9a85b2f9ebbdc644bf51e738edde549}
+
+
+
+
+Definition at line 948 of file GrPolygon.cpp.\hypertarget{class_gr_polygon_eb49875dbda2f349029f033612a987be}{
+\index{GrPolygon@{GrPolygon}!operator=@{operator=}}
+\index{operator=@{operator=}!GrPolygon@{GrPolygon}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrPolygon} \& GrPolygon::operator= (const {\bf GrPolygon} \& {\em polygon})}}
+\label{class_gr_polygon_eb49875dbda2f349029f033612a987be}
+
+
+
+
+Definition at line 884 of file GrPolygon.cpp.\hypertarget{class_gr_polygon_e51b46ace5d4dfc73396033fd4858c51}{
+\index{GrPolygon@{GrPolygon}!RemapBoneIndices@{RemapBoneIndices}}
+\index{RemapBoneIndices@{RemapBoneIndices}!GrPolygon@{GrPolygon}}
+\subsubsection[{RemapBoneIndices}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygon::RemapBoneIndices (unsigned int $\ast$ {\em indices})}}
+\label{class_gr_polygon_e51b46ace5d4dfc73396033fd4858c51}
+
+
+
+
+Definition at line 216 of file GrPolygon.cpp.\hypertarget{class_gr_polygon_4a31719da237646860956200e58b0385}{
+\index{GrPolygon@{GrPolygon}!RemoveDuplicateVerts@{RemoveDuplicateVerts}}
+\index{RemoveDuplicateVerts@{RemoveDuplicateVerts}!GrPolygon@{GrPolygon}}
+\subsubsection[{RemoveDuplicateVerts}]{\setlength{\rightskip}{0pt plus 5cm}bool GrPolygon::RemoveDuplicateVerts (float {\em distEpsilonSqr})}}
+\label{class_gr_polygon_4a31719da237646860956200e58b0385}
+
+
+
+
+Definition at line 680 of file GrPolygon.cpp.\hypertarget{class_gr_polygon_20c41a3935e2256793edd844b351b750}{
+\index{GrPolygon@{GrPolygon}!ReverseWinding@{ReverseWinding}}
+\index{ReverseWinding@{ReverseWinding}!GrPolygon@{GrPolygon}}
+\subsubsection[{ReverseWinding}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygon::ReverseWinding ()}}
+\label{class_gr_polygon_20c41a3935e2256793edd844b351b750}
+
+
+
+
+Definition at line 722 of file GrPolygon.cpp.\hypertarget{class_gr_polygon_8124d42ce98f591b5e75c63b1adc673c}{
+\index{GrPolygon@{GrPolygon}!Save@{Save}}
+\index{Save@{Save}!GrPolygon@{GrPolygon}}
+\subsubsection[{Save}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygon::Save ({\bf UWriter} \& {\em writer}) const}}
+\label{class_gr_polygon_8124d42ce98f591b5e75c63b1adc673c}
+
+
+
+
+Definition at line 899 of file GrPolygon.cpp.\hypertarget{class_gr_polygon_486be53eb2a6e5f805972ac32a0011d2}{
+\index{GrPolygon@{GrPolygon}!SetMaterial@{SetMaterial}}
+\index{SetMaterial@{SetMaterial}!GrPolygon@{GrPolygon}}
+\subsubsection[{SetMaterial}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygon::SetMaterial ({\bf URef}$<$ {\bf GrMaterial} $>$ {\em material})}}
+\label{class_gr_polygon_486be53eb2a6e5f805972ac32a0011d2}
+
+
+
+
+Definition at line 243 of file GrPolygon.cpp.\hypertarget{class_gr_polygon_f46dd08b01dfa7b086ef3c3ec2531d9c}{
+\index{GrPolygon@{GrPolygon}!SetSkinningInfo@{SetSkinningInfo}}
+\index{SetSkinningInfo@{SetSkinningInfo}!GrPolygon@{GrPolygon}}
+\subsubsection[{SetSkinningInfo}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygon::SetSkinningInfo ({\bf SPolygonSkinVertex} $\ast$ {\em skinVertArray})}}
+\label{class_gr_polygon_f46dd08b01dfa7b086ef3c3ec2531d9c}
+
+
+
+
+Definition at line 206 of file GrPolygon.cpp.\hypertarget{class_gr_polygon_3b23c179792f596d818ecd94491c45a4}{
+\index{GrPolygon@{GrPolygon}!SetUberTexture@{SetUberTexture}}
+\index{SetUberTexture@{SetUberTexture}!GrPolygon@{GrPolygon}}
+\subsubsection[{SetUberTexture}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygon::SetUberTexture ({\bf URef}$<$ {\bf GrUberTexture} $>$ {\em texture})}}
+\label{class_gr_polygon_3b23c179792f596d818ecd94491c45a4}
+
+
+
+
+Definition at line 257 of file GrPolygon.cpp.\hypertarget{class_gr_polygon_7d5c9c2b213b88aead8530e6ef720ff7}{
+\index{GrPolygon@{GrPolygon}!SetUserData@{SetUserData}}
+\index{SetUserData@{SetUserData}!GrPolygon@{GrPolygon}}
+\subsubsection[{SetUserData}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygon::SetUserData (unsigned int {\em data})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_polygon_7d5c9c2b213b88aead8530e6ef720ff7}
+
+
+
+
+Definition at line 138 of file GrPolygon.h.\hypertarget{class_gr_polygon_9347a0c308ea32417e30a5d5ca3fa333}{
+\index{GrPolygon@{GrPolygon}!SetUserFlag@{SetUserFlag}}
+\index{SetUserFlag@{SetUserFlag}!GrPolygon@{GrPolygon}}
+\subsubsection[{SetUserFlag}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygon::SetUserFlag ({\bf EFLAGVALUE} {\em flagValue})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_polygon_9347a0c308ea32417e30a5d5ca3fa333}
+
+
+
+
+Definition at line 133 of file GrPolygon.h.\hypertarget{class_gr_polygon_b710c1e840a9047a2288813fc005974d}{
+\index{GrPolygon@{GrPolygon}!SetVertexFlags@{SetVertexFlags}}
+\index{SetVertexFlags@{SetVertexFlags}!GrPolygon@{GrPolygon}}
+\subsubsection[{SetVertexFlags}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygon::SetVertexFlags (unsigned int {\em flags})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_polygon_b710c1e840a9047a2288813fc005974d}
+
+
+
+
+Definition at line 118 of file GrPolygon.h.\hypertarget{class_gr_polygon_beed17aedd971fa5874537a4b68d10be}{
+\index{GrPolygon@{GrPolygon}!SetVertices@{SetVertices}}
+\index{SetVertices@{SetVertices}!GrPolygon@{GrPolygon}}
+\subsubsection[{SetVertices}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygon::SetVertices (unsigned int {\em flags}, \/  const {\bf SPolygonVertex} $\ast$ {\em verts}, \/  unsigned int {\em vertexCount}, \/  {\bf GrMaterial} $\ast$ {\em material}, \/  const {\bf MPlane} \& {\em plane})}}
+\label{class_gr_polygon_beed17aedd971fa5874537a4b68d10be}
+
+
+
+
+Definition at line 193 of file GrPolygon.cpp.\hypertarget{class_gr_polygon_434ae06262ce8bafdf6e9a5e24ec4d28}{
+\index{GrPolygon@{GrPolygon}!SetVertices@{SetVertices}}
+\index{SetVertices@{SetVertices}!GrPolygon@{GrPolygon}}
+\subsubsection[{SetVertices}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygon::SetVertices (unsigned int {\em flags}, \/  const {\bf SPolygonVertex} $\ast$ {\em verts}, \/  unsigned int {\em vertexCount}, \/  {\bf GrMaterial} $\ast$ {\em material})}}
+\label{class_gr_polygon_434ae06262ce8bafdf6e9a5e24ec4d28}
+
+
+
+
+Definition at line 180 of file GrPolygon.cpp.\hypertarget{class_gr_polygon_71ca719cd4addf47d5c170691a1738f2}{
+\index{GrPolygon@{GrPolygon}!Split@{Split}}
+\index{Split@{Split}!GrPolygon@{GrPolygon}}
+\subsubsection[{Split}]{\setlength{\rightskip}{0pt plus 5cm}int GrPolygon::Split ({\bf GrPolygon} \& {\em front}, \/  {\bf GrPolygon} \& {\em back}, \/  const {\bf MPlane} \& {\em plane}, \/  float {\em planeDistEpsilon}) const}}
+\label{class_gr_polygon_71ca719cd4addf47d5c170691a1738f2}
+
+
+
+
+Definition at line 494 of file GrPolygon.cpp.\hypertarget{class_gr_polygon_c8fc7a0caec236dfac7f44abc38a17e5}{
+\index{GrPolygon@{GrPolygon}!Transform@{Transform}}
+\index{Transform@{Transform}!GrPolygon@{GrPolygon}}
+\subsubsection[{Transform}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrPolygon} GrPolygon::Transform (const {\bf MMat4x4} \& {\em transform}, \/  const {\bf MMat3x3} \& {\em normalRot}) const}}
+\label{class_gr_polygon_c8fc7a0caec236dfac7f44abc38a17e5}
+
+
+
+
+Definition at line 809 of file GrPolygon.cpp.\hypertarget{class_gr_polygon_312706662a832bd7fdc652fb55bcdd56}{
+\index{GrPolygon@{GrPolygon}!TransformFast@{TransformFast}}
+\index{TransformFast@{TransformFast}!GrPolygon@{GrPolygon}}
+\subsubsection[{TransformFast}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygon::TransformFast (const {\bf MMat4x4} \& {\em transform}, \/  const {\bf MMat3x3} \& {\em normalRot})}}
+\label{class_gr_polygon_312706662a832bd7fdc652fb55bcdd56}
+
+
+
+
+Definition at line 818 of file GrPolygon.cpp.\hypertarget{class_gr_polygon_762d861ad057a916daf5e6b376f31ec8}{
+\index{GrPolygon@{GrPolygon}!Triangulate@{Triangulate}}
+\index{Triangulate@{Triangulate}!GrPolygon@{GrPolygon}}
+\subsubsection[{Triangulate}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygon::Triangulate ({\bf SPolygonVertex} $\ast$ {\em triangleList}) const}}
+\label{class_gr_polygon_762d861ad057a916daf5e6b376f31ec8}
+
+
+
+
+Definition at line 292 of file GrPolygon.cpp.\hypertarget{class_gr_polygon_94c81cc3e6f419a814119a7dc3c4d78b}{
+\index{GrPolygon@{GrPolygon}!Triangulate@{Triangulate}}
+\index{Triangulate@{Triangulate}!GrPolygon@{GrPolygon}}
+\subsubsection[{Triangulate}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygon::Triangulate ({\bf SPolygonTriangle} $\ast$ {\em triangles}, \/  {\bf SPolygonTriangleSkin} $\ast$ {\em triangleSkinArray} = {\tt 0}) const}}
+\label{class_gr_polygon_94c81cc3e6f419a814119a7dc3c4d78b}
+
+
+
+
+Definition at line 264 of file GrPolygon.cpp.\hypertarget{class_gr_polygon_d590f512fd5dc8ff24377ed123df129a}{
+\index{GrPolygon@{GrPolygon}!WeldVertices@{WeldVertices}}
+\index{WeldVertices@{WeldVertices}!GrPolygon@{GrPolygon}}
+\subsubsection[{WeldVertices}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygon::WeldVertices (const {\bf GrPolygon} \& {\em polygon}, \/  float {\em distEpsilonSqr})}}
+\label{class_gr_polygon_d590f512fd5dc8ff24377ed123df129a}
+
+
+
+
+Definition at line 704 of file GrPolygon.cpp.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_gr_polygon_8649525f9a18567bd50c87ab9436a9d9}{
+\index{GrPolygon@{GrPolygon}!kBiNormal@{kBiNormal}}
+\index{kBiNormal@{kBiNormal}!GrPolygon@{GrPolygon}}
+\subsubsection[{kBiNormal}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int {\bf GrPolygon::kBiNormal} = 0x04\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_gr_polygon_8649525f9a18567bd50c87ab9436a9d9}
+
+
+
+
+Definition at line 76 of file GrPolygon.h.\hypertarget{class_gr_polygon_438f9ff37f015e22bd8e48f94637b766}{
+\index{GrPolygon@{GrPolygon}!kColor@{kColor}}
+\index{kColor@{kColor}!GrPolygon@{GrPolygon}}
+\subsubsection[{kColor}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int {\bf GrPolygon::kColor} = 0x08\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_gr_polygon_438f9ff37f015e22bd8e48f94637b766}
+
+
+
+
+Definition at line 77 of file GrPolygon.h.\hypertarget{class_gr_polygon_f85991824f91a6724771e1ace01f1caf}{
+\index{GrPolygon@{GrPolygon}!kNormal@{kNormal}}
+\index{kNormal@{kNormal}!GrPolygon@{GrPolygon}}
+\subsubsection[{kNormal}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int {\bf GrPolygon::kNormal} = 0x01\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_gr_polygon_f85991824f91a6724771e1ace01f1caf}
+
+
+
+
+Definition at line 74 of file GrPolygon.h.\hypertarget{class_gr_polygon_294f4e919c062a31183e59d05c2352ae}{
+\index{GrPolygon@{GrPolygon}!kTangent@{kTangent}}
+\index{kTangent@{kTangent}!GrPolygon@{GrPolygon}}
+\subsubsection[{kTangent}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int {\bf GrPolygon::kTangent} = 0x02\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_gr_polygon_294f4e919c062a31183e59d05c2352ae}
+
+
+
+
+Definition at line 75 of file GrPolygon.h.\hypertarget{class_gr_polygon_a21eb256bb71553f0d7d9780371c21d0}{
+\index{GrPolygon@{GrPolygon}!kUniqueUV@{kUniqueUV}}
+\index{kUniqueUV@{kUniqueUV}!GrPolygon@{GrPolygon}}
+\subsubsection[{kUniqueUV}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int {\bf GrPolygon::kUniqueUV} = 0x20\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_gr_polygon_a21eb256bb71553f0d7d9780371c21d0}
+
+
+
+
+Definition at line 79 of file GrPolygon.h.\hypertarget{class_gr_polygon_f61ee04e7a4e4e076f5e4beb223d8fbc}{
+\index{GrPolygon@{GrPolygon}!kUV@{kUV}}
+\index{kUV@{kUV}!GrPolygon@{GrPolygon}}
+\subsubsection[{kUV}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int {\bf GrPolygon::kUV} = 0x10\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_gr_polygon_f61ee04e7a4e4e076f5e4beb223d8fbc}
+
+
+
+
+Definition at line 78 of file GrPolygon.h.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_polygon_8h}{GrPolygon.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_polygon_8cpp}{GrPolygon.cpp}\end{CompactItemize}

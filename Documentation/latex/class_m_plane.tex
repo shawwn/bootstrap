@@ -1,0 +1,301 @@
+\hypertarget{class_m_plane}{
+\section{MPlane Class Reference}
+\label{class_m_plane}\index{MPlane@{MPlane}}
+}
+{\tt \#include $<$MPlane.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_m_plane_05f80146f7924ba17f387847ad4562a6}{MPlane} ()
+\item 
+\hyperlink{class_m_plane_4284b8ea0623a916fab4a8d8dc7309b2}{MPlane} (\hyperlink{class_u_reader}{UReader} \&reader)
+\item 
+\hyperlink{class_m_plane_28191a178c76b234747571d819b71cf5}{MPlane} (const \hyperlink{class_m_vec3}{MVec3} \&normal, const \hyperlink{class_m_vec3}{MVec3} \&point)
+\item 
+\hyperlink{class_m_plane_6195235398e2dd4ef5d0614c0f08b517}{MPlane} (const \hyperlink{class_m_vec3}{MVec3} \&normal, float d)
+\item 
+\hyperlink{class_m_plane_5c9992f6d3f481962e666995a7cc4198}{$\sim$MPlane} ()
+\item 
+const \hyperlink{class_m_vec3}{MVec3} \& \hyperlink{class_m_plane_a467926800c24aad63d84af773ee61ba}{GetNormal} () const 
+\item 
+float \hyperlink{class_m_plane_5d577b90d83e5c9aab6d221cd9d8bda1}{GetD} () const 
+\item 
+void \hyperlink{class_m_plane_504ba7ba959fbbdcfc13bda9a3c59fff}{SetD} (float d)
+\item 
+void \hyperlink{class_m_plane_8fc4ab464ff88f145337b33e8c3d3dd0}{ReverseFacing} ()
+\item 
+void \hyperlink{class_m_plane_d04872aec9db1ff0a6625fac675783ad}{Bias} (float amount)
+\item 
+\hyperlink{class_m_plane}{MPlane} \hyperlink{class_m_plane_a57251c5e40213bcd468e3c9fe5c39e9}{Transform} (const \hyperlink{class_m_mat4x4}{MMat4x4} \&\hyperlink{glext__bak_8h_07993c0d92c1aeeb357ba0495c8b5325}{transform}, const \hyperlink{class_m_mat3x3}{MMat3x3} \&normalRot)
+\item 
+void \hyperlink{class_m_plane_11f678fce27735113c0c921508534103}{TransformFast} (const \hyperlink{class_m_mat4x4}{MMat4x4} \&\hyperlink{glext__bak_8h_07993c0d92c1aeeb357ba0495c8b5325}{transform}, const \hyperlink{class_m_mat3x3}{MMat3x3} \&normalRot)
+\item 
+void \hyperlink{class_m_plane_de0c41112fd9d1c27830edcf906d9638}{Translate} (const \hyperlink{class_m_vec3}{MVec3} \&translate)
+\item 
+void \hyperlink{class_m_plane_3a92f3bce040b707ba855c0f797b56d2}{Scale} (float \hyperlink{glext__bak_8h_281421b881aa7a1266842b73a3bc7655}{scale})
+\item 
+\hyperlink{class_m_mat4x4}{MMat4x4} \hyperlink{class_m_plane_22103668bd272f9ed1dc42f8e5a30cd2}{BuildReflectMatrix} () const 
+\item 
+bool \hyperlink{class_m_plane_52a97a802d2b37a8d4755735a406c217}{IsCoplanar} (const \hyperlink{class_m_plane}{MPlane} \&plane, float angleEpsilon, float dEpsilon) const 
+\item 
+int \hyperlink{class_m_plane_ba18afe95e49cc82c2d1f1feca4f1838}{GetSide} (const \hyperlink{class_m_vec3}{MVec3} \&pt, float epsilon) const 
+\item 
+bool \hyperlink{class_m_plane_c3d1fdfb5daaff1e8b48b70661c66210}{GetIntersect} (\hyperlink{class_m_line}{MLine} \&line, const \hyperlink{class_m_plane}{MPlane} \&plane) const 
+\item 
+bool \hyperlink{class_m_plane_e9e32981866df579c81a792bbd5e0d84}{GetIntersect} (\hyperlink{class_m_vec3}{MVec3} \&point, const \hyperlink{class_m_plane}{MPlane} \&plane1, const \hyperlink{class_m_plane}{MPlane} \&plane2) const 
+\item 
+{\footnotesize template$<$typename \_\-Vec $>$ }\\float \hyperlink{class_m_plane_f36d81e75e651ca9a3004e1cb14d4217}{Dist} (const \_\-Vec \&point) const 
+\item 
+{\footnotesize template$<$typename \_\-Vec $>$ }\\bool \hyperlink{class_m_plane_5f4124f83a2962996c6be87a5d5c92f2}{GetSegmentIntersect} (\_\-Vec \&pt, const \_\-Vec \&pt0, const \_\-Vec \&pt1) const 
+\item 
+{\footnotesize template$<$typename \_\-Vec $>$ }\\bool \hyperlink{class_m_plane_96c35a2efe09dbd9267d54936ed7d4ba}{GetRayIntersect} (float \&rayMu, const \_\-Vec \&rayOrigin, const \_\-Vec \&rayDir) const 
+\item 
+{\footnotesize template$<$typename \_\-Triangle , typename \_\-Vec $>$ }\\void \hyperlink{class_m_plane_317bf47134f27459f8235712f4149b73}{SplitTriangle} (const \_\-Triangle \&tri, \_\-Triangle $\ast$posTris, \_\-Triangle $\ast$negTris, unsigned int \&posCount, unsigned int \&negCount, float epsilon) const 
+\item 
+void \hyperlink{class_m_plane_67c49a180eb1c4366b074dfee7931dad}{Save} (\hyperlink{class_u_writer}{UWriter} \&writer) const 
+\item 
+void \hyperlink{class_m_plane_8e7c1820f2a4e745b85e011a90cfe0f8}{Load} (\hyperlink{class_u_reader}{UReader} \&reader)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 25 of file MPlane.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_m_plane_05f80146f7924ba17f387847ad4562a6}{
+\index{MPlane@{MPlane}!MPlane@{MPlane}}
+\index{MPlane@{MPlane}!MPlane@{MPlane}}
+\subsubsection[{MPlane}]{\setlength{\rightskip}{0pt plus 5cm}MPlane::MPlane ()}}
+\label{class_m_plane_05f80146f7924ba17f387847ad4562a6}
+
+
+
+
+Definition at line 30 of file MPlane.cpp.\hypertarget{class_m_plane_4284b8ea0623a916fab4a8d8dc7309b2}{
+\index{MPlane@{MPlane}!MPlane@{MPlane}}
+\index{MPlane@{MPlane}!MPlane@{MPlane}}
+\subsubsection[{MPlane}]{\setlength{\rightskip}{0pt plus 5cm}MPlane::MPlane ({\bf UReader} \& {\em reader})}}
+\label{class_m_plane_4284b8ea0623a916fab4a8d8dc7309b2}
+
+
+
+
+Definition at line 38 of file MPlane.cpp.\hypertarget{class_m_plane_28191a178c76b234747571d819b71cf5}{
+\index{MPlane@{MPlane}!MPlane@{MPlane}}
+\index{MPlane@{MPlane}!MPlane@{MPlane}}
+\subsubsection[{MPlane}]{\setlength{\rightskip}{0pt plus 5cm}MPlane::MPlane (const {\bf MVec3} \& {\em normal}, \/  const {\bf MVec3} \& {\em point})}}
+\label{class_m_plane_28191a178c76b234747571d819b71cf5}
+
+
+
+
+Definition at line 46 of file MPlane.cpp.\hypertarget{class_m_plane_6195235398e2dd4ef5d0614c0f08b517}{
+\index{MPlane@{MPlane}!MPlane@{MPlane}}
+\index{MPlane@{MPlane}!MPlane@{MPlane}}
+\subsubsection[{MPlane}]{\setlength{\rightskip}{0pt plus 5cm}MPlane::MPlane (const {\bf MVec3} \& {\em normal}, \/  float {\em d})}}
+\label{class_m_plane_6195235398e2dd4ef5d0614c0f08b517}
+
+
+
+
+Definition at line 55 of file MPlane.cpp.\hypertarget{class_m_plane_5c9992f6d3f481962e666995a7cc4198}{
+\index{MPlane@{MPlane}!$\sim$MPlane@{$\sim$MPlane}}
+\index{$\sim$MPlane@{$\sim$MPlane}!MPlane@{MPlane}}
+\subsubsection[{$\sim$MPlane}]{\setlength{\rightskip}{0pt plus 5cm}MPlane::$\sim$MPlane ()}}
+\label{class_m_plane_5c9992f6d3f481962e666995a7cc4198}
+
+
+
+
+Definition at line 63 of file MPlane.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_m_plane_d04872aec9db1ff0a6625fac675783ad}{
+\index{MPlane@{MPlane}!Bias@{Bias}}
+\index{Bias@{Bias}!MPlane@{MPlane}}
+\subsubsection[{Bias}]{\setlength{\rightskip}{0pt plus 5cm}void MPlane::Bias (float {\em amount})}}
+\label{class_m_plane_d04872aec9db1ff0a6625fac675783ad}
+
+
+
+
+Definition at line 75 of file MPlane.cpp.\hypertarget{class_m_plane_22103668bd272f9ed1dc42f8e5a30cd2}{
+\index{MPlane@{MPlane}!BuildReflectMatrix@{BuildReflectMatrix}}
+\index{BuildReflectMatrix@{BuildReflectMatrix}!MPlane@{MPlane}}
+\subsubsection[{BuildReflectMatrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MMat4x4} MPlane::BuildReflectMatrix () const}}
+\label{class_m_plane_22103668bd272f9ed1dc42f8e5a30cd2}
+
+
+
+
+Definition at line 116 of file MPlane.cpp.\hypertarget{class_m_plane_f36d81e75e651ca9a3004e1cb14d4217}{
+\index{MPlane@{MPlane}!Dist@{Dist}}
+\index{Dist@{Dist}!MPlane@{MPlane}}
+\subsubsection[{Dist}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-Vec $>$ float MPlane::Dist (const \_\-Vec \& {\em point}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_plane_f36d81e75e651ca9a3004e1cb14d4217}
+
+
+
+
+Definition at line 110 of file MPlane.h.\hypertarget{class_m_plane_5d577b90d83e5c9aab6d221cd9d8bda1}{
+\index{MPlane@{MPlane}!GetD@{GetD}}
+\index{GetD@{GetD}!MPlane@{MPlane}}
+\subsubsection[{GetD}]{\setlength{\rightskip}{0pt plus 5cm}float MPlane::GetD () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_plane_5d577b90d83e5c9aab6d221cd9d8bda1}
+
+
+
+
+Definition at line 37 of file MPlane.h.\hypertarget{class_m_plane_e9e32981866df579c81a792bbd5e0d84}{
+\index{MPlane@{MPlane}!GetIntersect@{GetIntersect}}
+\index{GetIntersect@{GetIntersect}!MPlane@{MPlane}}
+\subsubsection[{GetIntersect}]{\setlength{\rightskip}{0pt plus 5cm}bool MPlane::GetIntersect ({\bf MVec3} \& {\em point}, \/  const {\bf MPlane} \& {\em plane1}, \/  const {\bf MPlane} \& {\em plane2}) const}}
+\label{class_m_plane_e9e32981866df579c81a792bbd5e0d84}
+
+
+
+
+Definition at line 170 of file MPlane.cpp.\hypertarget{class_m_plane_c3d1fdfb5daaff1e8b48b70661c66210}{
+\index{MPlane@{MPlane}!GetIntersect@{GetIntersect}}
+\index{GetIntersect@{GetIntersect}!MPlane@{MPlane}}
+\subsubsection[{GetIntersect}]{\setlength{\rightskip}{0pt plus 5cm}bool MPlane::GetIntersect ({\bf MLine} \& {\em line}, \/  const {\bf MPlane} \& {\em plane}) const}}
+\label{class_m_plane_c3d1fdfb5daaff1e8b48b70661c66210}
+
+
+
+
+Definition at line 148 of file MPlane.cpp.\hypertarget{class_m_plane_a467926800c24aad63d84af773ee61ba}{
+\index{MPlane@{MPlane}!GetNormal@{GetNormal}}
+\index{GetNormal@{GetNormal}!MPlane@{MPlane}}
+\subsubsection[{GetNormal}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MVec3}\& MPlane::GetNormal () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_plane_a467926800c24aad63d84af773ee61ba}
+
+
+
+
+Definition at line 36 of file MPlane.h.\hypertarget{class_m_plane_96c35a2efe09dbd9267d54936ed7d4ba}{
+\index{MPlane@{MPlane}!GetRayIntersect@{GetRayIntersect}}
+\index{GetRayIntersect@{GetRayIntersect}!MPlane@{MPlane}}
+\subsubsection[{GetRayIntersect}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-Vec $>$ bool MPlane::GetRayIntersect (float \& {\em rayMu}, \/  const \_\-Vec \& {\em rayOrigin}, \/  const \_\-Vec \& {\em rayDir}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_plane_96c35a2efe09dbd9267d54936ed7d4ba}
+
+
+
+
+Definition at line 148 of file MPlane.h.\hypertarget{class_m_plane_5f4124f83a2962996c6be87a5d5c92f2}{
+\index{MPlane@{MPlane}!GetSegmentIntersect@{GetSegmentIntersect}}
+\index{GetSegmentIntersect@{GetSegmentIntersect}!MPlane@{MPlane}}
+\subsubsection[{GetSegmentIntersect}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-Vec $>$ bool MPlane::GetSegmentIntersect (\_\-Vec \& {\em pt}, \/  const \_\-Vec \& {\em pt0}, \/  const \_\-Vec \& {\em pt1}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_plane_5f4124f83a2962996c6be87a5d5c92f2}
+
+
+
+
+Definition at line 119 of file MPlane.h.\hypertarget{class_m_plane_ba18afe95e49cc82c2d1f1feca4f1838}{
+\index{MPlane@{MPlane}!GetSide@{GetSide}}
+\index{GetSide@{GetSide}!MPlane@{MPlane}}
+\subsubsection[{GetSide}]{\setlength{\rightskip}{0pt plus 5cm}int MPlane::GetSide (const {\bf MVec3} \& {\em pt}, \/  float {\em epsilon}) const}}
+\label{class_m_plane_ba18afe95e49cc82c2d1f1feca4f1838}
+
+
+
+
+Definition at line 138 of file MPlane.cpp.\hypertarget{class_m_plane_52a97a802d2b37a8d4755735a406c217}{
+\index{MPlane@{MPlane}!IsCoplanar@{IsCoplanar}}
+\index{IsCoplanar@{IsCoplanar}!MPlane@{MPlane}}
+\subsubsection[{IsCoplanar}]{\setlength{\rightskip}{0pt plus 5cm}bool MPlane::IsCoplanar (const {\bf MPlane} \& {\em plane}, \/  float {\em angleEpsilon}, \/  float {\em dEpsilon}) const}}
+\label{class_m_plane_52a97a802d2b37a8d4755735a406c217}
+
+
+
+
+Definition at line 131 of file MPlane.cpp.\hypertarget{class_m_plane_8e7c1820f2a4e745b85e011a90cfe0f8}{
+\index{MPlane@{MPlane}!Load@{Load}}
+\index{Load@{Load}!MPlane@{MPlane}}
+\subsubsection[{Load}]{\setlength{\rightskip}{0pt plus 5cm}void MPlane::Load ({\bf UReader} \& {\em reader})}}
+\label{class_m_plane_8e7c1820f2a4e745b85e011a90cfe0f8}
+
+
+
+
+Definition at line 202 of file MPlane.cpp.\hypertarget{class_m_plane_8fc4ab464ff88f145337b33e8c3d3dd0}{
+\index{MPlane@{MPlane}!ReverseFacing@{ReverseFacing}}
+\index{ReverseFacing@{ReverseFacing}!MPlane@{MPlane}}
+\subsubsection[{ReverseFacing}]{\setlength{\rightskip}{0pt plus 5cm}void MPlane::ReverseFacing ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_plane_8fc4ab464ff88f145337b33e8c3d3dd0}
+
+
+
+
+Definition at line 40 of file MPlane.h.\hypertarget{class_m_plane_67c49a180eb1c4366b074dfee7931dad}{
+\index{MPlane@{MPlane}!Save@{Save}}
+\index{Save@{Save}!MPlane@{MPlane}}
+\subsubsection[{Save}]{\setlength{\rightskip}{0pt plus 5cm}void MPlane::Save ({\bf UWriter} \& {\em writer}) const}}
+\label{class_m_plane_67c49a180eb1c4366b074dfee7931dad}
+
+
+
+
+Definition at line 194 of file MPlane.cpp.\hypertarget{class_m_plane_3a92f3bce040b707ba855c0f797b56d2}{
+\index{MPlane@{MPlane}!Scale@{Scale}}
+\index{Scale@{Scale}!MPlane@{MPlane}}
+\subsubsection[{Scale}]{\setlength{\rightskip}{0pt plus 5cm}void MPlane::Scale (float {\em scale})}}
+\label{class_m_plane_3a92f3bce040b707ba855c0f797b56d2}
+
+
+
+
+Definition at line 109 of file MPlane.cpp.\hypertarget{class_m_plane_504ba7ba959fbbdcfc13bda9a3c59fff}{
+\index{MPlane@{MPlane}!SetD@{SetD}}
+\index{SetD@{SetD}!MPlane@{MPlane}}
+\subsubsection[{SetD}]{\setlength{\rightskip}{0pt plus 5cm}void MPlane::SetD (float {\em d})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_plane_504ba7ba959fbbdcfc13bda9a3c59fff}
+
+
+
+
+Definition at line 38 of file MPlane.h.\hypertarget{class_m_plane_317bf47134f27459f8235712f4149b73}{
+\index{MPlane@{MPlane}!SplitTriangle@{SplitTriangle}}
+\index{SplitTriangle@{SplitTriangle}!MPlane@{MPlane}}
+\subsubsection[{SplitTriangle}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-Triangle , typename \_\-Vec $>$ void MPlane::SplitTriangle (const \_\-Triangle \& {\em tri}, \/  \_\-Triangle $\ast$ {\em posTris}, \/  \_\-Triangle $\ast$ {\em negTris}, \/  unsigned int \& {\em posCount}, \/  unsigned int \& {\em negCount}, \/  float {\em epsilon}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_plane_317bf47134f27459f8235712f4149b73}
+
+
+
+
+Definition at line 182 of file MPlane.h.\hypertarget{class_m_plane_a57251c5e40213bcd468e3c9fe5c39e9}{
+\index{MPlane@{MPlane}!Transform@{Transform}}
+\index{Transform@{Transform}!MPlane@{MPlane}}
+\subsubsection[{Transform}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MPlane} MPlane::Transform (const {\bf MMat4x4} \& {\em transform}, \/  const {\bf MMat3x3} \& {\em normalRot})}}
+\label{class_m_plane_a57251c5e40213bcd468e3c9fe5c39e9}
+
+
+
+
+Definition at line 82 of file MPlane.cpp.\hypertarget{class_m_plane_11f678fce27735113c0c921508534103}{
+\index{MPlane@{MPlane}!TransformFast@{TransformFast}}
+\index{TransformFast@{TransformFast}!MPlane@{MPlane}}
+\subsubsection[{TransformFast}]{\setlength{\rightskip}{0pt plus 5cm}void MPlane::TransformFast (const {\bf MMat4x4} \& {\em transform}, \/  const {\bf MMat3x3} \& {\em normalRot})}}
+\label{class_m_plane_11f678fce27735113c0c921508534103}
+
+
+
+
+Definition at line 91 of file MPlane.cpp.\hypertarget{class_m_plane_de0c41112fd9d1c27830edcf906d9638}{
+\index{MPlane@{MPlane}!Translate@{Translate}}
+\index{Translate@{Translate}!MPlane@{MPlane}}
+\subsubsection[{Translate}]{\setlength{\rightskip}{0pt plus 5cm}void MPlane::Translate (const {\bf MVec3} \& {\em translate})}}
+\label{class_m_plane_de0c41112fd9d1c27830edcf906d9638}
+
+
+
+
+Definition at line 101 of file MPlane.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_m_plane_8h}{MPlane.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_m_plane_8cpp}{MPlane.cpp}\end{CompactItemize}

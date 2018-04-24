@@ -1,0 +1,138 @@
+\hypertarget{_gr_polygon_uber_mapping_8cpp}{
+\section{C:/Bootstrap/ProjectBX/Engine/Graphics/GrPolygonUberMapping.cpp File Reference}
+\label{_gr_polygon_uber_mapping_8cpp}\index{C:/Bootstrap/ProjectBX/Engine/Graphics/GrPolygonUberMapping.cpp@{C:/Bootstrap/ProjectBX/Engine/Graphics/GrPolygonUberMapping.cpp}}
+}
+{\tt \#include \char`\"{}graphics\_\-afx.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrPolygonUberMapping.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrPolygonUberPatch.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrPolygonGroup.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrPolygon.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrUberTextureMgr.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrUberTexture.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrConfig.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrDebug.h\char`\"{}}\par
+{\tt \#include \char`\"{}RFileMgr.h\char`\"{}}\par
+{\tt \#include \char`\"{}RFile.h\char`\"{}}\par
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \hyperlink{_gr_polygon_uber_mapping_8cpp_5b8da22e6c764b63693b3c3aef459740}{UBERTEX\_\-SIZE\_\-IN\_\-PATCHES}~( GR\_\-UBERTEX\_\-SIZE\_\-IN\_\-TEXELS / GR\_\-UBERTEX\_\-PATCH\_\-BOUNDARY )
+\item 
+\#define \hyperlink{_gr_polygon_uber_mapping_8cpp_1a628d3e3aca0163d9fca51068a76a0b}{UBERTEX\_\-PATCH\_\-SIZE\_\-IN\_\-TILES}~( GR\_\-UBERTEX\_\-PATCH\_\-BOUNDARY / GR\_\-UBERTEX\_\-TILE\_\-SIZE )
+\item 
+\#define \hyperlink{_gr_polygon_uber_mapping_8cpp_8d724058d117c4affbbc5c8875b6e087}{UBERTEX\_\-FLAGS}~( \hyperlink{class_r_file_mgr_7a2b1f90a235a749b3c08e2839ceb16b}{RFileMgr::kFlagCreateAlways} $|$ \hyperlink{class_r_file_mgr_cf4103da9315f00f0ca524c2f263a1b4}{RFileMgr::kFlagRead} $|$ \hyperlink{class_r_file_mgr_d50cfef45d5e20a1de1abc17c0691067}{RFileMgr::kFlagWrite} $|$ \hyperlink{class_r_file_mgr_6e99814567b23b9c78cb6c67297b195c}{RFileMgr::kFlagDMA} )
+\item 
+\#define \hyperlink{_gr_polygon_uber_mapping_8cpp_38fa6d2f5a6fccf06144bd8983585b23}{DEBUG\_\-RASTERIZER}~0
+\item 
+\#define \hyperlink{_gr_polygon_uber_mapping_8cpp_1333bfae3835d5ca55046cd76ba7fe12}{INIT\_\-DEBUG\_\-IMAGE}()~\{ \}
+\item 
+\#define \hyperlink{_gr_polygon_uber_mapping_8cpp_4e2d276eb85fc41a50c76e846f374475}{FREE\_\-DEBUG\_\-IMAGE}()~\{ \}
+\item 
+\#define \hyperlink{_gr_polygon_uber_mapping_8cpp_db09b2c5e3fc446997ff10c12ad948e7}{SAVE\_\-DEBUG\_\-IMAGE}()~\{ \}
+\item 
+\#define \hyperlink{_gr_polygon_uber_mapping_8cpp_e69c95d1d1aa2d641458b27af49c2f18}{DEBUG\_\-IMAGE\_\-WRITE}(\hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x}, \hyperlink{wglext_8h_9298c7ad619074f5285b32c6b72bfdea}{y})~\{ \}
+\item 
+\#define \hyperlink{_gr_polygon_uber_mapping_8cpp_84ea8002a883810b0d5593e81e9dcfe8}{LINE\_\-SIDE}(\hyperlink{glext__bak_8h_3309789fc188587d666cda5ece79cf82}{a}, \hyperlink{glext__bak_8h_0f71581a41fd2264c8944126dabbd010}{b}, \hyperlink{glext__bak_8h_4c662e60c03c48f5718de0c175211fb0}{c}, \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x}, \hyperlink{wglext_8h_9298c7ad619074f5285b32c6b72bfdea}{y})~( ( ( \hyperlink{glext__bak_8h_3309789fc188587d666cda5ece79cf82}{a} ) $\ast$ ( ( double )( \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x} ) ) + ( \hyperlink{glext__bak_8h_0f71581a41fd2264c8944126dabbd010}{b} ) $\ast$ ( ( double )( \hyperlink{wglext_8h_9298c7ad619074f5285b32c6b72bfdea}{y} ) + 0 ) + ( \hyperlink{glext__bak_8h_4c662e60c03c48f5718de0c175211fb0}{c} ) ) $<$ 0.0 )
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+void \hyperlink{_gr_polygon_uber_mapping_8cpp_161bdbced676440669f99af085b81f82}{BitMaskRasterize} (unsigned char $\ast$bitMask, \hyperlink{struct_s_polygon_vertex}{SPolygonVertex} $\ast$verts, unsigned int $\ast$mortonTable)
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_gr_polygon_uber_mapping_8cpp_e69c95d1d1aa2d641458b27af49c2f18}{
+\index{GrPolygonUberMapping.cpp@{GrPolygonUberMapping.cpp}!DEBUG\_\-IMAGE\_\-WRITE@{DEBUG\_\-IMAGE\_\-WRITE}}
+\index{DEBUG\_\-IMAGE\_\-WRITE@{DEBUG\_\-IMAGE\_\-WRITE}!GrPolygonUberMapping.cpp@{GrPolygonUberMapping.cpp}}
+\subsubsection[{DEBUG\_\-IMAGE\_\-WRITE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DEBUG\_\-IMAGE\_\-WRITE({\bf x}, \/  {\bf y})~\{ \}}}
+\label{_gr_polygon_uber_mapping_8cpp_e69c95d1d1aa2d641458b27af49c2f18}
+
+
+
+
+Definition at line 46 of file GrPolygonUberMapping.cpp.\hypertarget{_gr_polygon_uber_mapping_8cpp_38fa6d2f5a6fccf06144bd8983585b23}{
+\index{GrPolygonUberMapping.cpp@{GrPolygonUberMapping.cpp}!DEBUG\_\-RASTERIZER@{DEBUG\_\-RASTERIZER}}
+\index{DEBUG\_\-RASTERIZER@{DEBUG\_\-RASTERIZER}!GrPolygonUberMapping.cpp@{GrPolygonUberMapping.cpp}}
+\subsubsection[{DEBUG\_\-RASTERIZER}]{\setlength{\rightskip}{0pt plus 5cm}\#define DEBUG\_\-RASTERIZER~0}}
+\label{_gr_polygon_uber_mapping_8cpp_38fa6d2f5a6fccf06144bd8983585b23}
+
+
+
+
+Definition at line 29 of file GrPolygonUberMapping.cpp.\hypertarget{_gr_polygon_uber_mapping_8cpp_4e2d276eb85fc41a50c76e846f374475}{
+\index{GrPolygonUberMapping.cpp@{GrPolygonUberMapping.cpp}!FREE\_\-DEBUG\_\-IMAGE@{FREE\_\-DEBUG\_\-IMAGE}}
+\index{FREE\_\-DEBUG\_\-IMAGE@{FREE\_\-DEBUG\_\-IMAGE}!GrPolygonUberMapping.cpp@{GrPolygonUberMapping.cpp}}
+\subsubsection[{FREE\_\-DEBUG\_\-IMAGE}]{\setlength{\rightskip}{0pt plus 5cm}\#define FREE\_\-DEBUG\_\-IMAGE()~\{ \}}}
+\label{_gr_polygon_uber_mapping_8cpp_4e2d276eb85fc41a50c76e846f374475}
+
+
+
+
+Definition at line 44 of file GrPolygonUberMapping.cpp.\hypertarget{_gr_polygon_uber_mapping_8cpp_1333bfae3835d5ca55046cd76ba7fe12}{
+\index{GrPolygonUberMapping.cpp@{GrPolygonUberMapping.cpp}!INIT\_\-DEBUG\_\-IMAGE@{INIT\_\-DEBUG\_\-IMAGE}}
+\index{INIT\_\-DEBUG\_\-IMAGE@{INIT\_\-DEBUG\_\-IMAGE}!GrPolygonUberMapping.cpp@{GrPolygonUberMapping.cpp}}
+\subsubsection[{INIT\_\-DEBUG\_\-IMAGE}]{\setlength{\rightskip}{0pt plus 5cm}\#define INIT\_\-DEBUG\_\-IMAGE()~\{ \}}}
+\label{_gr_polygon_uber_mapping_8cpp_1333bfae3835d5ca55046cd76ba7fe12}
+
+
+
+
+Definition at line 43 of file GrPolygonUberMapping.cpp.\hypertarget{_gr_polygon_uber_mapping_8cpp_84ea8002a883810b0d5593e81e9dcfe8}{
+\index{GrPolygonUberMapping.cpp@{GrPolygonUberMapping.cpp}!LINE\_\-SIDE@{LINE\_\-SIDE}}
+\index{LINE\_\-SIDE@{LINE\_\-SIDE}!GrPolygonUberMapping.cpp@{GrPolygonUberMapping.cpp}}
+\subsubsection[{LINE\_\-SIDE}]{\setlength{\rightskip}{0pt plus 5cm}\#define LINE\_\-SIDE({\bf a}, \/  {\bf b}, \/  {\bf c}, \/  {\bf x}, \/  {\bf y})~( ( ( {\bf a} ) $\ast$ ( ( double )( {\bf x} ) ) + ( {\bf b} ) $\ast$ ( ( double )( {\bf y} ) + 0 ) + ( {\bf c} ) ) $<$ 0.0 )}}
+\label{_gr_polygon_uber_mapping_8cpp_84ea8002a883810b0d5593e81e9dcfe8}
+
+
+
+
+Definition at line 222 of file GrPolygonUberMapping.cpp.\hypertarget{_gr_polygon_uber_mapping_8cpp_db09b2c5e3fc446997ff10c12ad948e7}{
+\index{GrPolygonUberMapping.cpp@{GrPolygonUberMapping.cpp}!SAVE\_\-DEBUG\_\-IMAGE@{SAVE\_\-DEBUG\_\-IMAGE}}
+\index{SAVE\_\-DEBUG\_\-IMAGE@{SAVE\_\-DEBUG\_\-IMAGE}!GrPolygonUberMapping.cpp@{GrPolygonUberMapping.cpp}}
+\subsubsection[{SAVE\_\-DEBUG\_\-IMAGE}]{\setlength{\rightskip}{0pt plus 5cm}\#define SAVE\_\-DEBUG\_\-IMAGE()~\{ \}}}
+\label{_gr_polygon_uber_mapping_8cpp_db09b2c5e3fc446997ff10c12ad948e7}
+
+
+
+
+Definition at line 45 of file GrPolygonUberMapping.cpp.\hypertarget{_gr_polygon_uber_mapping_8cpp_8d724058d117c4affbbc5c8875b6e087}{
+\index{GrPolygonUberMapping.cpp@{GrPolygonUberMapping.cpp}!UBERTEX\_\-FLAGS@{UBERTEX\_\-FLAGS}}
+\index{UBERTEX\_\-FLAGS@{UBERTEX\_\-FLAGS}!GrPolygonUberMapping.cpp@{GrPolygonUberMapping.cpp}}
+\subsubsection[{UBERTEX\_\-FLAGS}]{\setlength{\rightskip}{0pt plus 5cm}\#define UBERTEX\_\-FLAGS~( {\bf RFileMgr::kFlagCreateAlways} $|$ {\bf RFileMgr::kFlagRead} $|$ {\bf RFileMgr::kFlagWrite} $|$ {\bf RFileMgr::kFlagDMA} )}}
+\label{_gr_polygon_uber_mapping_8cpp_8d724058d117c4affbbc5c8875b6e087}
+
+
+
+
+Definition at line 27 of file GrPolygonUberMapping.cpp.\hypertarget{_gr_polygon_uber_mapping_8cpp_1a628d3e3aca0163d9fca51068a76a0b}{
+\index{GrPolygonUberMapping.cpp@{GrPolygonUberMapping.cpp}!UBERTEX\_\-PATCH\_\-SIZE\_\-IN\_\-TILES@{UBERTEX\_\-PATCH\_\-SIZE\_\-IN\_\-TILES}}
+\index{UBERTEX\_\-PATCH\_\-SIZE\_\-IN\_\-TILES@{UBERTEX\_\-PATCH\_\-SIZE\_\-IN\_\-TILES}!GrPolygonUberMapping.cpp@{GrPolygonUberMapping.cpp}}
+\subsubsection[{UBERTEX\_\-PATCH\_\-SIZE\_\-IN\_\-TILES}]{\setlength{\rightskip}{0pt plus 5cm}\#define UBERTEX\_\-PATCH\_\-SIZE\_\-IN\_\-TILES~( GR\_\-UBERTEX\_\-PATCH\_\-BOUNDARY / GR\_\-UBERTEX\_\-TILE\_\-SIZE )}}
+\label{_gr_polygon_uber_mapping_8cpp_1a628d3e3aca0163d9fca51068a76a0b}
+
+
+
+
+Definition at line 25 of file GrPolygonUberMapping.cpp.\hypertarget{_gr_polygon_uber_mapping_8cpp_5b8da22e6c764b63693b3c3aef459740}{
+\index{GrPolygonUberMapping.cpp@{GrPolygonUberMapping.cpp}!UBERTEX\_\-SIZE\_\-IN\_\-PATCHES@{UBERTEX\_\-SIZE\_\-IN\_\-PATCHES}}
+\index{UBERTEX\_\-SIZE\_\-IN\_\-PATCHES@{UBERTEX\_\-SIZE\_\-IN\_\-PATCHES}!GrPolygonUberMapping.cpp@{GrPolygonUberMapping.cpp}}
+\subsubsection[{UBERTEX\_\-SIZE\_\-IN\_\-PATCHES}]{\setlength{\rightskip}{0pt plus 5cm}\#define UBERTEX\_\-SIZE\_\-IN\_\-PATCHES~( GR\_\-UBERTEX\_\-SIZE\_\-IN\_\-TEXELS / GR\_\-UBERTEX\_\-PATCH\_\-BOUNDARY )}}
+\label{_gr_polygon_uber_mapping_8cpp_5b8da22e6c764b63693b3c3aef459740}
+
+
+
+
+Definition at line 24 of file GrPolygonUberMapping.cpp.
+
+\subsection{Function Documentation}
+\hypertarget{_gr_polygon_uber_mapping_8cpp_161bdbced676440669f99af085b81f82}{
+\index{GrPolygonUberMapping.cpp@{GrPolygonUberMapping.cpp}!BitMaskRasterize@{BitMaskRasterize}}
+\index{BitMaskRasterize@{BitMaskRasterize}!GrPolygonUberMapping.cpp@{GrPolygonUberMapping.cpp}}
+\subsubsection[{BitMaskRasterize}]{\setlength{\rightskip}{0pt plus 5cm}void BitMaskRasterize (unsigned char $\ast$ {\em bitMask}, \/  {\bf SPolygonVertex} $\ast$ {\em verts}, \/  unsigned int $\ast$ {\em mortonTable})}}
+\label{_gr_polygon_uber_mapping_8cpp_161bdbced676440669f99af085b81f82}
+
+
+
+
+Definition at line 226 of file GrPolygonUberMapping.cpp.

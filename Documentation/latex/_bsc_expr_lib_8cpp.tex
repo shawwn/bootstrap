@@ -1,0 +1,149 @@
+\hypertarget{_bsc_expr_lib_8cpp}{
+\section{C:/Bootstrap/ProjectBX/Engine/Common/BscExprLib.cpp File Reference}
+\label{_bsc_expr_lib_8cpp}\index{C:/Bootstrap/ProjectBX/Engine/Common/BscExprLib.cpp@{C:/Bootstrap/ProjectBX/Engine/Common/BscExprLib.cpp}}
+}
+{\tt \#include \char`\"{}common\_\-afx.h\char`\"{}}\par
+{\tt \#include \char`\"{}BscExprLib.h\char`\"{}}\par
+{\tt \#include \char`\"{}BscLexer.h\char`\"{}}\par
+{\tt \#include \char`\"{}UExpr.h\char`\"{}}\par
+{\tt \#include \char`\"{}UExprCallback.h\char`\"{}}\par
+{\tt \#include \char`\"{}UExprNumber.h\char`\"{}}\par
+{\tt \#include \char`\"{}UExprArrayRef.h\char`\"{}}\par
+{\tt \#include \char`\"{}UExprArray.h\char`\"{}}\par
+{\tt \#include \char`\"{}UExprMgr.h\char`\"{}}\par
+{\tt \#include \char`\"{}BscArrayTable.h\char`\"{}}\par
+{\tt \#include \char`\"{}BscVarTable.h\char`\"{}}\par
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \hyperlink{_bsc_expr_lib_8cpp_69b61da9f4d543bf6a3d5f790de12f66}{ARRAYKEYWORD}~\char`\"{}table\char`\"{}
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+bool \hyperlink{_bsc_expr_lib_8cpp_76e0394cb2c80623f6b74099001f7b03}{BscIsExpr} (const \hyperlink{struct_s_bsc_token}{SBscToken} $\ast$tokens, const \hyperlink{class_bsc_array_table}{BscArrayTable} \&arrayTable, const \hyperlink{class_bsc_var_table}{BscVarTable} \&varTable, unsigned int $\ast$tokensReadOut)
+\item 
+unsigned int \hyperlink{_bsc_expr_lib_8cpp_50274692a7d2e36f3df9b8e6d330f0dc}{BscParseExpr} (\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_u_expr_term}{UExprTerm} $>$ $\ast$exprOut, const \hyperlink{struct_s_bsc_token}{SBscToken} $\ast$tokens, const \hyperlink{class_bsc_array_table}{BscArrayTable} \&arrayTable, const \hyperlink{class_bsc_var_table}{BscVarTable} \&varTable)
+\item 
+bool \hyperlink{_bsc_expr_lib_8cpp_9dda088f87e1c4a8c7febe6938c56bd9}{BscIsNumber} (const \hyperlink{struct_s_bsc_token}{SBscToken} $\ast$tokens, unsigned int $\ast$tokensReadOut)
+\item 
+unsigned int \hyperlink{_bsc_expr_lib_8cpp_26aaa97c103d7382d716eacf61a951a1}{BscParseNumber} (\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_u_expr_number}{UExprNumber} $>$ $\ast$numberOut, const \hyperlink{struct_s_bsc_token}{SBscToken} $\ast$tokens)
+\item 
+bool \hyperlink{_bsc_expr_lib_8cpp_ba3e3c0a703f9ede753b30cbdbb94883}{BscIsArrayRef} (const \hyperlink{struct_s_bsc_token}{SBscToken} $\ast$tokens, const \hyperlink{class_bsc_array_table}{BscArrayTable} \&arrayTable, const \hyperlink{class_bsc_var_table}{BscVarTable} \&varTable, unsigned int $\ast$tokensReadOut)
+\item 
+unsigned int \hyperlink{_bsc_expr_lib_8cpp_045f4e577d7854caeb67fe096fd6c2d5}{BscParseArrayRef} (\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_u_expr_array_ref}{UExprArrayRef} $>$ $\ast$arrayRef, const \hyperlink{struct_s_bsc_token}{SBscToken} $\ast$tokens, const \hyperlink{class_bsc_array_table}{BscArrayTable} \&arrayTable, const \hyperlink{class_bsc_var_table}{BscVarTable} \&varTable)
+\item 
+bool \hyperlink{_bsc_expr_lib_8cpp_ff4114fd5c315100129280ef7248d727}{BscIsCallback} (const \hyperlink{struct_s_bsc_token}{SBscToken} $\ast$tokens, const \hyperlink{class_bsc_var_table}{BscVarTable} \&varTable, unsigned int $\ast$tokensReadOut)
+\item 
+unsigned int \hyperlink{_bsc_expr_lib_8cpp_45017008e4b35e3e7cf94dbe232042e5}{BscParseCallback} (\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_u_expr_callback}{UExprCallback} $>$ $\ast$callback, const \hyperlink{struct_s_bsc_token}{SBscToken} $\ast$tokens, const \hyperlink{class_bsc_var_table}{BscVarTable} \&varTable)
+\item 
+bool \hyperlink{_bsc_expr_lib_8cpp_bacdfdad26fa894aeeb4d9d0cc5b63a2}{BscIsArray} (const \hyperlink{struct_s_bsc_token}{SBscToken} $\ast$tokens, const \hyperlink{class_bsc_array_table}{BscArrayTable} \&arrayTable, const \hyperlink{class_bsc_var_table}{BscVarTable} \&varTable, unsigned int $\ast$tokensReadOut)
+\item 
+unsigned int \hyperlink{_bsc_expr_lib_8cpp_0c3ad4e5f8547b0f87d2d029c63a7084}{BscParseArray} (\hyperlink{class_u_expr_array}{UExprArray} $\ast$$\ast$arrayOut, \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, const \hyperlink{struct_s_bsc_token}{SBscToken} $\ast$tokens, const \hyperlink{class_bsc_array_table}{BscArrayTable} \&arrayTable, const \hyperlink{class_bsc_var_table}{BscVarTable} \&varTable)
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_bsc_expr_lib_8cpp_69b61da9f4d543bf6a3d5f790de12f66}{
+\index{BscExprLib.cpp@{BscExprLib.cpp}!ARRAYKEYWORD@{ARRAYKEYWORD}}
+\index{ARRAYKEYWORD@{ARRAYKEYWORD}!BscExprLib.cpp@{BscExprLib.cpp}}
+\subsubsection[{ARRAYKEYWORD}]{\setlength{\rightskip}{0pt plus 5cm}\#define ARRAYKEYWORD~\char`\"{}table\char`\"{}}}
+\label{_bsc_expr_lib_8cpp_69b61da9f4d543bf6a3d5f790de12f66}
+
+
+
+
+Definition at line 23 of file BscExprLib.cpp.
+
+\subsection{Function Documentation}
+\hypertarget{_bsc_expr_lib_8cpp_bacdfdad26fa894aeeb4d9d0cc5b63a2}{
+\index{BscExprLib.cpp@{BscExprLib.cpp}!BscIsArray@{BscIsArray}}
+\index{BscIsArray@{BscIsArray}!BscExprLib.cpp@{BscExprLib.cpp}}
+\subsubsection[{BscIsArray}]{\setlength{\rightskip}{0pt plus 5cm}bool BscIsArray (const {\bf SBscToken} $\ast$ {\em tokens}, \/  const {\bf BscArrayTable} \& {\em arrayTable}, \/  const {\bf BscVarTable} \& {\em varTable}, \/  unsigned int $\ast$ {\em tokensReadOut})}}
+\label{_bsc_expr_lib_8cpp_bacdfdad26fa894aeeb4d9d0cc5b63a2}
+
+
+
+
+Definition at line 425 of file BscExprLib.cpp.\hypertarget{_bsc_expr_lib_8cpp_ba3e3c0a703f9ede753b30cbdbb94883}{
+\index{BscExprLib.cpp@{BscExprLib.cpp}!BscIsArrayRef@{BscIsArrayRef}}
+\index{BscIsArrayRef@{BscIsArrayRef}!BscExprLib.cpp@{BscExprLib.cpp}}
+\subsubsection[{BscIsArrayRef}]{\setlength{\rightskip}{0pt plus 5cm}bool BscIsArrayRef (const {\bf SBscToken} $\ast$ {\em tokens}, \/  const {\bf BscArrayTable} \& {\em arrayTable}, \/  const {\bf BscVarTable} \& {\em varTable}, \/  unsigned int $\ast$ {\em tokensReadOut})}}
+\label{_bsc_expr_lib_8cpp_ba3e3c0a703f9ede753b30cbdbb94883}
+
+
+
+
+Definition at line 325 of file BscExprLib.cpp.\hypertarget{_bsc_expr_lib_8cpp_ff4114fd5c315100129280ef7248d727}{
+\index{BscExprLib.cpp@{BscExprLib.cpp}!BscIsCallback@{BscIsCallback}}
+\index{BscIsCallback@{BscIsCallback}!BscExprLib.cpp@{BscExprLib.cpp}}
+\subsubsection[{BscIsCallback}]{\setlength{\rightskip}{0pt plus 5cm}bool BscIsCallback (const {\bf SBscToken} $\ast$ {\em tokens}, \/  const {\bf BscVarTable} \& {\em varTable}, \/  unsigned int $\ast$ {\em tokensReadOut})}}
+\label{_bsc_expr_lib_8cpp_ff4114fd5c315100129280ef7248d727}
+
+
+
+
+Definition at line 394 of file BscExprLib.cpp.\hypertarget{_bsc_expr_lib_8cpp_76e0394cb2c80623f6b74099001f7b03}{
+\index{BscExprLib.cpp@{BscExprLib.cpp}!BscIsExpr@{BscIsExpr}}
+\index{BscIsExpr@{BscIsExpr}!BscExprLib.cpp@{BscExprLib.cpp}}
+\subsubsection[{BscIsExpr}]{\setlength{\rightskip}{0pt plus 5cm}bool BscIsExpr (const {\bf SBscToken} $\ast$ {\em tokens}, \/  const {\bf BscArrayTable} \& {\em arrayTable}, \/  const {\bf BscVarTable} \& {\em varTable}, \/  unsigned int $\ast$ {\em tokensReadOut})}}
+\label{_bsc_expr_lib_8cpp_76e0394cb2c80623f6b74099001f7b03}
+
+
+
+
+Definition at line 34 of file BscExprLib.cpp.\hypertarget{_bsc_expr_lib_8cpp_9dda088f87e1c4a8c7febe6938c56bd9}{
+\index{BscExprLib.cpp@{BscExprLib.cpp}!BscIsNumber@{BscIsNumber}}
+\index{BscIsNumber@{BscIsNumber}!BscExprLib.cpp@{BscExprLib.cpp}}
+\subsubsection[{BscIsNumber}]{\setlength{\rightskip}{0pt plus 5cm}bool BscIsNumber (const {\bf SBscToken} $\ast$ {\em tokens}, \/  unsigned int $\ast$ {\em tokensReadOut})}}
+\label{_bsc_expr_lib_8cpp_9dda088f87e1c4a8c7febe6938c56bd9}
+
+
+
+
+Definition at line 273 of file BscExprLib.cpp.\hypertarget{_bsc_expr_lib_8cpp_0c3ad4e5f8547b0f87d2d029c63a7084}{
+\index{BscExprLib.cpp@{BscExprLib.cpp}!BscParseArray@{BscParseArray}}
+\index{BscParseArray@{BscParseArray}!BscExprLib.cpp@{BscExprLib.cpp}}
+\subsubsection[{BscParseArray}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int BscParseArray ({\bf UExprArray} $\ast$$\ast$ {\em arrayOut}, \/  {\bf tstring} \& {\em name}, \/  const {\bf SBscToken} $\ast$ {\em tokens}, \/  const {\bf BscArrayTable} \& {\em arrayTable}, \/  const {\bf BscVarTable} \& {\em varTable})}}
+\label{_bsc_expr_lib_8cpp_0c3ad4e5f8547b0f87d2d029c63a7084}
+
+
+
+
+Definition at line 555 of file BscExprLib.cpp.\hypertarget{_bsc_expr_lib_8cpp_045f4e577d7854caeb67fe096fd6c2d5}{
+\index{BscExprLib.cpp@{BscExprLib.cpp}!BscParseArrayRef@{BscParseArrayRef}}
+\index{BscParseArrayRef@{BscParseArrayRef}!BscExprLib.cpp@{BscExprLib.cpp}}
+\subsubsection[{BscParseArrayRef}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int BscParseArrayRef ({\bf URef}$<$ {\bf UExprArrayRef} $>$ $\ast$ {\em arrayRef}, \/  const {\bf SBscToken} $\ast$ {\em tokens}, \/  const {\bf BscArrayTable} \& {\em arrayTable}, \/  const {\bf BscVarTable} \& {\em varTable})}}
+\label{_bsc_expr_lib_8cpp_045f4e577d7854caeb67fe096fd6c2d5}
+
+
+
+
+Definition at line 366 of file BscExprLib.cpp.\hypertarget{_bsc_expr_lib_8cpp_45017008e4b35e3e7cf94dbe232042e5}{
+\index{BscExprLib.cpp@{BscExprLib.cpp}!BscParseCallback@{BscParseCallback}}
+\index{BscParseCallback@{BscParseCallback}!BscExprLib.cpp@{BscExprLib.cpp}}
+\subsubsection[{BscParseCallback}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int BscParseCallback ({\bf URef}$<$ {\bf UExprCallback} $>$ $\ast$ {\em callback}, \/  const {\bf SBscToken} $\ast$ {\em tokens}, \/  const {\bf BscVarTable} \& {\em varTable})}}
+\label{_bsc_expr_lib_8cpp_45017008e4b35e3e7cf94dbe232042e5}
+
+
+
+
+Definition at line 411 of file BscExprLib.cpp.\hypertarget{_bsc_expr_lib_8cpp_50274692a7d2e36f3df9b8e6d330f0dc}{
+\index{BscExprLib.cpp@{BscExprLib.cpp}!BscParseExpr@{BscParseExpr}}
+\index{BscParseExpr@{BscParseExpr}!BscExprLib.cpp@{BscExprLib.cpp}}
+\subsubsection[{BscParseExpr}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int BscParseExpr ({\bf URef}$<$ {\bf UExprTerm} $>$ $\ast$ {\em exprOut}, \/  const {\bf SBscToken} $\ast$ {\em tokens}, \/  const {\bf BscArrayTable} \& {\em arrayTable}, \/  const {\bf BscVarTable} \& {\em varTable})}}
+\label{_bsc_expr_lib_8cpp_50274692a7d2e36f3df9b8e6d330f0dc}
+
+
+
+
+Definition at line 99 of file BscExprLib.cpp.\hypertarget{_bsc_expr_lib_8cpp_26aaa97c103d7382d716eacf61a951a1}{
+\index{BscExprLib.cpp@{BscExprLib.cpp}!BscParseNumber@{BscParseNumber}}
+\index{BscParseNumber@{BscParseNumber}!BscExprLib.cpp@{BscExprLib.cpp}}
+\subsubsection[{BscParseNumber}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int BscParseNumber ({\bf URef}$<$ {\bf UExprNumber} $>$ $\ast$ {\em numberOut}, \/  const {\bf SBscToken} $\ast$ {\em tokens})}}
+\label{_bsc_expr_lib_8cpp_26aaa97c103d7382d716eacf61a951a1}
+
+
+
+
+Definition at line 291 of file BscExprLib.cpp.

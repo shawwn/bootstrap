@@ -1,0 +1,279 @@
+\hypertarget{class_u_reader}{
+\section{UReader Class Reference}
+\label{class_u_reader}\index{UReader@{UReader}}
+}
+{\tt \#include $<$UReader.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_u_reader_31b2f93dedaa0c00eb914e531c84c692}{UReader} (const \hyperlink{class_u_reader}{UReader} \&reader)
+\item 
+\hyperlink{class_u_reader_b7a27badfa0d9e95fa8397749103aa46}{UReader} (const void $\ast$\hyperlink{glext__bak_8h_c4fdb15bdbcd63430bab668b5419ed9f}{buffer}, unsigned long \hyperlink{glext__bak_8h_3d1e3edfcf61ca2d831883e1afbad89e}{size}, bool takeOwnership)
+\item 
+\hyperlink{class_u_reader_7ef65ceb8dd3ff92f929a5bfec1f7af0}{$\sim$UReader} ()
+\item 
+void \hyperlink{class_u_reader_25734116166238d18d24089fa2356fe2}{Reset} ()
+\item 
+\hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \hyperlink{class_u_reader_2c8ded1a48118dd661e60ce19a6c926a}{ReadString} (bool peek=false)
+\item 
+\hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \hyperlink{class_u_reader_7d6ca6cf5c7d647dc673737c30676525}{ReadLine} (bool peek=false)
+\item 
+int \hyperlink{class_u_reader_1e7d9ae5c4bc6ceacfd3fb14212a8d59}{CurLineLen} () const 
+\item 
+char \hyperlink{class_u_reader_be9fed099ce8cff9e51f52f98a862db1}{ReadChar} (bool peek=false)
+\item 
+unsigned char \hyperlink{class_u_reader_030cf22cdee260c158a1446a44855c32}{ReadUChar} (bool peek=false)
+\item 
+short \hyperlink{class_u_reader_4ddc2edc9b761259588297ef1618a68b}{ReadShort} (bool peek=false)
+\item 
+unsigned short \hyperlink{class_u_reader_f160454289c788bd8513882f4145399a}{ReadUShort} (bool peek=false)
+\item 
+int \hyperlink{class_u_reader_e30a8a2deaba30f2dc209781ea1bc16b}{ReadInt} (bool peek=false)
+\item 
+unsigned int \hyperlink{class_u_reader_14d2bfe8a38307b1ecb774b70c910c65}{ReadUInt} (bool peek=false)
+\item 
+float \hyperlink{class_u_reader_4f6bada39ee0d8bb0378ff7aca8a842e}{ReadFloat} (bool peek=false)
+\item 
+void \hyperlink{class_u_reader_bd5d03b7bca4540f0cdcfb4226f002ee}{ReadBytes} (void $\ast$\hyperlink{glext__bak_8h_c4fdb15bdbcd63430bab668b5419ed9f}{buffer}, unsigned int \hyperlink{wglext_8h_98d18d6b4e3ba4ed266c6fb54c839d70}{count}, bool peek=false)
+\item 
+void \hyperlink{class_u_reader_cf514eed848a10b68ad83adc6e6abf37}{Skip} (unsigned long bytes)
+\item 
+void \hyperlink{class_u_reader_d166b7fd9de8aa1139a221e0287764f5}{Rewind} (unsigned long bytes)
+\item 
+unsigned long \hyperlink{class_u_reader_dbcd750f18a05e601ac99f80bf3f2179}{BytesRemaining} () const 
+\item 
+unsigned long \hyperlink{class_u_reader_09963ca355201dfbfdb1cbaddb12f5af}{GetSize} () const 
+\item 
+const void $\ast$ \hyperlink{class_u_reader_7e140c746fd5dc32e30319621659bb25}{GetDataPtr} () const 
+\item 
+const void $\ast$ \hyperlink{class_u_reader_0c4c255c273d4c00b12130cab85511e0}{GetCurPtr} () const 
+\item 
+bool \hyperlink{class_u_reader_82a6582f941b85796993e796222bd759}{IsFinished} () const 
+\item 
+\hyperlink{class_u_reader}{UReader} \& \hyperlink{class_u_reader_cf1394f05759fba94b4f1abb6f481376}{operator=} (const \hyperlink{class_u_reader}{UReader} \&reader)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 15 of file UReader.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_u_reader_31b2f93dedaa0c00eb914e531c84c692}{
+\index{UReader@{UReader}!UReader@{UReader}}
+\index{UReader@{UReader}!UReader@{UReader}}
+\subsubsection[{UReader}]{\setlength{\rightskip}{0pt plus 5cm}UReader::UReader (const {\bf UReader} \& {\em reader})}}
+\label{class_u_reader_31b2f93dedaa0c00eb914e531c84c692}
+
+
+
+
+Definition at line 19 of file UReader.cpp.\hypertarget{class_u_reader_b7a27badfa0d9e95fa8397749103aa46}{
+\index{UReader@{UReader}!UReader@{UReader}}
+\index{UReader@{UReader}!UReader@{UReader}}
+\subsubsection[{UReader}]{\setlength{\rightskip}{0pt plus 5cm}UReader::UReader (const void $\ast$ {\em buffer}, \/  unsigned long {\em size}, \/  bool {\em takeOwnership})}}
+\label{class_u_reader_b7a27badfa0d9e95fa8397749103aa46}
+
+
+
+
+Definition at line 25 of file UReader.cpp.\hypertarget{class_u_reader_7ef65ceb8dd3ff92f929a5bfec1f7af0}{
+\index{UReader@{UReader}!$\sim$UReader@{$\sim$UReader}}
+\index{$\sim$UReader@{$\sim$UReader}!UReader@{UReader}}
+\subsubsection[{$\sim$UReader}]{\setlength{\rightskip}{0pt plus 5cm}UReader::$\sim$UReader ()}}
+\label{class_u_reader_7ef65ceb8dd3ff92f929a5bfec1f7af0}
+
+
+
+
+Definition at line 35 of file UReader.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_u_reader_dbcd750f18a05e601ac99f80bf3f2179}{
+\index{UReader@{UReader}!BytesRemaining@{BytesRemaining}}
+\index{BytesRemaining@{BytesRemaining}!UReader@{UReader}}
+\subsubsection[{BytesRemaining}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long UReader::BytesRemaining () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_reader_dbcd750f18a05e601ac99f80bf3f2179}
+
+
+
+
+Definition at line 37 of file UReader.h.\hypertarget{class_u_reader_1e7d9ae5c4bc6ceacfd3fb14212a8d59}{
+\index{UReader@{UReader}!CurLineLen@{CurLineLen}}
+\index{CurLineLen@{CurLineLen}!UReader@{UReader}}
+\subsubsection[{CurLineLen}]{\setlength{\rightskip}{0pt plus 5cm}int UReader::CurLineLen () const}}
+\label{class_u_reader_1e7d9ae5c4bc6ceacfd3fb14212a8d59}
+
+
+
+
+Definition at line 100 of file UReader.cpp.\hypertarget{class_u_reader_0c4c255c273d4c00b12130cab85511e0}{
+\index{UReader@{UReader}!GetCurPtr@{GetCurPtr}}
+\index{GetCurPtr@{GetCurPtr}!UReader@{UReader}}
+\subsubsection[{GetCurPtr}]{\setlength{\rightskip}{0pt plus 5cm}const void$\ast$ UReader::GetCurPtr () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_reader_0c4c255c273d4c00b12130cab85511e0}
+
+
+
+
+Definition at line 40 of file UReader.h.\hypertarget{class_u_reader_7e140c746fd5dc32e30319621659bb25}{
+\index{UReader@{UReader}!GetDataPtr@{GetDataPtr}}
+\index{GetDataPtr@{GetDataPtr}!UReader@{UReader}}
+\subsubsection[{GetDataPtr}]{\setlength{\rightskip}{0pt plus 5cm}const void$\ast$ UReader::GetDataPtr () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_reader_7e140c746fd5dc32e30319621659bb25}
+
+
+
+
+Definition at line 39 of file UReader.h.\hypertarget{class_u_reader_09963ca355201dfbfdb1cbaddb12f5af}{
+\index{UReader@{UReader}!GetSize@{GetSize}}
+\index{GetSize@{GetSize}!UReader@{UReader}}
+\subsubsection[{GetSize}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long UReader::GetSize () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_reader_09963ca355201dfbfdb1cbaddb12f5af}
+
+
+
+
+Definition at line 38 of file UReader.h.\hypertarget{class_u_reader_82a6582f941b85796993e796222bd759}{
+\index{UReader@{UReader}!IsFinished@{IsFinished}}
+\index{IsFinished@{IsFinished}!UReader@{UReader}}
+\subsubsection[{IsFinished}]{\setlength{\rightskip}{0pt plus 5cm}bool UReader::IsFinished () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_reader_82a6582f941b85796993e796222bd759}
+
+
+
+
+Definition at line 41 of file UReader.h.\hypertarget{class_u_reader_cf1394f05759fba94b4f1abb6f481376}{
+\index{UReader@{UReader}!operator=@{operator=}}
+\index{operator=@{operator=}!UReader@{UReader}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UReader} \& UReader::operator= (const {\bf UReader} \& {\em reader})}}
+\label{class_u_reader_cf1394f05759fba94b4f1abb6f481376}
+
+
+
+
+Definition at line 230 of file UReader.cpp.\hypertarget{class_u_reader_bd5d03b7bca4540f0cdcfb4226f002ee}{
+\index{UReader@{UReader}!ReadBytes@{ReadBytes}}
+\index{ReadBytes@{ReadBytes}!UReader@{UReader}}
+\subsubsection[{ReadBytes}]{\setlength{\rightskip}{0pt plus 5cm}void UReader::ReadBytes (void $\ast$ {\em buffer}, \/  unsigned int {\em count}, \/  bool {\em peek} = {\tt false})}}
+\label{class_u_reader_bd5d03b7bca4540f0cdcfb4226f002ee}
+
+
+
+
+Definition at line 204 of file UReader.cpp.\hypertarget{class_u_reader_be9fed099ce8cff9e51f52f98a862db1}{
+\index{UReader@{UReader}!ReadChar@{ReadChar}}
+\index{ReadChar@{ReadChar}!UReader@{UReader}}
+\subsubsection[{ReadChar}]{\setlength{\rightskip}{0pt plus 5cm}char UReader::ReadChar (bool {\em peek} = {\tt false})}}
+\label{class_u_reader_be9fed099ce8cff9e51f52f98a862db1}
+
+
+
+
+Definition at line 122 of file UReader.cpp.\hypertarget{class_u_reader_4f6bada39ee0d8bb0378ff7aca8a842e}{
+\index{UReader@{UReader}!ReadFloat@{ReadFloat}}
+\index{ReadFloat@{ReadFloat}!UReader@{UReader}}
+\subsubsection[{ReadFloat}]{\setlength{\rightskip}{0pt plus 5cm}float UReader::ReadFloat (bool {\em peek} = {\tt false})}}
+\label{class_u_reader_4f6bada39ee0d8bb0378ff7aca8a842e}
+
+
+
+
+Definition at line 192 of file UReader.cpp.\hypertarget{class_u_reader_e30a8a2deaba30f2dc209781ea1bc16b}{
+\index{UReader@{UReader}!ReadInt@{ReadInt}}
+\index{ReadInt@{ReadInt}!UReader@{UReader}}
+\subsubsection[{ReadInt}]{\setlength{\rightskip}{0pt plus 5cm}int UReader::ReadInt (bool {\em peek} = {\tt false})}}
+\label{class_u_reader_e30a8a2deaba30f2dc209781ea1bc16b}
+
+
+
+
+Definition at line 168 of file UReader.cpp.\hypertarget{class_u_reader_7d6ca6cf5c7d647dc673737c30676525}{
+\index{UReader@{UReader}!ReadLine@{ReadLine}}
+\index{ReadLine@{ReadLine}!UReader@{UReader}}
+\subsubsection[{ReadLine}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tstring} UReader::ReadLine (bool {\em peek} = {\tt false})}}
+\label{class_u_reader_7d6ca6cf5c7d647dc673737c30676525}
+
+
+
+
+Definition at line 65 of file UReader.cpp.\hypertarget{class_u_reader_4ddc2edc9b761259588297ef1618a68b}{
+\index{UReader@{UReader}!ReadShort@{ReadShort}}
+\index{ReadShort@{ReadShort}!UReader@{UReader}}
+\subsubsection[{ReadShort}]{\setlength{\rightskip}{0pt plus 5cm}short UReader::ReadShort (bool {\em peek} = {\tt false})}}
+\label{class_u_reader_4ddc2edc9b761259588297ef1618a68b}
+
+
+
+
+Definition at line 144 of file UReader.cpp.\hypertarget{class_u_reader_2c8ded1a48118dd661e60ce19a6c926a}{
+\index{UReader@{UReader}!ReadString@{ReadString}}
+\index{ReadString@{ReadString}!UReader@{UReader}}
+\subsubsection[{ReadString}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tstring} UReader::ReadString (bool {\em peek} = {\tt false})}}
+\label{class_u_reader_2c8ded1a48118dd661e60ce19a6c926a}
+
+
+
+
+Definition at line 48 of file UReader.cpp.\hypertarget{class_u_reader_030cf22cdee260c158a1446a44855c32}{
+\index{UReader@{UReader}!ReadUChar@{ReadUChar}}
+\index{ReadUChar@{ReadUChar}!UReader@{UReader}}
+\subsubsection[{ReadUChar}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char UReader::ReadUChar (bool {\em peek} = {\tt false})}}
+\label{class_u_reader_030cf22cdee260c158a1446a44855c32}
+
+
+
+
+Definition at line 133 of file UReader.cpp.\hypertarget{class_u_reader_14d2bfe8a38307b1ecb774b70c910c65}{
+\index{UReader@{UReader}!ReadUInt@{ReadUInt}}
+\index{ReadUInt@{ReadUInt}!UReader@{UReader}}
+\subsubsection[{ReadUInt}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int UReader::ReadUInt (bool {\em peek} = {\tt false})}}
+\label{class_u_reader_14d2bfe8a38307b1ecb774b70c910c65}
+
+
+
+
+Definition at line 180 of file UReader.cpp.\hypertarget{class_u_reader_f160454289c788bd8513882f4145399a}{
+\index{UReader@{UReader}!ReadUShort@{ReadUShort}}
+\index{ReadUShort@{ReadUShort}!UReader@{UReader}}
+\subsubsection[{ReadUShort}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short UReader::ReadUShort (bool {\em peek} = {\tt false})}}
+\label{class_u_reader_f160454289c788bd8513882f4145399a}
+
+
+
+
+Definition at line 156 of file UReader.cpp.\hypertarget{class_u_reader_25734116166238d18d24089fa2356fe2}{
+\index{UReader@{UReader}!Reset@{Reset}}
+\index{Reset@{Reset}!UReader@{UReader}}
+\subsubsection[{Reset}]{\setlength{\rightskip}{0pt plus 5cm}void UReader::Reset ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_reader_25734116166238d18d24089fa2356fe2}
+
+
+
+
+Definition at line 22 of file UReader.h.\hypertarget{class_u_reader_d166b7fd9de8aa1139a221e0287764f5}{
+\index{UReader@{UReader}!Rewind@{Rewind}}
+\index{Rewind@{Rewind}!UReader@{UReader}}
+\subsubsection[{Rewind}]{\setlength{\rightskip}{0pt plus 5cm}void UReader::Rewind (unsigned long {\em bytes})}}
+\label{class_u_reader_d166b7fd9de8aa1139a221e0287764f5}
+
+
+
+
+Definition at line 222 of file UReader.cpp.\hypertarget{class_u_reader_cf514eed848a10b68ad83adc6e6abf37}{
+\index{UReader@{UReader}!Skip@{Skip}}
+\index{Skip@{Skip}!UReader@{UReader}}
+\subsubsection[{Skip}]{\setlength{\rightskip}{0pt plus 5cm}void UReader::Skip (unsigned long {\em bytes})}}
+\label{class_u_reader_cf514eed848a10b68ad83adc6e6abf37}
+
+
+
+
+Definition at line 214 of file UReader.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_u_reader_8h}{UReader.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_u_reader_8cpp}{UReader.cpp}\end{CompactItemize}

@@ -1,0 +1,186 @@
+\hypertarget{class_gr_polygon_b_i_node}{
+\section{GrPolygonBINode Class Reference}
+\label{class_gr_polygon_b_i_node}\index{GrPolygonBINode@{GrPolygonBINode}}
+}
+{\tt \#include $<$GrPolygonBINode.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+enum \hyperlink{class_gr_polygon_b_i_node_3647d87a0c6d714a653119379817a057}{EAXIS} \{ \hyperlink{class_gr_polygon_b_i_node_3647d87a0c6d714a653119379817a0575e118d237424d5c6cca7c4d031ac165d}{EA\_\-X} =  0, 
+\hyperlink{class_gr_polygon_b_i_node_3647d87a0c6d714a653119379817a0572ad5e12436b8278fbc46d757441d3b90}{EA\_\-Y} =  1, 
+\hyperlink{class_gr_polygon_b_i_node_3647d87a0c6d714a653119379817a057963338b1288658172320d9f3d73feb5b}{EA\_\-Z} =  2
+ \}
+\item 
+enum \hyperlink{class_gr_polygon_b_i_node_1ef624ba045eb18ffd2bb7dbb16d8090}{ESIDE} \{ \hyperlink{class_gr_polygon_b_i_node_1ef624ba045eb18ffd2bb7dbb16d8090f724f5c5df1ed773ce60e4df85485382}{ES\_\-FRONT}, 
+\hyperlink{class_gr_polygon_b_i_node_1ef624ba045eb18ffd2bb7dbb16d8090bd853ea225de2f66118ba5557c11a08a}{ES\_\-BACK}
+ \}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_polygon_b_i_node_2b0d0ba71be948dc3a83f588bc0996ab}{GrPolygonBINode} (unsigned int \&\hyperlink{glext__bak_8h_1c814629538debe12a7bfe2509a3671e}{depth}, \hyperlink{class_gr_polygon_b_i_tree}{GrPolygonBITree} $\ast$parent, const \hyperlink{class_gr_polygon_group}{GrPolygonGroup} \&\hyperlink{wglext_8h_69cec9b28d037f2272131b4fcd148620}{group})
+\item 
+\hyperlink{class_gr_polygon_b_i_node_0db4a41472906e2b89df7d278b5bd25c}{GrPolygonBINode} (unsigned int \&\hyperlink{glext__bak_8h_1c814629538debe12a7bfe2509a3671e}{depth}, \hyperlink{class_gr_polygon_b_i_tree}{GrPolygonBITree} $\ast$parent, const \hyperlink{class_gr_polygon_group}{GrPolygonGroup} \&\hyperlink{wglext_8h_69cec9b28d037f2272131b4fcd148620}{group}, unsigned int $\ast$\hyperlink{glext__bak_8h_c4293d0f76770fe857be3431df25308d}{indices}, unsigned int polyCount)
+\item 
+\hyperlink{class_gr_polygon_b_i_node_18ea1e3d6112a3aa526d399b6abe3ba5}{$\sim$GrPolygonBINode} ()
+\item 
+void \hyperlink{class_gr_polygon_b_i_node_c85fa5cabd12d49fd10362ec7896a129}{GetPolygons} (\hyperlink{class_u_fast_array}{UFastArray}$<$ unsigned int $>$ \&polygonIndices, const \hyperlink{struct_s_vec3}{SVec3} \&boxMin, const \hyperlink{struct_s_vec3}{SVec3} \&boxMax)
+\item 
+void $\ast$ \hyperlink{class_gr_polygon_b_i_node_b27187f2d02d3fe410427168c836f3de}{operator new} (size\_\-t)
+\item 
+void \hyperlink{class_gr_polygon_b_i_node_52c6bb5186eba8c6ef16dbb3a3eafd82}{operator delete} (void $\ast$mem)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 28 of file GrPolygonBINode.h.
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_gr_polygon_b_i_node_3647d87a0c6d714a653119379817a057}{
+\index{GrPolygonBINode@{GrPolygonBINode}!EAXIS@{EAXIS}}
+\index{EAXIS@{EAXIS}!GrPolygonBINode@{GrPolygonBINode}}
+\subsubsection[{EAXIS}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GrPolygonBINode::EAXIS}}}
+\label{class_gr_polygon_b_i_node_3647d87a0c6d714a653119379817a057}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{EA\_\-X@{EA\_\-X}!GrPolygonBINode@{GrPolygonBINode}}\index{GrPolygonBINode@{GrPolygonBINode}!EA\_\-X@{EA\_\-X}}\item[{\em 
+\hypertarget{class_gr_polygon_b_i_node_3647d87a0c6d714a653119379817a0575e118d237424d5c6cca7c4d031ac165d}{
+EA\_\-X}
+\label{class_gr_polygon_b_i_node_3647d87a0c6d714a653119379817a0575e118d237424d5c6cca7c4d031ac165d}
+}]\index{EA\_\-Y@{EA\_\-Y}!GrPolygonBINode@{GrPolygonBINode}}\index{GrPolygonBINode@{GrPolygonBINode}!EA\_\-Y@{EA\_\-Y}}\item[{\em 
+\hypertarget{class_gr_polygon_b_i_node_3647d87a0c6d714a653119379817a0572ad5e12436b8278fbc46d757441d3b90}{
+EA\_\-Y}
+\label{class_gr_polygon_b_i_node_3647d87a0c6d714a653119379817a0572ad5e12436b8278fbc46d757441d3b90}
+}]\index{EA\_\-Z@{EA\_\-Z}!GrPolygonBINode@{GrPolygonBINode}}\index{GrPolygonBINode@{GrPolygonBINode}!EA\_\-Z@{EA\_\-Z}}\item[{\em 
+\hypertarget{class_gr_polygon_b_i_node_3647d87a0c6d714a653119379817a057963338b1288658172320d9f3d73feb5b}{
+EA\_\-Z}
+\label{class_gr_polygon_b_i_node_3647d87a0c6d714a653119379817a057963338b1288658172320d9f3d73feb5b}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 31 of file GrPolygonBINode.h.\hypertarget{class_gr_polygon_b_i_node_1ef624ba045eb18ffd2bb7dbb16d8090}{
+\index{GrPolygonBINode@{GrPolygonBINode}!ESIDE@{ESIDE}}
+\index{ESIDE@{ESIDE}!GrPolygonBINode@{GrPolygonBINode}}
+\subsubsection[{ESIDE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GrPolygonBINode::ESIDE}}}
+\label{class_gr_polygon_b_i_node_1ef624ba045eb18ffd2bb7dbb16d8090}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{ES\_\-FRONT@{ES\_\-FRONT}!GrPolygonBINode@{GrPolygonBINode}}\index{GrPolygonBINode@{GrPolygonBINode}!ES\_\-FRONT@{ES\_\-FRONT}}\item[{\em 
+\hypertarget{class_gr_polygon_b_i_node_1ef624ba045eb18ffd2bb7dbb16d8090f724f5c5df1ed773ce60e4df85485382}{
+ES\_\-FRONT}
+\label{class_gr_polygon_b_i_node_1ef624ba045eb18ffd2bb7dbb16d8090f724f5c5df1ed773ce60e4df85485382}
+}]\index{ES\_\-BACK@{ES\_\-BACK}!GrPolygonBINode@{GrPolygonBINode}}\index{GrPolygonBINode@{GrPolygonBINode}!ES\_\-BACK@{ES\_\-BACK}}\item[{\em 
+\hypertarget{class_gr_polygon_b_i_node_1ef624ba045eb18ffd2bb7dbb16d8090bd853ea225de2f66118ba5557c11a08a}{
+ES\_\-BACK}
+\label{class_gr_polygon_b_i_node_1ef624ba045eb18ffd2bb7dbb16d8090bd853ea225de2f66118ba5557c11a08a}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 38 of file GrPolygonBINode.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_polygon_b_i_node_2b0d0ba71be948dc3a83f588bc0996ab}{
+\index{GrPolygonBINode@{GrPolygonBINode}!GrPolygonBINode@{GrPolygonBINode}}
+\index{GrPolygonBINode@{GrPolygonBINode}!GrPolygonBINode@{GrPolygonBINode}}
+\subsubsection[{GrPolygonBINode}]{\setlength{\rightskip}{0pt plus 5cm}GrPolygonBINode::GrPolygonBINode (unsigned int \& {\em depth}, \/  {\bf GrPolygonBITree} $\ast$ {\em parent}, \/  const {\bf GrPolygonGroup} \& {\em group})}}
+\label{class_gr_polygon_b_i_node_2b0d0ba71be948dc3a83f588bc0996ab}
+
+
+
+
+Definition at line 34 of file GrPolygonBINode.cpp.\hypertarget{class_gr_polygon_b_i_node_0db4a41472906e2b89df7d278b5bd25c}{
+\index{GrPolygonBINode@{GrPolygonBINode}!GrPolygonBINode@{GrPolygonBINode}}
+\index{GrPolygonBINode@{GrPolygonBINode}!GrPolygonBINode@{GrPolygonBINode}}
+\subsubsection[{GrPolygonBINode}]{\setlength{\rightskip}{0pt plus 5cm}GrPolygonBINode::GrPolygonBINode (unsigned int \& {\em depth}, \/  {\bf GrPolygonBITree} $\ast$ {\em parent}, \/  const {\bf GrPolygonGroup} \& {\em group}, \/  unsigned int $\ast$ {\em indices}, \/  unsigned int {\em polyCount})}}
+\label{class_gr_polygon_b_i_node_0db4a41472906e2b89df7d278b5bd25c}
+
+
+
+
+Definition at line 59 of file GrPolygonBINode.cpp.\hypertarget{class_gr_polygon_b_i_node_18ea1e3d6112a3aa526d399b6abe3ba5}{
+\index{GrPolygonBINode@{GrPolygonBINode}!$\sim$GrPolygonBINode@{$\sim$GrPolygonBINode}}
+\index{$\sim$GrPolygonBINode@{$\sim$GrPolygonBINode}!GrPolygonBINode@{GrPolygonBINode}}
+\subsubsection[{$\sim$GrPolygonBINode}]{\setlength{\rightskip}{0pt plus 5cm}GrPolygonBINode::$\sim$GrPolygonBINode ()}}
+\label{class_gr_polygon_b_i_node_18ea1e3d6112a3aa526d399b6abe3ba5}
+
+
+
+
+Definition at line 73 of file GrPolygonBINode.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_polygon_b_i_node_c85fa5cabd12d49fd10362ec7896a129}{
+\index{GrPolygonBINode@{GrPolygonBINode}!GetPolygons@{GetPolygons}}
+\index{GetPolygons@{GetPolygons}!GrPolygonBINode@{GrPolygonBINode}}
+\subsubsection[{GetPolygons}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonBINode::GetPolygons ({\bf UFastArray}$<$ unsigned int $>$ \& {\em polygonIndices}, \/  const {\bf SVec3} \& {\em boxMin}, \/  const {\bf SVec3} \& {\em boxMax})}}
+\label{class_gr_polygon_b_i_node_c85fa5cabd12d49fd10362ec7896a129}
+
+
+
+
+Definition at line 97 of file GrPolygonBINode.cpp.\hypertarget{class_gr_polygon_b_i_node_52c6bb5186eba8c6ef16dbb3a3eafd82}{
+\index{GrPolygonBINode@{GrPolygonBINode}!operator delete@{operator delete}}
+\index{operator delete@{operator delete}!GrPolygonBINode@{GrPolygonBINode}}
+\subsubsection[{operator delete}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonBINode::operator delete (void $\ast$ {\em mem})}}
+\label{class_gr_polygon_b_i_node_52c6bb5186eba8c6ef16dbb3a3eafd82}
+
+
+
+
+Definition at line 135 of file GrPolygonBINode.cpp.\hypertarget{class_gr_polygon_b_i_node_b27187f2d02d3fe410427168c836f3de}{
+\index{GrPolygonBINode@{GrPolygonBINode}!operator new@{operator new}}
+\index{operator new@{operator new}!GrPolygonBINode@{GrPolygonBINode}}
+\subsubsection[{operator new}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ GrPolygonBINode::operator new (size\_\-t {\em size})}}
+\label{class_gr_polygon_b_i_node_b27187f2d02d3fe410427168c836f3de}
+
+
+
+
+Definition at line 127 of file GrPolygonBINode.cpp.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_gr_polygon_b_i_node_9789b0d515783d33053c8b1fb06264c0}{
+\index{GrPolygonBINode@{GrPolygonBINode}!\_\-children@{\_\-children}}
+\index{\_\-children@{\_\-children}!GrPolygonBINode@{GrPolygonBINode}}
+\subsubsection[{\_\-children}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrPolygonBINode}$\ast$ {\bf GrPolygonBINode::\_\-children}\mbox{[}2\mbox{]}}}
+\label{class_gr_polygon_b_i_node_9789b0d515783d33053c8b1fb06264c0}
+
+
+
+
+Definition at line 66 of file GrPolygonBINode.h.\hypertarget{class_gr_polygon_b_i_node_4615d3c54233b6629446009362421c4a}{
+\index{GrPolygonBINode@{GrPolygonBINode}!\_\-nextFree@{\_\-nextFree}}
+\index{\_\-nextFree@{\_\-nextFree}!GrPolygonBINode@{GrPolygonBINode}}
+\subsubsection[{\_\-nextFree}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrPolygonBINode}$\ast$ {\bf GrPolygonBINode::\_\-nextFree}}}
+\label{class_gr_polygon_b_i_node_4615d3c54233b6629446009362421c4a}
+
+
+
+
+Definition at line 68 of file GrPolygonBINode.h.\hypertarget{class_gr_polygon_b_i_node_30584e5b4701c9d38b61bfd4df039e7a}{
+\index{GrPolygonBINode@{GrPolygonBINode}!\_\-polygon@{\_\-polygon}}
+\index{\_\-polygon@{\_\-polygon}!GrPolygonBINode@{GrPolygonBINode}}
+\subsubsection[{\_\-polygon}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf GrPolygonBINode::\_\-polygon}}}
+\label{class_gr_polygon_b_i_node_30584e5b4701c9d38b61bfd4df039e7a}
+
+
+
+
+Definition at line 67 of file GrPolygonBINode.h.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_polygon_b_i_node_8h}{GrPolygonBINode.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_polygon_b_i_node_8cpp}{GrPolygonBINode.cpp}\end{CompactItemize}

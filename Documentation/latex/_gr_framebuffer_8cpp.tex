@@ -1,0 +1,198 @@
+\hypertarget{_gr_framebuffer_8cpp}{
+\section{C:/Bootstrap/ProjectBX/Engine/Graphics/GrFramebuffer.cpp File Reference}
+\label{_gr_framebuffer_8cpp}\index{C:/Bootstrap/ProjectBX/Engine/Graphics/GrFramebuffer.cpp@{C:/Bootstrap/ProjectBX/Engine/Graphics/GrFramebuffer.cpp}}
+}
+{\tt \#include \char`\"{}graphics\_\-afx.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrFramebuffer.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrTexture.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrTextureRect.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrRenderbuffer.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrRenderTarget.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrRenderTargetMgr.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrConfig.h\char`\"{}}\par
+{\tt \#include \char`\"{}GLSubsys.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrUtil.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrTextureMgr.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrShader.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrShaderMgr.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrRenderUtil.h\char`\"{}}\par
+{\tt \#include $<$mmsystem.h$>$}\par
+{\tt \#include $<$gl/glu.h$>$}\par
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \hyperlink{_gr_framebuffer_8cpp_d4ef282f7139257d7c3b9a46525fa546}{PP\_\-SCALE\_\-ST}~0
+\item 
+\#define \hyperlink{_gr_framebuffer_8cpp_512e6b477c90e6f325e8223ffb203350}{PP\_\-OFFSET\_\-ST}~1
+\item 
+\#define \hyperlink{_gr_framebuffer_8cpp_061d8a11f0e1fa7b441280a78c9d0a84}{PP\_\-BLUR\_\-DIR}~2
+\item 
+\#define \hyperlink{_gr_framebuffer_8cpp_910e231a066a856dffc564276561c1b3}{PP\_\-BLOOM\_\-START}~3
+\item 
+\#define \hyperlink{_gr_framebuffer_8cpp_7e6891595271d510e7285ed994fc058e}{PP\_\-BLOOM\_\-STRENGTH}~4
+\item 
+\#define \hyperlink{_gr_framebuffer_8cpp_0ae3507562166fdfdf9c63a7ea6f3a41}{PP\_\-HIPASS\_\-OFFSET}~5
+\item 
+\#define \hyperlink{_gr_framebuffer_8cpp_ce2401b63812266d547db7900ce3558c}{PP\_\-LUM\_\-OFFSET}~2
+\item 
+\#define \hyperlink{_gr_framebuffer_8cpp_1bfed5964f92fd6336c6159d8bf4a2ad}{PP\_\-CURRENDER\_\-OFFSET\_\-ST}~1
+\item 
+\#define \hyperlink{_gr_framebuffer_8cpp_d8cd6a28e7fb5514eb710845668ef169}{PP\_\-BLUR\_\-OFFSET\_\-ST}~2
+\item 
+\#define \hyperlink{_gr_framebuffer_8cpp_2fa83db8228dccb51c08861a964606fc}{PP\_\-BLUR\_\-SCALE\_\-ST}~3
+\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_framebuffer}{GrFramebuffer} $\ast$ \hyperlink{_gr_framebuffer_8cpp_610596150a7a507d6888f0ee850a5cc6}{gGrFramebuffer} = 0
+\item 
+const unsigned int \hyperlink{_gr_framebuffer_8cpp_64e99c5d0e0b0a6aa5dc542abae1a433}{kTexCoordScaleHandle} = 1
+\item 
+const unsigned int \hyperlink{_gr_framebuffer_8cpp_eba118fdb2abd2ff0166642f05f85ba5}{kBlurVecHandle} = 2
+\item 
+float \hyperlink{_gr_framebuffer_8cpp_9357676539b3a70cd0e1b92045501b00}{kHorzVec} \mbox{[}4\mbox{]} = \{ 1.0f, 0.0f, 0.0f, 0.0f \}
+\item 
+float \hyperlink{_gr_framebuffer_8cpp_bae9b9d58eb0c78a3bd9487d41110490}{kVertVec} \mbox{[}4\mbox{]} = \{ 0.0f, 1.0f, 0.0f, 0.0f \}
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_gr_framebuffer_8cpp_910e231a066a856dffc564276561c1b3}{
+\index{GrFramebuffer.cpp@{GrFramebuffer.cpp}!PP\_\-BLOOM\_\-START@{PP\_\-BLOOM\_\-START}}
+\index{PP\_\-BLOOM\_\-START@{PP\_\-BLOOM\_\-START}!GrFramebuffer.cpp@{GrFramebuffer.cpp}}
+\subsubsection[{PP\_\-BLOOM\_\-START}]{\setlength{\rightskip}{0pt plus 5cm}\#define PP\_\-BLOOM\_\-START~3}}
+\label{_gr_framebuffer_8cpp_910e231a066a856dffc564276561c1b3}
+
+
+
+
+Definition at line 39 of file GrFramebuffer.cpp.\hypertarget{_gr_framebuffer_8cpp_7e6891595271d510e7285ed994fc058e}{
+\index{GrFramebuffer.cpp@{GrFramebuffer.cpp}!PP\_\-BLOOM\_\-STRENGTH@{PP\_\-BLOOM\_\-STRENGTH}}
+\index{PP\_\-BLOOM\_\-STRENGTH@{PP\_\-BLOOM\_\-STRENGTH}!GrFramebuffer.cpp@{GrFramebuffer.cpp}}
+\subsubsection[{PP\_\-BLOOM\_\-STRENGTH}]{\setlength{\rightskip}{0pt plus 5cm}\#define PP\_\-BLOOM\_\-STRENGTH~4}}
+\label{_gr_framebuffer_8cpp_7e6891595271d510e7285ed994fc058e}
+
+
+
+
+Definition at line 40 of file GrFramebuffer.cpp.\hypertarget{_gr_framebuffer_8cpp_061d8a11f0e1fa7b441280a78c9d0a84}{
+\index{GrFramebuffer.cpp@{GrFramebuffer.cpp}!PP\_\-BLUR\_\-DIR@{PP\_\-BLUR\_\-DIR}}
+\index{PP\_\-BLUR\_\-DIR@{PP\_\-BLUR\_\-DIR}!GrFramebuffer.cpp@{GrFramebuffer.cpp}}
+\subsubsection[{PP\_\-BLUR\_\-DIR}]{\setlength{\rightskip}{0pt plus 5cm}\#define PP\_\-BLUR\_\-DIR~2}}
+\label{_gr_framebuffer_8cpp_061d8a11f0e1fa7b441280a78c9d0a84}
+
+
+
+
+Definition at line 38 of file GrFramebuffer.cpp.\hypertarget{_gr_framebuffer_8cpp_d8cd6a28e7fb5514eb710845668ef169}{
+\index{GrFramebuffer.cpp@{GrFramebuffer.cpp}!PP\_\-BLUR\_\-OFFSET\_\-ST@{PP\_\-BLUR\_\-OFFSET\_\-ST}}
+\index{PP\_\-BLUR\_\-OFFSET\_\-ST@{PP\_\-BLUR\_\-OFFSET\_\-ST}!GrFramebuffer.cpp@{GrFramebuffer.cpp}}
+\subsubsection[{PP\_\-BLUR\_\-OFFSET\_\-ST}]{\setlength{\rightskip}{0pt plus 5cm}\#define PP\_\-BLUR\_\-OFFSET\_\-ST~2}}
+\label{_gr_framebuffer_8cpp_d8cd6a28e7fb5514eb710845668ef169}
+
+
+
+
+Definition at line 45 of file GrFramebuffer.cpp.\hypertarget{_gr_framebuffer_8cpp_2fa83db8228dccb51c08861a964606fc}{
+\index{GrFramebuffer.cpp@{GrFramebuffer.cpp}!PP\_\-BLUR\_\-SCALE\_\-ST@{PP\_\-BLUR\_\-SCALE\_\-ST}}
+\index{PP\_\-BLUR\_\-SCALE\_\-ST@{PP\_\-BLUR\_\-SCALE\_\-ST}!GrFramebuffer.cpp@{GrFramebuffer.cpp}}
+\subsubsection[{PP\_\-BLUR\_\-SCALE\_\-ST}]{\setlength{\rightskip}{0pt plus 5cm}\#define PP\_\-BLUR\_\-SCALE\_\-ST~3}}
+\label{_gr_framebuffer_8cpp_2fa83db8228dccb51c08861a964606fc}
+
+
+
+
+Definition at line 46 of file GrFramebuffer.cpp.\hypertarget{_gr_framebuffer_8cpp_1bfed5964f92fd6336c6159d8bf4a2ad}{
+\index{GrFramebuffer.cpp@{GrFramebuffer.cpp}!PP\_\-CURRENDER\_\-OFFSET\_\-ST@{PP\_\-CURRENDER\_\-OFFSET\_\-ST}}
+\index{PP\_\-CURRENDER\_\-OFFSET\_\-ST@{PP\_\-CURRENDER\_\-OFFSET\_\-ST}!GrFramebuffer.cpp@{GrFramebuffer.cpp}}
+\subsubsection[{PP\_\-CURRENDER\_\-OFFSET\_\-ST}]{\setlength{\rightskip}{0pt plus 5cm}\#define PP\_\-CURRENDER\_\-OFFSET\_\-ST~1}}
+\label{_gr_framebuffer_8cpp_1bfed5964f92fd6336c6159d8bf4a2ad}
+
+
+
+
+Definition at line 44 of file GrFramebuffer.cpp.\hypertarget{_gr_framebuffer_8cpp_0ae3507562166fdfdf9c63a7ea6f3a41}{
+\index{GrFramebuffer.cpp@{GrFramebuffer.cpp}!PP\_\-HIPASS\_\-OFFSET@{PP\_\-HIPASS\_\-OFFSET}}
+\index{PP\_\-HIPASS\_\-OFFSET@{PP\_\-HIPASS\_\-OFFSET}!GrFramebuffer.cpp@{GrFramebuffer.cpp}}
+\subsubsection[{PP\_\-HIPASS\_\-OFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PP\_\-HIPASS\_\-OFFSET~5}}
+\label{_gr_framebuffer_8cpp_0ae3507562166fdfdf9c63a7ea6f3a41}
+
+
+
+
+Definition at line 41 of file GrFramebuffer.cpp.\hypertarget{_gr_framebuffer_8cpp_ce2401b63812266d547db7900ce3558c}{
+\index{GrFramebuffer.cpp@{GrFramebuffer.cpp}!PP\_\-LUM\_\-OFFSET@{PP\_\-LUM\_\-OFFSET}}
+\index{PP\_\-LUM\_\-OFFSET@{PP\_\-LUM\_\-OFFSET}!GrFramebuffer.cpp@{GrFramebuffer.cpp}}
+\subsubsection[{PP\_\-LUM\_\-OFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define PP\_\-LUM\_\-OFFSET~2}}
+\label{_gr_framebuffer_8cpp_ce2401b63812266d547db7900ce3558c}
+
+
+
+
+Definition at line 42 of file GrFramebuffer.cpp.\hypertarget{_gr_framebuffer_8cpp_512e6b477c90e6f325e8223ffb203350}{
+\index{GrFramebuffer.cpp@{GrFramebuffer.cpp}!PP\_\-OFFSET\_\-ST@{PP\_\-OFFSET\_\-ST}}
+\index{PP\_\-OFFSET\_\-ST@{PP\_\-OFFSET\_\-ST}!GrFramebuffer.cpp@{GrFramebuffer.cpp}}
+\subsubsection[{PP\_\-OFFSET\_\-ST}]{\setlength{\rightskip}{0pt plus 5cm}\#define PP\_\-OFFSET\_\-ST~1}}
+\label{_gr_framebuffer_8cpp_512e6b477c90e6f325e8223ffb203350}
+
+
+
+
+Definition at line 37 of file GrFramebuffer.cpp.\hypertarget{_gr_framebuffer_8cpp_d4ef282f7139257d7c3b9a46525fa546}{
+\index{GrFramebuffer.cpp@{GrFramebuffer.cpp}!PP\_\-SCALE\_\-ST@{PP\_\-SCALE\_\-ST}}
+\index{PP\_\-SCALE\_\-ST@{PP\_\-SCALE\_\-ST}!GrFramebuffer.cpp@{GrFramebuffer.cpp}}
+\subsubsection[{PP\_\-SCALE\_\-ST}]{\setlength{\rightskip}{0pt plus 5cm}\#define PP\_\-SCALE\_\-ST~0}}
+\label{_gr_framebuffer_8cpp_d4ef282f7139257d7c3b9a46525fa546}
+
+
+
+
+Definition at line 36 of file GrFramebuffer.cpp.
+
+\subsection{Variable Documentation}
+\hypertarget{_gr_framebuffer_8cpp_610596150a7a507d6888f0ee850a5cc6}{
+\index{GrFramebuffer.cpp@{GrFramebuffer.cpp}!gGrFramebuffer@{gGrFramebuffer}}
+\index{gGrFramebuffer@{gGrFramebuffer}!GrFramebuffer.cpp@{GrFramebuffer.cpp}}
+\subsubsection[{gGrFramebuffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrFramebuffer}$\ast$ {\bf gGrFramebuffer} = 0}}
+\label{_gr_framebuffer_8cpp_610596150a7a507d6888f0ee850a5cc6}
+
+
+
+
+Definition at line 34 of file GrFramebuffer.cpp.\hypertarget{_gr_framebuffer_8cpp_eba118fdb2abd2ff0166642f05f85ba5}{
+\index{GrFramebuffer.cpp@{GrFramebuffer.cpp}!kBlurVecHandle@{kBlurVecHandle}}
+\index{kBlurVecHandle@{kBlurVecHandle}!GrFramebuffer.cpp@{GrFramebuffer.cpp}}
+\subsubsection[{kBlurVecHandle}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int {\bf kBlurVecHandle} = 2}}
+\label{_gr_framebuffer_8cpp_eba118fdb2abd2ff0166642f05f85ba5}
+
+
+
+
+Definition at line 50 of file GrFramebuffer.cpp.\hypertarget{_gr_framebuffer_8cpp_9357676539b3a70cd0e1b92045501b00}{
+\index{GrFramebuffer.cpp@{GrFramebuffer.cpp}!kHorzVec@{kHorzVec}}
+\index{kHorzVec@{kHorzVec}!GrFramebuffer.cpp@{GrFramebuffer.cpp}}
+\subsubsection[{kHorzVec}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf kHorzVec}\mbox{[}4\mbox{]} = \{ 1.0f, 0.0f, 0.0f, 0.0f \}}}
+\label{_gr_framebuffer_8cpp_9357676539b3a70cd0e1b92045501b00}
+
+
+
+
+Definition at line 53 of file GrFramebuffer.cpp.\hypertarget{_gr_framebuffer_8cpp_64e99c5d0e0b0a6aa5dc542abae1a433}{
+\index{GrFramebuffer.cpp@{GrFramebuffer.cpp}!kTexCoordScaleHandle@{kTexCoordScaleHandle}}
+\index{kTexCoordScaleHandle@{kTexCoordScaleHandle}!GrFramebuffer.cpp@{GrFramebuffer.cpp}}
+\subsubsection[{kTexCoordScaleHandle}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int {\bf kTexCoordScaleHandle} = 1}}
+\label{_gr_framebuffer_8cpp_64e99c5d0e0b0a6aa5dc542abae1a433}
+
+
+
+
+Definition at line 49 of file GrFramebuffer.cpp.\hypertarget{_gr_framebuffer_8cpp_bae9b9d58eb0c78a3bd9487d41110490}{
+\index{GrFramebuffer.cpp@{GrFramebuffer.cpp}!kVertVec@{kVertVec}}
+\index{kVertVec@{kVertVec}!GrFramebuffer.cpp@{GrFramebuffer.cpp}}
+\subsubsection[{kVertVec}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf kVertVec}\mbox{[}4\mbox{]} = \{ 0.0f, 1.0f, 0.0f, 0.0f \}}}
+\label{_gr_framebuffer_8cpp_bae9b9d58eb0c78a3bd9487d41110490}
+
+
+
+
+Definition at line 54 of file GrFramebuffer.cpp.

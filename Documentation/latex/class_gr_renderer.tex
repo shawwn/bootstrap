@@ -1,0 +1,191 @@
+\hypertarget{class_gr_renderer}{
+\section{GrRenderer Class Reference}
+\label{class_gr_renderer}\index{GrRenderer@{GrRenderer}}
+}
+{\tt \#include $<$GrRenderer.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_renderer_73cd9f551be328f0b6bb0548a52603c1}{GrRenderer} (unsigned int screenWidth, unsigned int screenHeight, \hyperlink{enums_8h_697c1ee1354746841860d5bf9f81c033}{EGRQUALITY} initQuality)
+\item 
+\hyperlink{class_gr_renderer_50282617350b0dd1666b9f7ea59864cb}{$\sim$GrRenderer} ()
+\item 
+void \hyperlink{class_gr_renderer_b8ae722c5f5d7667364f0d2f566c83a6}{SetQuality} (\hyperlink{enums_8h_697c1ee1354746841860d5bf9f81c033}{EGRQUALITY} quality)
+\item 
+\hyperlink{enums_8h_697c1ee1354746841860d5bf9f81c033}{EGRQUALITY} \hyperlink{class_gr_renderer_d86b7160c1b0831ec0ddc4a721b433f0}{GetQuality} () const 
+\item 
+void \hyperlink{class_gr_renderer_b3dd5cf678f215b7867cf641c2319498}{SetWireframeEnable} (bool wireframe)
+\item 
+bool \hyperlink{class_gr_renderer_a33160de78d4900342c11166d1658913}{GetWireframeEnable} () const 
+\item 
+void \hyperlink{class_gr_renderer_ea31969cc28ebbae05209c9df2c56d06}{SetColorTextureEnable} (bool enable)
+\item 
+bool \hyperlink{class_gr_renderer_d05a7dc01a5500bb3b2a0b0bdd491a36}{GetColorTextureEnable} () const 
+\item 
+void \hyperlink{class_gr_renderer_7fd1313c1e8a5a9899726a18bdcf8e81}{Update} (unsigned int gameTimeDelta, unsigned int sysTimeDelta)
+\item 
+void \hyperlink{class_gr_renderer_b9f9a038981e6e4f3de7069202759fdf}{BeginRender} ()
+\item 
+void \hyperlink{class_gr_renderer_2ab0a1175b2450e0ed213d7d06b5e18e}{RenderAmbience} (const \hyperlink{class_gr_render_list}{GrRenderList} \&objects, const \hyperlink{class_gr_camera}{GrCamera} \&camera, const \hyperlink{class_gr_color}{GrColor} \&ambientColor)
+\item 
+void \hyperlink{class_gr_renderer_e67d78d01c3f6c8cd69cec7eeeeb8e03}{RenderLight} (const \hyperlink{class_gr_render_list}{GrRenderList} \&lightReceivers, const \hyperlink{class_gr_render_list}{GrRenderList} \&shadowCasters, const \hyperlink{class_gr_camera}{GrCamera} \&camera, const \hyperlink{class_gr_light}{GrLight} \&light)
+\item 
+void \hyperlink{class_gr_renderer_3e1dbac87b12049ca2e0341662ebc8a6}{EndRender} (const \hyperlink{class_gr_camera}{GrCamera} \&camera)
+\item 
+void \hyperlink{class_gr_renderer_92f2baaa0b18549e04bc8e5361cfe676}{PreContextReset} ()
+\item 
+void \hyperlink{class_gr_renderer_ce226ce944cecd180bc8aa02173cee3b}{PostContextReset} (unsigned int screenWidth, unsigned int screenHeight)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 34 of file GrRenderer.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_renderer_73cd9f551be328f0b6bb0548a52603c1}{
+\index{GrRenderer@{GrRenderer}!GrRenderer@{GrRenderer}}
+\index{GrRenderer@{GrRenderer}!GrRenderer@{GrRenderer}}
+\subsubsection[{GrRenderer}]{\setlength{\rightskip}{0pt plus 5cm}GrRenderer::GrRenderer (unsigned int {\em screenWidth}, \/  unsigned int {\em screenHeight}, \/  {\bf EGRQUALITY} {\em initQuality})}}
+\label{class_gr_renderer_73cd9f551be328f0b6bb0548a52603c1}
+
+
+
+
+Definition at line 71 of file GrRenderer.cpp.\hypertarget{class_gr_renderer_50282617350b0dd1666b9f7ea59864cb}{
+\index{GrRenderer@{GrRenderer}!$\sim$GrRenderer@{$\sim$GrRenderer}}
+\index{$\sim$GrRenderer@{$\sim$GrRenderer}!GrRenderer@{GrRenderer}}
+\subsubsection[{$\sim$GrRenderer}]{\setlength{\rightskip}{0pt plus 5cm}GrRenderer::$\sim$GrRenderer ()}}
+\label{class_gr_renderer_50282617350b0dd1666b9f7ea59864cb}
+
+
+
+
+Definition at line 91 of file GrRenderer.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_renderer_b9f9a038981e6e4f3de7069202759fdf}{
+\index{GrRenderer@{GrRenderer}!BeginRender@{BeginRender}}
+\index{BeginRender@{BeginRender}!GrRenderer@{GrRenderer}}
+\subsubsection[{BeginRender}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderer::BeginRender ()}}
+\label{class_gr_renderer_b9f9a038981e6e4f3de7069202759fdf}
+
+
+
+
+Definition at line 111 of file GrRenderer.cpp.\hypertarget{class_gr_renderer_3e1dbac87b12049ca2e0341662ebc8a6}{
+\index{GrRenderer@{GrRenderer}!EndRender@{EndRender}}
+\index{EndRender@{EndRender}!GrRenderer@{GrRenderer}}
+\subsubsection[{EndRender}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderer::EndRender (const {\bf GrCamera} \& {\em camera})}}
+\label{class_gr_renderer_3e1dbac87b12049ca2e0341662ebc8a6}
+
+
+
+
+Definition at line 142 of file GrRenderer.cpp.\hypertarget{class_gr_renderer_d05a7dc01a5500bb3b2a0b0bdd491a36}{
+\index{GrRenderer@{GrRenderer}!GetColorTextureEnable@{GetColorTextureEnable}}
+\index{GetColorTextureEnable@{GetColorTextureEnable}!GrRenderer@{GrRenderer}}
+\subsubsection[{GetColorTextureEnable}]{\setlength{\rightskip}{0pt plus 5cm}bool GrRenderer::GetColorTextureEnable () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_renderer_d05a7dc01a5500bb3b2a0b0bdd491a36}
+
+
+
+
+Definition at line 48 of file GrRenderer.h.\hypertarget{class_gr_renderer_d86b7160c1b0831ec0ddc4a721b433f0}{
+\index{GrRenderer@{GrRenderer}!GetQuality@{GetQuality}}
+\index{GetQuality@{GetQuality}!GrRenderer@{GrRenderer}}
+\subsubsection[{GetQuality}]{\setlength{\rightskip}{0pt plus 5cm}{\bf EGRQUALITY} GrRenderer::GetQuality () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_renderer_d86b7160c1b0831ec0ddc4a721b433f0}
+
+
+
+
+Definition at line 42 of file GrRenderer.h.\hypertarget{class_gr_renderer_a33160de78d4900342c11166d1658913}{
+\index{GrRenderer@{GrRenderer}!GetWireframeEnable@{GetWireframeEnable}}
+\index{GetWireframeEnable@{GetWireframeEnable}!GrRenderer@{GrRenderer}}
+\subsubsection[{GetWireframeEnable}]{\setlength{\rightskip}{0pt plus 5cm}bool GrRenderer::GetWireframeEnable () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_renderer_a33160de78d4900342c11166d1658913}
+
+
+
+
+Definition at line 46 of file GrRenderer.h.\hypertarget{class_gr_renderer_ce226ce944cecd180bc8aa02173cee3b}{
+\index{GrRenderer@{GrRenderer}!PostContextReset@{PostContextReset}}
+\index{PostContextReset@{PostContextReset}!GrRenderer@{GrRenderer}}
+\subsubsection[{PostContextReset}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderer::PostContextReset (unsigned int {\em screenWidth}, \/  unsigned int {\em screenHeight})}}
+\label{class_gr_renderer_ce226ce944cecd180bc8aa02173cee3b}
+
+
+
+
+Definition at line 286 of file GrRenderer.cpp.\hypertarget{class_gr_renderer_92f2baaa0b18549e04bc8e5361cfe676}{
+\index{GrRenderer@{GrRenderer}!PreContextReset@{PreContextReset}}
+\index{PreContextReset@{PreContextReset}!GrRenderer@{GrRenderer}}
+\subsubsection[{PreContextReset}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderer::PreContextReset ()}}
+\label{class_gr_renderer_92f2baaa0b18549e04bc8e5361cfe676}
+
+
+
+
+Definition at line 279 of file GrRenderer.cpp.\hypertarget{class_gr_renderer_2ab0a1175b2450e0ed213d7d06b5e18e}{
+\index{GrRenderer@{GrRenderer}!RenderAmbience@{RenderAmbience}}
+\index{RenderAmbience@{RenderAmbience}!GrRenderer@{GrRenderer}}
+\subsubsection[{RenderAmbience}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderer::RenderAmbience (const {\bf GrRenderList} \& {\em objects}, \/  const {\bf GrCamera} \& {\em camera}, \/  const {\bf GrColor} \& {\em ambientColor})}}
+\label{class_gr_renderer_2ab0a1175b2450e0ed213d7d06b5e18e}
+
+
+
+
+Definition at line 118 of file GrRenderer.cpp.\hypertarget{class_gr_renderer_e67d78d01c3f6c8cd69cec7eeeeb8e03}{
+\index{GrRenderer@{GrRenderer}!RenderLight@{RenderLight}}
+\index{RenderLight@{RenderLight}!GrRenderer@{GrRenderer}}
+\subsubsection[{RenderLight}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderer::RenderLight (const {\bf GrRenderList} \& {\em lightReceivers}, \/  const {\bf GrRenderList} \& {\em shadowCasters}, \/  const {\bf GrCamera} \& {\em camera}, \/  const {\bf GrLight} \& {\em light})}}
+\label{class_gr_renderer_e67d78d01c3f6c8cd69cec7eeeeb8e03}
+
+
+
+
+Definition at line 127 of file GrRenderer.cpp.\hypertarget{class_gr_renderer_ea31969cc28ebbae05209c9df2c56d06}{
+\index{GrRenderer@{GrRenderer}!SetColorTextureEnable@{SetColorTextureEnable}}
+\index{SetColorTextureEnable@{SetColorTextureEnable}!GrRenderer@{GrRenderer}}
+\subsubsection[{SetColorTextureEnable}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderer::SetColorTextureEnable (bool {\em enable})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_renderer_ea31969cc28ebbae05209c9df2c56d06}
+
+
+
+
+Definition at line 47 of file GrRenderer.h.\hypertarget{class_gr_renderer_b8ae722c5f5d7667364f0d2f566c83a6}{
+\index{GrRenderer@{GrRenderer}!SetQuality@{SetQuality}}
+\index{SetQuality@{SetQuality}!GrRenderer@{GrRenderer}}
+\subsubsection[{SetQuality}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderer::SetQuality ({\bf EGRQUALITY} {\em quality})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_renderer_b8ae722c5f5d7667364f0d2f566c83a6}
+
+
+
+
+Definition at line 41 of file GrRenderer.h.\hypertarget{class_gr_renderer_b3dd5cf678f215b7867cf641c2319498}{
+\index{GrRenderer@{GrRenderer}!SetWireframeEnable@{SetWireframeEnable}}
+\index{SetWireframeEnable@{SetWireframeEnable}!GrRenderer@{GrRenderer}}
+\subsubsection[{SetWireframeEnable}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderer::SetWireframeEnable (bool {\em wireframe})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_renderer_b3dd5cf678f215b7867cf641c2319498}
+
+
+
+
+Definition at line 45 of file GrRenderer.h.\hypertarget{class_gr_renderer_7fd1313c1e8a5a9899726a18bdcf8e81}{
+\index{GrRenderer@{GrRenderer}!Update@{Update}}
+\index{Update@{Update}!GrRenderer@{GrRenderer}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderer::Update (unsigned int {\em gameTimeDelta}, \/  unsigned int {\em sysTimeDelta})}}
+\label{class_gr_renderer_7fd1313c1e8a5a9899726a18bdcf8e81}
+
+
+
+
+Definition at line 103 of file GrRenderer.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_renderer_8h}{GrRenderer.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_renderer_8cpp}{GrRenderer.cpp}\end{CompactItemize}

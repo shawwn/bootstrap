@@ -1,0 +1,158 @@
+\hypertarget{class_m_mat4x4_array}{
+\section{MMat4x4Array Class Reference}
+\label{class_m_mat4x4_array}\index{MMat4x4Array@{MMat4x4Array}}
+}
+{\tt \#include $<$MMat4x4Array.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_m_mat4x4_array_d5f55fe80bba0ebd9f0183fb7b5e1f1b}{MMat4x4Array} (unsigned int initMatCount)
+\item 
+\hyperlink{class_m_mat4x4_array_17b7e79c2363b5d1e8dbb8fba2273c49}{$\sim$MMat4x4Array} ()
+\item 
+unsigned int \hyperlink{class_m_mat4x4_array_724cf4773d7aa618baaeb1853e14211e}{GetMatrixCount} () const 
+\item 
+void \hyperlink{class_m_mat4x4_array_aaf1503ef4d6c009cbddf5cc9c881cd5}{Resize} (unsigned int matCount, bool \hyperlink{glext__bak_8h_ab18b6b796a98c5d960c84f7d59049df}{preserve}=true)
+\item 
+void \hyperlink{class_m_mat4x4_array_5be2cd90f44b396e64a7715e11e8ac40}{SetMatrix} (unsigned int idx, const \hyperlink{class_m_mat4x4}{MMat4x4} \&\hyperlink{glext__bak_8h_7b24a3f2f56eb1244ae69dacb4fecb6f}{matrix})
+\item 
+\hyperlink{class_m_mat4x4}{MMat4x4} \hyperlink{class_m_mat4x4_array_d947fe77ec3453921fabc090029279d8}{GetMatrix} (unsigned int idx) const 
+\item 
+void \hyperlink{class_m_mat4x4_array_2e2597b453cc99481883f83acb7318d5}{SetMatrices} (const \hyperlink{class_m_mat4x4_array}{MMat4x4Array} \&array)
+\item 
+void \hyperlink{class_m_mat4x4_array_10fca6efd8b664e9622d263f880f5d17}{PostTransform} (\hyperlink{class_m_mat4x4_array}{MMat4x4Array} \&\hyperlink{glext_8h_f9d0cbbbeb7414e786c41899e5a856d7}{target}, unsigned int dstIdx, unsigned int srcIdx, unsigned int \hyperlink{wglext_8h_98d18d6b4e3ba4ed266c6fb54c839d70}{count}, const \hyperlink{class_m_mat4x4}{MMat4x4} \&\hyperlink{glext__bak_8h_7b24a3f2f56eb1244ae69dacb4fecb6f}{matrix}) const 
+\item 
+void \hyperlink{class_m_mat4x4_array_7e24ecc0ea807c875855e82030039e73}{PreTransform} (\hyperlink{class_m_mat4x4_array}{MMat4x4Array} \&\hyperlink{glext_8h_f9d0cbbbeb7414e786c41899e5a856d7}{target}, unsigned int dstIdx, unsigned int srcIdx, unsigned int \hyperlink{wglext_8h_98d18d6b4e3ba4ed266c6fb54c839d70}{count}, const \hyperlink{class_m_mat4x4}{MMat4x4} \&\hyperlink{glext__bak_8h_7b24a3f2f56eb1244ae69dacb4fecb6f}{matrix}) const 
+\item 
+void \hyperlink{class_m_mat4x4_array_91a049d047232f4298c645ded9e46142}{Propagate} (unsigned int $\ast$\hyperlink{glext__bak_8h_c4293d0f76770fe857be3431df25308d}{indices}, const \hyperlink{class_m_mat4x4}{MMat4x4} \&root=\hyperlink{class_m_mat4x4}{MMat4x4}())
+\item 
+void \hyperlink{class_m_mat4x4_array_1f3e7923d51eed94d4d674ba5cc7df7e}{Save} (\hyperlink{class_u_writer}{UWriter} \&writer) const 
+\item 
+void \hyperlink{class_m_mat4x4_array_4eb1ad1a6c4090608003253c88aa9892}{Load} (\hyperlink{class_u_reader}{UReader} \&reader)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 18 of file MMat4x4Array.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_m_mat4x4_array_d5f55fe80bba0ebd9f0183fb7b5e1f1b}{
+\index{MMat4x4Array@{MMat4x4Array}!MMat4x4Array@{MMat4x4Array}}
+\index{MMat4x4Array@{MMat4x4Array}!MMat4x4Array@{MMat4x4Array}}
+\subsubsection[{MMat4x4Array}]{\setlength{\rightskip}{0pt plus 5cm}MMat4x4Array::MMat4x4Array (unsigned int {\em initMatCount})}}
+\label{class_m_mat4x4_array_d5f55fe80bba0ebd9f0183fb7b5e1f1b}
+
+
+
+
+Definition at line 28 of file MMat4x4Array.cpp.\hypertarget{class_m_mat4x4_array_17b7e79c2363b5d1e8dbb8fba2273c49}{
+\index{MMat4x4Array@{MMat4x4Array}!$\sim$MMat4x4Array@{$\sim$MMat4x4Array}}
+\index{$\sim$MMat4x4Array@{$\sim$MMat4x4Array}!MMat4x4Array@{MMat4x4Array}}
+\subsubsection[{$\sim$MMat4x4Array}]{\setlength{\rightskip}{0pt plus 5cm}MMat4x4Array::$\sim$MMat4x4Array ()}}
+\label{class_m_mat4x4_array_17b7e79c2363b5d1e8dbb8fba2273c49}
+
+
+
+
+Definition at line 65 of file MMat4x4Array.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_m_mat4x4_array_d947fe77ec3453921fabc090029279d8}{
+\index{MMat4x4Array@{MMat4x4Array}!GetMatrix@{GetMatrix}}
+\index{GetMatrix@{GetMatrix}!MMat4x4Array@{MMat4x4Array}}
+\subsubsection[{GetMatrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MMat4x4} MMat4x4Array::GetMatrix (unsigned int {\em idx}) const}}
+\label{class_m_mat4x4_array_d947fe77ec3453921fabc090029279d8}
+
+
+
+
+Definition at line 113 of file MMat4x4Array.cpp.\hypertarget{class_m_mat4x4_array_724cf4773d7aa618baaeb1853e14211e}{
+\index{MMat4x4Array@{MMat4x4Array}!GetMatrixCount@{GetMatrixCount}}
+\index{GetMatrixCount@{GetMatrixCount}!MMat4x4Array@{MMat4x4Array}}
+\subsubsection[{GetMatrixCount}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int MMat4x4Array::GetMatrixCount () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_mat4x4_array_724cf4773d7aa618baaeb1853e14211e}
+
+
+
+
+Definition at line 24 of file MMat4x4Array.h.\hypertarget{class_m_mat4x4_array_4eb1ad1a6c4090608003253c88aa9892}{
+\index{MMat4x4Array@{MMat4x4Array}!Load@{Load}}
+\index{Load@{Load}!MMat4x4Array@{MMat4x4Array}}
+\subsubsection[{Load}]{\setlength{\rightskip}{0pt plus 5cm}void MMat4x4Array::Load ({\bf UReader} \& {\em reader})}}
+\label{class_m_mat4x4_array_4eb1ad1a6c4090608003253c88aa9892}
+
+
+
+
+Definition at line 279 of file MMat4x4Array.cpp.\hypertarget{class_m_mat4x4_array_10fca6efd8b664e9622d263f880f5d17}{
+\index{MMat4x4Array@{MMat4x4Array}!PostTransform@{PostTransform}}
+\index{PostTransform@{PostTransform}!MMat4x4Array@{MMat4x4Array}}
+\subsubsection[{PostTransform}]{\setlength{\rightskip}{0pt plus 5cm}void MMat4x4Array::PostTransform ({\bf MMat4x4Array} \& {\em target}, \/  unsigned int {\em dstIdx}, \/  unsigned int {\em srcIdx}, \/  unsigned int {\em count}, \/  const {\bf MMat4x4} \& {\em matrix}) const}}
+\label{class_m_mat4x4_array_10fca6efd8b664e9622d263f880f5d17}
+
+
+
+
+Definition at line 149 of file MMat4x4Array.cpp.\hypertarget{class_m_mat4x4_array_7e24ecc0ea807c875855e82030039e73}{
+\index{MMat4x4Array@{MMat4x4Array}!PreTransform@{PreTransform}}
+\index{PreTransform@{PreTransform}!MMat4x4Array@{MMat4x4Array}}
+\subsubsection[{PreTransform}]{\setlength{\rightskip}{0pt plus 5cm}void MMat4x4Array::PreTransform ({\bf MMat4x4Array} \& {\em target}, \/  unsigned int {\em dstIdx}, \/  unsigned int {\em srcIdx}, \/  unsigned int {\em count}, \/  const {\bf MMat4x4} \& {\em matrix}) const}}
+\label{class_m_mat4x4_array_7e24ecc0ea807c875855e82030039e73}
+
+
+
+
+Definition at line 184 of file MMat4x4Array.cpp.\hypertarget{class_m_mat4x4_array_91a049d047232f4298c645ded9e46142}{
+\index{MMat4x4Array@{MMat4x4Array}!Propagate@{Propagate}}
+\index{Propagate@{Propagate}!MMat4x4Array@{MMat4x4Array}}
+\subsubsection[{Propagate}]{\setlength{\rightskip}{0pt plus 5cm}void MMat4x4Array::Propagate (unsigned int $\ast$ {\em indices}, \/  const {\bf MMat4x4} \& {\em root} = {\tt {\bf MMat4x4}()})}}
+\label{class_m_mat4x4_array_91a049d047232f4298c645ded9e46142}
+
+
+
+
+Definition at line 219 of file MMat4x4Array.cpp.\hypertarget{class_m_mat4x4_array_aaf1503ef4d6c009cbddf5cc9c881cd5}{
+\index{MMat4x4Array@{MMat4x4Array}!Resize@{Resize}}
+\index{Resize@{Resize}!MMat4x4Array@{MMat4x4Array}}
+\subsubsection[{Resize}]{\setlength{\rightskip}{0pt plus 5cm}void MMat4x4Array::Resize (unsigned int {\em matCount}, \/  bool {\em preserve} = {\tt true})}}
+\label{class_m_mat4x4_array_aaf1503ef4d6c009cbddf5cc9c881cd5}
+
+
+
+
+Definition at line 77 of file MMat4x4Array.cpp.\hypertarget{class_m_mat4x4_array_1f3e7923d51eed94d4d674ba5cc7df7e}{
+\index{MMat4x4Array@{MMat4x4Array}!Save@{Save}}
+\index{Save@{Save}!MMat4x4Array@{MMat4x4Array}}
+\subsubsection[{Save}]{\setlength{\rightskip}{0pt plus 5cm}void MMat4x4Array::Save ({\bf UWriter} \& {\em writer}) const}}
+\label{class_m_mat4x4_array_1f3e7923d51eed94d4d674ba5cc7df7e}
+
+
+
+
+Definition at line 271 of file MMat4x4Array.cpp.\hypertarget{class_m_mat4x4_array_2e2597b453cc99481883f83acb7318d5}{
+\index{MMat4x4Array@{MMat4x4Array}!SetMatrices@{SetMatrices}}
+\index{SetMatrices@{SetMatrices}!MMat4x4Array@{MMat4x4Array}}
+\subsubsection[{SetMatrices}]{\setlength{\rightskip}{0pt plus 5cm}void MMat4x4Array::SetMatrices (const {\bf MMat4x4Array} \& {\em array})}}
+\label{class_m_mat4x4_array_2e2597b453cc99481883f83acb7318d5}
+
+
+
+
+Definition at line 141 of file MMat4x4Array.cpp.\hypertarget{class_m_mat4x4_array_5be2cd90f44b396e64a7715e11e8ac40}{
+\index{MMat4x4Array@{MMat4x4Array}!SetMatrix@{SetMatrix}}
+\index{SetMatrix@{SetMatrix}!MMat4x4Array@{MMat4x4Array}}
+\subsubsection[{SetMatrix}]{\setlength{\rightskip}{0pt plus 5cm}void MMat4x4Array::SetMatrix (unsigned int {\em idx}, \/  const {\bf MMat4x4} \& {\em matrix})}}
+\label{class_m_mat4x4_array_5be2cd90f44b396e64a7715e11e8ac40}
+
+
+
+
+Definition at line 100 of file MMat4x4Array.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_m_mat4x4_array_8h}{MMat4x4Array.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_m_mat4x4_array_8cpp}{MMat4x4Array.cpp}\end{CompactItemize}

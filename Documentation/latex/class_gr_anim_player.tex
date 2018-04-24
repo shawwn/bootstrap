@@ -1,0 +1,261 @@
+\hypertarget{class_gr_anim_player}{
+\section{GrAnimPlayer Class Reference}
+\label{class_gr_anim_player}\index{GrAnimPlayer@{GrAnimPlayer}}
+}
+{\tt \#include $<$GrAnimPlayer.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+enum \hyperlink{class_gr_anim_player_b3c2ba6a58db17d254f4591ac28a0a75}{ESTATE} \{ \hyperlink{class_gr_anim_player_b3c2ba6a58db17d254f4591ac28a0a751ad3d481157b5fbc3ec9dfc5d8efe068}{ES\_\-STOPPED}, 
+\hyperlink{class_gr_anim_player_b3c2ba6a58db17d254f4591ac28a0a75c76cc989afafb10f31b68a473b0f59c2}{ES\_\-PLAYING}, 
+\hyperlink{class_gr_anim_player_b3c2ba6a58db17d254f4591ac28a0a75dab3961175599dee2295410ab28f5095}{ES\_\-PAUSED}
+ \}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_anim_player_7b279986945feaa0ff25878fc5f16c78}{GrAnimPlayer} (\hyperlink{class_gr_model}{GrModel} $\ast$\hyperlink{glext_8h_f9d0cbbbeb7414e786c41899e5a856d7}{target})
+\item 
+\hyperlink{class_gr_anim_player_86fd4d9f14bdc935bc704d3ec4b069d1}{$\sim$GrAnimPlayer} ()
+\item 
+\hyperlink{class_gr_anim_player}{GrAnimPlayer} $\ast$ \hyperlink{class_gr_anim_player_6e2dfd70dbaf0a5040f2083c1a0ba6c9}{Clone} (\hyperlink{class_gr_model}{GrModel} $\ast$newTarget) const 
+\item 
+unsigned int \hyperlink{class_gr_anim_player_1207033fa4b66842478bd2d7d30c7925}{AddAnim} (const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, \hyperlink{class_gr_anim}{GrAnim} $\ast$animRoot)
+\item 
+unsigned int \hyperlink{class_gr_anim_player_7fc95790506d45f32efbcb9023606318}{GetAnimId} (const char $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name})
+\item 
+\hyperlink{class_gr_anim}{GrAnim} $\ast$ \hyperlink{class_gr_anim_player_ced4497db4ff6a6b449c12229287a830}{GetAnim} (unsigned int \hyperlink{glext__bak_8h_58c2a664503e14ffb8f21012aabff3e9}{id})
+\item 
+void \hyperlink{class_gr_anim_player_20592a82ff4bd496988566edd6151c61}{SetActiveAnim} (unsigned int \hyperlink{glext__bak_8h_58c2a664503e14ffb8f21012aabff3e9}{id}, float fadeDuration=0.0f)
+\item 
+void \hyperlink{class_gr_anim_player_8ffa920aacb2bc0682c0b842e7c913a8}{Play} ()
+\item 
+void \hyperlink{class_gr_anim_player_6a6da2d52a5f33215eaf6885b19cc8a7}{Pause} ()
+\item 
+void \hyperlink{class_gr_anim_player_a4866f3c51e25c346b0eec2d5acdd0dc}{Stop} ()
+\item 
+\hyperlink{class_gr_anim_player_b3c2ba6a58db17d254f4591ac28a0a75}{ESTATE} \hyperlink{class_gr_anim_player_bf5ea7dcbe01ab3f7a8e8ffc22632c19}{GetState} () const 
+\item 
+unsigned int \hyperlink{class_gr_anim_player_1c07ae13f8f25a0e5f04b80cfc74cd25}{GetCurAnimId} () const 
+\item 
+unsigned int \hyperlink{class_gr_anim_player_cafb2a806f7e0cc45be6e97a34873002}{GetPrevAnimId} () const 
+\item 
+\hyperlink{class_gr_anim}{GrAnim} $\ast$ \hyperlink{class_gr_anim_player_2df1bb7e8c64335491c37aa32ede5b50}{GetCurAnim} () const 
+\item 
+\hyperlink{class_gr_anim}{GrAnim} $\ast$ \hyperlink{class_gr_anim_player_a549030741fea082faa485d1140bc6f7}{GetPrevAnim} () const 
+\item 
+void \hyperlink{class_gr_anim_player_41f92c3573552814fb744a27f0a6259b}{SeekCurTo} (float time)
+\item 
+void \hyperlink{class_gr_anim_player_5a21c0ec51c825365b37a34b05cbfad5}{ApplyPose} (float timeAdvance)
+\item 
+\hyperlink{class_gr_anim_x_form_cache}{GrAnimXFormCache} \& \hyperlink{class_gr_anim_player_823964a43c7ce36bd427741807c83b93}{GetTransformCache} ()
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 22 of file GrAnimPlayer.h.
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_gr_anim_player_b3c2ba6a58db17d254f4591ac28a0a75}{
+\index{GrAnimPlayer@{GrAnimPlayer}!ESTATE@{ESTATE}}
+\index{ESTATE@{ESTATE}!GrAnimPlayer@{GrAnimPlayer}}
+\subsubsection[{ESTATE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GrAnimPlayer::ESTATE}}}
+\label{class_gr_anim_player_b3c2ba6a58db17d254f4591ac28a0a75}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{ES\_\-STOPPED@{ES\_\-STOPPED}!GrAnimPlayer@{GrAnimPlayer}}\index{GrAnimPlayer@{GrAnimPlayer}!ES\_\-STOPPED@{ES\_\-STOPPED}}\item[{\em 
+\hypertarget{class_gr_anim_player_b3c2ba6a58db17d254f4591ac28a0a751ad3d481157b5fbc3ec9dfc5d8efe068}{
+ES\_\-STOPPED}
+\label{class_gr_anim_player_b3c2ba6a58db17d254f4591ac28a0a751ad3d481157b5fbc3ec9dfc5d8efe068}
+}]\index{ES\_\-PLAYING@{ES\_\-PLAYING}!GrAnimPlayer@{GrAnimPlayer}}\index{GrAnimPlayer@{GrAnimPlayer}!ES\_\-PLAYING@{ES\_\-PLAYING}}\item[{\em 
+\hypertarget{class_gr_anim_player_b3c2ba6a58db17d254f4591ac28a0a75c76cc989afafb10f31b68a473b0f59c2}{
+ES\_\-PLAYING}
+\label{class_gr_anim_player_b3c2ba6a58db17d254f4591ac28a0a75c76cc989afafb10f31b68a473b0f59c2}
+}]\index{ES\_\-PAUSED@{ES\_\-PAUSED}!GrAnimPlayer@{GrAnimPlayer}}\index{GrAnimPlayer@{GrAnimPlayer}!ES\_\-PAUSED@{ES\_\-PAUSED}}\item[{\em 
+\hypertarget{class_gr_anim_player_b3c2ba6a58db17d254f4591ac28a0a75dab3961175599dee2295410ab28f5095}{
+ES\_\-PAUSED}
+\label{class_gr_anim_player_b3c2ba6a58db17d254f4591ac28a0a75dab3961175599dee2295410ab28f5095}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 28 of file GrAnimPlayer.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_anim_player_7b279986945feaa0ff25878fc5f16c78}{
+\index{GrAnimPlayer@{GrAnimPlayer}!GrAnimPlayer@{GrAnimPlayer}}
+\index{GrAnimPlayer@{GrAnimPlayer}!GrAnimPlayer@{GrAnimPlayer}}
+\subsubsection[{GrAnimPlayer}]{\setlength{\rightskip}{0pt plus 5cm}GrAnimPlayer::GrAnimPlayer ({\bf GrModel} $\ast$ {\em target})}}
+\label{class_gr_anim_player_7b279986945feaa0ff25878fc5f16c78}
+
+
+
+
+Definition at line 25 of file GrAnimPlayer.cpp.\hypertarget{class_gr_anim_player_86fd4d9f14bdc935bc704d3ec4b069d1}{
+\index{GrAnimPlayer@{GrAnimPlayer}!$\sim$GrAnimPlayer@{$\sim$GrAnimPlayer}}
+\index{$\sim$GrAnimPlayer@{$\sim$GrAnimPlayer}!GrAnimPlayer@{GrAnimPlayer}}
+\subsubsection[{$\sim$GrAnimPlayer}]{\setlength{\rightskip}{0pt plus 5cm}GrAnimPlayer::$\sim$GrAnimPlayer ()}}
+\label{class_gr_anim_player_86fd4d9f14bdc935bc704d3ec4b069d1}
+
+
+
+
+Definition at line 39 of file GrAnimPlayer.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_anim_player_1207033fa4b66842478bd2d7d30c7925}{
+\index{GrAnimPlayer@{GrAnimPlayer}!AddAnim@{AddAnim}}
+\index{AddAnim@{AddAnim}!GrAnimPlayer@{GrAnimPlayer}}
+\subsubsection[{AddAnim}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrAnimPlayer::AddAnim (const {\bf tstring} \& {\em name}, \/  {\bf GrAnim} $\ast$ {\em animRoot})}}
+\label{class_gr_anim_player_1207033fa4b66842478bd2d7d30c7925}
+
+
+
+
+Definition at line 67 of file GrAnimPlayer.cpp.\hypertarget{class_gr_anim_player_5a21c0ec51c825365b37a34b05cbfad5}{
+\index{GrAnimPlayer@{GrAnimPlayer}!ApplyPose@{ApplyPose}}
+\index{ApplyPose@{ApplyPose}!GrAnimPlayer@{GrAnimPlayer}}
+\subsubsection[{ApplyPose}]{\setlength{\rightskip}{0pt plus 5cm}void GrAnimPlayer::ApplyPose (float {\em timeAdvance})}}
+\label{class_gr_anim_player_5a21c0ec51c825365b37a34b05cbfad5}
+
+
+
+
+Definition at line 146 of file GrAnimPlayer.cpp.\hypertarget{class_gr_anim_player_6e2dfd70dbaf0a5040f2083c1a0ba6c9}{
+\index{GrAnimPlayer@{GrAnimPlayer}!Clone@{Clone}}
+\index{Clone@{Clone}!GrAnimPlayer@{GrAnimPlayer}}
+\subsubsection[{Clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrAnimPlayer} $\ast$ GrAnimPlayer::Clone ({\bf GrModel} $\ast$ {\em newTarget}) const}}
+\label{class_gr_anim_player_6e2dfd70dbaf0a5040f2083c1a0ba6c9}
+
+
+
+
+Definition at line 51 of file GrAnimPlayer.cpp.\hypertarget{class_gr_anim_player_ced4497db4ff6a6b449c12229287a830}{
+\index{GrAnimPlayer@{GrAnimPlayer}!GetAnim@{GetAnim}}
+\index{GetAnim@{GetAnim}!GrAnimPlayer@{GrAnimPlayer}}
+\subsubsection[{GetAnim}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrAnim} $\ast$ GrAnimPlayer::GetAnim (unsigned int {\em id})}}
+\label{class_gr_anim_player_ced4497db4ff6a6b449c12229287a830}
+
+
+
+
+Definition at line 91 of file GrAnimPlayer.cpp.\hypertarget{class_gr_anim_player_7fc95790506d45f32efbcb9023606318}{
+\index{GrAnimPlayer@{GrAnimPlayer}!GetAnimId@{GetAnimId}}
+\index{GetAnimId@{GetAnimId}!GrAnimPlayer@{GrAnimPlayer}}
+\subsubsection[{GetAnimId}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrAnimPlayer::GetAnimId (const char $\ast$ {\em name})}}
+\label{class_gr_anim_player_7fc95790506d45f32efbcb9023606318}
+
+
+
+
+Definition at line 79 of file GrAnimPlayer.cpp.\hypertarget{class_gr_anim_player_2df1bb7e8c64335491c37aa32ede5b50}{
+\index{GrAnimPlayer@{GrAnimPlayer}!GetCurAnim@{GetCurAnim}}
+\index{GetCurAnim@{GetCurAnim}!GrAnimPlayer@{GrAnimPlayer}}
+\subsubsection[{GetCurAnim}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrAnim}$\ast$ GrAnimPlayer::GetCurAnim () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_anim_player_2df1bb7e8c64335491c37aa32ede5b50}
+
+
+
+
+Definition at line 53 of file GrAnimPlayer.h.\hypertarget{class_gr_anim_player_1c07ae13f8f25a0e5f04b80cfc74cd25}{
+\index{GrAnimPlayer@{GrAnimPlayer}!GetCurAnimId@{GetCurAnimId}}
+\index{GetCurAnimId@{GetCurAnimId}!GrAnimPlayer@{GrAnimPlayer}}
+\subsubsection[{GetCurAnimId}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrAnimPlayer::GetCurAnimId () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_anim_player_1c07ae13f8f25a0e5f04b80cfc74cd25}
+
+
+
+
+Definition at line 51 of file GrAnimPlayer.h.\hypertarget{class_gr_anim_player_a549030741fea082faa485d1140bc6f7}{
+\index{GrAnimPlayer@{GrAnimPlayer}!GetPrevAnim@{GetPrevAnim}}
+\index{GetPrevAnim@{GetPrevAnim}!GrAnimPlayer@{GrAnimPlayer}}
+\subsubsection[{GetPrevAnim}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrAnim}$\ast$ GrAnimPlayer::GetPrevAnim () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_anim_player_a549030741fea082faa485d1140bc6f7}
+
+
+
+
+Definition at line 54 of file GrAnimPlayer.h.\hypertarget{class_gr_anim_player_cafb2a806f7e0cc45be6e97a34873002}{
+\index{GrAnimPlayer@{GrAnimPlayer}!GetPrevAnimId@{GetPrevAnimId}}
+\index{GetPrevAnimId@{GetPrevAnimId}!GrAnimPlayer@{GrAnimPlayer}}
+\subsubsection[{GetPrevAnimId}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrAnimPlayer::GetPrevAnimId () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_anim_player_cafb2a806f7e0cc45be6e97a34873002}
+
+
+
+
+Definition at line 52 of file GrAnimPlayer.h.\hypertarget{class_gr_anim_player_bf5ea7dcbe01ab3f7a8e8ffc22632c19}{
+\index{GrAnimPlayer@{GrAnimPlayer}!GetState@{GetState}}
+\index{GetState@{GetState}!GrAnimPlayer@{GrAnimPlayer}}
+\subsubsection[{GetState}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ESTATE} GrAnimPlayer::GetState () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_anim_player_bf5ea7dcbe01ab3f7a8e8ffc22632c19}
+
+
+
+
+Definition at line 49 of file GrAnimPlayer.h.\hypertarget{class_gr_anim_player_823964a43c7ce36bd427741807c83b93}{
+\index{GrAnimPlayer@{GrAnimPlayer}!GetTransformCache@{GetTransformCache}}
+\index{GetTransformCache@{GetTransformCache}!GrAnimPlayer@{GrAnimPlayer}}
+\subsubsection[{GetTransformCache}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrAnimXFormCache}\& GrAnimPlayer::GetTransformCache ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_anim_player_823964a43c7ce36bd427741807c83b93}
+
+
+
+
+Definition at line 63 of file GrAnimPlayer.h.\hypertarget{class_gr_anim_player_6a6da2d52a5f33215eaf6885b19cc8a7}{
+\index{GrAnimPlayer@{GrAnimPlayer}!Pause@{Pause}}
+\index{Pause@{Pause}!GrAnimPlayer@{GrAnimPlayer}}
+\subsubsection[{Pause}]{\setlength{\rightskip}{0pt plus 5cm}void GrAnimPlayer::Pause ()}}
+\label{class_gr_anim_player_6a6da2d52a5f33215eaf6885b19cc8a7}
+
+
+
+
+Definition at line 121 of file GrAnimPlayer.cpp.\hypertarget{class_gr_anim_player_8ffa920aacb2bc0682c0b842e7c913a8}{
+\index{GrAnimPlayer@{GrAnimPlayer}!Play@{Play}}
+\index{Play@{Play}!GrAnimPlayer@{GrAnimPlayer}}
+\subsubsection[{Play}]{\setlength{\rightskip}{0pt plus 5cm}void GrAnimPlayer::Play ()}}
+\label{class_gr_anim_player_8ffa920aacb2bc0682c0b842e7c913a8}
+
+
+
+
+Definition at line 114 of file GrAnimPlayer.cpp.\hypertarget{class_gr_anim_player_41f92c3573552814fb744a27f0a6259b}{
+\index{GrAnimPlayer@{GrAnimPlayer}!SeekCurTo@{SeekCurTo}}
+\index{SeekCurTo@{SeekCurTo}!GrAnimPlayer@{GrAnimPlayer}}
+\subsubsection[{SeekCurTo}]{\setlength{\rightskip}{0pt plus 5cm}void GrAnimPlayer::SeekCurTo (float {\em time})}}
+\label{class_gr_anim_player_41f92c3573552814fb744a27f0a6259b}
+
+
+
+
+Definition at line 138 of file GrAnimPlayer.cpp.\hypertarget{class_gr_anim_player_20592a82ff4bd496988566edd6151c61}{
+\index{GrAnimPlayer@{GrAnimPlayer}!SetActiveAnim@{SetActiveAnim}}
+\index{SetActiveAnim@{SetActiveAnim}!GrAnimPlayer@{GrAnimPlayer}}
+\subsubsection[{SetActiveAnim}]{\setlength{\rightskip}{0pt plus 5cm}void GrAnimPlayer::SetActiveAnim (unsigned int {\em id}, \/  float {\em fadeDuration} = {\tt 0.0f})}}
+\label{class_gr_anim_player_20592a82ff4bd496988566edd6151c61}
+
+
+
+
+Definition at line 99 of file GrAnimPlayer.cpp.\hypertarget{class_gr_anim_player_a4866f3c51e25c346b0eec2d5acdd0dc}{
+\index{GrAnimPlayer@{GrAnimPlayer}!Stop@{Stop}}
+\index{Stop@{Stop}!GrAnimPlayer@{GrAnimPlayer}}
+\subsubsection[{Stop}]{\setlength{\rightskip}{0pt plus 5cm}void GrAnimPlayer::Stop ()}}
+\label{class_gr_anim_player_a4866f3c51e25c346b0eec2d5acdd0dc}
+
+
+
+
+Definition at line 128 of file GrAnimPlayer.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_anim_player_8h}{GrAnimPlayer.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_anim_player_8cpp}{GrAnimPlayer.cpp}\end{CompactItemize}

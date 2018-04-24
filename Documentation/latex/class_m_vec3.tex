@@ -1,0 +1,665 @@
+\hypertarget{class_m_vec3}{
+\section{MVec3 Class Reference}
+\label{class_m_vec3}\index{MVec3@{MVec3}}
+}
+{\tt \#include $<$MVec3.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_m_vec3_6ba0f0bb219d11a10b7b028fb45d6146}{MVec3} ()
+\item 
+\hyperlink{class_m_vec3_fca7472b1db64da1af3dfc6c0397e3a7}{MVec3} (float \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x}, float \hyperlink{wglext_8h_9298c7ad619074f5285b32c6b72bfdea}{y}, float \hyperlink{glext__bak_8h_5b27107fca91cf19a778530405575b37}{z})
+\item 
+\hyperlink{class_m_vec3_b68860076beec4cccc14fd176bfac615}{MVec3} (const float $\ast$vec)
+\item 
+\hyperlink{class_m_vec3_acfa4e2533d822d2f8c9e3725011960a}{MVec3} (const \hyperlink{class_m_vec3}{MVec3} \&\hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v})
+\item 
+\hyperlink{class_m_vec3_c486b557acdf616a7d95babc21a7cd89}{$\sim$MVec3} ()
+\item 
+\hyperlink{class_m_vec3}{MVec3} \& \hyperlink{class_m_vec3_8d03c2d18357d0701f0f626d9db001cd}{operator=} (const \hyperlink{class_m_vec3}{MVec3} \&\hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v})
+\item 
+void \hyperlink{class_m_vec3_4b4aa3eef6d824a331b36b7f559b29ac}{AssignMin} (const \hyperlink{class_m_vec3}{MVec3} \&\hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v})
+\item 
+void \hyperlink{class_m_vec3_a2bca5724dbee66428e3cce3d1c75070}{AssignMax} (const \hyperlink{class_m_vec3}{MVec3} \&\hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v})
+\item 
+float $\ast$ \hyperlink{class_m_vec3_a4f6338cc24ff6d594577877c261ebd8}{GetDataStart} ()
+\item 
+const float $\ast$ \hyperlink{class_m_vec3_a36437bab4444c4ae78baa21ebcea624}{GetDataStart} () const 
+\item 
+float \hyperlink{class_m_vec3_8b834219441d8d65b3e4df28fe03f60f}{GetX} () const 
+\item 
+float \hyperlink{class_m_vec3_dfadf4adb521222d91980376a7679dc8}{GetY} () const 
+\item 
+float \hyperlink{class_m_vec3_8b29390479c105bbb9926188b9742329}{GetZ} () const 
+\item 
+void \hyperlink{class_m_vec3_7ab6073bcf8afbcf630ad8f2ae8992b8}{SetX} (float \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x})
+\item 
+void \hyperlink{class_m_vec3_128947a1f8cbc74a87b3b66454dfbb86}{SetY} (float \hyperlink{wglext_8h_9298c7ad619074f5285b32c6b72bfdea}{y})
+\item 
+void \hyperlink{class_m_vec3_bf45cf723890eedc23d0aa9eaf4a578a}{SetZ} (float \hyperlink{glext__bak_8h_5b27107fca91cf19a778530405575b37}{z})
+\item 
+float \hyperlink{class_m_vec3_c34a45816652b6f59fe6300cdc336a58}{Max} () const 
+\item 
+float \hyperlink{class_m_vec3_85c543975270d4dc429b62edec1a853d}{Min} () const 
+\item 
+float \hyperlink{class_m_vec3_cc02bb64689686727d03d6f49948cc06}{AbsMax} () const 
+\item 
+float \hyperlink{class_m_vec3_6bab49220a80edba7d84375688519850}{AbsMin} () const 
+\item 
+\hyperlink{class_m_vec3}{MVec3} \hyperlink{class_m_vec3_7a6718b309fae2ed8362a365a92f815c}{Abs} () const 
+\item 
+void \hyperlink{class_m_vec3_8aa706611d3bd87a40fbf85d51a459fd}{Orthogonalize} (const \hyperlink{class_m_vec3}{MVec3} \&base)
+\item 
+\hyperlink{class_m_vec3}{MVec3} \hyperlink{class_m_vec3_d784fa93a877a935c5fdf37f9cd7a505}{Orthogonalized} (const \hyperlink{class_m_vec3}{MVec3} \&base)
+\item 
+void \hyperlink{class_m_vec3_65c10253d74af1520788361ca191cd50}{Orthonormalize} (const \hyperlink{class_m_vec3}{MVec3} \&base)
+\item 
+\hyperlink{class_m_vec3}{MVec3} \hyperlink{class_m_vec3_90de66244ee48f99a07924deb28a9d35}{Orthonormalized} (const \hyperlink{class_m_vec3}{MVec3} \&base)
+\item 
+void \hyperlink{class_m_vec3_89f60c8001f1e04e5d17327e3b9ada63}{Normalize} ()
+\item 
+void \hyperlink{class_m_vec3_d91e67a5315d1817256acae9fc00a849}{NormalizeFast} ()
+\item 
+\hyperlink{class_m_vec3}{MVec3} \hyperlink{class_m_vec3_139cf1db336ecf0ca02157f6f3605647}{Normalized} () const 
+\item 
+\hyperlink{class_m_vec3}{MVec3} \hyperlink{class_m_vec3_4b2ec5935a0621b83cd7fab8187acfb2}{NormalizedFast} () const 
+\item 
+void \hyperlink{class_m_vec3_a99b7529b11e93834480d70092542e24}{Negate} ()
+\item 
+float \hyperlink{class_m_vec3_55337896656651e4e3a8214c718e5043}{Dist} (const \hyperlink{class_m_vec3}{MVec3} \&pt) const 
+\item 
+float \hyperlink{class_m_vec3_71ac5757ebbfabeacbf4e8337f291d7d}{DistSqr} (const \hyperlink{class_m_vec3}{MVec3} \&pt) const 
+\item 
+float \hyperlink{class_m_vec3_6deaf4608ece1b212f214a1d8d304cc7}{MagSqr} () const 
+\item 
+float \hyperlink{class_m_vec3_5dfd83de3ed52ac479d69a1c8407d495}{Mag} () const 
+\item 
+float \hyperlink{class_m_vec3_c224832dd149a1f44add1fa271b5b909}{Dot} (const \hyperlink{class_m_vec3}{MVec3} \&\hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v}) const 
+\item 
+\hyperlink{class_m_vec3}{MVec3} \hyperlink{class_m_vec3_dcd74e76cefbb1b650c5dece5f115aae}{Cross} (const \hyperlink{class_m_vec3}{MVec3} \&\hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v}) const 
+\item 
+float \& \hyperlink{class_m_vec3_22086d981dee89e4b05ba72e7f24d113}{operator()} (int i)
+\item 
+float \hyperlink{class_m_vec3_6b486d03008c43722da09d73a32e3d78}{operator()} (int i) const 
+\item 
+\hyperlink{class_m_vec3}{MVec3} \hyperlink{class_m_vec3_fe57dd320b5843747c718d28d0bb23ff}{operator$\ast$} (float \hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v}) const 
+\item 
+\hyperlink{class_m_vec3}{MVec3} \hyperlink{class_m_vec3_dd316d1e110036f3c227ccb56e68f491}{operator$\ast$} (const \hyperlink{class_m_vec3}{MVec3} \&\hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v}) const 
+\item 
+\hyperlink{class_m_vec3}{MVec3} \hyperlink{class_m_vec3_173620909fa0bb83955665d1784f8861}{operator/} (const \hyperlink{class_m_vec3}{MVec3} \&\hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v}) const 
+\item 
+\hyperlink{class_m_vec3}{MVec3} \hyperlink{class_m_vec3_1c87d4e61056e93c05a97c396b1ad121}{operator+} (const \hyperlink{class_m_vec3}{MVec3} \&\hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v}) const 
+\item 
+\hyperlink{class_m_vec3}{MVec3} \hyperlink{class_m_vec3_364ae43af58e96a12cb1918dd440b035}{operator-} (const \hyperlink{class_m_vec3}{MVec3} \&\hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v}) const 
+\item 
+\hyperlink{class_m_vec3}{MVec3} \hyperlink{class_m_vec3_e1cbaf41190a9fb28e2d63d310f8db90}{operator-} () const 
+\item 
+\hyperlink{class_m_vec3}{MVec3} \& \hyperlink{class_m_vec3_88ce58e51baa98ce4be1afd487bb2bda}{operator$\ast$=} (const \hyperlink{class_m_vec3}{MVec3} \&\hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v})
+\item 
+\hyperlink{class_m_vec3}{MVec3} \& \hyperlink{class_m_vec3_94b97a8516184efd04adb35d3407c3ff}{operator$\ast$=} (float \hyperlink{glext__bak_8h_281421b881aa7a1266842b73a3bc7655}{scale})
+\item 
+\hyperlink{class_m_vec3}{MVec3} \& \hyperlink{class_m_vec3_f60ff7a4c15b85de98d78cc47fc6f2ff}{operator/=} (const \hyperlink{class_m_vec3}{MVec3} \&\hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v})
+\item 
+\hyperlink{class_m_vec3}{MVec3} \& \hyperlink{class_m_vec3_d688f01e40c823692a7adc0f57df47a2}{operator+=} (const \hyperlink{class_m_vec3}{MVec3} \&\hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v})
+\item 
+\hyperlink{class_m_vec3}{MVec3} \& \hyperlink{class_m_vec3_f4ae4ae49dce1fc340d4f13ca714a360}{operator-=} (const \hyperlink{class_m_vec3}{MVec3} \&\hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v})
+\item 
+\hyperlink{class_m_vec3_51778c9e74564580936411dbef21c011}{operator float $\ast$} ()
+\item 
+\hyperlink{class_m_vec3_d8f0366391c63237816895f9892c9f29}{operator const float $\ast$} () const 
+\item 
+void \hyperlink{class_m_vec3_6ed278b7804ea2eeb0f058a4534010e9}{Save} (\hyperlink{class_u_writer}{UWriter} \&writer) const 
+\item 
+void \hyperlink{class_m_vec3_8f6e9444531a6da0042b47780dd21cbb}{Load} (\hyperlink{class_u_reader}{UReader} \&reader)
+\end{CompactItemize}
+\subsection*{Static Public Attributes}
+\begin{CompactItemize}
+\item 
+static const float \hyperlink{class_m_vec3_fe4df239e5cc14ba66ccdc907bff32c6}{kNormalizeEpsilon} = 0.00000095367431640625f
+\item 
+static const float \hyperlink{class_m_vec3_1d3f4b88e43530acdf3733e50b858d41}{kNormalizeFastEpsilon} = 0.0009765625f
+\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_m_vec3}{MVec3} \hyperlink{class_m_vec3_768f36f4b6204f86f0581112b603ffdb}{operator$\ast$} (float, \hyperlink{class_m_vec3}{MVec3} \&\hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v})
+\item 
+\hyperlink{class_m_vec3}{MVec3} \hyperlink{class_m_vec3_c6a8f85e2fbf1a5ad503486a8598292b}{operator$\ast$} (float, const \hyperlink{class_m_vec3}{MVec3} \&\hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v})
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 21 of file MVec3.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_m_vec3_6ba0f0bb219d11a10b7b028fb45d6146}{
+\index{MVec3@{MVec3}!MVec3@{MVec3}}
+\index{MVec3@{MVec3}!MVec3@{MVec3}}
+\subsubsection[{MVec3}]{\setlength{\rightskip}{0pt plus 5cm}MVec3::MVec3 ()}}
+\label{class_m_vec3_6ba0f0bb219d11a10b7b028fb45d6146}
+
+
+
+
+Definition at line 30 of file MVec3.cpp.\hypertarget{class_m_vec3_fca7472b1db64da1af3dfc6c0397e3a7}{
+\index{MVec3@{MVec3}!MVec3@{MVec3}}
+\index{MVec3@{MVec3}!MVec3@{MVec3}}
+\subsubsection[{MVec3}]{\setlength{\rightskip}{0pt plus 5cm}MVec3::MVec3 (float {\em x}, \/  float {\em y}, \/  float {\em z})}}
+\label{class_m_vec3_fca7472b1db64da1af3dfc6c0397e3a7}
+
+
+
+
+Definition at line 40 of file MVec3.cpp.\hypertarget{class_m_vec3_b68860076beec4cccc14fd176bfac615}{
+\index{MVec3@{MVec3}!MVec3@{MVec3}}
+\index{MVec3@{MVec3}!MVec3@{MVec3}}
+\subsubsection[{MVec3}]{\setlength{\rightskip}{0pt plus 5cm}MVec3::MVec3 (const float $\ast$ {\em vec})}}
+\label{class_m_vec3_b68860076beec4cccc14fd176bfac615}
+
+
+
+
+Definition at line 50 of file MVec3.cpp.\hypertarget{class_m_vec3_acfa4e2533d822d2f8c9e3725011960a}{
+\index{MVec3@{MVec3}!MVec3@{MVec3}}
+\index{MVec3@{MVec3}!MVec3@{MVec3}}
+\subsubsection[{MVec3}]{\setlength{\rightskip}{0pt plus 5cm}MVec3::MVec3 (const {\bf MVec3} \& {\em v})}}
+\label{class_m_vec3_acfa4e2533d822d2f8c9e3725011960a}
+
+
+
+
+Definition at line 60 of file MVec3.cpp.\hypertarget{class_m_vec3_c486b557acdf616a7d95babc21a7cd89}{
+\index{MVec3@{MVec3}!$\sim$MVec3@{$\sim$MVec3}}
+\index{$\sim$MVec3@{$\sim$MVec3}!MVec3@{MVec3}}
+\subsubsection[{$\sim$MVec3}]{\setlength{\rightskip}{0pt plus 5cm}MVec3::$\sim$MVec3 ()}}
+\label{class_m_vec3_c486b557acdf616a7d95babc21a7cd89}
+
+
+
+
+Definition at line 70 of file MVec3.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_m_vec3_7a6718b309fae2ed8362a365a92f815c}{
+\index{MVec3@{MVec3}!Abs@{Abs}}
+\index{Abs@{Abs}!MVec3@{MVec3}}
+\subsubsection[{Abs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MVec3} MVec3::Abs () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_vec3_7a6718b309fae2ed8362a365a92f815c}
+
+
+
+
+Definition at line 53 of file MVec3.h.\hypertarget{class_m_vec3_cc02bb64689686727d03d6f49948cc06}{
+\index{MVec3@{MVec3}!AbsMax@{AbsMax}}
+\index{AbsMax@{AbsMax}!MVec3@{MVec3}}
+\subsubsection[{AbsMax}]{\setlength{\rightskip}{0pt plus 5cm}float MVec3::AbsMax () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_vec3_cc02bb64689686727d03d6f49948cc06}
+
+
+
+
+Definition at line 50 of file MVec3.h.\hypertarget{class_m_vec3_6bab49220a80edba7d84375688519850}{
+\index{MVec3@{MVec3}!AbsMin@{AbsMin}}
+\index{AbsMin@{AbsMin}!MVec3@{MVec3}}
+\subsubsection[{AbsMin}]{\setlength{\rightskip}{0pt plus 5cm}float MVec3::AbsMin () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_vec3_6bab49220a80edba7d84375688519850}
+
+
+
+
+Definition at line 51 of file MVec3.h.\hypertarget{class_m_vec3_a2bca5724dbee66428e3cce3d1c75070}{
+\index{MVec3@{MVec3}!AssignMax@{AssignMax}}
+\index{AssignMax@{AssignMax}!MVec3@{MVec3}}
+\subsubsection[{AssignMax}]{\setlength{\rightskip}{0pt plus 5cm}void MVec3::AssignMax (const {\bf MVec3} \& {\em v})}}
+\label{class_m_vec3_a2bca5724dbee66428e3cce3d1c75070}
+
+
+
+
+Definition at line 101 of file MVec3.cpp.\hypertarget{class_m_vec3_4b4aa3eef6d824a331b36b7f559b29ac}{
+\index{MVec3@{MVec3}!AssignMin@{AssignMin}}
+\index{AssignMin@{AssignMin}!MVec3@{MVec3}}
+\subsubsection[{AssignMin}]{\setlength{\rightskip}{0pt plus 5cm}void MVec3::AssignMin (const {\bf MVec3} \& {\em v})}}
+\label{class_m_vec3_4b4aa3eef6d824a331b36b7f559b29ac}
+
+
+
+
+Definition at line 92 of file MVec3.cpp.\hypertarget{class_m_vec3_dcd74e76cefbb1b650c5dece5f115aae}{
+\index{MVec3@{MVec3}!Cross@{Cross}}
+\index{Cross@{Cross}!MVec3@{MVec3}}
+\subsubsection[{Cross}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MVec3} MVec3::Cross (const {\bf MVec3} \& {\em v}) const}}
+\label{class_m_vec3_dcd74e76cefbb1b650c5dece5f115aae}
+
+
+
+
+Definition at line 219 of file MVec3.cpp.\hypertarget{class_m_vec3_55337896656651e4e3a8214c718e5043}{
+\index{MVec3@{MVec3}!Dist@{Dist}}
+\index{Dist@{Dist}!MVec3@{MVec3}}
+\subsubsection[{Dist}]{\setlength{\rightskip}{0pt plus 5cm}float MVec3::Dist (const {\bf MVec3} \& {\em pt}) const}}
+\label{class_m_vec3_55337896656651e4e3a8214c718e5043}
+
+
+
+
+Definition at line 188 of file MVec3.cpp.\hypertarget{class_m_vec3_71ac5757ebbfabeacbf4e8337f291d7d}{
+\index{MVec3@{MVec3}!DistSqr@{DistSqr}}
+\index{DistSqr@{DistSqr}!MVec3@{MVec3}}
+\subsubsection[{DistSqr}]{\setlength{\rightskip}{0pt plus 5cm}float MVec3::DistSqr (const {\bf MVec3} \& {\em pt}) const}}
+\label{class_m_vec3_71ac5757ebbfabeacbf4e8337f291d7d}
+
+
+
+
+Definition at line 195 of file MVec3.cpp.\hypertarget{class_m_vec3_c224832dd149a1f44add1fa271b5b909}{
+\index{MVec3@{MVec3}!Dot@{Dot}}
+\index{Dot@{Dot}!MVec3@{MVec3}}
+\subsubsection[{Dot}]{\setlength{\rightskip}{0pt plus 5cm}float MVec3::Dot (const {\bf MVec3} \& {\em v}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_vec3_c224832dd149a1f44add1fa271b5b909}
+
+
+
+
+Definition at line 71 of file MVec3.h.\hypertarget{class_m_vec3_a36437bab4444c4ae78baa21ebcea624}{
+\index{MVec3@{MVec3}!GetDataStart@{GetDataStart}}
+\index{GetDataStart@{GetDataStart}!MVec3@{MVec3}}
+\subsubsection[{GetDataStart}]{\setlength{\rightskip}{0pt plus 5cm}const float$\ast$ MVec3::GetDataStart () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_vec3_a36437bab4444c4ae78baa21ebcea624}
+
+
+
+
+Definition at line 38 of file MVec3.h.\hypertarget{class_m_vec3_a4f6338cc24ff6d594577877c261ebd8}{
+\index{MVec3@{MVec3}!GetDataStart@{GetDataStart}}
+\index{GetDataStart@{GetDataStart}!MVec3@{MVec3}}
+\subsubsection[{GetDataStart}]{\setlength{\rightskip}{0pt plus 5cm}float$\ast$ MVec3::GetDataStart ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_vec3_a4f6338cc24ff6d594577877c261ebd8}
+
+
+
+
+Definition at line 37 of file MVec3.h.\hypertarget{class_m_vec3_8b834219441d8d65b3e4df28fe03f60f}{
+\index{MVec3@{MVec3}!GetX@{GetX}}
+\index{GetX@{GetX}!MVec3@{MVec3}}
+\subsubsection[{GetX}]{\setlength{\rightskip}{0pt plus 5cm}float MVec3::GetX () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_vec3_8b834219441d8d65b3e4df28fe03f60f}
+
+
+
+
+Definition at line 40 of file MVec3.h.\hypertarget{class_m_vec3_dfadf4adb521222d91980376a7679dc8}{
+\index{MVec3@{MVec3}!GetY@{GetY}}
+\index{GetY@{GetY}!MVec3@{MVec3}}
+\subsubsection[{GetY}]{\setlength{\rightskip}{0pt plus 5cm}float MVec3::GetY () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_vec3_dfadf4adb521222d91980376a7679dc8}
+
+
+
+
+Definition at line 41 of file MVec3.h.\hypertarget{class_m_vec3_8b29390479c105bbb9926188b9742329}{
+\index{MVec3@{MVec3}!GetZ@{GetZ}}
+\index{GetZ@{GetZ}!MVec3@{MVec3}}
+\subsubsection[{GetZ}]{\setlength{\rightskip}{0pt plus 5cm}float MVec3::GetZ () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_vec3_8b29390479c105bbb9926188b9742329}
+
+
+
+
+Definition at line 42 of file MVec3.h.\hypertarget{class_m_vec3_8f6e9444531a6da0042b47780dd21cbb}{
+\index{MVec3@{MVec3}!Load@{Load}}
+\index{Load@{Load}!MVec3@{MVec3}}
+\subsubsection[{Load}]{\setlength{\rightskip}{0pt plus 5cm}void MVec3::Load ({\bf UReader} \& {\em reader})}}
+\label{class_m_vec3_8f6e9444531a6da0042b47780dd21cbb}
+
+
+
+
+Definition at line 528 of file MVec3.cpp.\hypertarget{class_m_vec3_5dfd83de3ed52ac479d69a1c8407d495}{
+\index{MVec3@{MVec3}!Mag@{Mag}}
+\index{Mag@{Mag}!MVec3@{MVec3}}
+\subsubsection[{Mag}]{\setlength{\rightskip}{0pt plus 5cm}float MVec3::Mag () const}}
+\label{class_m_vec3_5dfd83de3ed52ac479d69a1c8407d495}
+
+
+
+
+Definition at line 212 of file MVec3.cpp.\hypertarget{class_m_vec3_6deaf4608ece1b212f214a1d8d304cc7}{
+\index{MVec3@{MVec3}!MagSqr@{MagSqr}}
+\index{MagSqr@{MagSqr}!MVec3@{MVec3}}
+\subsubsection[{MagSqr}]{\setlength{\rightskip}{0pt plus 5cm}float MVec3::MagSqr () const}}
+\label{class_m_vec3_6deaf4608ece1b212f214a1d8d304cc7}
+
+
+
+
+Definition at line 205 of file MVec3.cpp.\hypertarget{class_m_vec3_c34a45816652b6f59fe6300cdc336a58}{
+\index{MVec3@{MVec3}!Max@{Max}}
+\index{Max@{Max}!MVec3@{MVec3}}
+\subsubsection[{Max}]{\setlength{\rightskip}{0pt plus 5cm}float MVec3::Max () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_vec3_c34a45816652b6f59fe6300cdc336a58}
+
+
+
+
+Definition at line 48 of file MVec3.h.\hypertarget{class_m_vec3_85c543975270d4dc429b62edec1a853d}{
+\index{MVec3@{MVec3}!Min@{Min}}
+\index{Min@{Min}!MVec3@{MVec3}}
+\subsubsection[{Min}]{\setlength{\rightskip}{0pt plus 5cm}float MVec3::Min () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_vec3_85c543975270d4dc429b62edec1a853d}
+
+
+
+
+Definition at line 49 of file MVec3.h.\hypertarget{class_m_vec3_a99b7529b11e93834480d70092542e24}{
+\index{MVec3@{MVec3}!Negate@{Negate}}
+\index{Negate@{Negate}!MVec3@{MVec3}}
+\subsubsection[{Negate}]{\setlength{\rightskip}{0pt plus 5cm}void MVec3::Negate ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_vec3_a99b7529b11e93834480d70092542e24}
+
+
+
+
+Definition at line 65 of file MVec3.h.\hypertarget{class_m_vec3_89f60c8001f1e04e5d17327e3b9ada63}{
+\index{MVec3@{MVec3}!Normalize@{Normalize}}
+\index{Normalize@{Normalize}!MVec3@{MVec3}}
+\subsubsection[{Normalize}]{\setlength{\rightskip}{0pt plus 5cm}void MVec3::Normalize ()}}
+\label{class_m_vec3_89f60c8001f1e04e5d17327e3b9ada63}
+
+
+
+
+Definition at line 143 of file MVec3.cpp.\hypertarget{class_m_vec3_139cf1db336ecf0ca02157f6f3605647}{
+\index{MVec3@{MVec3}!Normalized@{Normalized}}
+\index{Normalized@{Normalized}!MVec3@{MVec3}}
+\subsubsection[{Normalized}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MVec3} MVec3::Normalized () const}}
+\label{class_m_vec3_139cf1db336ecf0ca02157f6f3605647}
+
+
+
+
+Definition at line 170 of file MVec3.cpp.\hypertarget{class_m_vec3_4b2ec5935a0621b83cd7fab8187acfb2}{
+\index{MVec3@{MVec3}!NormalizedFast@{NormalizedFast}}
+\index{NormalizedFast@{NormalizedFast}!MVec3@{MVec3}}
+\subsubsection[{NormalizedFast}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MVec3} MVec3::NormalizedFast () const}}
+\label{class_m_vec3_4b2ec5935a0621b83cd7fab8187acfb2}
+
+
+
+
+Definition at line 179 of file MVec3.cpp.\hypertarget{class_m_vec3_d91e67a5315d1817256acae9fc00a849}{
+\index{MVec3@{MVec3}!NormalizeFast@{NormalizeFast}}
+\index{NormalizeFast@{NormalizeFast}!MVec3@{MVec3}}
+\subsubsection[{NormalizeFast}]{\setlength{\rightskip}{0pt plus 5cm}void MVec3::NormalizeFast ()}}
+\label{class_m_vec3_d91e67a5315d1817256acae9fc00a849}
+
+
+
+
+Definition at line 158 of file MVec3.cpp.\hypertarget{class_m_vec3_d8f0366391c63237816895f9892c9f29}{
+\index{MVec3@{MVec3}!operator const float $\ast$@{operator const float $\ast$}}
+\index{operator const float $\ast$@{operator const float $\ast$}!MVec3@{MVec3}}
+\subsubsection[{operator const float $\ast$}]{\setlength{\rightskip}{0pt plus 5cm}MVec3::operator const float $\ast$ () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_vec3_d8f0366391c63237816895f9892c9f29}
+
+
+
+
+Definition at line 94 of file MVec3.h.\hypertarget{class_m_vec3_51778c9e74564580936411dbef21c011}{
+\index{MVec3@{MVec3}!operator float $\ast$@{operator float $\ast$}}
+\index{operator float $\ast$@{operator float $\ast$}!MVec3@{MVec3}}
+\subsubsection[{operator float $\ast$}]{\setlength{\rightskip}{0pt plus 5cm}MVec3::operator float $\ast$ ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_vec3_51778c9e74564580936411dbef21c011}
+
+
+
+
+Definition at line 93 of file MVec3.h.\hypertarget{class_m_vec3_6b486d03008c43722da09d73a32e3d78}{
+\index{MVec3@{MVec3}!operator()@{operator()}}
+\index{operator()@{operator()}!MVec3@{MVec3}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}float MVec3::operator() (int {\em i}) const}}
+\label{class_m_vec3_6b486d03008c43722da09d73a32e3d78}
+
+
+
+
+Definition at line 236 of file MVec3.cpp.\hypertarget{class_m_vec3_22086d981dee89e4b05ba72e7f24d113}{
+\index{MVec3@{MVec3}!operator()@{operator()}}
+\index{operator()@{operator()}!MVec3@{MVec3}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}float \& MVec3::operator() (int {\em i})}}
+\label{class_m_vec3_22086d981dee89e4b05ba72e7f24d113}
+
+
+
+
+Definition at line 228 of file MVec3.cpp.\hypertarget{class_m_vec3_dd316d1e110036f3c227ccb56e68f491}{
+\index{MVec3@{MVec3}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!MVec3@{MVec3}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MVec3} MVec3::operator$\ast$ (const {\bf MVec3} \& {\em v}) const}}
+\label{class_m_vec3_dd316d1e110036f3c227ccb56e68f491}
+
+
+
+
+Definition at line 251 of file MVec3.cpp.\hypertarget{class_m_vec3_fe57dd320b5843747c718d28d0bb23ff}{
+\index{MVec3@{MVec3}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!MVec3@{MVec3}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MVec3} MVec3::operator$\ast$ (float {\em v}) const}}
+\label{class_m_vec3_fe57dd320b5843747c718d28d0bb23ff}
+
+
+
+
+Definition at line 244 of file MVec3.cpp.\hypertarget{class_m_vec3_94b97a8516184efd04adb35d3407c3ff}{
+\index{MVec3@{MVec3}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!MVec3@{MVec3}}
+\subsubsection[{operator$\ast$=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MVec3} \& MVec3::operator$\ast$= (float {\em scale})}}
+\label{class_m_vec3_94b97a8516184efd04adb35d3407c3ff}
+
+
+
+
+Definition at line 378 of file MVec3.cpp.\hypertarget{class_m_vec3_88ce58e51baa98ce4be1afd487bb2bda}{
+\index{MVec3@{MVec3}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!MVec3@{MVec3}}
+\subsubsection[{operator$\ast$=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MVec3} \& MVec3::operator$\ast$= (const {\bf MVec3} \& {\em v})}}
+\label{class_m_vec3_88ce58e51baa98ce4be1afd487bb2bda}
+
+
+
+
+Definition at line 354 of file MVec3.cpp.\hypertarget{class_m_vec3_1c87d4e61056e93c05a97c396b1ad121}{
+\index{MVec3@{MVec3}!operator+@{operator+}}
+\index{operator+@{operator+}!MVec3@{MVec3}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MVec3} MVec3::operator+ (const {\bf MVec3} \& {\em v}) const}}
+\label{class_m_vec3_1c87d4e61056e93c05a97c396b1ad121}
+
+
+
+
+Definition at line 299 of file MVec3.cpp.\hypertarget{class_m_vec3_d688f01e40c823692a7adc0f57df47a2}{
+\index{MVec3@{MVec3}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!MVec3@{MVec3}}
+\subsubsection[{operator+=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MVec3} \& MVec3::operator+= (const {\bf MVec3} \& {\em v})}}
+\label{class_m_vec3_d688f01e40c823692a7adc0f57df47a2}
+
+
+
+
+Definition at line 425 of file MVec3.cpp.\hypertarget{class_m_vec3_e1cbaf41190a9fb28e2d63d310f8db90}{
+\index{MVec3@{MVec3}!operator-@{operator-}}
+\index{operator-@{operator-}!MVec3@{MVec3}}
+\subsubsection[{operator-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MVec3} MVec3::operator- () const}}
+\label{class_m_vec3_e1cbaf41190a9fb28e2d63d310f8db90}
+
+
+
+
+Definition at line 323 of file MVec3.cpp.\hypertarget{class_m_vec3_364ae43af58e96a12cb1918dd440b035}{
+\index{MVec3@{MVec3}!operator-@{operator-}}
+\index{operator-@{operator-}!MVec3@{MVec3}}
+\subsubsection[{operator-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MVec3} MVec3::operator- (const {\bf MVec3} \& {\em v}) const}}
+\label{class_m_vec3_364ae43af58e96a12cb1918dd440b035}
+
+
+
+
+Definition at line 330 of file MVec3.cpp.\hypertarget{class_m_vec3_f4ae4ae49dce1fc340d4f13ca714a360}{
+\index{MVec3@{MVec3}!operator-=@{operator-=}}
+\index{operator-=@{operator-=}!MVec3@{MVec3}}
+\subsubsection[{operator-=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MVec3} \& MVec3::operator-= (const {\bf MVec3} \& {\em v})}}
+\label{class_m_vec3_f4ae4ae49dce1fc340d4f13ca714a360}
+
+
+
+
+Definition at line 449 of file MVec3.cpp.\hypertarget{class_m_vec3_173620909fa0bb83955665d1784f8861}{
+\index{MVec3@{MVec3}!operator/@{operator/}}
+\index{operator/@{operator/}!MVec3@{MVec3}}
+\subsubsection[{operator/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MVec3} MVec3::operator/ (const {\bf MVec3} \& {\em v}) const}}
+\label{class_m_vec3_173620909fa0bb83955665d1784f8861}
+
+
+
+
+Definition at line 275 of file MVec3.cpp.\hypertarget{class_m_vec3_f60ff7a4c15b85de98d78cc47fc6f2ff}{
+\index{MVec3@{MVec3}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!MVec3@{MVec3}}
+\subsubsection[{operator/=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MVec3} \& MVec3::operator/= (const {\bf MVec3} \& {\em v})}}
+\label{class_m_vec3_f60ff7a4c15b85de98d78cc47fc6f2ff}
+
+
+
+
+Definition at line 401 of file MVec3.cpp.\hypertarget{class_m_vec3_8d03c2d18357d0701f0f626d9db001cd}{
+\index{MVec3@{MVec3}!operator=@{operator=}}
+\index{operator=@{operator=}!MVec3@{MVec3}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MVec3} \& MVec3::operator= (const {\bf MVec3} \& {\em v})}}
+\label{class_m_vec3_8d03c2d18357d0701f0f626d9db001cd}
+
+
+
+
+Definition at line 82 of file MVec3.cpp.\hypertarget{class_m_vec3_8aa706611d3bd87a40fbf85d51a459fd}{
+\index{MVec3@{MVec3}!Orthogonalize@{Orthogonalize}}
+\index{Orthogonalize@{Orthogonalize}!MVec3@{MVec3}}
+\subsubsection[{Orthogonalize}]{\setlength{\rightskip}{0pt plus 5cm}void MVec3::Orthogonalize (const {\bf MVec3} \& {\em base})}}
+\label{class_m_vec3_8aa706611d3bd87a40fbf85d51a459fd}
+
+
+
+
+Definition at line 110 of file MVec3.cpp.\hypertarget{class_m_vec3_d784fa93a877a935c5fdf37f9cd7a505}{
+\index{MVec3@{MVec3}!Orthogonalized@{Orthogonalized}}
+\index{Orthogonalized@{Orthogonalized}!MVec3@{MVec3}}
+\subsubsection[{Orthogonalized}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MVec3} MVec3::Orthogonalized (const {\bf MVec3} \& {\em base})}}
+\label{class_m_vec3_d784fa93a877a935c5fdf37f9cd7a505}
+
+
+
+
+Definition at line 118 of file MVec3.cpp.\hypertarget{class_m_vec3_65c10253d74af1520788361ca191cd50}{
+\index{MVec3@{MVec3}!Orthonormalize@{Orthonormalize}}
+\index{Orthonormalize@{Orthonormalize}!MVec3@{MVec3}}
+\subsubsection[{Orthonormalize}]{\setlength{\rightskip}{0pt plus 5cm}void MVec3::Orthonormalize (const {\bf MVec3} \& {\em base})}}
+\label{class_m_vec3_65c10253d74af1520788361ca191cd50}
+
+
+
+
+Definition at line 126 of file MVec3.cpp.\hypertarget{class_m_vec3_90de66244ee48f99a07924deb28a9d35}{
+\index{MVec3@{MVec3}!Orthonormalized@{Orthonormalized}}
+\index{Orthonormalized@{Orthonormalized}!MVec3@{MVec3}}
+\subsubsection[{Orthonormalized}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MVec3} MVec3::Orthonormalized (const {\bf MVec3} \& {\em base})}}
+\label{class_m_vec3_90de66244ee48f99a07924deb28a9d35}
+
+
+
+
+Definition at line 134 of file MVec3.cpp.\hypertarget{class_m_vec3_6ed278b7804ea2eeb0f058a4534010e9}{
+\index{MVec3@{MVec3}!Save@{Save}}
+\index{Save@{Save}!MVec3@{MVec3}}
+\subsubsection[{Save}]{\setlength{\rightskip}{0pt plus 5cm}void MVec3::Save ({\bf UWriter} \& {\em writer}) const}}
+\label{class_m_vec3_6ed278b7804ea2eeb0f058a4534010e9}
+
+
+
+
+Definition at line 519 of file MVec3.cpp.\hypertarget{class_m_vec3_7ab6073bcf8afbcf630ad8f2ae8992b8}{
+\index{MVec3@{MVec3}!SetX@{SetX}}
+\index{SetX@{SetX}!MVec3@{MVec3}}
+\subsubsection[{SetX}]{\setlength{\rightskip}{0pt plus 5cm}void MVec3::SetX (float {\em x})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_vec3_7ab6073bcf8afbcf630ad8f2ae8992b8}
+
+
+
+
+Definition at line 44 of file MVec3.h.\hypertarget{class_m_vec3_128947a1f8cbc74a87b3b66454dfbb86}{
+\index{MVec3@{MVec3}!SetY@{SetY}}
+\index{SetY@{SetY}!MVec3@{MVec3}}
+\subsubsection[{SetY}]{\setlength{\rightskip}{0pt plus 5cm}void MVec3::SetY (float {\em y})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_vec3_128947a1f8cbc74a87b3b66454dfbb86}
+
+
+
+
+Definition at line 45 of file MVec3.h.\hypertarget{class_m_vec3_bf45cf723890eedc23d0aa9eaf4a578a}{
+\index{MVec3@{MVec3}!SetZ@{SetZ}}
+\index{SetZ@{SetZ}!MVec3@{MVec3}}
+\subsubsection[{SetZ}]{\setlength{\rightskip}{0pt plus 5cm}void MVec3::SetZ (float {\em z})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_vec3_bf45cf723890eedc23d0aa9eaf4a578a}
+
+
+
+
+Definition at line 46 of file MVec3.h.
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_m_vec3_c6a8f85e2fbf1a5ad503486a8598292b}{
+\index{MVec3@{MVec3}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!MVec3@{MVec3}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MVec3} operator$\ast$ (float, \/  const {\bf MVec3} \& {\em v})\hspace{0.3cm}{\tt  \mbox{[}friend\mbox{]}}}}
+\label{class_m_vec3_c6a8f85e2fbf1a5ad503486a8598292b}
+
+
+
+
+Definition at line 496 of file MVec3.cpp.\hypertarget{class_m_vec3_768f36f4b6204f86f0581112b603ffdb}{
+\index{MVec3@{MVec3}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!MVec3@{MVec3}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MVec3} operator$\ast$ (float, \/  {\bf MVec3} \& {\em v})\hspace{0.3cm}{\tt  \mbox{[}friend\mbox{]}}}}
+\label{class_m_vec3_768f36f4b6204f86f0581112b603ffdb}
+
+
+
+
+Definition at line 473 of file MVec3.cpp.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_m_vec3_fe4df239e5cc14ba66ccdc907bff32c6}{
+\index{MVec3@{MVec3}!kNormalizeEpsilon@{kNormalizeEpsilon}}
+\index{kNormalizeEpsilon@{kNormalizeEpsilon}!MVec3@{MVec3}}
+\subsubsection[{kNormalizeEpsilon}]{\setlength{\rightskip}{0pt plus 5cm}const float {\bf MVec3::kNormalizeEpsilon} = 0.00000095367431640625f\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_m_vec3_fe4df239e5cc14ba66ccdc907bff32c6}
+
+
+
+
+Definition at line 24 of file MVec3.h.\hypertarget{class_m_vec3_1d3f4b88e43530acdf3733e50b858d41}{
+\index{MVec3@{MVec3}!kNormalizeFastEpsilon@{kNormalizeFastEpsilon}}
+\index{kNormalizeFastEpsilon@{kNormalizeFastEpsilon}!MVec3@{MVec3}}
+\subsubsection[{kNormalizeFastEpsilon}]{\setlength{\rightskip}{0pt plus 5cm}const float {\bf MVec3::kNormalizeFastEpsilon} = 0.0009765625f\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_m_vec3_1d3f4b88e43530acdf3733e50b858d41}
+
+
+
+
+Definition at line 25 of file MVec3.h.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_m_vec3_8h}{MVec3.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_m_vec3_8cpp}{MVec3.cpp}\end{CompactItemize}

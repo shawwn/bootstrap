@@ -1,0 +1,107 @@
+\hypertarget{class_r_rsrc_mgr}{
+\section{RRsrcMgr Class Reference}
+\label{class_r_rsrc_mgr}\index{RRsrcMgr@{RRsrcMgr}}
+}
+{\tt \#include $<$RRsrcMgr.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef bool($\ast$ \hyperlink{class_r_rsrc_mgr_359896706d65e8e2e2ced96dc0d49e56}{Parser} )(const \hyperlink{struct_s_bsc_token}{SBscToken} $\ast$\&curTok, const \hyperlink{class_bsc_array_table}{BscArrayTable} \&arrayTable, const \hyperlink{class_bsc_var_table}{BscVarTable} \&varTable, \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&errors)
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_r_rsrc_mgr_acd157e562874bb99560a186389a7462}{RRsrcMgr} ()
+\item 
+\hyperlink{class_r_rsrc_mgr_2c82af2b8c9a9aebd2ac10867e37df60}{$\sim$RRsrcMgr} ()
+\item 
+void \hyperlink{class_r_rsrc_mgr_6f9573818e19ea3c0510e7e29750968a}{RegisterScriptParser} (const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&keyword, \hyperlink{class_r_rsrc_mgr_359896706d65e8e2e2ced96dc0d49e56}{Parser} parser)
+\item 
+bool \hyperlink{class_r_rsrc_mgr_bb72c237e1e5983a8e9b440849f4b66f}{LoadScript} (const \hyperlink{class_u_path}{UPath} \&fileName, const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&defKeyword, \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&errors)
+\item 
+const \hyperlink{class_u_path}{UPath} \& \hyperlink{class_r_rsrc_mgr_a85d4b83e5e1fdbd0ced9f1299e93cdc}{GetRecentScriptName} () const 
+\item 
+{\footnotesize template$<$typename \_\-T $>$ }\\\hyperlink{class_u_ref}{URef}$<$ \_\-T $>$ \hyperlink{class_r_rsrc_mgr_90e9653a560fc78a64f5799a420c155f}{Find} (const \hyperlink{class_u_path}{UPath} \&fileName)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 33 of file RRsrcMgr.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_r_rsrc_mgr_359896706d65e8e2e2ced96dc0d49e56}{
+\index{RRsrcMgr@{RRsrcMgr}!Parser@{Parser}}
+\index{Parser@{Parser}!RRsrcMgr@{RRsrcMgr}}
+\subsubsection[{Parser}]{\setlength{\rightskip}{0pt plus 5cm}typedef bool( $\ast$ {\bf RRsrcMgr::Parser})(const {\bf SBscToken} $\ast$\&curTok, const {\bf BscArrayTable} \&arrayTable, const {\bf BscVarTable} \&varTable, {\bf tstring} \&errors)}}
+\label{class_r_rsrc_mgr_359896706d65e8e2e2ced96dc0d49e56}
+
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_r_rsrc_mgr_acd157e562874bb99560a186389a7462}{
+\index{RRsrcMgr@{RRsrcMgr}!RRsrcMgr@{RRsrcMgr}}
+\index{RRsrcMgr@{RRsrcMgr}!RRsrcMgr@{RRsrcMgr}}
+\subsubsection[{RRsrcMgr}]{\setlength{\rightskip}{0pt plus 5cm}RRsrcMgr::RRsrcMgr ()}}
+\label{class_r_rsrc_mgr_acd157e562874bb99560a186389a7462}
+
+
+
+
+Definition at line 42 of file RRsrcMgr.cpp.\hypertarget{class_r_rsrc_mgr_2c82af2b8c9a9aebd2ac10867e37df60}{
+\index{RRsrcMgr@{RRsrcMgr}!$\sim$RRsrcMgr@{$\sim$RRsrcMgr}}
+\index{$\sim$RRsrcMgr@{$\sim$RRsrcMgr}!RRsrcMgr@{RRsrcMgr}}
+\subsubsection[{$\sim$RRsrcMgr}]{\setlength{\rightskip}{0pt plus 5cm}RRsrcMgr::$\sim$RRsrcMgr ()}}
+\label{class_r_rsrc_mgr_2c82af2b8c9a9aebd2ac10867e37df60}
+
+
+
+
+Definition at line 54 of file RRsrcMgr.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_r_rsrc_mgr_90e9653a560fc78a64f5799a420c155f}{
+\index{RRsrcMgr@{RRsrcMgr}!Find@{Find}}
+\index{Find@{Find}!RRsrcMgr@{RRsrcMgr}}
+\subsubsection[{Find}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-T $>$ {\bf URef}$<$ \_\-T $>$ RRsrcMgr::Find (const {\bf UPath} \& {\em fileName})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_r_rsrc_mgr_90e9653a560fc78a64f5799a420c155f}
+
+
+
+
+Definition at line 83 of file RRsrcMgr.h.\hypertarget{class_r_rsrc_mgr_a85d4b83e5e1fdbd0ced9f1299e93cdc}{
+\index{RRsrcMgr@{RRsrcMgr}!GetRecentScriptName@{GetRecentScriptName}}
+\index{GetRecentScriptName@{GetRecentScriptName}!RRsrcMgr@{RRsrcMgr}}
+\subsubsection[{GetRecentScriptName}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf UPath}\& RRsrcMgr::GetRecentScriptName () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_r_rsrc_mgr_a85d4b83e5e1fdbd0ced9f1299e93cdc}
+
+
+
+
+Definition at line 53 of file RRsrcMgr.h.\hypertarget{class_r_rsrc_mgr_bb72c237e1e5983a8e9b440849f4b66f}{
+\index{RRsrcMgr@{RRsrcMgr}!LoadScript@{LoadScript}}
+\index{LoadScript@{LoadScript}!RRsrcMgr@{RRsrcMgr}}
+\subsubsection[{LoadScript}]{\setlength{\rightskip}{0pt plus 5cm}bool RRsrcMgr::LoadScript (const {\bf UPath} \& {\em fileName}, \/  const {\bf tstring} \& {\em defKeyword}, \/  {\bf tstring} \& {\em errors})}}
+\label{class_r_rsrc_mgr_bb72c237e1e5983a8e9b440849f4b66f}
+
+
+
+
+Definition at line 75 of file RRsrcMgr.cpp.\hypertarget{class_r_rsrc_mgr_6f9573818e19ea3c0510e7e29750968a}{
+\index{RRsrcMgr@{RRsrcMgr}!RegisterScriptParser@{RegisterScriptParser}}
+\index{RegisterScriptParser@{RegisterScriptParser}!RRsrcMgr@{RRsrcMgr}}
+\subsubsection[{RegisterScriptParser}]{\setlength{\rightskip}{0pt plus 5cm}void RRsrcMgr::RegisterScriptParser (const {\bf tstring} \& {\em keyword}, \/  {\bf Parser} {\em parser})}}
+\label{class_r_rsrc_mgr_6f9573818e19ea3c0510e7e29750968a}
+
+
+
+
+Definition at line 66 of file RRsrcMgr.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_r_rsrc_mgr_8h}{RRsrcMgr.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_r_rsrc_mgr_8cpp}{RRsrcMgr.cpp}\end{CompactItemize}

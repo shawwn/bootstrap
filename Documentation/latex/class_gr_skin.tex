@@ -1,0 +1,219 @@
+\hypertarget{class_gr_skin}{
+\section{GrSkin Class Reference}
+\label{class_gr_skin}\index{GrSkin@{GrSkin}}
+}
+{\tt \#include $<$GrSkin.h$>$}
+
+Inheritance diagram for GrSkin::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_gr_skin}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_skin_a262f1da9afc382b7ce617ed6aaea61d}{GrSkin} (\hyperlink{class_u_reader}{UReader} \&reader)
+\item 
+\hyperlink{class_gr_skin_587b2544a711c849a438fda54e6f7b54}{GrSkin} (const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, \hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_mesh}{GrMesh} $>$ bindMesh, const \hyperlink{struct_s_vec3}{SVec3} $\ast$vertexWeights, const unsigned int $\ast$vertexBoneIds, const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} $\ast$boneNames, const \hyperlink{class_m_mat4x4}{MMat4x4} $\ast$invBindMatrices, unsigned int boneCount)
+\item 
+\hyperlink{class_gr_skin_749fafea18281ab2f4d81bd3ce5a2771}{$\sim$GrSkin} ()
+\item 
+const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \& \hyperlink{class_gr_skin_ec9baeb9cbd26de5ab8747c8c81a7ff6}{GetName} () const 
+\item 
+\hyperlink{class_gr_skin}{GrSkin} $\ast$ \hyperlink{class_gr_skin_e800b5edb89326aa2a88dca02719d2a0}{Clone} (const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name})
+\item 
+\hyperlink{class_gr_skin}{GrSkin} $\ast$ \hyperlink{class_gr_skin_871be992c64f440b7281cc5792221477}{CloneRange} (const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, \hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_mesh}{GrMesh} $>$ bindMesh, unsigned int vertexStart, unsigned int vertexCount)
+\item 
+unsigned int \hyperlink{class_gr_skin_d30c05bc779eff721c1b9b269e3d28b8}{GetBoneCount} () const 
+\item 
+unsigned int \hyperlink{class_gr_skin_f383388a947be2484c6d5417b8f41475}{GetBoneId} (const char $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}) const 
+\item 
+const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \& \hyperlink{class_gr_skin_b5ddb23b555eb380c4e40ad57fd89ee8}{GetBoneName} (unsigned int \hyperlink{glext__bak_8h_58c2a664503e14ffb8f21012aabff3e9}{id}) const 
+\item 
+const \hyperlink{class_m_mat4x4}{MMat4x4} \& \hyperlink{class_gr_skin_028df15246d94a33ec7fac21d8bfb126}{GetInvBindMatrix} (unsigned int \hyperlink{glext__bak_8h_58c2a664503e14ffb8f21012aabff3e9}{id}) const 
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_mesh}{GrMesh} $>$ \hyperlink{class_gr_skin_b914ebe591236b914e3f1bc6ebdb9cd4}{GetBindMesh} () const 
+\item 
+const \hyperlink{struct_s_vec3}{SVec3} $\ast$ \hyperlink{class_gr_skin_abc63a0ed0091701f1cb8ceea66bbd11}{GetVertexWeights} () const 
+\item 
+const unsigned int $\ast$ \hyperlink{class_gr_skin_5ca027b19b338d5b1357686497d780a0}{GetVertexBoneIds} () const 
+\item 
+void \hyperlink{class_gr_skin_ffef9a16b667c75cf91f2b3850b1421a}{ReplaceVertexSkinData} (\hyperlink{struct_s_vec3}{SVec3} $\ast$newWeights, unsigned int $\ast$newBoneIds)
+\item 
+void \hyperlink{class_gr_skin_9f7c0397243a62abb74590a6fa0d6bc0}{RemapVertexSkinData} (unsigned short $\ast$remapping, unsigned int newCount, unsigned int prevCount)
+\item 
+void \hyperlink{class_gr_skin_4aa56f5dcc36289d344a2e2dc9ee98e8}{Save} (\hyperlink{class_u_writer}{UWriter} \&writer) const 
+\item 
+void \hyperlink{class_gr_skin_317090211672b8425cd5b1494eabffdd}{Load} (\hyperlink{class_u_reader}{UReader} \&reader)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 26 of file GrSkin.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_skin_a262f1da9afc382b7ce617ed6aaea61d}{
+\index{GrSkin@{GrSkin}!GrSkin@{GrSkin}}
+\index{GrSkin@{GrSkin}!GrSkin@{GrSkin}}
+\subsubsection[{GrSkin}]{\setlength{\rightskip}{0pt plus 5cm}GrSkin::GrSkin ({\bf UReader} \& {\em reader})}}
+\label{class_gr_skin_a262f1da9afc382b7ce617ed6aaea61d}
+
+
+
+
+Definition at line 29 of file GrSkin.cpp.\hypertarget{class_gr_skin_587b2544a711c849a438fda54e6f7b54}{
+\index{GrSkin@{GrSkin}!GrSkin@{GrSkin}}
+\index{GrSkin@{GrSkin}!GrSkin@{GrSkin}}
+\subsubsection[{GrSkin}]{\setlength{\rightskip}{0pt plus 5cm}GrSkin::GrSkin (const {\bf tstring} \& {\em name}, \/  {\bf URef}$<$ {\bf GrMesh} $>$ {\em bindMesh}, \/  const {\bf SVec3} $\ast$ {\em vertexWeights}, \/  const unsigned int $\ast$ {\em vertexBoneIds}, \/  const {\bf tstring} $\ast$ {\em boneNames}, \/  const {\bf MMat4x4} $\ast$ {\em invBindMatrices}, \/  unsigned int {\em boneCount})}}
+\label{class_gr_skin_587b2544a711c849a438fda54e6f7b54}
+
+
+
+
+Definition at line 42 of file GrSkin.cpp.\hypertarget{class_gr_skin_749fafea18281ab2f4d81bd3ce5a2771}{
+\index{GrSkin@{GrSkin}!$\sim$GrSkin@{$\sim$GrSkin}}
+\index{$\sim$GrSkin@{$\sim$GrSkin}!GrSkin@{GrSkin}}
+\subsubsection[{$\sim$GrSkin}]{\setlength{\rightskip}{0pt plus 5cm}GrSkin::$\sim$GrSkin ()}}
+\label{class_gr_skin_749fafea18281ab2f4d81bd3ce5a2771}
+
+
+
+
+Definition at line 66 of file GrSkin.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_skin_e800b5edb89326aa2a88dca02719d2a0}{
+\index{GrSkin@{GrSkin}!Clone@{Clone}}
+\index{Clone@{Clone}!GrSkin@{GrSkin}}
+\subsubsection[{Clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrSkin} $\ast$ GrSkin::Clone (const {\bf tstring} \& {\em name})}}
+\label{class_gr_skin_e800b5edb89326aa2a88dca02719d2a0}
+
+
+
+
+Definition at line 81 of file GrSkin.cpp.\hypertarget{class_gr_skin_871be992c64f440b7281cc5792221477}{
+\index{GrSkin@{GrSkin}!CloneRange@{CloneRange}}
+\index{CloneRange@{CloneRange}!GrSkin@{GrSkin}}
+\subsubsection[{CloneRange}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrSkin} $\ast$ GrSkin::CloneRange (const {\bf tstring} \& {\em name}, \/  {\bf URef}$<$ {\bf GrMesh} $>$ {\em bindMesh}, \/  unsigned int {\em vertexStart}, \/  unsigned int {\em vertexCount})}}
+\label{class_gr_skin_871be992c64f440b7281cc5792221477}
+
+
+
+
+Definition at line 89 of file GrSkin.cpp.\hypertarget{class_gr_skin_b914ebe591236b914e3f1bc6ebdb9cd4}{
+\index{GrSkin@{GrSkin}!GetBindMesh@{GetBindMesh}}
+\index{GetBindMesh@{GetBindMesh}!GrSkin@{GrSkin}}
+\subsubsection[{GetBindMesh}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrMesh} $>$ GrSkin::GetBindMesh () const}}
+\label{class_gr_skin_b914ebe591236b914e3f1bc6ebdb9cd4}
+
+
+
+
+Definition at line 137 of file GrSkin.cpp.\hypertarget{class_gr_skin_d30c05bc779eff721c1b9b269e3d28b8}{
+\index{GrSkin@{GrSkin}!GetBoneCount@{GetBoneCount}}
+\index{GetBoneCount@{GetBoneCount}!GrSkin@{GrSkin}}
+\subsubsection[{GetBoneCount}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrSkin::GetBoneCount () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_skin_d30c05bc779eff721c1b9b269e3d28b8}
+
+
+
+
+Definition at line 44 of file GrSkin.h.\hypertarget{class_gr_skin_f383388a947be2484c6d5417b8f41475}{
+\index{GrSkin@{GrSkin}!GetBoneId@{GetBoneId}}
+\index{GetBoneId@{GetBoneId}!GrSkin@{GrSkin}}
+\subsubsection[{GetBoneId}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrSkin::GetBoneId (const char $\ast$ {\em name}) const}}
+\label{class_gr_skin_f383388a947be2484c6d5417b8f41475}
+
+
+
+
+Definition at line 106 of file GrSkin.cpp.\hypertarget{class_gr_skin_b5ddb23b555eb380c4e40ad57fd89ee8}{
+\index{GrSkin@{GrSkin}!GetBoneName@{GetBoneName}}
+\index{GetBoneName@{GetBoneName}!GrSkin@{GrSkin}}
+\subsubsection[{GetBoneName}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf tstring} \& GrSkin::GetBoneName (unsigned int {\em id}) const}}
+\label{class_gr_skin_b5ddb23b555eb380c4e40ad57fd89ee8}
+
+
+
+
+Definition at line 121 of file GrSkin.cpp.\hypertarget{class_gr_skin_028df15246d94a33ec7fac21d8bfb126}{
+\index{GrSkin@{GrSkin}!GetInvBindMatrix@{GetInvBindMatrix}}
+\index{GetInvBindMatrix@{GetInvBindMatrix}!GrSkin@{GrSkin}}
+\subsubsection[{GetInvBindMatrix}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MMat4x4} \& GrSkin::GetInvBindMatrix (unsigned int {\em id}) const}}
+\label{class_gr_skin_028df15246d94a33ec7fac21d8bfb126}
+
+
+
+
+Definition at line 129 of file GrSkin.cpp.\hypertarget{class_gr_skin_ec9baeb9cbd26de5ab8747c8c81a7ff6}{
+\index{GrSkin@{GrSkin}!GetName@{GetName}}
+\index{GetName@{GetName}!GrSkin@{GrSkin}}
+\subsubsection[{GetName}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf tstring}\& GrSkin::GetName () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_skin_ec9baeb9cbd26de5ab8747c8c81a7ff6}
+
+
+
+
+Definition at line 34 of file GrSkin.h.\hypertarget{class_gr_skin_5ca027b19b338d5b1357686497d780a0}{
+\index{GrSkin@{GrSkin}!GetVertexBoneIds@{GetVertexBoneIds}}
+\index{GetVertexBoneIds@{GetVertexBoneIds}!GrSkin@{GrSkin}}
+\subsubsection[{GetVertexBoneIds}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int$\ast$ GrSkin::GetVertexBoneIds () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_skin_5ca027b19b338d5b1357686497d780a0}
+
+
+
+
+Definition at line 52 of file GrSkin.h.\hypertarget{class_gr_skin_abc63a0ed0091701f1cb8ceea66bbd11}{
+\index{GrSkin@{GrSkin}!GetVertexWeights@{GetVertexWeights}}
+\index{GetVertexWeights@{GetVertexWeights}!GrSkin@{GrSkin}}
+\subsubsection[{GetVertexWeights}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf SVec3}$\ast$ GrSkin::GetVertexWeights () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_skin_abc63a0ed0091701f1cb8ceea66bbd11}
+
+
+
+
+Definition at line 51 of file GrSkin.h.\hypertarget{class_gr_skin_317090211672b8425cd5b1494eabffdd}{
+\index{GrSkin@{GrSkin}!Load@{Load}}
+\index{Load@{Load}!GrSkin@{GrSkin}}
+\subsubsection[{Load}]{\setlength{\rightskip}{0pt plus 5cm}void GrSkin::Load ({\bf UReader} \& {\em reader})}}
+\label{class_gr_skin_317090211672b8425cd5b1494eabffdd}
+
+
+
+
+Definition at line 206 of file GrSkin.cpp.\hypertarget{class_gr_skin_9f7c0397243a62abb74590a6fa0d6bc0}{
+\index{GrSkin@{GrSkin}!RemapVertexSkinData@{RemapVertexSkinData}}
+\index{RemapVertexSkinData@{RemapVertexSkinData}!GrSkin@{GrSkin}}
+\subsubsection[{RemapVertexSkinData}]{\setlength{\rightskip}{0pt plus 5cm}void GrSkin::RemapVertexSkinData (unsigned short $\ast$ {\em remapping}, \/  unsigned int {\em newCount}, \/  unsigned int {\em prevCount})}}
+\label{class_gr_skin_9f7c0397243a62abb74590a6fa0d6bc0}
+
+
+
+
+Definition at line 154 of file GrSkin.cpp.\hypertarget{class_gr_skin_ffef9a16b667c75cf91f2b3850b1421a}{
+\index{GrSkin@{GrSkin}!ReplaceVertexSkinData@{ReplaceVertexSkinData}}
+\index{ReplaceVertexSkinData@{ReplaceVertexSkinData}!GrSkin@{GrSkin}}
+\subsubsection[{ReplaceVertexSkinData}]{\setlength{\rightskip}{0pt plus 5cm}void GrSkin::ReplaceVertexSkinData ({\bf SVec3} $\ast$ {\em newWeights}, \/  unsigned int $\ast$ {\em newBoneIds})}}
+\label{class_gr_skin_ffef9a16b667c75cf91f2b3850b1421a}
+
+
+
+
+Definition at line 144 of file GrSkin.cpp.\hypertarget{class_gr_skin_4aa56f5dcc36289d344a2e2dc9ee98e8}{
+\index{GrSkin@{GrSkin}!Save@{Save}}
+\index{Save@{Save}!GrSkin@{GrSkin}}
+\subsubsection[{Save}]{\setlength{\rightskip}{0pt plus 5cm}void GrSkin::Save ({\bf UWriter} \& {\em writer}) const}}
+\label{class_gr_skin_4aa56f5dcc36289d344a2e2dc9ee98e8}
+
+
+
+
+Definition at line 174 of file GrSkin.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_skin_8h}{GrSkin.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_skin_8cpp}{GrSkin.cpp}\end{CompactItemize}

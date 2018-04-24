@@ -1,0 +1,418 @@
+\hypertarget{_u_t_message_8cpp}{
+\section{C:/Bootstrap/ProjectBX/Engine/UberTexture/UTMessage.cpp File Reference}
+\label{_u_t_message_8cpp}\index{C:/Bootstrap/ProjectBX/Engine/UberTexture/UTMessage.cpp@{C:/Bootstrap/ProjectBX/Engine/UberTexture/UTMessage.cpp}}
+}
+{\tt \#include \char`\"{}UTMessage.h\char`\"{}}\par
+{\tt \#include \char`\"{}UTConfig.h\char`\"{}}\par
+{\tt \#include \char`\"{}common\_\-afx.h\char`\"{}}\par
+{\tt \#include \char`\"{}zlib.h\char`\"{}}\par
+{\tt \#include $<$winsock.h$>$}\par
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \hyperlink{_u_t_message_8cpp_2e556da445da7c08da4d71c571f12cd5}{ZLIB\_\-COMPRESSION}~0
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+int \hyperlink{_u_t_message_8cpp_71aad0663138cdc7b7b2dd14d8c0d8e3}{UTMessageSend} (\hyperlink{_u_t_net_utils_8h_7d68bb01e985882c1c12dbc3b0468c9a}{SOCKET} socket, \hyperlink{struct_u_t__message__t}{UT\_\-message\_\-t} $\ast$message, SendProc sendProc)
+\item 
+int \hyperlink{_u_t_message_8cpp_477dd4cbc6e63296e6a09c04b3468ee0}{UTMessageRecv} (\hyperlink{struct_u_t__message__t}{UT\_\-message\_\-t} $\ast$message, \hyperlink{_u_t_net_utils_8h_7d68bb01e985882c1c12dbc3b0468c9a}{SOCKET} socket, RecvProc recvProc, IoctlProc ioctlProc)
+\item 
+void \hyperlink{_u_t_message_8cpp_74f8ffbb230249eb4f76da11f4156ea2}{UTMessageInit} (\hyperlink{struct_u_t__message__t}{UT\_\-message\_\-t} $\ast$message)
+\item 
+bool \hyperlink{_u_t_message_8cpp_d2aa0c726f8dd1c3663217b8e3614095}{UTMessageReady} (const \hyperlink{struct_u_t__message__t}{UT\_\-message\_\-t} $\ast$message)
+\item 
+bool \hyperlink{_u_t_message_8cpp_4ddc6bd9e9359163ab940112df6d8069}{UTMessageEmpty} (const \hyperlink{struct_u_t__message__t}{UT\_\-message\_\-t} $\ast$message)
+\item 
+unsigned int \hyperlink{_u_t_message_8cpp_def37c83955becc20e7f01cdbc2cedf7}{UTMessageSize} (const \hyperlink{struct_u_t__message__t}{UT\_\-message\_\-t} $\ast$message)
+\item 
+bool \hyperlink{_u_t_message_8cpp_1b1444c166294d8950d97c475c78182c}{UTMessageReadBegin} (\hyperlink{struct_u_t__message__t}{UT\_\-message\_\-t} $\ast$message)
+\item 
+void \hyperlink{_u_t_message_8cpp_09acfcce3f92c672b34f471334db67b9}{UTMessageReadEnd} (\hyperlink{struct_u_t__message__t}{UT\_\-message\_\-t} $\ast$message)
+\item 
+bool \hyperlink{_u_t_message_8cpp_bddd184758a936ad09097abc3c82ff35}{UTMessageReadShort} (short $\ast$\hyperlink{glext__bak_8h_6a4f8a1a444e9080b297963b3db29fe0}{value}, \hyperlink{struct_u_t__message__t}{UT\_\-message\_\-t} $\ast$message)
+\item 
+bool \hyperlink{_u_t_message_8cpp_67c1c089ffe448d96ebbe19818ec211c}{UTMessageReadInt} (int $\ast$\hyperlink{glext__bak_8h_6a4f8a1a444e9080b297963b3db29fe0}{value}, \hyperlink{struct_u_t__message__t}{UT\_\-message\_\-t} $\ast$message)
+\item 
+bool \hyperlink{_u_t_message_8cpp_2159c5679d4099463c70bda797cf2489}{UTMessageReadUInt} (unsigned int $\ast$\hyperlink{glext__bak_8h_6a4f8a1a444e9080b297963b3db29fe0}{value}, \hyperlink{struct_u_t__message__t}{UT\_\-message\_\-t} $\ast$message)
+\item 
+bool \hyperlink{_u_t_message_8cpp_ededeb2d565da3d65bcde0b728c152f4}{UTMessageReadStr} (char $\ast$\hyperlink{glext__bak_8h_c4fdb15bdbcd63430bab668b5419ed9f}{buffer}, int bufLen, \hyperlink{struct_u_t__message__t}{UT\_\-message\_\-t} $\ast$message)
+\item 
+bool \hyperlink{_u_t_message_8cpp_2308edc7db8f4d6a9974325606037ab9}{UTMessageDecompressData} (void $\ast$\hyperlink{glext__bak_8h_c4fdb15bdbcd63430bab668b5419ed9f}{buffer}, int bufLen, \hyperlink{struct_u_t__message__t}{UT\_\-message\_\-t} $\ast$message)
+\item 
+char $\ast$ \hyperlink{_u_t_message_8cpp_07e6e0efa8e00f22b69b31b2cf2eb200}{UTMessageGetData} (\hyperlink{struct_u_t__message__t}{UT\_\-message\_\-t} $\ast$message, int \hyperlink{glext__bak_8h_3d1e3edfcf61ca2d831883e1afbad89e}{size})
+\item 
+bool \hyperlink{_u_t_message_8cpp_19ad433db93966dce8f32c8dbb3ef5b2}{UTMessageWriteBegin} (\hyperlink{struct_u_t__message__t}{UT\_\-message\_\-t} $\ast$message, int code, unsigned int transactionId)
+\item 
+void \hyperlink{_u_t_message_8cpp_d3220825228d86a77e28ce301ae06fb4}{UTMessageWriteEnd} (\hyperlink{struct_u_t__message__t}{UT\_\-message\_\-t} $\ast$message)
+\item 
+bool \hyperlink{_u_t_message_8cpp_8dbe19c60d46580b7c82086846688b56}{UTMessageWriteShort} (\hyperlink{struct_u_t__message__t}{UT\_\-message\_\-t} $\ast$message, short \hyperlink{glext__bak_8h_6a4f8a1a444e9080b297963b3db29fe0}{value})
+\item 
+bool \hyperlink{_u_t_message_8cpp_75e8205f3f56543302d2438d373062e0}{UTMessageWriteInt} (\hyperlink{struct_u_t__message__t}{UT\_\-message\_\-t} $\ast$message, int \hyperlink{glext__bak_8h_6a4f8a1a444e9080b297963b3db29fe0}{value})
+\item 
+bool \hyperlink{_u_t_message_8cpp_34f3ddf77dc0c5c17f182518f5fb264a}{UTMessageWriteUInt} (\hyperlink{struct_u_t__message__t}{UT\_\-message\_\-t} $\ast$message, unsigned int \hyperlink{glext__bak_8h_6a4f8a1a444e9080b297963b3db29fe0}{value})
+\item 
+bool \hyperlink{_u_t_message_8cpp_6f21d9d4d6f5d7400184d308c47b5650}{UTMessageWriteStr} (\hyperlink{struct_u_t__message__t}{UT\_\-message\_\-t} $\ast$message, const char $\ast$str)
+\item 
+bool \hyperlink{_u_t_message_8cpp_d1d1ddb03cb96893b8f156a7a27e2932}{UTMessageWriteBytes} (\hyperlink{struct_u_t__message__t}{UT\_\-message\_\-t} $\ast$message, const void $\ast$\hyperlink{glext__bak_8h_69926c009f2d52c6b6d2c76784af8c64}{data}, size\_\-t \hyperlink{_u_t_message_8h_2ba89f9e8d669bfad57028ce780865cd}{len})
+\item 
+bool \hyperlink{_u_t_message_8cpp_802fd109116c888eeb6bbf13785b4e8d}{UTMessageCompressData} (\hyperlink{struct_u_t__message__t}{UT\_\-message\_\-t} $\ast$message, const void $\ast$\hyperlink{glext__bak_8h_72e0fdf0f845ded60b1fada9e9195cd7}{src}, int srcSize)
+\item 
+char $\ast$ \hyperlink{_u_t_message_8cpp_c17b0dffe590a029a0259df76a3dfdf7}{UTMessageReserveData} (\hyperlink{struct_u_t__message__t}{UT\_\-message\_\-t} $\ast$message, int \hyperlink{glext__bak_8h_3d1e3edfcf61ca2d831883e1afbad89e}{size})
+\item 
+void \hyperlink{_u_t_message_8cpp_5f1c0ca3f9dbe7bcc7efd3654b8ede0e}{UTMessageQueueCreate} (\hyperlink{struct_u_t__message__queue__t}{UT\_\-message\_\-queue\_\-t} $\ast$queue, size\_\-t \hyperlink{glext__bak_8h_3d1e3edfcf61ca2d831883e1afbad89e}{size})
+\item 
+void \hyperlink{_u_t_message_8cpp_282a82a95060f5f3dd8e01f475fc6e47}{UTMessageQueueExpand} (\hyperlink{struct_u_t__message__queue__t}{UT\_\-message\_\-queue\_\-t} $\ast$queue, size\_\-t \hyperlink{glext__bak_8h_3d1e3edfcf61ca2d831883e1afbad89e}{size})
+\item 
+void \hyperlink{_u_t_message_8cpp_f7bb6137b53a5bec68bf52dee8227a60}{UTMessageQueueDestroy} (\hyperlink{struct_u_t__message__queue__t}{UT\_\-message\_\-queue\_\-t} $\ast$queue)
+\item 
+\hyperlink{struct_u_t__message__t}{UT\_\-message\_\-t} $\ast$ \hyperlink{_u_t_message_8cpp_ecf0860a1418000f771bfbffee277669}{UTMessageQueueAdd} (\hyperlink{struct_u_t__message__queue__t}{UT\_\-message\_\-queue\_\-t} $\ast$queue)
+\item 
+\hyperlink{struct_u_t__message__t}{UT\_\-message\_\-t} $\ast$ \hyperlink{_u_t_message_8cpp_7f198bee12a4a79d2e2142e804a7ac1d}{UTMessageQueueRemove} (\hyperlink{struct_u_t__message__queue__t}{UT\_\-message\_\-queue\_\-t} $\ast$queue)
+\item 
+\hyperlink{struct_u_t__message__t}{UT\_\-message\_\-t} $\ast$ \hyperlink{_u_t_message_8cpp_5bf4db9f53a57ece5812d81b5eb0e802}{UTMessageQueueTop} (\hyperlink{struct_u_t__message__queue__t}{UT\_\-message\_\-queue\_\-t} $\ast$queue)
+\item 
+\hyperlink{struct_u_t__message__t}{UT\_\-message\_\-t} $\ast$ \hyperlink{_u_t_message_8cpp_6c420c897f0c1aebd0db12b87ec0de2c}{UTMessageQueuePeek} (\hyperlink{struct_u_t__message__queue__t}{UT\_\-message\_\-queue\_\-t} $\ast$queue, size\_\-t message)
+\item 
+size\_\-t \hyperlink{_u_t_message_8cpp_e69bf746759c4fdcc29fd9304a9fcf94}{UTMessageQueueCount} (\hyperlink{struct_u_t__message__queue__t}{UT\_\-message\_\-queue\_\-t} $\ast$queue)
+\item 
+bool \hyperlink{_u_t_message_8cpp_374a7a8c2c123fef2ad5690e62f90ac7}{UTMessageQueueFull} (\hyperlink{struct_u_t__message__queue__t}{UT\_\-message\_\-queue\_\-t} $\ast$queue)
+\item 
+void \hyperlink{_u_t_message_8cpp_0841023f5e3686e9a0c6c6be74132ece}{UTMessageQueueClear} (\hyperlink{struct_u_t__message__queue__t}{UT\_\-message\_\-queue\_\-t} $\ast$queue)
+\item 
+int \hyperlink{_u_t_message_8cpp_2771c0b7a449b828711990f1a5609ce7}{UTMessageQueueSend} (\hyperlink{_u_t_net_utils_8h_7d68bb01e985882c1c12dbc3b0468c9a}{SOCKET} socket, \hyperlink{struct_u_t__message__queue__t}{UT\_\-message\_\-queue\_\-t} $\ast$queue, char $\ast$\hyperlink{_u_t_message_8h_e28c9430ba2b97dabdc5ca98ff772987}{buf}, size\_\-t \hyperlink{glext_8h_44d5bc016820a806cf08cf6653b58441}{bufSize}, int $\ast$bytesSent, SendProc sendProc)
+\item 
+void \hyperlink{_u_t_message_8cpp_7c20a57789a6b152ec0479249a0afaff}{UTMessageQueueRecv} (\hyperlink{struct_u_t__message__queue__t}{UT\_\-message\_\-queue\_\-t} $\ast$queue, \hyperlink{_u_t_net_utils_8h_7d68bb01e985882c1c12dbc3b0468c9a}{SOCKET} socket, int $\ast$bytesReceived, RecvProc recvProc, IoctlProc ioctlProc)
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_u_t_message_8cpp_2e556da445da7c08da4d71c571f12cd5}{
+\index{UTMessage.cpp@{UTMessage.cpp}!ZLIB\_\-COMPRESSION@{ZLIB\_\-COMPRESSION}}
+\index{ZLIB\_\-COMPRESSION@{ZLIB\_\-COMPRESSION}!UTMessage.cpp@{UTMessage.cpp}}
+\subsubsection[{ZLIB\_\-COMPRESSION}]{\setlength{\rightskip}{0pt plus 5cm}\#define ZLIB\_\-COMPRESSION~0}}
+\label{_u_t_message_8cpp_2e556da445da7c08da4d71c571f12cd5}
+
+
+
+
+Definition at line 19 of file UTMessage.cpp.
+
+\subsection{Function Documentation}
+\hypertarget{_u_t_message_8cpp_802fd109116c888eeb6bbf13785b4e8d}{
+\index{UTMessage.cpp@{UTMessage.cpp}!UTMessageCompressData@{UTMessageCompressData}}
+\index{UTMessageCompressData@{UTMessageCompressData}!UTMessage.cpp@{UTMessage.cpp}}
+\subsubsection[{UTMessageCompressData}]{\setlength{\rightskip}{0pt plus 5cm}bool UTMessageCompressData ({\bf UT\_\-message\_\-t} $\ast$ {\em message}, \/  const void $\ast$ {\em src}, \/  int {\em srcSize})}}
+\label{_u_t_message_8cpp_802fd109116c888eeb6bbf13785b4e8d}
+
+
+
+
+Definition at line 398 of file UTMessage.cpp.\hypertarget{_u_t_message_8cpp_2308edc7db8f4d6a9974325606037ab9}{
+\index{UTMessage.cpp@{UTMessage.cpp}!UTMessageDecompressData@{UTMessageDecompressData}}
+\index{UTMessageDecompressData@{UTMessageDecompressData}!UTMessage.cpp@{UTMessage.cpp}}
+\subsubsection[{UTMessageDecompressData}]{\setlength{\rightskip}{0pt plus 5cm}bool UTMessageDecompressData (void $\ast$ {\em buffer}, \/  int {\em bufLen}, \/  {\bf UT\_\-message\_\-t} $\ast$ {\em message})}}
+\label{_u_t_message_8cpp_2308edc7db8f4d6a9974325606037ab9}
+
+
+
+
+Definition at line 249 of file UTMessage.cpp.\hypertarget{_u_t_message_8cpp_4ddc6bd9e9359163ab940112df6d8069}{
+\index{UTMessage.cpp@{UTMessage.cpp}!UTMessageEmpty@{UTMessageEmpty}}
+\index{UTMessageEmpty@{UTMessageEmpty}!UTMessage.cpp@{UTMessage.cpp}}
+\subsubsection[{UTMessageEmpty}]{\setlength{\rightskip}{0pt plus 5cm}bool UTMessageEmpty (const {\bf UT\_\-message\_\-t} $\ast$ {\em message})}}
+\label{_u_t_message_8cpp_4ddc6bd9e9359163ab940112df6d8069}
+
+
+
+
+Definition at line 140 of file UTMessage.cpp.\hypertarget{_u_t_message_8cpp_07e6e0efa8e00f22b69b31b2cf2eb200}{
+\index{UTMessage.cpp@{UTMessage.cpp}!UTMessageGetData@{UTMessageGetData}}
+\index{UTMessageGetData@{UTMessageGetData}!UTMessage.cpp@{UTMessage.cpp}}
+\subsubsection[{UTMessageGetData}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ UTMessageGetData ({\bf UT\_\-message\_\-t} $\ast$ {\em message}, \/  int {\em size})}}
+\label{_u_t_message_8cpp_07e6e0efa8e00f22b69b31b2cf2eb200}
+
+
+
+
+Definition at line 272 of file UTMessage.cpp.\hypertarget{_u_t_message_8cpp_74f8ffbb230249eb4f76da11f4156ea2}{
+\index{UTMessage.cpp@{UTMessage.cpp}!UTMessageInit@{UTMessageInit}}
+\index{UTMessageInit@{UTMessageInit}!UTMessage.cpp@{UTMessage.cpp}}
+\subsubsection[{UTMessageInit}]{\setlength{\rightskip}{0pt plus 5cm}void UTMessageInit ({\bf UT\_\-message\_\-t} $\ast$ {\em message})}}
+\label{_u_t_message_8cpp_74f8ffbb230249eb4f76da11f4156ea2}
+
+
+
+
+Definition at line 124 of file UTMessage.cpp.\hypertarget{_u_t_message_8cpp_ecf0860a1418000f771bfbffee277669}{
+\index{UTMessage.cpp@{UTMessage.cpp}!UTMessageQueueAdd@{UTMessageQueueAdd}}
+\index{UTMessageQueueAdd@{UTMessageQueueAdd}!UTMessage.cpp@{UTMessage.cpp}}
+\subsubsection[{UTMessageQueueAdd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UT\_\-message\_\-t}$\ast$ UTMessageQueueAdd ({\bf UT\_\-message\_\-queue\_\-t} $\ast$ {\em queue})}}
+\label{_u_t_message_8cpp_ecf0860a1418000f771bfbffee277669}
+
+
+
+
+Definition at line 489 of file UTMessage.cpp.\hypertarget{_u_t_message_8cpp_0841023f5e3686e9a0c6c6be74132ece}{
+\index{UTMessage.cpp@{UTMessage.cpp}!UTMessageQueueClear@{UTMessageQueueClear}}
+\index{UTMessageQueueClear@{UTMessageQueueClear}!UTMessage.cpp@{UTMessage.cpp}}
+\subsubsection[{UTMessageQueueClear}]{\setlength{\rightskip}{0pt plus 5cm}void UTMessageQueueClear ({\bf UT\_\-message\_\-queue\_\-t} $\ast$ {\em queue})}}
+\label{_u_t_message_8cpp_0841023f5e3686e9a0c6c6be74132ece}
+
+
+
+
+Definition at line 556 of file UTMessage.cpp.\hypertarget{_u_t_message_8cpp_e69bf746759c4fdcc29fd9304a9fcf94}{
+\index{UTMessage.cpp@{UTMessage.cpp}!UTMessageQueueCount@{UTMessageQueueCount}}
+\index{UTMessageQueueCount@{UTMessageQueueCount}!UTMessage.cpp@{UTMessage.cpp}}
+\subsubsection[{UTMessageQueueCount}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t UTMessageQueueCount ({\bf UT\_\-message\_\-queue\_\-t} $\ast$ {\em queue})}}
+\label{_u_t_message_8cpp_e69bf746759c4fdcc29fd9304a9fcf94}
+
+
+
+
+Definition at line 542 of file UTMessage.cpp.\hypertarget{_u_t_message_8cpp_5f1c0ca3f9dbe7bcc7efd3654b8ede0e}{
+\index{UTMessage.cpp@{UTMessage.cpp}!UTMessageQueueCreate@{UTMessageQueueCreate}}
+\index{UTMessageQueueCreate@{UTMessageQueueCreate}!UTMessage.cpp@{UTMessage.cpp}}
+\subsubsection[{UTMessageQueueCreate}]{\setlength{\rightskip}{0pt plus 5cm}void UTMessageQueueCreate ({\bf UT\_\-message\_\-queue\_\-t} $\ast$ {\em queue}, \/  size\_\-t {\em size})}}
+\label{_u_t_message_8cpp_5f1c0ca3f9dbe7bcc7efd3654b8ede0e}
+
+
+
+
+Definition at line 447 of file UTMessage.cpp.\hypertarget{_u_t_message_8cpp_f7bb6137b53a5bec68bf52dee8227a60}{
+\index{UTMessage.cpp@{UTMessage.cpp}!UTMessageQueueDestroy@{UTMessageQueueDestroy}}
+\index{UTMessageQueueDestroy@{UTMessageQueueDestroy}!UTMessage.cpp@{UTMessage.cpp}}
+\subsubsection[{UTMessageQueueDestroy}]{\setlength{\rightskip}{0pt plus 5cm}void UTMessageQueueDestroy ({\bf UT\_\-message\_\-queue\_\-t} $\ast$ {\em queue})}}
+\label{_u_t_message_8cpp_f7bb6137b53a5bec68bf52dee8227a60}
+
+
+
+
+Definition at line 479 of file UTMessage.cpp.\hypertarget{_u_t_message_8cpp_282a82a95060f5f3dd8e01f475fc6e47}{
+\index{UTMessage.cpp@{UTMessage.cpp}!UTMessageQueueExpand@{UTMessageQueueExpand}}
+\index{UTMessageQueueExpand@{UTMessageQueueExpand}!UTMessage.cpp@{UTMessage.cpp}}
+\subsubsection[{UTMessageQueueExpand}]{\setlength{\rightskip}{0pt plus 5cm}void UTMessageQueueExpand ({\bf UT\_\-message\_\-queue\_\-t} $\ast$ {\em queue}, \/  size\_\-t {\em size})}}
+\label{_u_t_message_8cpp_282a82a95060f5f3dd8e01f475fc6e47}
+
+
+
+
+Definition at line 457 of file UTMessage.cpp.\hypertarget{_u_t_message_8cpp_374a7a8c2c123fef2ad5690e62f90ac7}{
+\index{UTMessage.cpp@{UTMessage.cpp}!UTMessageQueueFull@{UTMessageQueueFull}}
+\index{UTMessageQueueFull@{UTMessageQueueFull}!UTMessage.cpp@{UTMessage.cpp}}
+\subsubsection[{UTMessageQueueFull}]{\setlength{\rightskip}{0pt plus 5cm}bool UTMessageQueueFull ({\bf UT\_\-message\_\-queue\_\-t} $\ast$ {\em queue})}}
+\label{_u_t_message_8cpp_374a7a8c2c123fef2ad5690e62f90ac7}
+
+
+
+
+Definition at line 549 of file UTMessage.cpp.\hypertarget{_u_t_message_8cpp_6c420c897f0c1aebd0db12b87ec0de2c}{
+\index{UTMessage.cpp@{UTMessage.cpp}!UTMessageQueuePeek@{UTMessageQueuePeek}}
+\index{UTMessageQueuePeek@{UTMessageQueuePeek}!UTMessage.cpp@{UTMessage.cpp}}
+\subsubsection[{UTMessageQueuePeek}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UT\_\-message\_\-t}$\ast$ UTMessageQueuePeek ({\bf UT\_\-message\_\-queue\_\-t} $\ast$ {\em queue}, \/  size\_\-t {\em message})}}
+\label{_u_t_message_8cpp_6c420c897f0c1aebd0db12b87ec0de2c}
+
+
+
+
+Definition at line 531 of file UTMessage.cpp.\hypertarget{_u_t_message_8cpp_7c20a57789a6b152ec0479249a0afaff}{
+\index{UTMessage.cpp@{UTMessage.cpp}!UTMessageQueueRecv@{UTMessageQueueRecv}}
+\index{UTMessageQueueRecv@{UTMessageQueueRecv}!UTMessage.cpp@{UTMessage.cpp}}
+\subsubsection[{UTMessageQueueRecv}]{\setlength{\rightskip}{0pt plus 5cm}void UTMessageQueueRecv ({\bf UT\_\-message\_\-queue\_\-t} $\ast$ {\em queue}, \/  {\bf SOCKET} {\em socket}, \/  int $\ast$ {\em bytesReceived}, \/  RecvProc {\em recvProc}, \/  IoctlProc {\em ioctlProc})}}
+\label{_u_t_message_8cpp_7c20a57789a6b152ec0479249a0afaff}
+
+
+
+
+Definition at line 639 of file UTMessage.cpp.\hypertarget{_u_t_message_8cpp_7f198bee12a4a79d2e2142e804a7ac1d}{
+\index{UTMessage.cpp@{UTMessage.cpp}!UTMessageQueueRemove@{UTMessageQueueRemove}}
+\index{UTMessageQueueRemove@{UTMessageQueueRemove}!UTMessage.cpp@{UTMessage.cpp}}
+\subsubsection[{UTMessageQueueRemove}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UT\_\-message\_\-t} $\ast$ UTMessageQueueRemove ({\bf UT\_\-message\_\-queue\_\-t} $\ast$ {\em queue})}}
+\label{_u_t_message_8cpp_7f198bee12a4a79d2e2142e804a7ac1d}
+
+
+
+
+Definition at line 509 of file UTMessage.cpp.\hypertarget{_u_t_message_8cpp_2771c0b7a449b828711990f1a5609ce7}{
+\index{UTMessage.cpp@{UTMessage.cpp}!UTMessageQueueSend@{UTMessageQueueSend}}
+\index{UTMessageQueueSend@{UTMessageQueueSend}!UTMessage.cpp@{UTMessage.cpp}}
+\subsubsection[{UTMessageQueueSend}]{\setlength{\rightskip}{0pt plus 5cm}int UTMessageQueueSend ({\bf SOCKET} {\em socket}, \/  {\bf UT\_\-message\_\-queue\_\-t} $\ast$ {\em queue}, \/  char $\ast$ {\em buf}, \/  size\_\-t {\em bufSize}, \/  int $\ast$ {\em bytesSent}, \/  SendProc {\em sendProc})}}
+\label{_u_t_message_8cpp_2771c0b7a449b828711990f1a5609ce7}
+
+
+
+
+Definition at line 564 of file UTMessage.cpp.\hypertarget{_u_t_message_8cpp_5bf4db9f53a57ece5812d81b5eb0e802}{
+\index{UTMessage.cpp@{UTMessage.cpp}!UTMessageQueueTop@{UTMessageQueueTop}}
+\index{UTMessageQueueTop@{UTMessageQueueTop}!UTMessage.cpp@{UTMessage.cpp}}
+\subsubsection[{UTMessageQueueTop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UT\_\-message\_\-t}$\ast$ UTMessageQueueTop ({\bf UT\_\-message\_\-queue\_\-t} $\ast$ {\em queue})}}
+\label{_u_t_message_8cpp_5bf4db9f53a57ece5812d81b5eb0e802}
+
+
+
+
+Definition at line 520 of file UTMessage.cpp.\hypertarget{_u_t_message_8cpp_1b1444c166294d8950d97c475c78182c}{
+\index{UTMessage.cpp@{UTMessage.cpp}!UTMessageReadBegin@{UTMessageReadBegin}}
+\index{UTMessageReadBegin@{UTMessageReadBegin}!UTMessage.cpp@{UTMessage.cpp}}
+\subsubsection[{UTMessageReadBegin}]{\setlength{\rightskip}{0pt plus 5cm}bool UTMessageReadBegin ({\bf UT\_\-message\_\-t} $\ast$ {\em message})}}
+\label{_u_t_message_8cpp_1b1444c166294d8950d97c475c78182c}
+
+
+
+
+Definition at line 152 of file UTMessage.cpp.\hypertarget{_u_t_message_8cpp_09acfcce3f92c672b34f471334db67b9}{
+\index{UTMessage.cpp@{UTMessage.cpp}!UTMessageReadEnd@{UTMessageReadEnd}}
+\index{UTMessageReadEnd@{UTMessageReadEnd}!UTMessage.cpp@{UTMessage.cpp}}
+\subsubsection[{UTMessageReadEnd}]{\setlength{\rightskip}{0pt plus 5cm}void UTMessageReadEnd ({\bf UT\_\-message\_\-t} $\ast$ {\em message})}}
+\label{_u_t_message_8cpp_09acfcce3f92c672b34f471334db67b9}
+
+
+
+
+Definition at line 166 of file UTMessage.cpp.\hypertarget{_u_t_message_8cpp_67c1c089ffe448d96ebbe19818ec211c}{
+\index{UTMessage.cpp@{UTMessage.cpp}!UTMessageReadInt@{UTMessageReadInt}}
+\index{UTMessageReadInt@{UTMessageReadInt}!UTMessage.cpp@{UTMessage.cpp}}
+\subsubsection[{UTMessageReadInt}]{\setlength{\rightskip}{0pt plus 5cm}bool UTMessageReadInt (int $\ast$ {\em value}, \/  {\bf UT\_\-message\_\-t} $\ast$ {\em message})}}
+\label{_u_t_message_8cpp_67c1c089ffe448d96ebbe19818ec211c}
+
+
+
+
+Definition at line 188 of file UTMessage.cpp.\hypertarget{_u_t_message_8cpp_bddd184758a936ad09097abc3c82ff35}{
+\index{UTMessage.cpp@{UTMessage.cpp}!UTMessageReadShort@{UTMessageReadShort}}
+\index{UTMessageReadShort@{UTMessageReadShort}!UTMessage.cpp@{UTMessage.cpp}}
+\subsubsection[{UTMessageReadShort}]{\setlength{\rightskip}{0pt plus 5cm}bool UTMessageReadShort (short $\ast$ {\em value}, \/  {\bf UT\_\-message\_\-t} $\ast$ {\em message})}}
+\label{_u_t_message_8cpp_bddd184758a936ad09097abc3c82ff35}
+
+
+
+
+Definition at line 173 of file UTMessage.cpp.\hypertarget{_u_t_message_8cpp_ededeb2d565da3d65bcde0b728c152f4}{
+\index{UTMessage.cpp@{UTMessage.cpp}!UTMessageReadStr@{UTMessageReadStr}}
+\index{UTMessageReadStr@{UTMessageReadStr}!UTMessage.cpp@{UTMessage.cpp}}
+\subsubsection[{UTMessageReadStr}]{\setlength{\rightskip}{0pt plus 5cm}bool UTMessageReadStr (char $\ast$ {\em buffer}, \/  int {\em bufLen}, \/  {\bf UT\_\-message\_\-t} $\ast$ {\em message})}}
+\label{_u_t_message_8cpp_ededeb2d565da3d65bcde0b728c152f4}
+
+
+
+
+Definition at line 218 of file UTMessage.cpp.\hypertarget{_u_t_message_8cpp_2159c5679d4099463c70bda797cf2489}{
+\index{UTMessage.cpp@{UTMessage.cpp}!UTMessageReadUInt@{UTMessageReadUInt}}
+\index{UTMessageReadUInt@{UTMessageReadUInt}!UTMessage.cpp@{UTMessage.cpp}}
+\subsubsection[{UTMessageReadUInt}]{\setlength{\rightskip}{0pt plus 5cm}bool UTMessageReadUInt (unsigned int $\ast$ {\em value}, \/  {\bf UT\_\-message\_\-t} $\ast$ {\em message})}}
+\label{_u_t_message_8cpp_2159c5679d4099463c70bda797cf2489}
+
+
+
+
+Definition at line 203 of file UTMessage.cpp.\hypertarget{_u_t_message_8cpp_d2aa0c726f8dd1c3663217b8e3614095}{
+\index{UTMessage.cpp@{UTMessage.cpp}!UTMessageReady@{UTMessageReady}}
+\index{UTMessageReady@{UTMessageReady}!UTMessage.cpp@{UTMessage.cpp}}
+\subsubsection[{UTMessageReady}]{\setlength{\rightskip}{0pt plus 5cm}bool UTMessageReady (const {\bf UT\_\-message\_\-t} $\ast$ {\em message})}}
+\label{_u_t_message_8cpp_d2aa0c726f8dd1c3663217b8e3614095}
+
+
+
+
+Definition at line 133 of file UTMessage.cpp.\hypertarget{_u_t_message_8cpp_477dd4cbc6e63296e6a09c04b3468ee0}{
+\index{UTMessage.cpp@{UTMessage.cpp}!UTMessageRecv@{UTMessageRecv}}
+\index{UTMessageRecv@{UTMessageRecv}!UTMessage.cpp@{UTMessage.cpp}}
+\subsubsection[{UTMessageRecv}]{\setlength{\rightskip}{0pt plus 5cm}int UTMessageRecv ({\bf UT\_\-message\_\-t} $\ast$ {\em message}, \/  {\bf SOCKET} {\em socket}, \/  RecvProc {\em recvProc}, \/  IoctlProc {\em ioctlProc})}}
+\label{_u_t_message_8cpp_477dd4cbc6e63296e6a09c04b3468ee0}
+
+
+
+
+Definition at line 60 of file UTMessage.cpp.\hypertarget{_u_t_message_8cpp_c17b0dffe590a029a0259df76a3dfdf7}{
+\index{UTMessage.cpp@{UTMessage.cpp}!UTMessageReserveData@{UTMessageReserveData}}
+\index{UTMessageReserveData@{UTMessageReserveData}!UTMessage.cpp@{UTMessage.cpp}}
+\subsubsection[{UTMessageReserveData}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ UTMessageReserveData ({\bf UT\_\-message\_\-t} $\ast$ {\em message}, \/  int {\em size})}}
+\label{_u_t_message_8cpp_c17b0dffe590a029a0259df76a3dfdf7}
+
+
+
+
+Definition at line 432 of file UTMessage.cpp.\hypertarget{_u_t_message_8cpp_71aad0663138cdc7b7b2dd14d8c0d8e3}{
+\index{UTMessage.cpp@{UTMessage.cpp}!UTMessageSend@{UTMessageSend}}
+\index{UTMessageSend@{UTMessageSend}!UTMessage.cpp@{UTMessage.cpp}}
+\subsubsection[{UTMessageSend}]{\setlength{\rightskip}{0pt plus 5cm}int UTMessageSend ({\bf SOCKET} {\em socket}, \/  {\bf UT\_\-message\_\-t} $\ast$ {\em message}, \/  SendProc {\em sendProc})}}
+\label{_u_t_message_8cpp_71aad0663138cdc7b7b2dd14d8c0d8e3}
+
+
+
+
+Definition at line 27 of file UTMessage.cpp.\hypertarget{_u_t_message_8cpp_def37c83955becc20e7f01cdbc2cedf7}{
+\index{UTMessage.cpp@{UTMessage.cpp}!UTMessageSize@{UTMessageSize}}
+\index{UTMessageSize@{UTMessageSize}!UTMessage.cpp@{UTMessage.cpp}}
+\subsubsection[{UTMessageSize}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int UTMessageSize (const {\bf UT\_\-message\_\-t} $\ast$ {\em message})}}
+\label{_u_t_message_8cpp_def37c83955becc20e7f01cdbc2cedf7}
+
+
+
+
+Definition at line 146 of file UTMessage.cpp.\hypertarget{_u_t_message_8cpp_19ad433db93966dce8f32c8dbb3ef5b2}{
+\index{UTMessage.cpp@{UTMessage.cpp}!UTMessageWriteBegin@{UTMessageWriteBegin}}
+\index{UTMessageWriteBegin@{UTMessageWriteBegin}!UTMessage.cpp@{UTMessage.cpp}}
+\subsubsection[{UTMessageWriteBegin}]{\setlength{\rightskip}{0pt plus 5cm}bool UTMessageWriteBegin ({\bf UT\_\-message\_\-t} $\ast$ {\em message}, \/  int {\em code}, \/  unsigned int {\em transactionId})}}
+\label{_u_t_message_8cpp_19ad433db93966dce8f32c8dbb3ef5b2}
+
+
+
+
+Definition at line 289 of file UTMessage.cpp.\hypertarget{_u_t_message_8cpp_d1d1ddb03cb96893b8f156a7a27e2932}{
+\index{UTMessage.cpp@{UTMessage.cpp}!UTMessageWriteBytes@{UTMessageWriteBytes}}
+\index{UTMessageWriteBytes@{UTMessageWriteBytes}!UTMessage.cpp@{UTMessage.cpp}}
+\subsubsection[{UTMessageWriteBytes}]{\setlength{\rightskip}{0pt plus 5cm}bool UTMessageWriteBytes ({\bf UT\_\-message\_\-t} $\ast$ {\em message}, \/  const void $\ast$ {\em data}, \/  size\_\-t {\em len})}}
+\label{_u_t_message_8cpp_d1d1ddb03cb96893b8f156a7a27e2932}
+
+
+
+
+Definition at line 377 of file UTMessage.cpp.\hypertarget{_u_t_message_8cpp_d3220825228d86a77e28ce301ae06fb4}{
+\index{UTMessage.cpp@{UTMessage.cpp}!UTMessageWriteEnd@{UTMessageWriteEnd}}
+\index{UTMessageWriteEnd@{UTMessageWriteEnd}!UTMessage.cpp@{UTMessage.cpp}}
+\subsubsection[{UTMessageWriteEnd}]{\setlength{\rightskip}{0pt plus 5cm}void UTMessageWriteEnd ({\bf UT\_\-message\_\-t} $\ast$ {\em message})}}
+\label{_u_t_message_8cpp_d3220825228d86a77e28ce301ae06fb4}
+
+
+
+
+Definition at line 304 of file UTMessage.cpp.\hypertarget{_u_t_message_8cpp_75e8205f3f56543302d2438d373062e0}{
+\index{UTMessage.cpp@{UTMessage.cpp}!UTMessageWriteInt@{UTMessageWriteInt}}
+\index{UTMessageWriteInt@{UTMessageWriteInt}!UTMessage.cpp@{UTMessage.cpp}}
+\subsubsection[{UTMessageWriteInt}]{\setlength{\rightskip}{0pt plus 5cm}bool UTMessageWriteInt ({\bf UT\_\-message\_\-t} $\ast$ {\em message}, \/  int {\em value})}}
+\label{_u_t_message_8cpp_75e8205f3f56543302d2438d373062e0}
+
+
+
+
+Definition at line 325 of file UTMessage.cpp.\hypertarget{_u_t_message_8cpp_8dbe19c60d46580b7c82086846688b56}{
+\index{UTMessage.cpp@{UTMessage.cpp}!UTMessageWriteShort@{UTMessageWriteShort}}
+\index{UTMessageWriteShort@{UTMessageWriteShort}!UTMessage.cpp@{UTMessage.cpp}}
+\subsubsection[{UTMessageWriteShort}]{\setlength{\rightskip}{0pt plus 5cm}bool UTMessageWriteShort ({\bf UT\_\-message\_\-t} $\ast$ {\em message}, \/  short {\em value})}}
+\label{_u_t_message_8cpp_8dbe19c60d46580b7c82086846688b56}
+
+
+
+
+Definition at line 310 of file UTMessage.cpp.\hypertarget{_u_t_message_8cpp_6f21d9d4d6f5d7400184d308c47b5650}{
+\index{UTMessage.cpp@{UTMessage.cpp}!UTMessageWriteStr@{UTMessageWriteStr}}
+\index{UTMessageWriteStr@{UTMessageWriteStr}!UTMessage.cpp@{UTMessage.cpp}}
+\subsubsection[{UTMessageWriteStr}]{\setlength{\rightskip}{0pt plus 5cm}bool UTMessageWriteStr ({\bf UT\_\-message\_\-t} $\ast$ {\em message}, \/  const char $\ast$ {\em str})}}
+\label{_u_t_message_8cpp_6f21d9d4d6f5d7400184d308c47b5650}
+
+
+
+
+Definition at line 355 of file UTMessage.cpp.\hypertarget{_u_t_message_8cpp_34f3ddf77dc0c5c17f182518f5fb264a}{
+\index{UTMessage.cpp@{UTMessage.cpp}!UTMessageWriteUInt@{UTMessageWriteUInt}}
+\index{UTMessageWriteUInt@{UTMessageWriteUInt}!UTMessage.cpp@{UTMessage.cpp}}
+\subsubsection[{UTMessageWriteUInt}]{\setlength{\rightskip}{0pt plus 5cm}bool UTMessageWriteUInt ({\bf UT\_\-message\_\-t} $\ast$ {\em message}, \/  unsigned int {\em value})}}
+\label{_u_t_message_8cpp_34f3ddf77dc0c5c17f182518f5fb264a}
+
+
+
+
+Definition at line 340 of file UTMessage.cpp.

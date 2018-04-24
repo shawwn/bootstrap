@@ -1,0 +1,167 @@
+\hypertarget{class_th_ring_buffer}{
+\section{ThRingBuffer Class Reference}
+\label{class_th_ring_buffer}\index{ThRingBuffer@{ThRingBuffer}}
+}
+{\tt \#include $<$ThRingBuffer.h$>$}
+
+Inheritance diagram for ThRingBuffer::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_th_ring_buffer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_th_ring_buffer_0405ced6ef8ae7a75afd6f67688e47f3}{ThRingBuffer} (unsigned int regionSize, unsigned int regionCount, unsigned int alignment=16)
+\item 
+\hyperlink{class_th_ring_buffer_7a37bd1afc7b71c502cbea7e1b5004f3}{$\sim$ThRingBuffer} ()
+\item 
+unsigned int \hyperlink{class_th_ring_buffer_15dac6f34adbef384a16fa2f184eb372}{GetRegionSize} () const 
+\item 
+unsigned int \hyperlink{class_th_ring_buffer_9cb0a2b4b02c3c02fdb0f30386e80ef4}{GetRegionCount} () const 
+\item 
+unsigned int \hyperlink{class_th_ring_buffer_d2e1aa38203a30491e3eb2ec7eafcc4c}{GetCurrentUsage} ()
+\item 
+void $\ast$ \hyperlink{class_th_ring_buffer_6a921c362dd2cfe8173f065c884f34ac}{GetWriteRegion} (bool wait=true)
+\item 
+const void $\ast$ \hyperlink{class_th_ring_buffer_9a183e067d41605a1c376a84f4dbf4b2}{GetReadRegion} (bool wait=true)
+\item 
+void $\ast$ \hyperlink{class_th_ring_buffer_9a74853f2ccbc0d1b441efec8bb553d3}{NextWriteRegion} (bool wait=true)
+\item 
+const void $\ast$ \hyperlink{class_th_ring_buffer_fb5a911ce0ebb981ce95557101b84a83}{NextReadRegion} (bool wait=true)
+\item 
+const \hyperlink{class_th_signal}{ThSignal} \& \hyperlink{class_th_ring_buffer_97f956255ad5d7b0dad71096e7c79423}{GetReadSignal} () const 
+\item 
+const \hyperlink{class_th_signal}{ThSignal} \& \hyperlink{class_th_ring_buffer_bc8836a944eb477e1f3e7b505d589ac9}{GetWriteSignal} () const 
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 22 of file ThRingBuffer.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_th_ring_buffer_0405ced6ef8ae7a75afd6f67688e47f3}{
+\index{ThRingBuffer@{ThRingBuffer}!ThRingBuffer@{ThRingBuffer}}
+\index{ThRingBuffer@{ThRingBuffer}!ThRingBuffer@{ThRingBuffer}}
+\subsubsection[{ThRingBuffer}]{\setlength{\rightskip}{0pt plus 5cm}ThRingBuffer::ThRingBuffer (unsigned int {\em regionSize}, \/  unsigned int {\em regionCount}, \/  unsigned int {\em alignment} = {\tt 16})}}
+\label{class_th_ring_buffer_0405ced6ef8ae7a75afd6f67688e47f3}
+
+
+
+
+Definition at line 21 of file ThRingBuffer.cpp.\hypertarget{class_th_ring_buffer_7a37bd1afc7b71c502cbea7e1b5004f3}{
+\index{ThRingBuffer@{ThRingBuffer}!$\sim$ThRingBuffer@{$\sim$ThRingBuffer}}
+\index{$\sim$ThRingBuffer@{$\sim$ThRingBuffer}!ThRingBuffer@{ThRingBuffer}}
+\subsubsection[{$\sim$ThRingBuffer}]{\setlength{\rightskip}{0pt plus 5cm}ThRingBuffer::$\sim$ThRingBuffer ()}}
+\label{class_th_ring_buffer_7a37bd1afc7b71c502cbea7e1b5004f3}
+
+
+
+
+Definition at line 33 of file ThRingBuffer.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_th_ring_buffer_d2e1aa38203a30491e3eb2ec7eafcc4c}{
+\index{ThRingBuffer@{ThRingBuffer}!GetCurrentUsage@{GetCurrentUsage}}
+\index{GetCurrentUsage@{GetCurrentUsage}!ThRingBuffer@{ThRingBuffer}}
+\subsubsection[{GetCurrentUsage}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int ThRingBuffer::GetCurrentUsage ()}}
+\label{class_th_ring_buffer_d2e1aa38203a30491e3eb2ec7eafcc4c}
+
+
+
+
+Definition at line 45 of file ThRingBuffer.cpp.\hypertarget{class_th_ring_buffer_9a183e067d41605a1c376a84f4dbf4b2}{
+\index{ThRingBuffer@{ThRingBuffer}!GetReadRegion@{GetReadRegion}}
+\index{GetReadRegion@{GetReadRegion}!ThRingBuffer@{ThRingBuffer}}
+\subsubsection[{GetReadRegion}]{\setlength{\rightskip}{0pt plus 5cm}const void $\ast$ ThRingBuffer::GetReadRegion (bool {\em wait} = {\tt true})\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{class_th_ring_buffer_9a183e067d41605a1c376a84f4dbf4b2}
+
+
+
+
+Implements \hyperlink{class_th_pipe_543d5b9358cb2c06517f78d8a6d8ad17}{ThPipe}.
+
+Definition at line 72 of file ThRingBuffer.cpp.\hypertarget{class_th_ring_buffer_97f956255ad5d7b0dad71096e7c79423}{
+\index{ThRingBuffer@{ThRingBuffer}!GetReadSignal@{GetReadSignal}}
+\index{GetReadSignal@{GetReadSignal}!ThRingBuffer@{ThRingBuffer}}
+\subsubsection[{GetReadSignal}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf ThSignal}\& ThRingBuffer::GetReadSignal () const\hspace{0.3cm}{\tt  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_th_ring_buffer_97f956255ad5d7b0dad71096e7c79423}
+
+
+
+
+Implements \hyperlink{class_th_pipe_32dfa60adbe180b619ee5f99826ef39b}{ThPipe}.
+
+Definition at line 45 of file ThRingBuffer.h.\hypertarget{class_th_ring_buffer_9cb0a2b4b02c3c02fdb0f30386e80ef4}{
+\index{ThRingBuffer@{ThRingBuffer}!GetRegionCount@{GetRegionCount}}
+\index{GetRegionCount@{GetRegionCount}!ThRingBuffer@{ThRingBuffer}}
+\subsubsection[{GetRegionCount}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int ThRingBuffer::GetRegionCount () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_th_ring_buffer_9cb0a2b4b02c3c02fdb0f30386e80ef4}
+
+
+
+
+Definition at line 30 of file ThRingBuffer.h.\hypertarget{class_th_ring_buffer_15dac6f34adbef384a16fa2f184eb372}{
+\index{ThRingBuffer@{ThRingBuffer}!GetRegionSize@{GetRegionSize}}
+\index{GetRegionSize@{GetRegionSize}!ThRingBuffer@{ThRingBuffer}}
+\subsubsection[{GetRegionSize}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int ThRingBuffer::GetRegionSize () const\hspace{0.3cm}{\tt  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_th_ring_buffer_15dac6f34adbef384a16fa2f184eb372}
+
+
+
+
+Implements \hyperlink{class_th_pipe_d2327f51f3cda813c426e9291b706edc}{ThPipe}.
+
+Definition at line 29 of file ThRingBuffer.h.\hypertarget{class_th_ring_buffer_6a921c362dd2cfe8173f065c884f34ac}{
+\index{ThRingBuffer@{ThRingBuffer}!GetWriteRegion@{GetWriteRegion}}
+\index{GetWriteRegion@{GetWriteRegion}!ThRingBuffer@{ThRingBuffer}}
+\subsubsection[{GetWriteRegion}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ ThRingBuffer::GetWriteRegion (bool {\em wait} = {\tt true})\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{class_th_ring_buffer_6a921c362dd2cfe8173f065c884f34ac}
+
+
+
+
+Implements \hyperlink{class_th_pipe_1a4ac6e97ef560473d9a400b744c5ece}{ThPipe}.
+
+Definition at line 56 of file ThRingBuffer.cpp.\hypertarget{class_th_ring_buffer_bc8836a944eb477e1f3e7b505d589ac9}{
+\index{ThRingBuffer@{ThRingBuffer}!GetWriteSignal@{GetWriteSignal}}
+\index{GetWriteSignal@{GetWriteSignal}!ThRingBuffer@{ThRingBuffer}}
+\subsubsection[{GetWriteSignal}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf ThSignal}\& ThRingBuffer::GetWriteSignal () const\hspace{0.3cm}{\tt  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_th_ring_buffer_bc8836a944eb477e1f3e7b505d589ac9}
+
+
+
+
+Implements \hyperlink{class_th_pipe_ec482a45f880a2c701c13356ffa81f52}{ThPipe}.
+
+Definition at line 46 of file ThRingBuffer.h.\hypertarget{class_th_ring_buffer_fb5a911ce0ebb981ce95557101b84a83}{
+\index{ThRingBuffer@{ThRingBuffer}!NextReadRegion@{NextReadRegion}}
+\index{NextReadRegion@{NextReadRegion}!ThRingBuffer@{ThRingBuffer}}
+\subsubsection[{NextReadRegion}]{\setlength{\rightskip}{0pt plus 5cm}const void $\ast$ ThRingBuffer::NextReadRegion (bool {\em wait} = {\tt true})\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{class_th_ring_buffer_fb5a911ce0ebb981ce95557101b84a83}
+
+
+
+
+Implements \hyperlink{class_th_pipe_3b31426377c575c926d8c0973213b151}{ThPipe}.
+
+Definition at line 136 of file ThRingBuffer.cpp.\hypertarget{class_th_ring_buffer_9a74853f2ccbc0d1b441efec8bb553d3}{
+\index{ThRingBuffer@{ThRingBuffer}!NextWriteRegion@{NextWriteRegion}}
+\index{NextWriteRegion@{NextWriteRegion}!ThRingBuffer@{ThRingBuffer}}
+\subsubsection[{NextWriteRegion}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ ThRingBuffer::NextWriteRegion (bool {\em wait} = {\tt true})\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{class_th_ring_buffer_9a74853f2ccbc0d1b441efec8bb553d3}
+
+
+
+
+Implements \hyperlink{class_th_pipe_09ce5149941b4e2aa33c8b1c07ea252b}{ThPipe}.
+
+Definition at line 88 of file ThRingBuffer.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_th_ring_buffer_8h}{ThRingBuffer.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_th_ring_buffer_8cpp}{ThRingBuffer.cpp}\end{CompactItemize}

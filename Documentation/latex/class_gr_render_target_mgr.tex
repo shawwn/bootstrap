@@ -1,0 +1,265 @@
+\hypertarget{class_gr_render_target_mgr}{
+\section{GrRenderTargetMgr Class Reference}
+\label{class_gr_render_target_mgr}\index{GrRenderTargetMgr@{GrRenderTargetMgr}}
+}
+{\tt \#include $<$GrRenderTargetMgr.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+enum \hyperlink{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f6}{EFORMAT} \{ \par
+\hyperlink{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f68ade5e72370dc585b375a3e2cb3f7a9d}{EF\_\-RGB16}, 
+\hyperlink{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f6d76299796d20b7aab4ed935b86f13271}{EF\_\-RGB24}, 
+\hyperlink{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f6cc436697fc2b0b9abaaf6195a0fc3727}{EF\_\-RGBA16}, 
+\hyperlink{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f68daf6d100b1c33a7c1cbb6851e64dd2b}{EF\_\-RGBA32}, 
+\par
+\hyperlink{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f6ff4dc1c94c5f78c2a857a8a3860116ba}{EF\_\-RGB48F}, 
+\hyperlink{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f67337caa429671548b8dfeaaf770a90e7}{EF\_\-RGBA64F}, 
+\hyperlink{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f68bf48fc5dd1d228a758325704bd134bf}{EF\_\-RGBA128F}, 
+\hyperlink{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f6921d4c2f8d32dd605d25dee31fc2312d}{EF\_\-DEPTH}, 
+\par
+\hyperlink{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f6d6aefc75876632a9133c89c34a2d1d23}{EF\_\-DEPTH16}, 
+\hyperlink{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f6cc8c9a53d5f3055fc0f60c31c21c673a}{EF\_\-DEPTH24}, 
+\hyperlink{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f6441f5aba0d3c4c3996be32c216da5680}{EF\_\-DEPTHSTENCIL}, 
+\hyperlink{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f60610a6f54a0ca8c92a758f9779453d49}{EF\_\-DEPTH24STENCIL8}, 
+\par
+\hyperlink{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f67d4b0685ab48716d2321ec7258971218}{EF\_\-I8}, 
+\hyperlink{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f6c09969222a376e76623f4c8900470227}{EF\_\-COUNT}
+ \}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_render_target_mgr_5f555b4570db0e232b60580462db5344}{GrRenderTargetMgr} (unsigned int primaryWidth, unsigned int primaryHeight)
+\item 
+\hyperlink{class_gr_render_target_mgr_850e21f4c7588233f838e1132cbff3cc}{$\sim$GrRenderTargetMgr} ()
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_renderbuffer}{GrRenderbuffer} $>$ \hyperlink{class_gr_render_target_mgr_fabad7a065e67c6bd8f04e98e1501061}{CreateRenderbuffer} (unsigned int \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, unsigned int \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height}, \hyperlink{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f6}{EFORMAT} \hyperlink{glext__bak_8h_e2d3db041c6004a67047659b42f73a44}{format})
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_texture_base}{GrTextureBase} $>$ \hyperlink{class_gr_render_target_mgr_7e1d7957a2167cd17b678a44da653898}{CreateRendertexture} (unsigned int \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, unsigned int \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height}, \hyperlink{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f6}{EFORMAT} \hyperlink{glext__bak_8h_e2d3db041c6004a67047659b42f73a44}{format}, \hyperlink{class_gr_texture_base_bee6ecbc7a70ea5f2acab8341a9696b5}{GrTextureBase::Flags} \hyperlink{_u_t_message_8h_0a3c0b351ab09281b662a9ff4f900a53}{flags}, \hyperlink{class_gr_texture_base_5ce3676de03c3c565a9a0995334e5308}{GrTextureBase::ETEXTURETYPE} \hyperlink{glext__bak_8h_7d05960f4f1c1b11f3177dc963a45d86}{type})
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_render_target}{GrRenderTarget} $>$ \hyperlink{class_gr_render_target_mgr_2dc9cb29f5f88c355eaab0938c0f355d}{CreateRenderTarget} (\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_texture_base}{GrTextureBase} $>$ colorTarget)
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_render_target}{GrRenderTarget} $>$ \hyperlink{class_gr_render_target_mgr_f2943fd9b726ca96797aeb8f4cf534a7}{CreateRenderTarget} (\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_texture_base}{GrTextureBase} $>$ colorTarget, \hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_renderbuffer}{GrRenderbuffer} $>$ depthBuffer)
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_render_target}{GrRenderTarget} $>$ \hyperlink{class_gr_render_target_mgr_97ebd15d7e11c6b8cf151c96237425cd}{CreateRenderTarget} (\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_texture_base}{GrTextureBase} $>$ colorTarget, \hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_texture_base}{GrTextureBase} $>$ depthTarget)
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_render_target}{GrRenderTarget} $>$ \hyperlink{class_gr_render_target_mgr_cc419c722338e86241826a4f86ed9f96}{CreateRenderTarget} (\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_texture_base}{GrTextureBase} $>$ $\ast$colorTargets, \hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_renderbuffer}{GrRenderbuffer} $>$ depthTarget, unsigned int colorTargetCount)
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_render_target}{GrRenderTarget} $>$ \hyperlink{class_gr_render_target_mgr_b46557c99e5ac73863beeb5d3d671302}{CreateRenderTarget} (\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_renderbuffer}{GrRenderbuffer} $>$ colorBuffer, \hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_renderbuffer}{GrRenderbuffer} $>$ depthBuffer)
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_render_target}{GrRenderTarget} $>$ \hyperlink{class_gr_render_target_mgr_b48e6f9a057059671a40a6a6e09946b4}{GetPrimaryRenderTarget} ()
+\item 
+void \hyperlink{class_gr_render_target_mgr_a5f0a084c32ef56fc09838283c637cb7}{CollectGarbage} ()
+\item 
+void \hyperlink{class_gr_render_target_mgr_7cb3fe241f81eae3c989df80817ca521}{PreContextReset} ()
+\item 
+void \hyperlink{class_gr_render_target_mgr_9a98afe30d4cf8ed4387f491fa0c00a3}{PostContextReset} ()
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 28 of file GrRenderTargetMgr.h.
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f6}{
+\index{GrRenderTargetMgr@{GrRenderTargetMgr}!EFORMAT@{EFORMAT}}
+\index{EFORMAT@{EFORMAT}!GrRenderTargetMgr@{GrRenderTargetMgr}}
+\subsubsection[{EFORMAT}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GrRenderTargetMgr::EFORMAT}}}
+\label{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f6}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{EF\_\-RGB16@{EF\_\-RGB16}!GrRenderTargetMgr@{GrRenderTargetMgr}}\index{GrRenderTargetMgr@{GrRenderTargetMgr}!EF\_\-RGB16@{EF\_\-RGB16}}\item[{\em 
+\hypertarget{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f68ade5e72370dc585b375a3e2cb3f7a9d}{
+EF\_\-RGB16}
+\label{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f68ade5e72370dc585b375a3e2cb3f7a9d}
+}]\index{EF\_\-RGB24@{EF\_\-RGB24}!GrRenderTargetMgr@{GrRenderTargetMgr}}\index{GrRenderTargetMgr@{GrRenderTargetMgr}!EF\_\-RGB24@{EF\_\-RGB24}}\item[{\em 
+\hypertarget{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f6d76299796d20b7aab4ed935b86f13271}{
+EF\_\-RGB24}
+\label{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f6d76299796d20b7aab4ed935b86f13271}
+}]\index{EF\_\-RGBA16@{EF\_\-RGBA16}!GrRenderTargetMgr@{GrRenderTargetMgr}}\index{GrRenderTargetMgr@{GrRenderTargetMgr}!EF\_\-RGBA16@{EF\_\-RGBA16}}\item[{\em 
+\hypertarget{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f6cc436697fc2b0b9abaaf6195a0fc3727}{
+EF\_\-RGBA16}
+\label{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f6cc436697fc2b0b9abaaf6195a0fc3727}
+}]\index{EF\_\-RGBA32@{EF\_\-RGBA32}!GrRenderTargetMgr@{GrRenderTargetMgr}}\index{GrRenderTargetMgr@{GrRenderTargetMgr}!EF\_\-RGBA32@{EF\_\-RGBA32}}\item[{\em 
+\hypertarget{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f68daf6d100b1c33a7c1cbb6851e64dd2b}{
+EF\_\-RGBA32}
+\label{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f68daf6d100b1c33a7c1cbb6851e64dd2b}
+}]\index{EF\_\-RGB48F@{EF\_\-RGB48F}!GrRenderTargetMgr@{GrRenderTargetMgr}}\index{GrRenderTargetMgr@{GrRenderTargetMgr}!EF\_\-RGB48F@{EF\_\-RGB48F}}\item[{\em 
+\hypertarget{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f6ff4dc1c94c5f78c2a857a8a3860116ba}{
+EF\_\-RGB48F}
+\label{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f6ff4dc1c94c5f78c2a857a8a3860116ba}
+}]\index{EF\_\-RGBA64F@{EF\_\-RGBA64F}!GrRenderTargetMgr@{GrRenderTargetMgr}}\index{GrRenderTargetMgr@{GrRenderTargetMgr}!EF\_\-RGBA64F@{EF\_\-RGBA64F}}\item[{\em 
+\hypertarget{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f67337caa429671548b8dfeaaf770a90e7}{
+EF\_\-RGBA64F}
+\label{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f67337caa429671548b8dfeaaf770a90e7}
+}]\index{EF\_\-RGBA128F@{EF\_\-RGBA128F}!GrRenderTargetMgr@{GrRenderTargetMgr}}\index{GrRenderTargetMgr@{GrRenderTargetMgr}!EF\_\-RGBA128F@{EF\_\-RGBA128F}}\item[{\em 
+\hypertarget{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f68bf48fc5dd1d228a758325704bd134bf}{
+EF\_\-RGBA128F}
+\label{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f68bf48fc5dd1d228a758325704bd134bf}
+}]\index{EF\_\-DEPTH@{EF\_\-DEPTH}!GrRenderTargetMgr@{GrRenderTargetMgr}}\index{GrRenderTargetMgr@{GrRenderTargetMgr}!EF\_\-DEPTH@{EF\_\-DEPTH}}\item[{\em 
+\hypertarget{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f6921d4c2f8d32dd605d25dee31fc2312d}{
+EF\_\-DEPTH}
+\label{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f6921d4c2f8d32dd605d25dee31fc2312d}
+}]\index{EF\_\-DEPTH16@{EF\_\-DEPTH16}!GrRenderTargetMgr@{GrRenderTargetMgr}}\index{GrRenderTargetMgr@{GrRenderTargetMgr}!EF\_\-DEPTH16@{EF\_\-DEPTH16}}\item[{\em 
+\hypertarget{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f6d6aefc75876632a9133c89c34a2d1d23}{
+EF\_\-DEPTH16}
+\label{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f6d6aefc75876632a9133c89c34a2d1d23}
+}]\index{EF\_\-DEPTH24@{EF\_\-DEPTH24}!GrRenderTargetMgr@{GrRenderTargetMgr}}\index{GrRenderTargetMgr@{GrRenderTargetMgr}!EF\_\-DEPTH24@{EF\_\-DEPTH24}}\item[{\em 
+\hypertarget{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f6cc8c9a53d5f3055fc0f60c31c21c673a}{
+EF\_\-DEPTH24}
+\label{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f6cc8c9a53d5f3055fc0f60c31c21c673a}
+}]\index{EF\_\-DEPTHSTENCIL@{EF\_\-DEPTHSTENCIL}!GrRenderTargetMgr@{GrRenderTargetMgr}}\index{GrRenderTargetMgr@{GrRenderTargetMgr}!EF\_\-DEPTHSTENCIL@{EF\_\-DEPTHSTENCIL}}\item[{\em 
+\hypertarget{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f6441f5aba0d3c4c3996be32c216da5680}{
+EF\_\-DEPTHSTENCIL}
+\label{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f6441f5aba0d3c4c3996be32c216da5680}
+}]\index{EF\_\-DEPTH24STENCIL8@{EF\_\-DEPTH24STENCIL8}!GrRenderTargetMgr@{GrRenderTargetMgr}}\index{GrRenderTargetMgr@{GrRenderTargetMgr}!EF\_\-DEPTH24STENCIL8@{EF\_\-DEPTH24STENCIL8}}\item[{\em 
+\hypertarget{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f60610a6f54a0ca8c92a758f9779453d49}{
+EF\_\-DEPTH24STENCIL8}
+\label{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f60610a6f54a0ca8c92a758f9779453d49}
+}]\index{EF\_\-I8@{EF\_\-I8}!GrRenderTargetMgr@{GrRenderTargetMgr}}\index{GrRenderTargetMgr@{GrRenderTargetMgr}!EF\_\-I8@{EF\_\-I8}}\item[{\em 
+\hypertarget{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f67d4b0685ab48716d2321ec7258971218}{
+EF\_\-I8}
+\label{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f67d4b0685ab48716d2321ec7258971218}
+}]\index{EF\_\-COUNT@{EF\_\-COUNT}!GrRenderTargetMgr@{GrRenderTargetMgr}}\index{GrRenderTargetMgr@{GrRenderTargetMgr}!EF\_\-COUNT@{EF\_\-COUNT}}\item[{\em 
+\hypertarget{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f6c09969222a376e76623f4c8900470227}{
+EF\_\-COUNT}
+\label{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f6c09969222a376e76623f4c8900470227}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 31 of file GrRenderTargetMgr.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_render_target_mgr_5f555b4570db0e232b60580462db5344}{
+\index{GrRenderTargetMgr@{GrRenderTargetMgr}!GrRenderTargetMgr@{GrRenderTargetMgr}}
+\index{GrRenderTargetMgr@{GrRenderTargetMgr}!GrRenderTargetMgr@{GrRenderTargetMgr}}
+\subsubsection[{GrRenderTargetMgr}]{\setlength{\rightskip}{0pt plus 5cm}GrRenderTargetMgr::GrRenderTargetMgr (unsigned int {\em primaryWidth}, \/  unsigned int {\em primaryHeight})}}
+\label{class_gr_render_target_mgr_5f555b4570db0e232b60580462db5344}
+
+
+
+
+Definition at line 64 of file GrRenderTargetMgr.cpp.\hypertarget{class_gr_render_target_mgr_850e21f4c7588233f838e1132cbff3cc}{
+\index{GrRenderTargetMgr@{GrRenderTargetMgr}!$\sim$GrRenderTargetMgr@{$\sim$GrRenderTargetMgr}}
+\index{$\sim$GrRenderTargetMgr@{$\sim$GrRenderTargetMgr}!GrRenderTargetMgr@{GrRenderTargetMgr}}
+\subsubsection[{$\sim$GrRenderTargetMgr}]{\setlength{\rightskip}{0pt plus 5cm}GrRenderTargetMgr::$\sim$GrRenderTargetMgr ()}}
+\label{class_gr_render_target_mgr_850e21f4c7588233f838e1132cbff3cc}
+
+
+
+
+Definition at line 74 of file GrRenderTargetMgr.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_render_target_mgr_a5f0a084c32ef56fc09838283c637cb7}{
+\index{GrRenderTargetMgr@{GrRenderTargetMgr}!CollectGarbage@{CollectGarbage}}
+\index{CollectGarbage@{CollectGarbage}!GrRenderTargetMgr@{GrRenderTargetMgr}}
+\subsubsection[{CollectGarbage}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderTargetMgr::CollectGarbage ()}}
+\label{class_gr_render_target_mgr_a5f0a084c32ef56fc09838283c637cb7}
+
+
+
+
+Definition at line 183 of file GrRenderTargetMgr.cpp.\hypertarget{class_gr_render_target_mgr_fabad7a065e67c6bd8f04e98e1501061}{
+\index{GrRenderTargetMgr@{GrRenderTargetMgr}!CreateRenderbuffer@{CreateRenderbuffer}}
+\index{CreateRenderbuffer@{CreateRenderbuffer}!GrRenderTargetMgr@{GrRenderTargetMgr}}
+\subsubsection[{CreateRenderbuffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrRenderbuffer} $>$ GrRenderTargetMgr::CreateRenderbuffer (unsigned int {\em width}, \/  unsigned int {\em height}, \/  {\bf EFORMAT} {\em format})}}
+\label{class_gr_render_target_mgr_fabad7a065e67c6bd8f04e98e1501061}
+
+
+
+
+Definition at line 88 of file GrRenderTargetMgr.cpp.\hypertarget{class_gr_render_target_mgr_b46557c99e5ac73863beeb5d3d671302}{
+\index{GrRenderTargetMgr@{GrRenderTargetMgr}!CreateRenderTarget@{CreateRenderTarget}}
+\index{CreateRenderTarget@{CreateRenderTarget}!GrRenderTargetMgr@{GrRenderTargetMgr}}
+\subsubsection[{CreateRenderTarget}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrRenderTarget} $>$ GrRenderTargetMgr::CreateRenderTarget ({\bf URef}$<$ {\bf GrRenderbuffer} $>$ {\em colorBuffer}, \/  {\bf URef}$<$ {\bf GrRenderbuffer} $>$ {\em depthBuffer})}}
+\label{class_gr_render_target_mgr_b46557c99e5ac73863beeb5d3d671302}
+
+
+
+
+Definition at line 168 of file GrRenderTargetMgr.cpp.\hypertarget{class_gr_render_target_mgr_cc419c722338e86241826a4f86ed9f96}{
+\index{GrRenderTargetMgr@{GrRenderTargetMgr}!CreateRenderTarget@{CreateRenderTarget}}
+\index{CreateRenderTarget@{CreateRenderTarget}!GrRenderTargetMgr@{GrRenderTargetMgr}}
+\subsubsection[{CreateRenderTarget}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrRenderTarget} $>$ GrRenderTargetMgr::CreateRenderTarget ({\bf URef}$<$ {\bf GrTextureBase} $>$ $\ast$ {\em colorTargets}, \/  {\bf URef}$<$ {\bf GrRenderbuffer} $>$ {\em depthTarget}, \/  unsigned int {\em colorTargetCount})}}
+\label{class_gr_render_target_mgr_cc419c722338e86241826a4f86ed9f96}
+
+
+
+
+Definition at line 159 of file GrRenderTargetMgr.cpp.\hypertarget{class_gr_render_target_mgr_97ebd15d7e11c6b8cf151c96237425cd}{
+\index{GrRenderTargetMgr@{GrRenderTargetMgr}!CreateRenderTarget@{CreateRenderTarget}}
+\index{CreateRenderTarget@{CreateRenderTarget}!GrRenderTargetMgr@{GrRenderTargetMgr}}
+\subsubsection[{CreateRenderTarget}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrRenderTarget} $>$ GrRenderTargetMgr::CreateRenderTarget ({\bf URef}$<$ {\bf GrTextureBase} $>$ {\em colorTarget}, \/  {\bf URef}$<$ {\bf GrTextureBase} $>$ {\em depthTarget})}}
+\label{class_gr_render_target_mgr_97ebd15d7e11c6b8cf151c96237425cd}
+
+
+
+
+Definition at line 151 of file GrRenderTargetMgr.cpp.\hypertarget{class_gr_render_target_mgr_f2943fd9b726ca96797aeb8f4cf534a7}{
+\index{GrRenderTargetMgr@{GrRenderTargetMgr}!CreateRenderTarget@{CreateRenderTarget}}
+\index{CreateRenderTarget@{CreateRenderTarget}!GrRenderTargetMgr@{GrRenderTargetMgr}}
+\subsubsection[{CreateRenderTarget}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrRenderTarget} $>$ GrRenderTargetMgr::CreateRenderTarget ({\bf URef}$<$ {\bf GrTextureBase} $>$ {\em colorTarget}, \/  {\bf URef}$<$ {\bf GrRenderbuffer} $>$ {\em depthBuffer})}}
+\label{class_gr_render_target_mgr_f2943fd9b726ca96797aeb8f4cf534a7}
+
+
+
+
+Definition at line 143 of file GrRenderTargetMgr.cpp.\hypertarget{class_gr_render_target_mgr_2dc9cb29f5f88c355eaab0938c0f355d}{
+\index{GrRenderTargetMgr@{GrRenderTargetMgr}!CreateRenderTarget@{CreateRenderTarget}}
+\index{CreateRenderTarget@{CreateRenderTarget}!GrRenderTargetMgr@{GrRenderTargetMgr}}
+\subsubsection[{CreateRenderTarget}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrRenderTarget} $>$ GrRenderTargetMgr::CreateRenderTarget ({\bf URef}$<$ {\bf GrTextureBase} $>$ {\em colorTarget})}}
+\label{class_gr_render_target_mgr_2dc9cb29f5f88c355eaab0938c0f355d}
+
+
+
+
+Definition at line 134 of file GrRenderTargetMgr.cpp.\hypertarget{class_gr_render_target_mgr_7e1d7957a2167cd17b678a44da653898}{
+\index{GrRenderTargetMgr@{GrRenderTargetMgr}!CreateRendertexture@{CreateRendertexture}}
+\index{CreateRendertexture@{CreateRendertexture}!GrRenderTargetMgr@{GrRenderTargetMgr}}
+\subsubsection[{CreateRendertexture}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrTextureBase} $>$ GrRenderTargetMgr::CreateRendertexture (unsigned int {\em width}, \/  unsigned int {\em height}, \/  {\bf EFORMAT} {\em format}, \/  {\bf GrTextureBase::Flags} {\em flags}, \/  {\bf GrTextureBase::ETEXTURETYPE} {\em type})}}
+\label{class_gr_render_target_mgr_7e1d7957a2167cd17b678a44da653898}
+
+
+
+
+Definition at line 98 of file GrRenderTargetMgr.cpp.\hypertarget{class_gr_render_target_mgr_b48e6f9a057059671a40a6a6e09946b4}{
+\index{GrRenderTargetMgr@{GrRenderTargetMgr}!GetPrimaryRenderTarget@{GetPrimaryRenderTarget}}
+\index{GetPrimaryRenderTarget@{GetPrimaryRenderTarget}!GrRenderTargetMgr@{GrRenderTargetMgr}}
+\subsubsection[{GetPrimaryRenderTarget}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrRenderTarget} $>$ GrRenderTargetMgr::GetPrimaryRenderTarget ()}}
+\label{class_gr_render_target_mgr_b48e6f9a057059671a40a6a6e09946b4}
+
+
+
+
+Definition at line 176 of file GrRenderTargetMgr.cpp.\hypertarget{class_gr_render_target_mgr_9a98afe30d4cf8ed4387f491fa0c00a3}{
+\index{GrRenderTargetMgr@{GrRenderTargetMgr}!PostContextReset@{PostContextReset}}
+\index{PostContextReset@{PostContextReset}!GrRenderTargetMgr@{GrRenderTargetMgr}}
+\subsubsection[{PostContextReset}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderTargetMgr::PostContextReset ()}}
+\label{class_gr_render_target_mgr_9a98afe30d4cf8ed4387f491fa0c00a3}
+
+
+
+
+Definition at line 218 of file GrRenderTargetMgr.cpp.\hypertarget{class_gr_render_target_mgr_7cb3fe241f81eae3c989df80817ca521}{
+\index{GrRenderTargetMgr@{GrRenderTargetMgr}!PreContextReset@{PreContextReset}}
+\index{PreContextReset@{PreContextReset}!GrRenderTargetMgr@{GrRenderTargetMgr}}
+\subsubsection[{PreContextReset}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderTargetMgr::PreContextReset ()}}
+\label{class_gr_render_target_mgr_7cb3fe241f81eae3c989df80817ca521}
+
+
+
+
+Definition at line 193 of file GrRenderTargetMgr.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_render_target_mgr_8h}{GrRenderTargetMgr.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_render_target_mgr_8cpp}{GrRenderTargetMgr.cpp}\end{CompactItemize}

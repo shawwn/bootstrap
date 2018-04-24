@@ -1,0 +1,919 @@
+\hypertarget{class_gr_light}{
+\section{GrLight Class Reference}
+\label{class_gr_light}\index{GrLight@{GrLight}}
+}
+{\tt \#include $<$GrLight.h$>$}
+
+Inheritance diagram for GrLight::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_gr_light}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_light_65657d71433a1ea8ff3639faa63347a0}{GrLight} (const \hyperlink{class_u_path}{UPath} \&\hyperlink{glext__bak_8h_58c2a664503e14ffb8f21012aabff3e9}{id}, const \hyperlink{struct_s_light_info}{SLightInfo} \&lightInfo)
+\item 
+virtual \hyperlink{class_gr_light_dfbafb36986f1f862ee927ff2b46e566}{$\sim$GrLight} ()
+\item 
+void \hyperlink{class_gr_light_44ae46cddc4b62539e31d8a861582727}{Rebuild} (const \hyperlink{struct_s_light_info}{SLightInfo} \&lightInfo)
+\item 
+const \hyperlink{class_u_path}{UPath} \& \hyperlink{class_gr_light_352d37d4c1b11c0d33e34a314367d468}{GetId} () const 
+\item 
+\hyperlink{class_gr_light}{GrLight} $\ast$ \hyperlink{class_gr_light_6a46f8d5b6f38e19e5eaa01710b648c1}{Clone} (const \hyperlink{class_u_path}{UPath} \&newId) const 
+\item 
+void \hyperlink{class_gr_light_4b9e87a1336fecc7d8311cd69c64e74d}{SetName} (const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name})
+\item 
+void \hyperlink{class_gr_light_60aa163bac55c7876a9c7280519788f4}{SetLocalTransform} (const \hyperlink{class_m_mat4x4}{MMat4x4} \&\hyperlink{glext__bak_8h_07993c0d92c1aeeb357ba0495c8b5325}{transform})
+\item 
+void \hyperlink{class_gr_light_47b4cf3ca3413ce90fa7ce5318a05943}{SetParentTransform} (const \hyperlink{class_m_mat4x4}{MMat4x4} \&\hyperlink{glext__bak_8h_07993c0d92c1aeeb357ba0495c8b5325}{transform})
+\item 
+void \hyperlink{class_gr_light_0be864006e4aa859494a5813e435c2e7}{SetProjection} (const \hyperlink{class_gr_projection}{GrProjection} \&projection)
+\item 
+void \hyperlink{class_gr_light_d954c2024dcae8ba4abd4f8081dc7db9}{SetProjTexture} (\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_texture}{GrTexture} $>$ projTexture)
+\item 
+void \hyperlink{class_gr_light_f6585ac78a0365a4b65e58d3d806794b}{SetColor} (const \hyperlink{class_gr_color}{GrColor} \&\hyperlink{glext_8h_3ea846f998d64f079b86052b6c4193a8}{color})
+\item 
+void \hyperlink{class_gr_light_0ff00ad818e97416b1d63f6dba36a444}{SetIntensity} (\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_u_expr_term}{UExprTerm} $>$ intensity)
+\item 
+void \hyperlink{class_gr_light_2bc38d15e8a634268056817102ed4df0}{SetIntensity} (float intensity)
+\item 
+void \hyperlink{class_gr_light_509f7eed244a60f3b27281049b7410e2}{SetRange} (\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_u_expr_term}{UExprTerm} $>$ \hyperlink{glext__bak_8h_7b8ad0b27a927682837f95528fa454f5}{range})
+\item 
+void \hyperlink{class_gr_light_c3e94f351a1f1b794012085bf064567f}{SetRange} (float \hyperlink{glext__bak_8h_7b8ad0b27a927682837f95528fa454f5}{range})
+\item 
+void \hyperlink{class_gr_light_a6bd83e0258a25bea793cdc6aa65d175}{SetParallel} (bool parallel)
+\item 
+void \hyperlink{class_gr_light_b3588c8d402aa2486233dbc258592909}{SetLocalBounds} (const \hyperlink{class_m_sphere}{MSphere} \&bounds)
+\item 
+void \hyperlink{class_gr_light_7c2845100b12ebc9c1c37ccc403ea1d8}{SetCastShadow} (bool castShadow)
+\item 
+void \hyperlink{class_gr_light_e9d277fb571428a9afdcc84e773718e0}{SetWidth} (float \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width})
+\item 
+void \hyperlink{class_gr_light_85197478e33da961098f11a9f63e31e1}{SetSqrAtten} (float atten)
+\item 
+void \hyperlink{class_gr_light_cbe776981b08fa29e2a7f864be4c95ee}{SetLinAtten} (float atten)
+\item 
+void \hyperlink{class_gr_light_98f2b78251ec1358a262846b838c3d42}{SetConstAtten} (float atten)
+\item 
+void \hyperlink{class_gr_light_b057e347b0e89b3d0e378c8cfd4ea8fb}{SetGlobal} (bool global)
+\item 
+const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \& \hyperlink{class_gr_light_e1ffc9555baeb3ff122b8faeafc152b0}{GetName} () const 
+\item 
+const \hyperlink{class_m_vec3}{MVec3} \& \hyperlink{class_gr_light_0d4a1686505a6cacd389144659887e73}{GetPos} () const 
+\item 
+const \hyperlink{class_m_vec3}{MVec3} \& \hyperlink{class_gr_light_1b6604c1d7bf5d5aab3d99969b114f67}{GetDir} () const 
+\item 
+const \hyperlink{class_gr_color}{GrColor} \& \hyperlink{class_gr_light_d7333ae546a74b630df61693d0b47133}{GetColor} () const 
+\item 
+const \hyperlink{class_gr_color}{GrColor} \& \hyperlink{class_gr_light_043ab42704a0f7df5f68219efc99d1f9}{GetCachedColor} () const 
+\item 
+float \hyperlink{class_gr_light_66a3c55f050abc2ef369eb202ce8f52b}{GetCachedIntensity} () const 
+\item 
+float \hyperlink{class_gr_light_32c3d7ec239d9b3a08869ecff626cc29}{GetCachedRange} () const 
+\item 
+bool \hyperlink{class_gr_light_e1b04eb006abc19edf83dcdb1e364110}{IsParallel} () const 
+\item 
+float \hyperlink{class_gr_light_6050783fa4ab84ed938d695ba409dd67}{GetSqrAtten} () const 
+\item 
+float \hyperlink{class_gr_light_6139a06b502ca8e493b2ce5bb374f9aa}{GetLinAtten} () const 
+\item 
+float \hyperlink{class_gr_light_928a8bb4de60ade8850be9e349d82c90}{GetConstAtten} () const 
+\item 
+float \hyperlink{class_gr_light_173d1a635f72cd1788c8b3e61492f01a}{GetHaziness} () const 
+\item 
+bool \hyperlink{class_gr_light_e39e45c0786bc0331f102c182454fdea}{GetGlobal} () const 
+\item 
+float \hyperlink{class_gr_light_e8f2c2a5e6500cda537befefa64d0596}{GetWidth} () const 
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_texture}{GrTexture} $>$ \hyperlink{class_gr_light_739b15eaf5c39ae1937546644aab1e42}{GetProjTexture} () const 
+\item 
+bool \hyperlink{class_gr_light_729edc3bf96dd2a6b98afd324b066c31}{CastShadow} () const 
+\item 
+unsigned int \hyperlink{class_gr_light_324455a77bfa680b7bbb50e7e2950ae9}{GetShadowLOD} () const 
+\item 
+const \hyperlink{class_m_sphere}{MSphere} \& \hyperlink{class_gr_light_4b3c3516b76319d07e2a8558ee3e9183}{GetLocalBounds} () const 
+\item 
+const \hyperlink{class_m_sphere}{MSphere} \& \hyperlink{class_gr_light_e340863c34ce1b15451dff25796a5eee}{GetWorldBounds} () const 
+\item 
+const \hyperlink{class_m_mat4x4}{MMat4x4} \& \hyperlink{class_gr_light_a440dfedc25621828db76fa3942867f6}{GetTexGenMatrix} () const 
+\item 
+const \hyperlink{class_m_mat4x4}{MMat4x4} \& \hyperlink{class_gr_light_18c9bdf63222395136bb181b5d9f0a9d}{GetLocalTransform} () const 
+\item 
+const \hyperlink{class_m_mat4x4}{MMat4x4} \& \hyperlink{class_gr_light_14f915382adbb5e9e24f5f5a87c12930}{GetParentTransform} () const 
+\item 
+const \hyperlink{class_m_mat4x4}{MMat4x4} \& \hyperlink{class_gr_light_6ef30451289f25c79d3b297ac0f773a8}{GetWorldTransform} () const 
+\item 
+const \hyperlink{class_gr_projection}{GrProjection} \& \hyperlink{class_gr_light_0df072bac3ea1048c4a57aed74bb2361}{GetProjection} () const 
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_u_expr_term}{UExprTerm} $>$ \hyperlink{class_gr_light_d2a8c86c04413bcf5069fc6611b706db}{GetIntensity} () const 
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_u_expr_term}{UExprTerm} $>$ \hyperlink{class_gr_light_dcbb6c218efd950cb13e09851ad83c5a}{GetRange} () const 
+\item 
+void \hyperlink{class_gr_light_f7fafb95d904499e073a94783b624bf9}{Update} ()
+\end{CompactItemize}
+\subsection*{Protected Member Functions}
+\begin{CompactItemize}
+\item 
+void \hyperlink{class_gr_light_97c448c6a785fd77ba475f5a0f4a2c5f}{UpdateWorldTransform} ()
+\item 
+void \hyperlink{class_gr_light_935b67174f2ad695b5f185f8abe7da7a}{MakeTexgenMatrix} ()
+\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_u_path}{UPath} \hyperlink{class_gr_light_e62c43ff3876520d58328957f42d617b}{\_\-id}
+\item 
+\hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \hyperlink{class_gr_light_91326c4911f07bf038ba37567ee2d45a}{\_\-name}
+\item 
+\hyperlink{class_m_mat4x4}{MMat4x4} \hyperlink{class_gr_light_d5e7b0c00eb9f66d62bc5a45d0c4bbd1}{\_\-worldTransform}
+\item 
+\hyperlink{class_m_mat4x4}{MMat4x4} \hyperlink{class_gr_light_2a3bceb8640e0c14c1193b7e9e0f5dfb}{\_\-localTransform}
+\item 
+\hyperlink{class_m_mat4x4}{MMat4x4} \hyperlink{class_gr_light_abd86e7a88a4b1ad492f7042ccdf634b}{\_\-parentTransform}
+\item 
+\hyperlink{class_gr_projection}{GrProjection} \hyperlink{class_gr_light_a9c699d4b6090dc95a332abb6c6f525e}{\_\-projection}
+\item 
+\hyperlink{class_m_mat4x4}{MMat4x4} \hyperlink{class_gr_light_ba5ad710e4cff79152083a6919d607bb}{\_\-texgenMatrix}
+\item 
+\hyperlink{class_m_vec3}{MVec3} \hyperlink{class_gr_light_e3d31e4913c06cc34f2ea5ab47937ca2}{\_\-position}
+\item 
+\hyperlink{class_m_vec3}{MVec3} \hyperlink{class_gr_light_3913d6edaa0a232aea68b9878fe75ca0}{\_\-direction}
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_texture}{GrTexture} $>$ \hyperlink{class_gr_light_214aad662401b11c0d967dffd7c913dc}{\_\-projTex}
+\item 
+\hyperlink{class_gr_color}{GrColor} \hyperlink{class_gr_light_ba85bb3363501d63dfbd46adb583aaba}{\_\-color}
+\item 
+\hyperlink{class_gr_color}{GrColor} \hyperlink{class_gr_light_6c14df5bd91c6d8928ed198cc11424b5}{\_\-cachedColor}
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_u_expr_term}{UExprTerm} $>$ \hyperlink{class_gr_light_17a6414681ade62467624a3149c3b499}{\_\-intensity}
+\item 
+float \hyperlink{class_gr_light_e8f05c795e23f3fdf3c19d741ca05249}{\_\-cachedIntensity}
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_u_expr_term}{UExprTerm} $>$ \hyperlink{class_gr_light_e658483426095681c1fa182817964df8}{\_\-range}
+\item 
+float \hyperlink{class_gr_light_1f981e227788c6ffdb67a784cfb5fc0a}{\_\-cachedRange}
+\item 
+\hyperlink{class_m_sphere}{MSphere} \hyperlink{class_gr_light_b36a7430015dff850df027736b1bc01c}{\_\-localBounds}
+\item 
+\hyperlink{class_m_sphere}{MSphere} \hyperlink{class_gr_light_d6fc31fefe05cf233361472e01aa0964}{\_\-worldBounds}
+\item 
+float \hyperlink{class_gr_light_efd74a6030d308c8ddbb6d1694b83da2}{\_\-sqrAtten}
+\item 
+float \hyperlink{class_gr_light_27da8da902b606390ff4317d4b99aac0}{\_\-linAtten}
+\item 
+float \hyperlink{class_gr_light_561e3666c6af8ff045d49e4b1b1d84cb}{\_\-constAtten}
+\item 
+float \hyperlink{class_gr_light_8afa1f0c0b67e9019c659ef97a840110}{\_\-haziness}
+\item 
+float \hyperlink{class_gr_light_b80ea703a480e16f78ab3020983f4630}{\_\-width}
+\item 
+unsigned int \hyperlink{class_gr_light_7d00fdeecaa254a552fbea55e82ea644}{\_\-shadowLOD}
+\item 
+bool \hyperlink{class_gr_light_14d77a9c1e384353535a4a16f3f7b9a3}{\_\-castShadow}
+\item 
+bool \hyperlink{class_gr_light_e8e076faf998d07720755a05537af503}{\_\-parallel}
+\item 
+bool \hyperlink{class_gr_light_4e23b3f45bcd5f1a33352286db1effb9}{\_\-global}
+\item 
+\hyperlink{_gr_light_8h_8874b04c94d261f583fc693b4d7c866e}{ELIGHTMODE} \hyperlink{class_gr_light_e99e12ad16003bec82de9a31eb859d5d}{\_\-mode}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 65 of file GrLight.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_light_65657d71433a1ea8ff3639faa63347a0}{
+\index{GrLight@{GrLight}!GrLight@{GrLight}}
+\index{GrLight@{GrLight}!GrLight@{GrLight}}
+\subsubsection[{GrLight}]{\setlength{\rightskip}{0pt plus 5cm}GrLight::GrLight (const {\bf UPath} \& {\em id}, \/  const {\bf SLightInfo} \& {\em lightInfo})}}
+\label{class_gr_light_65657d71433a1ea8ff3639faa63347a0}
+
+
+
+
+Definition at line 54 of file GrLight.cpp.\hypertarget{class_gr_light_dfbafb36986f1f862ee927ff2b46e566}{
+\index{GrLight@{GrLight}!$\sim$GrLight@{$\sim$GrLight}}
+\index{$\sim$GrLight@{$\sim$GrLight}!GrLight@{GrLight}}
+\subsubsection[{$\sim$GrLight}]{\setlength{\rightskip}{0pt plus 5cm}GrLight::$\sim$GrLight ()\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{class_gr_light_dfbafb36986f1f862ee927ff2b46e566}
+
+
+
+
+Definition at line 160 of file GrLight.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_light_729edc3bf96dd2a6b98afd324b066c31}{
+\index{GrLight@{GrLight}!CastShadow@{CastShadow}}
+\index{CastShadow@{CastShadow}!GrLight@{GrLight}}
+\subsubsection[{CastShadow}]{\setlength{\rightskip}{0pt plus 5cm}bool GrLight::CastShadow () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_light_729edc3bf96dd2a6b98afd324b066c31}
+
+
+
+
+Definition at line 128 of file GrLight.h.\hypertarget{class_gr_light_6a46f8d5b6f38e19e5eaa01710b648c1}{
+\index{GrLight@{GrLight}!Clone@{Clone}}
+\index{Clone@{Clone}!GrLight@{GrLight}}
+\subsubsection[{Clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrLight} $\ast$ GrLight::Clone (const {\bf UPath} \& {\em newId}) const}}
+\label{class_gr_light_6a46f8d5b6f38e19e5eaa01710b648c1}
+
+
+
+
+Definition at line 206 of file GrLight.cpp.\hypertarget{class_gr_light_043ab42704a0f7df5f68219efc99d1f9}{
+\index{GrLight@{GrLight}!GetCachedColor@{GetCachedColor}}
+\index{GetCachedColor@{GetCachedColor}!GrLight@{GrLight}}
+\subsubsection[{GetCachedColor}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf GrColor}\& GrLight::GetCachedColor () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_light_043ab42704a0f7df5f68219efc99d1f9}
+
+
+
+
+Definition at line 117 of file GrLight.h.\hypertarget{class_gr_light_66a3c55f050abc2ef369eb202ce8f52b}{
+\index{GrLight@{GrLight}!GetCachedIntensity@{GetCachedIntensity}}
+\index{GetCachedIntensity@{GetCachedIntensity}!GrLight@{GrLight}}
+\subsubsection[{GetCachedIntensity}]{\setlength{\rightskip}{0pt plus 5cm}float GrLight::GetCachedIntensity () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_light_66a3c55f050abc2ef369eb202ce8f52b}
+
+
+
+
+Definition at line 118 of file GrLight.h.\hypertarget{class_gr_light_32c3d7ec239d9b3a08869ecff626cc29}{
+\index{GrLight@{GrLight}!GetCachedRange@{GetCachedRange}}
+\index{GetCachedRange@{GetCachedRange}!GrLight@{GrLight}}
+\subsubsection[{GetCachedRange}]{\setlength{\rightskip}{0pt plus 5cm}float GrLight::GetCachedRange () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_light_32c3d7ec239d9b3a08869ecff626cc29}
+
+
+
+
+Definition at line 119 of file GrLight.h.\hypertarget{class_gr_light_d7333ae546a74b630df61693d0b47133}{
+\index{GrLight@{GrLight}!GetColor@{GetColor}}
+\index{GetColor@{GetColor}!GrLight@{GrLight}}
+\subsubsection[{GetColor}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf GrColor}\& GrLight::GetColor () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_light_d7333ae546a74b630df61693d0b47133}
+
+
+
+
+Definition at line 116 of file GrLight.h.\hypertarget{class_gr_light_928a8bb4de60ade8850be9e349d82c90}{
+\index{GrLight@{GrLight}!GetConstAtten@{GetConstAtten}}
+\index{GetConstAtten@{GetConstAtten}!GrLight@{GrLight}}
+\subsubsection[{GetConstAtten}]{\setlength{\rightskip}{0pt plus 5cm}float GrLight::GetConstAtten () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_light_928a8bb4de60ade8850be9e349d82c90}
+
+
+
+
+Definition at line 123 of file GrLight.h.\hypertarget{class_gr_light_1b6604c1d7bf5d5aab3d99969b114f67}{
+\index{GrLight@{GrLight}!GetDir@{GetDir}}
+\index{GetDir@{GetDir}!GrLight@{GrLight}}
+\subsubsection[{GetDir}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MVec3}\& GrLight::GetDir () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_light_1b6604c1d7bf5d5aab3d99969b114f67}
+
+
+
+
+Definition at line 115 of file GrLight.h.\hypertarget{class_gr_light_e39e45c0786bc0331f102c182454fdea}{
+\index{GrLight@{GrLight}!GetGlobal@{GetGlobal}}
+\index{GetGlobal@{GetGlobal}!GrLight@{GrLight}}
+\subsubsection[{GetGlobal}]{\setlength{\rightskip}{0pt plus 5cm}bool GrLight::GetGlobal () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_light_e39e45c0786bc0331f102c182454fdea}
+
+
+
+
+Definition at line 125 of file GrLight.h.\hypertarget{class_gr_light_173d1a635f72cd1788c8b3e61492f01a}{
+\index{GrLight@{GrLight}!GetHaziness@{GetHaziness}}
+\index{GetHaziness@{GetHaziness}!GrLight@{GrLight}}
+\subsubsection[{GetHaziness}]{\setlength{\rightskip}{0pt plus 5cm}float GrLight::GetHaziness () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_light_173d1a635f72cd1788c8b3e61492f01a}
+
+
+
+
+Definition at line 124 of file GrLight.h.\hypertarget{class_gr_light_352d37d4c1b11c0d33e34a314367d468}{
+\index{GrLight@{GrLight}!GetId@{GetId}}
+\index{GetId@{GetId}!GrLight@{GrLight}}
+\subsubsection[{GetId}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf UPath}\& GrLight::GetId () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_light_352d37d4c1b11c0d33e34a314367d468}
+
+
+
+
+Definition at line 87 of file GrLight.h.\hypertarget{class_gr_light_d2a8c86c04413bcf5069fc6611b706db}{
+\index{GrLight@{GrLight}!GetIntensity@{GetIntensity}}
+\index{GetIntensity@{GetIntensity}!GrLight@{GrLight}}
+\subsubsection[{GetIntensity}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<${\bf UExprTerm}$>$ GrLight::GetIntensity () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_light_d2a8c86c04413bcf5069fc6611b706db}
+
+
+
+
+Definition at line 142 of file GrLight.h.\hypertarget{class_gr_light_6139a06b502ca8e493b2ce5bb374f9aa}{
+\index{GrLight@{GrLight}!GetLinAtten@{GetLinAtten}}
+\index{GetLinAtten@{GetLinAtten}!GrLight@{GrLight}}
+\subsubsection[{GetLinAtten}]{\setlength{\rightskip}{0pt plus 5cm}float GrLight::GetLinAtten () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_light_6139a06b502ca8e493b2ce5bb374f9aa}
+
+
+
+
+Definition at line 122 of file GrLight.h.\hypertarget{class_gr_light_4b3c3516b76319d07e2a8558ee3e9183}{
+\index{GrLight@{GrLight}!GetLocalBounds@{GetLocalBounds}}
+\index{GetLocalBounds@{GetLocalBounds}!GrLight@{GrLight}}
+\subsubsection[{GetLocalBounds}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MSphere}\& GrLight::GetLocalBounds () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_light_4b3c3516b76319d07e2a8558ee3e9183}
+
+
+
+
+Definition at line 131 of file GrLight.h.\hypertarget{class_gr_light_18c9bdf63222395136bb181b5d9f0a9d}{
+\index{GrLight@{GrLight}!GetLocalTransform@{GetLocalTransform}}
+\index{GetLocalTransform@{GetLocalTransform}!GrLight@{GrLight}}
+\subsubsection[{GetLocalTransform}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MMat4x4}\& GrLight::GetLocalTransform () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_light_18c9bdf63222395136bb181b5d9f0a9d}
+
+
+
+
+Definition at line 136 of file GrLight.h.\hypertarget{class_gr_light_e1ffc9555baeb3ff122b8faeafc152b0}{
+\index{GrLight@{GrLight}!GetName@{GetName}}
+\index{GetName@{GetName}!GrLight@{GrLight}}
+\subsubsection[{GetName}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf tstring}\& GrLight::GetName () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_light_e1ffc9555baeb3ff122b8faeafc152b0}
+
+
+
+
+Definition at line 113 of file GrLight.h.\hypertarget{class_gr_light_14f915382adbb5e9e24f5f5a87c12930}{
+\index{GrLight@{GrLight}!GetParentTransform@{GetParentTransform}}
+\index{GetParentTransform@{GetParentTransform}!GrLight@{GrLight}}
+\subsubsection[{GetParentTransform}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MMat4x4}\& GrLight::GetParentTransform () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_light_14f915382adbb5e9e24f5f5a87c12930}
+
+
+
+
+Definition at line 137 of file GrLight.h.\hypertarget{class_gr_light_0d4a1686505a6cacd389144659887e73}{
+\index{GrLight@{GrLight}!GetPos@{GetPos}}
+\index{GetPos@{GetPos}!GrLight@{GrLight}}
+\subsubsection[{GetPos}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MVec3}\& GrLight::GetPos () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_light_0d4a1686505a6cacd389144659887e73}
+
+
+
+
+Definition at line 114 of file GrLight.h.\hypertarget{class_gr_light_0df072bac3ea1048c4a57aed74bb2361}{
+\index{GrLight@{GrLight}!GetProjection@{GetProjection}}
+\index{GetProjection@{GetProjection}!GrLight@{GrLight}}
+\subsubsection[{GetProjection}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf GrProjection}\& GrLight::GetProjection () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_light_0df072bac3ea1048c4a57aed74bb2361}
+
+
+
+
+Definition at line 139 of file GrLight.h.\hypertarget{class_gr_light_739b15eaf5c39ae1937546644aab1e42}{
+\index{GrLight@{GrLight}!GetProjTexture@{GetProjTexture}}
+\index{GetProjTexture@{GetProjTexture}!GrLight@{GrLight}}
+\subsubsection[{GetProjTexture}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<${\bf GrTexture}$>$ GrLight::GetProjTexture () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_light_739b15eaf5c39ae1937546644aab1e42}
+
+
+
+
+Definition at line 127 of file GrLight.h.\hypertarget{class_gr_light_dcbb6c218efd950cb13e09851ad83c5a}{
+\index{GrLight@{GrLight}!GetRange@{GetRange}}
+\index{GetRange@{GetRange}!GrLight@{GrLight}}
+\subsubsection[{GetRange}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<${\bf UExprTerm}$>$ GrLight::GetRange () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_light_dcbb6c218efd950cb13e09851ad83c5a}
+
+
+
+
+Definition at line 143 of file GrLight.h.\hypertarget{class_gr_light_324455a77bfa680b7bbb50e7e2950ae9}{
+\index{GrLight@{GrLight}!GetShadowLOD@{GetShadowLOD}}
+\index{GetShadowLOD@{GetShadowLOD}!GrLight@{GrLight}}
+\subsubsection[{GetShadowLOD}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrLight::GetShadowLOD () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_light_324455a77bfa680b7bbb50e7e2950ae9}
+
+
+
+
+Definition at line 129 of file GrLight.h.\hypertarget{class_gr_light_6050783fa4ab84ed938d695ba409dd67}{
+\index{GrLight@{GrLight}!GetSqrAtten@{GetSqrAtten}}
+\index{GetSqrAtten@{GetSqrAtten}!GrLight@{GrLight}}
+\subsubsection[{GetSqrAtten}]{\setlength{\rightskip}{0pt plus 5cm}float GrLight::GetSqrAtten () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_light_6050783fa4ab84ed938d695ba409dd67}
+
+
+
+
+Definition at line 121 of file GrLight.h.\hypertarget{class_gr_light_a440dfedc25621828db76fa3942867f6}{
+\index{GrLight@{GrLight}!GetTexGenMatrix@{GetTexGenMatrix}}
+\index{GetTexGenMatrix@{GetTexGenMatrix}!GrLight@{GrLight}}
+\subsubsection[{GetTexGenMatrix}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MMat4x4}\& GrLight::GetTexGenMatrix () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_light_a440dfedc25621828db76fa3942867f6}
+
+
+
+
+Definition at line 135 of file GrLight.h.\hypertarget{class_gr_light_e8f2c2a5e6500cda537befefa64d0596}{
+\index{GrLight@{GrLight}!GetWidth@{GetWidth}}
+\index{GetWidth@{GetWidth}!GrLight@{GrLight}}
+\subsubsection[{GetWidth}]{\setlength{\rightskip}{0pt plus 5cm}float GrLight::GetWidth () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_light_e8f2c2a5e6500cda537befefa64d0596}
+
+
+
+
+Definition at line 126 of file GrLight.h.\hypertarget{class_gr_light_e340863c34ce1b15451dff25796a5eee}{
+\index{GrLight@{GrLight}!GetWorldBounds@{GetWorldBounds}}
+\index{GetWorldBounds@{GetWorldBounds}!GrLight@{GrLight}}
+\subsubsection[{GetWorldBounds}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MSphere}\& GrLight::GetWorldBounds () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_light_e340863c34ce1b15451dff25796a5eee}
+
+
+
+
+Definition at line 132 of file GrLight.h.\hypertarget{class_gr_light_6ef30451289f25c79d3b297ac0f773a8}{
+\index{GrLight@{GrLight}!GetWorldTransform@{GetWorldTransform}}
+\index{GetWorldTransform@{GetWorldTransform}!GrLight@{GrLight}}
+\subsubsection[{GetWorldTransform}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MMat4x4}\& GrLight::GetWorldTransform () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_light_6ef30451289f25c79d3b297ac0f773a8}
+
+
+
+
+Definition at line 138 of file GrLight.h.\hypertarget{class_gr_light_e1b04eb006abc19edf83dcdb1e364110}{
+\index{GrLight@{GrLight}!IsParallel@{IsParallel}}
+\index{IsParallel@{IsParallel}!GrLight@{GrLight}}
+\subsubsection[{IsParallel}]{\setlength{\rightskip}{0pt plus 5cm}bool GrLight::IsParallel () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_light_e1b04eb006abc19edf83dcdb1e364110}
+
+
+
+
+Definition at line 120 of file GrLight.h.\hypertarget{class_gr_light_935b67174f2ad695b5f185f8abe7da7a}{
+\index{GrLight@{GrLight}!MakeTexgenMatrix@{MakeTexgenMatrix}}
+\index{MakeTexgenMatrix@{MakeTexgenMatrix}!GrLight@{GrLight}}
+\subsubsection[{MakeTexgenMatrix}]{\setlength{\rightskip}{0pt plus 5cm}void GrLight::MakeTexgenMatrix ()\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_gr_light_935b67174f2ad695b5f185f8abe7da7a}
+
+
+
+
+Definition at line 308 of file GrLight.cpp.\hypertarget{class_gr_light_44ae46cddc4b62539e31d8a861582727}{
+\index{GrLight@{GrLight}!Rebuild@{Rebuild}}
+\index{Rebuild@{Rebuild}!GrLight@{GrLight}}
+\subsubsection[{Rebuild}]{\setlength{\rightskip}{0pt plus 5cm}void GrLight::Rebuild (const {\bf SLightInfo} \& {\em lightInfo})}}
+\label{class_gr_light_44ae46cddc4b62539e31d8a861582727}
+
+
+
+
+Definition at line 172 of file GrLight.cpp.\hypertarget{class_gr_light_7c2845100b12ebc9c1c37ccc403ea1d8}{
+\index{GrLight@{GrLight}!SetCastShadow@{SetCastShadow}}
+\index{SetCastShadow@{SetCastShadow}!GrLight@{GrLight}}
+\subsubsection[{SetCastShadow}]{\setlength{\rightskip}{0pt plus 5cm}void GrLight::SetCastShadow (bool {\em castShadow})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_light_7c2845100b12ebc9c1c37ccc403ea1d8}
+
+
+
+
+Definition at line 105 of file GrLight.h.\hypertarget{class_gr_light_f6585ac78a0365a4b65e58d3d806794b}{
+\index{GrLight@{GrLight}!SetColor@{SetColor}}
+\index{SetColor@{SetColor}!GrLight@{GrLight}}
+\subsubsection[{SetColor}]{\setlength{\rightskip}{0pt plus 5cm}void GrLight::SetColor (const {\bf GrColor} \& {\em color})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_light_f6585ac78a0365a4b65e58d3d806794b}
+
+
+
+
+Definition at line 98 of file GrLight.h.\hypertarget{class_gr_light_98f2b78251ec1358a262846b838c3d42}{
+\index{GrLight@{GrLight}!SetConstAtten@{SetConstAtten}}
+\index{SetConstAtten@{SetConstAtten}!GrLight@{GrLight}}
+\subsubsection[{SetConstAtten}]{\setlength{\rightskip}{0pt plus 5cm}void GrLight::SetConstAtten (float {\em atten})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_light_98f2b78251ec1358a262846b838c3d42}
+
+
+
+
+Definition at line 109 of file GrLight.h.\hypertarget{class_gr_light_b057e347b0e89b3d0e378c8cfd4ea8fb}{
+\index{GrLight@{GrLight}!SetGlobal@{SetGlobal}}
+\index{SetGlobal@{SetGlobal}!GrLight@{GrLight}}
+\subsubsection[{SetGlobal}]{\setlength{\rightskip}{0pt plus 5cm}void GrLight::SetGlobal (bool {\em global})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_light_b057e347b0e89b3d0e378c8cfd4ea8fb}
+
+
+
+
+Definition at line 110 of file GrLight.h.\hypertarget{class_gr_light_2bc38d15e8a634268056817102ed4df0}{
+\index{GrLight@{GrLight}!SetIntensity@{SetIntensity}}
+\index{SetIntensity@{SetIntensity}!GrLight@{GrLight}}
+\subsubsection[{SetIntensity}]{\setlength{\rightskip}{0pt plus 5cm}void GrLight::SetIntensity (float {\em intensity})}}
+\label{class_gr_light_2bc38d15e8a634268056817102ed4df0}
+
+
+
+
+Definition at line 249 of file GrLight.cpp.\hypertarget{class_gr_light_0ff00ad818e97416b1d63f6dba36a444}{
+\index{GrLight@{GrLight}!SetIntensity@{SetIntensity}}
+\index{SetIntensity@{SetIntensity}!GrLight@{GrLight}}
+\subsubsection[{SetIntensity}]{\setlength{\rightskip}{0pt plus 5cm}void GrLight::SetIntensity ({\bf URef}$<$ {\bf UExprTerm} $>$ {\em intensity})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_light_0ff00ad818e97416b1d63f6dba36a444}
+
+
+
+
+Definition at line 99 of file GrLight.h.\hypertarget{class_gr_light_cbe776981b08fa29e2a7f864be4c95ee}{
+\index{GrLight@{GrLight}!SetLinAtten@{SetLinAtten}}
+\index{SetLinAtten@{SetLinAtten}!GrLight@{GrLight}}
+\subsubsection[{SetLinAtten}]{\setlength{\rightskip}{0pt plus 5cm}void GrLight::SetLinAtten (float {\em atten})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_light_cbe776981b08fa29e2a7f864be4c95ee}
+
+
+
+
+Definition at line 108 of file GrLight.h.\hypertarget{class_gr_light_b3588c8d402aa2486233dbc258592909}{
+\index{GrLight@{GrLight}!SetLocalBounds@{SetLocalBounds}}
+\index{SetLocalBounds@{SetLocalBounds}!GrLight@{GrLight}}
+\subsubsection[{SetLocalBounds}]{\setlength{\rightskip}{0pt plus 5cm}void GrLight::SetLocalBounds (const {\bf MSphere} \& {\em bounds})}}
+\label{class_gr_light_b3588c8d402aa2486233dbc258592909}
+
+
+\hypertarget{class_gr_light_60aa163bac55c7876a9c7280519788f4}{
+\index{GrLight@{GrLight}!SetLocalTransform@{SetLocalTransform}}
+\index{SetLocalTransform@{SetLocalTransform}!GrLight@{GrLight}}
+\subsubsection[{SetLocalTransform}]{\setlength{\rightskip}{0pt plus 5cm}void GrLight::SetLocalTransform (const {\bf MMat4x4} \& {\em transform})}}
+\label{class_gr_light_60aa163bac55c7876a9c7280519788f4}
+
+
+
+
+Definition at line 215 of file GrLight.cpp.\hypertarget{class_gr_light_4b9e87a1336fecc7d8311cd69c64e74d}{
+\index{GrLight@{GrLight}!SetName@{SetName}}
+\index{SetName@{SetName}!GrLight@{GrLight}}
+\subsubsection[{SetName}]{\setlength{\rightskip}{0pt plus 5cm}void GrLight::SetName (const {\bf tstring} \& {\em name})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_light_4b9e87a1336fecc7d8311cd69c64e74d}
+
+
+
+
+Definition at line 93 of file GrLight.h.\hypertarget{class_gr_light_a6bd83e0258a25bea793cdc6aa65d175}{
+\index{GrLight@{GrLight}!SetParallel@{SetParallel}}
+\index{SetParallel@{SetParallel}!GrLight@{GrLight}}
+\subsubsection[{SetParallel}]{\setlength{\rightskip}{0pt plus 5cm}void GrLight::SetParallel (bool {\em parallel})}}
+\label{class_gr_light_a6bd83e0258a25bea793cdc6aa65d175}
+
+
+
+
+Definition at line 263 of file GrLight.cpp.\hypertarget{class_gr_light_47b4cf3ca3413ce90fa7ce5318a05943}{
+\index{GrLight@{GrLight}!SetParentTransform@{SetParentTransform}}
+\index{SetParentTransform@{SetParentTransform}!GrLight@{GrLight}}
+\subsubsection[{SetParentTransform}]{\setlength{\rightskip}{0pt plus 5cm}void GrLight::SetParentTransform (const {\bf MMat4x4} \& {\em transform})}}
+\label{class_gr_light_47b4cf3ca3413ce90fa7ce5318a05943}
+
+
+
+
+Definition at line 225 of file GrLight.cpp.\hypertarget{class_gr_light_0be864006e4aa859494a5813e435c2e7}{
+\index{GrLight@{GrLight}!SetProjection@{SetProjection}}
+\index{SetProjection@{SetProjection}!GrLight@{GrLight}}
+\subsubsection[{SetProjection}]{\setlength{\rightskip}{0pt plus 5cm}void GrLight::SetProjection (const {\bf GrProjection} \& {\em projection})}}
+\label{class_gr_light_0be864006e4aa859494a5813e435c2e7}
+
+
+
+
+Definition at line 233 of file GrLight.cpp.\hypertarget{class_gr_light_d954c2024dcae8ba4abd4f8081dc7db9}{
+\index{GrLight@{GrLight}!SetProjTexture@{SetProjTexture}}
+\index{SetProjTexture@{SetProjTexture}!GrLight@{GrLight}}
+\subsubsection[{SetProjTexture}]{\setlength{\rightskip}{0pt plus 5cm}void GrLight::SetProjTexture ({\bf URef}$<$ {\bf GrTexture} $>$ {\em projTexture})}}
+\label{class_gr_light_d954c2024dcae8ba4abd4f8081dc7db9}
+
+
+
+
+Definition at line 241 of file GrLight.cpp.\hypertarget{class_gr_light_c3e94f351a1f1b794012085bf064567f}{
+\index{GrLight@{GrLight}!SetRange@{SetRange}}
+\index{SetRange@{SetRange}!GrLight@{GrLight}}
+\subsubsection[{SetRange}]{\setlength{\rightskip}{0pt plus 5cm}void GrLight::SetRange (float {\em range})}}
+\label{class_gr_light_c3e94f351a1f1b794012085bf064567f}
+
+
+
+
+Definition at line 256 of file GrLight.cpp.\hypertarget{class_gr_light_509f7eed244a60f3b27281049b7410e2}{
+\index{GrLight@{GrLight}!SetRange@{SetRange}}
+\index{SetRange@{SetRange}!GrLight@{GrLight}}
+\subsubsection[{SetRange}]{\setlength{\rightskip}{0pt plus 5cm}void GrLight::SetRange ({\bf URef}$<$ {\bf UExprTerm} $>$ {\em range})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_light_509f7eed244a60f3b27281049b7410e2}
+
+
+
+
+Definition at line 101 of file GrLight.h.\hypertarget{class_gr_light_85197478e33da961098f11a9f63e31e1}{
+\index{GrLight@{GrLight}!SetSqrAtten@{SetSqrAtten}}
+\index{SetSqrAtten@{SetSqrAtten}!GrLight@{GrLight}}
+\subsubsection[{SetSqrAtten}]{\setlength{\rightskip}{0pt plus 5cm}void GrLight::SetSqrAtten (float {\em atten})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_light_85197478e33da961098f11a9f63e31e1}
+
+
+
+
+Definition at line 107 of file GrLight.h.\hypertarget{class_gr_light_e9d277fb571428a9afdcc84e773718e0}{
+\index{GrLight@{GrLight}!SetWidth@{SetWidth}}
+\index{SetWidth@{SetWidth}!GrLight@{GrLight}}
+\subsubsection[{SetWidth}]{\setlength{\rightskip}{0pt plus 5cm}void GrLight::SetWidth (float {\em width})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_light_e9d277fb571428a9afdcc84e773718e0}
+
+
+
+
+Definition at line 106 of file GrLight.h.\hypertarget{class_gr_light_f7fafb95d904499e073a94783b624bf9}{
+\index{GrLight@{GrLight}!Update@{Update}}
+\index{Update@{Update}!GrLight@{GrLight}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void GrLight::Update ()}}
+\label{class_gr_light_f7fafb95d904499e073a94783b624bf9}
+
+
+
+
+Definition at line 271 of file GrLight.cpp.\hypertarget{class_gr_light_97c448c6a785fd77ba475f5a0f4a2c5f}{
+\index{GrLight@{GrLight}!UpdateWorldTransform@{UpdateWorldTransform}}
+\index{UpdateWorldTransform@{UpdateWorldTransform}!GrLight@{GrLight}}
+\subsubsection[{UpdateWorldTransform}]{\setlength{\rightskip}{0pt plus 5cm}void GrLight::UpdateWorldTransform ()\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_gr_light_97c448c6a785fd77ba475f5a0f4a2c5f}
+
+
+
+
+Definition at line 287 of file GrLight.cpp.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_gr_light_6c14df5bd91c6d8928ed198cc11424b5}{
+\index{GrLight@{GrLight}!\_\-cachedColor@{\_\-cachedColor}}
+\index{\_\-cachedColor@{\_\-cachedColor}!GrLight@{GrLight}}
+\subsubsection[{\_\-cachedColor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrColor} {\bf GrLight::\_\-cachedColor}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_gr_light_6c14df5bd91c6d8928ed198cc11424b5}
+
+
+
+
+Definition at line 168 of file GrLight.h.\hypertarget{class_gr_light_e8f05c795e23f3fdf3c19d741ca05249}{
+\index{GrLight@{GrLight}!\_\-cachedIntensity@{\_\-cachedIntensity}}
+\index{\_\-cachedIntensity@{\_\-cachedIntensity}!GrLight@{GrLight}}
+\subsubsection[{\_\-cachedIntensity}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf GrLight::\_\-cachedIntensity}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_gr_light_e8f05c795e23f3fdf3c19d741ca05249}
+
+
+
+
+Definition at line 170 of file GrLight.h.\hypertarget{class_gr_light_1f981e227788c6ffdb67a784cfb5fc0a}{
+\index{GrLight@{GrLight}!\_\-cachedRange@{\_\-cachedRange}}
+\index{\_\-cachedRange@{\_\-cachedRange}!GrLight@{GrLight}}
+\subsubsection[{\_\-cachedRange}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf GrLight::\_\-cachedRange}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_gr_light_1f981e227788c6ffdb67a784cfb5fc0a}
+
+
+
+
+Definition at line 172 of file GrLight.h.\hypertarget{class_gr_light_14d77a9c1e384353535a4a16f3f7b9a3}{
+\index{GrLight@{GrLight}!\_\-castShadow@{\_\-castShadow}}
+\index{\_\-castShadow@{\_\-castShadow}!GrLight@{GrLight}}
+\subsubsection[{\_\-castShadow}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf GrLight::\_\-castShadow}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_gr_light_14d77a9c1e384353535a4a16f3f7b9a3}
+
+
+
+
+Definition at line 184 of file GrLight.h.\hypertarget{class_gr_light_ba85bb3363501d63dfbd46adb583aaba}{
+\index{GrLight@{GrLight}!\_\-color@{\_\-color}}
+\index{\_\-color@{\_\-color}!GrLight@{GrLight}}
+\subsubsection[{\_\-color}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrColor} {\bf GrLight::\_\-color}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_gr_light_ba85bb3363501d63dfbd46adb583aaba}
+
+
+
+
+Definition at line 167 of file GrLight.h.\hypertarget{class_gr_light_561e3666c6af8ff045d49e4b1b1d84cb}{
+\index{GrLight@{GrLight}!\_\-constAtten@{\_\-constAtten}}
+\index{\_\-constAtten@{\_\-constAtten}!GrLight@{GrLight}}
+\subsubsection[{\_\-constAtten}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf GrLight::\_\-constAtten}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_gr_light_561e3666c6af8ff045d49e4b1b1d84cb}
+
+
+
+
+Definition at line 179 of file GrLight.h.\hypertarget{class_gr_light_3913d6edaa0a232aea68b9878fe75ca0}{
+\index{GrLight@{GrLight}!\_\-direction@{\_\-direction}}
+\index{\_\-direction@{\_\-direction}!GrLight@{GrLight}}
+\subsubsection[{\_\-direction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MVec3} {\bf GrLight::\_\-direction}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_gr_light_3913d6edaa0a232aea68b9878fe75ca0}
+
+
+
+
+Definition at line 164 of file GrLight.h.\hypertarget{class_gr_light_4e23b3f45bcd5f1a33352286db1effb9}{
+\index{GrLight@{GrLight}!\_\-global@{\_\-global}}
+\index{\_\-global@{\_\-global}!GrLight@{GrLight}}
+\subsubsection[{\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf GrLight::\_\-global}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_gr_light_4e23b3f45bcd5f1a33352286db1effb9}
+
+
+
+
+Definition at line 187 of file GrLight.h.\hypertarget{class_gr_light_8afa1f0c0b67e9019c659ef97a840110}{
+\index{GrLight@{GrLight}!\_\-haziness@{\_\-haziness}}
+\index{\_\-haziness@{\_\-haziness}!GrLight@{GrLight}}
+\subsubsection[{\_\-haziness}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf GrLight::\_\-haziness}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_gr_light_8afa1f0c0b67e9019c659ef97a840110}
+
+
+
+
+Definition at line 180 of file GrLight.h.\hypertarget{class_gr_light_e62c43ff3876520d58328957f42d617b}{
+\index{GrLight@{GrLight}!\_\-id@{\_\-id}}
+\index{\_\-id@{\_\-id}!GrLight@{GrLight}}
+\subsubsection[{\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UPath} {\bf GrLight::\_\-id}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_gr_light_e62c43ff3876520d58328957f42d617b}
+
+
+
+
+Definition at line 156 of file GrLight.h.\hypertarget{class_gr_light_17a6414681ade62467624a3149c3b499}{
+\index{GrLight@{GrLight}!\_\-intensity@{\_\-intensity}}
+\index{\_\-intensity@{\_\-intensity}!GrLight@{GrLight}}
+\subsubsection[{\_\-intensity}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<${\bf UExprTerm}$>$ {\bf GrLight::\_\-intensity}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_gr_light_17a6414681ade62467624a3149c3b499}
+
+
+
+
+Definition at line 169 of file GrLight.h.\hypertarget{class_gr_light_27da8da902b606390ff4317d4b99aac0}{
+\index{GrLight@{GrLight}!\_\-linAtten@{\_\-linAtten}}
+\index{\_\-linAtten@{\_\-linAtten}!GrLight@{GrLight}}
+\subsubsection[{\_\-linAtten}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf GrLight::\_\-linAtten}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_gr_light_27da8da902b606390ff4317d4b99aac0}
+
+
+
+
+Definition at line 178 of file GrLight.h.\hypertarget{class_gr_light_b36a7430015dff850df027736b1bc01c}{
+\index{GrLight@{GrLight}!\_\-localBounds@{\_\-localBounds}}
+\index{\_\-localBounds@{\_\-localBounds}!GrLight@{GrLight}}
+\subsubsection[{\_\-localBounds}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MSphere} {\bf GrLight::\_\-localBounds}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_gr_light_b36a7430015dff850df027736b1bc01c}
+
+
+
+
+Definition at line 174 of file GrLight.h.\hypertarget{class_gr_light_2a3bceb8640e0c14c1193b7e9e0f5dfb}{
+\index{GrLight@{GrLight}!\_\-localTransform@{\_\-localTransform}}
+\index{\_\-localTransform@{\_\-localTransform}!GrLight@{GrLight}}
+\subsubsection[{\_\-localTransform}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MMat4x4} {\bf GrLight::\_\-localTransform}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_gr_light_2a3bceb8640e0c14c1193b7e9e0f5dfb}
+
+
+
+
+Definition at line 159 of file GrLight.h.\hypertarget{class_gr_light_e99e12ad16003bec82de9a31eb859d5d}{
+\index{GrLight@{GrLight}!\_\-mode@{\_\-mode}}
+\index{\_\-mode@{\_\-mode}!GrLight@{GrLight}}
+\subsubsection[{\_\-mode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ELIGHTMODE} {\bf GrLight::\_\-mode}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_gr_light_e99e12ad16003bec82de9a31eb859d5d}
+
+
+
+
+Definition at line 188 of file GrLight.h.\hypertarget{class_gr_light_91326c4911f07bf038ba37567ee2d45a}{
+\index{GrLight@{GrLight}!\_\-name@{\_\-name}}
+\index{\_\-name@{\_\-name}!GrLight@{GrLight}}
+\subsubsection[{\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tstring} {\bf GrLight::\_\-name}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_gr_light_91326c4911f07bf038ba37567ee2d45a}
+
+
+
+
+Definition at line 157 of file GrLight.h.\hypertarget{class_gr_light_e8e076faf998d07720755a05537af503}{
+\index{GrLight@{GrLight}!\_\-parallel@{\_\-parallel}}
+\index{\_\-parallel@{\_\-parallel}!GrLight@{GrLight}}
+\subsubsection[{\_\-parallel}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf GrLight::\_\-parallel}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_gr_light_e8e076faf998d07720755a05537af503}
+
+
+
+
+Definition at line 186 of file GrLight.h.\hypertarget{class_gr_light_abd86e7a88a4b1ad492f7042ccdf634b}{
+\index{GrLight@{GrLight}!\_\-parentTransform@{\_\-parentTransform}}
+\index{\_\-parentTransform@{\_\-parentTransform}!GrLight@{GrLight}}
+\subsubsection[{\_\-parentTransform}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MMat4x4} {\bf GrLight::\_\-parentTransform}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_gr_light_abd86e7a88a4b1ad492f7042ccdf634b}
+
+
+
+
+Definition at line 160 of file GrLight.h.\hypertarget{class_gr_light_e3d31e4913c06cc34f2ea5ab47937ca2}{
+\index{GrLight@{GrLight}!\_\-position@{\_\-position}}
+\index{\_\-position@{\_\-position}!GrLight@{GrLight}}
+\subsubsection[{\_\-position}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MVec3} {\bf GrLight::\_\-position}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_gr_light_e3d31e4913c06cc34f2ea5ab47937ca2}
+
+
+
+
+Definition at line 163 of file GrLight.h.\hypertarget{class_gr_light_a9c699d4b6090dc95a332abb6c6f525e}{
+\index{GrLight@{GrLight}!\_\-projection@{\_\-projection}}
+\index{\_\-projection@{\_\-projection}!GrLight@{GrLight}}
+\subsubsection[{\_\-projection}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrProjection} {\bf GrLight::\_\-projection}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_gr_light_a9c699d4b6090dc95a332abb6c6f525e}
+
+
+
+
+Definition at line 161 of file GrLight.h.\hypertarget{class_gr_light_214aad662401b11c0d967dffd7c913dc}{
+\index{GrLight@{GrLight}!\_\-projTex@{\_\-projTex}}
+\index{\_\-projTex@{\_\-projTex}!GrLight@{GrLight}}
+\subsubsection[{\_\-projTex}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<${\bf GrTexture}$>$ {\bf GrLight::\_\-projTex}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_gr_light_214aad662401b11c0d967dffd7c913dc}
+
+
+
+
+Definition at line 166 of file GrLight.h.\hypertarget{class_gr_light_e658483426095681c1fa182817964df8}{
+\index{GrLight@{GrLight}!\_\-range@{\_\-range}}
+\index{\_\-range@{\_\-range}!GrLight@{GrLight}}
+\subsubsection[{\_\-range}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<${\bf UExprTerm}$>$ {\bf GrLight::\_\-range}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_gr_light_e658483426095681c1fa182817964df8}
+
+
+
+
+Definition at line 171 of file GrLight.h.\hypertarget{class_gr_light_7d00fdeecaa254a552fbea55e82ea644}{
+\index{GrLight@{GrLight}!\_\-shadowLOD@{\_\-shadowLOD}}
+\index{\_\-shadowLOD@{\_\-shadowLOD}!GrLight@{GrLight}}
+\subsubsection[{\_\-shadowLOD}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf GrLight::\_\-shadowLOD}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_gr_light_7d00fdeecaa254a552fbea55e82ea644}
+
+
+
+
+Definition at line 183 of file GrLight.h.\hypertarget{class_gr_light_efd74a6030d308c8ddbb6d1694b83da2}{
+\index{GrLight@{GrLight}!\_\-sqrAtten@{\_\-sqrAtten}}
+\index{\_\-sqrAtten@{\_\-sqrAtten}!GrLight@{GrLight}}
+\subsubsection[{\_\-sqrAtten}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf GrLight::\_\-sqrAtten}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_gr_light_efd74a6030d308c8ddbb6d1694b83da2}
+
+
+
+
+Definition at line 177 of file GrLight.h.\hypertarget{class_gr_light_ba5ad710e4cff79152083a6919d607bb}{
+\index{GrLight@{GrLight}!\_\-texgenMatrix@{\_\-texgenMatrix}}
+\index{\_\-texgenMatrix@{\_\-texgenMatrix}!GrLight@{GrLight}}
+\subsubsection[{\_\-texgenMatrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MMat4x4} {\bf GrLight::\_\-texgenMatrix}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_gr_light_ba5ad710e4cff79152083a6919d607bb}
+
+
+
+
+Definition at line 162 of file GrLight.h.\hypertarget{class_gr_light_b80ea703a480e16f78ab3020983f4630}{
+\index{GrLight@{GrLight}!\_\-width@{\_\-width}}
+\index{\_\-width@{\_\-width}!GrLight@{GrLight}}
+\subsubsection[{\_\-width}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf GrLight::\_\-width}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_gr_light_b80ea703a480e16f78ab3020983f4630}
+
+
+
+
+Definition at line 182 of file GrLight.h.\hypertarget{class_gr_light_d6fc31fefe05cf233361472e01aa0964}{
+\index{GrLight@{GrLight}!\_\-worldBounds@{\_\-worldBounds}}
+\index{\_\-worldBounds@{\_\-worldBounds}!GrLight@{GrLight}}
+\subsubsection[{\_\-worldBounds}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MSphere} {\bf GrLight::\_\-worldBounds}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_gr_light_d6fc31fefe05cf233361472e01aa0964}
+
+
+
+
+Definition at line 175 of file GrLight.h.\hypertarget{class_gr_light_d5e7b0c00eb9f66d62bc5a45d0c4bbd1}{
+\index{GrLight@{GrLight}!\_\-worldTransform@{\_\-worldTransform}}
+\index{\_\-worldTransform@{\_\-worldTransform}!GrLight@{GrLight}}
+\subsubsection[{\_\-worldTransform}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MMat4x4} {\bf GrLight::\_\-worldTransform}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_gr_light_d5e7b0c00eb9f66d62bc5a45d0c4bbd1}
+
+
+
+
+Definition at line 158 of file GrLight.h.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_light_8h}{GrLight.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_light_8cpp}{GrLight.cpp}\end{CompactItemize}

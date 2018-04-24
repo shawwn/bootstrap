@@ -1,0 +1,89 @@
+\hypertarget{_gr_renderer_8cpp}{
+\section{C:/Bootstrap/ProjectBX/Engine/Graphics/GrRenderer.cpp File Reference}
+\label{_gr_renderer_8cpp}\index{C:/Bootstrap/ProjectBX/Engine/Graphics/GrRenderer.cpp@{C:/Bootstrap/ProjectBX/Engine/Graphics/GrRenderer.cpp}}
+}
+{\tt \#include \char`\"{}graphics\_\-afx.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrRenderer.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrShaderMgr.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrShader.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrTextureMgr.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrTexture3D.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrTextureCube.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrTexture.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrMeshInst.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrMaterial.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrMaterialPass.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrUtil.h\char`\"{}}\par
+{\tt \#include \char`\"{}GLSubsys.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrCamera.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrLight.h\char`\"{}}\par
+{\tt \#include \char`\"{}MMat3x3.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrShadowBuffer.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrMeshBufferMgr.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrMeshIB.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrRenderTarget.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrFramebuffer.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrImage.h\char`\"{}}\par
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \hyperlink{_gr_renderer_8cpp_d0de127391c20812d44747b84ead1af8}{MAX\_\-INDEX\_\-BATCH\_\-SIZE}~1048576
+\item 
+\#define \hyperlink{_gr_renderer_8cpp_97d2945e308f00140e6f68425c8f29ce}{POST\_\-PROCESS\_\-VERTEX\_\-COMPONENTS}
+\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_renderer}{GrRenderer} $\ast$ \hyperlink{_gr_renderer_8cpp_d75a49d60d82ab77ad52a21cdeb13ccd}{gGrRenderer} = 0
+\item 
+const unsigned int \hyperlink{_gr_renderer_8cpp_dcc9f630785c144fc9a2e0b32d540253}{kDepthBoundsTest} = 0x0001
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_gr_renderer_8cpp_d0de127391c20812d44747b84ead1af8}{
+\index{GrRenderer.cpp@{GrRenderer.cpp}!MAX\_\-INDEX\_\-BATCH\_\-SIZE@{MAX\_\-INDEX\_\-BATCH\_\-SIZE}}
+\index{MAX\_\-INDEX\_\-BATCH\_\-SIZE@{MAX\_\-INDEX\_\-BATCH\_\-SIZE}!GrRenderer.cpp@{GrRenderer.cpp}}
+\subsubsection[{MAX\_\-INDEX\_\-BATCH\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAX\_\-INDEX\_\-BATCH\_\-SIZE~1048576}}
+\label{_gr_renderer_8cpp_d0de127391c20812d44747b84ead1af8}
+
+
+
+
+Definition at line 42 of file GrRenderer.cpp.\hypertarget{_gr_renderer_8cpp_97d2945e308f00140e6f68425c8f29ce}{
+\index{GrRenderer.cpp@{GrRenderer.cpp}!POST\_\-PROCESS\_\-VERTEX\_\-COMPONENTS@{POST\_\-PROCESS\_\-VERTEX\_\-COMPONENTS}}
+\index{POST\_\-PROCESS\_\-VERTEX\_\-COMPONENTS@{POST\_\-PROCESS\_\-VERTEX\_\-COMPONENTS}!GrRenderer.cpp@{GrRenderer.cpp}}
+\subsubsection[{POST\_\-PROCESS\_\-VERTEX\_\-COMPONENTS}]{\setlength{\rightskip}{0pt plus 5cm}\#define POST\_\-PROCESS\_\-VERTEX\_\-COMPONENTS}}
+\label{_gr_renderer_8cpp_97d2945e308f00140e6f68425c8f29ce}
+
+
+\textbf{Value:}
+
+\begin{Code}\begin{verbatim}( GR_ATTRIB_POSITION_MASK | GR_ATTRIB_TANGENT_MASK | GR_ATTRIB_NORMAL_MASK | \
+                                                                                  GR_ATTRIB_BINORMAL_MASK | GR_ATTRIB_TEXCOORD_MASK )
+\end{verbatim}
+\end{Code}
+
+
+Definition at line 59 of file GrRenderer.cpp.
+
+\subsection{Variable Documentation}
+\hypertarget{_gr_renderer_8cpp_d75a49d60d82ab77ad52a21cdeb13ccd}{
+\index{GrRenderer.cpp@{GrRenderer.cpp}!gGrRenderer@{gGrRenderer}}
+\index{gGrRenderer@{gGrRenderer}!GrRenderer.cpp@{GrRenderer.cpp}}
+\subsubsection[{gGrRenderer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrRenderer}$\ast$ {\bf gGrRenderer} = 0}}
+\label{_gr_renderer_8cpp_d75a49d60d82ab77ad52a21cdeb13ccd}
+
+
+
+
+Definition at line 39 of file GrRenderer.cpp.\hypertarget{_gr_renderer_8cpp_dcc9f630785c144fc9a2e0b32d540253}{
+\index{GrRenderer.cpp@{GrRenderer.cpp}!kDepthBoundsTest@{kDepthBoundsTest}}
+\index{kDepthBoundsTest@{kDepthBoundsTest}!GrRenderer.cpp@{GrRenderer.cpp}}
+\subsubsection[{kDepthBoundsTest}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int {\bf kDepthBoundsTest} = 0x0001}}
+\label{_gr_renderer_8cpp_dcc9f630785c144fc9a2e0b32d540253}
+
+
+
+
+Definition at line 45 of file GrRenderer.cpp.

@@ -1,0 +1,171 @@
+\hypertarget{_gr_texture_base_8cpp}{
+\section{C:/Bootstrap/ProjectBX/Engine/Graphics/GrTextureBase.cpp File Reference}
+\label{_gr_texture_base_8cpp}\index{C:/Bootstrap/ProjectBX/Engine/Graphics/GrTextureBase.cpp@{C:/Bootstrap/ProjectBX/Engine/Graphics/GrTextureBase.cpp}}
+}
+{\tt \#include \char`\"{}graphics\_\-afx.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrTextureBase.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrTextureMgr.h\char`\"{}}\par
+{\tt \#include \char`\"{}GLSubsys.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrUtil.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrImage.h\char`\"{}}\par
+{\tt \#include \char`\"{}RFileMgr.h\char`\"{}}\par
+{\tt \#include \char`\"{}RFile.h\char`\"{}}\par
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+const unsigned int \hyperlink{_gr_texture_base_8cpp_cce0cd47d60eaa80e232ea6a977ad3ff}{kMinLevelIgnoreSize} = 1024
+\item 
+const bool \hyperlink{_gr_texture_base_8cpp_48b86171ea9aa816014067a40215562b}{\_\-compressMap} \mbox{[}$\,$\mbox{]}
+\item 
+const bool \hyperlink{_gr_texture_base_8cpp_efe47eec99fc2bc54dfba23a28e1c2a5}{\_\-canCompressMap} \mbox{[}GrTextureBase::EF\_\-COUNT\mbox{]}
+\item 
+const GLenum \hyperlink{_gr_texture_base_8cpp_507362177537a604f3ef25614d1e8c65}{\_\-internalFormatMap} \mbox{[}GrTextureBase::EF\_\-COUNT\mbox{]}
+\item 
+const GLenum \hyperlink{_gr_texture_base_8cpp_2a5e5a0a20366d3012fbbf038e85152d}{\_\-compressedInternalFormatMap} \mbox{[}GrTextureBase::EF\_\-COUNT\mbox{]}
+\end{CompactItemize}
+
+
+\subsection{Variable Documentation}
+\hypertarget{_gr_texture_base_8cpp_efe47eec99fc2bc54dfba23a28e1c2a5}{
+\index{GrTextureBase.cpp@{GrTextureBase.cpp}!\_\-canCompressMap@{\_\-canCompressMap}}
+\index{\_\-canCompressMap@{\_\-canCompressMap}!GrTextureBase.cpp@{GrTextureBase.cpp}}
+\subsubsection[{\_\-canCompressMap}]{\setlength{\rightskip}{0pt plus 5cm}const bool {\bf \_\-canCompressMap}\mbox{[}GrTextureBase::EF\_\-COUNT\mbox{]}}}
+\label{_gr_texture_base_8cpp_efe47eec99fc2bc54dfba23a28e1c2a5}
+
+
+\textbf{Initial value:}
+
+\begin{Code}\begin{verbatim} {
+        false,                          
+        false,                          
+        false,                          
+        true,                           
+        true,                           
+        true,                           
+        true,                           
+        false,                          
+        false,                          
+        false,                          
+        true,                           
+        true,                           
+        false,                          
+        false,                          
+        false,                          
+        false,                          
+        false,                          
+        false,                          
+        true,                           
+        false,                          
+        false,                          
+        false,                          
+        true,                           
+}
+\end{verbatim}
+\end{Code}
+
+
+Definition at line 34 of file GrTextureBase.cpp.\hypertarget{_gr_texture_base_8cpp_2a5e5a0a20366d3012fbbf038e85152d}{
+\index{GrTextureBase.cpp@{GrTextureBase.cpp}!\_\-compressedInternalFormatMap@{\_\-compressedInternalFormatMap}}
+\index{\_\-compressedInternalFormatMap@{\_\-compressedInternalFormatMap}!GrTextureBase.cpp@{GrTextureBase.cpp}}
+\subsubsection[{\_\-compressedInternalFormatMap}]{\setlength{\rightskip}{0pt plus 5cm}const GLenum {\bf \_\-compressedInternalFormatMap}\mbox{[}GrTextureBase::EF\_\-COUNT\mbox{]}}}
+\label{_gr_texture_base_8cpp_2a5e5a0a20366d3012fbbf038e85152d}
+
+
+\textbf{Initial value:}
+
+\begin{Code}\begin{verbatim} {
+        GL_COMPRESSED_RGB_S3TC_DXT1_EXT,        
+        GL_COMPRESSED_RGBA_S3TC_DXT5_EXT,       
+        GL_COMPRESSED_RED_RGTC1,                        
+        GL_COMPRESSED_RGB_S3TC_DXT1_EXT,        
+        GL_COMPRESSED_RGB_S3TC_DXT1_EXT,        
+        GL_COMPRESSED_RGBA_S3TC_DXT1_EXT,       
+        GL_COMPRESSED_RGBA_S3TC_DXT5_EXT,       
+        GL_RGB16F_ARB,                                          
+        GL_RGBA16F_ARB,                                         
+        GL_RGBA32F_ARB,                                         
+        GL_COMPRESSED_RED_RGTC1,                        
+        GL_COMPRESSED_RG_RGTC2,                         
+        GL_LUMINANCE8,                                          
+        GL_INTENSITY8,                                          
+        GL_INTENSITY16F_ARB,                            
+        GL_ALPHA8,                                                      
+        GL_LUMINANCE_ALPHA,                                     
+        GL_LUMINANCE_ALPHA16F_ARB,                      
+        GL_COMPRESSED_RGBA_S3TC_DXT5_EXT,       
+        GL_RGBA16F_ARB,                                         
+        GL_DEPTH_COMPONENT,                                     
+        GL_DEPTH_STENCIL_EXT,                           
+        GL_COMPRESSED_RGBA_S3TC_DXT5_EXT,       
+}
+\end{verbatim}
+\end{Code}
+
+
+Definition at line 86 of file GrTextureBase.cpp.\hypertarget{_gr_texture_base_8cpp_48b86171ea9aa816014067a40215562b}{
+\index{GrTextureBase.cpp@{GrTextureBase.cpp}!\_\-compressMap@{\_\-compressMap}}
+\index{\_\-compressMap@{\_\-compressMap}!GrTextureBase.cpp@{GrTextureBase.cpp}}
+\subsubsection[{\_\-compressMap}]{\setlength{\rightskip}{0pt plus 5cm}const bool {\bf \_\-compressMap}\mbox{[}$\,$\mbox{]}}}
+\label{_gr_texture_base_8cpp_48b86171ea9aa816014067a40215562b}
+
+
+\textbf{Initial value:}
+
+\begin{Code}\begin{verbatim} {
+        false,          
+        true,           
+        true,           
+        true,           
+}
+\end{verbatim}
+\end{Code}
+
+
+Definition at line 26 of file GrTextureBase.cpp.\hypertarget{_gr_texture_base_8cpp_507362177537a604f3ef25614d1e8c65}{
+\index{GrTextureBase.cpp@{GrTextureBase.cpp}!\_\-internalFormatMap@{\_\-internalFormatMap}}
+\index{\_\-internalFormatMap@{\_\-internalFormatMap}!GrTextureBase.cpp@{GrTextureBase.cpp}}
+\subsubsection[{\_\-internalFormatMap}]{\setlength{\rightskip}{0pt plus 5cm}const GLenum {\bf \_\-internalFormatMap}\mbox{[}GrTextureBase::EF\_\-COUNT\mbox{]}}}
+\label{_gr_texture_base_8cpp_507362177537a604f3ef25614d1e8c65}
+
+
+\textbf{Initial value:}
+
+\begin{Code}\begin{verbatim} {
+        GL_COMPRESSED_RGB_S3TC_DXT1_EXT,        
+        GL_COMPRESSED_RGBA_S3TC_DXT5_EXT,       
+        GL_COMPRESSED_RED_RGTC1,                        
+        GL_RGB5,                                                        
+        GL_RGB8,                                                        
+        GL_RGB5_A1,                                                     
+        GL_RGBA8,                                                       
+        GL_RGB16F_ARB,                                          
+        GL_RGBA16F_ARB,                                         
+        GL_RGBA32F_ARB,                                         
+        GL_R8,                                                          
+        GL_RG8,                                                         
+        GL_LUMINANCE8,                                          
+        GL_INTENSITY8,                                          
+        GL_INTENSITY16F_ARB,                            
+        GL_ALPHA8,                                                      
+        GL_LUMINANCE_ALPHA,                                     
+        GL_LUMINANCE_ALPHA16F_ARB,                      
+        GL_RGBA8,                                                       
+        GL_RGBA16F_ARB,                                         
+        GL_DEPTH_COMPONENT,                                     
+        GL_DEPTH_STENCIL_EXT,                           
+        GL_RGBA8,                                                       
+}
+\end{verbatim}
+\end{Code}
+
+
+Definition at line 60 of file GrTextureBase.cpp.\hypertarget{_gr_texture_base_8cpp_cce0cd47d60eaa80e232ea6a977ad3ff}{
+\index{GrTextureBase.cpp@{GrTextureBase.cpp}!kMinLevelIgnoreSize@{kMinLevelIgnoreSize}}
+\index{kMinLevelIgnoreSize@{kMinLevelIgnoreSize}!GrTextureBase.cpp@{GrTextureBase.cpp}}
+\subsubsection[{kMinLevelIgnoreSize}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int {\bf kMinLevelIgnoreSize} = 1024}}
+\label{_gr_texture_base_8cpp_cce0cd47d60eaa80e232ea6a977ad3ff}
+
+
+
+
+Definition at line 23 of file GrTextureBase.cpp.

@@ -1,0 +1,101 @@
+\hypertarget{_u_t_client_8h}{
+\section{C:/Bootstrap/ProjectBX/Engine/UberTexture/UTClient.h File Reference}
+\label{_u_t_client_8h}\index{C:/Bootstrap/ProjectBX/Engine/UberTexture/UTClient.h@{C:/Bootstrap/ProjectBX/Engine/UberTexture/UTClient.h}}
+}
+{\tt \#include \char`\"{}UTConfig.h\char`\"{}}\par
+{\tt \#include $<$stdlib.h$>$}\par
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+bool \hyperlink{_u_t_client_8h_aa80ddad505820b30d9f4a79e4d8a39d}{UTClientConnect} (const char $\ast$host, unsigned short port)
+\item 
+bool \hyperlink{_u_t_client_8h_8822ec1f29f974a5267f154062b92ad3}{UTClientDisconnect} ()
+\item 
+\hyperlink{struct_u_t__message__t}{UT\_\-message\_\-t} $\ast$ \hyperlink{_u_t_client_8h_37332b817546142d064d5f7de3e350e9}{UTClientQueueOutgoing} ()
+\item 
+\hyperlink{struct_u_t__message__t}{UT\_\-message\_\-t} $\ast$ \hyperlink{_u_t_client_8h_11727626642e61e2bbeecb0bb91d8e8a}{UTClientRemoveIncoming} ()
+\item 
+size\_\-t \hyperlink{_u_t_client_8h_3f04aee81822bf61153073fcfb91a78c}{UTClientOutgoingCount} ()
+\item 
+size\_\-t \hyperlink{_u_t_client_8h_dffaf42400fd71727e0eac14ac18d1c7}{UTClientIncomingCount} ()
+\item 
+bool \hyperlink{_u_t_client_8h_19a8b9032c9cc1faf9c9a698ff915991}{UTSyncToResponse} (unsigned int transactionId, unsigned int timeToWait=1000)
+\item 
+void \hyperlink{_u_t_client_8h_e040d3e1e944d062ccad7f318bdab973}{UTClientUpdateQueues} ()
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_u_t_client_8h_aa80ddad505820b30d9f4a79e4d8a39d}{
+\index{UTClient.h@{UTClient.h}!UTClientConnect@{UTClientConnect}}
+\index{UTClientConnect@{UTClientConnect}!UTClient.h@{UTClient.h}}
+\subsubsection[{UTClientConnect}]{\setlength{\rightskip}{0pt plus 5cm}bool UTClientConnect (const char $\ast$ {\em host}, \/  unsigned short {\em port})}}
+\label{_u_t_client_8h_aa80ddad505820b30d9f4a79e4d8a39d}
+
+
+
+
+Definition at line 60 of file UTClient.cpp.\hypertarget{_u_t_client_8h_8822ec1f29f974a5267f154062b92ad3}{
+\index{UTClient.h@{UTClient.h}!UTClientDisconnect@{UTClientDisconnect}}
+\index{UTClientDisconnect@{UTClientDisconnect}!UTClient.h@{UTClient.h}}
+\subsubsection[{UTClientDisconnect}]{\setlength{\rightskip}{0pt plus 5cm}bool UTClientDisconnect ()}}
+\label{_u_t_client_8h_8822ec1f29f974a5267f154062b92ad3}
+
+
+
+
+Definition at line 256 of file UTClient.cpp.\hypertarget{_u_t_client_8h_dffaf42400fd71727e0eac14ac18d1c7}{
+\index{UTClient.h@{UTClient.h}!UTClientIncomingCount@{UTClientIncomingCount}}
+\index{UTClientIncomingCount@{UTClientIncomingCount}!UTClient.h@{UTClient.h}}
+\subsubsection[{UTClientIncomingCount}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t UTClientIncomingCount ()}}
+\label{_u_t_client_8h_dffaf42400fd71727e0eac14ac18d1c7}
+
+
+
+
+Definition at line 332 of file UTClient.cpp.\hypertarget{_u_t_client_8h_3f04aee81822bf61153073fcfb91a78c}{
+\index{UTClient.h@{UTClient.h}!UTClientOutgoingCount@{UTClientOutgoingCount}}
+\index{UTClientOutgoingCount@{UTClientOutgoingCount}!UTClient.h@{UTClient.h}}
+\subsubsection[{UTClientOutgoingCount}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t UTClientOutgoingCount ()}}
+\label{_u_t_client_8h_3f04aee81822bf61153073fcfb91a78c}
+
+
+
+
+Definition at line 326 of file UTClient.cpp.\hypertarget{_u_t_client_8h_37332b817546142d064d5f7de3e350e9}{
+\index{UTClient.h@{UTClient.h}!UTClientQueueOutgoing@{UTClientQueueOutgoing}}
+\index{UTClientQueueOutgoing@{UTClientQueueOutgoing}!UTClient.h@{UTClient.h}}
+\subsubsection[{UTClientQueueOutgoing}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UT\_\-message\_\-t}$\ast$ UTClientQueueOutgoing ()}}
+\label{_u_t_client_8h_37332b817546142d064d5f7de3e350e9}
+
+
+
+
+Definition at line 304 of file UTClient.cpp.\hypertarget{_u_t_client_8h_11727626642e61e2bbeecb0bb91d8e8a}{
+\index{UTClient.h@{UTClient.h}!UTClientRemoveIncoming@{UTClientRemoveIncoming}}
+\index{UTClientRemoveIncoming@{UTClientRemoveIncoming}!UTClient.h@{UTClient.h}}
+\subsubsection[{UTClientRemoveIncoming}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UT\_\-message\_\-t}$\ast$ UTClientRemoveIncoming ()}}
+\label{_u_t_client_8h_11727626642e61e2bbeecb0bb91d8e8a}
+
+
+
+
+Definition at line 311 of file UTClient.cpp.\hypertarget{_u_t_client_8h_e040d3e1e944d062ccad7f318bdab973}{
+\index{UTClient.h@{UTClient.h}!UTClientUpdateQueues@{UTClientUpdateQueues}}
+\index{UTClientUpdateQueues@{UTClientUpdateQueues}!UTClient.h@{UTClient.h}}
+\subsubsection[{UTClientUpdateQueues}]{\setlength{\rightskip}{0pt plus 5cm}void UTClientUpdateQueues ()}}
+\label{_u_t_client_8h_e040d3e1e944d062ccad7f318bdab973}
+
+
+
+
+Definition at line 368 of file UTClient.cpp.\hypertarget{_u_t_client_8h_19a8b9032c9cc1faf9c9a698ff915991}{
+\index{UTClient.h@{UTClient.h}!UTSyncToResponse@{UTSyncToResponse}}
+\index{UTSyncToResponse@{UTSyncToResponse}!UTClient.h@{UTClient.h}}
+\subsubsection[{UTSyncToResponse}]{\setlength{\rightskip}{0pt plus 5cm}bool UTSyncToResponse (unsigned int {\em transactionId}, \/  unsigned int {\em timeToWait} = {\tt 1000})}}
+\label{_u_t_client_8h_19a8b9032c9cc1faf9c9a698ff915991}
+
+
+
+
+Definition at line 338 of file UTClient.cpp.

@@ -1,0 +1,257 @@
+\hypertarget{class_m_ray}{
+\section{MRay Class Reference}
+\label{class_m_ray}\index{MRay@{MRay}}
+}
+{\tt \#include $<$MRay.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_m_ray_5babd699f32d3d26c009a23fb7a16079}{MRay} ()
+\item 
+\hyperlink{class_m_ray_c9fb26538c0007be7fc62fda53519653}{MRay} (const \hyperlink{class_m_vec3}{MVec3} \&\hyperlink{glext__bak_8h_c55adc720a3098c1b454d2a4647f4361}{start}, const \hyperlink{class_m_vec3}{MVec3} \&dir)
+\item 
+\hyperlink{class_m_ray_23fc1bdfd8238df1124a73f541dd4563}{$\sim$MRay} ()
+\item 
+void \hyperlink{class_m_ray_116cc00ec9c732cf178a57a8110b3efe}{SetStart} (const \hyperlink{class_m_vec3}{MVec3} \&\hyperlink{glext__bak_8h_c55adc720a3098c1b454d2a4647f4361}{start})
+\item 
+void \hyperlink{class_m_ray_8239de44f8ebfe53f5d702aafb2e4804}{SetDir} (const \hyperlink{class_m_vec3}{MVec3} \&dir)
+\item 
+void \hyperlink{class_m_ray_5736afa27c05767f237c46842dece57f}{SetDirFast} (const \hyperlink{class_m_vec3}{MVec3} \&dir)
+\item 
+const \hyperlink{class_m_vec3}{MVec3} \& \hyperlink{class_m_ray_50cd4ec247b5df4a4a336478a3a19c91}{GetStart} () const 
+\item 
+const \hyperlink{class_m_vec3}{MVec3} \& \hyperlink{class_m_ray_cd7ab740f3c8ff43dd79f95ed9a969b6}{GetDir} () const 
+\item 
+bool \hyperlink{class_m_ray_d58f4fca993f73968696e69fa58f4a93}{Intersect} (const \hyperlink{class_m_a_a_box}{MAABox} \&box, float maxDist=FLT\_\-MAX) const 
+\item 
+bool \hyperlink{class_m_ray_fb0bbae116de05c8e324382792caa4c0}{Intersect} (\hyperlink{class_m_vec3}{MVec3} \&hitLoc, const \hyperlink{class_m_a_a_box}{MAABox} \&box, float maxDist=FLT\_\-MAX) const 
+\item 
+bool \hyperlink{class_m_ray_a1ba271e3402f579aa42db8bf9ff42f0}{Intersect} (const \hyperlink{class_m_o_box}{MOBox} \&box) const 
+\item 
+bool \hyperlink{class_m_ray_31a2e259d2ce5afbe1c7ee8cbcc60e63}{Intersect} (\hyperlink{class_m_vec3}{MVec3} \&\hyperlink{glext__bak_8h_4ad6f000813afde2b5727cbfdddc75be}{coord}, const \hyperlink{class_m_o_box}{MOBox} \&box) const 
+\item 
+bool \hyperlink{class_m_ray_ec4c564ad95eae52d3113431b89e1196}{Intersect} (const \hyperlink{class_m_sphere}{MSphere} \&sphere) const 
+\item 
+\hyperlink{class_m_ray}{MRay} \hyperlink{class_m_ray_7cd16f0d5b6882ebc5cf2f381af6e02a}{Transform} (const \hyperlink{class_m_mat4x4}{MMat4x4} \&mat, const \hyperlink{class_m_mat3x3}{MMat3x3} \&normalRot) const 
+\item 
+bool \hyperlink{class_m_ray_e8b4fd4410de61bd1e3d8db92e0bcbb7}{Intersect} (\hyperlink{class_m_vec3}{MVec3} \&hitPos, const \hyperlink{class_m_plane}{MPlane} \&plane, float maxDist) const 
+\item 
+bool \hyperlink{class_m_ray_ad9ff091b32845ef02aab6baa1bed1b1}{Intersect} (\hyperlink{class_m_vec3}{MVec3} \&point, float \&u, float \&\hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v}, const \hyperlink{class_m_vec3}{MVec3} \&pt0, const \hyperlink{class_m_vec3}{MVec3} \&pt1, const \hyperlink{class_m_vec3}{MVec3} \&pt2, bool twoSided=false) const 
+\item 
+bool \hyperlink{class_m_ray_5c809d98738674e546cc254e931ebe36}{Intersect} (float \&dist, \hyperlink{class_m_vec3}{MVec3} \&point, float \&u, float \&\hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v}, const \hyperlink{class_m_vec3}{MVec3} \&pt0, const \hyperlink{class_m_vec3}{MVec3} \&pt1, const \hyperlink{class_m_vec3}{MVec3} \&pt2, bool twoSided=false, float maxDist=FLT\_\-MAX) const 
+\item 
+bool \hyperlink{class_m_ray_773aeaf4f6aada0dfdc59da124e483ae}{Intersect} (\hyperlink{class_m_vec3}{MVec3} \&point, float \&u, float \&\hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v}, const \hyperlink{class_m_vec3}{MVec3} \&pt0, const \hyperlink{class_m_vec3}{MVec3} \&pt1, const \hyperlink{class_m_vec3}{MVec3} \&pt2, const \hyperlink{class_m_vec3}{MVec3} \&faceNormal, bool twoSided=false) const 
+\item 
+float \hyperlink{class_m_ray_258330bce7cfc69daff8f337e3a92215}{Dist} (const \hyperlink{class_m_vec3}{MVec3} \&point) const 
+\item 
+float \hyperlink{class_m_ray_1b6c914026833000ea9760f177a2f890}{Dist} (const \hyperlink{class_m_line_segment}{MLineSegment} \&segment, float epsilon) const 
+\item 
+float \hyperlink{class_m_ray_1500542719a23ff8e159e20c0e4cd350}{Dist} (const \hyperlink{class_m_line_segment}{MLineSegment} \&segment, float \&rayMu, float \&segMu, float epsilon) const 
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 27 of file MRay.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_m_ray_5babd699f32d3d26c009a23fb7a16079}{
+\index{MRay@{MRay}!MRay@{MRay}}
+\index{MRay@{MRay}!MRay@{MRay}}
+\subsubsection[{MRay}]{\setlength{\rightskip}{0pt plus 5cm}MRay::MRay ()}}
+\label{class_m_ray_5babd699f32d3d26c009a23fb7a16079}
+
+
+
+
+Definition at line 29 of file MRay.cpp.\hypertarget{class_m_ray_c9fb26538c0007be7fc62fda53519653}{
+\index{MRay@{MRay}!MRay@{MRay}}
+\index{MRay@{MRay}!MRay@{MRay}}
+\subsubsection[{MRay}]{\setlength{\rightskip}{0pt plus 5cm}MRay::MRay (const {\bf MVec3} \& {\em start}, \/  const {\bf MVec3} \& {\em dir})}}
+\label{class_m_ray_c9fb26538c0007be7fc62fda53519653}
+
+
+
+
+Definition at line 37 of file MRay.cpp.\hypertarget{class_m_ray_23fc1bdfd8238df1124a73f541dd4563}{
+\index{MRay@{MRay}!$\sim$MRay@{$\sim$MRay}}
+\index{$\sim$MRay@{$\sim$MRay}!MRay@{MRay}}
+\subsubsection[{$\sim$MRay}]{\setlength{\rightskip}{0pt plus 5cm}MRay::$\sim$MRay ()}}
+\label{class_m_ray_23fc1bdfd8238df1124a73f541dd4563}
+
+
+
+
+Definition at line 45 of file MRay.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_m_ray_1500542719a23ff8e159e20c0e4cd350}{
+\index{MRay@{MRay}!Dist@{Dist}}
+\index{Dist@{Dist}!MRay@{MRay}}
+\subsubsection[{Dist}]{\setlength{\rightskip}{0pt plus 5cm}float MRay::Dist (const {\bf MLineSegment} \& {\em segment}, \/  float \& {\em rayMu}, \/  float \& {\em segMu}, \/  float {\em epsilon}) const}}
+\label{class_m_ray_1500542719a23ff8e159e20c0e4cd350}
+
+
+
+
+Definition at line 678 of file MRay.cpp.\hypertarget{class_m_ray_1b6c914026833000ea9760f177a2f890}{
+\index{MRay@{MRay}!Dist@{Dist}}
+\index{Dist@{Dist}!MRay@{MRay}}
+\subsubsection[{Dist}]{\setlength{\rightskip}{0pt plus 5cm}float MRay::Dist (const {\bf MLineSegment} \& {\em segment}, \/  float {\em epsilon}) const}}
+\label{class_m_ray_1b6c914026833000ea9760f177a2f890}
+
+
+
+
+Definition at line 669 of file MRay.cpp.\hypertarget{class_m_ray_258330bce7cfc69daff8f337e3a92215}{
+\index{MRay@{MRay}!Dist@{Dist}}
+\index{Dist@{Dist}!MRay@{MRay}}
+\subsubsection[{Dist}]{\setlength{\rightskip}{0pt plus 5cm}float MRay::Dist (const {\bf MVec3} \& {\em point}) const}}
+\label{class_m_ray_258330bce7cfc69daff8f337e3a92215}
+
+
+
+
+Definition at line 642 of file MRay.cpp.\hypertarget{class_m_ray_cd7ab740f3c8ff43dd79f95ed9a969b6}{
+\index{MRay@{MRay}!GetDir@{GetDir}}
+\index{GetDir@{GetDir}!MRay@{MRay}}
+\subsubsection[{GetDir}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MVec3}\& MRay::GetDir () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_ray_cd7ab740f3c8ff43dd79f95ed9a969b6}
+
+
+
+
+Definition at line 39 of file MRay.h.\hypertarget{class_m_ray_50cd4ec247b5df4a4a336478a3a19c91}{
+\index{MRay@{MRay}!GetStart@{GetStart}}
+\index{GetStart@{GetStart}!MRay@{MRay}}
+\subsubsection[{GetStart}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MVec3}\& MRay::GetStart () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_ray_50cd4ec247b5df4a4a336478a3a19c91}
+
+
+
+
+Definition at line 38 of file MRay.h.\hypertarget{class_m_ray_773aeaf4f6aada0dfdc59da124e483ae}{
+\index{MRay@{MRay}!Intersect@{Intersect}}
+\index{Intersect@{Intersect}!MRay@{MRay}}
+\subsubsection[{Intersect}]{\setlength{\rightskip}{0pt plus 5cm}bool MRay::Intersect ({\bf MVec3} \& {\em point}, \/  float \& {\em u}, \/  float \& {\em v}, \/  const {\bf MVec3} \& {\em pt0}, \/  const {\bf MVec3} \& {\em pt1}, \/  const {\bf MVec3} \& {\em pt2}, \/  const {\bf MVec3} \& {\em faceNormal}, \/  bool {\em twoSided} = {\tt false}) const}}
+\label{class_m_ray_773aeaf4f6aada0dfdc59da124e483ae}
+
+
+
+
+Definition at line 574 of file MRay.cpp.\hypertarget{class_m_ray_5c809d98738674e546cc254e931ebe36}{
+\index{MRay@{MRay}!Intersect@{Intersect}}
+\index{Intersect@{Intersect}!MRay@{MRay}}
+\subsubsection[{Intersect}]{\setlength{\rightskip}{0pt plus 5cm}bool MRay::Intersect (float \& {\em dist}, \/  {\bf MVec3} \& {\em point}, \/  float \& {\em u}, \/  float \& {\em v}, \/  const {\bf MVec3} \& {\em pt0}, \/  const {\bf MVec3} \& {\em pt1}, \/  const {\bf MVec3} \& {\em pt2}, \/  bool {\em twoSided} = {\tt false}, \/  float {\em maxDist} = {\tt FLT\_\-MAX}) const}}
+\label{class_m_ray_5c809d98738674e546cc254e931ebe36}
+
+
+
+
+Definition at line 490 of file MRay.cpp.\hypertarget{class_m_ray_ad9ff091b32845ef02aab6baa1bed1b1}{
+\index{MRay@{MRay}!Intersect@{Intersect}}
+\index{Intersect@{Intersect}!MRay@{MRay}}
+\subsubsection[{Intersect}]{\setlength{\rightskip}{0pt plus 5cm}bool MRay::Intersect ({\bf MVec3} \& {\em point}, \/  float \& {\em u}, \/  float \& {\em v}, \/  const {\bf MVec3} \& {\em pt0}, \/  const {\bf MVec3} \& {\em pt1}, \/  const {\bf MVec3} \& {\em pt2}, \/  bool {\em twoSided} = {\tt false}) const}}
+\label{class_m_ray_ad9ff091b32845ef02aab6baa1bed1b1}
+
+
+
+
+Definition at line 414 of file MRay.cpp.\hypertarget{class_m_ray_e8b4fd4410de61bd1e3d8db92e0bcbb7}{
+\index{MRay@{MRay}!Intersect@{Intersect}}
+\index{Intersect@{Intersect}!MRay@{MRay}}
+\subsubsection[{Intersect}]{\setlength{\rightskip}{0pt plus 5cm}bool MRay::Intersect ({\bf MVec3} \& {\em hitPos}, \/  const {\bf MPlane} \& {\em plane}, \/  float {\em maxDist}) const}}
+\label{class_m_ray_e8b4fd4410de61bd1e3d8db92e0bcbb7}
+
+
+
+
+Definition at line 377 of file MRay.cpp.\hypertarget{class_m_ray_ec4c564ad95eae52d3113431b89e1196}{
+\index{MRay@{MRay}!Intersect@{Intersect}}
+\index{Intersect@{Intersect}!MRay@{MRay}}
+\subsubsection[{Intersect}]{\setlength{\rightskip}{0pt plus 5cm}bool MRay::Intersect (const {\bf MSphere} \& {\em sphere}) const}}
+\label{class_m_ray_ec4c564ad95eae52d3113431b89e1196}
+
+
+
+
+Definition at line 355 of file MRay.cpp.\hypertarget{class_m_ray_31a2e259d2ce5afbe1c7ee8cbcc60e63}{
+\index{MRay@{MRay}!Intersect@{Intersect}}
+\index{Intersect@{Intersect}!MRay@{MRay}}
+\subsubsection[{Intersect}]{\setlength{\rightskip}{0pt plus 5cm}bool MRay::Intersect ({\bf MVec3} \& {\em coord}, \/  const {\bf MOBox} \& {\em box}) const}}
+\label{class_m_ray_31a2e259d2ce5afbe1c7ee8cbcc60e63}
+
+
+
+
+Definition at line 260 of file MRay.cpp.\hypertarget{class_m_ray_a1ba271e3402f579aa42db8bf9ff42f0}{
+\index{MRay@{MRay}!Intersect@{Intersect}}
+\index{Intersect@{Intersect}!MRay@{MRay}}
+\subsubsection[{Intersect}]{\setlength{\rightskip}{0pt plus 5cm}bool MRay::Intersect (const {\bf MOBox} \& {\em box}) const}}
+\label{class_m_ray_a1ba271e3402f579aa42db8bf9ff42f0}
+
+
+
+
+Definition at line 167 of file MRay.cpp.\hypertarget{class_m_ray_fb0bbae116de05c8e324382792caa4c0}{
+\index{MRay@{MRay}!Intersect@{Intersect}}
+\index{Intersect@{Intersect}!MRay@{MRay}}
+\subsubsection[{Intersect}]{\setlength{\rightskip}{0pt plus 5cm}bool MRay::Intersect ({\bf MVec3} \& {\em hitLoc}, \/  const {\bf MAABox} \& {\em box}, \/  float {\em maxDist} = {\tt FLT\_\-MAX}) const}}
+\label{class_m_ray_fb0bbae116de05c8e324382792caa4c0}
+
+
+
+
+Definition at line 88 of file MRay.cpp.\hypertarget{class_m_ray_d58f4fca993f73968696e69fa58f4a93}{
+\index{MRay@{MRay}!Intersect@{Intersect}}
+\index{Intersect@{Intersect}!MRay@{MRay}}
+\subsubsection[{Intersect}]{\setlength{\rightskip}{0pt plus 5cm}bool MRay::Intersect (const {\bf MAABox} \& {\em box}, \/  float {\em maxDist} = {\tt FLT\_\-MAX}) const}}
+\label{class_m_ray_d58f4fca993f73968696e69fa58f4a93}
+
+
+
+
+Definition at line 80 of file MRay.cpp.\hypertarget{class_m_ray_8239de44f8ebfe53f5d702aafb2e4804}{
+\index{MRay@{MRay}!SetDir@{SetDir}}
+\index{SetDir@{SetDir}!MRay@{MRay}}
+\subsubsection[{SetDir}]{\setlength{\rightskip}{0pt plus 5cm}void MRay::SetDir (const {\bf MVec3} \& {\em dir})}}
+\label{class_m_ray_8239de44f8ebfe53f5d702aafb2e4804}
+
+
+
+
+Definition at line 57 of file MRay.cpp.\hypertarget{class_m_ray_5736afa27c05767f237c46842dece57f}{
+\index{MRay@{MRay}!SetDirFast@{SetDirFast}}
+\index{SetDirFast@{SetDirFast}!MRay@{MRay}}
+\subsubsection[{SetDirFast}]{\setlength{\rightskip}{0pt plus 5cm}void MRay::SetDirFast (const {\bf MVec3} \& {\em dir})}}
+\label{class_m_ray_5736afa27c05767f237c46842dece57f}
+
+
+
+
+Definition at line 65 of file MRay.cpp.\hypertarget{class_m_ray_116cc00ec9c732cf178a57a8110b3efe}{
+\index{MRay@{MRay}!SetStart@{SetStart}}
+\index{SetStart@{SetStart}!MRay@{MRay}}
+\subsubsection[{SetStart}]{\setlength{\rightskip}{0pt plus 5cm}void MRay::SetStart (const {\bf MVec3} \& {\em start})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_ray_116cc00ec9c732cf178a57a8110b3efe}
+
+
+
+
+Definition at line 34 of file MRay.h.\hypertarget{class_m_ray_7cd16f0d5b6882ebc5cf2f381af6e02a}{
+\index{MRay@{MRay}!Transform@{Transform}}
+\index{Transform@{Transform}!MRay@{MRay}}
+\subsubsection[{Transform}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MRay} MRay::Transform (const {\bf MMat4x4} \& {\em mat}, \/  const {\bf MMat3x3} \& {\em normalRot}) const}}
+\label{class_m_ray_7cd16f0d5b6882ebc5cf2f381af6e02a}
+
+
+
+
+Definition at line 407 of file MRay.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_m_ray_8h}{MRay.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_m_ray_8cpp}{MRay.cpp}\end{CompactItemize}

@@ -1,0 +1,191 @@
+\hypertarget{class_th_pipe_writer}{
+\section{ThPipeWriter Class Reference}
+\label{class_th_pipe_writer}\index{ThPipeWriter@{ThPipeWriter}}
+}
+{\tt \#include $<$ThPipeWriter.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_th_pipe_writer_625c375f059493e23431af41145fda05}{ThPipeWriter} ()
+\item 
+\hyperlink{class_th_pipe_writer_b7958e63e01c34ac4721547113b7fe52}{ThPipeWriter} (\hyperlink{class_th_pipe}{ThPipe} $\ast$pipe)
+\item 
+\hyperlink{class_th_pipe_writer_7126b2eac1d1e8c627326093146ad39e}{$\sim$ThPipeWriter} ()
+\item 
+void \hyperlink{class_th_pipe_writer_60ae27a251766f4d8dd2ee881e3671ef}{Reset} (\hyperlink{class_th_pipe}{ThPipe} $\ast$pipe)
+\item 
+void \hyperlink{class_th_pipe_writer_8051b8a2b7f9482c97bdfed67103ed30}{WriteString} (const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&str, bool writeNullTerm=true)
+\item 
+void \hyperlink{class_th_pipe_writer_4b3772d0c7fa0f06add7ea34f80c6aaa}{WriteString} (const char $\ast$str, bool writeNullTerm=true)
+\item 
+void \hyperlink{class_th_pipe_writer_7b7180984049c3dcb29db2342eda82a2}{WriteChar} (char ch)
+\item 
+void \hyperlink{class_th_pipe_writer_51cf562b851763177d3d9ee26ce50245}{WriteByte} (unsigned char ch)
+\item 
+void \hyperlink{class_th_pipe_writer_aa8a14daeae216278150cca3e0ff505d}{WriteShort} (short \hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v})
+\item 
+void \hyperlink{class_th_pipe_writer_911ab6f8669f8c96658f2e539a6f4e84}{WriteInt} (int i)
+\item 
+void \hyperlink{class_th_pipe_writer_49f904b80a2b51d00d6e9f892d41575e}{WriteUInt} (unsigned int i)
+\item 
+void \hyperlink{class_th_pipe_writer_f34f1ac09c81ad04f88ce389d2f97056}{WriteFloat} (float f)
+\item 
+void \hyperlink{class_th_pipe_writer_e54cf707b37055a566eb4dbab7b72091}{WriteBytes} (const void $\ast$\hyperlink{glext__bak_8h_fd3b198d09b41a863127e5e2b29c4e53}{source}, unsigned int \hyperlink{glext__bak_8h_3d1e3edfcf61ca2d831883e1afbad89e}{size})
+\item 
+{\footnotesize template$<$typename \_\-T $>$ }\\void \hyperlink{class_th_pipe_writer_dd6200799026cc86186a2e400fbe297c}{WriteValue} (const \_\-T \&\hyperlink{glext__bak_8h_6a4f8a1a444e9080b297963b3db29fe0}{value})
+\item 
+void \hyperlink{class_th_pipe_writer_8efce3bace1019be225d62676c0e5f92}{Flush} ()
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 19 of file ThPipeWriter.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_th_pipe_writer_625c375f059493e23431af41145fda05}{
+\index{ThPipeWriter@{ThPipeWriter}!ThPipeWriter@{ThPipeWriter}}
+\index{ThPipeWriter@{ThPipeWriter}!ThPipeWriter@{ThPipeWriter}}
+\subsubsection[{ThPipeWriter}]{\setlength{\rightskip}{0pt plus 5cm}ThPipeWriter::ThPipeWriter ()}}
+\label{class_th_pipe_writer_625c375f059493e23431af41145fda05}
+
+
+
+
+Definition at line 24 of file ThPipeWriter.cpp.\hypertarget{class_th_pipe_writer_b7958e63e01c34ac4721547113b7fe52}{
+\index{ThPipeWriter@{ThPipeWriter}!ThPipeWriter@{ThPipeWriter}}
+\index{ThPipeWriter@{ThPipeWriter}!ThPipeWriter@{ThPipeWriter}}
+\subsubsection[{ThPipeWriter}]{\setlength{\rightskip}{0pt plus 5cm}ThPipeWriter::ThPipeWriter ({\bf ThPipe} $\ast$ {\em pipe})}}
+\label{class_th_pipe_writer_b7958e63e01c34ac4721547113b7fe52}
+
+
+
+
+Definition at line 34 of file ThPipeWriter.cpp.\hypertarget{class_th_pipe_writer_7126b2eac1d1e8c627326093146ad39e}{
+\index{ThPipeWriter@{ThPipeWriter}!$\sim$ThPipeWriter@{$\sim$ThPipeWriter}}
+\index{$\sim$ThPipeWriter@{$\sim$ThPipeWriter}!ThPipeWriter@{ThPipeWriter}}
+\subsubsection[{$\sim$ThPipeWriter}]{\setlength{\rightskip}{0pt plus 5cm}ThPipeWriter::$\sim$ThPipeWriter ()}}
+\label{class_th_pipe_writer_7126b2eac1d1e8c627326093146ad39e}
+
+
+
+
+Definition at line 49 of file ThPipeWriter.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_th_pipe_writer_8efce3bace1019be225d62676c0e5f92}{
+\index{ThPipeWriter@{ThPipeWriter}!Flush@{Flush}}
+\index{Flush@{Flush}!ThPipeWriter@{ThPipeWriter}}
+\subsubsection[{Flush}]{\setlength{\rightskip}{0pt plus 5cm}void ThPipeWriter::Flush ()}}
+\label{class_th_pipe_writer_8efce3bace1019be225d62676c0e5f92}
+
+
+
+
+Definition at line 180 of file ThPipeWriter.cpp.\hypertarget{class_th_pipe_writer_60ae27a251766f4d8dd2ee881e3671ef}{
+\index{ThPipeWriter@{ThPipeWriter}!Reset@{Reset}}
+\index{Reset@{Reset}!ThPipeWriter@{ThPipeWriter}}
+\subsubsection[{Reset}]{\setlength{\rightskip}{0pt plus 5cm}void ThPipeWriter::Reset ({\bf ThPipe} $\ast$ {\em pipe})}}
+\label{class_th_pipe_writer_60ae27a251766f4d8dd2ee881e3671ef}
+
+
+
+
+Definition at line 62 of file ThPipeWriter.cpp.\hypertarget{class_th_pipe_writer_51cf562b851763177d3d9ee26ce50245}{
+\index{ThPipeWriter@{ThPipeWriter}!WriteByte@{WriteByte}}
+\index{WriteByte@{WriteByte}!ThPipeWriter@{ThPipeWriter}}
+\subsubsection[{WriteByte}]{\setlength{\rightskip}{0pt plus 5cm}void ThPipeWriter::WriteByte (unsigned char {\em ch})}}
+\label{class_th_pipe_writer_51cf562b851763177d3d9ee26ce50245}
+
+
+
+
+Definition at line 105 of file ThPipeWriter.cpp.\hypertarget{class_th_pipe_writer_e54cf707b37055a566eb4dbab7b72091}{
+\index{ThPipeWriter@{ThPipeWriter}!WriteBytes@{WriteBytes}}
+\index{WriteBytes@{WriteBytes}!ThPipeWriter@{ThPipeWriter}}
+\subsubsection[{WriteBytes}]{\setlength{\rightskip}{0pt plus 5cm}void ThPipeWriter::WriteBytes (const void $\ast$ {\em source}, \/  unsigned int {\em size})}}
+\label{class_th_pipe_writer_e54cf707b37055a566eb4dbab7b72091}
+
+
+
+
+Definition at line 144 of file ThPipeWriter.cpp.\hypertarget{class_th_pipe_writer_7b7180984049c3dcb29db2342eda82a2}{
+\index{ThPipeWriter@{ThPipeWriter}!WriteChar@{WriteChar}}
+\index{WriteChar@{WriteChar}!ThPipeWriter@{ThPipeWriter}}
+\subsubsection[{WriteChar}]{\setlength{\rightskip}{0pt plus 5cm}void ThPipeWriter::WriteChar (char {\em ch})}}
+\label{class_th_pipe_writer_7b7180984049c3dcb29db2342eda82a2}
+
+
+
+
+Definition at line 94 of file ThPipeWriter.cpp.\hypertarget{class_th_pipe_writer_f34f1ac09c81ad04f88ce389d2f97056}{
+\index{ThPipeWriter@{ThPipeWriter}!WriteFloat@{WriteFloat}}
+\index{WriteFloat@{WriteFloat}!ThPipeWriter@{ThPipeWriter}}
+\subsubsection[{WriteFloat}]{\setlength{\rightskip}{0pt plus 5cm}void ThPipeWriter::WriteFloat (float {\em f})}}
+\label{class_th_pipe_writer_f34f1ac09c81ad04f88ce389d2f97056}
+
+
+
+
+Definition at line 137 of file ThPipeWriter.cpp.\hypertarget{class_th_pipe_writer_911ab6f8669f8c96658f2e539a6f4e84}{
+\index{ThPipeWriter@{ThPipeWriter}!WriteInt@{WriteInt}}
+\index{WriteInt@{WriteInt}!ThPipeWriter@{ThPipeWriter}}
+\subsubsection[{WriteInt}]{\setlength{\rightskip}{0pt plus 5cm}void ThPipeWriter::WriteInt (int {\em i})}}
+\label{class_th_pipe_writer_911ab6f8669f8c96658f2e539a6f4e84}
+
+
+
+
+Definition at line 123 of file ThPipeWriter.cpp.\hypertarget{class_th_pipe_writer_aa8a14daeae216278150cca3e0ff505d}{
+\index{ThPipeWriter@{ThPipeWriter}!WriteShort@{WriteShort}}
+\index{WriteShort@{WriteShort}!ThPipeWriter@{ThPipeWriter}}
+\subsubsection[{WriteShort}]{\setlength{\rightskip}{0pt plus 5cm}void ThPipeWriter::WriteShort (short {\em v})}}
+\label{class_th_pipe_writer_aa8a14daeae216278150cca3e0ff505d}
+
+
+
+
+Definition at line 116 of file ThPipeWriter.cpp.\hypertarget{class_th_pipe_writer_4b3772d0c7fa0f06add7ea34f80c6aaa}{
+\index{ThPipeWriter@{ThPipeWriter}!WriteString@{WriteString}}
+\index{WriteString@{WriteString}!ThPipeWriter@{ThPipeWriter}}
+\subsubsection[{WriteString}]{\setlength{\rightskip}{0pt plus 5cm}void ThPipeWriter::WriteString (const char $\ast$ {\em str}, \/  bool {\em writeNullTerm} = {\tt true})}}
+\label{class_th_pipe_writer_4b3772d0c7fa0f06add7ea34f80c6aaa}
+
+
+
+
+Definition at line 86 of file ThPipeWriter.cpp.\hypertarget{class_th_pipe_writer_8051b8a2b7f9482c97bdfed67103ed30}{
+\index{ThPipeWriter@{ThPipeWriter}!WriteString@{WriteString}}
+\index{WriteString@{WriteString}!ThPipeWriter@{ThPipeWriter}}
+\subsubsection[{WriteString}]{\setlength{\rightskip}{0pt plus 5cm}void ThPipeWriter::WriteString (const {\bf tstring} \& {\em str}, \/  bool {\em writeNullTerm} = {\tt true})}}
+\label{class_th_pipe_writer_8051b8a2b7f9482c97bdfed67103ed30}
+
+
+
+
+Definition at line 77 of file ThPipeWriter.cpp.\hypertarget{class_th_pipe_writer_49f904b80a2b51d00d6e9f892d41575e}{
+\index{ThPipeWriter@{ThPipeWriter}!WriteUInt@{WriteUInt}}
+\index{WriteUInt@{WriteUInt}!ThPipeWriter@{ThPipeWriter}}
+\subsubsection[{WriteUInt}]{\setlength{\rightskip}{0pt plus 5cm}void ThPipeWriter::WriteUInt (unsigned int {\em i})}}
+\label{class_th_pipe_writer_49f904b80a2b51d00d6e9f892d41575e}
+
+
+
+
+Definition at line 130 of file ThPipeWriter.cpp.\hypertarget{class_th_pipe_writer_dd6200799026cc86186a2e400fbe297c}{
+\index{ThPipeWriter@{ThPipeWriter}!WriteValue@{WriteValue}}
+\index{WriteValue@{WriteValue}!ThPipeWriter@{ThPipeWriter}}
+\subsubsection[{WriteValue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-T $>$ void ThPipeWriter::WriteValue (const \_\-T \& {\em value})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_th_pipe_writer_dd6200799026cc86186a2e400fbe297c}
+
+
+
+
+Definition at line 70 of file ThPipeWriter.h.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_th_pipe_writer_8h}{ThPipeWriter.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_th_pipe_writer_8cpp}{ThPipeWriter.cpp}\end{CompactItemize}

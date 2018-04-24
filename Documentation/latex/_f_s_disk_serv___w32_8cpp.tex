@@ -1,0 +1,439 @@
+\hypertarget{_f_s_disk_serv___w32_8cpp}{
+\section{C:/Bootstrap/ProjectBX/Engine/FileSystem/FSDiskServ\_\-W32.cpp File Reference}
+\label{_f_s_disk_serv___w32_8cpp}\index{C:/Bootstrap/ProjectBX/Engine/FileSystem/FSDiskServ\_\-W32.cpp@{C:/Bootstrap/ProjectBX/Engine/FileSystem/FSDiskServ\_\-W32.cpp}}
+}
+{\tt \#include \char`\"{}filesystem\_\-afx.h\char`\"{}}\par
+{\tt \#include \char`\"{}FSDiskServ.h\char`\"{}}\par
+{\tt \#include $<$process.h$>$}\par
+{\tt \#include $<$WinIoCtl.h$>$}\par
+{\tt \#include $<$tchar.h$>$}\par
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+struct \hyperlink{struct_s_file__t}{SFile\_\-t}
+\item 
+struct \hyperlink{struct_s_file_op__t}{SFileOp\_\-t}
+\item 
+struct \hyperlink{struct_s_drive__t}{SDrive\_\-t}
+\end{CompactItemize}
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \hyperlink{_f_s_disk_serv___w32_8cpp_1bd31ca46edf8a2f66c3890a2dbbe564}{BLOCKS\_\-PER\_\-ALLOCATION}~1024
+\item 
+\#define \hyperlink{_f_s_disk_serv___w32_8cpp_f4832b48e562107b481016b88342a01a}{MAX\_\-BLOCK\_\-COUNT}~1024
+\item 
+\#define \hyperlink{_f_s_disk_serv___w32_8cpp_ecc4c5fadbda3d12a5a810f93cf2fe43}{MAX\_\-PENDING\_\-IO}~1024
+\item 
+\#define \hyperlink{_f_s_disk_serv___w32_8cpp_9d1051fc423c95127cfd80141482f402}{MAX\_\-DRIVE\_\-COUNT}~32
+\item 
+\#define \hyperlink{_f_s_disk_serv___w32_8cpp_2a4fe9cb315ee694da76ba944eaf709a}{DTYPE\_\-UNKNOWN}~0
+\item 
+\#define \hyperlink{_f_s_disk_serv___w32_8cpp_59280ff0687459cac3fb71320979ffb4}{DTYPE\_\-HDD}~1
+\item 
+\#define \hyperlink{_f_s_disk_serv___w32_8cpp_96150d499acf07fef7ded70fd4fa64f9}{DTYPE\_\-CD}~2
+\item 
+\#define \hyperlink{_f_s_disk_serv___w32_8cpp_0585de32c9d4f05c6ffdac6cb1250a66}{DTYPE\_\-DVD}~3
+\item 
+\#define \hyperlink{_f_s_disk_serv___w32_8cpp_05ce56e00d6fd51940257e8718ba3a88}{DISKCACHE\_\-SIZE\_\-HDD}~262144
+\item 
+\#define \hyperlink{_f_s_disk_serv___w32_8cpp_dc1c85a7d6e638c59856846ef388ec3e}{DISKCACHE\_\-SIZE\_\-CD}~131072
+\item 
+\#define \hyperlink{_f_s_disk_serv___w32_8cpp_4a3a2dd180a995d513762c53c95bd598}{DISKCACHE\_\-SIZE\_\-DVD}~131072
+\item 
+\#define \hyperlink{_f_s_disk_serv___w32_8cpp_7bbed87240f78355659b4285558e6a55}{LOOKAHEAD\_\-SIZE\_\-HDD}~65536
+\item 
+\#define \hyperlink{_f_s_disk_serv___w32_8cpp_c88e4ff9f0777c5ae5464096aa000832}{LOOKAHEAD\_\-SIZE\_\-CD}~65536
+\item 
+\#define \hyperlink{_f_s_disk_serv___w32_8cpp_af5e2dcc3f408e04b8ec74c129404749}{LOOKAHEAD\_\-SIZE\_\-DVD}~65536
+\item 
+\#define \hyperlink{_f_s_disk_serv___w32_8cpp_2177b3fe8493058fb7fa092ecf8bdbd6}{LOOKAHEAD\_\-COUNT\_\-HDD}~128
+\item 
+\#define \hyperlink{_f_s_disk_serv___w32_8cpp_73bbedde51b2263293c087d4ee3a45a9}{LOOKAHEAD\_\-COUNT\_\-CD}~512
+\item 
+\#define \hyperlink{_f_s_disk_serv___w32_8cpp_a7e35654383715365ac83c6dc625d43d}{LOOKAHEAD\_\-COUNT\_\-DVD}~512
+\item 
+\#define \hyperlink{_f_s_disk_serv___w32_8cpp_4f2067f0c6d65cc2382026aae315e15f}{SEEKBACK\_\-SIZE\_\-HDD}~8388608
+\item 
+\#define \hyperlink{_f_s_disk_serv___w32_8cpp_7d9a55bc9b2f042ecb83d94fe0e6aea1}{SEEKBACK\_\-SIZE\_\-CD}~2097152
+\item 
+\#define \hyperlink{_f_s_disk_serv___w32_8cpp_7be663e58042a12b717c191c8ab8b5c5}{SEEKBACK\_\-SIZE\_\-DVD}~4194304
+\end{CompactItemize}
+\subsection*{Typedefs}
+\begin{CompactItemize}
+\item 
+typedef struct \hyperlink{struct_s_file__t}{SFile\_\-t} \hyperlink{_f_s_disk_serv___w32_8cpp_a3b8146975d5fc4207dff40a6dec6626}{SFile}
+\item 
+typedef struct \hyperlink{struct_s_file_op__t}{SFileOp\_\-t} \hyperlink{_f_s_disk_serv___w32_8cpp_095f7f554b6ae3aaab9b00f27d7f552d}{SFileOp}
+\item 
+typedef struct \hyperlink{struct_s_drive__t}{SDrive\_\-t} \hyperlink{_f_s_disk_serv___w32_8cpp_630da930e26c1deb165f4229226561f2}{SDrive}
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+TCHAR $\ast$ \hyperlink{_f_s_disk_serv___w32_8cpp_10cc1bec4052cb5632c89bc9b1b6e633}{ConvertString} (const \hyperlink{filesystem__afx_8h_08b81c947811e6def5d8994fd4d76481}{FSchar} $\ast$\hyperlink{glext__bak_8h_949953309cda1573a7c5fd4ffe65904c}{string})
+\item 
+void \hyperlink{_f_s_disk_serv___w32_8cpp_cef30d4a2e6bb61af204268fb375313f}{FreeString} (TCHAR $\ast$\hyperlink{glext__bak_8h_949953309cda1573a7c5fd4ffe65904c}{string})
+\item 
+void \hyperlink{_f_s_disk_serv___w32_8cpp_639bb9787444e8c425eec0256793d968}{FS\_\-ScanDrives} ()
+\item 
+void $\ast$ \hyperlink{_f_s_disk_serv___w32_8cpp_64815f6582883caa8b5e134620e36d47}{FS\_\-OpenFile} (const \hyperlink{filesystem__afx_8h_08b81c947811e6def5d8994fd4d76481}{FSchar} $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, unsigned int \hyperlink{_u_t_message_8h_0a3c0b351ab09281b662a9ff4f900a53}{flags})
+\item 
+void \hyperlink{_f_s_disk_serv___w32_8cpp_29e88ae79f07f5d597e6729a4a66a76e}{FS\_\-CloseFile} (void $\ast$fileHandle)
+\item 
+\hyperlink{filesystem__afx_8h_2dfedf2033eee861d23c808f79ed5837}{FSsize} \hyperlink{_f_s_disk_serv___w32_8cpp_c13642cf33b2e0afa23742d1d8f9d8dc}{FS\_\-GetFileSize} (void $\ast$fileHandle)
+\item 
+void \hyperlink{_f_s_disk_serv___w32_8cpp_9e21afbbba101c7dc7be9a43fd5291f6}{FS\_\-ReadFile} (\hyperlink{struct_s_f_s_file_read_buffer__t}{SFSFileReadBuffer} $\ast$\hyperlink{glext__bak_8h_92034251bfd455d524a9b5610cddba00}{dst}, void $\ast$file, \hyperlink{filesystem__afx_8h_2dfedf2033eee861d23c808f79ed5837}{FSsize} \hyperlink{glext__bak_8h_a782f3aea23e3c30029c811241dc2c82}{offset}, unsigned int \hyperlink{glext__bak_8h_3d1e3edfcf61ca2d831883e1afbad89e}{size})
+\item 
+void \hyperlink{_f_s_disk_serv___w32_8cpp_c7abe5c9b19a9611de00573a09fd3a61}{FS\_\-WriteFile} (void $\ast$file, \hyperlink{filesystem__afx_8h_2dfedf2033eee861d23c808f79ed5837}{FSsize} \hyperlink{glext__bak_8h_a782f3aea23e3c30029c811241dc2c82}{offset}, \hyperlink{struct_s_f_s_file_write_buffer__t}{SFSFileWriteBuffer} $\ast$\hyperlink{glext__bak_8h_72e0fdf0f845ded60b1fada9e9195cd7}{src}, unsigned int \hyperlink{glext__bak_8h_3d1e3edfcf61ca2d831883e1afbad89e}{size})
+\item 
+void \hyperlink{_f_s_disk_serv___w32_8cpp_b8abbd85f1942b0f3dca1793ea4e8978}{FS\_\-Wait} (volatile int $\ast$gate)
+\item 
+bool \hyperlink{_f_s_disk_serv___w32_8cpp_013362d3615068eee7220194a88a4d73}{FS\_\-IsComplete} (volatile int $\ast$gate)
+\item 
+bool \hyperlink{_f_s_disk_serv___w32_8cpp_34306284dd0c7f5c8f91de947b3e43f1}{FS\_\-IsReadComplete} (\hyperlink{struct_s_f_s_file_read_buffer__t}{SFSFileReadBuffer} $\ast$readBuffer)
+\item 
+bool \hyperlink{_f_s_disk_serv___w32_8cpp_da15545e379beea3118877a61f7c4df6}{FS\_\-IsWriteComplete} (\hyperlink{struct_s_f_s_file_write_buffer__t}{SFSFileWriteBuffer} $\ast$writeBuffer)
+\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+void $\ast$($\ast$ \hyperlink{_f_s_disk_serv___w32_8cpp_552500941af2ffc7f64f1e8a0fe00a0c}{FSmalloc} )(size\_\-t \hyperlink{glext__bak_8h_3d1e3edfcf61ca2d831883e1afbad89e}{size}) = malloc
+\item 
+void($\ast$ \hyperlink{_f_s_disk_serv___w32_8cpp_87b9c234664a4d2cfabf2071df203fa6}{FSfree} )(void $\ast$mem) = free
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_f_s_disk_serv___w32_8cpp_1bd31ca46edf8a2f66c3890a2dbbe564}{
+\index{FSDiskServ\_\-W32.cpp@{FSDiskServ\_\-W32.cpp}!BLOCKS\_\-PER\_\-ALLOCATION@{BLOCKS\_\-PER\_\-ALLOCATION}}
+\index{BLOCKS\_\-PER\_\-ALLOCATION@{BLOCKS\_\-PER\_\-ALLOCATION}!FSDiskServ_W32.cpp@{FSDiskServ\_\-W32.cpp}}
+\subsubsection[{BLOCKS\_\-PER\_\-ALLOCATION}]{\setlength{\rightskip}{0pt plus 5cm}\#define BLOCKS\_\-PER\_\-ALLOCATION~1024}}
+\label{_f_s_disk_serv___w32_8cpp_1bd31ca46edf8a2f66c3890a2dbbe564}
+
+
+
+
+Definition at line 22 of file FSDiskServ\_\-W32.cpp.\hypertarget{_f_s_disk_serv___w32_8cpp_dc1c85a7d6e638c59856846ef388ec3e}{
+\index{FSDiskServ\_\-W32.cpp@{FSDiskServ\_\-W32.cpp}!DISKCACHE\_\-SIZE\_\-CD@{DISKCACHE\_\-SIZE\_\-CD}}
+\index{DISKCACHE\_\-SIZE\_\-CD@{DISKCACHE\_\-SIZE\_\-CD}!FSDiskServ_W32.cpp@{FSDiskServ\_\-W32.cpp}}
+\subsubsection[{DISKCACHE\_\-SIZE\_\-CD}]{\setlength{\rightskip}{0pt plus 5cm}\#define DISKCACHE\_\-SIZE\_\-CD~131072}}
+\label{_f_s_disk_serv___w32_8cpp_dc1c85a7d6e638c59856846ef388ec3e}
+
+
+
+
+Definition at line 42 of file FSDiskServ\_\-W32.cpp.\hypertarget{_f_s_disk_serv___w32_8cpp_4a3a2dd180a995d513762c53c95bd598}{
+\index{FSDiskServ\_\-W32.cpp@{FSDiskServ\_\-W32.cpp}!DISKCACHE\_\-SIZE\_\-DVD@{DISKCACHE\_\-SIZE\_\-DVD}}
+\index{DISKCACHE\_\-SIZE\_\-DVD@{DISKCACHE\_\-SIZE\_\-DVD}!FSDiskServ_W32.cpp@{FSDiskServ\_\-W32.cpp}}
+\subsubsection[{DISKCACHE\_\-SIZE\_\-DVD}]{\setlength{\rightskip}{0pt plus 5cm}\#define DISKCACHE\_\-SIZE\_\-DVD~131072}}
+\label{_f_s_disk_serv___w32_8cpp_4a3a2dd180a995d513762c53c95bd598}
+
+
+
+
+Definition at line 43 of file FSDiskServ\_\-W32.cpp.\hypertarget{_f_s_disk_serv___w32_8cpp_05ce56e00d6fd51940257e8718ba3a88}{
+\index{FSDiskServ\_\-W32.cpp@{FSDiskServ\_\-W32.cpp}!DISKCACHE\_\-SIZE\_\-HDD@{DISKCACHE\_\-SIZE\_\-HDD}}
+\index{DISKCACHE\_\-SIZE\_\-HDD@{DISKCACHE\_\-SIZE\_\-HDD}!FSDiskServ_W32.cpp@{FSDiskServ\_\-W32.cpp}}
+\subsubsection[{DISKCACHE\_\-SIZE\_\-HDD}]{\setlength{\rightskip}{0pt plus 5cm}\#define DISKCACHE\_\-SIZE\_\-HDD~262144}}
+\label{_f_s_disk_serv___w32_8cpp_05ce56e00d6fd51940257e8718ba3a88}
+
+
+
+
+Definition at line 41 of file FSDiskServ\_\-W32.cpp.\hypertarget{_f_s_disk_serv___w32_8cpp_96150d499acf07fef7ded70fd4fa64f9}{
+\index{FSDiskServ\_\-W32.cpp@{FSDiskServ\_\-W32.cpp}!DTYPE\_\-CD@{DTYPE\_\-CD}}
+\index{DTYPE\_\-CD@{DTYPE\_\-CD}!FSDiskServ_W32.cpp@{FSDiskServ\_\-W32.cpp}}
+\subsubsection[{DTYPE\_\-CD}]{\setlength{\rightskip}{0pt plus 5cm}\#define DTYPE\_\-CD~2}}
+\label{_f_s_disk_serv___w32_8cpp_96150d499acf07fef7ded70fd4fa64f9}
+
+
+
+
+Definition at line 33 of file FSDiskServ\_\-W32.cpp.\hypertarget{_f_s_disk_serv___w32_8cpp_0585de32c9d4f05c6ffdac6cb1250a66}{
+\index{FSDiskServ\_\-W32.cpp@{FSDiskServ\_\-W32.cpp}!DTYPE\_\-DVD@{DTYPE\_\-DVD}}
+\index{DTYPE\_\-DVD@{DTYPE\_\-DVD}!FSDiskServ_W32.cpp@{FSDiskServ\_\-W32.cpp}}
+\subsubsection[{DTYPE\_\-DVD}]{\setlength{\rightskip}{0pt plus 5cm}\#define DTYPE\_\-DVD~3}}
+\label{_f_s_disk_serv___w32_8cpp_0585de32c9d4f05c6ffdac6cb1250a66}
+
+
+
+
+Definition at line 34 of file FSDiskServ\_\-W32.cpp.\hypertarget{_f_s_disk_serv___w32_8cpp_59280ff0687459cac3fb71320979ffb4}{
+\index{FSDiskServ\_\-W32.cpp@{FSDiskServ\_\-W32.cpp}!DTYPE\_\-HDD@{DTYPE\_\-HDD}}
+\index{DTYPE\_\-HDD@{DTYPE\_\-HDD}!FSDiskServ_W32.cpp@{FSDiskServ\_\-W32.cpp}}
+\subsubsection[{DTYPE\_\-HDD}]{\setlength{\rightskip}{0pt plus 5cm}\#define DTYPE\_\-HDD~1}}
+\label{_f_s_disk_serv___w32_8cpp_59280ff0687459cac3fb71320979ffb4}
+
+
+
+
+Definition at line 32 of file FSDiskServ\_\-W32.cpp.\hypertarget{_f_s_disk_serv___w32_8cpp_2a4fe9cb315ee694da76ba944eaf709a}{
+\index{FSDiskServ\_\-W32.cpp@{FSDiskServ\_\-W32.cpp}!DTYPE\_\-UNKNOWN@{DTYPE\_\-UNKNOWN}}
+\index{DTYPE\_\-UNKNOWN@{DTYPE\_\-UNKNOWN}!FSDiskServ_W32.cpp@{FSDiskServ\_\-W32.cpp}}
+\subsubsection[{DTYPE\_\-UNKNOWN}]{\setlength{\rightskip}{0pt plus 5cm}\#define DTYPE\_\-UNKNOWN~0}}
+\label{_f_s_disk_serv___w32_8cpp_2a4fe9cb315ee694da76ba944eaf709a}
+
+
+
+
+Definition at line 31 of file FSDiskServ\_\-W32.cpp.\hypertarget{_f_s_disk_serv___w32_8cpp_73bbedde51b2263293c087d4ee3a45a9}{
+\index{FSDiskServ\_\-W32.cpp@{FSDiskServ\_\-W32.cpp}!LOOKAHEAD\_\-COUNT\_\-CD@{LOOKAHEAD\_\-COUNT\_\-CD}}
+\index{LOOKAHEAD\_\-COUNT\_\-CD@{LOOKAHEAD\_\-COUNT\_\-CD}!FSDiskServ_W32.cpp@{FSDiskServ\_\-W32.cpp}}
+\subsubsection[{LOOKAHEAD\_\-COUNT\_\-CD}]{\setlength{\rightskip}{0pt plus 5cm}\#define LOOKAHEAD\_\-COUNT\_\-CD~512}}
+\label{_f_s_disk_serv___w32_8cpp_73bbedde51b2263293c087d4ee3a45a9}
+
+
+
+
+Definition at line 50 of file FSDiskServ\_\-W32.cpp.\hypertarget{_f_s_disk_serv___w32_8cpp_a7e35654383715365ac83c6dc625d43d}{
+\index{FSDiskServ\_\-W32.cpp@{FSDiskServ\_\-W32.cpp}!LOOKAHEAD\_\-COUNT\_\-DVD@{LOOKAHEAD\_\-COUNT\_\-DVD}}
+\index{LOOKAHEAD\_\-COUNT\_\-DVD@{LOOKAHEAD\_\-COUNT\_\-DVD}!FSDiskServ_W32.cpp@{FSDiskServ\_\-W32.cpp}}
+\subsubsection[{LOOKAHEAD\_\-COUNT\_\-DVD}]{\setlength{\rightskip}{0pt plus 5cm}\#define LOOKAHEAD\_\-COUNT\_\-DVD~512}}
+\label{_f_s_disk_serv___w32_8cpp_a7e35654383715365ac83c6dc625d43d}
+
+
+
+
+Definition at line 51 of file FSDiskServ\_\-W32.cpp.\hypertarget{_f_s_disk_serv___w32_8cpp_2177b3fe8493058fb7fa092ecf8bdbd6}{
+\index{FSDiskServ\_\-W32.cpp@{FSDiskServ\_\-W32.cpp}!LOOKAHEAD\_\-COUNT\_\-HDD@{LOOKAHEAD\_\-COUNT\_\-HDD}}
+\index{LOOKAHEAD\_\-COUNT\_\-HDD@{LOOKAHEAD\_\-COUNT\_\-HDD}!FSDiskServ_W32.cpp@{FSDiskServ\_\-W32.cpp}}
+\subsubsection[{LOOKAHEAD\_\-COUNT\_\-HDD}]{\setlength{\rightskip}{0pt plus 5cm}\#define LOOKAHEAD\_\-COUNT\_\-HDD~128}}
+\label{_f_s_disk_serv___w32_8cpp_2177b3fe8493058fb7fa092ecf8bdbd6}
+
+
+
+
+Definition at line 49 of file FSDiskServ\_\-W32.cpp.\hypertarget{_f_s_disk_serv___w32_8cpp_c88e4ff9f0777c5ae5464096aa000832}{
+\index{FSDiskServ\_\-W32.cpp@{FSDiskServ\_\-W32.cpp}!LOOKAHEAD\_\-SIZE\_\-CD@{LOOKAHEAD\_\-SIZE\_\-CD}}
+\index{LOOKAHEAD\_\-SIZE\_\-CD@{LOOKAHEAD\_\-SIZE\_\-CD}!FSDiskServ_W32.cpp@{FSDiskServ\_\-W32.cpp}}
+\subsubsection[{LOOKAHEAD\_\-SIZE\_\-CD}]{\setlength{\rightskip}{0pt plus 5cm}\#define LOOKAHEAD\_\-SIZE\_\-CD~65536}}
+\label{_f_s_disk_serv___w32_8cpp_c88e4ff9f0777c5ae5464096aa000832}
+
+
+
+
+Definition at line 46 of file FSDiskServ\_\-W32.cpp.\hypertarget{_f_s_disk_serv___w32_8cpp_af5e2dcc3f408e04b8ec74c129404749}{
+\index{FSDiskServ\_\-W32.cpp@{FSDiskServ\_\-W32.cpp}!LOOKAHEAD\_\-SIZE\_\-DVD@{LOOKAHEAD\_\-SIZE\_\-DVD}}
+\index{LOOKAHEAD\_\-SIZE\_\-DVD@{LOOKAHEAD\_\-SIZE\_\-DVD}!FSDiskServ_W32.cpp@{FSDiskServ\_\-W32.cpp}}
+\subsubsection[{LOOKAHEAD\_\-SIZE\_\-DVD}]{\setlength{\rightskip}{0pt plus 5cm}\#define LOOKAHEAD\_\-SIZE\_\-DVD~65536}}
+\label{_f_s_disk_serv___w32_8cpp_af5e2dcc3f408e04b8ec74c129404749}
+
+
+
+
+Definition at line 47 of file FSDiskServ\_\-W32.cpp.\hypertarget{_f_s_disk_serv___w32_8cpp_7bbed87240f78355659b4285558e6a55}{
+\index{FSDiskServ\_\-W32.cpp@{FSDiskServ\_\-W32.cpp}!LOOKAHEAD\_\-SIZE\_\-HDD@{LOOKAHEAD\_\-SIZE\_\-HDD}}
+\index{LOOKAHEAD\_\-SIZE\_\-HDD@{LOOKAHEAD\_\-SIZE\_\-HDD}!FSDiskServ_W32.cpp@{FSDiskServ\_\-W32.cpp}}
+\subsubsection[{LOOKAHEAD\_\-SIZE\_\-HDD}]{\setlength{\rightskip}{0pt plus 5cm}\#define LOOKAHEAD\_\-SIZE\_\-HDD~65536}}
+\label{_f_s_disk_serv___w32_8cpp_7bbed87240f78355659b4285558e6a55}
+
+
+
+
+Definition at line 45 of file FSDiskServ\_\-W32.cpp.\hypertarget{_f_s_disk_serv___w32_8cpp_f4832b48e562107b481016b88342a01a}{
+\index{FSDiskServ\_\-W32.cpp@{FSDiskServ\_\-W32.cpp}!MAX\_\-BLOCK\_\-COUNT@{MAX\_\-BLOCK\_\-COUNT}}
+\index{MAX\_\-BLOCK\_\-COUNT@{MAX\_\-BLOCK\_\-COUNT}!FSDiskServ_W32.cpp@{FSDiskServ\_\-W32.cpp}}
+\subsubsection[{MAX\_\-BLOCK\_\-COUNT}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAX\_\-BLOCK\_\-COUNT~1024}}
+\label{_f_s_disk_serv___w32_8cpp_f4832b48e562107b481016b88342a01a}
+
+
+
+
+Definition at line 23 of file FSDiskServ\_\-W32.cpp.\hypertarget{_f_s_disk_serv___w32_8cpp_9d1051fc423c95127cfd80141482f402}{
+\index{FSDiskServ\_\-W32.cpp@{FSDiskServ\_\-W32.cpp}!MAX\_\-DRIVE\_\-COUNT@{MAX\_\-DRIVE\_\-COUNT}}
+\index{MAX\_\-DRIVE\_\-COUNT@{MAX\_\-DRIVE\_\-COUNT}!FSDiskServ_W32.cpp@{FSDiskServ\_\-W32.cpp}}
+\subsubsection[{MAX\_\-DRIVE\_\-COUNT}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAX\_\-DRIVE\_\-COUNT~32}}
+\label{_f_s_disk_serv___w32_8cpp_9d1051fc423c95127cfd80141482f402}
+
+
+
+
+Definition at line 28 of file FSDiskServ\_\-W32.cpp.\hypertarget{_f_s_disk_serv___w32_8cpp_ecc4c5fadbda3d12a5a810f93cf2fe43}{
+\index{FSDiskServ\_\-W32.cpp@{FSDiskServ\_\-W32.cpp}!MAX\_\-PENDING\_\-IO@{MAX\_\-PENDING\_\-IO}}
+\index{MAX\_\-PENDING\_\-IO@{MAX\_\-PENDING\_\-IO}!FSDiskServ_W32.cpp@{FSDiskServ\_\-W32.cpp}}
+\subsubsection[{MAX\_\-PENDING\_\-IO}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAX\_\-PENDING\_\-IO~1024}}
+\label{_f_s_disk_serv___w32_8cpp_ecc4c5fadbda3d12a5a810f93cf2fe43}
+
+
+
+
+Definition at line 27 of file FSDiskServ\_\-W32.cpp.\hypertarget{_f_s_disk_serv___w32_8cpp_7d9a55bc9b2f042ecb83d94fe0e6aea1}{
+\index{FSDiskServ\_\-W32.cpp@{FSDiskServ\_\-W32.cpp}!SEEKBACK\_\-SIZE\_\-CD@{SEEKBACK\_\-SIZE\_\-CD}}
+\index{SEEKBACK\_\-SIZE\_\-CD@{SEEKBACK\_\-SIZE\_\-CD}!FSDiskServ_W32.cpp@{FSDiskServ\_\-W32.cpp}}
+\subsubsection[{SEEKBACK\_\-SIZE\_\-CD}]{\setlength{\rightskip}{0pt plus 5cm}\#define SEEKBACK\_\-SIZE\_\-CD~2097152}}
+\label{_f_s_disk_serv___w32_8cpp_7d9a55bc9b2f042ecb83d94fe0e6aea1}
+
+
+
+
+Definition at line 54 of file FSDiskServ\_\-W32.cpp.\hypertarget{_f_s_disk_serv___w32_8cpp_7be663e58042a12b717c191c8ab8b5c5}{
+\index{FSDiskServ\_\-W32.cpp@{FSDiskServ\_\-W32.cpp}!SEEKBACK\_\-SIZE\_\-DVD@{SEEKBACK\_\-SIZE\_\-DVD}}
+\index{SEEKBACK\_\-SIZE\_\-DVD@{SEEKBACK\_\-SIZE\_\-DVD}!FSDiskServ_W32.cpp@{FSDiskServ\_\-W32.cpp}}
+\subsubsection[{SEEKBACK\_\-SIZE\_\-DVD}]{\setlength{\rightskip}{0pt plus 5cm}\#define SEEKBACK\_\-SIZE\_\-DVD~4194304}}
+\label{_f_s_disk_serv___w32_8cpp_7be663e58042a12b717c191c8ab8b5c5}
+
+
+
+
+Definition at line 55 of file FSDiskServ\_\-W32.cpp.\hypertarget{_f_s_disk_serv___w32_8cpp_4f2067f0c6d65cc2382026aae315e15f}{
+\index{FSDiskServ\_\-W32.cpp@{FSDiskServ\_\-W32.cpp}!SEEKBACK\_\-SIZE\_\-HDD@{SEEKBACK\_\-SIZE\_\-HDD}}
+\index{SEEKBACK\_\-SIZE\_\-HDD@{SEEKBACK\_\-SIZE\_\-HDD}!FSDiskServ_W32.cpp@{FSDiskServ\_\-W32.cpp}}
+\subsubsection[{SEEKBACK\_\-SIZE\_\-HDD}]{\setlength{\rightskip}{0pt plus 5cm}\#define SEEKBACK\_\-SIZE\_\-HDD~8388608}}
+\label{_f_s_disk_serv___w32_8cpp_4f2067f0c6d65cc2382026aae315e15f}
+
+
+
+
+Definition at line 53 of file FSDiskServ\_\-W32.cpp.
+
+\subsection{Typedef Documentation}
+\hypertarget{_f_s_disk_serv___w32_8cpp_630da930e26c1deb165f4229226561f2}{
+\index{FSDiskServ\_\-W32.cpp@{FSDiskServ\_\-W32.cpp}!SDrive@{SDrive}}
+\index{SDrive@{SDrive}!FSDiskServ_W32.cpp@{FSDiskServ\_\-W32.cpp}}
+\subsubsection[{SDrive}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf SDrive\_\-t}  {\bf SDrive}}}
+\label{_f_s_disk_serv___w32_8cpp_630da930e26c1deb165f4229226561f2}
+
+
+\hypertarget{_f_s_disk_serv___w32_8cpp_a3b8146975d5fc4207dff40a6dec6626}{
+\index{FSDiskServ\_\-W32.cpp@{FSDiskServ\_\-W32.cpp}!SFile@{SFile}}
+\index{SFile@{SFile}!FSDiskServ_W32.cpp@{FSDiskServ\_\-W32.cpp}}
+\subsubsection[{SFile}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf SFile\_\-t}  {\bf SFile}}}
+\label{_f_s_disk_serv___w32_8cpp_a3b8146975d5fc4207dff40a6dec6626}
+
+
+\hypertarget{_f_s_disk_serv___w32_8cpp_095f7f554b6ae3aaab9b00f27d7f552d}{
+\index{FSDiskServ\_\-W32.cpp@{FSDiskServ\_\-W32.cpp}!SFileOp@{SFileOp}}
+\index{SFileOp@{SFileOp}!FSDiskServ_W32.cpp@{FSDiskServ\_\-W32.cpp}}
+\subsubsection[{SFileOp}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf SFileOp\_\-t}  {\bf SFileOp}}}
+\label{_f_s_disk_serv___w32_8cpp_095f7f554b6ae3aaab9b00f27d7f552d}
+
+
+
+
+\subsection{Function Documentation}
+\hypertarget{_f_s_disk_serv___w32_8cpp_10cc1bec4052cb5632c89bc9b1b6e633}{
+\index{FSDiskServ\_\-W32.cpp@{FSDiskServ\_\-W32.cpp}!ConvertString@{ConvertString}}
+\index{ConvertString@{ConvertString}!FSDiskServ_W32.cpp@{FSDiskServ\_\-W32.cpp}}
+\subsubsection[{ConvertString}]{\setlength{\rightskip}{0pt plus 5cm}TCHAR $\ast$ ConvertString (const {\bf FSchar} $\ast$ {\em string})}}
+\label{_f_s_disk_serv___w32_8cpp_10cc1bec4052cb5632c89bc9b1b6e633}
+
+
+
+
+Definition at line 491 of file FSDiskServ\_\-W32.cpp.\hypertarget{_f_s_disk_serv___w32_8cpp_cef30d4a2e6bb61af204268fb375313f}{
+\index{FSDiskServ\_\-W32.cpp@{FSDiskServ\_\-W32.cpp}!FreeString@{FreeString}}
+\index{FreeString@{FreeString}!FSDiskServ_W32.cpp@{FSDiskServ\_\-W32.cpp}}
+\subsubsection[{FreeString}]{\setlength{\rightskip}{0pt plus 5cm}void FreeString (TCHAR $\ast$ {\em string})}}
+\label{_f_s_disk_serv___w32_8cpp_cef30d4a2e6bb61af204268fb375313f}
+
+
+
+
+Definition at line 505 of file FSDiskServ\_\-W32.cpp.\hypertarget{_f_s_disk_serv___w32_8cpp_29e88ae79f07f5d597e6729a4a66a76e}{
+\index{FSDiskServ\_\-W32.cpp@{FSDiskServ\_\-W32.cpp}!FS\_\-CloseFile@{FS\_\-CloseFile}}
+\index{FS\_\-CloseFile@{FS\_\-CloseFile}!FSDiskServ_W32.cpp@{FSDiskServ\_\-W32.cpp}}
+\subsubsection[{FS\_\-CloseFile}]{\setlength{\rightskip}{0pt plus 5cm}void FS\_\-CloseFile (void $\ast$ {\em fileHandle})}}
+\label{_f_s_disk_serv___w32_8cpp_29e88ae79f07f5d597e6729a4a66a76e}
+
+
+
+
+Definition at line 328 of file FSDiskServ\_\-W32.cpp.\hypertarget{_f_s_disk_serv___w32_8cpp_c13642cf33b2e0afa23742d1d8f9d8dc}{
+\index{FSDiskServ\_\-W32.cpp@{FSDiskServ\_\-W32.cpp}!FS\_\-GetFileSize@{FS\_\-GetFileSize}}
+\index{FS\_\-GetFileSize@{FS\_\-GetFileSize}!FSDiskServ_W32.cpp@{FSDiskServ\_\-W32.cpp}}
+\subsubsection[{FS\_\-GetFileSize}]{\setlength{\rightskip}{0pt plus 5cm}{\bf FSsize} FS\_\-GetFileSize (void $\ast$ {\em fileHandle})}}
+\label{_f_s_disk_serv___w32_8cpp_c13642cf33b2e0afa23742d1d8f9d8dc}
+
+
+
+
+Definition at line 357 of file FSDiskServ\_\-W32.cpp.\hypertarget{_f_s_disk_serv___w32_8cpp_013362d3615068eee7220194a88a4d73}{
+\index{FSDiskServ\_\-W32.cpp@{FSDiskServ\_\-W32.cpp}!FS\_\-IsComplete@{FS\_\-IsComplete}}
+\index{FS\_\-IsComplete@{FS\_\-IsComplete}!FSDiskServ_W32.cpp@{FSDiskServ\_\-W32.cpp}}
+\subsubsection[{FS\_\-IsComplete}]{\setlength{\rightskip}{0pt plus 5cm}bool FS\_\-IsComplete (volatile int $\ast$ {\em gate})}}
+\label{_f_s_disk_serv___w32_8cpp_013362d3615068eee7220194a88a4d73}
+
+
+
+
+Definition at line 467 of file FSDiskServ\_\-W32.cpp.\hypertarget{_f_s_disk_serv___w32_8cpp_34306284dd0c7f5c8f91de947b3e43f1}{
+\index{FSDiskServ\_\-W32.cpp@{FSDiskServ\_\-W32.cpp}!FS\_\-IsReadComplete@{FS\_\-IsReadComplete}}
+\index{FS\_\-IsReadComplete@{FS\_\-IsReadComplete}!FSDiskServ_W32.cpp@{FSDiskServ\_\-W32.cpp}}
+\subsubsection[{FS\_\-IsReadComplete}]{\setlength{\rightskip}{0pt plus 5cm}bool FS\_\-IsReadComplete ({\bf SFSFileReadBuffer} $\ast$ {\em readBuffer})}}
+\label{_f_s_disk_serv___w32_8cpp_34306284dd0c7f5c8f91de947b3e43f1}
+
+
+
+
+Definition at line 474 of file FSDiskServ\_\-W32.cpp.\hypertarget{_f_s_disk_serv___w32_8cpp_da15545e379beea3118877a61f7c4df6}{
+\index{FSDiskServ\_\-W32.cpp@{FSDiskServ\_\-W32.cpp}!FS\_\-IsWriteComplete@{FS\_\-IsWriteComplete}}
+\index{FS\_\-IsWriteComplete@{FS\_\-IsWriteComplete}!FSDiskServ_W32.cpp@{FSDiskServ\_\-W32.cpp}}
+\subsubsection[{FS\_\-IsWriteComplete}]{\setlength{\rightskip}{0pt plus 5cm}bool FS\_\-IsWriteComplete ({\bf SFSFileWriteBuffer} $\ast$ {\em writeBuffer})}}
+\label{_f_s_disk_serv___w32_8cpp_da15545e379beea3118877a61f7c4df6}
+
+
+
+
+Definition at line 480 of file FSDiskServ\_\-W32.cpp.\hypertarget{_f_s_disk_serv___w32_8cpp_64815f6582883caa8b5e134620e36d47}{
+\index{FSDiskServ\_\-W32.cpp@{FSDiskServ\_\-W32.cpp}!FS\_\-OpenFile@{FS\_\-OpenFile}}
+\index{FS\_\-OpenFile@{FS\_\-OpenFile}!FSDiskServ_W32.cpp@{FSDiskServ\_\-W32.cpp}}
+\subsubsection[{FS\_\-OpenFile}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ FS\_\-OpenFile (const {\bf FSchar} $\ast$ {\em name}, \/  unsigned int {\em flags})}}
+\label{_f_s_disk_serv___w32_8cpp_64815f6582883caa8b5e134620e36d47}
+
+
+
+
+Definition at line 167 of file FSDiskServ\_\-W32.cpp.\hypertarget{_f_s_disk_serv___w32_8cpp_9e21afbbba101c7dc7be9a43fd5291f6}{
+\index{FSDiskServ\_\-W32.cpp@{FSDiskServ\_\-W32.cpp}!FS\_\-ReadFile@{FS\_\-ReadFile}}
+\index{FS\_\-ReadFile@{FS\_\-ReadFile}!FSDiskServ_W32.cpp@{FSDiskServ\_\-W32.cpp}}
+\subsubsection[{FS\_\-ReadFile}]{\setlength{\rightskip}{0pt plus 5cm}void FS\_\-ReadFile ({\bf SFSFileReadBuffer} $\ast$ {\em dst}, \/  void $\ast$ {\em file}, \/  {\bf FSsize} {\em offset}, \/  unsigned int {\em size})}}
+\label{_f_s_disk_serv___w32_8cpp_9e21afbbba101c7dc7be9a43fd5291f6}
+
+
+
+
+Definition at line 375 of file FSDiskServ\_\-W32.cpp.\hypertarget{_f_s_disk_serv___w32_8cpp_639bb9787444e8c425eec0256793d968}{
+\index{FSDiskServ\_\-W32.cpp@{FSDiskServ\_\-W32.cpp}!FS\_\-ScanDrives@{FS\_\-ScanDrives}}
+\index{FS\_\-ScanDrives@{FS\_\-ScanDrives}!FSDiskServ_W32.cpp@{FSDiskServ\_\-W32.cpp}}
+\subsubsection[{FS\_\-ScanDrives}]{\setlength{\rightskip}{0pt plus 5cm}void FS\_\-ScanDrives ()}}
+\label{_f_s_disk_serv___w32_8cpp_639bb9787444e8c425eec0256793d968}
+
+
+
+
+Definition at line 154 of file FSDiskServ\_\-W32.cpp.\hypertarget{_f_s_disk_serv___w32_8cpp_b8abbd85f1942b0f3dca1793ea4e8978}{
+\index{FSDiskServ\_\-W32.cpp@{FSDiskServ\_\-W32.cpp}!FS\_\-Wait@{FS\_\-Wait}}
+\index{FS\_\-Wait@{FS\_\-Wait}!FSDiskServ_W32.cpp@{FSDiskServ\_\-W32.cpp}}
+\subsubsection[{FS\_\-Wait}]{\setlength{\rightskip}{0pt plus 5cm}void FS\_\-Wait (volatile int $\ast$ {\em gate})}}
+\label{_f_s_disk_serv___w32_8cpp_b8abbd85f1942b0f3dca1793ea4e8978}
+
+
+
+
+Definition at line 459 of file FSDiskServ\_\-W32.cpp.\hypertarget{_f_s_disk_serv___w32_8cpp_c7abe5c9b19a9611de00573a09fd3a61}{
+\index{FSDiskServ\_\-W32.cpp@{FSDiskServ\_\-W32.cpp}!FS\_\-WriteFile@{FS\_\-WriteFile}}
+\index{FS\_\-WriteFile@{FS\_\-WriteFile}!FSDiskServ_W32.cpp@{FSDiskServ\_\-W32.cpp}}
+\subsubsection[{FS\_\-WriteFile}]{\setlength{\rightskip}{0pt plus 5cm}void FS\_\-WriteFile (void $\ast$ {\em file}, \/  {\bf FSsize} {\em offset}, \/  {\bf SFSFileWriteBuffer} $\ast$ {\em src}, \/  unsigned int {\em size})}}
+\label{_f_s_disk_serv___w32_8cpp_c7abe5c9b19a9611de00573a09fd3a61}
+
+
+
+
+Definition at line 417 of file FSDiskServ\_\-W32.cpp.
+
+\subsection{Variable Documentation}
+\hypertarget{_f_s_disk_serv___w32_8cpp_87b9c234664a4d2cfabf2071df203fa6}{
+\index{FSDiskServ\_\-W32.cpp@{FSDiskServ\_\-W32.cpp}!FSfree@{FSfree}}
+\index{FSfree@{FSfree}!FSDiskServ_W32.cpp@{FSDiskServ\_\-W32.cpp}}
+\subsubsection[{FSfree}]{\setlength{\rightskip}{0pt plus 5cm}void( $\ast$ {\bf FSfree})(void $\ast$mem) = free}}
+\label{_f_s_disk_serv___w32_8cpp_87b9c234664a4d2cfabf2071df203fa6}
+
+
+\hypertarget{_f_s_disk_serv___w32_8cpp_552500941af2ffc7f64f1e8a0fe00a0c}{
+\index{FSDiskServ\_\-W32.cpp@{FSDiskServ\_\-W32.cpp}!FSmalloc@{FSmalloc}}
+\index{FSmalloc@{FSmalloc}!FSDiskServ_W32.cpp@{FSDiskServ\_\-W32.cpp}}
+\subsubsection[{FSmalloc}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$( $\ast$ {\bf FSmalloc})(size\_\-t {\bf size}) = malloc}}
+\label{_f_s_disk_serv___w32_8cpp_552500941af2ffc7f64f1e8a0fe00a0c}
+
+

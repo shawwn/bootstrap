@@ -1,0 +1,153 @@
+\hypertarget{class_u_l_r_u_list}{
+\section{ULRUList$<$ \_\-T $>$ Class Template Reference}
+\label{class_u_l_r_u_list}\index{ULRUList@{ULRUList}}
+}
+{\tt \#include $<$ULRUList.h$>$}
+
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+struct \textbf{SAgeItem}
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_u_l_r_u_list_60617daad530159dfed2bbcdb494897f}{ULRUList} (unsigned int \hyperlink{glext__bak_8h_3d1e3edfcf61ca2d831883e1afbad89e}{size})
+\item 
+\hyperlink{class_u_l_r_u_list_5c563d56e84b57d8f29d48ef9df2260e}{$\sim$ULRUList} ()
+\item 
+void $\ast$ \hyperlink{class_u_l_r_u_list_10c9b1c206a3dc2acf5e688ac21fa97a}{Add} (const \_\-T \&\hyperlink{glext__bak_8h_6a4f8a1a444e9080b297963b3db29fe0}{value})
+\item 
+void $\ast$ \hyperlink{class_u_l_r_u_list_a907bd91d86f83c36cc75febf2a94c03}{Remove} (void $\ast$key)
+\item 
+const \_\-T \& \hyperlink{class_u_l_r_u_list_7d10feee35c0cc4946e21347ef6cb3d2}{Get} (void $\ast$key) const 
+\item 
+void \hyperlink{class_u_l_r_u_list_7b8b53b874e87051b88f0ea688c9ae4a}{Set} (void $\ast$key, const \_\-T \&\hyperlink{glext__bak_8h_6a4f8a1a444e9080b297963b3db29fe0}{value})
+\item 
+void \hyperlink{class_u_l_r_u_list_ded91108c238c0886b0610b491d09894}{MarkUsed} (void $\ast$key)
+\item 
+void $\ast$ \hyperlink{class_u_l_r_u_list_3871983b8a1a2b18217bca744e00dc55}{GetLRUItem} () const 
+\item 
+void $\ast$ \hyperlink{class_u_l_r_u_list_bfe1f6cb202121429771b13bc90d6e91}{GetMRUItem} () const 
+\item 
+void $\ast$ \hyperlink{class_u_l_r_u_list_1ce92559ced183f4cece749b937dda2e}{GetNewer} (void $\ast$key) const 
+\item 
+void $\ast$ \hyperlink{class_u_l_r_u_list_66a73df62b1d9ee5cc3b42c22d38374b}{GetOlder} (void $\ast$key) const 
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class \_\-T$>$ class ULRUList$<$ \_\-T $>$}
+
+
+
+Definition at line 15 of file ULRUList.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_u_l_r_u_list_60617daad530159dfed2bbcdb494897f}{
+\index{ULRUList@{ULRUList}!ULRUList@{ULRUList}}
+\index{ULRUList@{ULRUList}!ULRUList@{ULRUList}}
+\subsubsection[{ULRUList}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class \_\-T $>$ {\bf ULRUList}$<$ \_\-T $>$::{\bf ULRUList} (unsigned int {\em size})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_l_r_u_list_60617daad530159dfed2bbcdb494897f}
+
+
+
+
+Definition at line 62 of file ULRUList.h.\hypertarget{class_u_l_r_u_list_5c563d56e84b57d8f29d48ef9df2260e}{
+\index{ULRUList@{ULRUList}!$\sim$ULRUList@{$\sim$ULRUList}}
+\index{$\sim$ULRUList@{$\sim$ULRUList}!ULRUList@{ULRUList}}
+\subsubsection[{$\sim$ULRUList}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class \_\-T $>$ {\bf ULRUList}$<$ \_\-T $>$::$\sim${\bf ULRUList} ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_l_r_u_list_5c563d56e84b57d8f29d48ef9df2260e}
+
+
+
+
+Definition at line 78 of file ULRUList.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_u_l_r_u_list_10c9b1c206a3dc2acf5e688ac21fa97a}{
+\index{ULRUList@{ULRUList}!Add@{Add}}
+\index{Add@{Add}!ULRUList@{ULRUList}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class \_\-T$>$ void $\ast$ {\bf ULRUList}$<$ \_\-T $>$::Add (const \_\-T \& {\em value})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_l_r_u_list_10c9b1c206a3dc2acf5e688ac21fa97a}
+
+
+
+
+Definition at line 108 of file ULRUList.h.\hypertarget{class_u_l_r_u_list_7d10feee35c0cc4946e21347ef6cb3d2}{
+\index{ULRUList@{ULRUList}!Get@{Get}}
+\index{Get@{Get}!ULRUList@{ULRUList}}
+\subsubsection[{Get}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class \_\-T $>$ const \_\-T \& {\bf ULRUList}$<$ \_\-T $>$::Get (void $\ast$ {\em key}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_l_r_u_list_7d10feee35c0cc4946e21347ef6cb3d2}
+
+
+
+
+Definition at line 170 of file ULRUList.h.\hypertarget{class_u_l_r_u_list_3871983b8a1a2b18217bca744e00dc55}{
+\index{ULRUList@{ULRUList}!GetLRUItem@{GetLRUItem}}
+\index{GetLRUItem@{GetLRUItem}!ULRUList@{ULRUList}}
+\subsubsection[{GetLRUItem}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class \_\-T $>$ void $\ast$ {\bf ULRUList}$<$ \_\-T $>$::GetLRUItem () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_l_r_u_list_3871983b8a1a2b18217bca744e00dc55}
+
+
+
+
+Definition at line 222 of file ULRUList.h.\hypertarget{class_u_l_r_u_list_bfe1f6cb202121429771b13bc90d6e91}{
+\index{ULRUList@{ULRUList}!GetMRUItem@{GetMRUItem}}
+\index{GetMRUItem@{GetMRUItem}!ULRUList@{ULRUList}}
+\subsubsection[{GetMRUItem}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class \_\-T $>$ void $\ast$ {\bf ULRUList}$<$ \_\-T $>$::GetMRUItem () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_l_r_u_list_bfe1f6cb202121429771b13bc90d6e91}
+
+
+
+
+Definition at line 230 of file ULRUList.h.\hypertarget{class_u_l_r_u_list_1ce92559ced183f4cece749b937dda2e}{
+\index{ULRUList@{ULRUList}!GetNewer@{GetNewer}}
+\index{GetNewer@{GetNewer}!ULRUList@{ULRUList}}
+\subsubsection[{GetNewer}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class \_\-T $>$ void $\ast$ {\bf ULRUList}$<$ \_\-T $>$::GetNewer (void $\ast$ {\em key}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_l_r_u_list_1ce92559ced183f4cece749b937dda2e}
+
+
+
+
+Definition at line 238 of file ULRUList.h.\hypertarget{class_u_l_r_u_list_66a73df62b1d9ee5cc3b42c22d38374b}{
+\index{ULRUList@{ULRUList}!GetOlder@{GetOlder}}
+\index{GetOlder@{GetOlder}!ULRUList@{ULRUList}}
+\subsubsection[{GetOlder}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class \_\-T $>$ void $\ast$ {\bf ULRUList}$<$ \_\-T $>$::GetOlder (void $\ast$ {\em key}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_l_r_u_list_66a73df62b1d9ee5cc3b42c22d38374b}
+
+
+
+
+Definition at line 246 of file ULRUList.h.\hypertarget{class_u_l_r_u_list_ded91108c238c0886b0610b491d09894}{
+\index{ULRUList@{ULRUList}!MarkUsed@{MarkUsed}}
+\index{MarkUsed@{MarkUsed}!ULRUList@{ULRUList}}
+\subsubsection[{MarkUsed}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class \_\-T $>$ void {\bf ULRUList}$<$ \_\-T $>$::MarkUsed (void $\ast$ {\em key})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_l_r_u_list_ded91108c238c0886b0610b491d09894}
+
+
+
+
+Definition at line 194 of file ULRUList.h.\hypertarget{class_u_l_r_u_list_a907bd91d86f83c36cc75febf2a94c03}{
+\index{ULRUList@{ULRUList}!Remove@{Remove}}
+\index{Remove@{Remove}!ULRUList@{ULRUList}}
+\subsubsection[{Remove}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class \_\-T $>$ void $\ast$ {\bf ULRUList}$<$ \_\-T $>$::Remove (void $\ast$ {\em key})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_l_r_u_list_a907bd91d86f83c36cc75febf2a94c03}
+
+
+
+
+Definition at line 139 of file ULRUList.h.\hypertarget{class_u_l_r_u_list_7b8b53b874e87051b88f0ea688c9ae4a}{
+\index{ULRUList@{ULRUList}!Set@{Set}}
+\index{Set@{Set}!ULRUList@{ULRUList}}
+\subsubsection[{Set}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class \_\-T$>$ void {\bf ULRUList}$<$ \_\-T $>$::Set (void $\ast$ {\em key}, \/  const \_\-T \& {\em value})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_l_r_u_list_7b8b53b874e87051b88f0ea688c9ae4a}
+
+
+
+
+Definition at line 182 of file ULRUList.h.
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_u_l_r_u_list_8h}{ULRUList.h}\end{CompactItemize}

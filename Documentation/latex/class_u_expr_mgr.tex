@@ -1,0 +1,178 @@
+\hypertarget{class_u_expr_mgr}{
+\section{UExprMgr Class Reference}
+\label{class_u_expr_mgr}\index{UExprMgr@{UExprMgr}}
+}
+{\tt \#include $<$UExprMgr.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_u_expr_mgr_b24ea40407f2cb207a97045051c7a10a}{UExprMgr} ()
+\item 
+\hyperlink{class_u_expr_mgr_30657d4463c40f1d5f09377274b9f9dd}{$\sim$UExprMgr} ()
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_u_expr_term}{UExprTerm} $>$ \hyperlink{class_u_expr_mgr_a6d17d391282f2b68c8ce92af1d0b204}{ParseExpr} (const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&text, \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&errors)
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_u_expr}{UExpr} $>$ \hyperlink{class_u_expr_mgr_1fe471416a27b2dda3856c14137b3880}{CreateExpression} ()
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_u_expr_number}{UExprNumber} $>$ \hyperlink{class_u_expr_mgr_a69ed663f2ce4467182f40877cff51fe}{CreateNumber} (float \hyperlink{glext__bak_8h_6a4f8a1a444e9080b297963b3db29fe0}{value})
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_u_expr_array}{UExprArray} $>$ \hyperlink{class_u_expr_mgr_18db87e4cabfcff47d49d313d080ed44}{CreateArray} (const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, float indexScale, bool smooth, bool \hyperlink{glext_8h_3878d3005eeb2d2ef414abc752ba3c9b}{clamp})
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_u_expr_array_ref}{UExprArrayRef} $>$ \hyperlink{class_u_expr_mgr_fa2c22981d73f120ee52777ecc34a8ed}{CreateArrayRef} (\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_u_expr_array}{UExprArray} $>$ array, \hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_u_expr_term}{UExprTerm} $>$ \hyperlink{glext__bak_8h_57f14e05b1900f16a2da82ade47d0c6d}{index})
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_u_expr_callback}{UExprCallback} $>$ \hyperlink{class_u_expr_mgr_7a3da85c7e2f1809494e029e292dda23}{CreateScriptCallback} (const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, float($\ast$callback)())
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_u_expr_callback}{UExprCallback} $>$ \hyperlink{class_u_expr_mgr_264f27c6ae13776fa159a1bcedbc8a3a}{FindScriptCallback} (const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}) const 
+\item 
+const \hyperlink{class_bsc_var_table}{BscVarTable} \& \hyperlink{class_u_expr_mgr_66f13fd3cf7d28c7ac45dd8b88f28f47}{GetGlobalVarTable} () const 
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_u_expr_array}{UExprArray} $>$ \hyperlink{class_u_expr_mgr_c32f4bc739345cc34ba814886b342d47}{CreateGlobalArray} (const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, float indexScale, bool smooth, bool \hyperlink{glext_8h_3878d3005eeb2d2ef414abc752ba3c9b}{clamp})
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_u_expr_array}{UExprArray} $>$ \hyperlink{class_u_expr_mgr_221fe16c42364455a19c5613c3f01ef4}{FindGlobalArray} (const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}) const 
+\item 
+const \hyperlink{class_bsc_array_table}{BscArrayTable} \& \hyperlink{class_u_expr_mgr_e28c61caea41c0a88a11697475fcb2d2}{GetGlobalArrayTable} () const 
+\item 
+void \hyperlink{class_u_expr_mgr_8babe6017bf15496526870d8d3254bbf}{CollectGarbage} ()
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 28 of file UExprMgr.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_u_expr_mgr_b24ea40407f2cb207a97045051c7a10a}{
+\index{UExprMgr@{UExprMgr}!UExprMgr@{UExprMgr}}
+\index{UExprMgr@{UExprMgr}!UExprMgr@{UExprMgr}}
+\subsubsection[{UExprMgr}]{\setlength{\rightskip}{0pt plus 5cm}UExprMgr::UExprMgr ()}}
+\label{class_u_expr_mgr_b24ea40407f2cb207a97045051c7a10a}
+
+
+
+
+Definition at line 33 of file UExprMgr.cpp.\hypertarget{class_u_expr_mgr_30657d4463c40f1d5f09377274b9f9dd}{
+\index{UExprMgr@{UExprMgr}!$\sim$UExprMgr@{$\sim$UExprMgr}}
+\index{$\sim$UExprMgr@{$\sim$UExprMgr}!UExprMgr@{UExprMgr}}
+\subsubsection[{$\sim$UExprMgr}]{\setlength{\rightskip}{0pt plus 5cm}UExprMgr::$\sim$UExprMgr ()}}
+\label{class_u_expr_mgr_30657d4463c40f1d5f09377274b9f9dd}
+
+
+
+
+Definition at line 40 of file UExprMgr.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_u_expr_mgr_8babe6017bf15496526870d8d3254bbf}{
+\index{UExprMgr@{UExprMgr}!CollectGarbage@{CollectGarbage}}
+\index{CollectGarbage@{CollectGarbage}!UExprMgr@{UExprMgr}}
+\subsubsection[{CollectGarbage}]{\setlength{\rightskip}{0pt plus 5cm}void UExprMgr::CollectGarbage ()}}
+\label{class_u_expr_mgr_8babe6017bf15496526870d8d3254bbf}
+
+
+\hypertarget{class_u_expr_mgr_18db87e4cabfcff47d49d313d080ed44}{
+\index{UExprMgr@{UExprMgr}!CreateArray@{CreateArray}}
+\index{CreateArray@{CreateArray}!UExprMgr@{UExprMgr}}
+\subsubsection[{CreateArray}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf UExprArray} $>$ UExprMgr::CreateArray (const {\bf tstring} \& {\em name}, \/  float {\em indexScale}, \/  bool {\em smooth}, \/  bool {\em clamp})}}
+\label{class_u_expr_mgr_18db87e4cabfcff47d49d313d080ed44}
+
+
+
+
+Definition at line 112 of file UExprMgr.cpp.\hypertarget{class_u_expr_mgr_fa2c22981d73f120ee52777ecc34a8ed}{
+\index{UExprMgr@{UExprMgr}!CreateArrayRef@{CreateArrayRef}}
+\index{CreateArrayRef@{CreateArrayRef}!UExprMgr@{UExprMgr}}
+\subsubsection[{CreateArrayRef}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf UExprArrayRef} $>$ UExprMgr::CreateArrayRef ({\bf URef}$<$ {\bf UExprArray} $>$ {\em array}, \/  {\bf URef}$<$ {\bf UExprTerm} $>$ {\em index})}}
+\label{class_u_expr_mgr_fa2c22981d73f120ee52777ecc34a8ed}
+
+
+
+
+Definition at line 121 of file UExprMgr.cpp.\hypertarget{class_u_expr_mgr_1fe471416a27b2dda3856c14137b3880}{
+\index{UExprMgr@{UExprMgr}!CreateExpression@{CreateExpression}}
+\index{CreateExpression@{CreateExpression}!UExprMgr@{UExprMgr}}
+\subsubsection[{CreateExpression}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf UExpr} $>$ UExprMgr::CreateExpression ()}}
+\label{class_u_expr_mgr_1fe471416a27b2dda3856c14137b3880}
+
+
+
+
+Definition at line 93 of file UExprMgr.cpp.\hypertarget{class_u_expr_mgr_c32f4bc739345cc34ba814886b342d47}{
+\index{UExprMgr@{UExprMgr}!CreateGlobalArray@{CreateGlobalArray}}
+\index{CreateGlobalArray@{CreateGlobalArray}!UExprMgr@{UExprMgr}}
+\subsubsection[{CreateGlobalArray}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf UExprArray} $>$ UExprMgr::CreateGlobalArray (const {\bf tstring} \& {\em name}, \/  float {\em indexScale}, \/  bool {\em smooth}, \/  bool {\em clamp})}}
+\label{class_u_expr_mgr_c32f4bc739345cc34ba814886b342d47}
+
+
+
+
+Definition at line 151 of file UExprMgr.cpp.\hypertarget{class_u_expr_mgr_a69ed663f2ce4467182f40877cff51fe}{
+\index{UExprMgr@{UExprMgr}!CreateNumber@{CreateNumber}}
+\index{CreateNumber@{CreateNumber}!UExprMgr@{UExprMgr}}
+\subsubsection[{CreateNumber}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf UExprNumber} $>$ UExprMgr::CreateNumber (float {\em value})}}
+\label{class_u_expr_mgr_a69ed663f2ce4467182f40877cff51fe}
+
+
+
+
+Definition at line 103 of file UExprMgr.cpp.\hypertarget{class_u_expr_mgr_7a3da85c7e2f1809494e029e292dda23}{
+\index{UExprMgr@{UExprMgr}!CreateScriptCallback@{CreateScriptCallback}}
+\index{CreateScriptCallback@{CreateScriptCallback}!UExprMgr@{UExprMgr}}
+\subsubsection[{CreateScriptCallback}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf UExprCallback} $>$ UExprMgr::CreateScriptCallback (const {\bf tstring} \& {\em name}, \/  float($\ast$)() {\em callback})}}
+\label{class_u_expr_mgr_7a3da85c7e2f1809494e029e292dda23}
+
+
+
+
+Definition at line 130 of file UExprMgr.cpp.\hypertarget{class_u_expr_mgr_221fe16c42364455a19c5613c3f01ef4}{
+\index{UExprMgr@{UExprMgr}!FindGlobalArray@{FindGlobalArray}}
+\index{FindGlobalArray@{FindGlobalArray}!UExprMgr@{UExprMgr}}
+\subsubsection[{FindGlobalArray}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf UExprArray} $>$ UExprMgr::FindGlobalArray (const {\bf tstring} \& {\em name}) const}}
+\label{class_u_expr_mgr_221fe16c42364455a19c5613c3f01ef4}
+
+
+
+
+Definition at line 165 of file UExprMgr.cpp.\hypertarget{class_u_expr_mgr_264f27c6ae13776fa159a1bcedbc8a3a}{
+\index{UExprMgr@{UExprMgr}!FindScriptCallback@{FindScriptCallback}}
+\index{FindScriptCallback@{FindScriptCallback}!UExprMgr@{UExprMgr}}
+\subsubsection[{FindScriptCallback}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf UExprCallback} $>$ UExprMgr::FindScriptCallback (const {\bf tstring} \& {\em name}) const}}
+\label{class_u_expr_mgr_264f27c6ae13776fa159a1bcedbc8a3a}
+
+
+
+
+Definition at line 144 of file UExprMgr.cpp.\hypertarget{class_u_expr_mgr_e28c61caea41c0a88a11697475fcb2d2}{
+\index{UExprMgr@{UExprMgr}!GetGlobalArrayTable@{GetGlobalArrayTable}}
+\index{GetGlobalArrayTable@{GetGlobalArrayTable}!UExprMgr@{UExprMgr}}
+\subsubsection[{GetGlobalArrayTable}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf BscArrayTable}\& UExprMgr::GetGlobalArrayTable () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_expr_mgr_e28c61caea41c0a88a11697475fcb2d2}
+
+
+
+
+Definition at line 57 of file UExprMgr.h.\hypertarget{class_u_expr_mgr_66f13fd3cf7d28c7ac45dd8b88f28f47}{
+\index{UExprMgr@{UExprMgr}!GetGlobalVarTable@{GetGlobalVarTable}}
+\index{GetGlobalVarTable@{GetGlobalVarTable}!UExprMgr@{UExprMgr}}
+\subsubsection[{GetGlobalVarTable}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf BscVarTable}\& UExprMgr::GetGlobalVarTable () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_expr_mgr_66f13fd3cf7d28c7ac45dd8b88f28f47}
+
+
+
+
+Definition at line 52 of file UExprMgr.h.\hypertarget{class_u_expr_mgr_a6d17d391282f2b68c8ce92af1d0b204}{
+\index{UExprMgr@{UExprMgr}!ParseExpr@{ParseExpr}}
+\index{ParseExpr@{ParseExpr}!UExprMgr@{UExprMgr}}
+\subsubsection[{ParseExpr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf UExprTerm} $>$ UExprMgr::ParseExpr (const {\bf tstring} \& {\em text}, \/  {\bf tstring} \& {\em errors})}}
+\label{class_u_expr_mgr_a6d17d391282f2b68c8ce92af1d0b204}
+
+
+
+
+Definition at line 52 of file UExprMgr.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_u_expr_mgr_8h}{UExprMgr.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_u_expr_mgr_8cpp}{UExprMgr.cpp}\end{CompactItemize}

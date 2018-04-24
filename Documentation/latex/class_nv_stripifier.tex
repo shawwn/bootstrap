@@ -1,0 +1,454 @@
+\hypertarget{class_nv_stripifier}{
+\section{NvStripifier Class Reference}
+\label{class_nv_stripifier}\index{NvStripifier@{NvStripifier}}
+}
+{\tt \#include $<$NvTriStripObjects.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_nv_stripifier_f7658997932c8c1affe3b0c133cc196b}{NvStripifier} ()
+\item 
+\hyperlink{class_nv_stripifier_d01fb24dcd9da70c006e99e553545b4c}{$\sim$NvStripifier} ()
+\item 
+void \hyperlink{class_nv_stripifier_aac47bf929630e54c53427fb1714816d}{Stripify} (const \hyperlink{_nv_tri_strip_objects_8h_0e4014090627df01c862364a6acc4020}{WordVec} \&in\_\-indices, const int in\_\-cacheSize, const int in\_\-minStripLength, const unsigned short maxIndex, \hyperlink{_nv_tri_strip_objects_8h_83f9ba7bd0288dc93c5eed20e7f61170}{NvStripInfoVec} \&allStrips, \hyperlink{_nv_tri_strip_objects_8h_93d0a2f26991e801145908bc4d3d9156}{NvFaceInfoVec} \&allFaces)
+\item 
+void \hyperlink{class_nv_stripifier_089482ef9c1cab8f595bf51cae36555d}{CreateStrips} (const \hyperlink{_nv_tri_strip_objects_8h_83f9ba7bd0288dc93c5eed20e7f61170}{NvStripInfoVec} \&allStrips, \hyperlink{_nv_tri_strip_objects_8h_4c42bc5fa9b3648755b0148698307573}{IntVec} \&stripIndices, const bool bStitchStrips, unsigned int \&numSeparateStrips, const bool bRestart, const unsigned int restartVal)
+\end{CompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+static int \hyperlink{class_nv_stripifier_5162c2dab0c5f466a7a4024bc8f3f937}{GetUniqueVertexInB} (\hyperlink{class_nv_face_info}{NvFaceInfo} $\ast$faceA, \hyperlink{class_nv_face_info}{NvFaceInfo} $\ast$faceB)
+\item 
+static void \hyperlink{class_nv_stripifier_ada5b25b94422d7d10d0b79fe7448081}{GetSharedVertices} (\hyperlink{class_nv_face_info}{NvFaceInfo} $\ast$faceA, \hyperlink{class_nv_face_info}{NvFaceInfo} $\ast$faceB, int $\ast$vertex0, int $\ast$vertex1)
+\item 
+static bool \hyperlink{class_nv_stripifier_3eb21915c9f371bfb591ed289e61b955}{IsDegenerate} (const \hyperlink{class_nv_face_info}{NvFaceInfo} $\ast$\hyperlink{glext_8h_676ca580c460c0154eb58200433d2a9e}{face})
+\item 
+static bool \hyperlink{class_nv_stripifier_7e10e9120d094e395cc4212bcc5ab51c}{IsDegenerate} (const unsigned short \hyperlink{glext__bak_8h_8f5597b6002609ead33af221dcf29790}{v0}, const unsigned short \hyperlink{glext__bak_8h_435c176a02c061b43e19bdf7c86cceae}{v1}, const unsigned short \hyperlink{glext__bak_8h_0928f6d0f0f794ba000a21dfae422136}{v2})
+\end{CompactItemize}
+\subsection*{Protected Member Functions}
+\begin{CompactItemize}
+\item 
+bool \hyperlink{class_nv_stripifier_e7399bc8bac9ee4cfbf17623f9c6c2b7}{IsMoneyFace} (const \hyperlink{class_nv_face_info}{NvFaceInfo} \&\hyperlink{glext_8h_676ca580c460c0154eb58200433d2a9e}{face})
+\item 
+bool \hyperlink{class_nv_stripifier_018218c73625b108fa07e5608b8982bf}{FaceContainsIndex} (const \hyperlink{class_nv_face_info}{NvFaceInfo} \&\hyperlink{glext_8h_676ca580c460c0154eb58200433d2a9e}{face}, const unsigned int \hyperlink{glext__bak_8h_57f14e05b1900f16a2da82ade47d0c6d}{index})
+\item 
+bool \hyperlink{class_nv_stripifier_9f4e13a6706b11e6634accb73ad43ba6}{IsCW} (\hyperlink{class_nv_face_info}{NvFaceInfo} $\ast$faceInfo, int \hyperlink{glext__bak_8h_8f5597b6002609ead33af221dcf29790}{v0}, int \hyperlink{glext__bak_8h_435c176a02c061b43e19bdf7c86cceae}{v1})
+\item 
+bool \hyperlink{class_nv_stripifier_a3bf53ccf3e03e6b4cfd0746f708bd60}{NextIsCW} (const int numIndices)
+\item 
+\hyperlink{class_nv_face_info}{NvFaceInfo} $\ast$ \hyperlink{class_nv_stripifier_1719480e83ed6a6f76b690d851dbf29f}{FindGoodResetPoint} (\hyperlink{_nv_tri_strip_objects_8h_93d0a2f26991e801145908bc4d3d9156}{NvFaceInfoVec} \&faceInfos, \hyperlink{_nv_tri_strip_objects_8h_58592f6a13118931e843d05574249663}{NvEdgeInfoVec} \&edgeInfos)
+\item 
+void \hyperlink{class_nv_stripifier_d847ecb4dfa70fe5432470e0fc569472}{FindAllStrips} (\hyperlink{_nv_tri_strip_objects_8h_83f9ba7bd0288dc93c5eed20e7f61170}{NvStripInfoVec} \&allStrips, \hyperlink{_nv_tri_strip_objects_8h_93d0a2f26991e801145908bc4d3d9156}{NvFaceInfoVec} \&allFaceInfos, \hyperlink{_nv_tri_strip_objects_8h_58592f6a13118931e843d05574249663}{NvEdgeInfoVec} \&allEdgeInfos, int numSamples)
+\item 
+void \hyperlink{class_nv_stripifier_def493456c6deefa0f0ae8faf37a17e1}{SplitUpStripsAndOptimize} (\hyperlink{_nv_tri_strip_objects_8h_83f9ba7bd0288dc93c5eed20e7f61170}{NvStripInfoVec} \&allStrips, \hyperlink{_nv_tri_strip_objects_8h_83f9ba7bd0288dc93c5eed20e7f61170}{NvStripInfoVec} \&outStrips, \hyperlink{_nv_tri_strip_objects_8h_58592f6a13118931e843d05574249663}{NvEdgeInfoVec} \&edgeInfos, \hyperlink{_nv_tri_strip_objects_8h_93d0a2f26991e801145908bc4d3d9156}{NvFaceInfoVec} \&outFaceList)
+\item 
+void \hyperlink{class_nv_stripifier_12373863311286b3dfc078018acdbc5c}{RemoveSmallStrips} (\hyperlink{_nv_tri_strip_objects_8h_83f9ba7bd0288dc93c5eed20e7f61170}{NvStripInfoVec} \&allStrips, \hyperlink{_nv_tri_strip_objects_8h_83f9ba7bd0288dc93c5eed20e7f61170}{NvStripInfoVec} \&allBigStrips, \hyperlink{_nv_tri_strip_objects_8h_93d0a2f26991e801145908bc4d3d9156}{NvFaceInfoVec} \&faceList)
+\item 
+bool \hyperlink{class_nv_stripifier_6102543c9d36dc8eccf056ce63303e90}{FindTraversal} (\hyperlink{_nv_tri_strip_objects_8h_93d0a2f26991e801145908bc4d3d9156}{NvFaceInfoVec} \&faceInfos, \hyperlink{_nv_tri_strip_objects_8h_58592f6a13118931e843d05574249663}{NvEdgeInfoVec} \&edgeInfos, \hyperlink{class_nv_strip_info}{NvStripInfo} $\ast$strip, \hyperlink{class_nv_strip_start_info}{NvStripStartInfo} \&startInfo)
+\item 
+int \hyperlink{class_nv_stripifier_4bafe0ae9aa21f466b0e1faf7194861c}{CountRemainingTris} (std::list$<$ \hyperlink{class_nv_strip_info}{NvStripInfo} $\ast$ $>$::iterator iter, std::list$<$ \hyperlink{class_nv_strip_info}{NvStripInfo} $\ast$ $>$::iterator \hyperlink{glext__bak_8h_432111147038972f06e049e18a837002}{end})
+\item 
+void \hyperlink{class_nv_stripifier_a94ce7ff064c7fd29890f90d2fb0d9cc}{CommitStrips} (\hyperlink{_nv_tri_strip_objects_8h_83f9ba7bd0288dc93c5eed20e7f61170}{NvStripInfoVec} \&allStrips, const \hyperlink{_nv_tri_strip_objects_8h_83f9ba7bd0288dc93c5eed20e7f61170}{NvStripInfoVec} \&strips)
+\item 
+float \hyperlink{class_nv_stripifier_7abe9874deba1964f2c019a1fc6ad0da}{AvgStripSize} (const \hyperlink{_nv_tri_strip_objects_8h_83f9ba7bd0288dc93c5eed20e7f61170}{NvStripInfoVec} \&strips)
+\item 
+int \hyperlink{class_nv_stripifier_07e511a48d634c1630aece77953331d5}{FindStartPoint} (\hyperlink{_nv_tri_strip_objects_8h_93d0a2f26991e801145908bc4d3d9156}{NvFaceInfoVec} \&faceInfos, \hyperlink{_nv_tri_strip_objects_8h_58592f6a13118931e843d05574249663}{NvEdgeInfoVec} \&edgeInfos)
+\item 
+void \hyperlink{class_nv_stripifier_7f4b921943317075f76558c4665c7d58}{UpdateCacheStrip} (\hyperlink{class_vertex_cache}{VertexCache} $\ast$vcache, \hyperlink{class_nv_strip_info}{NvStripInfo} $\ast$strip)
+\item 
+void \hyperlink{class_nv_stripifier_bba4a460c63fc132708ccd05474caff0}{UpdateCacheFace} (\hyperlink{class_vertex_cache}{VertexCache} $\ast$vcache, \hyperlink{class_nv_face_info}{NvFaceInfo} $\ast$\hyperlink{glext_8h_676ca580c460c0154eb58200433d2a9e}{face})
+\item 
+float \hyperlink{class_nv_stripifier_e34f56d66a8a81e65f29a44a8f7ba285}{CalcNumHitsStrip} (\hyperlink{class_vertex_cache}{VertexCache} $\ast$vcache, \hyperlink{class_nv_strip_info}{NvStripInfo} $\ast$strip)
+\item 
+int \hyperlink{class_nv_stripifier_351bf050700631c934ce6129cb0912ea}{CalcNumHitsFace} (\hyperlink{class_vertex_cache}{VertexCache} $\ast$vcache, \hyperlink{class_nv_face_info}{NvFaceInfo} $\ast$\hyperlink{glext_8h_676ca580c460c0154eb58200433d2a9e}{face})
+\item 
+int \hyperlink{class_nv_stripifier_38f2f9e8caf2c33ef6b61bfa65012762}{NumNeighbors} (\hyperlink{class_nv_face_info}{NvFaceInfo} $\ast$\hyperlink{glext_8h_676ca580c460c0154eb58200433d2a9e}{face}, \hyperlink{_nv_tri_strip_objects_8h_58592f6a13118931e843d05574249663}{NvEdgeInfoVec} \&edgeInfoVec)
+\item 
+void \hyperlink{class_nv_stripifier_1412a60d8d339102fb3514fdb01480cd}{BuildStripifyInfo} (\hyperlink{_nv_tri_strip_objects_8h_93d0a2f26991e801145908bc4d3d9156}{NvFaceInfoVec} \&faceInfos, \hyperlink{_nv_tri_strip_objects_8h_58592f6a13118931e843d05574249663}{NvEdgeInfoVec} \&edgeInfos, const unsigned short maxIndex)
+\item 
+bool \hyperlink{class_nv_stripifier_41b02b19ec351121bdd68b4d063d5526}{AlreadyExists} (\hyperlink{class_nv_face_info}{NvFaceInfo} $\ast$faceInfo, \hyperlink{_nv_tri_strip_objects_8h_93d0a2f26991e801145908bc4d3d9156}{NvFaceInfoVec} \&faceInfos)
+\end{CompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{CompactItemize}
+\item 
+static int \hyperlink{class_nv_stripifier_fb2b61dc693b71abfc224838a6a8e9f6}{GetNextIndex} (const \hyperlink{_nv_tri_strip_objects_8h_0e4014090627df01c862364a6acc4020}{WordVec} \&\hyperlink{class_nv_stripifier_7ddcd00526720153c7518a52ff4e9160}{indices}, \hyperlink{class_nv_face_info}{NvFaceInfo} $\ast$\hyperlink{glext_8h_676ca580c460c0154eb58200433d2a9e}{face})
+\item 
+static \hyperlink{class_nv_edge_info}{NvEdgeInfo} $\ast$ \hyperlink{class_nv_stripifier_c2d08361cafc6f73b8160d82c1305441}{FindEdgeInfo} (\hyperlink{_nv_tri_strip_objects_8h_58592f6a13118931e843d05574249663}{NvEdgeInfoVec} \&edgeInfos, int \hyperlink{glext__bak_8h_8f5597b6002609ead33af221dcf29790}{v0}, int \hyperlink{glext__bak_8h_435c176a02c061b43e19bdf7c86cceae}{v1})
+\item 
+static \hyperlink{class_nv_face_info}{NvFaceInfo} $\ast$ \hyperlink{class_nv_stripifier_0f2a262590bf7bbfbf37d9fc720dd4ef}{FindOtherFace} (\hyperlink{_nv_tri_strip_objects_8h_58592f6a13118931e843d05574249663}{NvEdgeInfoVec} \&edgeInfos, int \hyperlink{glext__bak_8h_8f5597b6002609ead33af221dcf29790}{v0}, int \hyperlink{glext__bak_8h_435c176a02c061b43e19bdf7c86cceae}{v1}, \hyperlink{class_nv_face_info}{NvFaceInfo} $\ast$faceInfo)
+\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+\hyperlink{_nv_tri_strip_objects_8h_0e4014090627df01c862364a6acc4020}{WordVec} \hyperlink{class_nv_stripifier_7ddcd00526720153c7518a52ff4e9160}{indices}
+\item 
+int \hyperlink{class_nv_stripifier_97244655b590f82820a806bedb5ebed2}{cacheSize}
+\item 
+int \hyperlink{class_nv_stripifier_cab909cd26c771fb14662a3929387c39}{minStripLength}
+\item 
+float \hyperlink{class_nv_stripifier_308a796c34a6951b149820477318260e}{meshJump}
+\item 
+bool \hyperlink{class_nv_stripifier_3f2fe6f8f5de4f3e25077d7e486627af}{bFirstTimeResetPoint}
+\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+class \hyperlink{class_nv_stripifier_d22e3e239c25e2052beb1021c7e54c96}{NvStripInfo}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 173 of file NvTriStripObjects.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_nv_stripifier_f7658997932c8c1affe3b0c133cc196b}{
+\index{NvStripifier@{NvStripifier}!NvStripifier@{NvStripifier}}
+\index{NvStripifier@{NvStripifier}!NvStripifier@{NvStripifier}}
+\subsubsection[{NvStripifier}]{\setlength{\rightskip}{0pt plus 5cm}NvStripifier::NvStripifier ()}}
+\label{class_nv_stripifier_f7658997932c8c1affe3b0c133cc196b}
+
+
+
+
+Definition at line 14 of file NvTriStripObjects.cpp.\hypertarget{class_nv_stripifier_d01fb24dcd9da70c006e99e553545b4c}{
+\index{NvStripifier@{NvStripifier}!$\sim$NvStripifier@{$\sim$NvStripifier}}
+\index{$\sim$NvStripifier@{$\sim$NvStripifier}!NvStripifier@{NvStripifier}}
+\subsubsection[{$\sim$NvStripifier}]{\setlength{\rightskip}{0pt plus 5cm}NvStripifier::$\sim$NvStripifier ()}}
+\label{class_nv_stripifier_d01fb24dcd9da70c006e99e553545b4c}
+
+
+
+
+Definition at line 19 of file NvTriStripObjects.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_nv_stripifier_41b02b19ec351121bdd68b4d063d5526}{
+\index{NvStripifier@{NvStripifier}!AlreadyExists@{AlreadyExists}}
+\index{AlreadyExists@{AlreadyExists}!NvStripifier@{NvStripifier}}
+\subsubsection[{AlreadyExists}]{\setlength{\rightskip}{0pt plus 5cm}bool NvStripifier::AlreadyExists ({\bf NvFaceInfo} $\ast$ {\em faceInfo}, \/  {\bf NvFaceInfoVec} \& {\em faceInfos})\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_nv_stripifier_41b02b19ec351121bdd68b4d063d5526}
+
+
+
+
+Definition at line 76 of file NvTriStripObjects.cpp.\hypertarget{class_nv_stripifier_7abe9874deba1964f2c019a1fc6ad0da}{
+\index{NvStripifier@{NvStripifier}!AvgStripSize@{AvgStripSize}}
+\index{AvgStripSize@{AvgStripSize}!NvStripifier@{NvStripifier}}
+\subsubsection[{AvgStripSize}]{\setlength{\rightskip}{0pt plus 5cm}float NvStripifier::AvgStripSize (const {\bf NvStripInfoVec} \& {\em strips})\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_nv_stripifier_7abe9874deba1964f2c019a1fc6ad0da}
+
+
+
+
+Definition at line 1576 of file NvTriStripObjects.cpp.\hypertarget{class_nv_stripifier_1412a60d8d339102fb3514fdb01480cd}{
+\index{NvStripifier@{NvStripifier}!BuildStripifyInfo@{BuildStripifyInfo}}
+\index{BuildStripifyInfo@{BuildStripifyInfo}!NvStripifier@{NvStripifier}}
+\subsubsection[{BuildStripifyInfo}]{\setlength{\rightskip}{0pt plus 5cm}void NvStripifier::BuildStripifyInfo ({\bf NvFaceInfoVec} \& {\em faceInfos}, \/  {\bf NvEdgeInfoVec} \& {\em edgeInfos}, \/  const unsigned short {\em maxIndex})\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_nv_stripifier_1412a60d8d339102fb3514fdb01480cd}
+
+
+
+
+Definition at line 94 of file NvTriStripObjects.cpp.\hypertarget{class_nv_stripifier_351bf050700631c934ce6129cb0912ea}{
+\index{NvStripifier@{NvStripifier}!CalcNumHitsFace@{CalcNumHitsFace}}
+\index{CalcNumHitsFace@{CalcNumHitsFace}!NvStripifier@{NvStripifier}}
+\subsubsection[{CalcNumHitsFace}]{\setlength{\rightskip}{0pt plus 5cm}int NvStripifier::CalcNumHitsFace ({\bf VertexCache} $\ast$ {\em vcache}, \/  {\bf NvFaceInfo} $\ast$ {\em face})\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_nv_stripifier_351bf050700631c934ce6129cb0912ea}
+
+
+
+
+Definition at line 1526 of file NvTriStripObjects.cpp.\hypertarget{class_nv_stripifier_e34f56d66a8a81e65f29a44a8f7ba285}{
+\index{NvStripifier@{NvStripifier}!CalcNumHitsStrip@{CalcNumHitsStrip}}
+\index{CalcNumHitsStrip@{CalcNumHitsStrip}!NvStripifier@{NvStripifier}}
+\subsubsection[{CalcNumHitsStrip}]{\setlength{\rightskip}{0pt plus 5cm}float NvStripifier::CalcNumHitsStrip ({\bf VertexCache} $\ast$ {\em vcache}, \/  {\bf NvStripInfo} $\ast$ {\em strip})\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_nv_stripifier_e34f56d66a8a81e65f29a44a8f7ba285}
+
+
+
+
+Definition at line 1498 of file NvTriStripObjects.cpp.\hypertarget{class_nv_stripifier_a94ce7ff064c7fd29890f90d2fb0d9cc}{
+\index{NvStripifier@{NvStripifier}!CommitStrips@{CommitStrips}}
+\index{CommitStrips@{CommitStrips}!NvStripifier@{NvStripifier}}
+\subsubsection[{CommitStrips}]{\setlength{\rightskip}{0pt plus 5cm}void NvStripifier::CommitStrips ({\bf NvStripInfoVec} \& {\em allStrips}, \/  const {\bf NvStripInfoVec} \& {\em strips})\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_nv_stripifier_a94ce7ff064c7fd29890f90d2fb0d9cc}
+
+
+
+
+Definition at line 769 of file NvTriStripObjects.cpp.\hypertarget{class_nv_stripifier_4bafe0ae9aa21f466b0e1faf7194861c}{
+\index{NvStripifier@{NvStripifier}!CountRemainingTris@{CountRemainingTris}}
+\index{CountRemainingTris@{CountRemainingTris}!NvStripifier@{NvStripifier}}
+\subsubsection[{CountRemainingTris}]{\setlength{\rightskip}{0pt plus 5cm}int NvStripifier::CountRemainingTris (std::list$<$ {\bf NvStripInfo} $\ast$ $>$::iterator {\em iter}, \/  std::list$<$ {\bf NvStripInfo} $\ast$ $>$::iterator {\em end})\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_nv_stripifier_4bafe0ae9aa21f466b0e1faf7194861c}
+
+
+
+
+Definition at line 1764 of file NvTriStripObjects.cpp.\hypertarget{class_nv_stripifier_089482ef9c1cab8f595bf51cae36555d}{
+\index{NvStripifier@{NvStripifier}!CreateStrips@{CreateStrips}}
+\index{CreateStrips@{CreateStrips}!NvStripifier@{NvStripifier}}
+\subsubsection[{CreateStrips}]{\setlength{\rightskip}{0pt plus 5cm}void NvStripifier::CreateStrips (const {\bf NvStripInfoVec} \& {\em allStrips}, \/  {\bf IntVec} \& {\em stripIndices}, \/  const bool {\em bStitchStrips}, \/  unsigned int \& {\em numSeparateStrips}, \/  const bool {\em bRestart}, \/  const unsigned int {\em restartVal})}}
+\label{class_nv_stripifier_089482ef9c1cab8f595bf51cae36555d}
+
+
+
+
+Definition at line 964 of file NvTriStripObjects.cpp.\hypertarget{class_nv_stripifier_018218c73625b108fa07e5608b8982bf}{
+\index{NvStripifier@{NvStripifier}!FaceContainsIndex@{FaceContainsIndex}}
+\index{FaceContainsIndex@{FaceContainsIndex}!NvStripifier@{NvStripifier}}
+\subsubsection[{FaceContainsIndex}]{\setlength{\rightskip}{0pt plus 5cm}bool NvStripifier::FaceContainsIndex (const {\bf NvFaceInfo} \& {\em face}, \/  const unsigned int {\em index})\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_nv_stripifier_018218c73625b108fa07e5608b8982bf}
+
+
+
+
+Definition at line 944 of file NvTriStripObjects.cpp.\hypertarget{class_nv_stripifier_d847ecb4dfa70fe5432470e0fc569472}{
+\index{NvStripifier@{NvStripifier}!FindAllStrips@{FindAllStrips}}
+\index{FindAllStrips@{FindAllStrips}!NvStripifier@{NvStripifier}}
+\subsubsection[{FindAllStrips}]{\setlength{\rightskip}{0pt plus 5cm}void NvStripifier::FindAllStrips ({\bf NvStripInfoVec} \& {\em allStrips}, \/  {\bf NvFaceInfoVec} \& {\em allFaceInfos}, \/  {\bf NvEdgeInfoVec} \& {\em allEdgeInfos}, \/  int {\em numSamples})\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_nv_stripifier_d847ecb4dfa70fe5432470e0fc569472}
+
+
+
+
+Definition at line 1598 of file NvTriStripObjects.cpp.\hypertarget{class_nv_stripifier_c2d08361cafc6f73b8160d82c1305441}{
+\index{NvStripifier@{NvStripifier}!FindEdgeInfo@{FindEdgeInfo}}
+\index{FindEdgeInfo@{FindEdgeInfo}!NvStripifier@{NvStripifier}}
+\subsubsection[{FindEdgeInfo}]{\setlength{\rightskip}{0pt plus 5cm}{\bf NvEdgeInfo} $\ast$ NvStripifier::FindEdgeInfo ({\bf NvEdgeInfoVec} \& {\em edgeInfos}, \/  int {\em v0}, \/  int {\em v1})\hspace{0.3cm}{\tt  \mbox{[}static, protected\mbox{]}}}}
+\label{class_nv_stripifier_c2d08361cafc6f73b8160d82c1305441}
+
+
+
+
+Definition at line 30 of file NvTriStripObjects.cpp.\hypertarget{class_nv_stripifier_1719480e83ed6a6f76b690d851dbf29f}{
+\index{NvStripifier@{NvStripifier}!FindGoodResetPoint@{FindGoodResetPoint}}
+\index{FindGoodResetPoint@{FindGoodResetPoint}!NvStripifier@{NvStripifier}}
+\subsubsection[{FindGoodResetPoint}]{\setlength{\rightskip}{0pt plus 5cm}{\bf NvFaceInfo} $\ast$ NvStripifier::FindGoodResetPoint ({\bf NvFaceInfoVec} \& {\em faceInfos}, \/  {\bf NvEdgeInfoVec} \& {\em edgeInfos})\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_nv_stripifier_1719480e83ed6a6f76b690d851dbf29f}
+
+
+
+
+Definition at line 295 of file NvTriStripObjects.cpp.\hypertarget{class_nv_stripifier_0f2a262590bf7bbfbf37d9fc720dd4ef}{
+\index{NvStripifier@{NvStripifier}!FindOtherFace@{FindOtherFace}}
+\index{FindOtherFace@{FindOtherFace}!NvStripifier@{NvStripifier}}
+\subsubsection[{FindOtherFace}]{\setlength{\rightskip}{0pt plus 5cm}{\bf NvFaceInfo} $\ast$ NvStripifier::FindOtherFace ({\bf NvEdgeInfoVec} \& {\em edgeInfos}, \/  int {\em v0}, \/  int {\em v1}, \/  {\bf NvFaceInfo} $\ast$ {\em faceInfo})\hspace{0.3cm}{\tt  \mbox{[}static, protected\mbox{]}}}}
+\label{class_nv_stripifier_0f2a262590bf7bbfbf37d9fc720dd4ef}
+
+
+
+
+Definition at line 62 of file NvTriStripObjects.cpp.\hypertarget{class_nv_stripifier_07e511a48d634c1630aece77953331d5}{
+\index{NvStripifier@{NvStripifier}!FindStartPoint@{FindStartPoint}}
+\index{FindStartPoint@{FindStartPoint}!NvStripifier@{NvStripifier}}
+\subsubsection[{FindStartPoint}]{\setlength{\rightskip}{0pt plus 5cm}int NvStripifier::FindStartPoint ({\bf NvFaceInfoVec} \& {\em faceInfos}, \/  {\bf NvEdgeInfoVec} \& {\em edgeInfos})\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_nv_stripifier_07e511a48d634c1630aece77953331d5}
+
+
+
+
+Definition at line 257 of file NvTriStripObjects.cpp.\hypertarget{class_nv_stripifier_6102543c9d36dc8eccf056ce63303e90}{
+\index{NvStripifier@{NvStripifier}!FindTraversal@{FindTraversal}}
+\index{FindTraversal@{FindTraversal}!NvStripifier@{NvStripifier}}
+\subsubsection[{FindTraversal}]{\setlength{\rightskip}{0pt plus 5cm}bool NvStripifier::FindTraversal ({\bf NvFaceInfoVec} \& {\em faceInfos}, \/  {\bf NvEdgeInfoVec} \& {\em edgeInfos}, \/  {\bf NvStripInfo} $\ast$ {\em strip}, \/  {\bf NvStripStartInfo} \& {\em startInfo})\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_nv_stripifier_6102543c9d36dc8eccf056ce63303e90}
+
+
+
+
+Definition at line 800 of file NvTriStripObjects.cpp.\hypertarget{class_nv_stripifier_fb2b61dc693b71abfc224838a6a8e9f6}{
+\index{NvStripifier@{NvStripifier}!GetNextIndex@{GetNextIndex}}
+\index{GetNextIndex@{GetNextIndex}!NvStripifier@{NvStripifier}}
+\subsubsection[{GetNextIndex}]{\setlength{\rightskip}{0pt plus 5cm}int NvStripifier::GetNextIndex (const {\bf WordVec} \& {\em indices}, \/  {\bf NvFaceInfo} $\ast$ {\em face})\hspace{0.3cm}{\tt  \mbox{[}inline, static, protected\mbox{]}}}}
+\label{class_nv_stripifier_fb2b61dc693b71abfc224838a6a8e9f6}
+
+
+
+
+Definition at line 439 of file NvTriStripObjects.cpp.\hypertarget{class_nv_stripifier_ada5b25b94422d7d10d0b79fe7448081}{
+\index{NvStripifier@{NvStripifier}!GetSharedVertices@{GetSharedVertices}}
+\index{GetSharedVertices@{GetSharedVertices}!NvStripifier@{NvStripifier}}
+\subsubsection[{GetSharedVertices}]{\setlength{\rightskip}{0pt plus 5cm}void NvStripifier::GetSharedVertices ({\bf NvFaceInfo} $\ast$ {\em faceA}, \/  {\bf NvFaceInfo} $\ast$ {\em faceB}, \/  int $\ast$ {\em vertex0}, \/  int $\ast$ {\em vertex1})\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_nv_stripifier_ada5b25b94422d7d10d0b79fe7448081}
+
+
+
+
+Definition at line 384 of file NvTriStripObjects.cpp.\hypertarget{class_nv_stripifier_5162c2dab0c5f466a7a4024bc8f3f937}{
+\index{NvStripifier@{NvStripifier}!GetUniqueVertexInB@{GetUniqueVertexInB}}
+\index{GetUniqueVertexInB@{GetUniqueVertexInB}!NvStripifier@{NvStripifier}}
+\subsubsection[{GetUniqueVertexInB}]{\setlength{\rightskip}{0pt plus 5cm}int NvStripifier::GetUniqueVertexInB ({\bf NvFaceInfo} $\ast$ {\em faceA}, \/  {\bf NvFaceInfo} $\ast$ {\em faceB})\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_nv_stripifier_5162c2dab0c5f466a7a4024bc8f3f937}
+
+
+
+
+Definition at line 354 of file NvTriStripObjects.cpp.\hypertarget{class_nv_stripifier_9f4e13a6706b11e6634accb73ad43ba6}{
+\index{NvStripifier@{NvStripifier}!IsCW@{IsCW}}
+\index{IsCW@{IsCW}!NvStripifier@{NvStripifier}}
+\subsubsection[{IsCW}]{\setlength{\rightskip}{0pt plus 5cm}bool NvStripifier::IsCW ({\bf NvFaceInfo} $\ast$ {\em faceInfo}, \/  int {\em v0}, \/  int {\em v1})\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_nv_stripifier_9f4e13a6706b11e6634accb73ad43ba6}
+
+
+
+
+Definition at line 928 of file NvTriStripObjects.cpp.\hypertarget{class_nv_stripifier_7e10e9120d094e395cc4212bcc5ab51c}{
+\index{NvStripifier@{NvStripifier}!IsDegenerate@{IsDegenerate}}
+\index{IsDegenerate@{IsDegenerate}!NvStripifier@{NvStripifier}}
+\subsubsection[{IsDegenerate}]{\setlength{\rightskip}{0pt plus 5cm}bool NvStripifier::IsDegenerate (const unsigned short {\em v0}, \/  const unsigned short {\em v1}, \/  const unsigned short {\em v2})\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_nv_stripifier_7e10e9120d094e395cc4212bcc5ab51c}
+
+
+
+
+Definition at line 1176 of file NvTriStripObjects.cpp.\hypertarget{class_nv_stripifier_3eb21915c9f371bfb591ed289e61b955}{
+\index{NvStripifier@{NvStripifier}!IsDegenerate@{IsDegenerate}}
+\index{IsDegenerate@{IsDegenerate}!NvStripifier@{NvStripifier}}
+\subsubsection[{IsDegenerate}]{\setlength{\rightskip}{0pt plus 5cm}bool NvStripifier::IsDegenerate (const {\bf NvFaceInfo} $\ast$ {\em face})\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_nv_stripifier_3eb21915c9f371bfb591ed289e61b955}
+
+
+
+
+Definition at line 1164 of file NvTriStripObjects.cpp.\hypertarget{class_nv_stripifier_e7399bc8bac9ee4cfbf17623f9c6c2b7}{
+\index{NvStripifier@{NvStripifier}!IsMoneyFace@{IsMoneyFace}}
+\index{IsMoneyFace@{IsMoneyFace}!NvStripifier@{NvStripifier}}
+\subsubsection[{IsMoneyFace}]{\setlength{\rightskip}{0pt plus 5cm}bool NvStripifier::IsMoneyFace (const {\bf NvFaceInfo} \& {\em face})\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_nv_stripifier_e7399bc8bac9ee4cfbf17623f9c6c2b7}
+
+
+
+
+Definition at line 949 of file NvTriStripObjects.cpp.\hypertarget{class_nv_stripifier_a3bf53ccf3e03e6b4cfd0746f708bd60}{
+\index{NvStripifier@{NvStripifier}!NextIsCW@{NextIsCW}}
+\index{NextIsCW@{NextIsCW}!NvStripifier@{NvStripifier}}
+\subsubsection[{NextIsCW}]{\setlength{\rightskip}{0pt plus 5cm}bool NvStripifier::NextIsCW (const int {\em numIndices})\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_nv_stripifier_a3bf53ccf3e03e6b4cfd0746f708bd60}
+
+
+
+
+Definition at line 917 of file NvTriStripObjects.cpp.\hypertarget{class_nv_stripifier_38f2f9e8caf2c33ef6b61bfa65012762}{
+\index{NvStripifier@{NvStripifier}!NumNeighbors@{NumNeighbors}}
+\index{NumNeighbors@{NumNeighbors}!NvStripifier@{NvStripifier}}
+\subsubsection[{NumNeighbors}]{\setlength{\rightskip}{0pt plus 5cm}int NvStripifier::NumNeighbors ({\bf NvFaceInfo} $\ast$ {\em face}, \/  {\bf NvEdgeInfoVec} \& {\em edgeInfoVec})\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_nv_stripifier_38f2f9e8caf2c33ef6b61bfa65012762}
+
+
+
+
+Definition at line 1548 of file NvTriStripObjects.cpp.\hypertarget{class_nv_stripifier_12373863311286b3dfc078018acdbc5c}{
+\index{NvStripifier@{NvStripifier}!RemoveSmallStrips@{RemoveSmallStrips}}
+\index{RemoveSmallStrips@{RemoveSmallStrips}!NvStripifier@{NvStripifier}}
+\subsubsection[{RemoveSmallStrips}]{\setlength{\rightskip}{0pt plus 5cm}void NvStripifier::RemoveSmallStrips ({\bf NvStripInfoVec} \& {\em allStrips}, \/  {\bf NvStripInfoVec} \& {\em allBigStrips}, \/  {\bf NvFaceInfoVec} \& {\em faceList})\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_nv_stripifier_12373863311286b3dfc078018acdbc5c}
+
+
+
+
+Definition at line 847 of file NvTriStripObjects.cpp.\hypertarget{class_nv_stripifier_def493456c6deefa0f0ae8faf37a17e1}{
+\index{NvStripifier@{NvStripifier}!SplitUpStripsAndOptimize@{SplitUpStripsAndOptimize}}
+\index{SplitUpStripsAndOptimize@{SplitUpStripsAndOptimize}!NvStripifier@{NvStripifier}}
+\subsubsection[{SplitUpStripsAndOptimize}]{\setlength{\rightskip}{0pt plus 5cm}void NvStripifier::SplitUpStripsAndOptimize ({\bf NvStripInfoVec} \& {\em allStrips}, \/  {\bf NvStripInfoVec} \& {\em outStrips}, \/  {\bf NvEdgeInfoVec} \& {\em edgeInfos}, \/  {\bf NvFaceInfoVec} \& {\em outFaceList})\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_nv_stripifier_def493456c6deefa0f0ae8faf37a17e1}
+
+
+
+
+Definition at line 1195 of file NvTriStripObjects.cpp.\hypertarget{class_nv_stripifier_aac47bf929630e54c53427fb1714816d}{
+\index{NvStripifier@{NvStripifier}!Stripify@{Stripify}}
+\index{Stripify@{Stripify}!NvStripifier@{NvStripifier}}
+\subsubsection[{Stripify}]{\setlength{\rightskip}{0pt plus 5cm}void NvStripifier::Stripify (const {\bf WordVec} \& {\em in\_\-indices}, \/  const int {\em in\_\-cacheSize}, \/  const int {\em in\_\-minStripLength}, \/  const unsigned short {\em maxIndex}, \/  {\bf NvStripInfoVec} \& {\em allStrips}, \/  {\bf NvFaceInfoVec} \& {\em allFaces})}}
+\label{class_nv_stripifier_aac47bf929630e54c53427fb1714816d}
+
+
+
+
+Definition at line 1112 of file NvTriStripObjects.cpp.\hypertarget{class_nv_stripifier_bba4a460c63fc132708ccd05474caff0}{
+\index{NvStripifier@{NvStripifier}!UpdateCacheFace@{UpdateCacheFace}}
+\index{UpdateCacheFace@{UpdateCacheFace}!NvStripifier@{NvStripifier}}
+\subsubsection[{UpdateCacheFace}]{\setlength{\rightskip}{0pt plus 5cm}void NvStripifier::UpdateCacheFace ({\bf VertexCache} $\ast$ {\em vcache}, \/  {\bf NvFaceInfo} $\ast$ {\em face})\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_nv_stripifier_bba4a460c63fc132708ccd05474caff0}
+
+
+
+
+Definition at line 1480 of file NvTriStripObjects.cpp.\hypertarget{class_nv_stripifier_7f4b921943317075f76558c4665c7d58}{
+\index{NvStripifier@{NvStripifier}!UpdateCacheStrip@{UpdateCacheStrip}}
+\index{UpdateCacheStrip@{UpdateCacheStrip}!NvStripifier@{NvStripifier}}
+\subsubsection[{UpdateCacheStrip}]{\setlength{\rightskip}{0pt plus 5cm}void NvStripifier::UpdateCacheStrip ({\bf VertexCache} $\ast$ {\em vcache}, \/  {\bf NvStripInfo} $\ast$ {\em strip})\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_nv_stripifier_7f4b921943317075f76558c4665c7d58}
+
+
+
+
+Definition at line 1460 of file NvTriStripObjects.cpp.
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_nv_stripifier_d22e3e239c25e2052beb1021c7e54c96}{
+\index{NvStripifier@{NvStripifier}!NvStripInfo@{NvStripInfo}}
+\index{NvStripInfo@{NvStripInfo}!NvStripifier@{NvStripifier}}
+\subsubsection[{NvStripInfo}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf NvStripInfo}\hspace{0.3cm}{\tt  \mbox{[}friend\mbox{]}}}}
+\label{class_nv_stripifier_d22e3e239c25e2052beb1021c7e54c96}
+
+
+
+
+Definition at line 241 of file NvTriStripObjects.h.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_nv_stripifier_3f2fe6f8f5de4f3e25077d7e486627af}{
+\index{NvStripifier@{NvStripifier}!bFirstTimeResetPoint@{bFirstTimeResetPoint}}
+\index{bFirstTimeResetPoint@{bFirstTimeResetPoint}!NvStripifier@{NvStripifier}}
+\subsubsection[{bFirstTimeResetPoint}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf NvStripifier::bFirstTimeResetPoint}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_nv_stripifier_3f2fe6f8f5de4f3e25077d7e486627af}
+
+
+
+
+Definition at line 198 of file NvTriStripObjects.h.\hypertarget{class_nv_stripifier_97244655b590f82820a806bedb5ebed2}{
+\index{NvStripifier@{NvStripifier}!cacheSize@{cacheSize}}
+\index{cacheSize@{cacheSize}!NvStripifier@{NvStripifier}}
+\subsubsection[{cacheSize}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf NvStripifier::cacheSize}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_nv_stripifier_97244655b590f82820a806bedb5ebed2}
+
+
+
+
+Definition at line 195 of file NvTriStripObjects.h.\hypertarget{class_nv_stripifier_7ddcd00526720153c7518a52ff4e9160}{
+\index{NvStripifier@{NvStripifier}!indices@{indices}}
+\index{indices@{indices}!NvStripifier@{NvStripifier}}
+\subsubsection[{indices}]{\setlength{\rightskip}{0pt plus 5cm}{\bf WordVec} {\bf NvStripifier::indices}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_nv_stripifier_7ddcd00526720153c7518a52ff4e9160}
+
+
+
+
+Definition at line 194 of file NvTriStripObjects.h.\hypertarget{class_nv_stripifier_308a796c34a6951b149820477318260e}{
+\index{NvStripifier@{NvStripifier}!meshJump@{meshJump}}
+\index{meshJump@{meshJump}!NvStripifier@{NvStripifier}}
+\subsubsection[{meshJump}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf NvStripifier::meshJump}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_nv_stripifier_308a796c34a6951b149820477318260e}
+
+
+
+
+Definition at line 197 of file NvTriStripObjects.h.\hypertarget{class_nv_stripifier_cab909cd26c771fb14662a3929387c39}{
+\index{NvStripifier@{NvStripifier}!minStripLength@{minStripLength}}
+\index{minStripLength@{minStripLength}!NvStripifier@{NvStripifier}}
+\subsubsection[{minStripLength}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf NvStripifier::minStripLength}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_nv_stripifier_cab909cd26c771fb14662a3929387c39}
+
+
+
+
+Definition at line 196 of file NvTriStripObjects.h.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/NVTriStrip/\hyperlink{_nv_tri_strip_objects_8h}{NvTriStripObjects.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/NVTriStrip/\hyperlink{_nv_tri_strip_objects_8cpp}{NvTriStripObjects.cpp}\end{CompactItemize}

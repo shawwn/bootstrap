@@ -1,0 +1,191 @@
+\hypertarget{class_m_sphere}{
+\section{MSphere Class Reference}
+\label{class_m_sphere}\index{MSphere@{MSphere}}
+}
+{\tt \#include $<$MSphere.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_m_sphere_0027be61e6778e87d461fa9c9cc12edb}{MSphere} ()
+\item 
+\hyperlink{class_m_sphere_1a1b2f1118f6abde66f918cda8c5a7ae}{MSphere} (\hyperlink{class_m_vec3}{MVec3} center, float radius)
+\item 
+\hyperlink{class_m_sphere_adb549c6f1620d450c050419ccefde72}{$\sim$MSphere} ()
+\item 
+bool \hyperlink{class_m_sphere_8f679796320925dec13f0f8a977e82a6}{Intersect} (const \hyperlink{class_m_sphere}{MSphere} \&sphere) const 
+\item 
+bool \hyperlink{class_m_sphere_8fffb948b9e22055e9bf8ddd267c9715}{IsInside} (const \hyperlink{class_m_sphere}{MSphere} \&sphere) const 
+\item 
+void \hyperlink{class_m_sphere_b511291f81201151624da739876a1284}{SetCenter} (const \hyperlink{class_m_vec3}{MVec3} \&center)
+\item 
+void \hyperlink{class_m_sphere_94cc442a90bbb4f5d4f3e8e9036cef71}{SetRadius} (float radius)
+\item 
+const \hyperlink{class_m_vec3}{MVec3} \& \hyperlink{class_m_sphere_64551ac188c0149a539f608203060ce0}{GetCenter} () const 
+\item 
+float \hyperlink{class_m_sphere_27475e1f9a0478b1b6140f103c0fa6fe}{GetRadius} () const 
+\item 
+int \hyperlink{class_m_sphere_b1fd0e60e8b9ded560953ed82d0b8f19}{GetSide} (const \hyperlink{class_m_plane}{MPlane} \&plane) const 
+\item 
+int \hyperlink{class_m_sphere_b8ddb431ece00cac00241f82b0aec876}{GetSection} (const \hyperlink{class_m_plane}{MPlane} \&plane, \hyperlink{class_m_vec3}{MVec3} \&center, float \&radius) const 
+\item 
+void \hyperlink{class_m_sphere_5fc463a6eeba124194bfd8874055f4d2}{Transform} (\hyperlink{class_m_sphere}{MSphere} \&sphere, const \hyperlink{class_m_mat4x4}{MMat4x4} \&\hyperlink{glext__bak_8h_07993c0d92c1aeeb357ba0495c8b5325}{transform}) const 
+\item 
+void \hyperlink{class_m_sphere_4e6ca0425808409f63a38cbee06ac92d}{TransformFast} (const \hyperlink{class_m_mat4x4}{MMat4x4} \&\hyperlink{glext__bak_8h_07993c0d92c1aeeb357ba0495c8b5325}{transform})
+\item 
+void \hyperlink{class_m_sphere_7481f688cff487b8d49d597d73263db8}{Save} (\hyperlink{class_u_writer}{UWriter} \&writer) const 
+\item 
+void \hyperlink{class_m_sphere_5b22737c077b40775756e2845859c925}{Load} (\hyperlink{class_u_reader}{UReader} \&reader)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 23 of file MSphere.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_m_sphere_0027be61e6778e87d461fa9c9cc12edb}{
+\index{MSphere@{MSphere}!MSphere@{MSphere}}
+\index{MSphere@{MSphere}!MSphere@{MSphere}}
+\subsubsection[{MSphere}]{\setlength{\rightskip}{0pt plus 5cm}MSphere::MSphere ()}}
+\label{class_m_sphere_0027be61e6778e87d461fa9c9cc12edb}
+
+
+
+
+Definition at line 27 of file MSphere.cpp.\hypertarget{class_m_sphere_1a1b2f1118f6abde66f918cda8c5a7ae}{
+\index{MSphere@{MSphere}!MSphere@{MSphere}}
+\index{MSphere@{MSphere}!MSphere@{MSphere}}
+\subsubsection[{MSphere}]{\setlength{\rightskip}{0pt plus 5cm}MSphere::MSphere ({\bf MVec3} {\em center}, \/  float {\em radius})}}
+\label{class_m_sphere_1a1b2f1118f6abde66f918cda8c5a7ae}
+
+
+
+
+Definition at line 35 of file MSphere.cpp.\hypertarget{class_m_sphere_adb549c6f1620d450c050419ccefde72}{
+\index{MSphere@{MSphere}!$\sim$MSphere@{$\sim$MSphere}}
+\index{$\sim$MSphere@{$\sim$MSphere}!MSphere@{MSphere}}
+\subsubsection[{$\sim$MSphere}]{\setlength{\rightskip}{0pt plus 5cm}MSphere::$\sim$MSphere ()}}
+\label{class_m_sphere_adb549c6f1620d450c050419ccefde72}
+
+
+
+
+Definition at line 43 of file MSphere.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_m_sphere_64551ac188c0149a539f608203060ce0}{
+\index{MSphere@{MSphere}!GetCenter@{GetCenter}}
+\index{GetCenter@{GetCenter}!MSphere@{MSphere}}
+\subsubsection[{GetCenter}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MVec3}\& MSphere::GetCenter () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_sphere_64551ac188c0149a539f608203060ce0}
+
+
+
+
+Definition at line 40 of file MSphere.h.\hypertarget{class_m_sphere_27475e1f9a0478b1b6140f103c0fa6fe}{
+\index{MSphere@{MSphere}!GetRadius@{GetRadius}}
+\index{GetRadius@{GetRadius}!MSphere@{MSphere}}
+\subsubsection[{GetRadius}]{\setlength{\rightskip}{0pt plus 5cm}float MSphere::GetRadius () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_sphere_27475e1f9a0478b1b6140f103c0fa6fe}
+
+
+
+
+Definition at line 41 of file MSphere.h.\hypertarget{class_m_sphere_b8ddb431ece00cac00241f82b0aec876}{
+\index{MSphere@{MSphere}!GetSection@{GetSection}}
+\index{GetSection@{GetSection}!MSphere@{MSphere}}
+\subsubsection[{GetSection}]{\setlength{\rightskip}{0pt plus 5cm}int MSphere::GetSection (const {\bf MPlane} \& {\em plane}, \/  {\bf MVec3} \& {\em center}, \/  float \& {\em radius}) const}}
+\label{class_m_sphere_b8ddb431ece00cac00241f82b0aec876}
+
+
+
+
+Definition at line 89 of file MSphere.cpp.\hypertarget{class_m_sphere_b1fd0e60e8b9ded560953ed82d0b8f19}{
+\index{MSphere@{MSphere}!GetSide@{GetSide}}
+\index{GetSide@{GetSide}!MSphere@{MSphere}}
+\subsubsection[{GetSide}]{\setlength{\rightskip}{0pt plus 5cm}int MSphere::GetSide (const {\bf MPlane} \& {\em plane}) const}}
+\label{class_m_sphere_b1fd0e60e8b9ded560953ed82d0b8f19}
+
+
+
+
+Definition at line 79 of file MSphere.cpp.\hypertarget{class_m_sphere_8f679796320925dec13f0f8a977e82a6}{
+\index{MSphere@{MSphere}!Intersect@{Intersect}}
+\index{Intersect@{Intersect}!MSphere@{MSphere}}
+\subsubsection[{Intersect}]{\setlength{\rightskip}{0pt plus 5cm}bool MSphere::Intersect (const {\bf MSphere} \& {\em sphere}) const}}
+\label{class_m_sphere_8f679796320925dec13f0f8a977e82a6}
+
+
+
+
+Definition at line 55 of file MSphere.cpp.\hypertarget{class_m_sphere_8fffb948b9e22055e9bf8ddd267c9715}{
+\index{MSphere@{MSphere}!IsInside@{IsInside}}
+\index{IsInside@{IsInside}!MSphere@{MSphere}}
+\subsubsection[{IsInside}]{\setlength{\rightskip}{0pt plus 5cm}bool MSphere::IsInside (const {\bf MSphere} \& {\em sphere}) const}}
+\label{class_m_sphere_8fffb948b9e22055e9bf8ddd267c9715}
+
+
+
+
+Definition at line 64 of file MSphere.cpp.\hypertarget{class_m_sphere_5b22737c077b40775756e2845859c925}{
+\index{MSphere@{MSphere}!Load@{Load}}
+\index{Load@{Load}!MSphere@{MSphere}}
+\subsubsection[{Load}]{\setlength{\rightskip}{0pt plus 5cm}void MSphere::Load ({\bf UReader} \& {\em reader})}}
+\label{class_m_sphere_5b22737c077b40775756e2845859c925}
+
+
+
+
+Definition at line 145 of file MSphere.cpp.\hypertarget{class_m_sphere_7481f688cff487b8d49d597d73263db8}{
+\index{MSphere@{MSphere}!Save@{Save}}
+\index{Save@{Save}!MSphere@{MSphere}}
+\subsubsection[{Save}]{\setlength{\rightskip}{0pt plus 5cm}void MSphere::Save ({\bf UWriter} \& {\em writer}) const}}
+\label{class_m_sphere_7481f688cff487b8d49d597d73263db8}
+
+
+
+
+Definition at line 137 of file MSphere.cpp.\hypertarget{class_m_sphere_b511291f81201151624da739876a1284}{
+\index{MSphere@{MSphere}!SetCenter@{SetCenter}}
+\index{SetCenter@{SetCenter}!MSphere@{MSphere}}
+\subsubsection[{SetCenter}]{\setlength{\rightskip}{0pt plus 5cm}void MSphere::SetCenter (const {\bf MVec3} \& {\em center})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_sphere_b511291f81201151624da739876a1284}
+
+
+
+
+Definition at line 37 of file MSphere.h.\hypertarget{class_m_sphere_94cc442a90bbb4f5d4f3e8e9036cef71}{
+\index{MSphere@{MSphere}!SetRadius@{SetRadius}}
+\index{SetRadius@{SetRadius}!MSphere@{MSphere}}
+\subsubsection[{SetRadius}]{\setlength{\rightskip}{0pt plus 5cm}void MSphere::SetRadius (float {\em radius})}}
+\label{class_m_sphere_94cc442a90bbb4f5d4f3e8e9036cef71}
+
+
+
+
+Definition at line 71 of file MSphere.cpp.\hypertarget{class_m_sphere_5fc463a6eeba124194bfd8874055f4d2}{
+\index{MSphere@{MSphere}!Transform@{Transform}}
+\index{Transform@{Transform}!MSphere@{MSphere}}
+\subsubsection[{Transform}]{\setlength{\rightskip}{0pt plus 5cm}void MSphere::Transform ({\bf MSphere} \& {\em sphere}, \/  const {\bf MMat4x4} \& {\em transform}) const}}
+\label{class_m_sphere_5fc463a6eeba124194bfd8874055f4d2}
+
+
+
+
+Definition at line 109 of file MSphere.cpp.\hypertarget{class_m_sphere_4e6ca0425808409f63a38cbee06ac92d}{
+\index{MSphere@{MSphere}!TransformFast@{TransformFast}}
+\index{TransformFast@{TransformFast}!MSphere@{MSphere}}
+\subsubsection[{TransformFast}]{\setlength{\rightskip}{0pt plus 5cm}void MSphere::TransformFast (const {\bf MMat4x4} \& {\em transform})}}
+\label{class_m_sphere_4e6ca0425808409f63a38cbee06ac92d}
+
+
+
+
+Definition at line 123 of file MSphere.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_m_sphere_8h}{MSphere.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_m_sphere_8cpp}{MSphere.cpp}\end{CompactItemize}

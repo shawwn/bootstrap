@@ -1,0 +1,21 @@
+\hypertarget{classirr_1_1io_1_1_i_x_m_l_base}{
+\section{irr::io::IXMLBase Class Reference}
+\label{classirr_1_1io_1_1_i_x_m_l_base}\index{irr::io::IXMLBase@{irr::io::IXMLBase}}
+}
+Empty class to be used as parent class for IrrXMLReader.  
+
+
+{\tt \#include $<$irrXML.h$>$}
+
+
+
+\subsection{Detailed Description}
+Empty class to be used as parent class for IrrXMLReader. 
+
+If you need another class as base class for the xml reader, you can do this by creating the reader using for example new CXMLReaderImpl$<$char, YourBaseClass$>$(yourcallback); The Irrlicht Engine for example needs IUnknown as base class for every object to let it automaticly reference countend, hence it replaces \hyperlink{classirr_1_1io_1_1_i_x_m_l_base}{IXMLBase} with IUnknown. See \hyperlink{irr_x_m_l_8cpp}{irrXML.cpp} on how this can be done in detail. 
+
+Definition at line 235 of file irrXML.h.
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Common/IrrXML/\hyperlink{irr_x_m_l_8h}{irrXML.h}\end{CompactItemize}

@@ -1,0 +1,122 @@
+\hypertarget{_compress_8h}{
+\section{C:/Bootstrap/ProjectBX/Engine/Test/Compress.h File Reference}
+\label{_compress_8h}\index{C:/Bootstrap/ProjectBX/Engine/Test/Compress.h@{C:/Bootstrap/ProjectBX/Engine/Test/Compress.h}}
+}
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \hyperlink{_compress_8h_a6c5d2a4be0f51be590dc329e56f0e99}{LZB\_\-ALIGNMENT}~1
+\item 
+\#define \hyperlink{_compress_8h_7bad866ce264503919d983cc35d1d899}{LZB\_\-BLOCK\_\-SIZE}~256
+\item 
+\#define \hyperlink{_compress_8h_bbdffb31e49814e1b489d569f496a6fd}{LZB\_\-MACHINE\_\-WORD\_\-SIZE}~sizeof( \hyperlink{_compress_8h_b9396b92c9610627fa1cdba0a866cfa6}{compress\_\-type\_\-t} )
+\item 
+\#define \hyperlink{_compress_8h_ab57f76139360866cf9ed6be58a3bc0c}{LZB\_\-WORDS\_\-PER\_\-BLOCK}~(LZB\_\-BLOCK\_\-SIZE / sizeof( \hyperlink{_compress_8h_b9396b92c9610627fa1cdba0a866cfa6}{compress\_\-type\_\-t} ))
+\item 
+\#define \hyperlink{_compress_8h_d9e122329b6b5a9da0cde290bf76b547}{LZB\_\-HASH\_\-WINDOW\_\-SIZE}~8
+\item 
+\#define \hyperlink{_compress_8h_f97be4ab69ee71e10d15e10d1e44641e}{LZB\_\-WORK\_\-SPACE\_\-SIZE}~(WORDS\_\-PER\_\-BLOCK $\ast$ HASH\_\-WINDOW\_\-SIZE)
+\end{CompactItemize}
+\subsection*{Typedefs}
+\begin{CompactItemize}
+\item 
+typedef signed char \hyperlink{_compress_8h_b9396b92c9610627fa1cdba0a866cfa6}{compress\_\-type\_\-t}
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+void \hyperlink{_compress_8h_aeb32762305060cb195ab50aa8e2cb69}{Compress} (void $\ast$\hyperlink{glext__bak_8h_92034251bfd455d524a9b5610cddba00}{dst}, unsigned int \&dstSize, const void $\ast$\hyperlink{glext__bak_8h_72e0fdf0f845ded60b1fada9e9195cd7}{src}, unsigned int srcSize, void $\ast$workspace)
+\item 
+void \hyperlink{_compress_8h_2d40fde6d96fbb65e13cc83924d82a5d}{Decompress} (void $\ast$\hyperlink{glext__bak_8h_92034251bfd455d524a9b5610cddba00}{dst}, unsigned int \&dstSize, const void $\ast$\hyperlink{glext__bak_8h_72e0fdf0f845ded60b1fada9e9195cd7}{src}, unsigned int srcSize)
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_compress_8h_a6c5d2a4be0f51be590dc329e56f0e99}{
+\index{Compress.h@{Compress.h}!LZB\_\-ALIGNMENT@{LZB\_\-ALIGNMENT}}
+\index{LZB\_\-ALIGNMENT@{LZB\_\-ALIGNMENT}!Compress.h@{Compress.h}}
+\subsubsection[{LZB\_\-ALIGNMENT}]{\setlength{\rightskip}{0pt plus 5cm}\#define LZB\_\-ALIGNMENT~1}}
+\label{_compress_8h_a6c5d2a4be0f51be590dc329e56f0e99}
+
+
+
+
+Definition at line 4 of file Compress.h.\hypertarget{_compress_8h_7bad866ce264503919d983cc35d1d899}{
+\index{Compress.h@{Compress.h}!LZB\_\-BLOCK\_\-SIZE@{LZB\_\-BLOCK\_\-SIZE}}
+\index{LZB\_\-BLOCK\_\-SIZE@{LZB\_\-BLOCK\_\-SIZE}!Compress.h@{Compress.h}}
+\subsubsection[{LZB\_\-BLOCK\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define LZB\_\-BLOCK\_\-SIZE~256}}
+\label{_compress_8h_7bad866ce264503919d983cc35d1d899}
+
+
+
+
+Definition at line 8 of file Compress.h.\hypertarget{_compress_8h_d9e122329b6b5a9da0cde290bf76b547}{
+\index{Compress.h@{Compress.h}!LZB\_\-HASH\_\-WINDOW\_\-SIZE@{LZB\_\-HASH\_\-WINDOW\_\-SIZE}}
+\index{LZB\_\-HASH\_\-WINDOW\_\-SIZE@{LZB\_\-HASH\_\-WINDOW\_\-SIZE}!Compress.h@{Compress.h}}
+\subsubsection[{LZB\_\-HASH\_\-WINDOW\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define LZB\_\-HASH\_\-WINDOW\_\-SIZE~8}}
+\label{_compress_8h_d9e122329b6b5a9da0cde290bf76b547}
+
+
+
+
+Definition at line 11 of file Compress.h.\hypertarget{_compress_8h_bbdffb31e49814e1b489d569f496a6fd}{
+\index{Compress.h@{Compress.h}!LZB\_\-MACHINE\_\-WORD\_\-SIZE@{LZB\_\-MACHINE\_\-WORD\_\-SIZE}}
+\index{LZB\_\-MACHINE\_\-WORD\_\-SIZE@{LZB\_\-MACHINE\_\-WORD\_\-SIZE}!Compress.h@{Compress.h}}
+\subsubsection[{LZB\_\-MACHINE\_\-WORD\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define LZB\_\-MACHINE\_\-WORD\_\-SIZE~sizeof( {\bf compress\_\-type\_\-t} )}}
+\label{_compress_8h_bbdffb31e49814e1b489d569f496a6fd}
+
+
+
+
+Definition at line 9 of file Compress.h.\hypertarget{_compress_8h_ab57f76139360866cf9ed6be58a3bc0c}{
+\index{Compress.h@{Compress.h}!LZB\_\-WORDS\_\-PER\_\-BLOCK@{LZB\_\-WORDS\_\-PER\_\-BLOCK}}
+\index{LZB\_\-WORDS\_\-PER\_\-BLOCK@{LZB\_\-WORDS\_\-PER\_\-BLOCK}!Compress.h@{Compress.h}}
+\subsubsection[{LZB\_\-WORDS\_\-PER\_\-BLOCK}]{\setlength{\rightskip}{0pt plus 5cm}\#define LZB\_\-WORDS\_\-PER\_\-BLOCK~(LZB\_\-BLOCK\_\-SIZE / sizeof( {\bf compress\_\-type\_\-t} ))}}
+\label{_compress_8h_ab57f76139360866cf9ed6be58a3bc0c}
+
+
+
+
+Definition at line 10 of file Compress.h.\hypertarget{_compress_8h_f97be4ab69ee71e10d15e10d1e44641e}{
+\index{Compress.h@{Compress.h}!LZB\_\-WORK\_\-SPACE\_\-SIZE@{LZB\_\-WORK\_\-SPACE\_\-SIZE}}
+\index{LZB\_\-WORK\_\-SPACE\_\-SIZE@{LZB\_\-WORK\_\-SPACE\_\-SIZE}!Compress.h@{Compress.h}}
+\subsubsection[{LZB\_\-WORK\_\-SPACE\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define LZB\_\-WORK\_\-SPACE\_\-SIZE~(WORDS\_\-PER\_\-BLOCK $\ast$ HASH\_\-WINDOW\_\-SIZE)}}
+\label{_compress_8h_f97be4ab69ee71e10d15e10d1e44641e}
+
+
+
+
+Definition at line 12 of file Compress.h.
+
+\subsection{Typedef Documentation}
+\hypertarget{_compress_8h_b9396b92c9610627fa1cdba0a866cfa6}{
+\index{Compress.h@{Compress.h}!compress\_\-type\_\-t@{compress\_\-type\_\-t}}
+\index{compress\_\-type\_\-t@{compress\_\-type\_\-t}!Compress.h@{Compress.h}}
+\subsubsection[{compress\_\-type\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef signed char {\bf compress\_\-type\_\-t}}}
+\label{_compress_8h_b9396b92c9610627fa1cdba0a866cfa6}
+
+
+
+
+Definition at line 6 of file Compress.h.
+
+\subsection{Function Documentation}
+\hypertarget{_compress_8h_aeb32762305060cb195ab50aa8e2cb69}{
+\index{Compress.h@{Compress.h}!Compress@{Compress}}
+\index{Compress@{Compress}!Compress.h@{Compress.h}}
+\subsubsection[{Compress}]{\setlength{\rightskip}{0pt plus 5cm}void Compress (void $\ast$ {\em dst}, \/  unsigned int \& {\em dstSize}, \/  const void $\ast$ {\em src}, \/  unsigned int {\em srcSize}, \/  void $\ast$ {\em workspace})}}
+\label{_compress_8h_aeb32762305060cb195ab50aa8e2cb69}
+
+
+
+
+Definition at line 10 of file Compress.cpp.\hypertarget{_compress_8h_2d40fde6d96fbb65e13cc83924d82a5d}{
+\index{Compress.h@{Compress.h}!Decompress@{Decompress}}
+\index{Decompress@{Decompress}!Compress.h@{Compress.h}}
+\subsubsection[{Decompress}]{\setlength{\rightskip}{0pt plus 5cm}void Decompress (void $\ast$ {\em dst}, \/  unsigned int \& {\em dstSize}, \/  const void $\ast$ {\em src}, \/  unsigned int {\em srcSize})}}
+\label{_compress_8h_2d40fde6d96fbb65e13cc83924d82a5d}
+
+
+
+
+Definition at line 92 of file Compress.cpp.

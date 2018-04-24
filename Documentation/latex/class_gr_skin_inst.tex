@@ -1,0 +1,125 @@
+\hypertarget{class_gr_skin_inst}{
+\section{GrSkinInst Class Reference}
+\label{class_gr_skin_inst}\index{GrSkinInst@{GrSkinInst}}
+}
+{\tt \#include $<$GrSkinInst.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_skin_inst_97aaf25b3f26c18e5ad7032d74e57f40}{GrSkinInst} (\hyperlink{class_gr_mesh_inst}{GrMeshInst} $\ast$targetMeshInst)
+\item 
+\hyperlink{class_gr_skin_inst_a74804ebf0e656cc67c4d4722eaf23ef}{$\sim$GrSkinInst} ()
+\item 
+\hyperlink{class_gr_skin}{GrSkin} $\ast$ \hyperlink{class_gr_skin_inst_d1ba05944156fe4f5a402c554e35b21b}{GetSkin} () const 
+\item 
+void \hyperlink{class_gr_skin_inst_d4d83abff901eccff4500f217c6af8a9}{Pick} (\hyperlink{class_u_fast_array}{GrMesh::TriHitArray} \&triHits, const \hyperlink{class_m_ray}{MRay} \&ray) const 
+\item 
+unsigned int \hyperlink{class_gr_skin_inst_cf78011014e52a7f8b14fe00a83b7151}{GetBoneCount} () const 
+\item 
+const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \& \hyperlink{class_gr_skin_inst_1fce790a944bbf468dacc975b7b020c8}{GetBoneName} (unsigned int \hyperlink{glext__bak_8h_58c2a664503e14ffb8f21012aabff3e9}{id}) const 
+\item 
+unsigned int \hyperlink{class_gr_skin_inst_a2fc77f57e5873e8967452d9c4359d43}{GetBoneId} (const char $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}) const 
+\item 
+void \hyperlink{class_gr_skin_inst_c87444515796dea8b8e939cc43434655}{SetBoneMatrix} (unsigned int boneId, const \hyperlink{class_m_mat4x4}{MMat4x4} \&\hyperlink{glext__bak_8h_7b24a3f2f56eb1244ae69dacb4fecb6f}{matrix})
+\item 
+void \hyperlink{class_gr_skin_inst_26a87eb455330a647709378ca51f3d52}{ApplySkin} ()
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 28 of file GrSkinInst.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_skin_inst_97aaf25b3f26c18e5ad7032d74e57f40}{
+\index{GrSkinInst@{GrSkinInst}!GrSkinInst@{GrSkinInst}}
+\index{GrSkinInst@{GrSkinInst}!GrSkinInst@{GrSkinInst}}
+\subsubsection[{GrSkinInst}]{\setlength{\rightskip}{0pt plus 5cm}GrSkinInst::GrSkinInst ({\bf GrMeshInst} $\ast$ {\em targetMeshInst})}}
+\label{class_gr_skin_inst_97aaf25b3f26c18e5ad7032d74e57f40}
+
+
+
+
+Definition at line 40 of file GrSkinInst.cpp.\hypertarget{class_gr_skin_inst_a74804ebf0e656cc67c4d4722eaf23ef}{
+\index{GrSkinInst@{GrSkinInst}!$\sim$GrSkinInst@{$\sim$GrSkinInst}}
+\index{$\sim$GrSkinInst@{$\sim$GrSkinInst}!GrSkinInst@{GrSkinInst}}
+\subsubsection[{$\sim$GrSkinInst}]{\setlength{\rightskip}{0pt plus 5cm}GrSkinInst::$\sim$GrSkinInst ()}}
+\label{class_gr_skin_inst_a74804ebf0e656cc67c4d4722eaf23ef}
+
+
+
+
+Definition at line 74 of file GrSkinInst.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_skin_inst_26a87eb455330a647709378ca51f3d52}{
+\index{GrSkinInst@{GrSkinInst}!ApplySkin@{ApplySkin}}
+\index{ApplySkin@{ApplySkin}!GrSkinInst@{GrSkinInst}}
+\subsubsection[{ApplySkin}]{\setlength{\rightskip}{0pt plus 5cm}void GrSkinInst::ApplySkin ()}}
+\label{class_gr_skin_inst_26a87eb455330a647709378ca51f3d52}
+
+
+
+
+Definition at line 136 of file GrSkinInst.cpp.\hypertarget{class_gr_skin_inst_cf78011014e52a7f8b14fe00a83b7151}{
+\index{GrSkinInst@{GrSkinInst}!GetBoneCount@{GetBoneCount}}
+\index{GetBoneCount@{GetBoneCount}!GrSkinInst@{GrSkinInst}}
+\subsubsection[{GetBoneCount}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrSkinInst::GetBoneCount () const}}
+\label{class_gr_skin_inst_cf78011014e52a7f8b14fe00a83b7151}
+
+
+
+
+Definition at line 95 of file GrSkinInst.cpp.\hypertarget{class_gr_skin_inst_a2fc77f57e5873e8967452d9c4359d43}{
+\index{GrSkinInst@{GrSkinInst}!GetBoneId@{GetBoneId}}
+\index{GetBoneId@{GetBoneId}!GrSkinInst@{GrSkinInst}}
+\subsubsection[{GetBoneId}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrSkinInst::GetBoneId (const char $\ast$ {\em name}) const}}
+\label{class_gr_skin_inst_a2fc77f57e5873e8967452d9c4359d43}
+
+
+
+
+Definition at line 111 of file GrSkinInst.cpp.\hypertarget{class_gr_skin_inst_1fce790a944bbf468dacc975b7b020c8}{
+\index{GrSkinInst@{GrSkinInst}!GetBoneName@{GetBoneName}}
+\index{GetBoneName@{GetBoneName}!GrSkinInst@{GrSkinInst}}
+\subsubsection[{GetBoneName}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf tstring} \& GrSkinInst::GetBoneName (unsigned int {\em id}) const}}
+\label{class_gr_skin_inst_1fce790a944bbf468dacc975b7b020c8}
+
+
+
+
+Definition at line 103 of file GrSkinInst.cpp.\hypertarget{class_gr_skin_inst_d1ba05944156fe4f5a402c554e35b21b}{
+\index{GrSkinInst@{GrSkinInst}!GetSkin@{GetSkin}}
+\index{GetSkin@{GetSkin}!GrSkinInst@{GrSkinInst}}
+\subsubsection[{GetSkin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrSkin}$\ast$ GrSkinInst::GetSkin () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_skin_inst_d1ba05944156fe4f5a402c554e35b21b}
+
+
+
+
+Definition at line 36 of file GrSkinInst.h.\hypertarget{class_gr_skin_inst_d4d83abff901eccff4500f217c6af8a9}{
+\index{GrSkinInst@{GrSkinInst}!Pick@{Pick}}
+\index{Pick@{Pick}!GrSkinInst@{GrSkinInst}}
+\subsubsection[{Pick}]{\setlength{\rightskip}{0pt plus 5cm}void GrSkinInst::Pick ({\bf GrMesh::TriHitArray} \& {\em triHits}, \/  const {\bf MRay} \& {\em ray}) const}}
+\label{class_gr_skin_inst_d4d83abff901eccff4500f217c6af8a9}
+
+
+
+
+Definition at line 88 of file GrSkinInst.cpp.\hypertarget{class_gr_skin_inst_c87444515796dea8b8e939cc43434655}{
+\index{GrSkinInst@{GrSkinInst}!SetBoneMatrix@{SetBoneMatrix}}
+\index{SetBoneMatrix@{SetBoneMatrix}!GrSkinInst@{GrSkinInst}}
+\subsubsection[{SetBoneMatrix}]{\setlength{\rightskip}{0pt plus 5cm}void GrSkinInst::SetBoneMatrix (unsigned int {\em boneId}, \/  const {\bf MMat4x4} \& {\em matrix})}}
+\label{class_gr_skin_inst_c87444515796dea8b8e939cc43434655}
+
+
+
+
+Definition at line 119 of file GrSkinInst.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_skin_inst_8h}{GrSkinInst.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_skin_inst_8cpp}{GrSkinInst.cpp}\end{CompactItemize}

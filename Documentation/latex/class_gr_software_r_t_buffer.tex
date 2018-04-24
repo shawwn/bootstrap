@@ -1,0 +1,178 @@
+\hypertarget{class_gr_software_r_t_buffer}{
+\section{GrSoftwareRTBuffer Class Reference}
+\label{class_gr_software_r_t_buffer}\index{GrSoftwareRTBuffer@{GrSoftwareRTBuffer}}
+}
+{\tt \#include $<$GrSoftwareRTBuffer.h$>$}
+
+Inheritance diagram for GrSoftwareRTBuffer::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_gr_software_r_t_buffer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_software_r_t_buffer_017c633b19fa649ce8ce609d6819819c}{GrSoftwareRTBuffer} (unsigned int \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, unsigned int \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height}, unsigned int bytesPerPel)
+\item 
+\hyperlink{class_gr_software_r_t_buffer_90decbb3ae9cb6c99a3f078b77156311}{$\sim$GrSoftwareRTBuffer} ()
+\item 
+unsigned int \hyperlink{class_gr_software_r_t_buffer_7dd0b05522440e0b8112e974095ce0aa}{GetBytesPerPel} () const 
+\item 
+unsigned int \hyperlink{class_gr_software_r_t_buffer_c61ed73f4c054a6b3b6cf98e37741f87}{GetWidth} () const 
+\item 
+unsigned int \hyperlink{class_gr_software_r_t_buffer_72eb1f3acc53e88f3f89d79226c4e1f2}{GetHeight} () const 
+\item 
+unsigned int \hyperlink{class_gr_software_r_t_buffer_4b44fe3409b607a037b567ec19830257}{GetStride} () const 
+\item 
+unsigned int \hyperlink{class_gr_software_r_t_buffer_c0be8c165c3d4a9f110880704f6b2c42}{GetTile8x8Stride} () const 
+\item 
+unsigned char $\ast$ \hyperlink{class_gr_software_r_t_buffer_cd1d8af57e8676b94e5e1e5c21fbb4db}{BeginTile8x8} (unsigned int \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x}, unsigned int \hyperlink{wglext_8h_9298c7ad619074f5285b32c6b72bfdea}{y})
+\item 
+unsigned char $\ast$ \hyperlink{class_gr_software_r_t_buffer_f796e2b365ca4712537be3a927e565c6}{BeginTile8x8WriteOnly} (unsigned int \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x}, unsigned int \hyperlink{wglext_8h_9298c7ad619074f5285b32c6b72bfdea}{y})
+\item 
+void \hyperlink{class_gr_software_r_t_buffer_2e3662e5945e1f6df74f620f5b3b9b0f}{EndTile8x8} (unsigned int \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x}, unsigned int \hyperlink{wglext_8h_9298c7ad619074f5285b32c6b72bfdea}{y})
+\item 
+unsigned char $\ast$ \hyperlink{class_gr_software_r_t_buffer_04b103e0d51724ddf7320337a18e83f5}{GetData} () const 
+\item 
+void \hyperlink{class_gr_software_r_t_buffer_2e475a40722932bba43e7f2c4f7c2f20}{Clear} (void $\ast$pelClearData)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 18 of file GrSoftwareRTBuffer.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_software_r_t_buffer_017c633b19fa649ce8ce609d6819819c}{
+\index{GrSoftwareRTBuffer@{GrSoftwareRTBuffer}!GrSoftwareRTBuffer@{GrSoftwareRTBuffer}}
+\index{GrSoftwareRTBuffer@{GrSoftwareRTBuffer}!GrSoftwareRTBuffer@{GrSoftwareRTBuffer}}
+\subsubsection[{GrSoftwareRTBuffer}]{\setlength{\rightskip}{0pt plus 5cm}GrSoftwareRTBuffer::GrSoftwareRTBuffer (unsigned int {\em width}, \/  unsigned int {\em height}, \/  unsigned int {\em bytesPerPel})}}
+\label{class_gr_software_r_t_buffer_017c633b19fa649ce8ce609d6819819c}
+
+
+
+
+Definition at line 23 of file GrSoftwareRTBuffer.cpp.\hypertarget{class_gr_software_r_t_buffer_90decbb3ae9cb6c99a3f078b77156311}{
+\index{GrSoftwareRTBuffer@{GrSoftwareRTBuffer}!$\sim$GrSoftwareRTBuffer@{$\sim$GrSoftwareRTBuffer}}
+\index{$\sim$GrSoftwareRTBuffer@{$\sim$GrSoftwareRTBuffer}!GrSoftwareRTBuffer@{GrSoftwareRTBuffer}}
+\subsubsection[{$\sim$GrSoftwareRTBuffer}]{\setlength{\rightskip}{0pt plus 5cm}GrSoftwareRTBuffer::$\sim$GrSoftwareRTBuffer ()}}
+\label{class_gr_software_r_t_buffer_90decbb3ae9cb6c99a3f078b77156311}
+
+
+
+
+Definition at line 44 of file GrSoftwareRTBuffer.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_software_r_t_buffer_cd1d8af57e8676b94e5e1e5c21fbb4db}{
+\index{GrSoftwareRTBuffer@{GrSoftwareRTBuffer}!BeginTile8x8@{BeginTile8x8}}
+\index{BeginTile8x8@{BeginTile8x8}!GrSoftwareRTBuffer@{GrSoftwareRTBuffer}}
+\subsubsection[{BeginTile8x8}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char $\ast$ GrSoftwareRTBuffer::BeginTile8x8 (unsigned int {\em x}, \/  unsigned int {\em y})\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{class_gr_software_r_t_buffer_cd1d8af57e8676b94e5e1e5c21fbb4db}
+
+
+
+
+Implements \hyperlink{class_gr_software_r_t_base_327778f4649ef0ac403a2eb9fde3031d}{GrSoftwareRTBase}.
+
+Definition at line 58 of file GrSoftwareRTBuffer.cpp.\hypertarget{class_gr_software_r_t_buffer_f796e2b365ca4712537be3a927e565c6}{
+\index{GrSoftwareRTBuffer@{GrSoftwareRTBuffer}!BeginTile8x8WriteOnly@{BeginTile8x8WriteOnly}}
+\index{BeginTile8x8WriteOnly@{BeginTile8x8WriteOnly}!GrSoftwareRTBuffer@{GrSoftwareRTBuffer}}
+\subsubsection[{BeginTile8x8WriteOnly}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char $\ast$ GrSoftwareRTBuffer::BeginTile8x8WriteOnly (unsigned int {\em x}, \/  unsigned int {\em y})\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{class_gr_software_r_t_buffer_f796e2b365ca4712537be3a927e565c6}
+
+
+
+
+Implements \hyperlink{class_gr_software_r_t_base_8105b579f48de033a1f78c98b843d3e9}{GrSoftwareRTBase}.
+
+Definition at line 78 of file GrSoftwareRTBuffer.cpp.\hypertarget{class_gr_software_r_t_buffer_2e475a40722932bba43e7f2c4f7c2f20}{
+\index{GrSoftwareRTBuffer@{GrSoftwareRTBuffer}!Clear@{Clear}}
+\index{Clear@{Clear}!GrSoftwareRTBuffer@{GrSoftwareRTBuffer}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}void GrSoftwareRTBuffer::Clear (void $\ast$ {\em pelClearData})}}
+\label{class_gr_software_r_t_buffer_2e475a40722932bba43e7f2c4f7c2f20}
+
+
+
+
+Definition at line 102 of file GrSoftwareRTBuffer.cpp.\hypertarget{class_gr_software_r_t_buffer_2e3662e5945e1f6df74f620f5b3b9b0f}{
+\index{GrSoftwareRTBuffer@{GrSoftwareRTBuffer}!EndTile8x8@{EndTile8x8}}
+\index{EndTile8x8@{EndTile8x8}!GrSoftwareRTBuffer@{GrSoftwareRTBuffer}}
+\subsubsection[{EndTile8x8}]{\setlength{\rightskip}{0pt plus 5cm}void GrSoftwareRTBuffer::EndTile8x8 (unsigned int {\em x}, \/  unsigned int {\em y})\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{class_gr_software_r_t_buffer_2e3662e5945e1f6df74f620f5b3b9b0f}
+
+
+
+
+Implements \hyperlink{class_gr_software_r_t_base_152b9d2964518f0c50ff8ced3f3da097}{GrSoftwareRTBase}.
+
+Definition at line 85 of file GrSoftwareRTBuffer.cpp.\hypertarget{class_gr_software_r_t_buffer_7dd0b05522440e0b8112e974095ce0aa}{
+\index{GrSoftwareRTBuffer@{GrSoftwareRTBuffer}!GetBytesPerPel@{GetBytesPerPel}}
+\index{GetBytesPerPel@{GetBytesPerPel}!GrSoftwareRTBuffer@{GrSoftwareRTBuffer}}
+\subsubsection[{GetBytesPerPel}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrSoftwareRTBuffer::GetBytesPerPel () const\hspace{0.3cm}{\tt  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_gr_software_r_t_buffer_7dd0b05522440e0b8112e974095ce0aa}
+
+
+
+
+Implements \hyperlink{class_gr_software_r_t_base_24d6fc1742e612d9fa304e2264bd9dd8}{GrSoftwareRTBase}.
+
+Definition at line 25 of file GrSoftwareRTBuffer.h.\hypertarget{class_gr_software_r_t_buffer_04b103e0d51724ddf7320337a18e83f5}{
+\index{GrSoftwareRTBuffer@{GrSoftwareRTBuffer}!GetData@{GetData}}
+\index{GetData@{GetData}!GrSoftwareRTBuffer@{GrSoftwareRTBuffer}}
+\subsubsection[{GetData}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char$\ast$ GrSoftwareRTBuffer::GetData () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_software_r_t_buffer_04b103e0d51724ddf7320337a18e83f5}
+
+
+
+
+Definition at line 37 of file GrSoftwareRTBuffer.h.\hypertarget{class_gr_software_r_t_buffer_72eb1f3acc53e88f3f89d79226c4e1f2}{
+\index{GrSoftwareRTBuffer@{GrSoftwareRTBuffer}!GetHeight@{GetHeight}}
+\index{GetHeight@{GetHeight}!GrSoftwareRTBuffer@{GrSoftwareRTBuffer}}
+\subsubsection[{GetHeight}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrSoftwareRTBuffer::GetHeight () const\hspace{0.3cm}{\tt  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_gr_software_r_t_buffer_72eb1f3acc53e88f3f89d79226c4e1f2}
+
+
+
+
+Implements \hyperlink{class_gr_software_r_t_base_28d12d92fea7b0a5891123fe7d5dfc74}{GrSoftwareRTBase}.
+
+Definition at line 27 of file GrSoftwareRTBuffer.h.\hypertarget{class_gr_software_r_t_buffer_4b44fe3409b607a037b567ec19830257}{
+\index{GrSoftwareRTBuffer@{GrSoftwareRTBuffer}!GetStride@{GetStride}}
+\index{GetStride@{GetStride}!GrSoftwareRTBuffer@{GrSoftwareRTBuffer}}
+\subsubsection[{GetStride}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrSoftwareRTBuffer::GetStride () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_software_r_t_buffer_4b44fe3409b607a037b567ec19830257}
+
+
+
+
+Definition at line 28 of file GrSoftwareRTBuffer.h.\hypertarget{class_gr_software_r_t_buffer_c0be8c165c3d4a9f110880704f6b2c42}{
+\index{GrSoftwareRTBuffer@{GrSoftwareRTBuffer}!GetTile8x8Stride@{GetTile8x8Stride}}
+\index{GetTile8x8Stride@{GetTile8x8Stride}!GrSoftwareRTBuffer@{GrSoftwareRTBuffer}}
+\subsubsection[{GetTile8x8Stride}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrSoftwareRTBuffer::GetTile8x8Stride () const\hspace{0.3cm}{\tt  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_gr_software_r_t_buffer_c0be8c165c3d4a9f110880704f6b2c42}
+
+
+
+
+Implements \hyperlink{class_gr_software_r_t_base_9ed681a9c06bd9657f75e7590bfee5ac}{GrSoftwareRTBase}.
+
+Definition at line 29 of file GrSoftwareRTBuffer.h.\hypertarget{class_gr_software_r_t_buffer_c61ed73f4c054a6b3b6cf98e37741f87}{
+\index{GrSoftwareRTBuffer@{GrSoftwareRTBuffer}!GetWidth@{GetWidth}}
+\index{GetWidth@{GetWidth}!GrSoftwareRTBuffer@{GrSoftwareRTBuffer}}
+\subsubsection[{GetWidth}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrSoftwareRTBuffer::GetWidth () const\hspace{0.3cm}{\tt  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_gr_software_r_t_buffer_c61ed73f4c054a6b3b6cf98e37741f87}
+
+
+
+
+Implements \hyperlink{class_gr_software_r_t_base_f1b868a5ca1e7444a44c280e76bd802d}{GrSoftwareRTBase}.
+
+Definition at line 26 of file GrSoftwareRTBuffer.h.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_software_r_t_buffer_8h}{GrSoftwareRTBuffer.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_software_r_t_buffer_8cpp}{GrSoftwareRTBuffer.cpp}\end{CompactItemize}

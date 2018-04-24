@@ -1,0 +1,904 @@
+\hypertarget{_gr_util_8cpp}{
+\section{C:/Bootstrap/ProjectBX/Engine/Graphics/GrUtil.cpp File Reference}
+\label{_gr_util_8cpp}\index{C:/Bootstrap/ProjectBX/Engine/Graphics/GrUtil.cpp@{C:/Bootstrap/ProjectBX/Engine/Graphics/GrUtil.cpp}}
+}
+{\tt \#include \char`\"{}graphics\_\-afx.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrUtil.h\char`\"{}}\par
+{\tt \#include \char`\"{}GLSubsys.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrConfig.h\char`\"{}}\par
+{\tt \#include \char`\"{}MMat4x4.h\char`\"{}}\par
+{\tt \#include \char`\"{}MVec3.h\char`\"{}}\par
+{\tt \#include \char`\"{}MOBox.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrColor.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrCamera.h\char`\"{}}\par
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \hyperlink{_gr_util_8cpp_759c4ef721bf87a80985cfabac8262f6}{MATRIX\_\-STACK\_\-SIZE}~256
+\item 
+\#define \hyperlink{_gr_util_8cpp_f3367e3838b14afc0dc4318d3820f33c}{STATE\_\-STACK\_\-SIZE}~256
+\item 
+\#define \hyperlink{_gr_util_8cpp_2cfbdfb784d1c5f4e95d4595642f6588}{CHECK\_\-BIT}(\hyperlink{glext__bak_8h_0f71581a41fd2264c8944126dabbd010}{b}, \hyperlink{glext_8h_f593500c283bf1a787a6f947f503a5c2}{m})~( ( ( \hyperlink{glext__bak_8h_0f71581a41fd2264c8944126dabbd010}{b} ) \& ( \hyperlink{glext_8h_f593500c283bf1a787a6f947f503a5c2}{m} ) ) != 0 ? ( GL\_\-TRUE ) : ( GL\_\-ZERO ) )
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{_gr_util_8cpp_722cda3da38eead2fec2bed2e3abfe32}{B\_\-STATIC\_\-ASSERT} (ETF\_\-COUNT==15)
+\item 
+\hyperlink{_gr_util_8cpp_7dfb4380369bc0d3b9f615805fd70a5b}{B\_\-STATIC\_\-ASSERT} (EIF\_\-COUNT==11)
+\item 
+\hyperlink{_gr_util_8cpp_eed7d01c3a090cf292d86999e64efae6}{B\_\-STATIC\_\-ASSERT} (ET\_\-COUNT==8)
+\item 
+\hyperlink{_gr_util_8cpp_da7f340a29a5826b17f1aeba64a9581c}{B\_\-STATIC\_\-ASSERT} (EPT\_\-COUNT==5)
+\item 
+void \hyperlink{_gr_util_8cpp_d1feed1ad65ec4d2473b921369c8365b}{GrStateStart} (unsigned int initScreenWidth, unsigned int initScreenHeight)
+\item 
+bool \hyperlink{_gr_util_8cpp_50fd4ddbaab4ffd72f30a7bb3b55e1dd}{GrStateStarted} ()
+\item 
+void \hyperlink{_gr_util_8cpp_ee9e0ba47c9981a63cda19342461130c}{GrStateStop} ()
+\item 
+void \hyperlink{_gr_util_8cpp_12179b4fb6d51d7550d5fddf5c712893}{GrEnable} (unsigned int \hyperlink{_u_t_message_8h_0a3c0b351ab09281b662a9ff4f900a53}{flags})
+\item 
+void \hyperlink{_gr_util_8cpp_bafd90d401a31030835ccacc7322688e}{GrDisable} (unsigned int \hyperlink{_u_t_message_8h_0a3c0b351ab09281b662a9ff4f900a53}{flags})
+\item 
+void \hyperlink{_gr_util_8cpp_73fdce3597a65b39238ee810531f71e6}{GrPushState} ()
+\item 
+void \hyperlink{_gr_util_8cpp_cee9c3df883692d1843a0921829323b3}{GrPopState} ()
+\item 
+unsigned int \hyperlink{_gr_util_8cpp_574795c3dac21a7865338c4c1c556168}{GrGetState} ()
+\item 
+void \hyperlink{_gr_util_8cpp_da7ea629bb413c26919562c8846d6139}{GrSetState} (unsigned int state)
+\item 
+void \hyperlink{_gr_util_8cpp_03557aad43b9308f0df604e3ee7b73db}{GrStreamEnableArrays} (unsigned int arrayFlags)
+\item 
+void \hyperlink{_gr_util_8cpp_506af8fd03563f360bdd3cacb4481047}{GrStreamDisableArrays} (unsigned int arrayFlags)
+\item 
+unsigned int \hyperlink{_gr_util_8cpp_2422e456282e8cd08d5c0db6ef511245}{GrStreamGetArrayState} ()
+\item 
+void \hyperlink{_gr_util_8cpp_3cca7d6ef9177f203bc05fbc0d323027}{GrStreamSetArrayState} (unsigned int arrayFlags)
+\item 
+void \hyperlink{_gr_util_8cpp_6c4fa990878132e93007e8afacccc2d5}{GrStreamArrayPointer} (unsigned int arrayIndex, unsigned int elemCount, \hyperlink{_gr_util_8h_ac7250b216f548e740b6d2e0d5d972f8}{EGRTYPE} elemType, bool \hyperlink{glext__bak_8h_991495bc19f64c176dd83a350b8b1c88}{normalized}, unsigned int \hyperlink{glext__bak_8h_dec60f1216ca1b900f8d776c5b6190e0}{stride}, const void $\ast$\hyperlink{glext__bak_8h_6f3ad441c8a119d2058cfdee077333e7}{pointer})
+\item 
+unsigned int \hyperlink{_gr_util_8cpp_2617b728d05892c75cd8099a3f4f8ad2}{GrGenTexture} ()
+\item 
+void \hyperlink{_gr_util_8cpp_3a27b94e557d396f120d7f68a463948f}{GrDeleteTexture} (unsigned int handle)
+\item 
+unsigned int \hyperlink{_gr_util_8cpp_00da5f5a32fc33b453eabf005a4890cc}{GrGenVB} ()
+\item 
+void \hyperlink{_gr_util_8cpp_d04bcc81af6bce0f1f39edf465cf3eff}{GrDeleteVB} (unsigned int handle)
+\item 
+unsigned int \hyperlink{_gr_util_8cpp_9ef3f8b46b61cfdc3881a5d99985d6a3}{GrGenIB} ()
+\item 
+void \hyperlink{_gr_util_8cpp_6ca83b60e3149265e907a05f903c7168}{GrDeleteIB} (unsigned int handle)
+\item 
+unsigned int \hyperlink{_gr_util_8cpp_1ab5639fb6cdd4295513ca9e7604f69d}{GrGenPB} ()
+\item 
+void \hyperlink{_gr_util_8cpp_5b8b0e421e702153a0109911b5c3e0a8}{GrDeletePB} (unsigned int handle)
+\item 
+void \hyperlink{_gr_util_8cpp_20a5c03b0b2a8baab3813655f7925bde}{GrTexImage2D} (unsigned int handle, unsigned int miplevel, \hyperlink{_gr_util_8h_44688cfc75f55fcd8f79435674faf92a}{EGRTEXTUREFORMAT} \hyperlink{glext__bak_8h_dfa3e9c3e9fe1bf0a67a9e77a0bac5d8}{internalFormat}, unsigned int \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, unsigned int \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height}, \hyperlink{_gr_util_8h_02f438f7c3b1769e8bf1359926d05502}{EGRIMAGEFORMAT} \hyperlink{glext__bak_8h_e2d3db041c6004a67047659b42f73a44}{format}, \hyperlink{_gr_util_8h_ac7250b216f548e740b6d2e0d5d972f8}{EGRTYPE} \hyperlink{glext__bak_8h_7d05960f4f1c1b11f3177dc963a45d86}{type}, const void $\ast$\hyperlink{glext__bak_8h_69926c009f2d52c6b6d2c76784af8c64}{data})
+\item 
+void \hyperlink{_gr_util_8cpp_e17cf4475c6ed5bdcee691ad010418bc}{GrTexImage3D} (unsigned int handle, unsigned int miplevel, \hyperlink{_gr_util_8h_44688cfc75f55fcd8f79435674faf92a}{EGRTEXTUREFORMAT} \hyperlink{glext__bak_8h_dfa3e9c3e9fe1bf0a67a9e77a0bac5d8}{internalFormat}, unsigned int \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, unsigned int \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height}, unsigned int \hyperlink{glext__bak_8h_1c814629538debe12a7bfe2509a3671e}{depth}, \hyperlink{_gr_util_8h_02f438f7c3b1769e8bf1359926d05502}{EGRIMAGEFORMAT} \hyperlink{glext__bak_8h_e2d3db041c6004a67047659b42f73a44}{format}, \hyperlink{_gr_util_8h_ac7250b216f548e740b6d2e0d5d972f8}{EGRTYPE} \hyperlink{glext__bak_8h_7d05960f4f1c1b11f3177dc963a45d86}{type}, const void $\ast$\hyperlink{glext__bak_8h_69926c009f2d52c6b6d2c76784af8c64}{data})
+\item 
+void \hyperlink{_gr_util_8cpp_78aa2573e237c1ac3e315784d8261adc}{GrTexImageCube} (unsigned int handle, unsigned int miplevel, \hyperlink{_gr_util_8h_44688cfc75f55fcd8f79435674faf92a}{EGRTEXTUREFORMAT} \hyperlink{glext__bak_8h_dfa3e9c3e9fe1bf0a67a9e77a0bac5d8}{internalFormat}, unsigned int dim, \hyperlink{_gr_util_8h_02f438f7c3b1769e8bf1359926d05502}{EGRIMAGEFORMAT} \hyperlink{glext__bak_8h_e2d3db041c6004a67047659b42f73a44}{format}, \hyperlink{_gr_util_8h_ac7250b216f548e740b6d2e0d5d972f8}{EGRTYPE} \hyperlink{glext__bak_8h_7d05960f4f1c1b11f3177dc963a45d86}{type}, const void $\ast$dataPX, const void $\ast$dataNX, const void $\ast$dataPY, const void $\ast$dataNY, const void $\ast$dataPZ, const void $\ast$dataNZ)
+\item 
+void \hyperlink{_gr_util_8cpp_0d997236daa4e0e2f0dc98dd96e17386}{GrBindTexture} (unsigned int texUnit, unsigned int \hyperlink{glext_8h_f9d0cbbbeb7414e786c41899e5a856d7}{target}, unsigned int handle)
+\item 
+unsigned int \hyperlink{_gr_util_8cpp_81061ecb30353228dfeddad8b328135e}{GrGetTexture} (unsigned int texUnit)
+\item 
+unsigned int \hyperlink{_gr_util_8cpp_ed5706cf53afcefddc50f00549200440}{GrGetTextureTarget} (unsigned int texUnit)
+\item 
+void \hyperlink{_gr_util_8cpp_b380583a085e70e5db988eb1573be067}{GrBindVB} (unsigned int handle)
+\item 
+unsigned int \hyperlink{_gr_util_8cpp_81f8a976041fe3910639d2ee7054c90a}{GrGetVB} ()
+\item 
+void \hyperlink{_gr_util_8cpp_0f573923ce54d669ceb19234cc2f8d36}{GrBindIB} (unsigned int handle)
+\item 
+unsigned int \hyperlink{_gr_util_8cpp_cd8d7c5efdbc9e097f1285e32bae23ee}{GrGetIB} ()
+\item 
+void \hyperlink{_gr_util_8cpp_1f0d5c47a0f03caa1ebf26e600844a93}{GrBindPackPB} (unsigned int handle)
+\item 
+unsigned int \hyperlink{_gr_util_8cpp_368ba0f00324e71c46a376ce4a0c9c4f}{GrGetPackPB} ()
+\item 
+void \hyperlink{_gr_util_8cpp_681f56fdfb1ea8225c03f9a14b41be2c}{GrBindUnpackPB} (unsigned int handle)
+\item 
+unsigned int \hyperlink{_gr_util_8cpp_25a5b32dfc45cb4385ac12eceed64981}{GrGetUnpackPB} ()
+\item 
+void \hyperlink{_gr_util_8cpp_a40f94ecd4645027260b3217ce172cbe}{GrBindShader} (unsigned int handle)
+\item 
+unsigned int \hyperlink{_gr_util_8cpp_cf8fae2ee0807b48ac9c5bdb8ae47583}{GrGetShader} ()
+\item 
+void \hyperlink{_gr_util_8cpp_9a291034b97656318368e8e94d7ee766}{GrGetBlendMode} (\hyperlink{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ec}{EGRBLENDMODE} \&srcFactorRGB, \hyperlink{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ec}{EGRBLENDMODE} \&dstFactorRGB, \hyperlink{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ec}{EGRBLENDMODE} \&srcFactorAlpha, \hyperlink{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ec}{EGRBLENDMODE} \&dstFactorAlpha)
+\item 
+void \hyperlink{_gr_util_8cpp_c1e533fa9d8433287f1bbe7d2a31080d}{GrSetBlendMode} (\hyperlink{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ec}{EGRBLENDMODE} srcFactorRGB, \hyperlink{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ec}{EGRBLENDMODE} dstFactorRGB)
+\item 
+void \hyperlink{_gr_util_8cpp_8113d47ba246af0755119898841eee57}{GrSetBlendMode} (\hyperlink{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ec}{EGRBLENDMODE} srcFactorRGB, \hyperlink{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ec}{EGRBLENDMODE} dstFactorRGB, \hyperlink{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ec}{EGRBLENDMODE} srcFactorAlpha, \hyperlink{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ec}{EGRBLENDMODE} dstFactorAlpha)
+\item 
+\hyperlink{_gr_util_8h_1b0363d090000f9cf8d7b949574fa046}{EGRSTENCILMODE} \hyperlink{_gr_util_8cpp_00adee6c248946476cf782365a2cd0c5}{GrGetStencilMode} ()
+\item 
+void \hyperlink{_gr_util_8cpp_53d65df4590c2b3a3eaf54ca65784f6e}{GrSetStencilMode} (\hyperlink{_gr_util_8h_1b0363d090000f9cf8d7b949574fa046}{EGRSTENCILMODE} \hyperlink{glext__bak_8h_1e71d9c196e4683cc06c4b54d53f7ef5}{mode}, unsigned int \hyperlink{glext__bak_8h_5612bf87afe1aa200ad412866de45c1f}{mask})
+\item 
+\hyperlink{_gr_util_8h_abff98128b1f220d1ceff538f4abdef3}{EGRALPHATESTMODE} \hyperlink{_gr_util_8cpp_0f52c4c5e92f45dfd50b6cdf00cd6400}{GrGetAlphaTestMode} ()
+\item 
+void \hyperlink{_gr_util_8cpp_d50055638c7736c9e411fa2f6b86c93c}{GrSetAlphaTestMode} (\hyperlink{_gr_util_8h_abff98128b1f220d1ceff538f4abdef3}{EGRALPHATESTMODE} \hyperlink{glext__bak_8h_1e71d9c196e4683cc06c4b54d53f7ef5}{mode}, float \hyperlink{glext__bak_8h_083de4c8e32ad3d9059245f26be721de}{ref})
+\item 
+\hyperlink{_gr_util_8h_ea790ef067767354691d0d60c51542fe}{EGRCULLMODE} \hyperlink{_gr_util_8cpp_dc3723ac695dbc9bc00736470631030a}{GrGetCullMode} ()
+\item 
+void \hyperlink{_gr_util_8cpp_ecb580f9d96395afa050b6d81c31421c}{GrSetCullMode} (\hyperlink{_gr_util_8h_ea790ef067767354691d0d60c51542fe}{EGRCULLMODE} \hyperlink{glext__bak_8h_1e71d9c196e4683cc06c4b54d53f7ef5}{mode})
+\item 
+\hyperlink{_gr_util_8h_987cbe08cd23c0d7a12ae576e9ce0984}{EGRDEPTHMODE} \hyperlink{_gr_util_8cpp_b0b6dbcd54d4e8d99cba297c5fb4d186}{GrGetDepthMode} ()
+\item 
+void \hyperlink{_gr_util_8cpp_60d9ac55af862efb36a5e95f19c14407}{GrSetDepthMode} (\hyperlink{_gr_util_8h_987cbe08cd23c0d7a12ae576e9ce0984}{EGRDEPTHMODE} \hyperlink{glext__bak_8h_1e71d9c196e4683cc06c4b54d53f7ef5}{mode})
+\item 
+void \hyperlink{_gr_util_8cpp_d6c899820503336631afde3d9b8c481c}{GrGetDepthBias} (float \&slopeBias, float \&constBias)
+\item 
+void \hyperlink{_gr_util_8cpp_8c05179e9971c39d5398742cffd8592b}{GrSetDepthBias} (float slopeBias, float constBias)
+\item 
+void \hyperlink{_gr_util_8cpp_547285e99c507990bed34ef0ec1c7b7d}{GrViewport} (int \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x}, int \hyperlink{wglext_8h_9298c7ad619074f5285b32c6b72bfdea}{y}, int \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, int \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height})
+\item 
+void \hyperlink{_gr_util_8cpp_790778867fdcac797860c02a4bd6b1fa}{GrGetViewport} (int \&\hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x}, int \&\hyperlink{wglext_8h_9298c7ad619074f5285b32c6b72bfdea}{y}, int \&\hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, int \&\hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height})
+\item 
+void \hyperlink{_gr_util_8cpp_9091fe53a16798ff5eea3dab70dd81ff}{GrScissor} (int \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x}, int \hyperlink{wglext_8h_9298c7ad619074f5285b32c6b72bfdea}{y}, int \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, int \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height})
+\item 
+void \hyperlink{_gr_util_8cpp_09e5c6ded78f38ea5cdcd157df777c20}{GrGetScissor} (int \&\hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x}, int \&\hyperlink{wglext_8h_9298c7ad619074f5285b32c6b72bfdea}{y}, int \&\hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, int \&\hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height})
+\item 
+void \hyperlink{_gr_util_8cpp_3ce89d253d78fe6dae9824278e029c18}{GrSetProjectionMatrix} (const \hyperlink{class_m_mat4x4}{MMat4x4} \&proj)
+\item 
+void \hyperlink{_gr_util_8cpp_3cbd050170b35f7e62ae7af31af1ba00}{GrSetModelViewMatrix} (const \hyperlink{class_m_mat4x4}{MMat4x4} \&modelView)
+\item 
+void \hyperlink{_gr_util_8cpp_4377e86e49bceb3c6fd43852e0d210a5}{GrMultiplyModelViewMatrix} (const \hyperlink{class_m_mat4x4}{MMat4x4} \&\hyperlink{glext__bak_8h_7b24a3f2f56eb1244ae69dacb4fecb6f}{matrix})
+\item 
+void \hyperlink{_gr_util_8cpp_4ccf11ebf1bdb0b454b77213a35ac073}{GrPushModelViewMatrix} ()
+\item 
+void \hyperlink{_gr_util_8cpp_013a5f0324569410d41786201deef347}{GrPopModelViewMatrix} ()
+\item 
+unsigned int \hyperlink{_gr_util_8cpp_1175157b98b63f050c8ba2a09b8bf38b}{GrGetWriteEnable} ()
+\item 
+void \hyperlink{_gr_util_8cpp_7b33558bb79e3c6936f26553c282d081}{GrSetWriteEnable} (unsigned int \hyperlink{glext__bak_8h_5612bf87afe1aa200ad412866de45c1f}{mask})
+\item 
+void \hyperlink{_gr_util_8cpp_7846b6c52cbb48bb05538b9d53ce3ede}{GrDrawBuffers} (unsigned int \hyperlink{glext__bak_8h_996c1796ca5fd986476937580146f931}{buffers})
+\item 
+void \hyperlink{_gr_util_8cpp_31be90e1387c34e7e279e74e661f654e}{GrReadBuffer} (unsigned int \hyperlink{glext__bak_8h_c4fdb15bdbcd63430bab668b5419ed9f}{buffer})
+\item 
+void \hyperlink{_gr_util_8cpp_60654372f8080fc80b5e1ef0aea7dd99}{GrClear} (float red, float \hyperlink{glext__bak_8h_c57fb4e15aa855fa227d97909b37ed5b}{green}, float \hyperlink{glext__bak_8h_f7c76492ef0f7ddda2f5f079041e5a8e}{blue}, float \hyperlink{glext__bak_8h_1e566ae365860db53d0c241c526b52c3}{alpha}, float \hyperlink{glext__bak_8h_1c814629538debe12a7bfe2509a3671e}{depth}, unsigned int \hyperlink{glext_8h_ecd18db993a66d833647945966799ca5}{stencil})
+\item 
+void \hyperlink{_gr_util_8cpp_b5f8140bc16ae7aad41126040955971b}{GrDrawArrays} (\hyperlink{_gr_util_8h_b3e9826637cd9ac6566bdd76e9fce145}{EGRPRIMTYPE} primType, unsigned int \hyperlink{glext__bak_8h_c55adc720a3098c1b454d2a4647f4361}{start}, unsigned int \hyperlink{wglext_8h_98d18d6b4e3ba4ed266c6fb54c839d70}{count})
+\item 
+void \hyperlink{_gr_util_8cpp_893d86875d97390d70b2d642b142bc9f}{GrDrawRangeArrays} (\hyperlink{_gr_util_8h_b3e9826637cd9ac6566bdd76e9fce145}{EGRPRIMTYPE} primType, unsigned int minIndex, unsigned int maxIndex, unsigned int \hyperlink{wglext_8h_98d18d6b4e3ba4ed266c6fb54c839d70}{count}, \hyperlink{_gr_util_8h_ac7250b216f548e740b6d2e0d5d972f8}{EGRTYPE} indexType, void $\ast$\hyperlink{glext__bak_8h_c4293d0f76770fe857be3431df25308d}{indices})
+\item 
+int \hyperlink{_gr_util_8cpp_57ce65addf88b13e2ef46292a30fb539}{GrGetMaxTextureSize} ()
+\item 
+int \hyperlink{_gr_util_8cpp_314fa8e5a4bc247c611bdffaa7c357be}{GrGetMaxFramebufferSize} ()
+\item 
+int \hyperlink{_gr_util_8cpp_69298fe2442ba2ee240106ec63d5b6b3}{GrGetMaxAttribCount} ()
+\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+bool \hyperlink{_gr_util_8cpp_4be29368b3474bf203a54576de6bbc55}{\_\-GrFilterStates} = true
+\item 
+bool \hyperlink{_gr_util_8cpp_532f936c476d6cadd8c23a53a2969f70}{\_\-GrFilterStateModes} = true
+\item 
+bool \hyperlink{_gr_util_8cpp_f9f73bd0c9bce73648026bd1c22c0152}{\_\-GrFilterMasks} = true
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_gr_util_8cpp_2cfbdfb784d1c5f4e95d4595642f6588}{
+\index{GrUtil.cpp@{GrUtil.cpp}!CHECK\_\-BIT@{CHECK\_\-BIT}}
+\index{CHECK\_\-BIT@{CHECK\_\-BIT}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{CHECK\_\-BIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define CHECK\_\-BIT({\bf b}, \/  {\bf m})~( ( ( {\bf b} ) \& ( {\bf m} ) ) != 0 ? ( GL\_\-TRUE ) : ( GL\_\-ZERO ) )}}
+\label{_gr_util_8cpp_2cfbdfb784d1c5f4e95d4595642f6588}
+
+
+
+
+Definition at line 165 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_759c4ef721bf87a80985cfabac8262f6}{
+\index{GrUtil.cpp@{GrUtil.cpp}!MATRIX\_\-STACK\_\-SIZE@{MATRIX\_\-STACK\_\-SIZE}}
+\index{MATRIX\_\-STACK\_\-SIZE@{MATRIX\_\-STACK\_\-SIZE}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{MATRIX\_\-STACK\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define MATRIX\_\-STACK\_\-SIZE~256}}
+\label{_gr_util_8cpp_759c4ef721bf87a80985cfabac8262f6}
+
+
+
+
+Definition at line 21 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_f3367e3838b14afc0dc4318d3820f33c}{
+\index{GrUtil.cpp@{GrUtil.cpp}!STATE\_\-STACK\_\-SIZE@{STATE\_\-STACK\_\-SIZE}}
+\index{STATE\_\-STACK\_\-SIZE@{STATE\_\-STACK\_\-SIZE}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{STATE\_\-STACK\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define STATE\_\-STACK\_\-SIZE~256}}
+\label{_gr_util_8cpp_f3367e3838b14afc0dc4318d3820f33c}
+
+
+
+
+Definition at line 22 of file GrUtil.cpp.
+
+\subsection{Function Documentation}
+\hypertarget{_gr_util_8cpp_da7f340a29a5826b17f1aeba64a9581c}{
+\index{GrUtil.cpp@{GrUtil.cpp}!B\_\-STATIC\_\-ASSERT@{B\_\-STATIC\_\-ASSERT}}
+\index{B\_\-STATIC\_\-ASSERT@{B\_\-STATIC\_\-ASSERT}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{B\_\-STATIC\_\-ASSERT}]{\setlength{\rightskip}{0pt plus 5cm}B\_\-STATIC\_\-ASSERT (EPT\_\-COUNT = {\tt =5})}}
+\label{_gr_util_8cpp_da7f340a29a5826b17f1aeba64a9581c}
+
+
+\hypertarget{_gr_util_8cpp_eed7d01c3a090cf292d86999e64efae6}{
+\index{GrUtil.cpp@{GrUtil.cpp}!B\_\-STATIC\_\-ASSERT@{B\_\-STATIC\_\-ASSERT}}
+\index{B\_\-STATIC\_\-ASSERT@{B\_\-STATIC\_\-ASSERT}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{B\_\-STATIC\_\-ASSERT}]{\setlength{\rightskip}{0pt plus 5cm}B\_\-STATIC\_\-ASSERT (ET\_\-COUNT = {\tt =8})}}
+\label{_gr_util_8cpp_eed7d01c3a090cf292d86999e64efae6}
+
+
+\hypertarget{_gr_util_8cpp_7dfb4380369bc0d3b9f615805fd70a5b}{
+\index{GrUtil.cpp@{GrUtil.cpp}!B\_\-STATIC\_\-ASSERT@{B\_\-STATIC\_\-ASSERT}}
+\index{B\_\-STATIC\_\-ASSERT@{B\_\-STATIC\_\-ASSERT}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{B\_\-STATIC\_\-ASSERT}]{\setlength{\rightskip}{0pt plus 5cm}B\_\-STATIC\_\-ASSERT (EIF\_\-COUNT = {\tt =11})}}
+\label{_gr_util_8cpp_7dfb4380369bc0d3b9f615805fd70a5b}
+
+
+\hypertarget{_gr_util_8cpp_722cda3da38eead2fec2bed2e3abfe32}{
+\index{GrUtil.cpp@{GrUtil.cpp}!B\_\-STATIC\_\-ASSERT@{B\_\-STATIC\_\-ASSERT}}
+\index{B\_\-STATIC\_\-ASSERT@{B\_\-STATIC\_\-ASSERT}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{B\_\-STATIC\_\-ASSERT}]{\setlength{\rightskip}{0pt plus 5cm}B\_\-STATIC\_\-ASSERT (ETF\_\-COUNT = {\tt =15})}}
+\label{_gr_util_8cpp_722cda3da38eead2fec2bed2e3abfe32}
+
+
+\hypertarget{_gr_util_8cpp_0f573923ce54d669ceb19234cc2f8d36}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrBindIB@{GrBindIB}}
+\index{GrBindIB@{GrBindIB}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrBindIB}]{\setlength{\rightskip}{0pt plus 5cm}void GrBindIB (unsigned int {\em handle})}}
+\label{_gr_util_8cpp_0f573923ce54d669ceb19234cc2f8d36}
+
+
+
+
+Definition at line 698 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_1f0d5c47a0f03caa1ebf26e600844a93}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrBindPackPB@{GrBindPackPB}}
+\index{GrBindPackPB@{GrBindPackPB}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrBindPackPB}]{\setlength{\rightskip}{0pt plus 5cm}void GrBindPackPB (unsigned int {\em handle})}}
+\label{_gr_util_8cpp_1f0d5c47a0f03caa1ebf26e600844a93}
+
+
+
+
+Definition at line 718 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_a40f94ecd4645027260b3217ce172cbe}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrBindShader@{GrBindShader}}
+\index{GrBindShader@{GrBindShader}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrBindShader}]{\setlength{\rightskip}{0pt plus 5cm}void GrBindShader (unsigned int {\em handle})}}
+\label{_gr_util_8cpp_a40f94ecd4645027260b3217ce172cbe}
+
+
+
+
+Definition at line 748 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_0d997236daa4e0e2f0dc98dd96e17386}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrBindTexture@{GrBindTexture}}
+\index{GrBindTexture@{GrBindTexture}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrBindTexture}]{\setlength{\rightskip}{0pt plus 5cm}void GrBindTexture (unsigned int {\em texUnit}, \/  unsigned int {\em target}, \/  unsigned int {\em handle})}}
+\label{_gr_util_8cpp_0d997236daa4e0e2f0dc98dd96e17386}
+
+
+
+
+Definition at line 630 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_681f56fdfb1ea8225c03f9a14b41be2c}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrBindUnpackPB@{GrBindUnpackPB}}
+\index{GrBindUnpackPB@{GrBindUnpackPB}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrBindUnpackPB}]{\setlength{\rightskip}{0pt plus 5cm}void GrBindUnpackPB (unsigned int {\em handle})}}
+\label{_gr_util_8cpp_681f56fdfb1ea8225c03f9a14b41be2c}
+
+
+
+
+Definition at line 733 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_b380583a085e70e5db988eb1573be067}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrBindVB@{GrBindVB}}
+\index{GrBindVB@{GrBindVB}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrBindVB}]{\setlength{\rightskip}{0pt plus 5cm}void GrBindVB (unsigned int {\em handle})}}
+\label{_gr_util_8cpp_b380583a085e70e5db988eb1573be067}
+
+
+
+
+Definition at line 677 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_60654372f8080fc80b5e1ef0aea7dd99}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrClear@{GrClear}}
+\index{GrClear@{GrClear}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrClear}]{\setlength{\rightskip}{0pt plus 5cm}void GrClear (float {\em red}, \/  float {\em green}, \/  float {\em blue}, \/  float {\em alpha}, \/  float {\em depth}, \/  unsigned int {\em stencil})}}
+\label{_gr_util_8cpp_60654372f8080fc80b5e1ef0aea7dd99}
+
+
+
+
+Definition at line 1196 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_6ca83b60e3149265e907a05f903c7168}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrDeleteIB@{GrDeleteIB}}
+\index{GrDeleteIB@{GrDeleteIB}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrDeleteIB}]{\setlength{\rightskip}{0pt plus 5cm}void GrDeleteIB (unsigned int {\em handle})}}
+\label{_gr_util_8cpp_6ca83b60e3149265e907a05f903c7168}
+
+
+
+
+Definition at line 546 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_5b8b0e421e702153a0109911b5c3e0a8}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrDeletePB@{GrDeletePB}}
+\index{GrDeletePB@{GrDeletePB}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrDeletePB}]{\setlength{\rightskip}{0pt plus 5cm}void GrDeletePB (unsigned int {\em handle})}}
+\label{_gr_util_8cpp_5b8b0e421e702153a0109911b5c3e0a8}
+
+
+
+
+Definition at line 562 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_3a27b94e557d396f120d7f68a463948f}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrDeleteTexture@{GrDeleteTexture}}
+\index{GrDeleteTexture@{GrDeleteTexture}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrDeleteTexture}]{\setlength{\rightskip}{0pt plus 5cm}void GrDeleteTexture (unsigned int {\em handle})}}
+\label{_gr_util_8cpp_3a27b94e557d396f120d7f68a463948f}
+
+
+
+
+Definition at line 509 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_d04bcc81af6bce0f1f39edf465cf3eff}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrDeleteVB@{GrDeleteVB}}
+\index{GrDeleteVB@{GrDeleteVB}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrDeleteVB}]{\setlength{\rightskip}{0pt plus 5cm}void GrDeleteVB (unsigned int {\em handle})}}
+\label{_gr_util_8cpp_d04bcc81af6bce0f1f39edf465cf3eff}
+
+
+
+
+Definition at line 529 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_bafd90d401a31030835ccacc7322688e}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrDisable@{GrDisable}}
+\index{GrDisable@{GrDisable}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrDisable}]{\setlength{\rightskip}{0pt plus 5cm}void GrDisable (unsigned int {\em flags})}}
+\label{_gr_util_8cpp_bafd90d401a31030835ccacc7322688e}
+
+
+
+
+Definition at line 335 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_b5f8140bc16ae7aad41126040955971b}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrDrawArrays@{GrDrawArrays}}
+\index{GrDrawArrays@{GrDrawArrays}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrDrawArrays}]{\setlength{\rightskip}{0pt plus 5cm}void GrDrawArrays ({\bf EGRPRIMTYPE} {\em primType}, \/  unsigned int {\em start}, \/  unsigned int {\em count})}}
+\label{_gr_util_8cpp_b5f8140bc16ae7aad41126040955971b}
+
+
+
+
+Definition at line 1225 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_7846b6c52cbb48bb05538b9d53ce3ede}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrDrawBuffers@{GrDrawBuffers}}
+\index{GrDrawBuffers@{GrDrawBuffers}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrDrawBuffers}]{\setlength{\rightskip}{0pt plus 5cm}void GrDrawBuffers (unsigned int {\em buffers})}}
+\label{_gr_util_8cpp_7846b6c52cbb48bb05538b9d53ce3ede}
+
+
+
+
+Definition at line 1120 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_893d86875d97390d70b2d642b142bc9f}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrDrawRangeArrays@{GrDrawRangeArrays}}
+\index{GrDrawRangeArrays@{GrDrawRangeArrays}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrDrawRangeArrays}]{\setlength{\rightskip}{0pt plus 5cm}void GrDrawRangeArrays ({\bf EGRPRIMTYPE} {\em primType}, \/  unsigned int {\em minIndex}, \/  unsigned int {\em maxIndex}, \/  unsigned int {\em count}, \/  {\bf EGRTYPE} {\em indexType}, \/  void $\ast$ {\em indices})}}
+\label{_gr_util_8cpp_893d86875d97390d70b2d642b142bc9f}
+
+
+
+
+Definition at line 1232 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_12179b4fb6d51d7550d5fddf5c712893}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrEnable@{GrEnable}}
+\index{GrEnable@{GrEnable}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrEnable}]{\setlength{\rightskip}{0pt plus 5cm}void GrEnable (unsigned int {\em flags})}}
+\label{_gr_util_8cpp_12179b4fb6d51d7550d5fddf5c712893}
+
+
+
+
+Definition at line 294 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_9ef3f8b46b61cfdc3881a5d99985d6a3}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrGenIB@{GrGenIB}}
+\index{GrGenIB@{GrGenIB}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrGenIB}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrGenIB ()}}
+\label{_gr_util_8cpp_9ef3f8b46b61cfdc3881a5d99985d6a3}
+
+
+
+
+Definition at line 538 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_1ab5639fb6cdd4295513ca9e7604f69d}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrGenPB@{GrGenPB}}
+\index{GrGenPB@{GrGenPB}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrGenPB}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrGenPB ()}}
+\label{_gr_util_8cpp_1ab5639fb6cdd4295513ca9e7604f69d}
+
+
+
+
+Definition at line 554 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_2617b728d05892c75cd8099a3f4f8ad2}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrGenTexture@{GrGenTexture}}
+\index{GrGenTexture@{GrGenTexture}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrGenTexture}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrGenTexture ()}}
+\label{_gr_util_8cpp_2617b728d05892c75cd8099a3f4f8ad2}
+
+
+
+
+Definition at line 498 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_00da5f5a32fc33b453eabf005a4890cc}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrGenVB@{GrGenVB}}
+\index{GrGenVB@{GrGenVB}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrGenVB}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrGenVB ()}}
+\label{_gr_util_8cpp_00da5f5a32fc33b453eabf005a4890cc}
+
+
+
+
+Definition at line 518 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_0f52c4c5e92f45dfd50b6cdf00cd6400}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrGetAlphaTestMode@{GrGetAlphaTestMode}}
+\index{GrGetAlphaTestMode@{GrGetAlphaTestMode}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrGetAlphaTestMode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf EGRALPHATESTMODE} GrGetAlphaTestMode ()}}
+\label{_gr_util_8cpp_0f52c4c5e92f45dfd50b6cdf00cd6400}
+
+
+
+
+Definition at line 870 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_9a291034b97656318368e8e94d7ee766}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrGetBlendMode@{GrGetBlendMode}}
+\index{GrGetBlendMode@{GrGetBlendMode}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrGetBlendMode}]{\setlength{\rightskip}{0pt plus 5cm}void GrGetBlendMode ({\bf EGRBLENDMODE} \& {\em srcFactorRGB}, \/  {\bf EGRBLENDMODE} \& {\em dstFactorRGB}, \/  {\bf EGRBLENDMODE} \& {\em srcFactorAlpha}, \/  {\bf EGRBLENDMODE} \& {\em dstFactorAlpha})}}
+\label{_gr_util_8cpp_9a291034b97656318368e8e94d7ee766}
+
+
+
+
+Definition at line 770 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_dc3723ac695dbc9bc00736470631030a}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrGetCullMode@{GrGetCullMode}}
+\index{GrGetCullMode@{GrGetCullMode}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrGetCullMode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf EGRCULLMODE} GrGetCullMode ()}}
+\label{_gr_util_8cpp_dc3723ac695dbc9bc00736470631030a}
+
+
+
+
+Definition at line 904 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_d6c899820503336631afde3d9b8c481c}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrGetDepthBias@{GrGetDepthBias}}
+\index{GrGetDepthBias@{GrGetDepthBias}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrGetDepthBias}]{\setlength{\rightskip}{0pt plus 5cm}void GrGetDepthBias (float \& {\em slopeBias}, \/  float \& {\em constBias})}}
+\label{_gr_util_8cpp_d6c899820503336631afde3d9b8c481c}
+
+
+
+
+Definition at line 958 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_b0b6dbcd54d4e8d99cba297c5fb4d186}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrGetDepthMode@{GrGetDepthMode}}
+\index{GrGetDepthMode@{GrGetDepthMode}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrGetDepthMode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf EGRDEPTHMODE} GrGetDepthMode ()}}
+\label{_gr_util_8cpp_b0b6dbcd54d4e8d99cba297c5fb4d186}
+
+
+
+
+Definition at line 930 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_cd8d7c5efdbc9e097f1285e32bae23ee}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrGetIB@{GrGetIB}}
+\index{GrGetIB@{GrGetIB}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrGetIB}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrGetIB ()}}
+\label{_gr_util_8cpp_cd8d7c5efdbc9e097f1285e32bae23ee}
+
+
+
+
+Definition at line 710 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_69298fe2442ba2ee240106ec63d5b6b3}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrGetMaxAttribCount@{GrGetMaxAttribCount}}
+\index{GrGetMaxAttribCount@{GrGetMaxAttribCount}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrGetMaxAttribCount}]{\setlength{\rightskip}{0pt plus 5cm}int GrGetMaxAttribCount ()}}
+\label{_gr_util_8cpp_69298fe2442ba2ee240106ec63d5b6b3}
+
+
+
+
+Definition at line 1264 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_314fa8e5a4bc247c611bdffaa7c357be}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrGetMaxFramebufferSize@{GrGetMaxFramebufferSize}}
+\index{GrGetMaxFramebufferSize@{GrGetMaxFramebufferSize}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrGetMaxFramebufferSize}]{\setlength{\rightskip}{0pt plus 5cm}int GrGetMaxFramebufferSize ()}}
+\label{_gr_util_8cpp_314fa8e5a4bc247c611bdffaa7c357be}
+
+
+
+
+Definition at line 1255 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_57ce65addf88b13e2ef46292a30fb539}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrGetMaxTextureSize@{GrGetMaxTextureSize}}
+\index{GrGetMaxTextureSize@{GrGetMaxTextureSize}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrGetMaxTextureSize}]{\setlength{\rightskip}{0pt plus 5cm}int GrGetMaxTextureSize ()}}
+\label{_gr_util_8cpp_57ce65addf88b13e2ef46292a30fb539}
+
+
+
+
+Definition at line 1246 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_368ba0f00324e71c46a376ce4a0c9c4f}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrGetPackPB@{GrGetPackPB}}
+\index{GrGetPackPB@{GrGetPackPB}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrGetPackPB}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrGetPackPB ()}}
+\label{_gr_util_8cpp_368ba0f00324e71c46a376ce4a0c9c4f}
+
+
+
+
+Definition at line 726 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_09e5c6ded78f38ea5cdcd157df777c20}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrGetScissor@{GrGetScissor}}
+\index{GrGetScissor@{GrGetScissor}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrGetScissor}]{\setlength{\rightskip}{0pt plus 5cm}void GrGetScissor (int \& {\em x}, \/  int \& {\em y}, \/  int \& {\em width}, \/  int \& {\em height})}}
+\label{_gr_util_8cpp_09e5c6ded78f38ea5cdcd157df777c20}
+
+
+
+
+Definition at line 1027 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_cf8fae2ee0807b48ac9c5bdb8ae47583}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrGetShader@{GrGetShader}}
+\index{GrGetShader@{GrGetShader}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrGetShader}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrGetShader ()}}
+\label{_gr_util_8cpp_cf8fae2ee0807b48ac9c5bdb8ae47583}
+
+
+
+
+Definition at line 758 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_574795c3dac21a7865338c4c1c556168}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrGetState@{GrGetState}}
+\index{GrGetState@{GrGetState}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrGetState}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrGetState ()}}
+\label{_gr_util_8cpp_574795c3dac21a7865338c4c1c556168}
+
+
+
+
+Definition at line 398 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_00adee6c248946476cf782365a2cd0c5}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrGetStencilMode@{GrGetStencilMode}}
+\index{GrGetStencilMode@{GrGetStencilMode}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrGetStencilMode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf EGRSTENCILMODE} GrGetStencilMode ()}}
+\label{_gr_util_8cpp_00adee6c248946476cf782365a2cd0c5}
+
+
+
+
+Definition at line 824 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_81061ecb30353228dfeddad8b328135e}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrGetTexture@{GrGetTexture}}
+\index{GrGetTexture@{GrGetTexture}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrGetTexture}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrGetTexture (unsigned int {\em texUnit})}}
+\label{_gr_util_8cpp_81061ecb30353228dfeddad8b328135e}
+
+
+
+
+Definition at line 657 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_ed5706cf53afcefddc50f00549200440}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrGetTextureTarget@{GrGetTextureTarget}}
+\index{GrGetTextureTarget@{GrGetTextureTarget}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrGetTextureTarget}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrGetTextureTarget (unsigned int {\em texUnit})}}
+\label{_gr_util_8cpp_ed5706cf53afcefddc50f00549200440}
+
+
+
+
+Definition at line 667 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_25a5b32dfc45cb4385ac12eceed64981}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrGetUnpackPB@{GrGetUnpackPB}}
+\index{GrGetUnpackPB@{GrGetUnpackPB}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrGetUnpackPB}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrGetUnpackPB ()}}
+\label{_gr_util_8cpp_25a5b32dfc45cb4385ac12eceed64981}
+
+
+
+
+Definition at line 741 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_81f8a976041fe3910639d2ee7054c90a}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrGetVB@{GrGetVB}}
+\index{GrGetVB@{GrGetVB}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrGetVB}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrGetVB ()}}
+\label{_gr_util_8cpp_81f8a976041fe3910639d2ee7054c90a}
+
+
+
+
+Definition at line 689 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_790778867fdcac797860c02a4bd6b1fa}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrGetViewport@{GrGetViewport}}
+\index{GrGetViewport@{GrGetViewport}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrGetViewport}]{\setlength{\rightskip}{0pt plus 5cm}void GrGetViewport (int \& {\em x}, \/  int \& {\em y}, \/  int \& {\em width}, \/  int \& {\em height})}}
+\label{_gr_util_8cpp_790778867fdcac797860c02a4bd6b1fa}
+
+
+
+
+Definition at line 997 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_1175157b98b63f050c8ba2a09b8bf38b}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrGetWriteEnable@{GrGetWriteEnable}}
+\index{GrGetWriteEnable@{GrGetWriteEnable}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrGetWriteEnable}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrGetWriteEnable ()}}
+\label{_gr_util_8cpp_1175157b98b63f050c8ba2a09b8bf38b}
+
+
+
+
+Definition at line 1087 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_4377e86e49bceb3c6fd43852e0d210a5}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrMultiplyModelViewMatrix@{GrMultiplyModelViewMatrix}}
+\index{GrMultiplyModelViewMatrix@{GrMultiplyModelViewMatrix}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrMultiplyModelViewMatrix}]{\setlength{\rightskip}{0pt plus 5cm}void GrMultiplyModelViewMatrix (const {\bf MMat4x4} \& {\em matrix})}}
+\label{_gr_util_8cpp_4377e86e49bceb3c6fd43852e0d210a5}
+
+
+
+
+Definition at line 1059 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_013a5f0324569410d41786201deef347}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrPopModelViewMatrix@{GrPopModelViewMatrix}}
+\index{GrPopModelViewMatrix@{GrPopModelViewMatrix}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrPopModelViewMatrix}]{\setlength{\rightskip}{0pt plus 5cm}void GrPopModelViewMatrix ()}}
+\label{_gr_util_8cpp_013a5f0324569410d41786201deef347}
+
+
+
+
+Definition at line 1073 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_cee9c3df883692d1843a0921829323b3}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrPopState@{GrPopState}}
+\index{GrPopState@{GrPopState}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrPopState}]{\setlength{\rightskip}{0pt plus 5cm}void GrPopState ()}}
+\label{_gr_util_8cpp_cee9c3df883692d1843a0921829323b3}
+
+
+
+
+Definition at line 388 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_4ccf11ebf1bdb0b454b77213a35ac073}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrPushModelViewMatrix@{GrPushModelViewMatrix}}
+\index{GrPushModelViewMatrix@{GrPushModelViewMatrix}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrPushModelViewMatrix}]{\setlength{\rightskip}{0pt plus 5cm}void GrPushModelViewMatrix ()}}
+\label{_gr_util_8cpp_4ccf11ebf1bdb0b454b77213a35ac073}
+
+
+
+
+Definition at line 1066 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_73fdce3597a65b39238ee810531f71e6}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrPushState@{GrPushState}}
+\index{GrPushState@{GrPushState}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrPushState}]{\setlength{\rightskip}{0pt plus 5cm}void GrPushState ()}}
+\label{_gr_util_8cpp_73fdce3597a65b39238ee810531f71e6}
+
+
+
+
+Definition at line 376 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_31be90e1387c34e7e279e74e661f654e}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrReadBuffer@{GrReadBuffer}}
+\index{GrReadBuffer@{GrReadBuffer}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrReadBuffer}]{\setlength{\rightskip}{0pt plus 5cm}void GrReadBuffer (unsigned int {\em buffer})}}
+\label{_gr_util_8cpp_31be90e1387c34e7e279e74e661f654e}
+
+
+
+
+Definition at line 1160 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_9091fe53a16798ff5eea3dab70dd81ff}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrScissor@{GrScissor}}
+\index{GrScissor@{GrScissor}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrScissor}]{\setlength{\rightskip}{0pt plus 5cm}void GrScissor (int {\em x}, \/  int {\em y}, \/  int {\em width}, \/  int {\em height})}}
+\label{_gr_util_8cpp_9091fe53a16798ff5eea3dab70dd81ff}
+
+
+
+
+Definition at line 1014 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_d50055638c7736c9e411fa2f6b86c93c}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrSetAlphaTestMode@{GrSetAlphaTestMode}}
+\index{GrSetAlphaTestMode@{GrSetAlphaTestMode}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrSetAlphaTestMode}]{\setlength{\rightskip}{0pt plus 5cm}void GrSetAlphaTestMode ({\bf EGRALPHATESTMODE} {\em mode}, \/  float {\em ref})}}
+\label{_gr_util_8cpp_d50055638c7736c9e411fa2f6b86c93c}
+
+
+
+
+Definition at line 879 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_8113d47ba246af0755119898841eee57}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrSetBlendMode@{GrSetBlendMode}}
+\index{GrSetBlendMode@{GrSetBlendMode}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrSetBlendMode}]{\setlength{\rightskip}{0pt plus 5cm}void GrSetBlendMode ({\bf EGRBLENDMODE} {\em srcFactorRGB}, \/  {\bf EGRBLENDMODE} {\em dstFactorRGB}, \/  {\bf EGRBLENDMODE} {\em srcFactorAlpha}, \/  {\bf EGRBLENDMODE} {\em dstFactorAlpha})}}
+\label{_gr_util_8cpp_8113d47ba246af0755119898841eee57}
+
+
+
+
+Definition at line 789 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_c1e533fa9d8433287f1bbe7d2a31080d}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrSetBlendMode@{GrSetBlendMode}}
+\index{GrSetBlendMode@{GrSetBlendMode}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrSetBlendMode}]{\setlength{\rightskip}{0pt plus 5cm}void GrSetBlendMode ({\bf EGRBLENDMODE} {\em srcFactorRGB}, \/  {\bf EGRBLENDMODE} {\em dstFactorRGB})}}
+\label{_gr_util_8cpp_c1e533fa9d8433287f1bbe7d2a31080d}
+
+
+
+
+Definition at line 782 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_ecb580f9d96395afa050b6d81c31421c}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrSetCullMode@{GrSetCullMode}}
+\index{GrSetCullMode@{GrSetCullMode}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrSetCullMode}]{\setlength{\rightskip}{0pt plus 5cm}void GrSetCullMode ({\bf EGRCULLMODE} {\em mode})}}
+\label{_gr_util_8cpp_ecb580f9d96395afa050b6d81c31421c}
+
+
+
+
+Definition at line 911 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_8c05179e9971c39d5398742cffd8592b}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrSetDepthBias@{GrSetDepthBias}}
+\index{GrSetDepthBias@{GrSetDepthBias}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrSetDepthBias}]{\setlength{\rightskip}{0pt plus 5cm}void GrSetDepthBias (float {\em slopeBias}, \/  float {\em constBias})}}
+\label{_gr_util_8cpp_8c05179e9971c39d5398742cffd8592b}
+
+
+
+
+Definition at line 968 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_60d9ac55af862efb36a5e95f19c14407}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrSetDepthMode@{GrSetDepthMode}}
+\index{GrSetDepthMode@{GrSetDepthMode}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrSetDepthMode}]{\setlength{\rightskip}{0pt plus 5cm}void GrSetDepthMode ({\bf EGRDEPTHMODE} {\em mode})}}
+\label{_gr_util_8cpp_60d9ac55af862efb36a5e95f19c14407}
+
+
+
+
+Definition at line 939 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_3cbd050170b35f7e62ae7af31af1ba00}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrSetModelViewMatrix@{GrSetModelViewMatrix}}
+\index{GrSetModelViewMatrix@{GrSetModelViewMatrix}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrSetModelViewMatrix}]{\setlength{\rightskip}{0pt plus 5cm}void GrSetModelViewMatrix (const {\bf MMat4x4} \& {\em modelView})}}
+\label{_gr_util_8cpp_3cbd050170b35f7e62ae7af31af1ba00}
+
+
+
+
+Definition at line 1052 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_3ce89d253d78fe6dae9824278e029c18}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrSetProjectionMatrix@{GrSetProjectionMatrix}}
+\index{GrSetProjectionMatrix@{GrSetProjectionMatrix}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrSetProjectionMatrix}]{\setlength{\rightskip}{0pt plus 5cm}void GrSetProjectionMatrix (const {\bf MMat4x4} \& {\em proj})}}
+\label{_gr_util_8cpp_3ce89d253d78fe6dae9824278e029c18}
+
+
+
+
+Definition at line 1043 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_da7ea629bb413c26919562c8846d6139}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrSetState@{GrSetState}}
+\index{GrSetState@{GrSetState}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrSetState}]{\setlength{\rightskip}{0pt plus 5cm}void GrSetState (unsigned int {\em state})}}
+\label{_gr_util_8cpp_da7ea629bb413c26919562c8846d6139}
+
+
+
+
+Definition at line 407 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_53d65df4590c2b3a3eaf54ca65784f6e}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrSetStencilMode@{GrSetStencilMode}}
+\index{GrSetStencilMode@{GrSetStencilMode}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrSetStencilMode}]{\setlength{\rightskip}{0pt plus 5cm}void GrSetStencilMode ({\bf EGRSTENCILMODE} {\em mode}, \/  unsigned int {\em mask})}}
+\label{_gr_util_8cpp_53d65df4590c2b3a3eaf54ca65784f6e}
+
+
+
+
+Definition at line 833 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_7b33558bb79e3c6936f26553c282d081}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrSetWriteEnable@{GrSetWriteEnable}}
+\index{GrSetWriteEnable@{GrSetWriteEnable}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrSetWriteEnable}]{\setlength{\rightskip}{0pt plus 5cm}void GrSetWriteEnable (unsigned int {\em mask})}}
+\label{_gr_util_8cpp_7b33558bb79e3c6936f26553c282d081}
+
+
+
+
+Definition at line 1096 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_d1feed1ad65ec4d2473b921369c8365b}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrStateStart@{GrStateStart}}
+\index{GrStateStart@{GrStateStart}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrStateStart}]{\setlength{\rightskip}{0pt plus 5cm}void GrStateStart (unsigned int {\em initScreenWidth}, \/  unsigned int {\em initScreenHeight})}}
+\label{_gr_util_8cpp_d1feed1ad65ec4d2473b921369c8365b}
+
+
+
+
+Definition at line 173 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_50fd4ddbaab4ffd72f30a7bb3b55e1dd}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrStateStarted@{GrStateStarted}}
+\index{GrStateStarted@{GrStateStarted}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrStateStarted}]{\setlength{\rightskip}{0pt plus 5cm}bool GrStateStarted ()}}
+\label{_gr_util_8cpp_50fd4ddbaab4ffd72f30a7bb3b55e1dd}
+
+
+
+
+Definition at line 280 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_ee9e0ba47c9981a63cda19342461130c}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrStateStop@{GrStateStop}}
+\index{GrStateStop@{GrStateStop}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrStateStop}]{\setlength{\rightskip}{0pt plus 5cm}void GrStateStop ()}}
+\label{_gr_util_8cpp_ee9e0ba47c9981a63cda19342461130c}
+
+
+
+
+Definition at line 287 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_6c4fa990878132e93007e8afacccc2d5}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrStreamArrayPointer@{GrStreamArrayPointer}}
+\index{GrStreamArrayPointer@{GrStreamArrayPointer}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrStreamArrayPointer}]{\setlength{\rightskip}{0pt plus 5cm}void GrStreamArrayPointer (unsigned int {\em arrayIndex}, \/  unsigned int {\em elemCount}, \/  {\bf EGRTYPE} {\em elemType}, \/  bool {\em normalized}, \/  unsigned int {\em stride}, \/  const void $\ast$ {\em pointer})}}
+\label{_gr_util_8cpp_6c4fa990878132e93007e8afacccc2d5}
+
+
+
+
+Definition at line 484 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_506af8fd03563f360bdd3cacb4481047}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrStreamDisableArrays@{GrStreamDisableArrays}}
+\index{GrStreamDisableArrays@{GrStreamDisableArrays}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrStreamDisableArrays}]{\setlength{\rightskip}{0pt plus 5cm}void GrStreamDisableArrays (unsigned int {\em arrayFlags})}}
+\label{_gr_util_8cpp_506af8fd03563f360bdd3cacb4481047}
+
+
+
+
+Definition at line 442 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_03557aad43b9308f0df604e3ee7b73db}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrStreamEnableArrays@{GrStreamEnableArrays}}
+\index{GrStreamEnableArrays@{GrStreamEnableArrays}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrStreamEnableArrays}]{\setlength{\rightskip}{0pt plus 5cm}void GrStreamEnableArrays (unsigned int {\em arrayFlags})}}
+\label{_gr_util_8cpp_03557aad43b9308f0df604e3ee7b73db}
+
+
+
+
+Definition at line 417 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_2422e456282e8cd08d5c0db6ef511245}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrStreamGetArrayState@{GrStreamGetArrayState}}
+\index{GrStreamGetArrayState@{GrStreamGetArrayState}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrStreamGetArrayState}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrStreamGetArrayState ()}}
+\label{_gr_util_8cpp_2422e456282e8cd08d5c0db6ef511245}
+
+
+
+
+Definition at line 467 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_3cca7d6ef9177f203bc05fbc0d323027}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrStreamSetArrayState@{GrStreamSetArrayState}}
+\index{GrStreamSetArrayState@{GrStreamSetArrayState}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrStreamSetArrayState}]{\setlength{\rightskip}{0pt plus 5cm}void GrStreamSetArrayState (unsigned int {\em arrayFlags})}}
+\label{_gr_util_8cpp_3cca7d6ef9177f203bc05fbc0d323027}
+
+
+
+
+Definition at line 475 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_20a5c03b0b2a8baab3813655f7925bde}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrTexImage2D@{GrTexImage2D}}
+\index{GrTexImage2D@{GrTexImage2D}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrTexImage2D}]{\setlength{\rightskip}{0pt plus 5cm}void GrTexImage2D (unsigned int {\em handle}, \/  unsigned int {\em miplevel}, \/  {\bf EGRTEXTUREFORMAT} {\em internalFormat}, \/  unsigned int {\em width}, \/  unsigned int {\em height}, \/  {\bf EGRIMAGEFORMAT} {\em format}, \/  {\bf EGRTYPE} {\em type}, \/  const void $\ast$ {\em data})}}
+\label{_gr_util_8cpp_20a5c03b0b2a8baab3813655f7925bde}
+
+
+
+
+Definition at line 575 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_e17cf4475c6ed5bdcee691ad010418bc}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrTexImage3D@{GrTexImage3D}}
+\index{GrTexImage3D@{GrTexImage3D}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrTexImage3D}]{\setlength{\rightskip}{0pt plus 5cm}void GrTexImage3D (unsigned int {\em handle}, \/  unsigned int {\em miplevel}, \/  {\bf EGRTEXTUREFORMAT} {\em internalFormat}, \/  unsigned int {\em width}, \/  unsigned int {\em height}, \/  unsigned int {\em depth}, \/  {\bf EGRIMAGEFORMAT} {\em format}, \/  {\bf EGRTYPE} {\em type}, \/  const void $\ast$ {\em data})}}
+\label{_gr_util_8cpp_e17cf4475c6ed5bdcee691ad010418bc}
+
+
+
+
+Definition at line 588 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_78aa2573e237c1ac3e315784d8261adc}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrTexImageCube@{GrTexImageCube}}
+\index{GrTexImageCube@{GrTexImageCube}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrTexImageCube}]{\setlength{\rightskip}{0pt plus 5cm}void GrTexImageCube (unsigned int {\em handle}, \/  unsigned int {\em miplevel}, \/  {\bf EGRTEXTUREFORMAT} {\em internalFormat}, \/  unsigned int {\em dim}, \/  {\bf EGRIMAGEFORMAT} {\em format}, \/  {\bf EGRTYPE} {\em type}, \/  const void $\ast$ {\em dataPX}, \/  const void $\ast$ {\em dataNX}, \/  const void $\ast$ {\em dataPY}, \/  const void $\ast$ {\em dataNY}, \/  const void $\ast$ {\em dataPZ}, \/  const void $\ast$ {\em dataNZ})}}
+\label{_gr_util_8cpp_78aa2573e237c1ac3e315784d8261adc}
+
+
+
+
+Definition at line 601 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_547285e99c507990bed34ef0ec1c7b7d}{
+\index{GrUtil.cpp@{GrUtil.cpp}!GrViewport@{GrViewport}}
+\index{GrViewport@{GrViewport}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{GrViewport}]{\setlength{\rightskip}{0pt plus 5cm}void GrViewport (int {\em x}, \/  int {\em y}, \/  int {\em width}, \/  int {\em height})}}
+\label{_gr_util_8cpp_547285e99c507990bed34ef0ec1c7b7d}
+
+
+
+
+Definition at line 984 of file GrUtil.cpp.
+
+\subsection{Variable Documentation}
+\hypertarget{_gr_util_8cpp_f9f73bd0c9bce73648026bd1c22c0152}{
+\index{GrUtil.cpp@{GrUtil.cpp}!\_\-GrFilterMasks@{\_\-GrFilterMasks}}
+\index{\_\-GrFilterMasks@{\_\-GrFilterMasks}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{\_\-GrFilterMasks}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \_\-GrFilterMasks} = true}}
+\label{_gr_util_8cpp_f9f73bd0c9bce73648026bd1c22c0152}
+
+
+
+
+Definition at line 89 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_532f936c476d6cadd8c23a53a2969f70}{
+\index{GrUtil.cpp@{GrUtil.cpp}!\_\-GrFilterStateModes@{\_\-GrFilterStateModes}}
+\index{\_\-GrFilterStateModes@{\_\-GrFilterStateModes}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{\_\-GrFilterStateModes}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \_\-GrFilterStateModes} = true}}
+\label{_gr_util_8cpp_532f936c476d6cadd8c23a53a2969f70}
+
+
+
+
+Definition at line 88 of file GrUtil.cpp.\hypertarget{_gr_util_8cpp_4be29368b3474bf203a54576de6bbc55}{
+\index{GrUtil.cpp@{GrUtil.cpp}!\_\-GrFilterStates@{\_\-GrFilterStates}}
+\index{\_\-GrFilterStates@{\_\-GrFilterStates}!GrUtil.cpp@{GrUtil.cpp}}
+\subsubsection[{\_\-GrFilterStates}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \_\-GrFilterStates} = true}}
+\label{_gr_util_8cpp_4be29368b3474bf203a54576de6bbc55}
+
+
+
+
+Definition at line 87 of file GrUtil.cpp.

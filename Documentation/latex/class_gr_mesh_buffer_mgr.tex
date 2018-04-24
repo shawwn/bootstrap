@@ -1,0 +1,114 @@
+\hypertarget{class_gr_mesh_buffer_mgr}{
+\section{GrMeshBufferMgr Class Reference}
+\label{class_gr_mesh_buffer_mgr}\index{GrMeshBufferMgr@{GrMeshBufferMgr}}
+}
+{\tt \#include $<$GrMeshBufferMgr.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_mesh_buffer_mgr_52ef406fa29b32c20970048906c09786}{GrMeshBufferMgr} ()
+\item 
+\hyperlink{class_gr_mesh_buffer_mgr_587da5dd15890928e41bbda7bf100813}{$\sim$GrMeshBufferMgr} ()
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_mesh_v_b}{GrMeshVB} $>$ \hyperlink{class_gr_mesh_buffer_mgr_e2becc9588cfb3d8858a4c998bc3dbc6}{CreateMeshVB} (unsigned int vertexCount, unsigned int usedComponents, unsigned int \hyperlink{_u_t_message_8h_0a3c0b351ab09281b662a9ff4f900a53}{flags}=0)
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_mesh_v_b}{GrMeshVB} $>$ \hyperlink{class_gr_mesh_buffer_mgr_6cef06c50c3ebb42829bc659c295f3de}{CreateMeshVB} (unsigned int vertexCount, const \hyperlink{struct_s_vec3}{SVec3} $\ast$verts, const \hyperlink{struct_s_vec3}{SVec3} $\ast$normals, const \hyperlink{struct_s_vec3}{SVec3} $\ast$binormals, const \hyperlink{struct_s_vec3}{SVec3} $\ast$tangents, const unsigned long $\ast$colors, const \hyperlink{struct_s_vec2}{SVec2} $\ast$uvs, unsigned int \hyperlink{_u_t_message_8h_0a3c0b351ab09281b662a9ff4f900a53}{flags}=0, unsigned int maxVertexCount=0)
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_mesh_i_b}{GrMeshIB} $>$ \hyperlink{class_gr_mesh_buffer_mgr_91c2e8bf41d8e63797ace280348679eb}{CreateMeshIB} (unsigned int indexCount, unsigned int \hyperlink{_u_t_message_8h_0a3c0b351ab09281b662a9ff4f900a53}{flags}=0)
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_mesh_i_b}{GrMeshIB} $>$ \hyperlink{class_gr_mesh_buffer_mgr_d29ad1bec1ff9a8027f9a474274931f2}{CreateMeshIB} (unsigned int indexCount, const unsigned short $\ast$\hyperlink{glext__bak_8h_c4293d0f76770fe857be3431df25308d}{indices}, unsigned int \hyperlink{_u_t_message_8h_0a3c0b351ab09281b662a9ff4f900a53}{flags}=0, unsigned int maxIndexCount=0)
+\item 
+void \hyperlink{class_gr_mesh_buffer_mgr_497eace30ff7d4e24e43627ec3e8aab5}{PreContextReset} ()
+\item 
+void \hyperlink{class_gr_mesh_buffer_mgr_586bd053976b8b8a4836321bf4f68eef}{PostContextReset} ()
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 20 of file GrMeshBufferMgr.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_mesh_buffer_mgr_52ef406fa29b32c20970048906c09786}{
+\index{GrMeshBufferMgr@{GrMeshBufferMgr}!GrMeshBufferMgr@{GrMeshBufferMgr}}
+\index{GrMeshBufferMgr@{GrMeshBufferMgr}!GrMeshBufferMgr@{GrMeshBufferMgr}}
+\subsubsection[{GrMeshBufferMgr}]{\setlength{\rightskip}{0pt plus 5cm}GrMeshBufferMgr::GrMeshBufferMgr ()}}
+\label{class_gr_mesh_buffer_mgr_52ef406fa29b32c20970048906c09786}
+
+
+
+
+Definition at line 30 of file GrMeshBufferMgr.cpp.\hypertarget{class_gr_mesh_buffer_mgr_587da5dd15890928e41bbda7bf100813}{
+\index{GrMeshBufferMgr@{GrMeshBufferMgr}!$\sim$GrMeshBufferMgr@{$\sim$GrMeshBufferMgr}}
+\index{$\sim$GrMeshBufferMgr@{$\sim$GrMeshBufferMgr}!GrMeshBufferMgr@{GrMeshBufferMgr}}
+\subsubsection[{$\sim$GrMeshBufferMgr}]{\setlength{\rightskip}{0pt plus 5cm}GrMeshBufferMgr::$\sim$GrMeshBufferMgr ()}}
+\label{class_gr_mesh_buffer_mgr_587da5dd15890928e41bbda7bf100813}
+
+
+
+
+Definition at line 37 of file GrMeshBufferMgr.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_mesh_buffer_mgr_d29ad1bec1ff9a8027f9a474274931f2}{
+\index{GrMeshBufferMgr@{GrMeshBufferMgr}!CreateMeshIB@{CreateMeshIB}}
+\index{CreateMeshIB@{CreateMeshIB}!GrMeshBufferMgr@{GrMeshBufferMgr}}
+\subsubsection[{CreateMeshIB}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrMeshIB} $>$ GrMeshBufferMgr::CreateMeshIB (unsigned int {\em indexCount}, \/  const unsigned short $\ast$ {\em indices}, \/  unsigned int {\em flags} = {\tt 0}, \/  unsigned int {\em maxIndexCount} = {\tt 0})}}
+\label{class_gr_mesh_buffer_mgr_d29ad1bec1ff9a8027f9a474274931f2}
+
+
+
+
+Definition at line 83 of file GrMeshBufferMgr.cpp.\hypertarget{class_gr_mesh_buffer_mgr_91c2e8bf41d8e63797ace280348679eb}{
+\index{GrMeshBufferMgr@{GrMeshBufferMgr}!CreateMeshIB@{CreateMeshIB}}
+\index{CreateMeshIB@{CreateMeshIB}!GrMeshBufferMgr@{GrMeshBufferMgr}}
+\subsubsection[{CreateMeshIB}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrMeshIB} $>$ GrMeshBufferMgr::CreateMeshIB (unsigned int {\em indexCount}, \/  unsigned int {\em flags} = {\tt 0})}}
+\label{class_gr_mesh_buffer_mgr_91c2e8bf41d8e63797ace280348679eb}
+
+
+
+
+Definition at line 74 of file GrMeshBufferMgr.cpp.\hypertarget{class_gr_mesh_buffer_mgr_6cef06c50c3ebb42829bc659c295f3de}{
+\index{GrMeshBufferMgr@{GrMeshBufferMgr}!CreateMeshVB@{CreateMeshVB}}
+\index{CreateMeshVB@{CreateMeshVB}!GrMeshBufferMgr@{GrMeshBufferMgr}}
+\subsubsection[{CreateMeshVB}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrMeshVB} $>$ GrMeshBufferMgr::CreateMeshVB (unsigned int {\em vertexCount}, \/  const {\bf SVec3} $\ast$ {\em verts}, \/  const {\bf SVec3} $\ast$ {\em normals}, \/  const {\bf SVec3} $\ast$ {\em binormals}, \/  const {\bf SVec3} $\ast$ {\em tangents}, \/  const unsigned long $\ast$ {\em colors}, \/  const {\bf SVec2} $\ast$ {\em uvs}, \/  unsigned int {\em flags} = {\tt 0}, \/  unsigned int {\em maxVertexCount} = {\tt 0})}}
+\label{class_gr_mesh_buffer_mgr_6cef06c50c3ebb42829bc659c295f3de}
+
+
+
+
+Definition at line 58 of file GrMeshBufferMgr.cpp.\hypertarget{class_gr_mesh_buffer_mgr_e2becc9588cfb3d8858a4c998bc3dbc6}{
+\index{GrMeshBufferMgr@{GrMeshBufferMgr}!CreateMeshVB@{CreateMeshVB}}
+\index{CreateMeshVB@{CreateMeshVB}!GrMeshBufferMgr@{GrMeshBufferMgr}}
+\subsubsection[{CreateMeshVB}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrMeshVB} $>$ GrMeshBufferMgr::CreateMeshVB (unsigned int {\em vertexCount}, \/  unsigned int {\em usedComponents}, \/  unsigned int {\em flags} = {\tt 0})}}
+\label{class_gr_mesh_buffer_mgr_e2becc9588cfb3d8858a4c998bc3dbc6}
+
+
+
+
+Definition at line 49 of file GrMeshBufferMgr.cpp.\hypertarget{class_gr_mesh_buffer_mgr_586bd053976b8b8a4836321bf4f68eef}{
+\index{GrMeshBufferMgr@{GrMeshBufferMgr}!PostContextReset@{PostContextReset}}
+\index{PostContextReset@{PostContextReset}!GrMeshBufferMgr@{GrMeshBufferMgr}}
+\subsubsection[{PostContextReset}]{\setlength{\rightskip}{0pt plus 5cm}void GrMeshBufferMgr::PostContextReset ()}}
+\label{class_gr_mesh_buffer_mgr_586bd053976b8b8a4836321bf4f68eef}
+
+
+
+
+Definition at line 136 of file GrMeshBufferMgr.cpp.\hypertarget{class_gr_mesh_buffer_mgr_497eace30ff7d4e24e43627ec3e8aab5}{
+\index{GrMeshBufferMgr@{GrMeshBufferMgr}!PreContextReset@{PreContextReset}}
+\index{PreContextReset@{PreContextReset}!GrMeshBufferMgr@{GrMeshBufferMgr}}
+\subsubsection[{PreContextReset}]{\setlength{\rightskip}{0pt plus 5cm}void GrMeshBufferMgr::PreContextReset ()}}
+\label{class_gr_mesh_buffer_mgr_497eace30ff7d4e24e43627ec3e8aab5}
+
+
+
+
+Definition at line 95 of file GrMeshBufferMgr.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_mesh_buffer_mgr_8h}{GrMeshBufferMgr.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_mesh_buffer_mgr_8cpp}{GrMeshBufferMgr.cpp}\end{CompactItemize}

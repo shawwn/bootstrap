@@ -1,0 +1,196 @@
+\hypertarget{_gr_uber_tile_atlas_8cpp}{
+\section{C:/Bootstrap/ProjectBX/Engine/Graphics/GrUberTileAtlas.cpp File Reference}
+\label{_gr_uber_tile_atlas_8cpp}\index{C:/Bootstrap/ProjectBX/Engine/Graphics/GrUberTileAtlas.cpp@{C:/Bootstrap/ProjectBX/Engine/Graphics/GrUberTileAtlas.cpp}}
+}
+{\tt \#include \char`\"{}graphics\_\-afx.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrUberTileAtlas.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrTexture.h\char`\"{}}\par
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \hyperlink{_gr_uber_tile_atlas_8cpp_79a231654d1a6f21fa84cb7a9aa6be9d}{LOWRES\_\-ATLAS\_\-DIM}~256
+\item 
+\#define \hyperlink{_gr_uber_tile_atlas_8cpp_657cacecd8e9ce2ce04b24438a9c0880}{DETAIL\_\-ATLAS\_\-DIM}~256
+\item 
+\#define \hyperlink{_gr_uber_tile_atlas_8cpp_4f3549a342d7c3c5cde9bb06021fdb06}{LOWRES\_\-ATLAS\_\-STRIDE}~( 4 $\ast$ LOWRES\_\-ATLAS\_\-DIM )
+\item 
+\#define \hyperlink{_gr_uber_tile_atlas_8cpp_f292c854515b48efdc03a97114494d8e}{DETAIL\_\-ATLAS\_\-STRIDE}~( 4 $\ast$ DETAIL\_\-ATLAS\_\-DIM )
+\item 
+\#define \hyperlink{_gr_uber_tile_atlas_8cpp_6608c28ee6ba0727cac70108f5f3cde4}{DETAIL\_\-ATLAS\_\-BLOCK\_\-DIM}~32
+\item 
+\#define \hyperlink{_gr_uber_tile_atlas_8cpp_b88d3a0a485410831e5c79f1f1916744}{DETAIL\_\-ATLAS\_\-DIM\_\-IN\_\-BLOCKS}~( DETAIL\_\-ATLAS\_\-DIM / DETAIL\_\-ATLAS\_\-BLOCK\_\-DIM )
+\item 
+\#define \hyperlink{_gr_uber_tile_atlas_8cpp_3305935b0293261e95fdfea6bf50df04}{LOWRES\_\-MIP}~5
+\item 
+\#define \hyperlink{_gr_uber_tile_atlas_8cpp_e2081b1a3639a47014a33242ca00c974}{BLUE}(pel)~pel\mbox{[} 0 \mbox{]}
+\item 
+\#define \hyperlink{_gr_uber_tile_atlas_8cpp_dfbb9764297b3bae090fe4f85ecb5117}{GREEN}(pel)~pel\mbox{[} 1 \mbox{]}
+\item 
+\#define \hyperlink{_gr_uber_tile_atlas_8cpp_19b8fe0f90f421849e7915bffcb599a8}{RED}(pel)~pel\mbox{[} 2 \mbox{]}
+\item 
+\#define \hyperlink{_gr_uber_tile_atlas_8cpp_3f02a65116f84d0cd6ec214ad5367c83}{ALPHA}(pel)~pel\mbox{[} 3 \mbox{]}
+\item 
+\#define \hyperlink{_gr_uber_tile_atlas_8cpp_be37943e68204ff8c2e3498baa651db7}{BLUE\_\-SHIFT}(\hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v})~( ( unsigned int )( \hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v} ) )
+\item 
+\#define \hyperlink{_gr_uber_tile_atlas_8cpp_ce3322f6e2b1348dd6ea1c86104ce938}{GREEN\_\-SHIFT}(\hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v})~( ( unsigned int )( \hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v} ) $<$$<$  8 )
+\item 
+\#define \hyperlink{_gr_uber_tile_atlas_8cpp_653bbb1f648c37a53a73b72898b08780}{RED\_\-SHIFT}(\hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v})~( ( unsigned int )( \hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v} ) $<$$<$ 16 )
+\item 
+\#define \hyperlink{_gr_uber_tile_atlas_8cpp_fe96465dad458c169c1f08196fbed655}{ALPHA\_\-SHIFT}(\hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v})~( ( unsigned int )( \hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v} ) $<$$<$ 24 )
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+unsigned int \hyperlink{_gr_uber_tile_atlas_8cpp_52984f58075e90a3ab2ab74848cb78e3}{SignedShiftRight} (unsigned int \hyperlink{glext__bak_8h_6a4f8a1a444e9080b297963b3db29fe0}{value}, int shift)
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_gr_uber_tile_atlas_8cpp_3f02a65116f84d0cd6ec214ad5367c83}{
+\index{GrUberTileAtlas.cpp@{GrUberTileAtlas.cpp}!ALPHA@{ALPHA}}
+\index{ALPHA@{ALPHA}!GrUberTileAtlas.cpp@{GrUberTileAtlas.cpp}}
+\subsubsection[{ALPHA}]{\setlength{\rightskip}{0pt plus 5cm}\#define ALPHA(pel)~pel\mbox{[} 3 \mbox{]}}}
+\label{_gr_uber_tile_atlas_8cpp_3f02a65116f84d0cd6ec214ad5367c83}
+
+
+
+
+Definition at line 37 of file GrUberTileAtlas.cpp.\hypertarget{_gr_uber_tile_atlas_8cpp_fe96465dad458c169c1f08196fbed655}{
+\index{GrUberTileAtlas.cpp@{GrUberTileAtlas.cpp}!ALPHA\_\-SHIFT@{ALPHA\_\-SHIFT}}
+\index{ALPHA\_\-SHIFT@{ALPHA\_\-SHIFT}!GrUberTileAtlas.cpp@{GrUberTileAtlas.cpp}}
+\subsubsection[{ALPHA\_\-SHIFT}]{\setlength{\rightskip}{0pt plus 5cm}\#define ALPHA\_\-SHIFT({\bf v})~( ( unsigned int )( {\bf v} ) $<$$<$ 24 )}}
+\label{_gr_uber_tile_atlas_8cpp_fe96465dad458c169c1f08196fbed655}
+
+
+
+
+Definition at line 42 of file GrUberTileAtlas.cpp.\hypertarget{_gr_uber_tile_atlas_8cpp_e2081b1a3639a47014a33242ca00c974}{
+\index{GrUberTileAtlas.cpp@{GrUberTileAtlas.cpp}!BLUE@{BLUE}}
+\index{BLUE@{BLUE}!GrUberTileAtlas.cpp@{GrUberTileAtlas.cpp}}
+\subsubsection[{BLUE}]{\setlength{\rightskip}{0pt plus 5cm}\#define BLUE(pel)~pel\mbox{[} 0 \mbox{]}}}
+\label{_gr_uber_tile_atlas_8cpp_e2081b1a3639a47014a33242ca00c974}
+
+
+
+
+Definition at line 34 of file GrUberTileAtlas.cpp.\hypertarget{_gr_uber_tile_atlas_8cpp_be37943e68204ff8c2e3498baa651db7}{
+\index{GrUberTileAtlas.cpp@{GrUberTileAtlas.cpp}!BLUE\_\-SHIFT@{BLUE\_\-SHIFT}}
+\index{BLUE\_\-SHIFT@{BLUE\_\-SHIFT}!GrUberTileAtlas.cpp@{GrUberTileAtlas.cpp}}
+\subsubsection[{BLUE\_\-SHIFT}]{\setlength{\rightskip}{0pt plus 5cm}\#define BLUE\_\-SHIFT({\bf v})~( ( unsigned int )( {\bf v} ) )}}
+\label{_gr_uber_tile_atlas_8cpp_be37943e68204ff8c2e3498baa651db7}
+
+
+
+
+Definition at line 39 of file GrUberTileAtlas.cpp.\hypertarget{_gr_uber_tile_atlas_8cpp_6608c28ee6ba0727cac70108f5f3cde4}{
+\index{GrUberTileAtlas.cpp@{GrUberTileAtlas.cpp}!DETAIL\_\-ATLAS\_\-BLOCK\_\-DIM@{DETAIL\_\-ATLAS\_\-BLOCK\_\-DIM}}
+\index{DETAIL\_\-ATLAS\_\-BLOCK\_\-DIM@{DETAIL\_\-ATLAS\_\-BLOCK\_\-DIM}!GrUberTileAtlas.cpp@{GrUberTileAtlas.cpp}}
+\subsubsection[{DETAIL\_\-ATLAS\_\-BLOCK\_\-DIM}]{\setlength{\rightskip}{0pt plus 5cm}\#define DETAIL\_\-ATLAS\_\-BLOCK\_\-DIM~32}}
+\label{_gr_uber_tile_atlas_8cpp_6608c28ee6ba0727cac70108f5f3cde4}
+
+
+
+
+Definition at line 24 of file GrUberTileAtlas.cpp.\hypertarget{_gr_uber_tile_atlas_8cpp_657cacecd8e9ce2ce04b24438a9c0880}{
+\index{GrUberTileAtlas.cpp@{GrUberTileAtlas.cpp}!DETAIL\_\-ATLAS\_\-DIM@{DETAIL\_\-ATLAS\_\-DIM}}
+\index{DETAIL\_\-ATLAS\_\-DIM@{DETAIL\_\-ATLAS\_\-DIM}!GrUberTileAtlas.cpp@{GrUberTileAtlas.cpp}}
+\subsubsection[{DETAIL\_\-ATLAS\_\-DIM}]{\setlength{\rightskip}{0pt plus 5cm}\#define DETAIL\_\-ATLAS\_\-DIM~256}}
+\label{_gr_uber_tile_atlas_8cpp_657cacecd8e9ce2ce04b24438a9c0880}
+
+
+
+
+Definition at line 17 of file GrUberTileAtlas.cpp.\hypertarget{_gr_uber_tile_atlas_8cpp_b88d3a0a485410831e5c79f1f1916744}{
+\index{GrUberTileAtlas.cpp@{GrUberTileAtlas.cpp}!DETAIL\_\-ATLAS\_\-DIM\_\-IN\_\-BLOCKS@{DETAIL\_\-ATLAS\_\-DIM\_\-IN\_\-BLOCKS}}
+\index{DETAIL\_\-ATLAS\_\-DIM\_\-IN\_\-BLOCKS@{DETAIL\_\-ATLAS\_\-DIM\_\-IN\_\-BLOCKS}!GrUberTileAtlas.cpp@{GrUberTileAtlas.cpp}}
+\subsubsection[{DETAIL\_\-ATLAS\_\-DIM\_\-IN\_\-BLOCKS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DETAIL\_\-ATLAS\_\-DIM\_\-IN\_\-BLOCKS~( DETAIL\_\-ATLAS\_\-DIM / DETAIL\_\-ATLAS\_\-BLOCK\_\-DIM )}}
+\label{_gr_uber_tile_atlas_8cpp_b88d3a0a485410831e5c79f1f1916744}
+
+
+
+
+Definition at line 27 of file GrUberTileAtlas.cpp.\hypertarget{_gr_uber_tile_atlas_8cpp_f292c854515b48efdc03a97114494d8e}{
+\index{GrUberTileAtlas.cpp@{GrUberTileAtlas.cpp}!DETAIL\_\-ATLAS\_\-STRIDE@{DETAIL\_\-ATLAS\_\-STRIDE}}
+\index{DETAIL\_\-ATLAS\_\-STRIDE@{DETAIL\_\-ATLAS\_\-STRIDE}!GrUberTileAtlas.cpp@{GrUberTileAtlas.cpp}}
+\subsubsection[{DETAIL\_\-ATLAS\_\-STRIDE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DETAIL\_\-ATLAS\_\-STRIDE~( 4 $\ast$ DETAIL\_\-ATLAS\_\-DIM )}}
+\label{_gr_uber_tile_atlas_8cpp_f292c854515b48efdc03a97114494d8e}
+
+
+
+
+Definition at line 21 of file GrUberTileAtlas.cpp.\hypertarget{_gr_uber_tile_atlas_8cpp_dfbb9764297b3bae090fe4f85ecb5117}{
+\index{GrUberTileAtlas.cpp@{GrUberTileAtlas.cpp}!GREEN@{GREEN}}
+\index{GREEN@{GREEN}!GrUberTileAtlas.cpp@{GrUberTileAtlas.cpp}}
+\subsubsection[{GREEN}]{\setlength{\rightskip}{0pt plus 5cm}\#define GREEN(pel)~pel\mbox{[} 1 \mbox{]}}}
+\label{_gr_uber_tile_atlas_8cpp_dfbb9764297b3bae090fe4f85ecb5117}
+
+
+
+
+Definition at line 35 of file GrUberTileAtlas.cpp.\hypertarget{_gr_uber_tile_atlas_8cpp_ce3322f6e2b1348dd6ea1c86104ce938}{
+\index{GrUberTileAtlas.cpp@{GrUberTileAtlas.cpp}!GREEN\_\-SHIFT@{GREEN\_\-SHIFT}}
+\index{GREEN\_\-SHIFT@{GREEN\_\-SHIFT}!GrUberTileAtlas.cpp@{GrUberTileAtlas.cpp}}
+\subsubsection[{GREEN\_\-SHIFT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GREEN\_\-SHIFT({\bf v})~( ( unsigned int )( {\bf v} ) $<$$<$  8 )}}
+\label{_gr_uber_tile_atlas_8cpp_ce3322f6e2b1348dd6ea1c86104ce938}
+
+
+
+
+Definition at line 40 of file GrUberTileAtlas.cpp.\hypertarget{_gr_uber_tile_atlas_8cpp_79a231654d1a6f21fa84cb7a9aa6be9d}{
+\index{GrUberTileAtlas.cpp@{GrUberTileAtlas.cpp}!LOWRES\_\-ATLAS\_\-DIM@{LOWRES\_\-ATLAS\_\-DIM}}
+\index{LOWRES\_\-ATLAS\_\-DIM@{LOWRES\_\-ATLAS\_\-DIM}!GrUberTileAtlas.cpp@{GrUberTileAtlas.cpp}}
+\subsubsection[{LOWRES\_\-ATLAS\_\-DIM}]{\setlength{\rightskip}{0pt plus 5cm}\#define LOWRES\_\-ATLAS\_\-DIM~256}}
+\label{_gr_uber_tile_atlas_8cpp_79a231654d1a6f21fa84cb7a9aa6be9d}
+
+
+
+
+Definition at line 16 of file GrUberTileAtlas.cpp.\hypertarget{_gr_uber_tile_atlas_8cpp_4f3549a342d7c3c5cde9bb06021fdb06}{
+\index{GrUberTileAtlas.cpp@{GrUberTileAtlas.cpp}!LOWRES\_\-ATLAS\_\-STRIDE@{LOWRES\_\-ATLAS\_\-STRIDE}}
+\index{LOWRES\_\-ATLAS\_\-STRIDE@{LOWRES\_\-ATLAS\_\-STRIDE}!GrUberTileAtlas.cpp@{GrUberTileAtlas.cpp}}
+\subsubsection[{LOWRES\_\-ATLAS\_\-STRIDE}]{\setlength{\rightskip}{0pt plus 5cm}\#define LOWRES\_\-ATLAS\_\-STRIDE~( 4 $\ast$ LOWRES\_\-ATLAS\_\-DIM )}}
+\label{_gr_uber_tile_atlas_8cpp_4f3549a342d7c3c5cde9bb06021fdb06}
+
+
+
+
+Definition at line 20 of file GrUberTileAtlas.cpp.\hypertarget{_gr_uber_tile_atlas_8cpp_3305935b0293261e95fdfea6bf50df04}{
+\index{GrUberTileAtlas.cpp@{GrUberTileAtlas.cpp}!LOWRES\_\-MIP@{LOWRES\_\-MIP}}
+\index{LOWRES\_\-MIP@{LOWRES\_\-MIP}!GrUberTileAtlas.cpp@{GrUberTileAtlas.cpp}}
+\subsubsection[{LOWRES\_\-MIP}]{\setlength{\rightskip}{0pt plus 5cm}\#define LOWRES\_\-MIP~5}}
+\label{_gr_uber_tile_atlas_8cpp_3305935b0293261e95fdfea6bf50df04}
+
+
+
+
+Definition at line 31 of file GrUberTileAtlas.cpp.\hypertarget{_gr_uber_tile_atlas_8cpp_19b8fe0f90f421849e7915bffcb599a8}{
+\index{GrUberTileAtlas.cpp@{GrUberTileAtlas.cpp}!RED@{RED}}
+\index{RED@{RED}!GrUberTileAtlas.cpp@{GrUberTileAtlas.cpp}}
+\subsubsection[{RED}]{\setlength{\rightskip}{0pt plus 5cm}\#define RED(pel)~pel\mbox{[} 2 \mbox{]}}}
+\label{_gr_uber_tile_atlas_8cpp_19b8fe0f90f421849e7915bffcb599a8}
+
+
+
+
+Definition at line 36 of file GrUberTileAtlas.cpp.\hypertarget{_gr_uber_tile_atlas_8cpp_653bbb1f648c37a53a73b72898b08780}{
+\index{GrUberTileAtlas.cpp@{GrUberTileAtlas.cpp}!RED\_\-SHIFT@{RED\_\-SHIFT}}
+\index{RED\_\-SHIFT@{RED\_\-SHIFT}!GrUberTileAtlas.cpp@{GrUberTileAtlas.cpp}}
+\subsubsection[{RED\_\-SHIFT}]{\setlength{\rightskip}{0pt plus 5cm}\#define RED\_\-SHIFT({\bf v})~( ( unsigned int )( {\bf v} ) $<$$<$ 16 )}}
+\label{_gr_uber_tile_atlas_8cpp_653bbb1f648c37a53a73b72898b08780}
+
+
+
+
+Definition at line 41 of file GrUberTileAtlas.cpp.
+
+\subsection{Function Documentation}
+\hypertarget{_gr_uber_tile_atlas_8cpp_52984f58075e90a3ab2ab74848cb78e3}{
+\index{GrUberTileAtlas.cpp@{GrUberTileAtlas.cpp}!SignedShiftRight@{SignedShiftRight}}
+\index{SignedShiftRight@{SignedShiftRight}!GrUberTileAtlas.cpp@{GrUberTileAtlas.cpp}}
+\subsubsection[{SignedShiftRight}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int SignedShiftRight (unsigned int {\em value}, \/  int {\em shift})}}
+\label{_gr_uber_tile_atlas_8cpp_52984f58075e90a3ab2ab74848cb78e3}
+
+
+
+
+Definition at line 44 of file GrUberTileAtlas.cpp.

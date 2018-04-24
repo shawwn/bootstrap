@@ -1,0 +1,235 @@
+\hypertarget{class_m_a_a_box}{
+\section{MAABox Class Reference}
+\label{class_m_a_a_box}\index{MAABox@{MAABox}}
+}
+{\tt \#include $<$MAABox.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_m_a_a_box_d357f82540e29376c81850a165dfd3d6}{MAABox} ()
+\item 
+\hyperlink{class_m_a_a_box_870aa2351735fc8f49ec780d7fca8aec}{MAABox} (const \hyperlink{class_m_vec3}{MVec3} \&center, const \hyperlink{class_m_vec3}{MVec3} \&halfExts)
+\item 
+\hyperlink{class_m_a_a_box_7e94c069bfb8537ff9410b8a2b7f89a5}{MAABox} (const \hyperlink{class_m_o_box}{MOBox} \&box)
+\item 
+\hyperlink{class_m_a_a_box_263ea425cafadae722c43cdfc9160274}{$\sim$MAABox} ()
+\item 
+\hyperlink{class_m_sphere}{MSphere} \hyperlink{class_m_a_a_box_069339e97ffae23154079bca22eafaf7}{GetBoundingSphere} ()
+\item 
+float \hyperlink{class_m_a_a_box_f47c228010eab1bd502d80633d50953b}{Dist} (const \hyperlink{class_m_vec3}{MVec3} \&pos)
+\item 
+bool \hyperlink{class_m_a_a_box_b309a32c61158e79a35b19a339d05248}{Intersect} (const \hyperlink{class_m_a_a_box}{MAABox} \&box) const 
+\item 
+bool \hyperlink{class_m_a_a_box_8b16f4be06c18802ebed0029ff215d5d}{Intersect} (const \hyperlink{class_m_sphere}{MSphere} \&sphere) const 
+\item 
+bool \hyperlink{class_m_a_a_box_7da828ab9a51859fb07aedfce50967f0}{AddBoxToVolume} (const \hyperlink{class_m_a_a_box}{MAABox} \&box)
+\item 
+bool \hyperlink{class_m_a_a_box_b5d6ad41455f8a7c76b41ef305cce52f}{AddBoxToVolume} (const \hyperlink{class_m_o_box}{MOBox} \&box)
+\item 
+const \hyperlink{class_m_vec3}{MVec3} \& \hyperlink{class_m_a_a_box_a9fbd78524a8e1c00a165177b7cf888f}{GetCenter} () const 
+\item 
+const \hyperlink{class_m_vec3}{MVec3} \& \hyperlink{class_m_a_a_box_9c4c37dd6c9bffdbe6926c5a4c60145c}{GetHalfExts} () const 
+\item 
+void \hyperlink{class_m_a_a_box_65a37e6adae9f465bb0ac964f4bfbe63}{SetCenter} (const \hyperlink{class_m_vec3}{MVec3} \&center)
+\item 
+void \hyperlink{class_m_a_a_box_9ce3a23bc3cfa705d6776807289bd178}{SetHalfExts} (const \hyperlink{class_m_vec3}{MVec3} \&halfExts)
+\item 
+void \hyperlink{class_m_a_a_box_1880d28cd10db452fd1ef1d9d74774c9}{GetCorners} (\hyperlink{class_m_vec3}{MVec3} $\ast$pts) const 
+\item 
+bool \hyperlink{class_m_a_a_box_0531f288d3c7a6d0a2c9f90cf72a6668}{IsInside} (const \hyperlink{class_m_vec3}{MVec3} \&point) const 
+\item 
+int \hyperlink{class_m_a_a_box_0948818103883ba996a23c8e26f8a2a5}{GetSide} (const \hyperlink{class_m_plane}{MPlane} \&plane) const 
+\item 
+void \hyperlink{class_m_a_a_box_c24b0c3002a56fd52de6628e1864e485}{Save} (\hyperlink{class_u_writer}{UWriter} \&writer) const 
+\item 
+void \hyperlink{class_m_a_a_box_7658fd191ee1fbbf3d6f93d0221fe13a}{Load} (\hyperlink{class_u_reader}{UReader} \&reader)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 25 of file MAABox.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_m_a_a_box_d357f82540e29376c81850a165dfd3d6}{
+\index{MAABox@{MAABox}!MAABox@{MAABox}}
+\index{MAABox@{MAABox}!MAABox@{MAABox}}
+\subsubsection[{MAABox}]{\setlength{\rightskip}{0pt plus 5cm}MAABox::MAABox ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_a_a_box_d357f82540e29376c81850a165dfd3d6}
+
+
+
+
+Definition at line 28 of file MAABox.h.\hypertarget{class_m_a_a_box_870aa2351735fc8f49ec780d7fca8aec}{
+\index{MAABox@{MAABox}!MAABox@{MAABox}}
+\index{MAABox@{MAABox}!MAABox@{MAABox}}
+\subsubsection[{MAABox}]{\setlength{\rightskip}{0pt plus 5cm}MAABox::MAABox (const {\bf MVec3} \& {\em center}, \/  const {\bf MVec3} \& {\em halfExts})}}
+\label{class_m_a_a_box_870aa2351735fc8f49ec780d7fca8aec}
+
+
+
+
+Definition at line 28 of file MAABox.cpp.\hypertarget{class_m_a_a_box_7e94c069bfb8537ff9410b8a2b7f89a5}{
+\index{MAABox@{MAABox}!MAABox@{MAABox}}
+\index{MAABox@{MAABox}!MAABox@{MAABox}}
+\subsubsection[{MAABox}]{\setlength{\rightskip}{0pt plus 5cm}MAABox::MAABox (const {\bf MOBox} \& {\em box})}}
+\label{class_m_a_a_box_7e94c069bfb8537ff9410b8a2b7f89a5}
+
+
+
+
+Definition at line 36 of file MAABox.cpp.\hypertarget{class_m_a_a_box_263ea425cafadae722c43cdfc9160274}{
+\index{MAABox@{MAABox}!$\sim$MAABox@{$\sim$MAABox}}
+\index{$\sim$MAABox@{$\sim$MAABox}!MAABox@{MAABox}}
+\subsubsection[{$\sim$MAABox}]{\setlength{\rightskip}{0pt plus 5cm}MAABox::$\sim$MAABox ()}}
+\label{class_m_a_a_box_263ea425cafadae722c43cdfc9160274}
+
+
+
+
+Definition at line 62 of file MAABox.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_m_a_a_box_b5d6ad41455f8a7c76b41ef305cce52f}{
+\index{MAABox@{MAABox}!AddBoxToVolume@{AddBoxToVolume}}
+\index{AddBoxToVolume@{AddBoxToVolume}!MAABox@{MAABox}}
+\subsubsection[{AddBoxToVolume}]{\setlength{\rightskip}{0pt plus 5cm}bool MAABox::AddBoxToVolume (const {\bf MOBox} \& {\em box})}}
+\label{class_m_a_a_box_b5d6ad41455f8a7c76b41ef305cce52f}
+
+
+
+
+Definition at line 207 of file MAABox.cpp.\hypertarget{class_m_a_a_box_7da828ab9a51859fb07aedfce50967f0}{
+\index{MAABox@{MAABox}!AddBoxToVolume@{AddBoxToVolume}}
+\index{AddBoxToVolume@{AddBoxToVolume}!MAABox@{MAABox}}
+\subsubsection[{AddBoxToVolume}]{\setlength{\rightskip}{0pt plus 5cm}bool MAABox::AddBoxToVolume (const {\bf MAABox} \& {\em box})}}
+\label{class_m_a_a_box_7da828ab9a51859fb07aedfce50967f0}
+
+
+
+
+Definition at line 172 of file MAABox.cpp.\hypertarget{class_m_a_a_box_f47c228010eab1bd502d80633d50953b}{
+\index{MAABox@{MAABox}!Dist@{Dist}}
+\index{Dist@{Dist}!MAABox@{MAABox}}
+\subsubsection[{Dist}]{\setlength{\rightskip}{0pt plus 5cm}float MAABox::Dist (const {\bf MVec3} \& {\em pos})}}
+\label{class_m_a_a_box_f47c228010eab1bd502d80633d50953b}
+
+
+
+
+Definition at line 74 of file MAABox.cpp.\hypertarget{class_m_a_a_box_069339e97ffae23154079bca22eafaf7}{
+\index{MAABox@{MAABox}!GetBoundingSphere@{GetBoundingSphere}}
+\index{GetBoundingSphere@{GetBoundingSphere}!MAABox@{MAABox}}
+\subsubsection[{GetBoundingSphere}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MSphere} MAABox::GetBoundingSphere ()}}
+\label{class_m_a_a_box_069339e97ffae23154079bca22eafaf7}
+
+
+
+
+Definition at line 165 of file MAABox.cpp.\hypertarget{class_m_a_a_box_a9fbd78524a8e1c00a165177b7cf888f}{
+\index{MAABox@{MAABox}!GetCenter@{GetCenter}}
+\index{GetCenter@{GetCenter}!MAABox@{MAABox}}
+\subsubsection[{GetCenter}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MVec3}\& MAABox::GetCenter () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_a_a_box_a9fbd78524a8e1c00a165177b7cf888f}
+
+
+
+
+Definition at line 46 of file MAABox.h.\hypertarget{class_m_a_a_box_1880d28cd10db452fd1ef1d9d74774c9}{
+\index{MAABox@{MAABox}!GetCorners@{GetCorners}}
+\index{GetCorners@{GetCorners}!MAABox@{MAABox}}
+\subsubsection[{GetCorners}]{\setlength{\rightskip}{0pt plus 5cm}void MAABox::GetCorners ({\bf MVec3} $\ast$ {\em pts}) const}}
+\label{class_m_a_a_box_1880d28cd10db452fd1ef1d9d74774c9}
+
+
+
+
+Definition at line 255 of file MAABox.cpp.\hypertarget{class_m_a_a_box_9c4c37dd6c9bffdbe6926c5a4c60145c}{
+\index{MAABox@{MAABox}!GetHalfExts@{GetHalfExts}}
+\index{GetHalfExts@{GetHalfExts}!MAABox@{MAABox}}
+\subsubsection[{GetHalfExts}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MVec3}\& MAABox::GetHalfExts () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_a_a_box_9c4c37dd6c9bffdbe6926c5a4c60145c}
+
+
+
+
+Definition at line 47 of file MAABox.h.\hypertarget{class_m_a_a_box_0948818103883ba996a23c8e26f8a2a5}{
+\index{MAABox@{MAABox}!GetSide@{GetSide}}
+\index{GetSide@{GetSide}!MAABox@{MAABox}}
+\subsubsection[{GetSide}]{\setlength{\rightskip}{0pt plus 5cm}int MAABox::GetSide (const {\bf MPlane} \& {\em plane}) const}}
+\label{class_m_a_a_box_0948818103883ba996a23c8e26f8a2a5}
+
+
+
+
+Definition at line 342 of file MAABox.cpp.\hypertarget{class_m_a_a_box_8b16f4be06c18802ebed0029ff215d5d}{
+\index{MAABox@{MAABox}!Intersect@{Intersect}}
+\index{Intersect@{Intersect}!MAABox@{MAABox}}
+\subsubsection[{Intersect}]{\setlength{\rightskip}{0pt plus 5cm}bool MAABox::Intersect (const {\bf MSphere} \& {\em sphere}) const}}
+\label{class_m_a_a_box_8b16f4be06c18802ebed0029ff215d5d}
+
+
+
+
+Definition at line 134 of file MAABox.cpp.\hypertarget{class_m_a_a_box_b309a32c61158e79a35b19a339d05248}{
+\index{MAABox@{MAABox}!Intersect@{Intersect}}
+\index{Intersect@{Intersect}!MAABox@{MAABox}}
+\subsubsection[{Intersect}]{\setlength{\rightskip}{0pt plus 5cm}bool MAABox::Intersect (const {\bf MAABox} \& {\em box}) const}}
+\label{class_m_a_a_box_b309a32c61158e79a35b19a339d05248}
+
+
+
+
+Definition at line 115 of file MAABox.cpp.\hypertarget{class_m_a_a_box_0531f288d3c7a6d0a2c9f90cf72a6668}{
+\index{MAABox@{MAABox}!IsInside@{IsInside}}
+\index{IsInside@{IsInside}!MAABox@{MAABox}}
+\subsubsection[{IsInside}]{\setlength{\rightskip}{0pt plus 5cm}bool MAABox::IsInside (const {\bf MVec3} \& {\em point}) const}}
+\label{class_m_a_a_box_0531f288d3c7a6d0a2c9f90cf72a6668}
+
+
+
+
+Definition at line 330 of file MAABox.cpp.\hypertarget{class_m_a_a_box_7658fd191ee1fbbf3d6f93d0221fe13a}{
+\index{MAABox@{MAABox}!Load@{Load}}
+\index{Load@{Load}!MAABox@{MAABox}}
+\subsubsection[{Load}]{\setlength{\rightskip}{0pt plus 5cm}void MAABox::Load ({\bf UReader} \& {\em reader})}}
+\label{class_m_a_a_box_7658fd191ee1fbbf3d6f93d0221fe13a}
+
+
+
+
+Definition at line 379 of file MAABox.cpp.\hypertarget{class_m_a_a_box_c24b0c3002a56fd52de6628e1864e485}{
+\index{MAABox@{MAABox}!Save@{Save}}
+\index{Save@{Save}!MAABox@{MAABox}}
+\subsubsection[{Save}]{\setlength{\rightskip}{0pt plus 5cm}void MAABox::Save ({\bf UWriter} \& {\em writer}) const}}
+\label{class_m_a_a_box_c24b0c3002a56fd52de6628e1864e485}
+
+
+
+
+Definition at line 371 of file MAABox.cpp.\hypertarget{class_m_a_a_box_65a37e6adae9f465bb0ac964f4bfbe63}{
+\index{MAABox@{MAABox}!SetCenter@{SetCenter}}
+\index{SetCenter@{SetCenter}!MAABox@{MAABox}}
+\subsubsection[{SetCenter}]{\setlength{\rightskip}{0pt plus 5cm}void MAABox::SetCenter (const {\bf MVec3} \& {\em center})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_a_a_box_65a37e6adae9f465bb0ac964f4bfbe63}
+
+
+
+
+Definition at line 49 of file MAABox.h.\hypertarget{class_m_a_a_box_9ce3a23bc3cfa705d6776807289bd178}{
+\index{MAABox@{MAABox}!SetHalfExts@{SetHalfExts}}
+\index{SetHalfExts@{SetHalfExts}!MAABox@{MAABox}}
+\subsubsection[{SetHalfExts}]{\setlength{\rightskip}{0pt plus 5cm}void MAABox::SetHalfExts (const {\bf MVec3} \& {\em halfExts})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_a_a_box_9ce3a23bc3cfa705d6776807289bd178}
+
+
+
+
+Definition at line 50 of file MAABox.h.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_m_a_a_box_8h}{MAABox.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_m_a_a_box_8cpp}{MAABox.cpp}\end{CompactItemize}

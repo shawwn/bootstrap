@@ -1,0 +1,290 @@
+\hypertarget{class_gr_b_s_p_tree}{
+\section{GrBSPTree Class Reference}
+\label{class_gr_b_s_p_tree}\index{GrBSPTree@{GrBSPTree}}
+}
+{\tt \#include $<$GrBSPTree.h$>$}
+
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+struct \textbf{SLightCacheEntry}
+\end{CompactItemize}
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef std::vector$<$ \hyperlink{class_gr_mesh_inst}{GrMeshInst} $\ast$ $>$ \hyperlink{class_gr_b_s_p_tree_17eda1992ed024630ab8ae114f7c78a3}{MeshInstVec}
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_b_s_p_tree_74ddd5b1e416fcf6afe52d705c19af77}{GrBSPTree} ()
+\item 
+\hyperlink{class_gr_b_s_p_tree_457ee72d9c2b4d6ea5db3008bd06b5c6}{GrBSPTree} (const \hyperlink{class_u_path}{UPath} \&fileName, \hyperlink{class_u_reader}{UReader} \&reader)
+\item 
+\hyperlink{class_gr_b_s_p_tree_ec54138b350c38053b2e1020afa25731}{GrBSPTree} (const \hyperlink{class_gr_polygon_b_s_p_tree}{GrPolygonBSPTree} \&polygonBSPTree, const \hyperlink{class_gr_polygon_uber_u_v_mapper}{GrPolygonUberUVMapper} \&mapper)
+\item 
+\hyperlink{class_gr_b_s_p_tree_c3e9b4ebbae5f0abe4b0a9e01e030e27}{$\sim$GrBSPTree} ()
+\item 
+const \hyperlink{class_u_path}{UPath} \& \hyperlink{class_gr_b_s_p_tree_1e39974a60cdd4e087f2581a03300e18}{GetFileName} () const 
+\item 
+void \hyperlink{class_gr_b_s_p_tree_e6c5ef163373e38cf35a23177974dc66}{SetInScene} (bool inScene)
+\item 
+const \hyperlink{class_gr_light_set}{GrLightSet} \& \hyperlink{class_gr_b_s_p_tree_439816bd7db6f8c5d4998964d1d277f0}{GetLightSet} () const 
+\item 
+void \hyperlink{class_gr_b_s_p_tree_b5b7d54243589001d2113518468109ba}{AddLight} (\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_light}{GrLight} $>$ light)
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_light}{GrLight} $>$ \hyperlink{class_gr_b_s_p_tree_f2ace173c279ad61db04e13ed279d815}{FindLight} (const char $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, int cmpLen=-1) const 
+\item 
+bool \hyperlink{class_gr_b_s_p_tree_67eec7c3976ce36c454accf2e3c9ad20}{RemoveLight} (const char $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name})
+\item 
+bool \hyperlink{class_gr_b_s_p_tree_945f67a8ea6830ad1622880a48d3753a}{RemoveLight} (\hyperlink{class_gr_light}{GrLight} $\ast$light)
+\item 
+const \hyperlink{class_gr_b_s_p_tree_17eda1992ed024630ab8ae114f7c78a3}{MeshInstVec} \& \hyperlink{class_gr_b_s_p_tree_018210325b71cd73cb2ae8891d037f9a}{GetMeshInsts} () const 
+\item 
+bool \hyperlink{class_gr_b_s_p_tree_183214f29232744efa570aa39db1810b}{Pick} (\hyperlink{class_gr_mesh_inst}{GrMeshInst} $\ast$\&mesh, \hyperlink{struct_gr_mesh_1_1_s_tri_collision}{GrMesh::STriCollision} \&hit, const \hyperlink{class_m_ray}{MRay} \&ray)
+\item 
+void \hyperlink{class_gr_b_s_p_tree_f880f4a1b8a4ebb0b58df5f923d492b7}{Traverse} (\hyperlink{class_gr_scene_traverser}{GrSceneTraverser} $\ast$traverser)
+\item 
+void \hyperlink{class_gr_b_s_p_tree_ec1f9b6ad00f5859a6e18b298651b00b}{Cache} ()
+\item 
+void \hyperlink{class_gr_b_s_p_tree_af5e1a8c04f0b1a5e6ed48196078906a}{Evict} ()
+\item 
+void \hyperlink{class_gr_b_s_p_tree_465abf25bacaf871d1f1f854c23b2d9b}{GetLitObjectsAndMarkVisible} (\hyperlink{class_gr_render_list}{GrRenderList} \&lightReceivers, const \hyperlink{class_gr_frustum}{GrFrustum} \&frustum, const \hyperlink{class_m_vec3}{MVec3} \&eyePos, unsigned int frameId) const 
+\item 
+bool \hyperlink{class_gr_b_s_p_tree_4d4effc32f177216a7d577c0a1aac3f9}{GetLitObjects} (\hyperlink{class_gr_render_list}{GrRenderList} \&lightReceivers, \hyperlink{class_gr_render_list}{GrRenderList} $\ast$shadowCasters, const \hyperlink{class_m_sphere}{MSphere} \&region, unsigned int frameId) const 
+\item 
+bool \hyperlink{class_gr_b_s_p_tree_5583beab3c16526e2ef1234cf3f2e210}{GetLitObjects} (\hyperlink{class_gr_render_list}{GrRenderList} \&lightReceivers, \hyperlink{class_gr_render_list}{GrRenderList} $\ast$shadowCasters, const \hyperlink{class_gr_frustum}{GrFrustum} \&region, unsigned int frameId) const 
+\item 
+bool \hyperlink{class_gr_b_s_p_tree_4c964aff2bd50e39fad7d2df046a682e}{GetObjectsInFrustum} (\hyperlink{class_gr_render_list}{GrRenderList} \&objects, const \hyperlink{class_gr_frustum}{GrFrustum} \&region) const 
+\item 
+void \hyperlink{class_gr_b_s_p_tree_7ed8fc7d9debc4827138e75a4ef8f175}{Load} (\hyperlink{class_u_reader}{UReader} \&reader)
+\item 
+void \hyperlink{class_gr_b_s_p_tree_2c1454dfcd96cd85143d86f4fa5bb099}{Save} (\hyperlink{class_u_writer}{UWriter} \&writer)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 38 of file GrBSPTree.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_gr_b_s_p_tree_17eda1992ed024630ab8ae114f7c78a3}{
+\index{GrBSPTree@{GrBSPTree}!MeshInstVec@{MeshInstVec}}
+\index{MeshInstVec@{MeshInstVec}!GrBSPTree@{GrBSPTree}}
+\subsubsection[{MeshInstVec}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<$ {\bf GrMeshInst}$\ast$ $>$ {\bf GrBSPTree::MeshInstVec}}}
+\label{class_gr_b_s_p_tree_17eda1992ed024630ab8ae114f7c78a3}
+
+
+
+
+Definition at line 41 of file GrBSPTree.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_b_s_p_tree_74ddd5b1e416fcf6afe52d705c19af77}{
+\index{GrBSPTree@{GrBSPTree}!GrBSPTree@{GrBSPTree}}
+\index{GrBSPTree@{GrBSPTree}!GrBSPTree@{GrBSPTree}}
+\subsubsection[{GrBSPTree}]{\setlength{\rightskip}{0pt plus 5cm}GrBSPTree::GrBSPTree ()}}
+\label{class_gr_b_s_p_tree_74ddd5b1e416fcf6afe52d705c19af77}
+
+
+
+
+Definition at line 42 of file GrBSPTree.cpp.\hypertarget{class_gr_b_s_p_tree_457ee72d9c2b4d6ea5db3008bd06b5c6}{
+\index{GrBSPTree@{GrBSPTree}!GrBSPTree@{GrBSPTree}}
+\index{GrBSPTree@{GrBSPTree}!GrBSPTree@{GrBSPTree}}
+\subsubsection[{GrBSPTree}]{\setlength{\rightskip}{0pt plus 5cm}GrBSPTree::GrBSPTree (const {\bf UPath} \& {\em fileName}, \/  {\bf UReader} \& {\em reader})}}
+\label{class_gr_b_s_p_tree_457ee72d9c2b4d6ea5db3008bd06b5c6}
+
+
+
+
+Definition at line 50 of file GrBSPTree.cpp.\hypertarget{class_gr_b_s_p_tree_ec54138b350c38053b2e1020afa25731}{
+\index{GrBSPTree@{GrBSPTree}!GrBSPTree@{GrBSPTree}}
+\index{GrBSPTree@{GrBSPTree}!GrBSPTree@{GrBSPTree}}
+\subsubsection[{GrBSPTree}]{\setlength{\rightskip}{0pt plus 5cm}GrBSPTree::GrBSPTree (const {\bf GrPolygonBSPTree} \& {\em polygonBSPTree}, \/  const {\bf GrPolygonUberUVMapper} \& {\em mapper})}}
+\label{class_gr_b_s_p_tree_ec54138b350c38053b2e1020afa25731}
+
+
+
+
+Definition at line 59 of file GrBSPTree.cpp.\hypertarget{class_gr_b_s_p_tree_c3e9b4ebbae5f0abe4b0a9e01e030e27}{
+\index{GrBSPTree@{GrBSPTree}!$\sim$GrBSPTree@{$\sim$GrBSPTree}}
+\index{$\sim$GrBSPTree@{$\sim$GrBSPTree}!GrBSPTree@{GrBSPTree}}
+\subsubsection[{$\sim$GrBSPTree}]{\setlength{\rightskip}{0pt plus 5cm}GrBSPTree::$\sim$GrBSPTree ()}}
+\label{class_gr_b_s_p_tree_c3e9b4ebbae5f0abe4b0a9e01e030e27}
+
+
+
+
+Definition at line 89 of file GrBSPTree.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_b_s_p_tree_b5b7d54243589001d2113518468109ba}{
+\index{GrBSPTree@{GrBSPTree}!AddLight@{AddLight}}
+\index{AddLight@{AddLight}!GrBSPTree@{GrBSPTree}}
+\subsubsection[{AddLight}]{\setlength{\rightskip}{0pt plus 5cm}void GrBSPTree::AddLight ({\bf URef}$<$ {\bf GrLight} $>$ {\em light})}}
+\label{class_gr_b_s_p_tree_b5b7d54243589001d2113518468109ba}
+
+
+
+
+Definition at line 122 of file GrBSPTree.cpp.\hypertarget{class_gr_b_s_p_tree_ec1f9b6ad00f5859a6e18b298651b00b}{
+\index{GrBSPTree@{GrBSPTree}!Cache@{Cache}}
+\index{Cache@{Cache}!GrBSPTree@{GrBSPTree}}
+\subsubsection[{Cache}]{\setlength{\rightskip}{0pt plus 5cm}void GrBSPTree::Cache ()}}
+\label{class_gr_b_s_p_tree_ec1f9b6ad00f5859a6e18b298651b00b}
+
+
+
+
+Definition at line 179 of file GrBSPTree.cpp.\hypertarget{class_gr_b_s_p_tree_af5e1a8c04f0b1a5e6ed48196078906a}{
+\index{GrBSPTree@{GrBSPTree}!Evict@{Evict}}
+\index{Evict@{Evict}!GrBSPTree@{GrBSPTree}}
+\subsubsection[{Evict}]{\setlength{\rightskip}{0pt plus 5cm}void GrBSPTree::Evict ()}}
+\label{class_gr_b_s_p_tree_af5e1a8c04f0b1a5e6ed48196078906a}
+
+
+
+
+Definition at line 189 of file GrBSPTree.cpp.\hypertarget{class_gr_b_s_p_tree_f2ace173c279ad61db04e13ed279d815}{
+\index{GrBSPTree@{GrBSPTree}!FindLight@{FindLight}}
+\index{FindLight@{FindLight}!GrBSPTree@{GrBSPTree}}
+\subsubsection[{FindLight}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrLight} $>$ GrBSPTree::FindLight (const char $\ast$ {\em name}, \/  int {\em cmpLen} = {\tt -1}) const}}
+\label{class_gr_b_s_p_tree_f2ace173c279ad61db04e13ed279d815}
+
+
+
+
+Definition at line 131 of file GrBSPTree.cpp.\hypertarget{class_gr_b_s_p_tree_1e39974a60cdd4e087f2581a03300e18}{
+\index{GrBSPTree@{GrBSPTree}!GetFileName@{GetFileName}}
+\index{GetFileName@{GetFileName}!GrBSPTree@{GrBSPTree}}
+\subsubsection[{GetFileName}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf UPath}\& GrBSPTree::GetFileName () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_b_s_p_tree_1e39974a60cdd4e087f2581a03300e18}
+
+
+
+
+Definition at line 49 of file GrBSPTree.h.\hypertarget{class_gr_b_s_p_tree_439816bd7db6f8c5d4998964d1d277f0}{
+\index{GrBSPTree@{GrBSPTree}!GetLightSet@{GetLightSet}}
+\index{GetLightSet@{GetLightSet}!GrBSPTree@{GrBSPTree}}
+\subsubsection[{GetLightSet}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf GrLightSet}\& GrBSPTree::GetLightSet () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_b_s_p_tree_439816bd7db6f8c5d4998964d1d277f0}
+
+
+
+
+Definition at line 56 of file GrBSPTree.h.\hypertarget{class_gr_b_s_p_tree_5583beab3c16526e2ef1234cf3f2e210}{
+\index{GrBSPTree@{GrBSPTree}!GetLitObjects@{GetLitObjects}}
+\index{GetLitObjects@{GetLitObjects}!GrBSPTree@{GrBSPTree}}
+\subsubsection[{GetLitObjects}]{\setlength{\rightskip}{0pt plus 5cm}bool GrBSPTree::GetLitObjects ({\bf GrRenderList} \& {\em lightReceivers}, \/  {\bf GrRenderList} $\ast$ {\em shadowCasters}, \/  const {\bf GrFrustum} \& {\em region}, \/  unsigned int {\em frameId}) const}}
+\label{class_gr_b_s_p_tree_5583beab3c16526e2ef1234cf3f2e210}
+
+
+
+
+Definition at line 370 of file GrBSPTree.cpp.\hypertarget{class_gr_b_s_p_tree_4d4effc32f177216a7d577c0a1aac3f9}{
+\index{GrBSPTree@{GrBSPTree}!GetLitObjects@{GetLitObjects}}
+\index{GetLitObjects@{GetLitObjects}!GrBSPTree@{GrBSPTree}}
+\subsubsection[{GetLitObjects}]{\setlength{\rightskip}{0pt plus 5cm}bool GrBSPTree::GetLitObjects ({\bf GrRenderList} \& {\em lightReceivers}, \/  {\bf GrRenderList} $\ast$ {\em shadowCasters}, \/  const {\bf MSphere} \& {\em region}, \/  unsigned int {\em frameId}) const}}
+\label{class_gr_b_s_p_tree_4d4effc32f177216a7d577c0a1aac3f9}
+
+
+
+
+Definition at line 258 of file GrBSPTree.cpp.\hypertarget{class_gr_b_s_p_tree_465abf25bacaf871d1f1f854c23b2d9b}{
+\index{GrBSPTree@{GrBSPTree}!GetLitObjectsAndMarkVisible@{GetLitObjectsAndMarkVisible}}
+\index{GetLitObjectsAndMarkVisible@{GetLitObjectsAndMarkVisible}!GrBSPTree@{GrBSPTree}}
+\subsubsection[{GetLitObjectsAndMarkVisible}]{\setlength{\rightskip}{0pt plus 5cm}void GrBSPTree::GetLitObjectsAndMarkVisible ({\bf GrRenderList} \& {\em lightReceivers}, \/  const {\bf GrFrustum} \& {\em frustum}, \/  const {\bf MVec3} \& {\em eyePos}, \/  unsigned int {\em frameId}) const}}
+\label{class_gr_b_s_p_tree_465abf25bacaf871d1f1f854c23b2d9b}
+
+
+
+
+Definition at line 198 of file GrBSPTree.cpp.\hypertarget{class_gr_b_s_p_tree_018210325b71cd73cb2ae8891d037f9a}{
+\index{GrBSPTree@{GrBSPTree}!GetMeshInsts@{GetMeshInsts}}
+\index{GetMeshInsts@{GetMeshInsts}!GrBSPTree@{GrBSPTree}}
+\subsubsection[{GetMeshInsts}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MeshInstVec}\& GrBSPTree::GetMeshInsts () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_b_s_p_tree_018210325b71cd73cb2ae8891d037f9a}
+
+
+
+
+Definition at line 63 of file GrBSPTree.h.\hypertarget{class_gr_b_s_p_tree_4c964aff2bd50e39fad7d2df046a682e}{
+\index{GrBSPTree@{GrBSPTree}!GetObjectsInFrustum@{GetObjectsInFrustum}}
+\index{GetObjectsInFrustum@{GetObjectsInFrustum}!GrBSPTree@{GrBSPTree}}
+\subsubsection[{GetObjectsInFrustum}]{\setlength{\rightskip}{0pt plus 5cm}bool GrBSPTree::GetObjectsInFrustum ({\bf GrRenderList} \& {\em objects}, \/  const {\bf GrFrustum} \& {\em region}) const}}
+\label{class_gr_b_s_p_tree_4c964aff2bd50e39fad7d2df046a682e}
+
+
+
+
+Definition at line 482 of file GrBSPTree.cpp.\hypertarget{class_gr_b_s_p_tree_7ed8fc7d9debc4827138e75a4ef8f175}{
+\index{GrBSPTree@{GrBSPTree}!Load@{Load}}
+\index{Load@{Load}!GrBSPTree@{GrBSPTree}}
+\subsubsection[{Load}]{\setlength{\rightskip}{0pt plus 5cm}void GrBSPTree::Load ({\bf UReader} \& {\em reader})}}
+\label{class_gr_b_s_p_tree_7ed8fc7d9debc4827138e75a4ef8f175}
+
+
+
+
+Definition at line 567 of file GrBSPTree.cpp.\hypertarget{class_gr_b_s_p_tree_183214f29232744efa570aa39db1810b}{
+\index{GrBSPTree@{GrBSPTree}!Pick@{Pick}}
+\index{Pick@{Pick}!GrBSPTree@{GrBSPTree}}
+\subsubsection[{Pick}]{\setlength{\rightskip}{0pt plus 5cm}bool GrBSPTree::Pick ({\bf GrMeshInst} $\ast$\& {\em mesh}, \/  {\bf GrMesh::STriCollision} \& {\em hit}, \/  const {\bf MRay} \& {\em ray})}}
+\label{class_gr_b_s_p_tree_183214f29232744efa570aa39db1810b}
+
+
+
+
+Definition at line 158 of file GrBSPTree.cpp.\hypertarget{class_gr_b_s_p_tree_945f67a8ea6830ad1622880a48d3753a}{
+\index{GrBSPTree@{GrBSPTree}!RemoveLight@{RemoveLight}}
+\index{RemoveLight@{RemoveLight}!GrBSPTree@{GrBSPTree}}
+\subsubsection[{RemoveLight}]{\setlength{\rightskip}{0pt plus 5cm}bool GrBSPTree::RemoveLight ({\bf GrLight} $\ast$ {\em light})}}
+\label{class_gr_b_s_p_tree_945f67a8ea6830ad1622880a48d3753a}
+
+
+
+
+Definition at line 148 of file GrBSPTree.cpp.\hypertarget{class_gr_b_s_p_tree_67eec7c3976ce36c454accf2e3c9ad20}{
+\index{GrBSPTree@{GrBSPTree}!RemoveLight@{RemoveLight}}
+\index{RemoveLight@{RemoveLight}!GrBSPTree@{GrBSPTree}}
+\subsubsection[{RemoveLight}]{\setlength{\rightskip}{0pt plus 5cm}bool GrBSPTree::RemoveLight (const char $\ast$ {\em name})}}
+\label{class_gr_b_s_p_tree_67eec7c3976ce36c454accf2e3c9ad20}
+
+
+
+
+Definition at line 138 of file GrBSPTree.cpp.\hypertarget{class_gr_b_s_p_tree_2c1454dfcd96cd85143d86f4fa5bb099}{
+\index{GrBSPTree@{GrBSPTree}!Save@{Save}}
+\index{Save@{Save}!GrBSPTree@{GrBSPTree}}
+\subsubsection[{Save}]{\setlength{\rightskip}{0pt plus 5cm}void GrBSPTree::Save ({\bf UWriter} \& {\em writer})}}
+\label{class_gr_b_s_p_tree_2c1454dfcd96cd85143d86f4fa5bb099}
+
+
+
+
+Definition at line 598 of file GrBSPTree.cpp.\hypertarget{class_gr_b_s_p_tree_e6c5ef163373e38cf35a23177974dc66}{
+\index{GrBSPTree@{GrBSPTree}!SetInScene@{SetInScene}}
+\index{SetInScene@{SetInScene}!GrBSPTree@{GrBSPTree}}
+\subsubsection[{SetInScene}]{\setlength{\rightskip}{0pt plus 5cm}void GrBSPTree::SetInScene (bool {\em inScene})}}
+\label{class_gr_b_s_p_tree_e6c5ef163373e38cf35a23177974dc66}
+
+
+
+
+Definition at line 101 of file GrBSPTree.cpp.\hypertarget{class_gr_b_s_p_tree_f880f4a1b8a4ebb0b58df5f923d492b7}{
+\index{GrBSPTree@{GrBSPTree}!Traverse@{Traverse}}
+\index{Traverse@{Traverse}!GrBSPTree@{GrBSPTree}}
+\subsubsection[{Traverse}]{\setlength{\rightskip}{0pt plus 5cm}void GrBSPTree::Traverse ({\bf GrSceneTraverser} $\ast$ {\em traverser})}}
+\label{class_gr_b_s_p_tree_f880f4a1b8a4ebb0b58df5f923d492b7}
+
+
+
+
+Definition at line 170 of file GrBSPTree.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_b_s_p_tree_8h}{GrBSPTree.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_b_s_p_tree_8cpp}{GrBSPTree.cpp}\end{CompactItemize}

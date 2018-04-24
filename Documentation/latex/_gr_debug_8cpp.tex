@@ -1,0 +1,63 @@
+\hypertarget{_gr_debug_8cpp}{
+\section{C:/Bootstrap/ProjectBX/Engine/Graphics/GrDebug.cpp File Reference}
+\label{_gr_debug_8cpp}\index{C:/Bootstrap/ProjectBX/Engine/Graphics/GrDebug.cpp@{C:/Bootstrap/ProjectBX/Engine/Graphics/GrDebug.cpp}}
+}
+{\tt \#include \char`\"{}graphics\_\-afx.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrDebug.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrTypes.h\char`\"{}}\par
+{\tt \#include \char`\"{}UWriter.h\char`\"{}}\par
+{\tt \#include \char`\"{}RFileMgr.h\char`\"{}}\par
+{\tt \#include \char`\"{}RFile.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+void \hyperlink{_gr_debug_8cpp_f82ebae2e158d721c11ff92a1c69fe69}{GrSaveTGA} (const char $\ast$filePath, const void $\ast$\hyperlink{glext__bak_8h_69926c009f2d52c6b6d2c76784af8c64}{data}, unsigned int \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, unsigned int \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height}, unsigned int bytesPerPel)
+\item 
+void \hyperlink{_gr_debug_8cpp_77db0c7bfc0ce9bd07662c2954ecabe5}{GrSaveOBJ} (const char $\ast$filePath, const char $\ast$modelName, const \hyperlink{struct_s_vec3}{SVec3} $\ast$positions, unsigned int positionCount, const unsigned short $\ast$\hyperlink{glext__bak_8h_c4293d0f76770fe857be3431df25308d}{indices}, unsigned int indexCount)
+\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+char \hyperlink{_gr_debug_8cpp_1d96654d8bdfa3a6fc811adfcdab5664}{kObjHeader} \mbox{[}$\,$\mbox{]}
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_gr_debug_8cpp_77db0c7bfc0ce9bd07662c2954ecabe5}{
+\index{GrDebug.cpp@{GrDebug.cpp}!GrSaveOBJ@{GrSaveOBJ}}
+\index{GrSaveOBJ@{GrSaveOBJ}!GrDebug.cpp@{GrDebug.cpp}}
+\subsubsection[{GrSaveOBJ}]{\setlength{\rightskip}{0pt plus 5cm}void GrSaveOBJ (const char $\ast$ {\em filePath}, \/  const char $\ast$ {\em modelName}, \/  const {\bf SVec3} $\ast$ {\em positions}, \/  unsigned int {\em positionCount}, \/  const unsigned short $\ast$ {\em indices}, \/  unsigned int {\em indexCount})}}
+\label{_gr_debug_8cpp_77db0c7bfc0ce9bd07662c2954ecabe5}
+
+
+
+
+Definition at line 55 of file GrDebug.cpp.\hypertarget{_gr_debug_8cpp_f82ebae2e158d721c11ff92a1c69fe69}{
+\index{GrDebug.cpp@{GrDebug.cpp}!GrSaveTGA@{GrSaveTGA}}
+\index{GrSaveTGA@{GrSaveTGA}!GrDebug.cpp@{GrDebug.cpp}}
+\subsubsection[{GrSaveTGA}]{\setlength{\rightskip}{0pt plus 5cm}void GrSaveTGA (const char $\ast$ {\em filePath}, \/  const void $\ast$ {\em data}, \/  unsigned int {\em width}, \/  unsigned int {\em height}, \/  unsigned int {\em bytesPerPel})}}
+\label{_gr_debug_8cpp_f82ebae2e158d721c11ff92a1c69fe69}
+
+
+
+
+Definition at line 22 of file GrDebug.cpp.
+
+\subsection{Variable Documentation}
+\hypertarget{_gr_debug_8cpp_1d96654d8bdfa3a6fc811adfcdab5664}{
+\index{GrDebug.cpp@{GrDebug.cpp}!kObjHeader@{kObjHeader}}
+\index{kObjHeader@{kObjHeader}!GrDebug.cpp@{GrDebug.cpp}}
+\subsubsection[{kObjHeader}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf kObjHeader}\mbox{[}$\,$\mbox{]}}}
+\label{_gr_debug_8cpp_1d96654d8bdfa3a6fc811adfcdab5664}
+
+
+\textbf{Initial value:}
+
+\begin{Code}\begin{verbatim}
+"# File exported by the Bootstrap Engine for debugging purposes.\n"
+"# www.bootstrapstudios.com\n"
+\end{verbatim}
+\end{Code}
+
+
+Definition at line 12 of file GrDebug.cpp.

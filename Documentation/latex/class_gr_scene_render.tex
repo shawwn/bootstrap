@@ -1,0 +1,87 @@
+\hypertarget{class_gr_scene_render}{
+\section{GrSceneRender Class Reference}
+\label{class_gr_scene_render}\index{GrSceneRender@{GrSceneRender}}
+}
+{\tt \#include $<$GrSceneRender.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_scene_render_092d37ccce05bcf350aa89099376cd1a}{GrSceneRender} ()
+\item 
+\hyperlink{class_gr_scene_render_2fa5b2608cd04ca49156de2446fc3e17}{$\sim$GrSceneRender} ()
+\item 
+void \hyperlink{class_gr_scene_render_70bf228594a41d830084e5619dbec778}{RenderAmbience} (const \hyperlink{class_gr_camera}{GrCamera} $\ast$camera, const \hyperlink{class_m_vec3}{MVec3} \&pvsEyePos, const \hyperlink{class_gr_b_s_p_tree}{GrBSPTree} $\ast$bspRoot, const \hyperlink{class_gr_model}{GrModel} $\ast$modelRoot, const \hyperlink{class_gr_model}{GrModel} $\ast$skyboxRoot, const \hyperlink{class_gr_color}{GrColor} \&ambColor, unsigned int frameId)
+\item 
+void \hyperlink{class_gr_scene_render_a476db0635147928ad7d0806303d60a3}{RenderLight} (const \hyperlink{class_gr_camera}{GrCamera} $\ast$camera, const \hyperlink{class_gr_light}{GrLight} $\ast$light, const \hyperlink{class_gr_b_s_p_tree}{GrBSPTree} $\ast$bspRoot, const \hyperlink{class_gr_model}{GrModel} $\ast$modelRoot, unsigned int frameId)
+\end{CompactItemize}
+\subsection*{Static Public Attributes}
+\begin{CompactItemize}
+\item 
+static const unsigned int \hyperlink{class_gr_scene_render_af3f39ad08e5db676b53f3025999caf3}{kMaxLOD} = 5U
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 33 of file GrSceneRender.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_scene_render_092d37ccce05bcf350aa89099376cd1a}{
+\index{GrSceneRender@{GrSceneRender}!GrSceneRender@{GrSceneRender}}
+\index{GrSceneRender@{GrSceneRender}!GrSceneRender@{GrSceneRender}}
+\subsubsection[{GrSceneRender}]{\setlength{\rightskip}{0pt plus 5cm}GrSceneRender::GrSceneRender ()}}
+\label{class_gr_scene_render_092d37ccce05bcf350aa89099376cd1a}
+
+
+
+
+Definition at line 36 of file GrSceneRender.cpp.\hypertarget{class_gr_scene_render_2fa5b2608cd04ca49156de2446fc3e17}{
+\index{GrSceneRender@{GrSceneRender}!$\sim$GrSceneRender@{$\sim$GrSceneRender}}
+\index{$\sim$GrSceneRender@{$\sim$GrSceneRender}!GrSceneRender@{GrSceneRender}}
+\subsubsection[{$\sim$GrSceneRender}]{\setlength{\rightskip}{0pt plus 5cm}GrSceneRender::$\sim$GrSceneRender ()}}
+\label{class_gr_scene_render_2fa5b2608cd04ca49156de2446fc3e17}
+
+
+
+
+Definition at line 44 of file GrSceneRender.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_scene_render_70bf228594a41d830084e5619dbec778}{
+\index{GrSceneRender@{GrSceneRender}!RenderAmbience@{RenderAmbience}}
+\index{RenderAmbience@{RenderAmbience}!GrSceneRender@{GrSceneRender}}
+\subsubsection[{RenderAmbience}]{\setlength{\rightskip}{0pt plus 5cm}void GrSceneRender::RenderAmbience (const {\bf GrCamera} $\ast$ {\em camera}, \/  const {\bf MVec3} \& {\em pvsEyePos}, \/  const {\bf GrBSPTree} $\ast$ {\em bspRoot}, \/  const {\bf GrModel} $\ast$ {\em modelRoot}, \/  const {\bf GrModel} $\ast$ {\em skyboxRoot}, \/  const {\bf GrColor} \& {\em ambColor}, \/  unsigned int {\em frameId})}}
+\label{class_gr_scene_render_70bf228594a41d830084e5619dbec778}
+
+
+
+
+Definition at line 56 of file GrSceneRender.cpp.\hypertarget{class_gr_scene_render_a476db0635147928ad7d0806303d60a3}{
+\index{GrSceneRender@{GrSceneRender}!RenderLight@{RenderLight}}
+\index{RenderLight@{RenderLight}!GrSceneRender@{GrSceneRender}}
+\subsubsection[{RenderLight}]{\setlength{\rightskip}{0pt plus 5cm}void GrSceneRender::RenderLight (const {\bf GrCamera} $\ast$ {\em camera}, \/  const {\bf GrLight} $\ast$ {\em light}, \/  const {\bf GrBSPTree} $\ast$ {\em bspRoot}, \/  const {\bf GrModel} $\ast$ {\em modelRoot}, \/  unsigned int {\em frameId})}}
+\label{class_gr_scene_render_a476db0635147928ad7d0806303d60a3}
+
+
+
+
+Definition at line 73 of file GrSceneRender.cpp.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_gr_scene_render_af3f39ad08e5db676b53f3025999caf3}{
+\index{GrSceneRender@{GrSceneRender}!kMaxLOD@{kMaxLOD}}
+\index{kMaxLOD@{kMaxLOD}!GrSceneRender@{GrSceneRender}}
+\subsubsection[{kMaxLOD}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int {\bf GrSceneRender::kMaxLOD} = 5U\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_gr_scene_render_af3f39ad08e5db676b53f3025999caf3}
+
+
+
+
+Definition at line 36 of file GrSceneRender.h.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_scene_render_8h}{GrSceneRender.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_scene_render_8cpp}{GrSceneRender.cpp}\end{CompactItemize}

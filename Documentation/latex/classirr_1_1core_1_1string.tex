@@ -1,0 +1,612 @@
+\hypertarget{classirr_1_1core_1_1string}{
+\section{irr::core::string$<$ T $>$ Class Template Reference}
+\label{classirr_1_1core_1_1string}\index{irr::core::string@{irr::core::string}}
+}
+Very simple \hyperlink{classirr_1_1core_1_1string}{string} class with some useful features.  
+
+
+{\tt \#include $<$irrString.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{classirr_1_1core_1_1string_696ab39973b7a35b77135a2f14bf4ad8}{string} ()
+\begin{CompactList}\small\item\em Default constructor. \item\end{CompactList}\item 
+\hyperlink{classirr_1_1core_1_1string_e3720c72deacf9aecd75f57bc4cec809}{string} (const \hyperlink{classirr_1_1core_1_1string}{string}$<$ T $>$ \&other)
+\begin{CompactList}\small\item\em Constructor. \item\end{CompactList}\item 
+\hyperlink{classirr_1_1core_1_1string_821a5d40db1c177d95d6795f09fc3979}{string} (int number)
+\begin{CompactList}\small\item\em Constructs a \hyperlink{classirr_1_1core_1_1string}{string} from an int. \item\end{CompactList}\item 
+{\footnotesize template$<$class B $>$ }\\\hyperlink{classirr_1_1core_1_1string_d9b3db3da5deded0a56688a840f55c7e}{string} (const B $\ast$\hyperlink{glext__bak_8h_4c662e60c03c48f5718de0c175211fb0}{c}, \hyperlink{namespaceirr_c66849b7a6ed16e30ebede579f9b47c6}{s32} lenght)
+\begin{CompactList}\small\item\em Constructor for copying a \hyperlink{classirr_1_1core_1_1string}{string} from a pointer with a given lenght. \item\end{CompactList}\item 
+{\footnotesize template$<$class B $>$ }\\\hyperlink{classirr_1_1core_1_1string_80a459b0cd500498bc747cafd1253002}{string} (const B $\ast$\hyperlink{glext__bak_8h_4c662e60c03c48f5718de0c175211fb0}{c})
+\begin{CompactList}\small\item\em Constructor for unicode and ascii strings. \item\end{CompactList}\item 
+\hyperlink{classirr_1_1core_1_1string_93a52616dce6e056fc2ac13a768ed5d1}{$\sim$string} ()
+\begin{CompactList}\small\item\em destructor \item\end{CompactList}\item 
+\hyperlink{classirr_1_1core_1_1string}{string}$<$ T $>$ \& \hyperlink{classirr_1_1core_1_1string_f338b451095574fabbe673be285d3dc6}{operator=} (const \hyperlink{classirr_1_1core_1_1string}{string}$<$ T $>$ \&other)
+\begin{CompactList}\small\item\em Assignment operator. \item\end{CompactList}\item 
+{\footnotesize template$<$class B $>$ }\\\hyperlink{classirr_1_1core_1_1string}{string}$<$ T $>$ \& \hyperlink{classirr_1_1core_1_1string_413becd6c923c42d49907806bf2e11c5}{operator=} (const B $\ast$\hyperlink{glext__bak_8h_4c662e60c03c48f5718de0c175211fb0}{c})
+\begin{CompactList}\small\item\em Assignment operator for strings, ascii and unicode. \item\end{CompactList}\item 
+\hyperlink{classirr_1_1core_1_1string}{string}$<$ T $>$ \hyperlink{classirr_1_1core_1_1string_c50431c5b7b63483fe708b2849144f93}{operator+} (const \hyperlink{classirr_1_1core_1_1string}{string}$<$ T $>$ \&other)
+\begin{CompactList}\small\item\em Add operator for other strings. \item\end{CompactList}\item 
+{\footnotesize template$<$class B $>$ }\\\hyperlink{classirr_1_1core_1_1string}{string}$<$ T $>$ \hyperlink{classirr_1_1core_1_1string_b1ee1803b68a82c45fef17368b64b0e0}{operator+} (const B $\ast$\hyperlink{glext__bak_8h_4c662e60c03c48f5718de0c175211fb0}{c})
+\begin{CompactList}\small\item\em Add operator for strings, ascii and unicode. \item\end{CompactList}\item 
+T \& \hyperlink{classirr_1_1core_1_1string_91bbec77ba13690688c63700d4eee9a2}{operator\mbox{[}$\,$\mbox{]}} (const \hyperlink{namespaceirr_c66849b7a6ed16e30ebede579f9b47c6}{s32} \hyperlink{glext__bak_8h_57f14e05b1900f16a2da82ade47d0c6d}{index}) const 
+\begin{CompactList}\small\item\em Direct access operator. \item\end{CompactList}\item 
+bool \hyperlink{classirr_1_1core_1_1string_1076c0b73581439d3b99c839d0dbc41b}{operator==} (const T $\ast$str) const 
+\begin{CompactList}\small\item\em Comparison operator. \item\end{CompactList}\item 
+bool \hyperlink{classirr_1_1core_1_1string_59843ae56796dd0ea4549a9228378a3b}{operator==} (const \hyperlink{classirr_1_1core_1_1string}{string}$<$ T $>$ \&other) const 
+\begin{CompactList}\small\item\em Comparison operator. \item\end{CompactList}\item 
+bool \hyperlink{classirr_1_1core_1_1string_42a6186f4720fe404a2e111d2ea4455e}{operator$<$} (const \hyperlink{classirr_1_1core_1_1string}{string}$<$ T $>$ \&other) const 
+\begin{CompactList}\small\item\em Is smaller operator. \item\end{CompactList}\item 
+bool \hyperlink{classirr_1_1core_1_1string_1e22821b03ca451093bc3942451e1c41}{operator!=} (const \hyperlink{classirr_1_1core_1_1string}{string}$<$ T $>$ \&other) const 
+\begin{CompactList}\small\item\em Equals not operator. \item\end{CompactList}\item 
+\hyperlink{namespaceirr_c66849b7a6ed16e30ebede579f9b47c6}{s32} \hyperlink{classirr_1_1core_1_1string_b8b6f9f5f5c3829c961e78ecda494642}{size} () const 
+\begin{CompactList}\small\item\em Returns length of \hyperlink{classirr_1_1core_1_1string}{string}. \item\end{CompactList}\item 
+const T $\ast$ \hyperlink{classirr_1_1core_1_1string_eb6778e0a2c1ead6cde82ecaa574d593}{c\_\-str} () const 
+\begin{CompactList}\small\item\em Returns character \hyperlink{classirr_1_1core_1_1string}{string}. \item\end{CompactList}\item 
+void \hyperlink{classirr_1_1core_1_1string_f4b708c1fd70a3d7e6f8ff5b8ab9d20b}{make\_\-lower} ()
+\begin{CompactList}\small\item\em Makes the \hyperlink{classirr_1_1core_1_1string}{string} lower case. \item\end{CompactList}\item 
+void \hyperlink{classirr_1_1core_1_1string_a19046f9116f526f0a5a1187ea9a9346}{make\_\-upper} ()
+\begin{CompactList}\small\item\em Makes the \hyperlink{classirr_1_1core_1_1string}{string} upper case. \item\end{CompactList}\item 
+bool \hyperlink{classirr_1_1core_1_1string_106e7efcc51a610a99c076d8a5e8e7f1}{equals\_\-ignore\_\-case} (const \hyperlink{classirr_1_1core_1_1string}{string}$<$ T $>$ \&other) const 
+\begin{CompactList}\small\item\em Compares the \hyperlink{classirr_1_1core_1_1string}{string} ignoring case. \item\end{CompactList}\item 
+bool \hyperlink{classirr_1_1core_1_1string_b8a797b0ed7a4b0cc2d229410d41fd32}{equalsn} (const \hyperlink{classirr_1_1core_1_1string}{string}$<$ T $>$ \&other, int \hyperlink{_u_t_message_8h_2ba89f9e8d669bfad57028ce780865cd}{len})
+\begin{CompactList}\small\item\em compares the first n characters of the strings \item\end{CompactList}\item 
+bool \hyperlink{classirr_1_1core_1_1string_1d6437f80187bcd38bd26cc5e789a081}{equalsn} (const T $\ast$str, int \hyperlink{_u_t_message_8h_2ba89f9e8d669bfad57028ce780865cd}{len})
+\begin{CompactList}\small\item\em compares the first n characters of the strings \item\end{CompactList}\item 
+void \hyperlink{classirr_1_1core_1_1string_a8c74412e6f9011188b67dfa917c64bf}{append} (T character)
+\begin{CompactList}\small\item\em Appends a character to this \hyperlink{classirr_1_1core_1_1string}{string}. \item\end{CompactList}\item 
+void \hyperlink{classirr_1_1core_1_1string_4519cadbec781e27041886cbf97241fe}{append} (const \hyperlink{classirr_1_1core_1_1string}{string}$<$ T $>$ \&other)
+\begin{CompactList}\small\item\em Appends a \hyperlink{classirr_1_1core_1_1string}{string} to this \hyperlink{classirr_1_1core_1_1string}{string}. \item\end{CompactList}\item 
+void \hyperlink{classirr_1_1core_1_1string_8b353a0c8a8558a4770f3c4068fb7dc3}{append} (const \hyperlink{classirr_1_1core_1_1string}{string}$<$ T $>$ \&other, \hyperlink{namespaceirr_c66849b7a6ed16e30ebede579f9b47c6}{s32} \hyperlink{wglext_8h_74efbdef71b2e5711088ae39fc925d2d}{length})
+\begin{CompactList}\small\item\em Appends a \hyperlink{classirr_1_1core_1_1string}{string} of the length l to this \hyperlink{classirr_1_1core_1_1string}{string}. \item\end{CompactList}\item 
+void \hyperlink{classirr_1_1core_1_1string_5df42bd3586f663a2810f860144126be}{reserve} (\hyperlink{namespaceirr_c66849b7a6ed16e30ebede579f9b47c6}{s32} \hyperlink{wglext_8h_98d18d6b4e3ba4ed266c6fb54c839d70}{count})
+\begin{CompactList}\small\item\em Reserves some memory. \item\end{CompactList}\item 
+\hyperlink{namespaceirr_c66849b7a6ed16e30ebede579f9b47c6}{s32} \hyperlink{classirr_1_1core_1_1string_8d5af18daab4d383d0871d8e3755eefe}{findFirst} (T \hyperlink{glext__bak_8h_4c662e60c03c48f5718de0c175211fb0}{c}) const 
+\begin{CompactList}\small\item\em finds first occurrence of character in \hyperlink{classirr_1_1core_1_1string}{string} \item\end{CompactList}\item 
+\hyperlink{namespaceirr_c66849b7a6ed16e30ebede579f9b47c6}{s32} \hyperlink{classirr_1_1core_1_1string_abb12b3966af2ecd35e76535de66fbc8}{findFirstChar} (T $\ast$\hyperlink{glext__bak_8h_4c662e60c03c48f5718de0c175211fb0}{c}, int \hyperlink{wglext_8h_98d18d6b4e3ba4ed266c6fb54c839d70}{count}) const 
+\begin{CompactList}\small\item\em finds first occurrence of a character of a list in \hyperlink{classirr_1_1core_1_1string}{string} \item\end{CompactList}\item 
+{\footnotesize template$<$class B $>$ }\\\hyperlink{namespaceirr_c66849b7a6ed16e30ebede579f9b47c6}{s32} \hyperlink{classirr_1_1core_1_1string_2456981fe747f4651c78d270a8e76b47}{findFirstCharNotInList} (B $\ast$\hyperlink{glext__bak_8h_4c662e60c03c48f5718de0c175211fb0}{c}, int \hyperlink{wglext_8h_98d18d6b4e3ba4ed266c6fb54c839d70}{count}) const 
+\begin{CompactList}\small\item\em Finds first position of a character not in a given list. \item\end{CompactList}\item 
+{\footnotesize template$<$class B $>$ }\\\hyperlink{namespaceirr_c66849b7a6ed16e30ebede579f9b47c6}{s32} \hyperlink{classirr_1_1core_1_1string_d2020ee78d25da507e9a18c26edf15a5}{findLastCharNotInList} (B $\ast$\hyperlink{glext__bak_8h_4c662e60c03c48f5718de0c175211fb0}{c}, int \hyperlink{wglext_8h_98d18d6b4e3ba4ed266c6fb54c839d70}{count}) const 
+\begin{CompactList}\small\item\em Finds last position of a character not in a given list. \item\end{CompactList}\item 
+\hyperlink{namespaceirr_c66849b7a6ed16e30ebede579f9b47c6}{s32} \hyperlink{classirr_1_1core_1_1string_e8c3198e0195ed82ae49ed2bb9153711}{findNext} (T \hyperlink{glext__bak_8h_4c662e60c03c48f5718de0c175211fb0}{c}, \hyperlink{namespaceirr_c66849b7a6ed16e30ebede579f9b47c6}{s32} startPos) const 
+\begin{CompactList}\small\item\em finds next occurrence of character in \hyperlink{classirr_1_1core_1_1string}{string} \item\end{CompactList}\item 
+\hyperlink{namespaceirr_c66849b7a6ed16e30ebede579f9b47c6}{s32} \hyperlink{classirr_1_1core_1_1string_a54927615bf78f5ed60cc186808ad3d3}{findLast} (T \hyperlink{glext__bak_8h_4c662e60c03c48f5718de0c175211fb0}{c}) const 
+\item 
+\hyperlink{classirr_1_1core_1_1string}{string}$<$ T $>$ \hyperlink{classirr_1_1core_1_1string_c510d6a95d7f2a081741e24e505240ad}{subString} (\hyperlink{namespaceirr_c66849b7a6ed16e30ebede579f9b47c6}{s32} begin, \hyperlink{namespaceirr_c66849b7a6ed16e30ebede579f9b47c6}{s32} \hyperlink{wglext_8h_74efbdef71b2e5711088ae39fc925d2d}{length})
+\item 
+void \hyperlink{classirr_1_1core_1_1string_9067df2258ec1ed569203a94dc0af4c3}{operator+=} (T \hyperlink{glext__bak_8h_4c662e60c03c48f5718de0c175211fb0}{c})
+\item 
+void \hyperlink{classirr_1_1core_1_1string_6c8e7cc193a9ade625a8cf20fb2784c3}{operator+=} (const \hyperlink{classirr_1_1core_1_1string}{string}$<$ T $>$ \&other)
+\item 
+void \hyperlink{classirr_1_1core_1_1string_a82433f3130d4287a5fd7efc26942dfb}{operator+=} (int i)
+\item 
+void \hyperlink{classirr_1_1core_1_1string_35749a9d2d8d8db11485bd47a240b0aa}{replace} (T toReplace, T replaceWith)
+\begin{CompactList}\small\item\em replaces all characters of a special type with another one \item\end{CompactList}\item 
+void \hyperlink{classirr_1_1core_1_1string_59582a0bf52875f3bef44c0adc1b5ea3}{trim} ()
+\begin{CompactList}\small\item\em trims the \hyperlink{classirr_1_1core_1_1string}{string}. \item\end{CompactList}\item 
+void \hyperlink{classirr_1_1core_1_1string_49785b081a616307956e1b9c3656b2b1}{erase} (int \hyperlink{glext__bak_8h_57f14e05b1900f16a2da82ade47d0c6d}{index})
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$ class irr::core::string$<$ T $>$}
+
+Very simple \hyperlink{classirr_1_1core_1_1string}{string} class with some useful features. 
+
+string$<$c8$>$ and string$<$wchar\_\-t$>$ work both with unicode AND ascii, so you can assign unicode to string$<$c8$>$ and ascii to string$<$wchar\_\-t$>$ (and the other way round) if your ever would want to. Note that the conversation between both is not done using an encoding.
+
+Known bugs: Special characters like 'Ä', 'Ü' and 'Ö' are ignored in the methods make\_\-upper, make\_\-lower and equals\_\-ignore\_\-case. 
+
+Definition at line 26 of file irrString.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classirr_1_1core_1_1string_696ab39973b7a35b77135a2f14bf4ad8}{
+\index{irr::core::string@{irr::core::string}!string@{string}}
+\index{string@{string}!irr::core::string@{irr::core::string}}
+\subsubsection[{string}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf irr::core::string}$<$ T $>$::{\bf string} ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1string_696ab39973b7a35b77135a2f14bf4ad8}
+
+
+Default constructor. 
+
+
+
+Definition at line 31 of file irrString.h.\hypertarget{classirr_1_1core_1_1string_e3720c72deacf9aecd75f57bc4cec809}{
+\index{irr::core::string@{irr::core::string}!string@{string}}
+\index{string@{string}!irr::core::string@{irr::core::string}}
+\subsubsection[{string}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf irr::core::string}$<$ T $>$::{\bf string} (const {\bf string}$<$ T $>$ \& {\em other})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1string_e3720c72deacf9aecd75f57bc4cec809}
+
+
+Constructor. 
+
+
+
+Definition at line 41 of file irrString.h.\hypertarget{classirr_1_1core_1_1string_821a5d40db1c177d95d6795f09fc3979}{
+\index{irr::core::string@{irr::core::string}!string@{string}}
+\index{string@{string}!irr::core::string@{irr::core::string}}
+\subsubsection[{string}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf irr::core::string}$<$ T $>$::{\bf string} (int {\em number})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1string_821a5d40db1c177d95d6795f09fc3979}
+
+
+Constructs a \hyperlink{classirr_1_1core_1_1string}{string} from an int. 
+
+
+
+Definition at line 49 of file irrString.h.\hypertarget{classirr_1_1core_1_1string_d9b3db3da5deded0a56688a840f55c7e}{
+\index{irr::core::string@{irr::core::string}!string@{string}}
+\index{string@{string}!irr::core::string@{irr::core::string}}
+\subsubsection[{string}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ template$<$class B $>$ {\bf irr::core::string}$<$ T $>$::{\bf string} (const B $\ast$ {\em c}, \/  {\bf s32} {\em lenght})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1string_d9b3db3da5deded0a56688a840f55c7e}
+
+
+Constructor for copying a \hyperlink{classirr_1_1core_1_1string}{string} from a pointer with a given lenght. 
+
+
+
+Definition at line 100 of file irrString.h.\hypertarget{classirr_1_1core_1_1string_80a459b0cd500498bc747cafd1253002}{
+\index{irr::core::string@{irr::core::string}!string@{string}}
+\index{string@{string}!irr::core::string@{irr::core::string}}
+\subsubsection[{string}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ template$<$class B $>$ {\bf irr::core::string}$<$ T $>$::{\bf string} (const B $\ast$ {\em c})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1string_80a459b0cd500498bc747cafd1253002}
+
+
+Constructor for unicode and ascii strings. 
+
+
+
+Definition at line 119 of file irrString.h.\hypertarget{classirr_1_1core_1_1string_93a52616dce6e056fc2ac13a768ed5d1}{
+\index{irr::core::string@{irr::core::string}!$\sim$string@{$\sim$string}}
+\index{$\sim$string@{$\sim$string}!irr::core::string@{irr::core::string}}
+\subsubsection[{$\sim$string}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf irr::core::string}$<$ T $>$::$\sim${\bf string} ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1string_93a52616dce6e056fc2ac13a768ed5d1}
+
+
+destructor 
+
+
+
+Definition at line 128 of file irrString.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{classirr_1_1core_1_1string_8b353a0c8a8558a4770f3c4068fb7dc3}{
+\index{irr::core::string@{irr::core::string}!append@{append}}
+\index{append@{append}!irr::core::string@{irr::core::string}}
+\subsubsection[{append}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf irr::core::string}$<$ T $>$::append (const {\bf string}$<$ T $>$ \& {\em other}, \/  {\bf s32} {\em length})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1string_8b353a0c8a8558a4770f3c4068fb7dc3}
+
+
+Appends a \hyperlink{classirr_1_1core_1_1string}{string} of the length l to this \hyperlink{classirr_1_1core_1_1string}{string}. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em other,:}]other String to append to this \hyperlink{classirr_1_1core_1_1string}{string}. \item[{\em length,:}]How much characters of the other \hyperlink{classirr_1_1core_1_1string}{string} to add to this one. \end{description}
+\end{Desc}
+
+
+Definition at line 395 of file irrString.h.\hypertarget{classirr_1_1core_1_1string_4519cadbec781e27041886cbf97241fe}{
+\index{irr::core::string@{irr::core::string}!append@{append}}
+\index{append@{append}!irr::core::string@{irr::core::string}}
+\subsubsection[{append}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf irr::core::string}$<$ T $>$::append (const {\bf string}$<$ T $>$ \& {\em other})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1string_4519cadbec781e27041886cbf97241fe}
+
+
+Appends a \hyperlink{classirr_1_1core_1_1string}{string} to this \hyperlink{classirr_1_1core_1_1string}{string}. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em other,:}]String to append. \end{description}
+\end{Desc}
+
+
+Definition at line 376 of file irrString.h.\hypertarget{classirr_1_1core_1_1string_a8c74412e6f9011188b67dfa917c64bf}{
+\index{irr::core::string@{irr::core::string}!append@{append}}
+\index{append@{append}!irr::core::string@{irr::core::string}}
+\subsubsection[{append}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf irr::core::string}$<$ T $>$::append (T {\em character})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1string_a8c74412e6f9011188b67dfa917c64bf}
+
+
+Appends a character to this \hyperlink{classirr_1_1core_1_1string}{string}. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em character,:}]Character to append. \end{description}
+\end{Desc}
+
+
+Definition at line 363 of file irrString.h.\hypertarget{classirr_1_1core_1_1string_eb6778e0a2c1ead6cde82ecaa574d593}{
+\index{irr::core::string@{irr::core::string}!c\_\-str@{c\_\-str}}
+\index{c\_\-str@{c\_\-str}!irr::core::string@{irr::core::string}}
+\subsubsection[{c\_\-str}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ const T$\ast$ {\bf irr::core::string}$<$ T $>$::c\_\-str () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1string_eb6778e0a2c1ead6cde82ecaa574d593}
+
+
+Returns character \hyperlink{classirr_1_1core_1_1string}{string}. 
+
+\begin{Desc}
+\item[Returns:]Returns pointer to C-style zero terminated \hyperlink{classirr_1_1core_1_1string}{string}. \end{Desc}
+
+
+Definition at line 281 of file irrString.h.\hypertarget{classirr_1_1core_1_1string_106e7efcc51a610a99c076d8a5e8e7f1}{
+\index{irr::core::string@{irr::core::string}!equals\_\-ignore\_\-case@{equals\_\-ignore\_\-case}}
+\index{equals\_\-ignore\_\-case@{equals\_\-ignore\_\-case}!irr::core::string@{irr::core::string}}
+\subsubsection[{equals\_\-ignore\_\-case}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ bool {\bf irr::core::string}$<$ T $>$::equals\_\-ignore\_\-case (const {\bf string}$<$ T $>$ \& {\em other}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1string_106e7efcc51a610a99c076d8a5e8e7f1}
+
+
+Compares the \hyperlink{classirr_1_1core_1_1string}{string} ignoring case. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em other,:}]Other \hyperlink{classirr_1_1core_1_1string}{string} to compare. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Returns true if the \hyperlink{classirr_1_1core_1_1string}{string} are equal ignoring case. \end{Desc}
+
+
+Definition at line 323 of file irrString.h.\hypertarget{classirr_1_1core_1_1string_1d6437f80187bcd38bd26cc5e789a081}{
+\index{irr::core::string@{irr::core::string}!equalsn@{equalsn}}
+\index{equalsn@{equalsn}!irr::core::string@{irr::core::string}}
+\subsubsection[{equalsn}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ bool {\bf irr::core::string}$<$ T $>$::equalsn (const T $\ast$ {\em str}, \/  int {\em len})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1string_1d6437f80187bcd38bd26cc5e789a081}
+
+
+compares the first n characters of the strings 
+
+
+
+Definition at line 348 of file irrString.h.\hypertarget{classirr_1_1core_1_1string_b8a797b0ed7a4b0cc2d229410d41fd32}{
+\index{irr::core::string@{irr::core::string}!equalsn@{equalsn}}
+\index{equalsn@{equalsn}!irr::core::string@{irr::core::string}}
+\subsubsection[{equalsn}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ bool {\bf irr::core::string}$<$ T $>$::equalsn (const {\bf string}$<$ T $>$ \& {\em other}, \/  int {\em len})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1string_b8a797b0ed7a4b0cc2d229410d41fd32}
+
+
+compares the first n characters of the strings 
+
+
+
+Definition at line 334 of file irrString.h.\hypertarget{classirr_1_1core_1_1string_49785b081a616307956e1b9c3656b2b1}{
+\index{irr::core::string@{irr::core::string}!erase@{erase}}
+\index{erase@{erase}!irr::core::string@{irr::core::string}}
+\subsubsection[{erase}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf irr::core::string}$<$ T $>$::erase (int {\em index})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1string_49785b081a616307956e1b9c3656b2b1}
+
+
+Erases a character from the \hyperlink{classirr_1_1core_1_1string}{string}. May be slow, because all elements following after the erased element have to be copied. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em index,:}]Index of element to be erased. \end{description}
+\end{Desc}
+
+
+Definition at line 604 of file irrString.h.\hypertarget{classirr_1_1core_1_1string_8d5af18daab4d383d0871d8e3755eefe}{
+\index{irr::core::string@{irr::core::string}!findFirst@{findFirst}}
+\index{findFirst@{findFirst}!irr::core::string@{irr::core::string}}
+\subsubsection[{findFirst}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf s32} {\bf irr::core::string}$<$ T $>$::findFirst (T {\em c}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1string_8d5af18daab4d383d0871d8e3755eefe}
+
+
+finds first occurrence of character in \hyperlink{classirr_1_1core_1_1string}{string} 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em c,:}]Character to search for. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Returns position where the character has been found, or -1 if not found. \end{Desc}
+
+
+Definition at line 433 of file irrString.h.\hypertarget{classirr_1_1core_1_1string_abb12b3966af2ecd35e76535de66fbc8}{
+\index{irr::core::string@{irr::core::string}!findFirstChar@{findFirstChar}}
+\index{findFirstChar@{findFirstChar}!irr::core::string@{irr::core::string}}
+\subsubsection[{findFirstChar}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf s32} {\bf irr::core::string}$<$ T $>$::findFirstChar (T $\ast$ {\em c}, \/  int {\em count}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1string_abb12b3966af2ecd35e76535de66fbc8}
+
+
+finds first occurrence of a character of a list in \hyperlink{classirr_1_1core_1_1string}{string} 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em c,:}]List of strings to find. For example if the method should find the first occurance of 'a' or 'b', this parameter should be \char`\"{}ab\char`\"{}. \item[{\em count,:}]Amount of characters in the list. Ususally, this should be strlen(ofParameter1) \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Returns position where one of the character has been found, or -1 if not found. \end{Desc}
+
+
+Definition at line 449 of file irrString.h.\hypertarget{classirr_1_1core_1_1string_2456981fe747f4651c78d270a8e76b47}{
+\index{irr::core::string@{irr::core::string}!findFirstCharNotInList@{findFirstCharNotInList}}
+\index{findFirstCharNotInList@{findFirstCharNotInList}!irr::core::string@{irr::core::string}}
+\subsubsection[{findFirstCharNotInList}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ template$<$class B $>$ {\bf s32} {\bf irr::core::string}$<$ T $>$::findFirstCharNotInList (B $\ast$ {\em c}, \/  int {\em count}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1string_2456981fe747f4651c78d270a8e76b47}
+
+
+Finds first position of a character not in a given list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em c,:}]List of characters not to find. For example if the method should find the first occurance of a character not 'a' or 'b', this parameter should be \char`\"{}ab\char`\"{}. \item[{\em count,:}]Amount of characters in the list. Ususally, this should be strlen(ofParameter1) \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Returns position where the character has been found, or -1 if not found. \end{Desc}
+
+
+Definition at line 468 of file irrString.h.\hypertarget{classirr_1_1core_1_1string_a54927615bf78f5ed60cc186808ad3d3}{
+\index{irr::core::string@{irr::core::string}!findLast@{findLast}}
+\index{findLast@{findLast}!irr::core::string@{irr::core::string}}
+\subsubsection[{findLast}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf s32} {\bf irr::core::string}$<$ T $>$::findLast (T {\em c}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1string_a54927615bf78f5ed60cc186808ad3d3}
+
+
+finds last occurrence of character in \hyperlink{classirr_1_1core_1_1string}{string} \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em c,:}]Character to search for. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Returns position where the character has been found, or -1 if not found. \end{Desc}
+
+
+Definition at line 527 of file irrString.h.\hypertarget{classirr_1_1core_1_1string_d2020ee78d25da507e9a18c26edf15a5}{
+\index{irr::core::string@{irr::core::string}!findLastCharNotInList@{findLastCharNotInList}}
+\index{findLastCharNotInList@{findLastCharNotInList}!irr::core::string@{irr::core::string}}
+\subsubsection[{findLastCharNotInList}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ template$<$class B $>$ {\bf s32} {\bf irr::core::string}$<$ T $>$::findLastCharNotInList (B $\ast$ {\em c}, \/  int {\em count}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1string_d2020ee78d25da507e9a18c26edf15a5}
+
+
+Finds last position of a character not in a given list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em c,:}]List of characters not to find. For example if the method should find the first occurance of a character not 'a' or 'b', this parameter should be \char`\"{}ab\char`\"{}. \item[{\em count,:}]Amount of characters in the list. Ususally, this should be strlen(ofParameter1) \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Returns position where the character has been found, or -1 if not found. \end{Desc}
+
+
+Definition at line 492 of file irrString.h.\hypertarget{classirr_1_1core_1_1string_e8c3198e0195ed82ae49ed2bb9153711}{
+\index{irr::core::string@{irr::core::string}!findNext@{findNext}}
+\index{findNext@{findNext}!irr::core::string@{irr::core::string}}
+\subsubsection[{findNext}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf s32} {\bf irr::core::string}$<$ T $>$::findNext (T {\em c}, \/  {\bf s32} {\em startPos}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1string_e8c3198e0195ed82ae49ed2bb9153711}
+
+
+finds next occurrence of character in \hyperlink{classirr_1_1core_1_1string}{string} 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em c,:}]Character to search for. \item[{\em startPos,:}]Position in \hyperlink{classirr_1_1core_1_1string}{string} to start searching. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Returns position where the character has been found, or -1 if not found. \end{Desc}
+
+
+Definition at line 513 of file irrString.h.\hypertarget{classirr_1_1core_1_1string_f4b708c1fd70a3d7e6f8ff5b8ab9d20b}{
+\index{irr::core::string@{irr::core::string}!make\_\-lower@{make\_\-lower}}
+\index{make\_\-lower@{make\_\-lower}!irr::core::string@{irr::core::string}}
+\subsubsection[{make\_\-lower}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf irr::core::string}$<$ T $>$::make\_\-lower ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1string_f4b708c1fd70a3d7e6f8ff5b8ab9d20b}
+
+
+Makes the \hyperlink{classirr_1_1core_1_1string}{string} lower case. 
+
+
+
+Definition at line 289 of file irrString.h.\hypertarget{classirr_1_1core_1_1string_a19046f9116f526f0a5a1187ea9a9346}{
+\index{irr::core::string@{irr::core::string}!make\_\-upper@{make\_\-upper}}
+\index{make\_\-upper@{make\_\-upper}!irr::core::string@{irr::core::string}}
+\subsubsection[{make\_\-upper}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf irr::core::string}$<$ T $>$::make\_\-upper ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1string_a19046f9116f526f0a5a1187ea9a9346}
+
+
+Makes the \hyperlink{classirr_1_1core_1_1string}{string} upper case. 
+
+
+
+Definition at line 305 of file irrString.h.\hypertarget{classirr_1_1core_1_1string_1e22821b03ca451093bc3942451e1c41}{
+\index{irr::core::string@{irr::core::string}!operator!=@{operator!=}}
+\index{operator!=@{operator!=}!irr::core::string@{irr::core::string}}
+\subsubsection[{operator!=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ bool {\bf irr::core::string}$<$ T $>$::operator!= (const {\bf string}$<$ T $>$ \& {\em other}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1string_1e22821b03ca451093bc3942451e1c41}
+
+
+Equals not operator. 
+
+
+
+Definition at line 263 of file irrString.h.\hypertarget{classirr_1_1core_1_1string_b1ee1803b68a82c45fef17368b64b0e0}{
+\index{irr::core::string@{irr::core::string}!operator+@{operator+}}
+\index{operator+@{operator+}!irr::core::string@{irr::core::string}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ template$<$class B $>$ {\bf string}$<$T$>$ {\bf irr::core::string}$<$ T $>$::operator+ (const B $\ast$ {\em c})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1string_b1ee1803b68a82c45fef17368b64b0e0}
+
+
+Add operator for strings, ascii and unicode. 
+
+
+
+Definition at line 206 of file irrString.h.\hypertarget{classirr_1_1core_1_1string_c50431c5b7b63483fe708b2849144f93}{
+\index{irr::core::string@{irr::core::string}!operator+@{operator+}}
+\index{operator+@{operator+}!irr::core::string@{irr::core::string}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf string}$<$T$>$ {\bf irr::core::string}$<$ T $>$::operator+ (const {\bf string}$<$ T $>$ \& {\em other})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1string_c50431c5b7b63483fe708b2849144f93}
+
+
+Add operator for other strings. 
+
+
+
+Definition at line 196 of file irrString.h.\hypertarget{classirr_1_1core_1_1string_a82433f3130d4287a5fd7efc26942dfb}{
+\index{irr::core::string@{irr::core::string}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!irr::core::string@{irr::core::string}}
+\subsubsection[{operator+=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf irr::core::string}$<$ T $>$::operator+= (int {\em i})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1string_a82433f3130d4287a5fd7efc26942dfb}
+
+
+
+
+Definition at line 568 of file irrString.h.\hypertarget{classirr_1_1core_1_1string_6c8e7cc193a9ade625a8cf20fb2784c3}{
+\index{irr::core::string@{irr::core::string}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!irr::core::string@{irr::core::string}}
+\subsubsection[{operator+=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf irr::core::string}$<$ T $>$::operator+= (const {\bf string}$<$ T $>$ \& {\em other})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1string_6c8e7cc193a9ade625a8cf20fb2784c3}
+
+
+
+
+Definition at line 563 of file irrString.h.\hypertarget{classirr_1_1core_1_1string_9067df2258ec1ed569203a94dc0af4c3}{
+\index{irr::core::string@{irr::core::string}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!irr::core::string@{irr::core::string}}
+\subsubsection[{operator+=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf irr::core::string}$<$ T $>$::operator+= (T {\em c})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1string_9067df2258ec1ed569203a94dc0af4c3}
+
+
+
+
+Definition at line 558 of file irrString.h.\hypertarget{classirr_1_1core_1_1string_42a6186f4720fe404a2e111d2ea4455e}{
+\index{irr::core::string@{irr::core::string}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!irr::core::string@{irr::core::string}}
+\subsubsection[{operator$<$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ bool {\bf irr::core::string}$<$ T $>$::operator$<$ (const {\bf string}$<$ T $>$ \& {\em other}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1string_42a6186f4720fe404a2e111d2ea4455e}
+
+
+Is smaller operator. 
+
+
+
+Definition at line 251 of file irrString.h.\hypertarget{classirr_1_1core_1_1string_413becd6c923c42d49907806bf2e11c5}{
+\index{irr::core::string@{irr::core::string}!operator=@{operator=}}
+\index{operator=@{operator=}!irr::core::string@{irr::core::string}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ template$<$class B $>$ {\bf string}$<$T$>$\& {\bf irr::core::string}$<$ T $>$::operator= (const B $\ast$ {\em c})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1string_413becd6c923c42d49907806bf2e11c5}
+
+
+Assignment operator for strings, ascii and unicode. 
+
+
+
+Definition at line 156 of file irrString.h.\hypertarget{classirr_1_1core_1_1string_f338b451095574fabbe673be285d3dc6}{
+\index{irr::core::string@{irr::core::string}!operator=@{operator=}}
+\index{operator=@{operator=}!irr::core::string@{irr::core::string}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf string}$<$T$>$\& {\bf irr::core::string}$<$ T $>$::operator= (const {\bf string}$<$ T $>$ \& {\em other})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1string_f338b451095574fabbe673be285d3dc6}
+
+
+Assignment operator. 
+
+
+
+Definition at line 136 of file irrString.h.\hypertarget{classirr_1_1core_1_1string_59843ae56796dd0ea4549a9228378a3b}{
+\index{irr::core::string@{irr::core::string}!operator==@{operator==}}
+\index{operator==@{operator==}!irr::core::string@{irr::core::string}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ bool {\bf irr::core::string}$<$ T $>$::operator== (const {\bf string}$<$ T $>$ \& {\em other}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1string_59843ae56796dd0ea4549a9228378a3b}
+
+
+Comparison operator. 
+
+
+
+Definition at line 239 of file irrString.h.\hypertarget{classirr_1_1core_1_1string_1076c0b73581439d3b99c839d0dbc41b}{
+\index{irr::core::string@{irr::core::string}!operator==@{operator==}}
+\index{operator==@{operator==}!irr::core::string@{irr::core::string}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ bool {\bf irr::core::string}$<$ T $>$::operator== (const T $\ast$ {\em str}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1string_1076c0b73581439d3b99c839d0dbc41b}
+
+
+Comparison operator. 
+
+
+
+Definition at line 226 of file irrString.h.\hypertarget{classirr_1_1core_1_1string_91bbec77ba13690688c63700d4eee9a2}{
+\index{irr::core::string@{irr::core::string}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!irr::core::string@{irr::core::string}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T\& {\bf irr::core::string}$<$ T $>$::operator\mbox{[}$\,$\mbox{]} (const {\bf s32} {\em index}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1string_91bbec77ba13690688c63700d4eee9a2}
+
+
+Direct access operator. 
+
+
+
+Definition at line 217 of file irrString.h.\hypertarget{classirr_1_1core_1_1string_35749a9d2d8d8db11485bd47a240b0aa}{
+\index{irr::core::string@{irr::core::string}!replace@{replace}}
+\index{replace@{replace}!irr::core::string@{irr::core::string}}
+\subsubsection[{replace}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf irr::core::string}$<$ T $>$::replace (T {\em toReplace}, \/  T {\em replaceWith})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1string_35749a9d2d8d8db11485bd47a240b0aa}
+
+
+replaces all characters of a special type with another one 
+
+
+
+Definition at line 574 of file irrString.h.\hypertarget{classirr_1_1core_1_1string_5df42bd3586f663a2810f860144126be}{
+\index{irr::core::string@{irr::core::string}!reserve@{reserve}}
+\index{reserve@{reserve}!irr::core::string@{irr::core::string}}
+\subsubsection[{reserve}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf irr::core::string}$<$ T $>$::reserve ({\bf s32} {\em count})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1string_5df42bd3586f663a2810f860144126be}
+
+
+Reserves some memory. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em count,:}]Amount of characters to reserve. \end{description}
+\end{Desc}
+
+
+Definition at line 420 of file irrString.h.\hypertarget{classirr_1_1core_1_1string_b8b6f9f5f5c3829c961e78ecda494642}{
+\index{irr::core::string@{irr::core::string}!size@{size}}
+\index{size@{size}!irr::core::string@{irr::core::string}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf s32} {\bf irr::core::string}$<$ T $>$::size () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1string_b8b6f9f5f5c3829c961e78ecda494642}
+
+
+Returns length of \hyperlink{classirr_1_1core_1_1string}{string}. 
+
+\begin{Desc}
+\item[Returns:]Returns length of the \hyperlink{classirr_1_1core_1_1string}{string} in characters. \end{Desc}
+
+
+Definition at line 272 of file irrString.h.\hypertarget{classirr_1_1core_1_1string_c510d6a95d7f2a081741e24e505240ad}{
+\index{irr::core::string@{irr::core::string}!subString@{subString}}
+\index{subString@{subString}!irr::core::string@{irr::core::string}}
+\subsubsection[{subString}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf string}$<$T$>$ {\bf irr::core::string}$<$ T $>$::subString ({\bf s32} {\em begin}, \/  {\bf s32} {\em length})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1string_c510d6a95d7f2a081741e24e505240ad}
+
+
+Returns a substring \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em begin,:}]Start of substring. \item[{\em length,:}]Length of substring. \end{description}
+\end{Desc}
+
+
+Definition at line 540 of file irrString.h.\hypertarget{classirr_1_1core_1_1string_59582a0bf52875f3bef44c0adc1b5ea3}{
+\index{irr::core::string@{irr::core::string}!trim@{trim}}
+\index{trim@{trim}!irr::core::string@{irr::core::string}}
+\subsubsection[{trim}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf irr::core::string}$<$ T $>$::trim ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1string_59582a0bf52875f3bef44c0adc1b5ea3}
+
+
+trims the \hyperlink{classirr_1_1core_1_1string}{string}. 
+
+Removes whitespace from begin and end of the \hyperlink{classirr_1_1core_1_1string}{string}. 
+
+Definition at line 583 of file irrString.h.
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Common/IrrXML/\hyperlink{irr_string_8h}{irrString.h}\end{CompactItemize}

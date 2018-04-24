@@ -1,0 +1,158 @@
+\hypertarget{class_gr_software_sampler}{
+\section{GrSoftwareSampler Class Reference}
+\label{class_gr_software_sampler}\index{GrSoftwareSampler@{GrSoftwareSampler}}
+}
+{\tt \#include $<$GrSoftwareSampler.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_software_sampler_33e593352c54e408f06a1c6b3120927a}{GrSoftwareSampler} ()
+\item 
+\hyperlink{class_gr_software_sampler_35e7eaef6a419acd7cf671b47fa752c3}{$\sim$GrSoftwareSampler} ()
+\item 
+void \hyperlink{class_gr_software_sampler_a30cc8a865e185fc0c09c9eaa0f6071d}{SetTexture} (\hyperlink{class_gr_image}{GrImage} $\ast$\hyperlink{glext__bak_8h_8943555672bc4b8056204eb92329cafa}{image})
+\item 
+void \hyperlink{class_gr_software_sampler_445c6e3b1fdec258a9bc6f5ff2bc5750}{SetColor} (unsigned int bgraColor)
+\item 
+bool \hyperlink{class_gr_software_sampler_e8e20b7c9be530eac1326a568f4549a8}{HasTexture} () const 
+\item 
+unsigned int \hyperlink{class_gr_software_sampler_ed7049f3a7788c85da845b744ff85e0d}{Sample} (const \hyperlink{struct_s_vec2}{SVec2} \&uv)
+\item 
+unsigned int \hyperlink{class_gr_software_sampler_181ecd64d3462e41efd6b30d8ea48477}{Sample} (const \hyperlink{struct_s_vec3}{SVec3} \&uv)
+\item 
+unsigned int \hyperlink{class_gr_software_sampler_3ac75deb852297d65b6b8a25130f6e33}{Sample} (const \hyperlink{struct_s_vec4}{SVec4} \&uv)
+\item 
+unsigned int \hyperlink{class_gr_software_sampler_d84404a8d6e203fa41d00fa24cdd61a6}{Sample} (float u, float \hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v})
+\item 
+\hyperlink{struct_s_vec2}{SVec2} \hyperlink{class_gr_software_sampler_8a834ba57bb395a6cf3d9de68fba7bd0}{SampleBump} (const \hyperlink{struct_s_vec4}{SVec4} \&uv, const \hyperlink{struct_s_vec4}{SVec4} \&gradDX, const \hyperlink{struct_s_vec4}{SVec4} \&gradDY, float bumpScale)
+\item 
+\hyperlink{struct_s_vec2}{SVec2} \hyperlink{class_gr_software_sampler_ccd93c10412604a42a69071e71b3aa9a}{SampleBump} (const \hyperlink{struct_s_vec3}{SVec3} \&uv, const \hyperlink{struct_s_vec3}{SVec3} \&gradDX, const \hyperlink{struct_s_vec3}{SVec3} \&gradDY, float bumpScale)
+\item 
+\hyperlink{struct_s_vec2}{SVec2} \hyperlink{class_gr_software_sampler_12d44d76b68457f8edf5d1f083c56b95}{SampleBump} (const \hyperlink{struct_s_vec2}{SVec2} \&uv, const \hyperlink{struct_s_vec2}{SVec2} \&gradDX, const \hyperlink{struct_s_vec2}{SVec2} \&gradDY, float bumpScale)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 24 of file GrSoftwareSampler.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_software_sampler_33e593352c54e408f06a1c6b3120927a}{
+\index{GrSoftwareSampler@{GrSoftwareSampler}!GrSoftwareSampler@{GrSoftwareSampler}}
+\index{GrSoftwareSampler@{GrSoftwareSampler}!GrSoftwareSampler@{GrSoftwareSampler}}
+\subsubsection[{GrSoftwareSampler}]{\setlength{\rightskip}{0pt plus 5cm}GrSoftwareSampler::GrSoftwareSampler ()}}
+\label{class_gr_software_sampler_33e593352c54e408f06a1c6b3120927a}
+
+
+
+
+Definition at line 30 of file GrSoftwareSampler.cpp.\hypertarget{class_gr_software_sampler_35e7eaef6a419acd7cf671b47fa752c3}{
+\index{GrSoftwareSampler@{GrSoftwareSampler}!$\sim$GrSoftwareSampler@{$\sim$GrSoftwareSampler}}
+\index{$\sim$GrSoftwareSampler@{$\sim$GrSoftwareSampler}!GrSoftwareSampler@{GrSoftwareSampler}}
+\subsubsection[{$\sim$GrSoftwareSampler}]{\setlength{\rightskip}{0pt plus 5cm}GrSoftwareSampler::$\sim$GrSoftwareSampler ()}}
+\label{class_gr_software_sampler_35e7eaef6a419acd7cf671b47fa752c3}
+
+
+
+
+Definition at line 58 of file GrSoftwareSampler.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_software_sampler_e8e20b7c9be530eac1326a568f4549a8}{
+\index{GrSoftwareSampler@{GrSoftwareSampler}!HasTexture@{HasTexture}}
+\index{HasTexture@{HasTexture}!GrSoftwareSampler@{GrSoftwareSampler}}
+\subsubsection[{HasTexture}]{\setlength{\rightskip}{0pt plus 5cm}bool GrSoftwareSampler::HasTexture () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_software_sampler_e8e20b7c9be530eac1326a568f4549a8}
+
+
+
+
+Definition at line 36 of file GrSoftwareSampler.h.\hypertarget{class_gr_software_sampler_d84404a8d6e203fa41d00fa24cdd61a6}{
+\index{GrSoftwareSampler@{GrSoftwareSampler}!Sample@{Sample}}
+\index{Sample@{Sample}!GrSoftwareSampler@{GrSoftwareSampler}}
+\subsubsection[{Sample}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrSoftwareSampler::Sample (float {\em u}, \/  float {\em v})}}
+\label{class_gr_software_sampler_d84404a8d6e203fa41d00fa24cdd61a6}
+
+
+
+
+Definition at line 142 of file GrSoftwareSampler.cpp.\hypertarget{class_gr_software_sampler_3ac75deb852297d65b6b8a25130f6e33}{
+\index{GrSoftwareSampler@{GrSoftwareSampler}!Sample@{Sample}}
+\index{Sample@{Sample}!GrSoftwareSampler@{GrSoftwareSampler}}
+\subsubsection[{Sample}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrSoftwareSampler::Sample (const {\bf SVec4} \& {\em uv})}}
+\label{class_gr_software_sampler_3ac75deb852297d65b6b8a25130f6e33}
+
+
+
+
+Definition at line 135 of file GrSoftwareSampler.cpp.\hypertarget{class_gr_software_sampler_181ecd64d3462e41efd6b30d8ea48477}{
+\index{GrSoftwareSampler@{GrSoftwareSampler}!Sample@{Sample}}
+\index{Sample@{Sample}!GrSoftwareSampler@{GrSoftwareSampler}}
+\subsubsection[{Sample}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrSoftwareSampler::Sample (const {\bf SVec3} \& {\em uv})}}
+\label{class_gr_software_sampler_181ecd64d3462e41efd6b30d8ea48477}
+
+
+
+
+Definition at line 128 of file GrSoftwareSampler.cpp.\hypertarget{class_gr_software_sampler_ed7049f3a7788c85da845b744ff85e0d}{
+\index{GrSoftwareSampler@{GrSoftwareSampler}!Sample@{Sample}}
+\index{Sample@{Sample}!GrSoftwareSampler@{GrSoftwareSampler}}
+\subsubsection[{Sample}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrSoftwareSampler::Sample (const {\bf SVec2} \& {\em uv})}}
+\label{class_gr_software_sampler_ed7049f3a7788c85da845b744ff85e0d}
+
+
+
+
+Definition at line 121 of file GrSoftwareSampler.cpp.\hypertarget{class_gr_software_sampler_12d44d76b68457f8edf5d1f083c56b95}{
+\index{GrSoftwareSampler@{GrSoftwareSampler}!SampleBump@{SampleBump}}
+\index{SampleBump@{SampleBump}!GrSoftwareSampler@{GrSoftwareSampler}}
+\subsubsection[{SampleBump}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SVec2} GrSoftwareSampler::SampleBump (const {\bf SVec2} \& {\em uv}, \/  const {\bf SVec2} \& {\em gradDX}, \/  const {\bf SVec2} \& {\em gradDY}, \/  float {\em bumpScale})}}
+\label{class_gr_software_sampler_12d44d76b68457f8edf5d1f083c56b95}
+
+
+
+
+Definition at line 168 of file GrSoftwareSampler.cpp.\hypertarget{class_gr_software_sampler_ccd93c10412604a42a69071e71b3aa9a}{
+\index{GrSoftwareSampler@{GrSoftwareSampler}!SampleBump@{SampleBump}}
+\index{SampleBump@{SampleBump}!GrSoftwareSampler@{GrSoftwareSampler}}
+\subsubsection[{SampleBump}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SVec2} GrSoftwareSampler::SampleBump (const {\bf SVec3} \& {\em uv}, \/  const {\bf SVec3} \& {\em gradDX}, \/  const {\bf SVec3} \& {\em gradDY}, \/  float {\em bumpScale})}}
+\label{class_gr_software_sampler_ccd93c10412604a42a69071e71b3aa9a}
+
+
+
+
+Definition at line 161 of file GrSoftwareSampler.cpp.\hypertarget{class_gr_software_sampler_8a834ba57bb395a6cf3d9de68fba7bd0}{
+\index{GrSoftwareSampler@{GrSoftwareSampler}!SampleBump@{SampleBump}}
+\index{SampleBump@{SampleBump}!GrSoftwareSampler@{GrSoftwareSampler}}
+\subsubsection[{SampleBump}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SVec2} GrSoftwareSampler::SampleBump (const {\bf SVec4} \& {\em uv}, \/  const {\bf SVec4} \& {\em gradDX}, \/  const {\bf SVec4} \& {\em gradDY}, \/  float {\em bumpScale})}}
+\label{class_gr_software_sampler_8a834ba57bb395a6cf3d9de68fba7bd0}
+
+
+
+
+Definition at line 154 of file GrSoftwareSampler.cpp.\hypertarget{class_gr_software_sampler_445c6e3b1fdec258a9bc6f5ff2bc5750}{
+\index{GrSoftwareSampler@{GrSoftwareSampler}!SetColor@{SetColor}}
+\index{SetColor@{SetColor}!GrSoftwareSampler@{GrSoftwareSampler}}
+\subsubsection[{SetColor}]{\setlength{\rightskip}{0pt plus 5cm}void GrSoftwareSampler::SetColor (unsigned int {\em bgraColor})}}
+\label{class_gr_software_sampler_445c6e3b1fdec258a9bc6f5ff2bc5750}
+
+
+
+
+Definition at line 112 of file GrSoftwareSampler.cpp.\hypertarget{class_gr_software_sampler_a30cc8a865e185fc0c09c9eaa0f6071d}{
+\index{GrSoftwareSampler@{GrSoftwareSampler}!SetTexture@{SetTexture}}
+\index{SetTexture@{SetTexture}!GrSoftwareSampler@{GrSoftwareSampler}}
+\subsubsection[{SetTexture}]{\setlength{\rightskip}{0pt plus 5cm}void GrSoftwareSampler::SetTexture ({\bf GrImage} $\ast$ {\em image})}}
+\label{class_gr_software_sampler_a30cc8a865e185fc0c09c9eaa0f6071d}
+
+
+
+
+Definition at line 71 of file GrSoftwareSampler.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_software_sampler_8h}{GrSoftwareSampler.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_software_sampler_8cpp}{GrSoftwareSampler.cpp}\end{CompactItemize}

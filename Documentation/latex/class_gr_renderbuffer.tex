@@ -1,0 +1,195 @@
+\hypertarget{class_gr_renderbuffer}{
+\section{GrRenderbuffer Class Reference}
+\label{class_gr_renderbuffer}\index{GrRenderbuffer@{GrRenderbuffer}}
+}
+{\tt \#include $<$GrRenderbuffer.h$>$}
+
+Inheritance diagram for GrRenderbuffer::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_gr_renderbuffer}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+enum \hyperlink{class_gr_renderbuffer_ebd137b0070a9c89e526afa508e2ad7a}{EFORMAT} \{ \par
+\hyperlink{class_gr_renderbuffer_ebd137b0070a9c89e526afa508e2ad7a6df6a0c98b153e7cae6ac1ebc77e6c94}{EF\_\-RGBA}, 
+\hyperlink{class_gr_renderbuffer_ebd137b0070a9c89e526afa508e2ad7a03ad579043db479c618638e2e2c685f3}{EF\_\-RGBA8}, 
+\hyperlink{class_gr_renderbuffer_ebd137b0070a9c89e526afa508e2ad7a202a437f1def1946aa1c398a534222c3}{EF\_\-RGBA16F}, 
+\hyperlink{class_gr_renderbuffer_ebd137b0070a9c89e526afa508e2ad7a948144f09229f1bd20e913cb83dc3733}{EF\_\-RGBA32F}, 
+\par
+\hyperlink{class_gr_renderbuffer_ebd137b0070a9c89e526afa508e2ad7a9fc819a7230d1c9f120f83872bb1db65}{EF\_\-DEPTH}, 
+\hyperlink{class_gr_renderbuffer_ebd137b0070a9c89e526afa508e2ad7a1faa54370db5ea920543eba766bcdd32}{EF\_\-DEPTH16}, 
+\hyperlink{class_gr_renderbuffer_ebd137b0070a9c89e526afa508e2ad7ac4a73c935678aec7259418788eee1694}{EF\_\-DEPTH24}, 
+\hyperlink{class_gr_renderbuffer_ebd137b0070a9c89e526afa508e2ad7a8361959adca8d4e87bad86b4e3819333}{EF\_\-DEPTHSTENCIL}, 
+\par
+\hyperlink{class_gr_renderbuffer_ebd137b0070a9c89e526afa508e2ad7a52be76eacab826da90c78ffdae436ec0}{EF\_\-DEPTH24STENCIL8}, 
+\hyperlink{class_gr_renderbuffer_ebd137b0070a9c89e526afa508e2ad7abc7d1871818a6b63352e02cffe273a21}{EF\_\-COUNT}
+ \}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_renderbuffer_d185578b3293a38668ded97c908d7053}{GrRenderbuffer} (unsigned int \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, unsigned int \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height}, \hyperlink{class_gr_renderbuffer_ebd137b0070a9c89e526afa508e2ad7a}{EFORMAT} \hyperlink{glext__bak_8h_e2d3db041c6004a67047659b42f73a44}{format})
+\item 
+\hyperlink{class_gr_renderbuffer_e122e8cab34ef92c2e745f19b9174cce}{$\sim$GrRenderbuffer} ()
+\item 
+unsigned int \hyperlink{class_gr_renderbuffer_057ed372253eca15b35c834e17b3cb37}{GetWidth} () const 
+\item 
+unsigned int \hyperlink{class_gr_renderbuffer_8853c79e467fa53b0a9c8b619f82f735}{GetHeight} () const 
+\item 
+\hyperlink{class_gr_renderbuffer_ebd137b0070a9c89e526afa508e2ad7a}{EFORMAT} \hyperlink{class_gr_renderbuffer_156a47cf6943e4b0714166f2eb69288d}{GetFormat} () const 
+\item 
+void \hyperlink{class_gr_renderbuffer_a81a6b698cc1f560c2b5e98a101611c0}{BindToFramebuffer} (unsigned int \hyperlink{glext__bak_8h_d8f97111cc6514af5f352219d1cceb40}{attachment})
+\item 
+void \hyperlink{class_gr_renderbuffer_736aa66655242b21c01006ddbe8e83d1}{PreContextReset} ()
+\item 
+void \hyperlink{class_gr_renderbuffer_b7d8c93051e190f086976ac103878890}{PostContextReset} ()
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 17 of file GrRenderbuffer.h.
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_gr_renderbuffer_ebd137b0070a9c89e526afa508e2ad7a}{
+\index{GrRenderbuffer@{GrRenderbuffer}!EFORMAT@{EFORMAT}}
+\index{EFORMAT@{EFORMAT}!GrRenderbuffer@{GrRenderbuffer}}
+\subsubsection[{EFORMAT}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GrRenderbuffer::EFORMAT}}}
+\label{class_gr_renderbuffer_ebd137b0070a9c89e526afa508e2ad7a}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{EF\_\-RGBA@{EF\_\-RGBA}!GrRenderbuffer@{GrRenderbuffer}}\index{GrRenderbuffer@{GrRenderbuffer}!EF\_\-RGBA@{EF\_\-RGBA}}\item[{\em 
+\hypertarget{class_gr_renderbuffer_ebd137b0070a9c89e526afa508e2ad7a6df6a0c98b153e7cae6ac1ebc77e6c94}{
+EF\_\-RGBA}
+\label{class_gr_renderbuffer_ebd137b0070a9c89e526afa508e2ad7a6df6a0c98b153e7cae6ac1ebc77e6c94}
+}]\index{EF\_\-RGBA8@{EF\_\-RGBA8}!GrRenderbuffer@{GrRenderbuffer}}\index{GrRenderbuffer@{GrRenderbuffer}!EF\_\-RGBA8@{EF\_\-RGBA8}}\item[{\em 
+\hypertarget{class_gr_renderbuffer_ebd137b0070a9c89e526afa508e2ad7a03ad579043db479c618638e2e2c685f3}{
+EF\_\-RGBA8}
+\label{class_gr_renderbuffer_ebd137b0070a9c89e526afa508e2ad7a03ad579043db479c618638e2e2c685f3}
+}]\index{EF\_\-RGBA16F@{EF\_\-RGBA16F}!GrRenderbuffer@{GrRenderbuffer}}\index{GrRenderbuffer@{GrRenderbuffer}!EF\_\-RGBA16F@{EF\_\-RGBA16F}}\item[{\em 
+\hypertarget{class_gr_renderbuffer_ebd137b0070a9c89e526afa508e2ad7a202a437f1def1946aa1c398a534222c3}{
+EF\_\-RGBA16F}
+\label{class_gr_renderbuffer_ebd137b0070a9c89e526afa508e2ad7a202a437f1def1946aa1c398a534222c3}
+}]\index{EF\_\-RGBA32F@{EF\_\-RGBA32F}!GrRenderbuffer@{GrRenderbuffer}}\index{GrRenderbuffer@{GrRenderbuffer}!EF\_\-RGBA32F@{EF\_\-RGBA32F}}\item[{\em 
+\hypertarget{class_gr_renderbuffer_ebd137b0070a9c89e526afa508e2ad7a948144f09229f1bd20e913cb83dc3733}{
+EF\_\-RGBA32F}
+\label{class_gr_renderbuffer_ebd137b0070a9c89e526afa508e2ad7a948144f09229f1bd20e913cb83dc3733}
+}]\index{EF\_\-DEPTH@{EF\_\-DEPTH}!GrRenderbuffer@{GrRenderbuffer}}\index{GrRenderbuffer@{GrRenderbuffer}!EF\_\-DEPTH@{EF\_\-DEPTH}}\item[{\em 
+\hypertarget{class_gr_renderbuffer_ebd137b0070a9c89e526afa508e2ad7a9fc819a7230d1c9f120f83872bb1db65}{
+EF\_\-DEPTH}
+\label{class_gr_renderbuffer_ebd137b0070a9c89e526afa508e2ad7a9fc819a7230d1c9f120f83872bb1db65}
+}]\index{EF\_\-DEPTH16@{EF\_\-DEPTH16}!GrRenderbuffer@{GrRenderbuffer}}\index{GrRenderbuffer@{GrRenderbuffer}!EF\_\-DEPTH16@{EF\_\-DEPTH16}}\item[{\em 
+\hypertarget{class_gr_renderbuffer_ebd137b0070a9c89e526afa508e2ad7a1faa54370db5ea920543eba766bcdd32}{
+EF\_\-DEPTH16}
+\label{class_gr_renderbuffer_ebd137b0070a9c89e526afa508e2ad7a1faa54370db5ea920543eba766bcdd32}
+}]\index{EF\_\-DEPTH24@{EF\_\-DEPTH24}!GrRenderbuffer@{GrRenderbuffer}}\index{GrRenderbuffer@{GrRenderbuffer}!EF\_\-DEPTH24@{EF\_\-DEPTH24}}\item[{\em 
+\hypertarget{class_gr_renderbuffer_ebd137b0070a9c89e526afa508e2ad7ac4a73c935678aec7259418788eee1694}{
+EF\_\-DEPTH24}
+\label{class_gr_renderbuffer_ebd137b0070a9c89e526afa508e2ad7ac4a73c935678aec7259418788eee1694}
+}]\index{EF\_\-DEPTHSTENCIL@{EF\_\-DEPTHSTENCIL}!GrRenderbuffer@{GrRenderbuffer}}\index{GrRenderbuffer@{GrRenderbuffer}!EF\_\-DEPTHSTENCIL@{EF\_\-DEPTHSTENCIL}}\item[{\em 
+\hypertarget{class_gr_renderbuffer_ebd137b0070a9c89e526afa508e2ad7a8361959adca8d4e87bad86b4e3819333}{
+EF\_\-DEPTHSTENCIL}
+\label{class_gr_renderbuffer_ebd137b0070a9c89e526afa508e2ad7a8361959adca8d4e87bad86b4e3819333}
+}]\index{EF\_\-DEPTH24STENCIL8@{EF\_\-DEPTH24STENCIL8}!GrRenderbuffer@{GrRenderbuffer}}\index{GrRenderbuffer@{GrRenderbuffer}!EF\_\-DEPTH24STENCIL8@{EF\_\-DEPTH24STENCIL8}}\item[{\em 
+\hypertarget{class_gr_renderbuffer_ebd137b0070a9c89e526afa508e2ad7a52be76eacab826da90c78ffdae436ec0}{
+EF\_\-DEPTH24STENCIL8}
+\label{class_gr_renderbuffer_ebd137b0070a9c89e526afa508e2ad7a52be76eacab826da90c78ffdae436ec0}
+}]\index{EF\_\-COUNT@{EF\_\-COUNT}!GrRenderbuffer@{GrRenderbuffer}}\index{GrRenderbuffer@{GrRenderbuffer}!EF\_\-COUNT@{EF\_\-COUNT}}\item[{\em 
+\hypertarget{class_gr_renderbuffer_ebd137b0070a9c89e526afa508e2ad7abc7d1871818a6b63352e02cffe273a21}{
+EF\_\-COUNT}
+\label{class_gr_renderbuffer_ebd137b0070a9c89e526afa508e2ad7abc7d1871818a6b63352e02cffe273a21}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 20 of file GrRenderbuffer.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_renderbuffer_d185578b3293a38668ded97c908d7053}{
+\index{GrRenderbuffer@{GrRenderbuffer}!GrRenderbuffer@{GrRenderbuffer}}
+\index{GrRenderbuffer@{GrRenderbuffer}!GrRenderbuffer@{GrRenderbuffer}}
+\subsubsection[{GrRenderbuffer}]{\setlength{\rightskip}{0pt plus 5cm}GrRenderbuffer::GrRenderbuffer (unsigned int {\em width}, \/  unsigned int {\em height}, \/  {\bf EFORMAT} {\em format})}}
+\label{class_gr_renderbuffer_d185578b3293a38668ded97c908d7053}
+
+
+
+
+Definition at line 37 of file GrRenderbuffer.cpp.\hypertarget{class_gr_renderbuffer_e122e8cab34ef92c2e745f19b9174cce}{
+\index{GrRenderbuffer@{GrRenderbuffer}!$\sim$GrRenderbuffer@{$\sim$GrRenderbuffer}}
+\index{$\sim$GrRenderbuffer@{$\sim$GrRenderbuffer}!GrRenderbuffer@{GrRenderbuffer}}
+\subsubsection[{$\sim$GrRenderbuffer}]{\setlength{\rightskip}{0pt plus 5cm}GrRenderbuffer::$\sim$GrRenderbuffer ()}}
+\label{class_gr_renderbuffer_e122e8cab34ef92c2e745f19b9174cce}
+
+
+
+
+Definition at line 48 of file GrRenderbuffer.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_renderbuffer_a81a6b698cc1f560c2b5e98a101611c0}{
+\index{GrRenderbuffer@{GrRenderbuffer}!BindToFramebuffer@{BindToFramebuffer}}
+\index{BindToFramebuffer@{BindToFramebuffer}!GrRenderbuffer@{GrRenderbuffer}}
+\subsubsection[{BindToFramebuffer}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderbuffer::BindToFramebuffer (unsigned int {\em attachment})}}
+\label{class_gr_renderbuffer_a81a6b698cc1f560c2b5e98a101611c0}
+
+
+
+
+Definition at line 60 of file GrRenderbuffer.cpp.\hypertarget{class_gr_renderbuffer_156a47cf6943e4b0714166f2eb69288d}{
+\index{GrRenderbuffer@{GrRenderbuffer}!GetFormat@{GetFormat}}
+\index{GetFormat@{GetFormat}!GrRenderbuffer@{GrRenderbuffer}}
+\subsubsection[{GetFormat}]{\setlength{\rightskip}{0pt plus 5cm}{\bf EFORMAT} GrRenderbuffer::GetFormat () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_renderbuffer_156a47cf6943e4b0714166f2eb69288d}
+
+
+
+
+Definition at line 39 of file GrRenderbuffer.h.\hypertarget{class_gr_renderbuffer_8853c79e467fa53b0a9c8b619f82f735}{
+\index{GrRenderbuffer@{GrRenderbuffer}!GetHeight@{GetHeight}}
+\index{GetHeight@{GetHeight}!GrRenderbuffer@{GrRenderbuffer}}
+\subsubsection[{GetHeight}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrRenderbuffer::GetHeight () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_renderbuffer_8853c79e467fa53b0a9c8b619f82f735}
+
+
+
+
+Definition at line 38 of file GrRenderbuffer.h.\hypertarget{class_gr_renderbuffer_057ed372253eca15b35c834e17b3cb37}{
+\index{GrRenderbuffer@{GrRenderbuffer}!GetWidth@{GetWidth}}
+\index{GetWidth@{GetWidth}!GrRenderbuffer@{GrRenderbuffer}}
+\subsubsection[{GetWidth}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrRenderbuffer::GetWidth () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_renderbuffer_057ed372253eca15b35c834e17b3cb37}
+
+
+
+
+Definition at line 37 of file GrRenderbuffer.h.\hypertarget{class_gr_renderbuffer_b7d8c93051e190f086976ac103878890}{
+\index{GrRenderbuffer@{GrRenderbuffer}!PostContextReset@{PostContextReset}}
+\index{PostContextReset@{PostContextReset}!GrRenderbuffer@{GrRenderbuffer}}
+\subsubsection[{PostContextReset}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderbuffer::PostContextReset ()}}
+\label{class_gr_renderbuffer_b7d8c93051e190f086976ac103878890}
+
+
+
+
+Definition at line 85 of file GrRenderbuffer.cpp.\hypertarget{class_gr_renderbuffer_736aa66655242b21c01006ddbe8e83d1}{
+\index{GrRenderbuffer@{GrRenderbuffer}!PreContextReset@{PreContextReset}}
+\index{PreContextReset@{PreContextReset}!GrRenderbuffer@{GrRenderbuffer}}
+\subsubsection[{PreContextReset}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderbuffer::PreContextReset ()}}
+\label{class_gr_renderbuffer_736aa66655242b21c01006ddbe8e83d1}
+
+
+
+
+Definition at line 78 of file GrRenderbuffer.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_renderbuffer_8h}{GrRenderbuffer.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_renderbuffer_8cpp}{GrRenderbuffer.cpp}\end{CompactItemize}

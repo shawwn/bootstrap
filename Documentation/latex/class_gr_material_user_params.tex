@@ -1,0 +1,226 @@
+\hypertarget{class_gr_material_user_params}{
+\section{GrMaterialUserParams Class Reference}
+\label{class_gr_material_user_params}\index{GrMaterialUserParams@{GrMaterialUserParams}}
+}
+{\tt \#include $<$GrMaterialUserParams.h$>$}
+
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+struct \textbf{SUserParam}
+\item 
+struct \textbf{SUserSampler}
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_material_user_params_421c9f580f17a695f2c576b1639f5036}{GrMaterialUserParams} ()
+\item 
+\hyperlink{class_gr_material_user_params_365386d0f8e5941409d30cc2d708bf5e}{$\sim$GrMaterialUserParams} ()
+\item 
+void \hyperlink{class_gr_material_user_params_68f66bcafa7224fbb4e613f5140b2ae5}{Copy} (const \hyperlink{class_gr_material_user_params}{GrMaterialUserParams} $\ast$\hyperlink{glext__bak_8h_580ceb6968724faf709cceb93786912e}{params})
+\item 
+void \hyperlink{class_gr_material_user_params_bda3aa38ee94e010cf642e3c3c75bff7}{SetShader} (\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_shader}{GrShader} $>$ \hyperlink{glext_8h_57b2a96adb1d51204909a82d861e395e}{shader})
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_shader}{GrShader} $>$ \hyperlink{class_gr_material_user_params_7a1979f2346b1d3c4d2575c129c85650}{GetShader} () const 
+\item 
+unsigned int \hyperlink{class_gr_material_user_params_dc63d586a7e83e6f113bf386f60d47d4}{AddUserParam} (const char $\ast$paramName, \hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_u_expr_term}{UExprTerm} $>$ $\ast$\hyperlink{glext__bak_8h_787b90126e660bfa88ef8aa99f74ca41}{values})
+\item 
+unsigned int \hyperlink{class_gr_material_user_params_29289f87a4720e07e3ad984cd6110600}{GetUserParamHandle} (const char $\ast$paramName)
+\item 
+void \hyperlink{class_gr_material_user_params_be8eb5892d04d99258233fd049531f23}{SetUserParam} (unsigned int handle, \hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_u_expr_term}{UExprTerm} $>$ $\ast$\hyperlink{glext__bak_8h_787b90126e660bfa88ef8aa99f74ca41}{values})
+\item 
+void \hyperlink{class_gr_material_user_params_f7ddd09376271494d32494837c58e08c}{SetUserParam} (unsigned int handle, float $\ast$\hyperlink{glext__bak_8h_787b90126e660bfa88ef8aa99f74ca41}{values})
+\item 
+unsigned int \hyperlink{class_gr_material_user_params_5270ccaad9a2fb6b0a00e6bb1d4a6377}{AddUserSampler} (const char $\ast$samplerName, const \hyperlink{class_gr_texture_stage}{GrTextureStage} \&\hyperlink{glext__bak_8h_8f486379aef534669f4f06f515e7ce6c}{texture})
+\item 
+unsigned int \hyperlink{class_gr_material_user_params_a4e2483fc93c735416c8cfa9f0a7bca7}{GetUserSamplerHandle} (const char $\ast$samplerName)
+\item 
+void \hyperlink{class_gr_material_user_params_a661de3e2b9b34e6a8713be6f64d899a}{SetUserSampler} (unsigned int handle, const \hyperlink{class_gr_texture_stage}{GrTextureStage} \&\hyperlink{glext__bak_8h_8f486379aef534669f4f06f515e7ce6c}{texture})
+\item 
+void \hyperlink{class_gr_material_user_params_fd456a4ffa7efb1616507100d66e0306}{Update} ()
+\item 
+void \hyperlink{class_gr_material_user_params_8b3930f139352c856d7ed694a3c05de6}{ApplyUserParams} () const 
+\item 
+void \hyperlink{class_gr_material_user_params_6aabd7e3eda8be6d4b764d8f4a4a2ce2}{ApplyUserSamplers} () const 
+\end{CompactItemize}
+\subsection*{Static Public Attributes}
+\begin{CompactItemize}
+\item 
+static const unsigned int \hyperlink{class_gr_material_user_params_ff25d4f01e95a3645d6e0104d37d72de}{kMaxUserParams} = 128
+\item 
+static const unsigned int \hyperlink{class_gr_material_user_params_7f9d77d332f6feaa280819c24cb70daf}{kMaxUserSamplers} = 8
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 21 of file GrMaterialUserParams.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_material_user_params_421c9f580f17a695f2c576b1639f5036}{
+\index{GrMaterialUserParams@{GrMaterialUserParams}!GrMaterialUserParams@{GrMaterialUserParams}}
+\index{GrMaterialUserParams@{GrMaterialUserParams}!GrMaterialUserParams@{GrMaterialUserParams}}
+\subsubsection[{GrMaterialUserParams}]{\setlength{\rightskip}{0pt plus 5cm}GrMaterialUserParams::GrMaterialUserParams ()}}
+\label{class_gr_material_user_params_421c9f580f17a695f2c576b1639f5036}
+
+
+
+
+Definition at line 25 of file GrMaterialUserParams.cpp.\hypertarget{class_gr_material_user_params_365386d0f8e5941409d30cc2d708bf5e}{
+\index{GrMaterialUserParams@{GrMaterialUserParams}!$\sim$GrMaterialUserParams@{$\sim$GrMaterialUserParams}}
+\index{$\sim$GrMaterialUserParams@{$\sim$GrMaterialUserParams}!GrMaterialUserParams@{GrMaterialUserParams}}
+\subsubsection[{$\sim$GrMaterialUserParams}]{\setlength{\rightskip}{0pt plus 5cm}GrMaterialUserParams::$\sim$GrMaterialUserParams ()}}
+\label{class_gr_material_user_params_365386d0f8e5941409d30cc2d708bf5e}
+
+
+
+
+Definition at line 34 of file GrMaterialUserParams.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_material_user_params_dc63d586a7e83e6f113bf386f60d47d4}{
+\index{GrMaterialUserParams@{GrMaterialUserParams}!AddUserParam@{AddUserParam}}
+\index{AddUserParam@{AddUserParam}!GrMaterialUserParams@{GrMaterialUserParams}}
+\subsubsection[{AddUserParam}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrMaterialUserParams::AddUserParam (const char $\ast$ {\em paramName}, \/  {\bf URef}$<$ {\bf UExprTerm} $>$ $\ast$ {\em values})}}
+\label{class_gr_material_user_params_dc63d586a7e83e6f113bf386f60d47d4}
+
+
+
+
+Definition at line 89 of file GrMaterialUserParams.cpp.\hypertarget{class_gr_material_user_params_5270ccaad9a2fb6b0a00e6bb1d4a6377}{
+\index{GrMaterialUserParams@{GrMaterialUserParams}!AddUserSampler@{AddUserSampler}}
+\index{AddUserSampler@{AddUserSampler}!GrMaterialUserParams@{GrMaterialUserParams}}
+\subsubsection[{AddUserSampler}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrMaterialUserParams::AddUserSampler (const char $\ast$ {\em samplerName}, \/  const {\bf GrTextureStage} \& {\em texture})}}
+\label{class_gr_material_user_params_5270ccaad9a2fb6b0a00e6bb1d4a6377}
+
+
+
+
+Definition at line 168 of file GrMaterialUserParams.cpp.\hypertarget{class_gr_material_user_params_8b3930f139352c856d7ed694a3c05de6}{
+\index{GrMaterialUserParams@{GrMaterialUserParams}!ApplyUserParams@{ApplyUserParams}}
+\index{ApplyUserParams@{ApplyUserParams}!GrMaterialUserParams@{GrMaterialUserParams}}
+\subsubsection[{ApplyUserParams}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialUserParams::ApplyUserParams () const}}
+\label{class_gr_material_user_params_8b3930f139352c856d7ed694a3c05de6}
+
+
+
+
+Definition at line 260 of file GrMaterialUserParams.cpp.\hypertarget{class_gr_material_user_params_6aabd7e3eda8be6d4b764d8f4a4a2ce2}{
+\index{GrMaterialUserParams@{GrMaterialUserParams}!ApplyUserSamplers@{ApplyUserSamplers}}
+\index{ApplyUserSamplers@{ApplyUserSamplers}!GrMaterialUserParams@{GrMaterialUserParams}}
+\subsubsection[{ApplyUserSamplers}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialUserParams::ApplyUserSamplers () const}}
+\label{class_gr_material_user_params_6aabd7e3eda8be6d4b764d8f4a4a2ce2}
+
+
+
+
+Definition at line 277 of file GrMaterialUserParams.cpp.\hypertarget{class_gr_material_user_params_68f66bcafa7224fbb4e613f5140b2ae5}{
+\index{GrMaterialUserParams@{GrMaterialUserParams}!Copy@{Copy}}
+\index{Copy@{Copy}!GrMaterialUserParams@{GrMaterialUserParams}}
+\subsubsection[{Copy}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialUserParams::Copy (const {\bf GrMaterialUserParams} $\ast$ {\em params})}}
+\label{class_gr_material_user_params_68f66bcafa7224fbb4e613f5140b2ae5}
+
+
+
+
+Definition at line 46 of file GrMaterialUserParams.cpp.\hypertarget{class_gr_material_user_params_7a1979f2346b1d3c4d2575c129c85650}{
+\index{GrMaterialUserParams@{GrMaterialUserParams}!GetShader@{GetShader}}
+\index{GetShader@{GetShader}!GrMaterialUserParams@{GrMaterialUserParams}}
+\subsubsection[{GetShader}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrShader} $>$ GrMaterialUserParams::GetShader () const}}
+\label{class_gr_material_user_params_7a1979f2346b1d3c4d2575c129c85650}
+
+
+
+
+Definition at line 82 of file GrMaterialUserParams.cpp.\hypertarget{class_gr_material_user_params_29289f87a4720e07e3ad984cd6110600}{
+\index{GrMaterialUserParams@{GrMaterialUserParams}!GetUserParamHandle@{GetUserParamHandle}}
+\index{GetUserParamHandle@{GetUserParamHandle}!GrMaterialUserParams@{GrMaterialUserParams}}
+\subsubsection[{GetUserParamHandle}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrMaterialUserParams::GetUserParamHandle (const char $\ast$ {\em paramName})}}
+\label{class_gr_material_user_params_29289f87a4720e07e3ad984cd6110600}
+
+
+
+
+Definition at line 131 of file GrMaterialUserParams.cpp.\hypertarget{class_gr_material_user_params_a4e2483fc93c735416c8cfa9f0a7bca7}{
+\index{GrMaterialUserParams@{GrMaterialUserParams}!GetUserSamplerHandle@{GetUserSamplerHandle}}
+\index{GetUserSamplerHandle@{GetUserSamplerHandle}!GrMaterialUserParams@{GrMaterialUserParams}}
+\subsubsection[{GetUserSamplerHandle}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrMaterialUserParams::GetUserSamplerHandle (const char $\ast$ {\em samplerName})}}
+\label{class_gr_material_user_params_a4e2483fc93c735416c8cfa9f0a7bca7}
+
+
+
+
+Definition at line 209 of file GrMaterialUserParams.cpp.\hypertarget{class_gr_material_user_params_bda3aa38ee94e010cf642e3c3c75bff7}{
+\index{GrMaterialUserParams@{GrMaterialUserParams}!SetShader@{SetShader}}
+\index{SetShader@{SetShader}!GrMaterialUserParams@{GrMaterialUserParams}}
+\subsubsection[{SetShader}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialUserParams::SetShader ({\bf URef}$<$ {\bf GrShader} $>$ {\em shader})}}
+\label{class_gr_material_user_params_bda3aa38ee94e010cf642e3c3c75bff7}
+
+
+
+
+Definition at line 69 of file GrMaterialUserParams.cpp.\hypertarget{class_gr_material_user_params_f7ddd09376271494d32494837c58e08c}{
+\index{GrMaterialUserParams@{GrMaterialUserParams}!SetUserParam@{SetUserParam}}
+\index{SetUserParam@{SetUserParam}!GrMaterialUserParams@{GrMaterialUserParams}}
+\subsubsection[{SetUserParam}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialUserParams::SetUserParam (unsigned int {\em handle}, \/  float $\ast$ {\em values})}}
+\label{class_gr_material_user_params_f7ddd09376271494d32494837c58e08c}
+
+
+
+
+Definition at line 156 of file GrMaterialUserParams.cpp.\hypertarget{class_gr_material_user_params_be8eb5892d04d99258233fd049531f23}{
+\index{GrMaterialUserParams@{GrMaterialUserParams}!SetUserParam@{SetUserParam}}
+\index{SetUserParam@{SetUserParam}!GrMaterialUserParams@{GrMaterialUserParams}}
+\subsubsection[{SetUserParam}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialUserParams::SetUserParam (unsigned int {\em handle}, \/  {\bf URef}$<$ {\bf UExprTerm} $>$ $\ast$ {\em values})}}
+\label{class_gr_material_user_params_be8eb5892d04d99258233fd049531f23}
+
+
+
+
+Definition at line 143 of file GrMaterialUserParams.cpp.\hypertarget{class_gr_material_user_params_a661de3e2b9b34e6a8713be6f64d899a}{
+\index{GrMaterialUserParams@{GrMaterialUserParams}!SetUserSampler@{SetUserSampler}}
+\index{SetUserSampler@{SetUserSampler}!GrMaterialUserParams@{GrMaterialUserParams}}
+\subsubsection[{SetUserSampler}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialUserParams::SetUserSampler (unsigned int {\em handle}, \/  const {\bf GrTextureStage} \& {\em texture})}}
+\label{class_gr_material_user_params_a661de3e2b9b34e6a8713be6f64d899a}
+
+
+
+
+Definition at line 223 of file GrMaterialUserParams.cpp.\hypertarget{class_gr_material_user_params_fd456a4ffa7efb1616507100d66e0306}{
+\index{GrMaterialUserParams@{GrMaterialUserParams}!Update@{Update}}
+\index{Update@{Update}!GrMaterialUserParams@{GrMaterialUserParams}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialUserParams::Update ()}}
+\label{class_gr_material_user_params_fd456a4ffa7efb1616507100d66e0306}
+
+
+
+
+Definition at line 234 of file GrMaterialUserParams.cpp.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_gr_material_user_params_ff25d4f01e95a3645d6e0104d37d72de}{
+\index{GrMaterialUserParams@{GrMaterialUserParams}!kMaxUserParams@{kMaxUserParams}}
+\index{kMaxUserParams@{kMaxUserParams}!GrMaterialUserParams@{GrMaterialUserParams}}
+\subsubsection[{kMaxUserParams}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int {\bf GrMaterialUserParams::kMaxUserParams} = 128\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_gr_material_user_params_ff25d4f01e95a3645d6e0104d37d72de}
+
+
+
+
+Definition at line 25 of file GrMaterialUserParams.h.\hypertarget{class_gr_material_user_params_7f9d77d332f6feaa280819c24cb70daf}{
+\index{GrMaterialUserParams@{GrMaterialUserParams}!kMaxUserSamplers@{kMaxUserSamplers}}
+\index{kMaxUserSamplers@{kMaxUserSamplers}!GrMaterialUserParams@{GrMaterialUserParams}}
+\subsubsection[{kMaxUserSamplers}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int {\bf GrMaterialUserParams::kMaxUserSamplers} = 8\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_gr_material_user_params_7f9d77d332f6feaa280819c24cb70daf}
+
+
+
+
+Definition at line 26 of file GrMaterialUserParams.h.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_material_user_params_8h}{GrMaterialUserParams.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_material_user_params_8cpp}{GrMaterialUserParams.cpp}\end{CompactItemize}

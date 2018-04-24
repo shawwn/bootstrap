@@ -1,0 +1,92 @@
+\hypertarget{class_gr_uber_detail_cache}{
+\section{GrUberDetailCache Class Reference}
+\label{class_gr_uber_detail_cache}\index{GrUberDetailCache@{GrUberDetailCache}}
+}
+{\tt \#include $<$GrUberDetailCache.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_uber_detail_cache_1e3f165c71882d50f811e16a4a0da03c}{GrUberDetailCache} ()
+\item 
+\hyperlink{class_gr_uber_detail_cache_cc67d35e05435f6a2472025b82022196}{$\sim$GrUberDetailCache} ()
+\item 
+bool \hyperlink{class_gr_uber_detail_cache_68e9bc8e181ee380c287e4c0c4a4ad41}{ReserveRegion} (unsigned int \&tileX, unsigned int \&tileY, unsigned int \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, unsigned int \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height})
+\item 
+void \hyperlink{class_gr_uber_detail_cache_85a556efeacb9a9b2e9b2eb74bded94c}{UploadTile} (unsigned int \hyperlink{glext_8h_5b5a34b88a28ab9c203c2b432f6168b6}{lod}, unsigned int tileX, unsigned int tileY, const void $\ast$bump, const void $\ast$diffuse, const void $\ast$specular)
+\item 
+void \hyperlink{class_gr_uber_detail_cache_8c57ef3013e8de891cc64d633f033a26}{PrepareDetailCache} ()
+\item 
+void \hyperlink{class_gr_uber_detail_cache_09b761a56435b280523c0e0ce601bbe2}{BindDetailTextures} (unsigned int maskSampler, unsigned int bumpSampler, unsigned int diffuseSampler, unsigned int specularSampler)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 25 of file GrUberDetailCache.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_uber_detail_cache_1e3f165c71882d50f811e16a4a0da03c}{
+\index{GrUberDetailCache@{GrUberDetailCache}!GrUberDetailCache@{GrUberDetailCache}}
+\index{GrUberDetailCache@{GrUberDetailCache}!GrUberDetailCache@{GrUberDetailCache}}
+\subsubsection[{GrUberDetailCache}]{\setlength{\rightskip}{0pt plus 5cm}GrUberDetailCache::GrUberDetailCache ()}}
+\label{class_gr_uber_detail_cache_1e3f165c71882d50f811e16a4a0da03c}
+
+
+
+
+Definition at line 60 of file GrUberDetailCache.cpp.\hypertarget{class_gr_uber_detail_cache_cc67d35e05435f6a2472025b82022196}{
+\index{GrUberDetailCache@{GrUberDetailCache}!$\sim$GrUberDetailCache@{$\sim$GrUberDetailCache}}
+\index{$\sim$GrUberDetailCache@{$\sim$GrUberDetailCache}!GrUberDetailCache@{GrUberDetailCache}}
+\subsubsection[{$\sim$GrUberDetailCache}]{\setlength{\rightskip}{0pt plus 5cm}GrUberDetailCache::$\sim$GrUberDetailCache ()}}
+\label{class_gr_uber_detail_cache_cc67d35e05435f6a2472025b82022196}
+
+
+
+
+Definition at line 92 of file GrUberDetailCache.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_uber_detail_cache_09b761a56435b280523c0e0ce601bbe2}{
+\index{GrUberDetailCache@{GrUberDetailCache}!BindDetailTextures@{BindDetailTextures}}
+\index{BindDetailTextures@{BindDetailTextures}!GrUberDetailCache@{GrUberDetailCache}}
+\subsubsection[{BindDetailTextures}]{\setlength{\rightskip}{0pt plus 5cm}void GrUberDetailCache::BindDetailTextures (unsigned int {\em maskSampler}, \/  unsigned int {\em bumpSampler}, \/  unsigned int {\em diffuseSampler}, \/  unsigned int {\em specularSampler})}}
+\label{class_gr_uber_detail_cache_09b761a56435b280523c0e0ce601bbe2}
+
+
+
+
+Definition at line 205 of file GrUberDetailCache.cpp.\hypertarget{class_gr_uber_detail_cache_8c57ef3013e8de891cc64d633f033a26}{
+\index{GrUberDetailCache@{GrUberDetailCache}!PrepareDetailCache@{PrepareDetailCache}}
+\index{PrepareDetailCache@{PrepareDetailCache}!GrUberDetailCache@{GrUberDetailCache}}
+\subsubsection[{PrepareDetailCache}]{\setlength{\rightskip}{0pt plus 5cm}void GrUberDetailCache::PrepareDetailCache ()}}
+\label{class_gr_uber_detail_cache_8c57ef3013e8de891cc64d633f033a26}
+
+
+
+
+Definition at line 186 of file GrUberDetailCache.cpp.\hypertarget{class_gr_uber_detail_cache_68e9bc8e181ee380c287e4c0c4a4ad41}{
+\index{GrUberDetailCache@{GrUberDetailCache}!ReserveRegion@{ReserveRegion}}
+\index{ReserveRegion@{ReserveRegion}!GrUberDetailCache@{GrUberDetailCache}}
+\subsubsection[{ReserveRegion}]{\setlength{\rightskip}{0pt plus 5cm}bool GrUberDetailCache::ReserveRegion (unsigned int \& {\em tileX}, \/  unsigned int \& {\em tileY}, \/  unsigned int {\em width}, \/  unsigned int {\em height})}}
+\label{class_gr_uber_detail_cache_68e9bc8e181ee380c287e4c0c4a4ad41}
+
+
+
+
+Definition at line 112 of file GrUberDetailCache.cpp.\hypertarget{class_gr_uber_detail_cache_85a556efeacb9a9b2e9b2eb74bded94c}{
+\index{GrUberDetailCache@{GrUberDetailCache}!UploadTile@{UploadTile}}
+\index{UploadTile@{UploadTile}!GrUberDetailCache@{GrUberDetailCache}}
+\subsubsection[{UploadTile}]{\setlength{\rightskip}{0pt plus 5cm}void GrUberDetailCache::UploadTile (unsigned int {\em lod}, \/  unsigned int {\em tileX}, \/  unsigned int {\em tileY}, \/  const void $\ast$ {\em bump}, \/  const void $\ast$ {\em diffuse}, \/  const void $\ast$ {\em specular})}}
+\label{class_gr_uber_detail_cache_85a556efeacb9a9b2e9b2eb74bded94c}
+
+
+
+
+Definition at line 150 of file GrUberDetailCache.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_uber_detail_cache_8h}{GrUberDetailCache.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_uber_detail_cache_8cpp}{GrUberDetailCache.cpp}\end{CompactItemize}

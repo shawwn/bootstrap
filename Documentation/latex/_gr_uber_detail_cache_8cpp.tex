@@ -1,0 +1,217 @@
+\hypertarget{_gr_uber_detail_cache_8cpp}{
+\section{C:/Bootstrap/ProjectBX/Engine/Graphics/GrUberDetailCache.cpp File Reference}
+\label{_gr_uber_detail_cache_8cpp}\index{C:/Bootstrap/ProjectBX/Engine/Graphics/GrUberDetailCache.cpp@{C:/Bootstrap/ProjectBX/Engine/Graphics/GrUberDetailCache.cpp}}
+}
+{\tt \#include \char`\"{}graphics\_\-afx.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrUberDetailCache.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrTextureMgr.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrTexture.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrUTAtlas.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrUTLoader.h\char`\"{}}\par
+{\tt \#include \char`\"{}RFileMgr.h\char`\"{}}\par
+{\tt \#include \char`\"{}RFile.h\char`\"{}}\par
+{\tt \#include $<$algorithm$>$}\par
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \hyperlink{_gr_uber_detail_cache_8cpp_e3d403165c6413c1201c9d9d0773cc2f}{UBERTEX\_\-DETAIL\_\-ATLAS\_\-NAME}~\char`\"{}UberTexture\_\-DetailAtlas\char`\"{}
+\item 
+\#define \hyperlink{_gr_uber_detail_cache_8cpp_d9a337918569e46ed6e2dd2afa035cfa}{UBERTEX\_\-DETAIL\_\-ATLAS\_\-WIDTH}~( 4 $\ast$ ( GR\_\-UBERTEX\_\-SIZE\_\-IN\_\-TEXELS / GR\_\-UBERTEX\_\-PATCH\_\-BOUNDARY ) )
+\item 
+\#define \hyperlink{_gr_uber_detail_cache_8cpp_b3f0502440b5aaed0f61b5067f6d16f7}{UBERTEX\_\-DETAIL\_\-ATLAS\_\-HEIGHT}~( 4 $\ast$ ( GR\_\-UBERTEX\_\-SIZE\_\-IN\_\-TEXELS / GR\_\-UBERTEX\_\-PATCH\_\-BOUNDARY ) )
+\item 
+\#define \hyperlink{_gr_uber_detail_cache_8cpp_50f768eb1dc79310d0a11dcd428e28b8}{DETAIL\_\-CACHE\_\-BUMP\_\-NAME}~\char`\"{}UberDetailCache\_\-Bump\char`\"{}
+\item 
+\#define \hyperlink{_gr_uber_detail_cache_8cpp_ddf77dced7b26eaa953d2f8430a2b6fa}{DETAIL\_\-CACHE\_\-DIFFUSE\_\-NAME}~\char`\"{}UberDetailCache\_\-Diffuse\char`\"{}
+\item 
+\#define \hyperlink{_gr_uber_detail_cache_8cpp_bd0a46ff50a52ba207045e60990ea52e}{DETAIL\_\-CACHE\_\-SPECULAR\_\-NAME}~\char`\"{}UberDetailCache\_\-Specular\char`\"{}
+\item 
+\#define \hyperlink{_gr_uber_detail_cache_8cpp_e613045c6ecde810972f3a8e74c8435d}{DETAIL\_\-CACHE\_\-MASK\_\-NAME}~\char`\"{}UberDetailCache\_\-Mask\char`\"{}
+\item 
+\#define \hyperlink{_gr_uber_detail_cache_8cpp_48036532cbc307fb91deac173f458ab2}{DETAIL\_\-CACHE\_\-TEXTURE\_\-DIM}~4096
+\item 
+\#define \hyperlink{_gr_uber_detail_cache_8cpp_f4db4f0e402a5010fbdccb9d0ab4660d}{DETAIL\_\-CACHE\_\-MIP\_\-PAGE\_\-DIM}~2048
+\item 
+\#define \hyperlink{_gr_uber_detail_cache_8cpp_8cb8a071f10950687f430f7a01398294}{DETAIL\_\-CACHE\_\-MIP\_\-PAGE\_\-DIM\_\-IN\_\-TILES}~( DETAIL\_\-CACHE\_\-MIP\_\-PAGE\_\-DIM / GR\_\-UBERTEX\_\-TILE\_\-SIZE )
+\item 
+\#define \hyperlink{_gr_uber_detail_cache_8cpp_1a21b10b70efd712a5ceb50b6dee0ace}{DETAIL\_\-CACHE\_\-MASK\_\-DIM}~( DETAIL\_\-CACHE\_\-TEXTURE\_\-DIM / GR\_\-UBERTEX\_\-TILE\_\-SIZE )
+\item 
+\#define \hyperlink{_gr_uber_detail_cache_8cpp_2af68943f5ef7d47d0d575b7b578628c}{DETAIL\_\-CACHE\_\-MASK\_\-MIP\_\-PAGE\_\-DIM}~DETAIL\_\-CACHE\_\-MIP\_\-PAGE\_\-DIM\_\-IN\_\-TILES
+\item 
+\#define \hyperlink{_gr_uber_detail_cache_8cpp_a6a31092b822b42d668432103d7292a3}{DETAIL\_\-CACHE\_\-MASK\_\-DATA\_\-SIZE}~( ( DETAIL\_\-CACHE\_\-MASK\_\-DIM $\ast$ DETAIL\_\-CACHE\_\-MASK\_\-DIM ) / 8 )
+\item 
+\#define \hyperlink{_gr_uber_detail_cache_8cpp_c2b31e109ff086ecde554883bbacfa2c}{DETAIL\_\-CACHE\_\-MASK\_\-DXT5R\_\-BLOCK\_\-COUNT}~256
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{_gr_uber_detail_cache_8cpp_794b069567d634b67e58a63b9a672cfe}{DECLARE\_\-ALIGNED\_\-16} (\hyperlink{common__afx_8h_2e015c96ada30f1fdb9322f7af889c10}{\_\-\_\-int64}, \_\-maskTempDXT5R\mbox{[}DETAIL\_\-CACHE\_\-MASK\_\-DXT5R\_\-BLOCK\_\-COUNT\mbox{]})
+\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_uber_detail_cache}{GrUberDetailCache} $\ast$ \hyperlink{_gr_uber_detail_cache_8cpp_62d7d96325b53cb275b0d32af53de8b6}{gGrUberDetailCache} = 0
+\item 
+\hyperlink{common__afx_8h_2e015c96ada30f1fdb9322f7af889c10}{\_\-\_\-int64} $\ast$ \hyperlink{_gr_uber_detail_cache_8cpp_bc0d0da57d3d8e6b1f39f225684ff43c}{\_\-maskCodeLUT} = 0
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_gr_uber_detail_cache_8cpp_50f768eb1dc79310d0a11dcd428e28b8}{
+\index{GrUberDetailCache.cpp@{GrUberDetailCache.cpp}!DETAIL\_\-CACHE\_\-BUMP\_\-NAME@{DETAIL\_\-CACHE\_\-BUMP\_\-NAME}}
+\index{DETAIL\_\-CACHE\_\-BUMP\_\-NAME@{DETAIL\_\-CACHE\_\-BUMP\_\-NAME}!GrUberDetailCache.cpp@{GrUberDetailCache.cpp}}
+\subsubsection[{DETAIL\_\-CACHE\_\-BUMP\_\-NAME}]{\setlength{\rightskip}{0pt plus 5cm}\#define DETAIL\_\-CACHE\_\-BUMP\_\-NAME~\char`\"{}UberDetailCache\_\-Bump\char`\"{}}}
+\label{_gr_uber_detail_cache_8cpp_50f768eb1dc79310d0a11dcd428e28b8}
+
+
+
+
+Definition at line 32 of file GrUberDetailCache.cpp.\hypertarget{_gr_uber_detail_cache_8cpp_ddf77dced7b26eaa953d2f8430a2b6fa}{
+\index{GrUberDetailCache.cpp@{GrUberDetailCache.cpp}!DETAIL\_\-CACHE\_\-DIFFUSE\_\-NAME@{DETAIL\_\-CACHE\_\-DIFFUSE\_\-NAME}}
+\index{DETAIL\_\-CACHE\_\-DIFFUSE\_\-NAME@{DETAIL\_\-CACHE\_\-DIFFUSE\_\-NAME}!GrUberDetailCache.cpp@{GrUberDetailCache.cpp}}
+\subsubsection[{DETAIL\_\-CACHE\_\-DIFFUSE\_\-NAME}]{\setlength{\rightskip}{0pt plus 5cm}\#define DETAIL\_\-CACHE\_\-DIFFUSE\_\-NAME~\char`\"{}UberDetailCache\_\-Diffuse\char`\"{}}}
+\label{_gr_uber_detail_cache_8cpp_ddf77dced7b26eaa953d2f8430a2b6fa}
+
+
+
+
+Definition at line 33 of file GrUberDetailCache.cpp.\hypertarget{_gr_uber_detail_cache_8cpp_a6a31092b822b42d668432103d7292a3}{
+\index{GrUberDetailCache.cpp@{GrUberDetailCache.cpp}!DETAIL\_\-CACHE\_\-MASK\_\-DATA\_\-SIZE@{DETAIL\_\-CACHE\_\-MASK\_\-DATA\_\-SIZE}}
+\index{DETAIL\_\-CACHE\_\-MASK\_\-DATA\_\-SIZE@{DETAIL\_\-CACHE\_\-MASK\_\-DATA\_\-SIZE}!GrUberDetailCache.cpp@{GrUberDetailCache.cpp}}
+\subsubsection[{DETAIL\_\-CACHE\_\-MASK\_\-DATA\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DETAIL\_\-CACHE\_\-MASK\_\-DATA\_\-SIZE~( ( DETAIL\_\-CACHE\_\-MASK\_\-DIM $\ast$ DETAIL\_\-CACHE\_\-MASK\_\-DIM ) / 8 )}}
+\label{_gr_uber_detail_cache_8cpp_a6a31092b822b42d668432103d7292a3}
+
+
+
+
+Definition at line 41 of file GrUberDetailCache.cpp.\hypertarget{_gr_uber_detail_cache_8cpp_1a21b10b70efd712a5ceb50b6dee0ace}{
+\index{GrUberDetailCache.cpp@{GrUberDetailCache.cpp}!DETAIL\_\-CACHE\_\-MASK\_\-DIM@{DETAIL\_\-CACHE\_\-MASK\_\-DIM}}
+\index{DETAIL\_\-CACHE\_\-MASK\_\-DIM@{DETAIL\_\-CACHE\_\-MASK\_\-DIM}!GrUberDetailCache.cpp@{GrUberDetailCache.cpp}}
+\subsubsection[{DETAIL\_\-CACHE\_\-MASK\_\-DIM}]{\setlength{\rightskip}{0pt plus 5cm}\#define DETAIL\_\-CACHE\_\-MASK\_\-DIM~( DETAIL\_\-CACHE\_\-TEXTURE\_\-DIM / GR\_\-UBERTEX\_\-TILE\_\-SIZE )}}
+\label{_gr_uber_detail_cache_8cpp_1a21b10b70efd712a5ceb50b6dee0ace}
+
+
+
+
+Definition at line 39 of file GrUberDetailCache.cpp.\hypertarget{_gr_uber_detail_cache_8cpp_c2b31e109ff086ecde554883bbacfa2c}{
+\index{GrUberDetailCache.cpp@{GrUberDetailCache.cpp}!DETAIL\_\-CACHE\_\-MASK\_\-DXT5R\_\-BLOCK\_\-COUNT@{DETAIL\_\-CACHE\_\-MASK\_\-DXT5R\_\-BLOCK\_\-COUNT}}
+\index{DETAIL\_\-CACHE\_\-MASK\_\-DXT5R\_\-BLOCK\_\-COUNT@{DETAIL\_\-CACHE\_\-MASK\_\-DXT5R\_\-BLOCK\_\-COUNT}!GrUberDetailCache.cpp@{GrUberDetailCache.cpp}}
+\subsubsection[{DETAIL\_\-CACHE\_\-MASK\_\-DXT5R\_\-BLOCK\_\-COUNT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DETAIL\_\-CACHE\_\-MASK\_\-DXT5R\_\-BLOCK\_\-COUNT~256}}
+\label{_gr_uber_detail_cache_8cpp_c2b31e109ff086ecde554883bbacfa2c}
+
+
+
+
+Definition at line 42 of file GrUberDetailCache.cpp.\hypertarget{_gr_uber_detail_cache_8cpp_2af68943f5ef7d47d0d575b7b578628c}{
+\index{GrUberDetailCache.cpp@{GrUberDetailCache.cpp}!DETAIL\_\-CACHE\_\-MASK\_\-MIP\_\-PAGE\_\-DIM@{DETAIL\_\-CACHE\_\-MASK\_\-MIP\_\-PAGE\_\-DIM}}
+\index{DETAIL\_\-CACHE\_\-MASK\_\-MIP\_\-PAGE\_\-DIM@{DETAIL\_\-CACHE\_\-MASK\_\-MIP\_\-PAGE\_\-DIM}!GrUberDetailCache.cpp@{GrUberDetailCache.cpp}}
+\subsubsection[{DETAIL\_\-CACHE\_\-MASK\_\-MIP\_\-PAGE\_\-DIM}]{\setlength{\rightskip}{0pt plus 5cm}\#define DETAIL\_\-CACHE\_\-MASK\_\-MIP\_\-PAGE\_\-DIM~DETAIL\_\-CACHE\_\-MIP\_\-PAGE\_\-DIM\_\-IN\_\-TILES}}
+\label{_gr_uber_detail_cache_8cpp_2af68943f5ef7d47d0d575b7b578628c}
+
+
+
+
+Definition at line 40 of file GrUberDetailCache.cpp.\hypertarget{_gr_uber_detail_cache_8cpp_e613045c6ecde810972f3a8e74c8435d}{
+\index{GrUberDetailCache.cpp@{GrUberDetailCache.cpp}!DETAIL\_\-CACHE\_\-MASK\_\-NAME@{DETAIL\_\-CACHE\_\-MASK\_\-NAME}}
+\index{DETAIL\_\-CACHE\_\-MASK\_\-NAME@{DETAIL\_\-CACHE\_\-MASK\_\-NAME}!GrUberDetailCache.cpp@{GrUberDetailCache.cpp}}
+\subsubsection[{DETAIL\_\-CACHE\_\-MASK\_\-NAME}]{\setlength{\rightskip}{0pt plus 5cm}\#define DETAIL\_\-CACHE\_\-MASK\_\-NAME~\char`\"{}UberDetailCache\_\-Mask\char`\"{}}}
+\label{_gr_uber_detail_cache_8cpp_e613045c6ecde810972f3a8e74c8435d}
+
+
+
+
+Definition at line 35 of file GrUberDetailCache.cpp.\hypertarget{_gr_uber_detail_cache_8cpp_f4db4f0e402a5010fbdccb9d0ab4660d}{
+\index{GrUberDetailCache.cpp@{GrUberDetailCache.cpp}!DETAIL\_\-CACHE\_\-MIP\_\-PAGE\_\-DIM@{DETAIL\_\-CACHE\_\-MIP\_\-PAGE\_\-DIM}}
+\index{DETAIL\_\-CACHE\_\-MIP\_\-PAGE\_\-DIM@{DETAIL\_\-CACHE\_\-MIP\_\-PAGE\_\-DIM}!GrUberDetailCache.cpp@{GrUberDetailCache.cpp}}
+\subsubsection[{DETAIL\_\-CACHE\_\-MIP\_\-PAGE\_\-DIM}]{\setlength{\rightskip}{0pt plus 5cm}\#define DETAIL\_\-CACHE\_\-MIP\_\-PAGE\_\-DIM~2048}}
+\label{_gr_uber_detail_cache_8cpp_f4db4f0e402a5010fbdccb9d0ab4660d}
+
+
+
+
+Definition at line 37 of file GrUberDetailCache.cpp.\hypertarget{_gr_uber_detail_cache_8cpp_8cb8a071f10950687f430f7a01398294}{
+\index{GrUberDetailCache.cpp@{GrUberDetailCache.cpp}!DETAIL\_\-CACHE\_\-MIP\_\-PAGE\_\-DIM\_\-IN\_\-TILES@{DETAIL\_\-CACHE\_\-MIP\_\-PAGE\_\-DIM\_\-IN\_\-TILES}}
+\index{DETAIL\_\-CACHE\_\-MIP\_\-PAGE\_\-DIM\_\-IN\_\-TILES@{DETAIL\_\-CACHE\_\-MIP\_\-PAGE\_\-DIM\_\-IN\_\-TILES}!GrUberDetailCache.cpp@{GrUberDetailCache.cpp}}
+\subsubsection[{DETAIL\_\-CACHE\_\-MIP\_\-PAGE\_\-DIM\_\-IN\_\-TILES}]{\setlength{\rightskip}{0pt plus 5cm}\#define DETAIL\_\-CACHE\_\-MIP\_\-PAGE\_\-DIM\_\-IN\_\-TILES~( DETAIL\_\-CACHE\_\-MIP\_\-PAGE\_\-DIM / GR\_\-UBERTEX\_\-TILE\_\-SIZE )}}
+\label{_gr_uber_detail_cache_8cpp_8cb8a071f10950687f430f7a01398294}
+
+
+
+
+Definition at line 38 of file GrUberDetailCache.cpp.\hypertarget{_gr_uber_detail_cache_8cpp_bd0a46ff50a52ba207045e60990ea52e}{
+\index{GrUberDetailCache.cpp@{GrUberDetailCache.cpp}!DETAIL\_\-CACHE\_\-SPECULAR\_\-NAME@{DETAIL\_\-CACHE\_\-SPECULAR\_\-NAME}}
+\index{DETAIL\_\-CACHE\_\-SPECULAR\_\-NAME@{DETAIL\_\-CACHE\_\-SPECULAR\_\-NAME}!GrUberDetailCache.cpp@{GrUberDetailCache.cpp}}
+\subsubsection[{DETAIL\_\-CACHE\_\-SPECULAR\_\-NAME}]{\setlength{\rightskip}{0pt plus 5cm}\#define DETAIL\_\-CACHE\_\-SPECULAR\_\-NAME~\char`\"{}UberDetailCache\_\-Specular\char`\"{}}}
+\label{_gr_uber_detail_cache_8cpp_bd0a46ff50a52ba207045e60990ea52e}
+
+
+
+
+Definition at line 34 of file GrUberDetailCache.cpp.\hypertarget{_gr_uber_detail_cache_8cpp_48036532cbc307fb91deac173f458ab2}{
+\index{GrUberDetailCache.cpp@{GrUberDetailCache.cpp}!DETAIL\_\-CACHE\_\-TEXTURE\_\-DIM@{DETAIL\_\-CACHE\_\-TEXTURE\_\-DIM}}
+\index{DETAIL\_\-CACHE\_\-TEXTURE\_\-DIM@{DETAIL\_\-CACHE\_\-TEXTURE\_\-DIM}!GrUberDetailCache.cpp@{GrUberDetailCache.cpp}}
+\subsubsection[{DETAIL\_\-CACHE\_\-TEXTURE\_\-DIM}]{\setlength{\rightskip}{0pt plus 5cm}\#define DETAIL\_\-CACHE\_\-TEXTURE\_\-DIM~4096}}
+\label{_gr_uber_detail_cache_8cpp_48036532cbc307fb91deac173f458ab2}
+
+
+
+
+Definition at line 36 of file GrUberDetailCache.cpp.\hypertarget{_gr_uber_detail_cache_8cpp_b3f0502440b5aaed0f61b5067f6d16f7}{
+\index{GrUberDetailCache.cpp@{GrUberDetailCache.cpp}!UBERTEX\_\-DETAIL\_\-ATLAS\_\-HEIGHT@{UBERTEX\_\-DETAIL\_\-ATLAS\_\-HEIGHT}}
+\index{UBERTEX\_\-DETAIL\_\-ATLAS\_\-HEIGHT@{UBERTEX\_\-DETAIL\_\-ATLAS\_\-HEIGHT}!GrUberDetailCache.cpp@{GrUberDetailCache.cpp}}
+\subsubsection[{UBERTEX\_\-DETAIL\_\-ATLAS\_\-HEIGHT}]{\setlength{\rightskip}{0pt plus 5cm}\#define UBERTEX\_\-DETAIL\_\-ATLAS\_\-HEIGHT~( 4 $\ast$ ( GR\_\-UBERTEX\_\-SIZE\_\-IN\_\-TEXELS / GR\_\-UBERTEX\_\-PATCH\_\-BOUNDARY ) )}}
+\label{_gr_uber_detail_cache_8cpp_b3f0502440b5aaed0f61b5067f6d16f7}
+
+
+
+
+Definition at line 29 of file GrUberDetailCache.cpp.\hypertarget{_gr_uber_detail_cache_8cpp_e3d403165c6413c1201c9d9d0773cc2f}{
+\index{GrUberDetailCache.cpp@{GrUberDetailCache.cpp}!UBERTEX\_\-DETAIL\_\-ATLAS\_\-NAME@{UBERTEX\_\-DETAIL\_\-ATLAS\_\-NAME}}
+\index{UBERTEX\_\-DETAIL\_\-ATLAS\_\-NAME@{UBERTEX\_\-DETAIL\_\-ATLAS\_\-NAME}!GrUberDetailCache.cpp@{GrUberDetailCache.cpp}}
+\subsubsection[{UBERTEX\_\-DETAIL\_\-ATLAS\_\-NAME}]{\setlength{\rightskip}{0pt plus 5cm}\#define UBERTEX\_\-DETAIL\_\-ATLAS\_\-NAME~\char`\"{}UberTexture\_\-DetailAtlas\char`\"{}}}
+\label{_gr_uber_detail_cache_8cpp_e3d403165c6413c1201c9d9d0773cc2f}
+
+
+
+
+Definition at line 27 of file GrUberDetailCache.cpp.\hypertarget{_gr_uber_detail_cache_8cpp_d9a337918569e46ed6e2dd2afa035cfa}{
+\index{GrUberDetailCache.cpp@{GrUberDetailCache.cpp}!UBERTEX\_\-DETAIL\_\-ATLAS\_\-WIDTH@{UBERTEX\_\-DETAIL\_\-ATLAS\_\-WIDTH}}
+\index{UBERTEX\_\-DETAIL\_\-ATLAS\_\-WIDTH@{UBERTEX\_\-DETAIL\_\-ATLAS\_\-WIDTH}!GrUberDetailCache.cpp@{GrUberDetailCache.cpp}}
+\subsubsection[{UBERTEX\_\-DETAIL\_\-ATLAS\_\-WIDTH}]{\setlength{\rightskip}{0pt plus 5cm}\#define UBERTEX\_\-DETAIL\_\-ATLAS\_\-WIDTH~( 4 $\ast$ ( GR\_\-UBERTEX\_\-SIZE\_\-IN\_\-TEXELS / GR\_\-UBERTEX\_\-PATCH\_\-BOUNDARY ) )}}
+\label{_gr_uber_detail_cache_8cpp_d9a337918569e46ed6e2dd2afa035cfa}
+
+
+
+
+Definition at line 28 of file GrUberDetailCache.cpp.
+
+\subsection{Function Documentation}
+\hypertarget{_gr_uber_detail_cache_8cpp_794b069567d634b67e58a63b9a672cfe}{
+\index{GrUberDetailCache.cpp@{GrUberDetailCache.cpp}!DECLARE\_\-ALIGNED\_\-16@{DECLARE\_\-ALIGNED\_\-16}}
+\index{DECLARE\_\-ALIGNED\_\-16@{DECLARE\_\-ALIGNED\_\-16}!GrUberDetailCache.cpp@{GrUberDetailCache.cpp}}
+\subsubsection[{DECLARE\_\-ALIGNED\_\-16}]{\setlength{\rightskip}{0pt plus 5cm}DECLARE\_\-ALIGNED\_\-16 ({\bf \_\-\_\-int64}, \/  \_\-maskTempDXT5R\mbox{[}DETAIL\_\-CACHE\_\-MASK\_\-DXT5R\_\-BLOCK\_\-COUNT\mbox{]})}}
+\label{_gr_uber_detail_cache_8cpp_794b069567d634b67e58a63b9a672cfe}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{_gr_uber_detail_cache_8cpp_bc0d0da57d3d8e6b1f39f225684ff43c}{
+\index{GrUberDetailCache.cpp@{GrUberDetailCache.cpp}!\_\-maskCodeLUT@{\_\-maskCodeLUT}}
+\index{\_\-maskCodeLUT@{\_\-maskCodeLUT}!GrUberDetailCache.cpp@{GrUberDetailCache.cpp}}
+\subsubsection[{\_\-maskCodeLUT}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \_\-\_\-int64}$\ast$ {\bf \_\-maskCodeLUT} = 0}}
+\label{_gr_uber_detail_cache_8cpp_bc0d0da57d3d8e6b1f39f225684ff43c}
+
+
+
+
+Definition at line 48 of file GrUberDetailCache.cpp.\hypertarget{_gr_uber_detail_cache_8cpp_62d7d96325b53cb275b0d32af53de8b6}{
+\index{GrUberDetailCache.cpp@{GrUberDetailCache.cpp}!gGrUberDetailCache@{gGrUberDetailCache}}
+\index{gGrUberDetailCache@{gGrUberDetailCache}!GrUberDetailCache.cpp@{GrUberDetailCache.cpp}}
+\subsubsection[{gGrUberDetailCache}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrUberDetailCache}$\ast$ {\bf gGrUberDetailCache} = 0}}
+\label{_gr_uber_detail_cache_8cpp_62d7d96325b53cb275b0d32af53de8b6}
+
+
+
+
+Definition at line 24 of file GrUberDetailCache.cpp.

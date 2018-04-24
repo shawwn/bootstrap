@@ -1,0 +1,334 @@
+\hypertarget{class_gr_subsys}{
+\section{GrSubsys Class Reference}
+\label{class_gr_subsys}\index{GrSubsys@{GrSubsys}}
+}
+{\tt \#include $<$GrSubsys.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_subsys_96c2a23cef6078de5a5982ae9c23dfae}{GrSubsys} (unsigned int screenWidth, unsigned int screenHeight, bool uberTexCompress, bool uberTexPaint)
+\item 
+\hyperlink{class_gr_subsys_1fe11cc4b9217dcf96f4e712a467e4b8}{$\sim$GrSubsys} ()
+\item 
+unsigned int \hyperlink{class_gr_subsys_0b72dbb98da668bbbc0cc46038b804e5}{GetScreenWidth} () const 
+\item 
+unsigned int \hyperlink{class_gr_subsys_ebabe946b174172886fc4370dc755257}{GetScreenHeight} () const 
+\item 
+void \hyperlink{class_gr_subsys_7950bbebe8c3f42e7048aaedd61512eb}{SetTexturingQuality} (\hyperlink{enums_8h_697c1ee1354746841860d5bf9f81c033}{EGRQUALITY} quality)
+\item 
+void \hyperlink{class_gr_subsys_98502732472ab7e6ec14048fbd25d240}{SetShadingQuality} (\hyperlink{enums_8h_697c1ee1354746841860d5bf9f81c033}{EGRQUALITY} quality)
+\item 
+void \hyperlink{class_gr_subsys_c9626c59833220674cfc79155127947f}{SetHDRQuality} (\hyperlink{enums_8h_697c1ee1354746841860d5bf9f81c033}{EGRQUALITY} quality)
+\item 
+void \hyperlink{class_gr_subsys_f116de3127fd9378c506fe73dbd1eb4d}{SetHDREnable} (bool enabled)
+\item 
+void \hyperlink{class_gr_subsys_4def4c86d374f56b9d193fa851bcf8b5}{SetUberDXTCompression} (bool enabled)
+\item 
+void \hyperlink{class_gr_subsys_84c66e7b8a09731997e82f7f743cb625}{SetUberOverlaySupport} (bool enabled)
+\item 
+\hyperlink{enums_8h_697c1ee1354746841860d5bf9f81c033}{EGRQUALITY} \hyperlink{class_gr_subsys_45b6a0acd149993f18e157414788ed8d}{GetTexturingQuality} () const 
+\item 
+\hyperlink{enums_8h_697c1ee1354746841860d5bf9f81c033}{EGRQUALITY} \hyperlink{class_gr_subsys_66edbd30a3f1d39b73eb00df33f89404}{GetShadingQuality} () const 
+\item 
+\hyperlink{enums_8h_697c1ee1354746841860d5bf9f81c033}{EGRQUALITY} \hyperlink{class_gr_subsys_4cdb145baf1da08648bb3148793556e9}{GetHDRQuality} () const 
+\item 
+bool \hyperlink{class_gr_subsys_7729f2d94ac04a53a95086298b1dfef5}{GetHDREnable} () const 
+\item 
+bool \hyperlink{class_gr_subsys_8550cea92945ba8f93d6fdbdaf6ee6bf}{GetUberDXTCompression} () const 
+\item 
+bool \hyperlink{class_gr_subsys_3cfcbb972dde87822c868363146bf7ee}{GetUberOverlaySupport} () const 
+\item 
+void \hyperlink{class_gr_subsys_f53962ed44cf2234adf5e07b301adcc0}{SetGamma} (float gamma)
+\item 
+void \hyperlink{class_gr_subsys_f22032c84937955ff0e23eb8b3632379}{SetBrightness} (float brightness)
+\item 
+void \hyperlink{class_gr_subsys_fef54c85657d029366011e1731c5f71e}{TakeScreenshot} (const char $\ast$fileName)
+\item 
+void \hyperlink{class_gr_subsys_9881b11bf389779155d144a2a78d6dd2}{Update} (unsigned int timeDelta, unsigned int sysTimeDelta)
+\item 
+void \hyperlink{class_gr_subsys_d20bc13ebade4221323d63b2925a9d00}{Render} (const \hyperlink{class_gr_camera}{GrCamera} $\ast$camera)
+\item 
+void \hyperlink{class_gr_subsys_9522c885154f2fe8daa62cb8f48529ed}{Resize} (unsigned int \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, unsigned int \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height})
+\item 
+void \hyperlink{class_gr_subsys_155c0e49f8e45159abf4df5359eb8d6a}{Reset} (unsigned int \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, unsigned int \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height})
+\item 
+void \hyperlink{class_gr_subsys_374bd75973d46d7e9fabcc280e505b22}{Reset} ()
+\item 
+void \hyperlink{class_gr_subsys_1e99ac2bc9378e2170b3592327a368b5}{PreContextReset} ()
+\item 
+void \hyperlink{class_gr_subsys_dc45431cc61c9b21ff173c7f8bd1f578}{PostContextReset} (unsigned int \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, unsigned int \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height})
+\item 
+bool \hyperlink{class_gr_subsys_2ae640ed8f7efaa789b10091e33ab5a3}{IssueCommand} (const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&command)
+\item 
+void \hyperlink{class_gr_subsys_8f2ca0d3463ad8e1c921b3d21a7f9e6e}{AddCommandHandler} (const char $\ast$command, bool($\ast$handler)(const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&))
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 25 of file GrSubsys.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_subsys_96c2a23cef6078de5a5982ae9c23dfae}{
+\index{GrSubsys@{GrSubsys}!GrSubsys@{GrSubsys}}
+\index{GrSubsys@{GrSubsys}!GrSubsys@{GrSubsys}}
+\subsubsection[{GrSubsys}]{\setlength{\rightskip}{0pt plus 5cm}GrSubsys::GrSubsys (unsigned int {\em screenWidth}, \/  unsigned int {\em screenHeight}, \/  bool {\em uberTexCompress}, \/  bool {\em uberTexPaint})}}
+\label{class_gr_subsys_96c2a23cef6078de5a5982ae9c23dfae}
+
+
+
+
+Definition at line 57 of file GrSubsys.cpp.\hypertarget{class_gr_subsys_1fe11cc4b9217dcf96f4e712a467e4b8}{
+\index{GrSubsys@{GrSubsys}!$\sim$GrSubsys@{$\sim$GrSubsys}}
+\index{$\sim$GrSubsys@{$\sim$GrSubsys}!GrSubsys@{GrSubsys}}
+\subsubsection[{$\sim$GrSubsys}]{\setlength{\rightskip}{0pt plus 5cm}GrSubsys::$\sim$GrSubsys ()}}
+\label{class_gr_subsys_1fe11cc4b9217dcf96f4e712a467e4b8}
+
+
+
+
+Definition at line 115 of file GrSubsys.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_subsys_8f2ca0d3463ad8e1c921b3d21a7f9e6e}{
+\index{GrSubsys@{GrSubsys}!AddCommandHandler@{AddCommandHandler}}
+\index{AddCommandHandler@{AddCommandHandler}!GrSubsys@{GrSubsys}}
+\subsubsection[{AddCommandHandler}]{\setlength{\rightskip}{0pt plus 5cm}void GrSubsys::AddCommandHandler (const char $\ast$ {\em command}, \/  bool($\ast$)(const {\bf tstring} \&) {\em handler})}}
+\label{class_gr_subsys_8f2ca0d3463ad8e1c921b3d21a7f9e6e}
+
+
+
+
+Definition at line 408 of file GrSubsys.cpp.\hypertarget{class_gr_subsys_7729f2d94ac04a53a95086298b1dfef5}{
+\index{GrSubsys@{GrSubsys}!GetHDREnable@{GetHDREnable}}
+\index{GetHDREnable@{GetHDREnable}!GrSubsys@{GrSubsys}}
+\subsubsection[{GetHDREnable}]{\setlength{\rightskip}{0pt plus 5cm}bool GrSubsys::GetHDREnable () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_subsys_7729f2d94ac04a53a95086298b1dfef5}
+
+
+
+
+Definition at line 54 of file GrSubsys.h.\hypertarget{class_gr_subsys_4cdb145baf1da08648bb3148793556e9}{
+\index{GrSubsys@{GrSubsys}!GetHDRQuality@{GetHDRQuality}}
+\index{GetHDRQuality@{GetHDRQuality}!GrSubsys@{GrSubsys}}
+\subsubsection[{GetHDRQuality}]{\setlength{\rightskip}{0pt plus 5cm}{\bf EGRQUALITY} GrSubsys::GetHDRQuality () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_subsys_4cdb145baf1da08648bb3148793556e9}
+
+
+
+
+Definition at line 53 of file GrSubsys.h.\hypertarget{class_gr_subsys_ebabe946b174172886fc4370dc755257}{
+\index{GrSubsys@{GrSubsys}!GetScreenHeight@{GetScreenHeight}}
+\index{GetScreenHeight@{GetScreenHeight}!GrSubsys@{GrSubsys}}
+\subsubsection[{GetScreenHeight}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrSubsys::GetScreenHeight () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_subsys_ebabe946b174172886fc4370dc755257}
+
+
+
+
+Definition at line 40 of file GrSubsys.h.\hypertarget{class_gr_subsys_0b72dbb98da668bbbc0cc46038b804e5}{
+\index{GrSubsys@{GrSubsys}!GetScreenWidth@{GetScreenWidth}}
+\index{GetScreenWidth@{GetScreenWidth}!GrSubsys@{GrSubsys}}
+\subsubsection[{GetScreenWidth}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrSubsys::GetScreenWidth () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_subsys_0b72dbb98da668bbbc0cc46038b804e5}
+
+
+
+
+Definition at line 39 of file GrSubsys.h.\hypertarget{class_gr_subsys_66edbd30a3f1d39b73eb00df33f89404}{
+\index{GrSubsys@{GrSubsys}!GetShadingQuality@{GetShadingQuality}}
+\index{GetShadingQuality@{GetShadingQuality}!GrSubsys@{GrSubsys}}
+\subsubsection[{GetShadingQuality}]{\setlength{\rightskip}{0pt plus 5cm}{\bf EGRQUALITY} GrSubsys::GetShadingQuality () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_subsys_66edbd30a3f1d39b73eb00df33f89404}
+
+
+
+
+Definition at line 52 of file GrSubsys.h.\hypertarget{class_gr_subsys_45b6a0acd149993f18e157414788ed8d}{
+\index{GrSubsys@{GrSubsys}!GetTexturingQuality@{GetTexturingQuality}}
+\index{GetTexturingQuality@{GetTexturingQuality}!GrSubsys@{GrSubsys}}
+\subsubsection[{GetTexturingQuality}]{\setlength{\rightskip}{0pt plus 5cm}{\bf EGRQUALITY} GrSubsys::GetTexturingQuality () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_subsys_45b6a0acd149993f18e157414788ed8d}
+
+
+
+
+Definition at line 51 of file GrSubsys.h.\hypertarget{class_gr_subsys_8550cea92945ba8f93d6fdbdaf6ee6bf}{
+\index{GrSubsys@{GrSubsys}!GetUberDXTCompression@{GetUberDXTCompression}}
+\index{GetUberDXTCompression@{GetUberDXTCompression}!GrSubsys@{GrSubsys}}
+\subsubsection[{GetUberDXTCompression}]{\setlength{\rightskip}{0pt plus 5cm}bool GrSubsys::GetUberDXTCompression () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_subsys_8550cea92945ba8f93d6fdbdaf6ee6bf}
+
+
+
+
+Definition at line 55 of file GrSubsys.h.\hypertarget{class_gr_subsys_3cfcbb972dde87822c868363146bf7ee}{
+\index{GrSubsys@{GrSubsys}!GetUberOverlaySupport@{GetUberOverlaySupport}}
+\index{GetUberOverlaySupport@{GetUberOverlaySupport}!GrSubsys@{GrSubsys}}
+\subsubsection[{GetUberOverlaySupport}]{\setlength{\rightskip}{0pt plus 5cm}bool GrSubsys::GetUberOverlaySupport () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_subsys_3cfcbb972dde87822c868363146bf7ee}
+
+
+
+
+Definition at line 56 of file GrSubsys.h.\hypertarget{class_gr_subsys_2ae640ed8f7efaa789b10091e33ab5a3}{
+\index{GrSubsys@{GrSubsys}!IssueCommand@{IssueCommand}}
+\index{IssueCommand@{IssueCommand}!GrSubsys@{GrSubsys}}
+\subsubsection[{IssueCommand}]{\setlength{\rightskip}{0pt plus 5cm}bool GrSubsys::IssueCommand (const {\bf tstring} \& {\em command})}}
+\label{class_gr_subsys_2ae640ed8f7efaa789b10091e33ab5a3}
+
+
+
+
+Definition at line 383 of file GrSubsys.cpp.\hypertarget{class_gr_subsys_dc45431cc61c9b21ff173c7f8bd1f578}{
+\index{GrSubsys@{GrSubsys}!PostContextReset@{PostContextReset}}
+\index{PostContextReset@{PostContextReset}!GrSubsys@{GrSubsys}}
+\subsubsection[{PostContextReset}]{\setlength{\rightskip}{0pt plus 5cm}void GrSubsys::PostContextReset (unsigned int {\em width}, \/  unsigned int {\em height})}}
+\label{class_gr_subsys_dc45431cc61c9b21ff173c7f8bd1f578}
+
+
+
+
+Definition at line 351 of file GrSubsys.cpp.\hypertarget{class_gr_subsys_1e99ac2bc9378e2170b3592327a368b5}{
+\index{GrSubsys@{GrSubsys}!PreContextReset@{PreContextReset}}
+\index{PreContextReset@{PreContextReset}!GrSubsys@{GrSubsys}}
+\subsubsection[{PreContextReset}]{\setlength{\rightskip}{0pt plus 5cm}void GrSubsys::PreContextReset ()}}
+\label{class_gr_subsys_1e99ac2bc9378e2170b3592327a368b5}
+
+
+
+
+Definition at line 326 of file GrSubsys.cpp.\hypertarget{class_gr_subsys_d20bc13ebade4221323d63b2925a9d00}{
+\index{GrSubsys@{GrSubsys}!Render@{Render}}
+\index{Render@{Render}!GrSubsys@{GrSubsys}}
+\subsubsection[{Render}]{\setlength{\rightskip}{0pt plus 5cm}void GrSubsys::Render (const {\bf GrCamera} $\ast$ {\em camera})}}
+\label{class_gr_subsys_d20bc13ebade4221323d63b2925a9d00}
+
+
+
+
+Definition at line 262 of file GrSubsys.cpp.\hypertarget{class_gr_subsys_374bd75973d46d7e9fabcc280e505b22}{
+\index{GrSubsys@{GrSubsys}!Reset@{Reset}}
+\index{Reset@{Reset}!GrSubsys@{GrSubsys}}
+\subsubsection[{Reset}]{\setlength{\rightskip}{0pt plus 5cm}void GrSubsys::Reset ()}}
+\label{class_gr_subsys_374bd75973d46d7e9fabcc280e505b22}
+
+
+
+
+Definition at line 318 of file GrSubsys.cpp.\hypertarget{class_gr_subsys_155c0e49f8e45159abf4df5359eb8d6a}{
+\index{GrSubsys@{GrSubsys}!Reset@{Reset}}
+\index{Reset@{Reset}!GrSubsys@{GrSubsys}}
+\subsubsection[{Reset}]{\setlength{\rightskip}{0pt plus 5cm}void GrSubsys::Reset (unsigned int {\em width}, \/  unsigned int {\em height})}}
+\label{class_gr_subsys_155c0e49f8e45159abf4df5359eb8d6a}
+
+
+
+
+Definition at line 310 of file GrSubsys.cpp.\hypertarget{class_gr_subsys_9522c885154f2fe8daa62cb8f48529ed}{
+\index{GrSubsys@{GrSubsys}!Resize@{Resize}}
+\index{Resize@{Resize}!GrSubsys@{GrSubsys}}
+\subsubsection[{Resize}]{\setlength{\rightskip}{0pt plus 5cm}void GrSubsys::Resize (unsigned int {\em width}, \/  unsigned int {\em height})}}
+\label{class_gr_subsys_9522c885154f2fe8daa62cb8f48529ed}
+
+
+
+
+Definition at line 269 of file GrSubsys.cpp.\hypertarget{class_gr_subsys_f22032c84937955ff0e23eb8b3632379}{
+\index{GrSubsys@{GrSubsys}!SetBrightness@{SetBrightness}}
+\index{SetBrightness@{SetBrightness}!GrSubsys@{GrSubsys}}
+\subsubsection[{SetBrightness}]{\setlength{\rightskip}{0pt plus 5cm}void GrSubsys::SetBrightness (float {\em brightness})}}
+\label{class_gr_subsys_f22032c84937955ff0e23eb8b3632379}
+
+
+
+
+Definition at line 203 of file GrSubsys.cpp.\hypertarget{class_gr_subsys_f53962ed44cf2234adf5e07b301adcc0}{
+\index{GrSubsys@{GrSubsys}!SetGamma@{SetGamma}}
+\index{SetGamma@{SetGamma}!GrSubsys@{GrSubsys}}
+\subsubsection[{SetGamma}]{\setlength{\rightskip}{0pt plus 5cm}void GrSubsys::SetGamma (float {\em gamma})}}
+\label{class_gr_subsys_f53962ed44cf2234adf5e07b301adcc0}
+
+
+
+
+Definition at line 191 of file GrSubsys.cpp.\hypertarget{class_gr_subsys_f116de3127fd9378c506fe73dbd1eb4d}{
+\index{GrSubsys@{GrSubsys}!SetHDREnable@{SetHDREnable}}
+\index{SetHDREnable@{SetHDREnable}!GrSubsys@{GrSubsys}}
+\subsubsection[{SetHDREnable}]{\setlength{\rightskip}{0pt plus 5cm}void GrSubsys::SetHDREnable (bool {\em enabled})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_subsys_f116de3127fd9378c506fe73dbd1eb4d}
+
+
+
+
+Definition at line 47 of file GrSubsys.h.\hypertarget{class_gr_subsys_c9626c59833220674cfc79155127947f}{
+\index{GrSubsys@{GrSubsys}!SetHDRQuality@{SetHDRQuality}}
+\index{SetHDRQuality@{SetHDRQuality}!GrSubsys@{GrSubsys}}
+\subsubsection[{SetHDRQuality}]{\setlength{\rightskip}{0pt plus 5cm}void GrSubsys::SetHDRQuality ({\bf EGRQUALITY} {\em quality})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_subsys_c9626c59833220674cfc79155127947f}
+
+
+
+
+Definition at line 46 of file GrSubsys.h.\hypertarget{class_gr_subsys_98502732472ab7e6ec14048fbd25d240}{
+\index{GrSubsys@{GrSubsys}!SetShadingQuality@{SetShadingQuality}}
+\index{SetShadingQuality@{SetShadingQuality}!GrSubsys@{GrSubsys}}
+\subsubsection[{SetShadingQuality}]{\setlength{\rightskip}{0pt plus 5cm}void GrSubsys::SetShadingQuality ({\bf EGRQUALITY} {\em quality})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_subsys_98502732472ab7e6ec14048fbd25d240}
+
+
+
+
+Definition at line 45 of file GrSubsys.h.\hypertarget{class_gr_subsys_7950bbebe8c3f42e7048aaedd61512eb}{
+\index{GrSubsys@{GrSubsys}!SetTexturingQuality@{SetTexturingQuality}}
+\index{SetTexturingQuality@{SetTexturingQuality}!GrSubsys@{GrSubsys}}
+\subsubsection[{SetTexturingQuality}]{\setlength{\rightskip}{0pt plus 5cm}void GrSubsys::SetTexturingQuality ({\bf EGRQUALITY} {\em quality})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_subsys_7950bbebe8c3f42e7048aaedd61512eb}
+
+
+
+
+Definition at line 44 of file GrSubsys.h.\hypertarget{class_gr_subsys_4def4c86d374f56b9d193fa851bcf8b5}{
+\index{GrSubsys@{GrSubsys}!SetUberDXTCompression@{SetUberDXTCompression}}
+\index{SetUberDXTCompression@{SetUberDXTCompression}!GrSubsys@{GrSubsys}}
+\subsubsection[{SetUberDXTCompression}]{\setlength{\rightskip}{0pt plus 5cm}void GrSubsys::SetUberDXTCompression (bool {\em enabled})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_subsys_4def4c86d374f56b9d193fa851bcf8b5}
+
+
+
+
+Definition at line 48 of file GrSubsys.h.\hypertarget{class_gr_subsys_84c66e7b8a09731997e82f7f743cb625}{
+\index{GrSubsys@{GrSubsys}!SetUberOverlaySupport@{SetUberOverlaySupport}}
+\index{SetUberOverlaySupport@{SetUberOverlaySupport}!GrSubsys@{GrSubsys}}
+\subsubsection[{SetUberOverlaySupport}]{\setlength{\rightskip}{0pt plus 5cm}void GrSubsys::SetUberOverlaySupport (bool {\em enabled})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_subsys_84c66e7b8a09731997e82f7f743cb625}
+
+
+
+
+Definition at line 49 of file GrSubsys.h.\hypertarget{class_gr_subsys_fef54c85657d029366011e1731c5f71e}{
+\index{GrSubsys@{GrSubsys}!TakeScreenshot@{TakeScreenshot}}
+\index{TakeScreenshot@{TakeScreenshot}!GrSubsys@{GrSubsys}}
+\subsubsection[{TakeScreenshot}]{\setlength{\rightskip}{0pt plus 5cm}void GrSubsys::TakeScreenshot (const char $\ast$ {\em fileName})}}
+\label{class_gr_subsys_fef54c85657d029366011e1731c5f71e}
+
+
+
+
+Definition at line 215 of file GrSubsys.cpp.\hypertarget{class_gr_subsys_9881b11bf389779155d144a2a78d6dd2}{
+\index{GrSubsys@{GrSubsys}!Update@{Update}}
+\index{Update@{Update}!GrSubsys@{GrSubsys}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void GrSubsys::Update (unsigned int {\em timeDelta}, \/  unsigned int {\em sysTimeDelta})}}
+\label{class_gr_subsys_9881b11bf389779155d144a2a78d6dd2}
+
+
+
+
+Definition at line 246 of file GrSubsys.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_subsys_8h}{GrSubsys.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_subsys_8cpp}{GrSubsys.cpp}\end{CompactItemize}

@@ -1,0 +1,174 @@
+\hypertarget{_u_t_server_8cpp}{
+\section{C:/Bootstrap/ProjectBX/Engine/UberTexture/UTServer.cpp File Reference}
+\label{_u_t_server_8cpp}\index{C:/Bootstrap/ProjectBX/Engine/UberTexture/UTServer.cpp@{C:/Bootstrap/ProjectBX/Engine/UberTexture/UTServer.cpp}}
+}
+{\tt \#include \char`\"{}ubertexture\_\-afx.h\char`\"{}}\par
+{\tt \#include \char`\"{}UTServer.h\char`\"{}}\par
+{\tt \#include \char`\"{}UTNetUtils.h\char`\"{}}\par
+{\tt \#include \char`\"{}UTConfig.h\char`\"{}}\par
+{\tt \#include \char`\"{}UTMessage.h\char`\"{}}\par
+{\tt \#include \char`\"{}UTX.h\char`\"{}}\par
+{\tt \#include \char`\"{}common\_\-afx.h\char`\"{}}\par
+{\tt \#include $<$windows.h$>$}\par
+{\tt \#include $<$winsock.h$>$}\par
+{\tt \#include $<$process.h$>$}\par
+{\tt \#include $<$mmsystem.h$>$}\par
+{\tt \#include $<$vector$>$}\par
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+struct \hyperlink{struct_s_connection}{SConnection}
+\item 
+struct \hyperlink{struct_s_stream_entry}{SStreamEntry}
+\end{CompactItemize}
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \hyperlink{_u_t_server_8cpp_912c4d08b68350084d23c235e3ad98a6}{SafeCloseHandle}(\hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x})~\{ if ( \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x} ) \{ CloseHandle( \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x} ); \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x} = 0; \} \}
+\item 
+\#define \hyperlink{_u_t_server_8cpp_07b39b4ed4062424dece5d854ca651a7}{PROFILE\_\-UBERSERVER}~0
+\item 
+\#define \hyperlink{_u_t_server_8cpp_b739d789b5987fba4cf5d10d2c419010}{PROFILE\_\-MULTI\_\-READ}~0
+\item 
+\#define \hyperlink{_u_t_server_8cpp_062369491b5189e53dfdd8e1229a8ece}{STRING\_\-BUFFER\_\-LEN}~32768
+\item 
+\#define \hyperlink{_u_t_server_8cpp_d226cc7616c4a7daea583cfc5a6ba125}{IN\_\-QUEUE\_\-SIZE}~32
+\item 
+\#define \hyperlink{_u_t_server_8cpp_892ac4d1524dd19a11ebb8d62a707275}{OUT\_\-QUEUE\_\-SIZE}~64
+\item 
+\#define \hyperlink{_u_t_server_8cpp_90ca3ecd3c34932d327ab4b7007bb082}{PERF\_\-TIMING\_\-UPDATE\_\-SPEED}~1000
+\item 
+\#define \hyperlink{_u_t_server_8cpp_d4453c94aa8dc2a4b1d5eff851b2ffd0}{PERF\_\-TIMING\_\-PRINT}~0
+\item 
+\#define \hyperlink{_u_t_server_8cpp_caf975981331f018f9daf89d313fb0d1}{SEND\_\-BUFFER\_\-SIZE}~1048576
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+void \hyperlink{_u_t_server_8cpp_079082443d898ec6b2d0c49eabc882a6}{UTServeThreadCreate} (const char $\ast$workingFolder, unsigned short port, bool localOnly)
+\item 
+void \hyperlink{_u_t_server_8cpp_62792c303e7c9d0863d4289834dadc94}{UTServeThreadClose} ()
+\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+\hyperlink{_u_t_net_utils_8h_7d68bb01e985882c1c12dbc3b0468c9a}{SOCKET} \hyperlink{_u_t_server_8cpp_1a1428ffa5e46169b5423c08ec40d10a}{\_\-primarySocket} = INVALID\_\-SOCKET
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_u_t_server_8cpp_d226cc7616c4a7daea583cfc5a6ba125}{
+\index{UTServer.cpp@{UTServer.cpp}!IN\_\-QUEUE\_\-SIZE@{IN\_\-QUEUE\_\-SIZE}}
+\index{IN\_\-QUEUE\_\-SIZE@{IN\_\-QUEUE\_\-SIZE}!UTServer.cpp@{UTServer.cpp}}
+\subsubsection[{IN\_\-QUEUE\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define IN\_\-QUEUE\_\-SIZE~32}}
+\label{_u_t_server_8cpp_d226cc7616c4a7daea583cfc5a6ba125}
+
+
+
+
+Definition at line 40 of file UTServer.cpp.\hypertarget{_u_t_server_8cpp_892ac4d1524dd19a11ebb8d62a707275}{
+\index{UTServer.cpp@{UTServer.cpp}!OUT\_\-QUEUE\_\-SIZE@{OUT\_\-QUEUE\_\-SIZE}}
+\index{OUT\_\-QUEUE\_\-SIZE@{OUT\_\-QUEUE\_\-SIZE}!UTServer.cpp@{UTServer.cpp}}
+\subsubsection[{OUT\_\-QUEUE\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define OUT\_\-QUEUE\_\-SIZE~64}}
+\label{_u_t_server_8cpp_892ac4d1524dd19a11ebb8d62a707275}
+
+
+
+
+Definition at line 41 of file UTServer.cpp.\hypertarget{_u_t_server_8cpp_d4453c94aa8dc2a4b1d5eff851b2ffd0}{
+\index{UTServer.cpp@{UTServer.cpp}!PERF\_\-TIMING\_\-PRINT@{PERF\_\-TIMING\_\-PRINT}}
+\index{PERF\_\-TIMING\_\-PRINT@{PERF\_\-TIMING\_\-PRINT}!UTServer.cpp@{UTServer.cpp}}
+\subsubsection[{PERF\_\-TIMING\_\-PRINT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PERF\_\-TIMING\_\-PRINT~0}}
+\label{_u_t_server_8cpp_d4453c94aa8dc2a4b1d5eff851b2ffd0}
+
+
+
+
+Definition at line 45 of file UTServer.cpp.\hypertarget{_u_t_server_8cpp_90ca3ecd3c34932d327ab4b7007bb082}{
+\index{UTServer.cpp@{UTServer.cpp}!PERF\_\-TIMING\_\-UPDATE\_\-SPEED@{PERF\_\-TIMING\_\-UPDATE\_\-SPEED}}
+\index{PERF\_\-TIMING\_\-UPDATE\_\-SPEED@{PERF\_\-TIMING\_\-UPDATE\_\-SPEED}!UTServer.cpp@{UTServer.cpp}}
+\subsubsection[{PERF\_\-TIMING\_\-UPDATE\_\-SPEED}]{\setlength{\rightskip}{0pt plus 5cm}\#define PERF\_\-TIMING\_\-UPDATE\_\-SPEED~1000}}
+\label{_u_t_server_8cpp_90ca3ecd3c34932d327ab4b7007bb082}
+
+
+
+
+Definition at line 44 of file UTServer.cpp.\hypertarget{_u_t_server_8cpp_b739d789b5987fba4cf5d10d2c419010}{
+\index{UTServer.cpp@{UTServer.cpp}!PROFILE\_\-MULTI\_\-READ@{PROFILE\_\-MULTI\_\-READ}}
+\index{PROFILE\_\-MULTI\_\-READ@{PROFILE\_\-MULTI\_\-READ}!UTServer.cpp@{UTServer.cpp}}
+\subsubsection[{PROFILE\_\-MULTI\_\-READ}]{\setlength{\rightskip}{0pt plus 5cm}\#define PROFILE\_\-MULTI\_\-READ~0}}
+\label{_u_t_server_8cpp_b739d789b5987fba4cf5d10d2c419010}
+
+
+
+
+Definition at line 36 of file UTServer.cpp.\hypertarget{_u_t_server_8cpp_07b39b4ed4062424dece5d854ca651a7}{
+\index{UTServer.cpp@{UTServer.cpp}!PROFILE\_\-UBERSERVER@{PROFILE\_\-UBERSERVER}}
+\index{PROFILE\_\-UBERSERVER@{PROFILE\_\-UBERSERVER}!UTServer.cpp@{UTServer.cpp}}
+\subsubsection[{PROFILE\_\-UBERSERVER}]{\setlength{\rightskip}{0pt plus 5cm}\#define PROFILE\_\-UBERSERVER~0}}
+\label{_u_t_server_8cpp_07b39b4ed4062424dece5d854ca651a7}
+
+
+
+
+Definition at line 35 of file UTServer.cpp.\hypertarget{_u_t_server_8cpp_912c4d08b68350084d23c235e3ad98a6}{
+\index{UTServer.cpp@{UTServer.cpp}!SafeCloseHandle@{SafeCloseHandle}}
+\index{SafeCloseHandle@{SafeCloseHandle}!UTServer.cpp@{UTServer.cpp}}
+\subsubsection[{SafeCloseHandle}]{\setlength{\rightskip}{0pt plus 5cm}\#define SafeCloseHandle({\bf x})~\{ if ( {\bf x} ) \{ CloseHandle( {\bf x} ); {\bf x} = 0; \} \}}}
+\label{_u_t_server_8cpp_912c4d08b68350084d23c235e3ad98a6}
+
+
+
+
+Definition at line 32 of file UTServer.cpp.\hypertarget{_u_t_server_8cpp_caf975981331f018f9daf89d313fb0d1}{
+\index{UTServer.cpp@{UTServer.cpp}!SEND\_\-BUFFER\_\-SIZE@{SEND\_\-BUFFER\_\-SIZE}}
+\index{SEND\_\-BUFFER\_\-SIZE@{SEND\_\-BUFFER\_\-SIZE}!UTServer.cpp@{UTServer.cpp}}
+\subsubsection[{SEND\_\-BUFFER\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define SEND\_\-BUFFER\_\-SIZE~1048576}}
+\label{_u_t_server_8cpp_caf975981331f018f9daf89d313fb0d1}
+
+
+
+
+Definition at line 46 of file UTServer.cpp.\hypertarget{_u_t_server_8cpp_062369491b5189e53dfdd8e1229a8ece}{
+\index{UTServer.cpp@{UTServer.cpp}!STRING\_\-BUFFER\_\-LEN@{STRING\_\-BUFFER\_\-LEN}}
+\index{STRING\_\-BUFFER\_\-LEN@{STRING\_\-BUFFER\_\-LEN}!UTServer.cpp@{UTServer.cpp}}
+\subsubsection[{STRING\_\-BUFFER\_\-LEN}]{\setlength{\rightskip}{0pt plus 5cm}\#define STRING\_\-BUFFER\_\-LEN~32768}}
+\label{_u_t_server_8cpp_062369491b5189e53dfdd8e1229a8ece}
+
+
+
+
+Definition at line 39 of file UTServer.cpp.
+
+\subsection{Function Documentation}
+\hypertarget{_u_t_server_8cpp_62792c303e7c9d0863d4289834dadc94}{
+\index{UTServer.cpp@{UTServer.cpp}!UTServeThreadClose@{UTServeThreadClose}}
+\index{UTServeThreadClose@{UTServeThreadClose}!UTServer.cpp@{UTServer.cpp}}
+\subsubsection[{UTServeThreadClose}]{\setlength{\rightskip}{0pt plus 5cm}void UTServeThreadClose ()}}
+\label{_u_t_server_8cpp_62792c303e7c9d0863d4289834dadc94}
+
+
+
+
+Definition at line 200 of file UTServer.cpp.\hypertarget{_u_t_server_8cpp_079082443d898ec6b2d0c49eabc882a6}{
+\index{UTServer.cpp@{UTServer.cpp}!UTServeThreadCreate@{UTServeThreadCreate}}
+\index{UTServeThreadCreate@{UTServeThreadCreate}!UTServer.cpp@{UTServer.cpp}}
+\subsubsection[{UTServeThreadCreate}]{\setlength{\rightskip}{0pt plus 5cm}void UTServeThreadCreate (const char $\ast$ {\em workingFolder}, \/  unsigned short {\em port}, \/  bool {\em localOnly})}}
+\label{_u_t_server_8cpp_079082443d898ec6b2d0c49eabc882a6}
+
+
+
+
+Definition at line 148 of file UTServer.cpp.
+
+\subsection{Variable Documentation}
+\hypertarget{_u_t_server_8cpp_1a1428ffa5e46169b5423c08ec40d10a}{
+\index{UTServer.cpp@{UTServer.cpp}!\_\-primarySocket@{\_\-primarySocket}}
+\index{\_\-primarySocket@{\_\-primarySocket}!UTServer.cpp@{UTServer.cpp}}
+\subsubsection[{\_\-primarySocket}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SOCKET} {\bf \_\-primarySocket} = INVALID\_\-SOCKET}}
+\label{_u_t_server_8cpp_1a1428ffa5e46169b5423c08ec40d10a}
+
+
+
+
+Definition at line 75 of file UTServer.cpp.

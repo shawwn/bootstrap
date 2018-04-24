@@ -1,0 +1,52 @@
+\hypertarget{_compress_8cpp}{
+\section{C:/Bootstrap/ProjectBX/Engine/Test/Compress.cpp File Reference}
+\label{_compress_8cpp}\index{C:/Bootstrap/ProjectBX/Engine/Test/Compress.cpp@{C:/Bootstrap/ProjectBX/Engine/Test/Compress.cpp}}
+}
+{\tt \#include \char`\"{}test\_\-afx.h\char`\"{}}\par
+{\tt \#include \char`\"{}Compress.h\char`\"{}}\par
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \hyperlink{_compress_8cpp_b36dad61ad405dcbc815040c466a441f}{ALIGN\_\-ADDR}(\hyperlink{glext__bak_8h_b9d96bf51d75cea2751acf016110f070}{addr}, \hyperlink{glext__bak_8h_c55adc720a3098c1b454d2a4647f4361}{start}, \hyperlink{glext__bak_8h_5612bf87afe1aa200ad412866de45c1f}{mask})~( \hyperlink{glext__bak_8h_c55adc720a3098c1b454d2a4647f4361}{start} + ( ( ( size\_\-t )\hyperlink{glext__bak_8h_b9d96bf51d75cea2751acf016110f070}{addr} - ( size\_\-t )\hyperlink{glext__bak_8h_c55adc720a3098c1b454d2a4647f4361}{start} ) \& \hyperlink{glext__bak_8h_5612bf87afe1aa200ad412866de45c1f}{mask} ) )
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+void \hyperlink{_compress_8cpp_f2d9e1c3a8fb5d45d9ba771c44a3a769}{Compress} (void $\ast$dstData, unsigned int \&dstSize, const void $\ast$srcData, unsigned int srcSize, void $\ast$workspace)
+\item 
+void \hyperlink{_compress_8cpp_1bab352839469de8453c05c0fba881f7}{Decompress} (void $\ast$dstData, unsigned int \&dstSize, const void $\ast$srcData, unsigned int srcSize)
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_compress_8cpp_b36dad61ad405dcbc815040c466a441f}{
+\index{Compress.cpp@{Compress.cpp}!ALIGN\_\-ADDR@{ALIGN\_\-ADDR}}
+\index{ALIGN\_\-ADDR@{ALIGN\_\-ADDR}!Compress.cpp@{Compress.cpp}}
+\subsubsection[{ALIGN\_\-ADDR}]{\setlength{\rightskip}{0pt plus 5cm}\#define ALIGN\_\-ADDR({\bf addr}, \/  {\bf start}, \/  {\bf mask})~( {\bf start} + ( ( ( size\_\-t ){\bf addr} - ( size\_\-t ){\bf start} ) \& {\bf mask} ) )}}
+\label{_compress_8cpp_b36dad61ad405dcbc815040c466a441f}
+
+
+
+
+Definition at line 6 of file Compress.cpp.
+
+\subsection{Function Documentation}
+\hypertarget{_compress_8cpp_f2d9e1c3a8fb5d45d9ba771c44a3a769}{
+\index{Compress.cpp@{Compress.cpp}!Compress@{Compress}}
+\index{Compress@{Compress}!Compress.cpp@{Compress.cpp}}
+\subsubsection[{Compress}]{\setlength{\rightskip}{0pt plus 5cm}void Compress (void $\ast$ {\em dstData}, \/  unsigned int \& {\em dstSize}, \/  const void $\ast$ {\em srcData}, \/  unsigned int {\em srcSize}, \/  void $\ast$ {\em workspace})}}
+\label{_compress_8cpp_f2d9e1c3a8fb5d45d9ba771c44a3a769}
+
+
+
+
+Definition at line 10 of file Compress.cpp.\hypertarget{_compress_8cpp_1bab352839469de8453c05c0fba881f7}{
+\index{Compress.cpp@{Compress.cpp}!Decompress@{Decompress}}
+\index{Decompress@{Decompress}!Compress.cpp@{Compress.cpp}}
+\subsubsection[{Decompress}]{\setlength{\rightskip}{0pt plus 5cm}void Decompress (void $\ast$ {\em dstData}, \/  unsigned int \& {\em dstSize}, \/  const void $\ast$ {\em srcData}, \/  unsigned int {\em srcSize})}}
+\label{_compress_8cpp_1bab352839469de8453c05c0fba881f7}
+
+
+
+
+Definition at line 92 of file Compress.cpp.

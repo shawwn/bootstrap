@@ -1,0 +1,99 @@
+\hypertarget{_c_1_2_bootstrap_2_project_b_x_2_engine_2_common_2_irr_x_m_l_2irr_x_m_l_8h-example}{
+\section{C:/Bootstrap/ProjectBX/Engine/Common/IrrXML/irrXML.h}
+}
+irrXML is intended to be a high speed and easy-to-use XML Parser for C++, and this documentation is an important part of it. If you have any questions or suggestions, just send a email to the author of the engine, Nikolaus Gebhardt (niko (at) irrlicht3d.org). For more informations about this parser, see \hyperlink{irrXML.h_history}{History}.\hypertarget{C:/Bootstrap/ProjectBX/Engine/Common/IrrXML/irrXML.h_features}{}\subsection{Features}\label{C:/Bootstrap/ProjectBX/Engine/Common/IrrXML/irrXML.h_features}
+irrXML provides forward-only, read-only access to a stream of non validated XML data. It was fully implemented by Nikolaus Gebhardt. Its current features are:
+
+\begin{itemize}
+\item It it fast as lighting and has very low memory usage. It was developed with the intention of being used in 3D games, as it already has been.\item irrXML is very small: It only consists of 60 KB of code and can be added easily to your existing project.\item Of course, it is platform independent and works with lots of compilers.\item It is able to parse ASCII, UTF-8, UTF-16 and UTF-32 text files, both in little and big endian format.\item Independent of the input file format, the parser can return all strings in ASCII, UTF-8, UTF-16 and UTF-32 format.\item With its optional file access abstraction it has the advantage that it can read not only from files but from any type of data (memory, network, ...). For example when used with the Irrlicht Engine, it directly reads from compressed .zip files.\item Just like the Irrlicht Engine for which it was originally created, it is extremely easy to use.\item It has no external dependencies, it does not even need the STL.\end{itemize}
+
+
+Although irrXML has some strenghts, it currently also has the following limitations:
+
+\begin{itemize}
+\item The input xml file is not validated and assumed to be correct.\end{itemize}
+\hypertarget{C:/Bootstrap/ProjectBX/Engine/Common/IrrXML/irrXML.h_irrxmlexample}{}\subsection{Example}\label{C:/Bootstrap/ProjectBX/Engine/Common/IrrXML/irrXML.h_irrxmlexample}
+The following code demonstrates the basic usage of irrXML. A simple xml file like this is parsed: 
+
+\begin{Code}\begin{verbatim}        <?xml version="1.0"?>
+        <config>
+                <!-- This is a config file for the mesh viewer -->
+                <model file="dwarf.dea" />
+                <messageText caption="Irrlicht Engine Mesh Viewer">
+                Welcome to the Mesh Viewer of the &quot;Irrlicht Engine&quot;.
+                </messageText>
+        </config>
+\end{verbatim}
+\end{Code}
+
+
+
+The code for parsing this file would look like this: 
+
+\begin{Code}\begin{verbatim}        #include <irrXML.h>
+        using namespace irr; // irrXML is located in the namespace irr::io
+        using namespace io;
+
+        #include <string> // we use STL strings to store data in this example
+
+        void main()
+        {
+                // create the reader using one of the factory functions
+
+                IrrXMLReader* xml = createIrrXMLReader("config.xml");
+
+                // strings for storing the data we want to get out of the file
+                std::string modelFile;
+                std::string messageText;
+                std::string caption;
+
+                // parse the file until end reached
+
+                while(xml && xml->read())
+                {
+                        switch(xml->getNodeType())
+                        {
+                        case EXN_TEXT:
+                                // in this xml file, the only text which occurs is the messageText
+                                messageText = xml->getNodeData();
+                                break;
+                        case EXN_ELEMENT:
+                                {
+                                        if (!strcmp("model", xml->getNodeName()))
+                                                modelFile = xml->getAttributeValue("file");
+                                        else
+                                        if (!strcmp("messageText", xml->getNodeName()))
+                                                caption = xml->getAttributeValue("caption");
+                                }
+                                break;
+                        }
+                }
+
+                // delete the xml parser after usage
+                delete xml;
+        }
+\end{verbatim}
+\end{Code}
+
+\hypertarget{C:/Bootstrap/ProjectBX/Engine/Common/IrrXML/irrXML.h_howto}{}\subsection{How to use}\label{C:/Bootstrap/ProjectBX/Engine/Common/IrrXML/irrXML.h_howto}
+Simply add the source files in the /src directory of irrXML to your project. Done.\hypertarget{C:/Bootstrap/ProjectBX/Engine/Common/IrrXML/irrXML.h_license}{}\subsection{License}\label{C:/Bootstrap/ProjectBX/Engine/Common/IrrXML/irrXML.h_license}
+The irrXML license is based on the zlib license. Basicly, this means you can do with irrXML whatever you want:
+
+Copyright (C) 2002-2005 Nikolaus Gebhardt
+
+This software is provided 'as-is', without any express or implied warranty. In no event will the authors be held liable for any damages arising from the use of this software.
+
+Permission is granted to anyone to use this software for any purpose, including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions:
+
+1. The origin of this software must not be misrepresented; you must not claim that you wrote the original software. If you use this software in a product, an acknowledgment in the product documentation would be appreciated but is not required.
+
+2. Altered source versions must be plainly marked as such, and must not be misrepresented as being the original software.
+
+3. This notice may not be removed or altered from any source distribution.\hypertarget{C:/Bootstrap/ProjectBX/Engine/Common/IrrXML/irrXML.h_history}{}\subsection{History}\label{C:/Bootstrap/ProjectBX/Engine/Common/IrrXML/irrXML.h_history}
+As lots of references in this documentation and the source show, this xml parser has originally been a part of the \href{http://irrlicht.sourceforge.net}{\tt Irrlicht Engine}. But because the parser has become very useful with the latest release, people asked for a separate version of it, to be able to use it in non Irrlicht projects. With irrXML 1.0, this has now been done.
+
+
+
+\begin{DocInclude}\begin{verbatim}\end{verbatim}
+\end{DocInclude}
+ 

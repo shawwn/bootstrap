@@ -1,0 +1,1908 @@
+\hypertarget{_g_l_u_8h}{
+\section{C:/Bootstrap/ProjectBX/Engine/Graphics/GLU.h File Reference}
+\label{_g_l_u_8h}\index{C:/Bootstrap/ProjectBX/Engine/Graphics/GLU.h@{C:/Bootstrap/ProjectBX/Engine/Graphics/GLU.h}}
+}
+{\tt \#include $<$GL/gl.h$>$}\par
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \hyperlink{_g_l_u_8h_19fb1b27a3efb784a97dcee2c3e71aed}{\_\-\_\-glu\_\-h\_\-\_\-}
+\item 
+\#define \hyperlink{_g_l_u_8h_16338f098fce57cb6d141752bc04c3da}{\_\-\_\-GLU\_\-H\_\-\_\-}
+\item 
+\#define \hyperlink{_g_l_u_8h_ea80a2795b4e5fd67ca480a0dfe1b1fe}{gluErrorStringWIN}(errCode)~( ( LPCWSTR ) gluErrorString( errCode ) )
+\item 
+\#define \hyperlink{_g_l_u_8h_5f05a9efbfbaa9dfcab9c996b8963a7c}{GLU\_\-VERSION\_\-1\_\-1}~1
+\item 
+\#define \hyperlink{_g_l_u_8h_70c5c62d2201b6f1fd995f71769850ec}{GLU\_\-VERSION\_\-1\_\-2}~1
+\item 
+\#define \hyperlink{_g_l_u_8h_107445469c3c6a6933cad7f1961e6574}{GLU\_\-INVALID\_\-ENUM}~100900
+\item 
+\#define \hyperlink{_g_l_u_8h_fc9a5aa36627cbd5dc2c58462307c509}{GLU\_\-INVALID\_\-VALUE}~100901
+\item 
+\#define \hyperlink{_g_l_u_8h_e188a4ef44029a16dd30469a2ba952c7}{GLU\_\-OUT\_\-OF\_\-MEMORY}~100902
+\item 
+\#define \hyperlink{_g_l_u_8h_1aa4ff5206972899394ef3afd747ed3e}{GLU\_\-INCOMPATIBLE\_\-GL\_\-VERSION}~100903
+\item 
+\#define \hyperlink{_g_l_u_8h_e4d9674a8e0e69c847db49bcd7ec34dc}{GLU\_\-VERSION}~100800
+\item 
+\#define \hyperlink{_g_l_u_8h_dd0af769f9ce55c8cf7ff8c7a113ab2a}{GLU\_\-EXTENSIONS}~100801
+\item 
+\#define \hyperlink{_g_l_u_8h_1e9978cac957a14b03b9a95949da3605}{GLU\_\-TRUE}~GL\_\-TRUE
+\item 
+\#define \hyperlink{_g_l_u_8h_d00464d4f93848420066edcc07f9f5a8}{GLU\_\-FALSE}~GL\_\-FALSE
+\item 
+\#define \hyperlink{_g_l_u_8h_0c478dd515aa749a029cfb834503020d}{GLU\_\-SMOOTH}~100000
+\item 
+\#define \hyperlink{_g_l_u_8h_214b3dce6ad63fdfee4b2de1a8b7a7e3}{GLU\_\-FLAT}~100001
+\item 
+\#define \hyperlink{_g_l_u_8h_23ba1c967223429aa5a8ed72f100fd69}{GLU\_\-NONE}~100002
+\item 
+\#define \hyperlink{_g_l_u_8h_045641151aa5ded8ece02bcd25c4e60e}{GLU\_\-POINT}~100010
+\item 
+\#define \hyperlink{_g_l_u_8h_aaaee2be8eefaeb5cf9346c2997e9661}{GLU\_\-LINE}~100011
+\item 
+\#define \hyperlink{_g_l_u_8h_db6674fd5a6fd19a4229c0dcb29abaad}{GLU\_\-FILL}~100012
+\item 
+\#define \hyperlink{_g_l_u_8h_9ff4607f7b16091dec274ed723cd2c30}{GLU\_\-SILHOUETTE}~100013
+\item 
+\#define \hyperlink{_g_l_u_8h_023a2f5205994b8bebacba9c584beb45}{GLU\_\-OUTSIDE}~100020
+\item 
+\#define \hyperlink{_g_l_u_8h_9adb29408dba0f9f4b838ca7bfe1740d}{GLU\_\-INSIDE}~100021
+\item 
+\#define \hyperlink{_g_l_u_8h_deeea517eda7978cdc34294f2b9b24a6}{GLU\_\-TESS\_\-MAX\_\-COORD}~1.0e150
+\item 
+\#define \hyperlink{_g_l_u_8h_6e83a83a1e821171f61890b6a1e4415c}{GLU\_\-TESS\_\-WINDING\_\-RULE}~100140
+\item 
+\#define \hyperlink{_g_l_u_8h_11ff3ac7e21e23e824f1edadbe650c0c}{GLU\_\-TESS\_\-BOUNDARY\_\-ONLY}~100141
+\item 
+\#define \hyperlink{_g_l_u_8h_95fd66e8ddac85bc30a722675b2b1e60}{GLU\_\-TESS\_\-TOLERANCE}~100142
+\item 
+\#define \hyperlink{_g_l_u_8h_a1746cdfda16da9215a3bfee49e4c430}{GLU\_\-TESS\_\-WINDING\_\-ODD}~100130
+\item 
+\#define \hyperlink{_g_l_u_8h_0b467e8a63b8084f1ed4ef2edf0c0a70}{GLU\_\-TESS\_\-WINDING\_\-NONZERO}~100131
+\item 
+\#define \hyperlink{_g_l_u_8h_0e096dbb0182d6bf29efbcccd7988953}{GLU\_\-TESS\_\-WINDING\_\-POSITIVE}~100132
+\item 
+\#define \hyperlink{_g_l_u_8h_448b386a6eb0dafc79a73261465f3a37}{GLU\_\-TESS\_\-WINDING\_\-NEGATIVE}~100133
+\item 
+\#define \hyperlink{_g_l_u_8h_fd53ee516e6424d8fc53066782c61239}{GLU\_\-TESS\_\-WINDING\_\-ABS\_\-GEQ\_\-TWO}~100134
+\item 
+\#define \hyperlink{_g_l_u_8h_a81cca2ef5c3ac7dd8cffb29b7917479}{GLU\_\-TESS\_\-BEGIN}~100100
+\item 
+\#define \hyperlink{_g_l_u_8h_0de05a8802a26295e3c66b4e0f0db539}{GLU\_\-TESS\_\-VERTEX}~100101
+\item 
+\#define \hyperlink{_g_l_u_8h_5f7b7ca47e62203406116509994b4507}{GLU\_\-TESS\_\-END}~100102
+\item 
+\#define \hyperlink{_g_l_u_8h_bd12e5af1742322c20f780b96356a134}{GLU\_\-TESS\_\-ERROR}~100103
+\item 
+\#define \hyperlink{_g_l_u_8h_71e2881a1c341439918b88af7424afd6}{GLU\_\-TESS\_\-EDGE\_\-FLAG}~100104
+\item 
+\#define \hyperlink{_g_l_u_8h_bb1f5d54021c03360c1682a59e41c555}{GLU\_\-TESS\_\-COMBINE}~100105
+\item 
+\#define \hyperlink{_g_l_u_8h_1e7dcb5e30811e1883ad4fb4bdc53099}{GLU\_\-TESS\_\-BEGIN\_\-DATA}~100106
+\item 
+\#define \hyperlink{_g_l_u_8h_a59813f82fcd03d0b81c3de0d6afe60c}{GLU\_\-TESS\_\-VERTEX\_\-DATA}~100107
+\item 
+\#define \hyperlink{_g_l_u_8h_4f7e648481e8e3a3e753cc01c66b56ab}{GLU\_\-TESS\_\-END\_\-DATA}~100108
+\item 
+\#define \hyperlink{_g_l_u_8h_f2df4b5e08ac813f3fa98cde7a4a7180}{GLU\_\-TESS\_\-ERROR\_\-DATA}~100109
+\item 
+\#define \hyperlink{_g_l_u_8h_985a59a41182bc8033caacdd0a8c4465}{GLU\_\-TESS\_\-EDGE\_\-FLAG\_\-DATA}~100110
+\item 
+\#define \hyperlink{_g_l_u_8h_21ef34b0d19eb4641eb6bd5cc3b087a3}{GLU\_\-TESS\_\-COMBINE\_\-DATA}~100111
+\item 
+\#define \hyperlink{_g_l_u_8h_5fc77a56e7cef85b38e0a9c0afaf4507}{GLU\_\-TESS\_\-ERROR1}~100151
+\item 
+\#define \hyperlink{_g_l_u_8h_a17dcf37427471cff5223e610d9c8264}{GLU\_\-TESS\_\-ERROR2}~100152
+\item 
+\#define \hyperlink{_g_l_u_8h_4207936e5fcf6a61bfde4178dc2407d2}{GLU\_\-TESS\_\-ERROR3}~100153
+\item 
+\#define \hyperlink{_g_l_u_8h_aa07074f540484997de25e23e47ee083}{GLU\_\-TESS\_\-ERROR4}~100154
+\item 
+\#define \hyperlink{_g_l_u_8h_48c1413c62308e77d47e7f01781a0501}{GLU\_\-TESS\_\-ERROR5}~100155
+\item 
+\#define \hyperlink{_g_l_u_8h_edf6eb03165035584e308c295a8366f0}{GLU\_\-TESS\_\-ERROR6}~100156
+\item 
+\#define \hyperlink{_g_l_u_8h_1fb8ca60ab25adae8e1ec159ca0ae131}{GLU\_\-TESS\_\-ERROR7}~100157
+\item 
+\#define \hyperlink{_g_l_u_8h_76e30d1e14037277e6710086a86a0c18}{GLU\_\-TESS\_\-ERROR8}~100158
+\item 
+\#define \hyperlink{_g_l_u_8h_c904aa78d662ee038a3e743ce4f8b61b}{GLU\_\-TESS\_\-MISSING\_\-BEGIN\_\-POLYGON}~GLU\_\-TESS\_\-ERROR1
+\item 
+\#define \hyperlink{_g_l_u_8h_2991ebeae1430af30ca377c620271fd8}{GLU\_\-TESS\_\-MISSING\_\-BEGIN\_\-CONTOUR}~GLU\_\-TESS\_\-ERROR2
+\item 
+\#define \hyperlink{_g_l_u_8h_e21f2bc14f880c74f2573c44a264757b}{GLU\_\-TESS\_\-MISSING\_\-END\_\-POLYGON}~GLU\_\-TESS\_\-ERROR3
+\item 
+\#define \hyperlink{_g_l_u_8h_8d00d413ff007957f342183c3d4d09f8}{GLU\_\-TESS\_\-MISSING\_\-END\_\-CONTOUR}~GLU\_\-TESS\_\-ERROR4
+\item 
+\#define \hyperlink{_g_l_u_8h_a39f4c24ac877334fcc144dda403502f}{GLU\_\-TESS\_\-COORD\_\-TOO\_\-LARGE}~GLU\_\-TESS\_\-ERROR5
+\item 
+\#define \hyperlink{_g_l_u_8h_a8dde6e717ede12dbf6acde347cc6a40}{GLU\_\-TESS\_\-NEED\_\-COMBINE\_\-CALLBACK}~GLU\_\-TESS\_\-ERROR6
+\item 
+\#define \hyperlink{_g_l_u_8h_2c68c0d55ab582956fef1dbcc377dc38}{GLU\_\-AUTO\_\-LOAD\_\-MATRIX}~100200
+\item 
+\#define \hyperlink{_g_l_u_8h_9f8abcc6c5e767ef1ed5214709bae581}{GLU\_\-CULLING}~100201
+\item 
+\#define \hyperlink{_g_l_u_8h_30932339ac9e41798cff80350cf79f81}{GLU\_\-SAMPLING\_\-TOLERANCE}~100203
+\item 
+\#define \hyperlink{_g_l_u_8h_91be6f4b03239680689f758f5f91beae}{GLU\_\-DISPLAY\_\-MODE}~100204
+\item 
+\#define \hyperlink{_g_l_u_8h_de32add9238f9a19bbdffd8db0db5247}{GLU\_\-PARAMETRIC\_\-TOLERANCE}~100202
+\item 
+\#define \hyperlink{_g_l_u_8h_fa7ae3b739c2e0ec5231a9f6acb11e5a}{GLU\_\-SAMPLING\_\-METHOD}~100205
+\item 
+\#define \hyperlink{_g_l_u_8h_7907fa823414b968d006e90955ec5800}{GLU\_\-U\_\-STEP}~100206
+\item 
+\#define \hyperlink{_g_l_u_8h_af38951bc05589d1781317d98e84b181}{GLU\_\-V\_\-STEP}~100207
+\item 
+\#define \hyperlink{_g_l_u_8h_02378cb14be125584bdb1293934ae394}{GLU\_\-PATH\_\-LENGTH}~100215
+\item 
+\#define \hyperlink{_g_l_u_8h_ca315a6aa7e63df46ea44fd6e52d5830}{GLU\_\-PARAMETRIC\_\-ERROR}~100216
+\item 
+\#define \hyperlink{_g_l_u_8h_94fd97760251f5e2c9d83884c75a9d77}{GLU\_\-DOMAIN\_\-DISTANCE}~100217
+\item 
+\#define \hyperlink{_g_l_u_8h_e08497fa03216cd933d84793efd6ae38}{GLU\_\-MAP1\_\-TRIM\_\-2}~100210
+\item 
+\#define \hyperlink{_g_l_u_8h_41b4b3f8bf3ef909d86b2f9ab70041e4}{GLU\_\-MAP1\_\-TRIM\_\-3}~100211
+\item 
+\#define \hyperlink{_g_l_u_8h_bbdcacdba7403cd9095fead866960ab6}{GLU\_\-OUTLINE\_\-POLYGON}~100240
+\item 
+\#define \hyperlink{_g_l_u_8h_1367eaff00112cc07a2b0a2e231644ea}{GLU\_\-OUTLINE\_\-PATCH}~100241
+\item 
+\#define \hyperlink{_g_l_u_8h_d8d9353fce8b683ec7cba87614a0d83c}{GLU\_\-NURBS\_\-ERROR1}~100251
+\item 
+\#define \hyperlink{_g_l_u_8h_688df97e2180f93af5ac1665dd90141c}{GLU\_\-NURBS\_\-ERROR2}~100252
+\item 
+\#define \hyperlink{_g_l_u_8h_8489014b5d6ddf4c2b4deec42706bbf3}{GLU\_\-NURBS\_\-ERROR3}~100253
+\item 
+\#define \hyperlink{_g_l_u_8h_f00ff23365bec51fd40a88235d8ad2b1}{GLU\_\-NURBS\_\-ERROR4}~100254
+\item 
+\#define \hyperlink{_g_l_u_8h_8c26688c346e4ebdb1f8b192c55c1dbd}{GLU\_\-NURBS\_\-ERROR5}~100255
+\item 
+\#define \hyperlink{_g_l_u_8h_9f839ba87f5725026466b412f4d5d243}{GLU\_\-NURBS\_\-ERROR6}~100256
+\item 
+\#define \hyperlink{_g_l_u_8h_1e7aab676cc5ace0ea03a27f9a01e0cb}{GLU\_\-NURBS\_\-ERROR7}~100257
+\item 
+\#define \hyperlink{_g_l_u_8h_b3bea0a74f7c9550e54392b1b8dbc967}{GLU\_\-NURBS\_\-ERROR8}~100258
+\item 
+\#define \hyperlink{_g_l_u_8h_310aa18b72a16c62b3cae0a7af3041e0}{GLU\_\-NURBS\_\-ERROR9}~100259
+\item 
+\#define \hyperlink{_g_l_u_8h_d354a6f1e57650f08d89115410b99df0}{GLU\_\-NURBS\_\-ERROR10}~100260
+\item 
+\#define \hyperlink{_g_l_u_8h_1df04a280dc6d704e05379bd879f6450}{GLU\_\-NURBS\_\-ERROR11}~100261
+\item 
+\#define \hyperlink{_g_l_u_8h_e81556d361060c7cf36a9ad92de8867b}{GLU\_\-NURBS\_\-ERROR12}~100262
+\item 
+\#define \hyperlink{_g_l_u_8h_b9b6976d6353b6f32723be6abd7edafd}{GLU\_\-NURBS\_\-ERROR13}~100263
+\item 
+\#define \hyperlink{_g_l_u_8h_0886432c508c03f4781d4b1c807d6cd6}{GLU\_\-NURBS\_\-ERROR14}~100264
+\item 
+\#define \hyperlink{_g_l_u_8h_7f81bf2f2893dc318267e023cc7c5c4a}{GLU\_\-NURBS\_\-ERROR15}~100265
+\item 
+\#define \hyperlink{_g_l_u_8h_1974abfd5d5ac202ac1b3a6658d457b1}{GLU\_\-NURBS\_\-ERROR16}~100266
+\item 
+\#define \hyperlink{_g_l_u_8h_3bc49dd5b7fff60847ce949186c3b784}{GLU\_\-NURBS\_\-ERROR17}~100267
+\item 
+\#define \hyperlink{_g_l_u_8h_573da5467f7c7ba4154cc8242bab2887}{GLU\_\-NURBS\_\-ERROR18}~100268
+\item 
+\#define \hyperlink{_g_l_u_8h_42276c70abc5cc11d16b1ca88e92f428}{GLU\_\-NURBS\_\-ERROR19}~100269
+\item 
+\#define \hyperlink{_g_l_u_8h_31e9dad9d1a62c71af73075c09e147a8}{GLU\_\-NURBS\_\-ERROR20}~100270
+\item 
+\#define \hyperlink{_g_l_u_8h_f5cebd5951d08955437baaac53796392}{GLU\_\-NURBS\_\-ERROR21}~100271
+\item 
+\#define \hyperlink{_g_l_u_8h_f8034fc1c8448dbca7bd28ceff841d4f}{GLU\_\-NURBS\_\-ERROR22}~100272
+\item 
+\#define \hyperlink{_g_l_u_8h_05ceb0f79cfcd49695718f6b0240605b}{GLU\_\-NURBS\_\-ERROR23}~100273
+\item 
+\#define \hyperlink{_g_l_u_8h_41e5f06428557fc4d58e1b842c12b542}{GLU\_\-NURBS\_\-ERROR24}~100274
+\item 
+\#define \hyperlink{_g_l_u_8h_02f7c30390b8e4f7d6183d957203e8d6}{GLU\_\-NURBS\_\-ERROR25}~100275
+\item 
+\#define \hyperlink{_g_l_u_8h_86707ded11ea308bce9df22c7efcd367}{GLU\_\-NURBS\_\-ERROR26}~100276
+\item 
+\#define \hyperlink{_g_l_u_8h_789dcab3b79e669602bfd55dc1b1b968}{GLU\_\-NURBS\_\-ERROR27}~100277
+\item 
+\#define \hyperlink{_g_l_u_8h_707fcb018ddb78225705ef6fd2f4ae5a}{GLU\_\-NURBS\_\-ERROR28}~100278
+\item 
+\#define \hyperlink{_g_l_u_8h_e0dd18e410295b4dba72fc27fc22b480}{GLU\_\-NURBS\_\-ERROR29}~100279
+\item 
+\#define \hyperlink{_g_l_u_8h_c28cb77945723c12d70805aa4fb92427}{GLU\_\-NURBS\_\-ERROR30}~100280
+\item 
+\#define \hyperlink{_g_l_u_8h_4641116507ef28fcaeb66fbfbc92263f}{GLU\_\-NURBS\_\-ERROR31}~100281
+\item 
+\#define \hyperlink{_g_l_u_8h_4e074895f71f6daa4a2b87f45fc04838}{GLU\_\-NURBS\_\-ERROR32}~100282
+\item 
+\#define \hyperlink{_g_l_u_8h_53a96ba2cc2b0954ce247fd85e25ecf4}{GLU\_\-NURBS\_\-ERROR33}~100283
+\item 
+\#define \hyperlink{_g_l_u_8h_d030a61fe32478cebab468dcb22d6237}{GLU\_\-NURBS\_\-ERROR34}~100284
+\item 
+\#define \hyperlink{_g_l_u_8h_2ad3bd9b0d40c5aeb62969382d2bf856}{GLU\_\-NURBS\_\-ERROR35}~100285
+\item 
+\#define \hyperlink{_g_l_u_8h_f5276e37a6c3d751091c0497f92a3f81}{GLU\_\-NURBS\_\-ERROR36}~100286
+\item 
+\#define \hyperlink{_g_l_u_8h_3a5c96766e8c4355d41adc703db8c0e5}{GLU\_\-NURBS\_\-ERROR37}~100287
+\item 
+\#define \hyperlink{_g_l_u_8h_42360086eae7b4b0f5a4900456bd8240}{GLU\_\-CW}~100120
+\item 
+\#define \hyperlink{_g_l_u_8h_1c08ae6af01c5e8bd44eac448e4381ca}{GLU\_\-CCW}~100121
+\item 
+\#define \hyperlink{_g_l_u_8h_46f20c443f4880e18871b965ee8743ff}{GLU\_\-INTERIOR}~100122
+\item 
+\#define \hyperlink{_g_l_u_8h_b90b1ffe2e30fe401daabadf0f71a84e}{GLU\_\-EXTERIOR}~100123
+\item 
+\#define \hyperlink{_g_l_u_8h_5601b54506b15e8eb30b0ed770b31a21}{GLU\_\-UNKNOWN}~100124
+\item 
+\#define \hyperlink{_g_l_u_8h_945fba28defb5852e4d8abbe27893ab6}{GLU\_\-BEGIN}~GLU\_\-TESS\_\-BEGIN
+\item 
+\#define \hyperlink{_g_l_u_8h_37fe4d0f5f86109dda9835b73142b4ab}{GLU\_\-VERTEX}~GLU\_\-TESS\_\-VERTEX
+\item 
+\#define \hyperlink{_g_l_u_8h_e074e12ecab2f67aca4e3b1870af8c3a}{GLU\_\-END}~GLU\_\-TESS\_\-END
+\item 
+\#define \hyperlink{_g_l_u_8h_f44823da975ff5a131ca76c12707bc76}{GLU\_\-ERROR}~GLU\_\-TESS\_\-ERROR
+\item 
+\#define \hyperlink{_g_l_u_8h_ee656b4bd63f19a4744e547a661b631e}{GLU\_\-EDGE\_\-FLAG}~GLU\_\-TESS\_\-EDGE\_\-FLAG
+\end{CompactItemize}
+\subsection*{Typedefs}
+\begin{CompactItemize}
+\item 
+typedef struct \hyperlink{_g_l_u_8h_d7cd1bf6201e0ac45d5c80f00c7a5cc6}{GLUnurbs} \hyperlink{_g_l_u_8h_d7cd1bf6201e0ac45d5c80f00c7a5cc6}{GLUnurbs}
+\item 
+typedef struct \hyperlink{_g_l_u_8h_101ef3784c466660e922c88e6ed3164a}{GLUquadric} \hyperlink{_g_l_u_8h_101ef3784c466660e922c88e6ed3164a}{GLUquadric}
+\item 
+typedef struct \hyperlink{_g_l_u_8h_65d8559e5a2f80c5ed1dee9697627194}{GLUtesselator} \hyperlink{_g_l_u_8h_65d8559e5a2f80c5ed1dee9697627194}{GLUtesselator}
+\item 
+typedef struct \hyperlink{_g_l_u_8h_d7cd1bf6201e0ac45d5c80f00c7a5cc6}{GLUnurbs} \hyperlink{_g_l_u_8h_3ae38cbddae11368b0983b80e3ad8ac5}{GLUnurbsObj}
+\item 
+typedef struct \hyperlink{_g_l_u_8h_101ef3784c466660e922c88e6ed3164a}{GLUquadric} \hyperlink{_g_l_u_8h_3d9af4292c1f0ed516a08ff1388a0224}{GLUquadricObj}
+\item 
+typedef struct \hyperlink{_g_l_u_8h_65d8559e5a2f80c5ed1dee9697627194}{GLUtesselator} \hyperlink{_g_l_u_8h_1f3ab21c5a3c7bf646d89f29e5605c66}{GLUtesselatorObj}
+\item 
+typedef struct \hyperlink{_g_l_u_8h_65d8559e5a2f80c5ed1dee9697627194}{GLUtesselator} \hyperlink{_g_l_u_8h_d98ac98d9b9031d7ff19194c5dfbd07d}{GLUtriangulatorObj}
+\item 
+typedef void \hyperlink{_g_l_u_8h_4e1d329b89ee7e3f8d7a4be6ebc75254}{GLfloat} \mbox{[}4\mbox{]}
+\item 
+typedef void void $\ast$$\ast$typedef void $\ast$typedef void $\ast$typedef void $\ast$typedef \hyperlink{_g_l_u_8h_d1bb4b2dc4d2c8b7423c4c9afbf2b484}{void} (CALLBACK $\ast$GLUtessEndDataProc)(void $\ast$)
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+const \hyperlink{_g_l_8h_0595908be03a8cff881a23cdc9170e7c}{GLubyte} $\ast$APIENTRY \hyperlink{_g_l_u_8h_957bf8cb7732b315345b7000348bccb4}{gluErrorString} (GLenum errCode)
+\item 
+const wchar\_\-t $\ast$APIENTRY \hyperlink{_g_l_u_8h_4bc679a07fb8608a42b2d88c19f976e2}{gluErrorUnicodeStringEXT} (GLenum errCode)
+\item 
+const \hyperlink{_g_l_8h_0595908be03a8cff881a23cdc9170e7c}{GLubyte} $\ast$APIENTRY \hyperlink{_g_l_u_8h_7195d5fb09fb9e9ad257baec2a2ed3ee}{gluGetString} (GLenum \hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name})
+\item 
+void APIENTRY \hyperlink{_g_l_u_8h_75ebd65d73748c0f4f4ad56bf49f6372}{gluOrtho2D} (\hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} \hyperlink{glext_8h_85b8f6c07fbc1fb5d77c2ae090f21995}{left}, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} \hyperlink{glext_8h_5ffadbbacc6b89cf6218bc43b384d3fe}{right}, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} \hyperlink{glext_8h_95fc257e5ddf46f7db9d5e898cdf1991}{bottom}, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} \hyperlink{glext_8h_5ab323daeacf8dfdb8f91132fecdca23}{top})
+\item 
+void APIENTRY \hyperlink{_g_l_u_8h_e76044cd9896ded66446ebacc87cd8de}{gluPerspective} (\hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} fovy, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} aspect, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} \hyperlink{glext_8h_12d99226e590bbaaf0be69169eeb4834}{zNear}, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} \hyperlink{glext_8h_18a2583fe65967bceff8903e2769f8e2}{zFar})
+\item 
+void APIENTRY \hyperlink{_g_l_u_8h_8f2109b6882a24bd4faeadb4f052c1b9}{gluPickMatrix} (\hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x}, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} \hyperlink{wglext_8h_9298c7ad619074f5285b32c6b72bfdea}{y}, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height}, GLint viewport\mbox{[}4\mbox{]})
+\item 
+void APIENTRY \hyperlink{_g_l_u_8h_975899d72def2c584581f42fe6300993}{gluLookAt} (\hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} eyex, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} eyey, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} eyez, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} centerx, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} centery, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} centerz, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} upx, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} upy, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} upz)
+\item 
+int APIENTRY \hyperlink{_g_l_u_8h_af9bf9028a98739b64d032f23fb94827}{gluProject} (\hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} objx, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} objy, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} objz, const \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} modelMatrix\mbox{[}16\mbox{]}, const \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} projMatrix\mbox{[}16\mbox{]}, const GLint viewport\mbox{[}4\mbox{]}, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} $\ast$winx, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} $\ast$winy, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} $\ast$winz)
+\item 
+int APIENTRY \hyperlink{_g_l_u_8h_a3b8b64c4abd85c4d66c52a725c2bd6b}{gluUnProject} (\hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} winx, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} winy, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} winz, const \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} modelMatrix\mbox{[}16\mbox{]}, const \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} projMatrix\mbox{[}16\mbox{]}, const GLint viewport\mbox{[}4\mbox{]}, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} $\ast$objx, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} $\ast$objy, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} $\ast$objz)
+\item 
+int APIENTRY \hyperlink{_g_l_u_8h_bb30397b84d810d2623f5d5ceffa5d95}{gluScaleImage} (GLenum \hyperlink{glext__bak_8h_e2d3db041c6004a67047659b42f73a44}{format}, GLint widthin, GLint heightin, GLenum typein, const void $\ast$datain, GLint widthout, GLint heightout, GLenum typeout, void $\ast$dataout)
+\item 
+int APIENTRY \hyperlink{_g_l_u_8h_0b66d8645689d90c08a0d99aaf5d0934}{gluBuild1DMipmaps} (GLenum \hyperlink{glext_8h_f9d0cbbbeb7414e786c41899e5a856d7}{target}, GLint \hyperlink{glext__bak_8h_452b9ab10170c96a9bef2657c036a2c0}{components}, GLint \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, GLenum \hyperlink{glext__bak_8h_e2d3db041c6004a67047659b42f73a44}{format}, GLenum \hyperlink{glext__bak_8h_7d05960f4f1c1b11f3177dc963a45d86}{type}, const void $\ast$\hyperlink{glext__bak_8h_69926c009f2d52c6b6d2c76784af8c64}{data})
+\item 
+int APIENTRY \hyperlink{_g_l_u_8h_444103e8ac3771f4a8d09fb33c427ed2}{gluBuild2DMipmaps} (GLenum \hyperlink{glext_8h_f9d0cbbbeb7414e786c41899e5a856d7}{target}, GLint \hyperlink{glext__bak_8h_452b9ab10170c96a9bef2657c036a2c0}{components}, GLint \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, GLint \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height}, GLenum \hyperlink{glext__bak_8h_e2d3db041c6004a67047659b42f73a44}{format}, GLenum \hyperlink{glext__bak_8h_7d05960f4f1c1b11f3177dc963a45d86}{type}, const void $\ast$\hyperlink{glext__bak_8h_69926c009f2d52c6b6d2c76784af8c64}{data})
+\item 
+\hyperlink{_g_l_u_8h_101ef3784c466660e922c88e6ed3164a}{GLUquadric} $\ast$APIENTRY \hyperlink{_g_l_u_8h_905fc34ba68e2231e3d98c6ce28cd786}{gluNewQuadric} (void)
+\item 
+void APIENTRY \hyperlink{_g_l_u_8h_93665f30a4629c07641c3bd4fbdf9982}{gluDeleteQuadric} (\hyperlink{_g_l_u_8h_101ef3784c466660e922c88e6ed3164a}{GLUquadric} $\ast$state)
+\item 
+void APIENTRY \hyperlink{_g_l_u_8h_02aee176ad26a1af6db56116e4a6a132}{gluQuadricNormals} (\hyperlink{_g_l_u_8h_101ef3784c466660e922c88e6ed3164a}{GLUquadric} $\ast$quadObject, GLenum normals)
+\item 
+void APIENTRY \hyperlink{_g_l_u_8h_329693c78b422e87185575c5e57a9112}{gluQuadricTexture} (\hyperlink{_g_l_u_8h_101ef3784c466660e922c88e6ed3164a}{GLUquadric} $\ast$quadObject, GLboolean textureCoords)
+\item 
+void APIENTRY \hyperlink{_g_l_u_8h_332f0466440711969c82466419b0563e}{gluQuadricOrientation} (\hyperlink{_g_l_u_8h_101ef3784c466660e922c88e6ed3164a}{GLUquadric} $\ast$quadObject, GLenum orientation)
+\item 
+void APIENTRY \hyperlink{_g_l_u_8h_1bd8a235b86a60933796e5894970da07}{gluQuadricDrawStyle} (\hyperlink{_g_l_u_8h_101ef3784c466660e922c88e6ed3164a}{GLUquadric} $\ast$quadObject, GLenum drawStyle)
+\item 
+void APIENTRY \hyperlink{_g_l_u_8h_0118747beeca84ec17090f30f0b22119}{gluCylinder} (\hyperlink{_g_l_u_8h_101ef3784c466660e922c88e6ed3164a}{GLUquadric} $\ast$qobj, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} baseRadius, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} topRadius, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height}, GLint slices, GLint stacks)
+\item 
+void APIENTRY \hyperlink{_g_l_u_8h_85e6971dbc24083e75da91bcf400cf0d}{gluDisk} (\hyperlink{_g_l_u_8h_101ef3784c466660e922c88e6ed3164a}{GLUquadric} $\ast$qobj, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} innerRadius, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} outerRadius, GLint slices, GLint loops)
+\item 
+void APIENTRY \hyperlink{_g_l_u_8h_a7f0b63b457c0bc897b75f703342256d}{gluPartialDisk} (\hyperlink{_g_l_u_8h_101ef3784c466660e922c88e6ed3164a}{GLUquadric} $\ast$qobj, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} innerRadius, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} outerRadius, GLint slices, GLint loops, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} startAngle, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} sweepAngle)
+\item 
+void APIENTRY \hyperlink{_g_l_u_8h_f06bb76aa3115f99db1ef77a0cc85684}{gluSphere} (\hyperlink{_g_l_u_8h_101ef3784c466660e922c88e6ed3164a}{GLUquadric} $\ast$qobj, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} radius, GLint slices, GLint stacks)
+\item 
+void APIENTRY \hyperlink{_g_l_u_8h_f9daf4a92a8757976bbbafb5d4d33bad}{gluQuadricCallback} (\hyperlink{_g_l_u_8h_101ef3784c466660e922c88e6ed3164a}{GLUquadric} $\ast$qobj, GLenum which, void(CALLBACK $\ast$fn)())
+\item 
+\hyperlink{_g_l_u_8h_65d8559e5a2f80c5ed1dee9697627194}{GLUtesselator} $\ast$APIENTRY \hyperlink{_g_l_u_8h_98632ff69c4fafa0c628b4652c761e28}{gluNewTess} (void)
+\item 
+void APIENTRY \hyperlink{_g_l_u_8h_695cdf1aa0fc02fb5cb7e0d2d1b62c95}{gluDeleteTess} (\hyperlink{_g_l_u_8h_65d8559e5a2f80c5ed1dee9697627194}{GLUtesselator} $\ast$tess)
+\item 
+void APIENTRY \hyperlink{_g_l_u_8h_700f9c1265e944ed1bcd4e48d002be73}{gluTessBeginPolygon} (\hyperlink{_g_l_u_8h_65d8559e5a2f80c5ed1dee9697627194}{GLUtesselator} $\ast$tess, void $\ast$polygon\_\-data)
+\item 
+void APIENTRY \hyperlink{_g_l_u_8h_8d50dd8052920f425c13fbc2c9a7d449}{gluTessBeginContour} (\hyperlink{_g_l_u_8h_65d8559e5a2f80c5ed1dee9697627194}{GLUtesselator} $\ast$tess)
+\item 
+void APIENTRY \hyperlink{_g_l_u_8h_f8e44f75e6ab3440e70207b4cf1abeb1}{gluTessVertex} (\hyperlink{_g_l_u_8h_65d8559e5a2f80c5ed1dee9697627194}{GLUtesselator} $\ast$tess, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} \hyperlink{glext__bak_8h_48439d34f332a9a23e57047cd86d67f0}{coords}\mbox{[}3\mbox{]}, void $\ast$\hyperlink{glext__bak_8h_69926c009f2d52c6b6d2c76784af8c64}{data})
+\item 
+void APIENTRY \hyperlink{_g_l_u_8h_8b92999dd8e0610d3d0968515d1ba4f1}{gluTessEndContour} (\hyperlink{_g_l_u_8h_65d8559e5a2f80c5ed1dee9697627194}{GLUtesselator} $\ast$tess)
+\item 
+void APIENTRY \hyperlink{_g_l_u_8h_566bd2f54ee00aa61fb71fe5a1257e6b}{gluTessEndPolygon} (\hyperlink{_g_l_u_8h_65d8559e5a2f80c5ed1dee9697627194}{GLUtesselator} $\ast$tess)
+\item 
+void APIENTRY \hyperlink{_g_l_u_8h_b0ab157f10d7db1834ecd5bb42837116}{gluTessProperty} (\hyperlink{_g_l_u_8h_65d8559e5a2f80c5ed1dee9697627194}{GLUtesselator} $\ast$tess, GLenum which, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} \hyperlink{glext__bak_8h_6a4f8a1a444e9080b297963b3db29fe0}{value})
+\item 
+void APIENTRY \hyperlink{_g_l_u_8h_95bf576f609e3a6e4a847b0a82071d54}{gluTessNormal} (\hyperlink{_g_l_u_8h_65d8559e5a2f80c5ed1dee9697627194}{GLUtesselator} $\ast$tess, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x}, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} \hyperlink{wglext_8h_9298c7ad619074f5285b32c6b72bfdea}{y}, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} \hyperlink{glext__bak_8h_5b27107fca91cf19a778530405575b37}{z})
+\item 
+void APIENTRY \hyperlink{_g_l_u_8h_dfa596e31d6447a759525ff65887b81c}{gluTessCallback} (\hyperlink{_g_l_u_8h_65d8559e5a2f80c5ed1dee9697627194}{GLUtesselator} $\ast$tess, GLenum which, void(CALLBACK $\ast$fn)())
+\item 
+void APIENTRY \hyperlink{_g_l_u_8h_2966d0355fd523ebb4090b0a55efbe8b}{gluGetTessProperty} (\hyperlink{_g_l_u_8h_65d8559e5a2f80c5ed1dee9697627194}{GLUtesselator} $\ast$tess, GLenum which, \hyperlink{_g_l_8h_4f86c02824a01bb647d89449b9a8eacc}{GLdouble} $\ast$\hyperlink{glext__bak_8h_6a4f8a1a444e9080b297963b3db29fe0}{value})
+\item 
+\hyperlink{_g_l_u_8h_d7cd1bf6201e0ac45d5c80f00c7a5cc6}{GLUnurbs} $\ast$APIENTRY \hyperlink{_g_l_u_8h_f515a826fed04fced2fee490df5e8a1e}{gluNewNurbsRenderer} (void)
+\item 
+void APIENTRY \hyperlink{_g_l_u_8h_4f579902386e9588590291373922561d}{gluDeleteNurbsRenderer} (\hyperlink{_g_l_u_8h_d7cd1bf6201e0ac45d5c80f00c7a5cc6}{GLUnurbs} $\ast$nobj)
+\item 
+void APIENTRY \hyperlink{_g_l_u_8h_611362b80e1cac917bbbec1c1fa6c018}{gluBeginSurface} (\hyperlink{_g_l_u_8h_d7cd1bf6201e0ac45d5c80f00c7a5cc6}{GLUnurbs} $\ast$nobj)
+\item 
+void APIENTRY \hyperlink{_g_l_u_8h_2338cb68b832ef86444a27c7b1d7b01f}{gluBeginCurve} (\hyperlink{_g_l_u_8h_d7cd1bf6201e0ac45d5c80f00c7a5cc6}{GLUnurbs} $\ast$nobj)
+\item 
+void APIENTRY \hyperlink{_g_l_u_8h_fe80dcd1b122e724b398a9267237f065}{gluEndCurve} (\hyperlink{_g_l_u_8h_d7cd1bf6201e0ac45d5c80f00c7a5cc6}{GLUnurbs} $\ast$nobj)
+\item 
+void APIENTRY \hyperlink{_g_l_u_8h_23e3854d47c5b79c8bda221e2f15251c}{gluEndSurface} (\hyperlink{_g_l_u_8h_d7cd1bf6201e0ac45d5c80f00c7a5cc6}{GLUnurbs} $\ast$nobj)
+\item 
+void APIENTRY \hyperlink{_g_l_u_8h_1343784e33953426200a13d2bfb0b790}{gluBeginTrim} (\hyperlink{_g_l_u_8h_d7cd1bf6201e0ac45d5c80f00c7a5cc6}{GLUnurbs} $\ast$nobj)
+\item 
+void APIENTRY \hyperlink{_g_l_u_8h_e9c11085c3dc0a415ad9524a9aba5141}{gluEndTrim} (\hyperlink{_g_l_u_8h_d7cd1bf6201e0ac45d5c80f00c7a5cc6}{GLUnurbs} $\ast$nobj)
+\item 
+void APIENTRY \hyperlink{_g_l_u_8h_7375e09ef7211afb0766ae11adf2dc4b}{gluPwlCurve} (\hyperlink{_g_l_u_8h_d7cd1bf6201e0ac45d5c80f00c7a5cc6}{GLUnurbs} $\ast$nobj, GLint \hyperlink{wglext_8h_98d18d6b4e3ba4ed266c6fb54c839d70}{count}, \hyperlink{_g_l_u_8h_4e1d329b89ee7e3f8d7a4be6ebc75254}{GLfloat} $\ast$array, GLint \hyperlink{glext__bak_8h_dec60f1216ca1b900f8d776c5b6190e0}{stride}, GLenum \hyperlink{glext__bak_8h_7d05960f4f1c1b11f3177dc963a45d86}{type})
+\item 
+void APIENTRY \hyperlink{_g_l_u_8h_1f9b26fc3597049d6d4881ebfa67304d}{gluNurbsCurve} (\hyperlink{_g_l_u_8h_d7cd1bf6201e0ac45d5c80f00c7a5cc6}{GLUnurbs} $\ast$nobj, GLint nknots, \hyperlink{_g_l_u_8h_4e1d329b89ee7e3f8d7a4be6ebc75254}{GLfloat} $\ast$knot, GLint \hyperlink{glext__bak_8h_dec60f1216ca1b900f8d776c5b6190e0}{stride}, \hyperlink{_g_l_u_8h_4e1d329b89ee7e3f8d7a4be6ebc75254}{GLfloat} $\ast$ctlarray, GLint order, GLenum \hyperlink{glext__bak_8h_7d05960f4f1c1b11f3177dc963a45d86}{type})
+\item 
+void APIENTRY \hyperlink{_g_l_u_8h_741fac9ddeb67f3e9a11b705200f58a1}{gluNurbsSurface} (\hyperlink{_g_l_u_8h_d7cd1bf6201e0ac45d5c80f00c7a5cc6}{GLUnurbs} $\ast$nobj, GLint sknot\_\-count, float $\ast$sknot, GLint tknot\_\-count, \hyperlink{_g_l_u_8h_4e1d329b89ee7e3f8d7a4be6ebc75254}{GLfloat} $\ast$tknot, GLint s\_\-stride, GLint t\_\-stride, \hyperlink{_g_l_u_8h_4e1d329b89ee7e3f8d7a4be6ebc75254}{GLfloat} $\ast$ctlarray, GLint sorder, GLint torder, GLenum \hyperlink{glext__bak_8h_7d05960f4f1c1b11f3177dc963a45d86}{type})
+\item 
+void APIENTRY \hyperlink{_g_l_u_8h_1aae1f28344ceaf7b61570c8c97eb61d}{gluLoadSamplingMatrices} (\hyperlink{_g_l_u_8h_d7cd1bf6201e0ac45d5c80f00c7a5cc6}{GLUnurbs} $\ast$nobj, const \hyperlink{_g_l_u_8h_4e1d329b89ee7e3f8d7a4be6ebc75254}{GLfloat} modelMatrix\mbox{[}16\mbox{]}, const \hyperlink{_g_l_u_8h_4e1d329b89ee7e3f8d7a4be6ebc75254}{GLfloat} projMatrix\mbox{[}16\mbox{]}, const GLint viewport\mbox{[}4\mbox{]})
+\item 
+void APIENTRY \hyperlink{_g_l_u_8h_24b5cfd4023efb4cd6f5e65e4749d70d}{gluNurbsProperty} (\hyperlink{_g_l_u_8h_d7cd1bf6201e0ac45d5c80f00c7a5cc6}{GLUnurbs} $\ast$nobj, GLenum property, \hyperlink{_g_l_u_8h_4e1d329b89ee7e3f8d7a4be6ebc75254}{GLfloat} \hyperlink{glext__bak_8h_6a4f8a1a444e9080b297963b3db29fe0}{value})
+\item 
+void APIENTRY \hyperlink{_g_l_u_8h_f6328ed27bed957b77200cf1b5a88923}{gluGetNurbsProperty} (\hyperlink{_g_l_u_8h_d7cd1bf6201e0ac45d5c80f00c7a5cc6}{GLUnurbs} $\ast$nobj, GLenum property, \hyperlink{_g_l_u_8h_4e1d329b89ee7e3f8d7a4be6ebc75254}{GLfloat} $\ast$\hyperlink{glext__bak_8h_6a4f8a1a444e9080b297963b3db29fe0}{value})
+\item 
+void APIENTRY \hyperlink{_g_l_u_8h_c93d6201308aa60bf4805252814e7927}{gluNurbsCallback} (\hyperlink{_g_l_u_8h_d7cd1bf6201e0ac45d5c80f00c7a5cc6}{GLUnurbs} $\ast$nobj, GLenum which, void(CALLBACK $\ast$fn)())
+\item 
+typedef \hyperlink{_g_l_u_8h_5a0dfa848c92fc5d621a878bc233ef25}{void} (CALLBACK $\ast$GLUquadricErrorProc)(GLenum)
+\item 
+void APIENTRY \hyperlink{_g_l_u_8h_20cfe0132043e463b8b09123b5eab370}{gluBeginPolygon} (\hyperlink{_g_l_u_8h_65d8559e5a2f80c5ed1dee9697627194}{GLUtesselator} $\ast$tess)
+\item 
+void APIENTRY \hyperlink{_g_l_u_8h_e98760537550d85bacc8e3c87610711e}{gluNextContour} (\hyperlink{_g_l_u_8h_65d8559e5a2f80c5ed1dee9697627194}{GLUtesselator} $\ast$tess, GLenum \hyperlink{glext__bak_8h_7d05960f4f1c1b11f3177dc963a45d86}{type})
+\item 
+void APIENTRY \hyperlink{_g_l_u_8h_7da57f0b5aab1a59306a534d081da68a}{gluEndPolygon} (\hyperlink{_g_l_u_8h_65d8559e5a2f80c5ed1dee9697627194}{GLUtesselator} $\ast$tess)
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_g_l_u_8h_16338f098fce57cb6d141752bc04c3da}{
+\index{GLU.h@{GLU.h}!\_\-\_\-GLU\_\-H\_\-\_\-@{\_\-\_\-GLU\_\-H\_\-\_\-}}
+\index{\_\-\_\-GLU\_\-H\_\-\_\-@{\_\-\_\-GLU\_\-H\_\-\_\-}!GLU.h@{GLU.h}}
+\subsubsection[{\_\-\_\-GLU\_\-H\_\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-\_\-GLU\_\-H\_\-\_\-}}
+\label{_g_l_u_8h_16338f098fce57cb6d141752bc04c3da}
+
+
+
+
+Definition at line 20 of file GLU.h.\hypertarget{_g_l_u_8h_19fb1b27a3efb784a97dcee2c3e71aed}{
+\index{GLU.h@{GLU.h}!\_\-\_\-glu\_\-h\_\-\_\-@{\_\-\_\-glu\_\-h\_\-\_\-}}
+\index{\_\-\_\-glu\_\-h\_\-\_\-@{\_\-\_\-glu\_\-h\_\-\_\-}!GLU.h@{GLU.h}}
+\subsubsection[{\_\-\_\-glu\_\-h\_\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-\_\-glu\_\-h\_\-\_\-}}
+\label{_g_l_u_8h_19fb1b27a3efb784a97dcee2c3e71aed}
+
+
+
+
+Definition at line 19 of file GLU.h.\hypertarget{_g_l_u_8h_2c68c0d55ab582956fef1dbcc377dc38}{
+\index{GLU.h@{GLU.h}!GLU\_\-AUTO\_\-LOAD\_\-MATRIX@{GLU\_\-AUTO\_\-LOAD\_\-MATRIX}}
+\index{GLU\_\-AUTO\_\-LOAD\_\-MATRIX@{GLU\_\-AUTO\_\-LOAD\_\-MATRIX}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-AUTO\_\-LOAD\_\-MATRIX}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-AUTO\_\-LOAD\_\-MATRIX~100200}}
+\label{_g_l_u_8h_2c68c0d55ab582956fef1dbcc377dc38}
+
+
+
+
+Definition at line 490 of file GLU.h.\hypertarget{_g_l_u_8h_945fba28defb5852e4d8abbe27893ab6}{
+\index{GLU.h@{GLU.h}!GLU\_\-BEGIN@{GLU\_\-BEGIN}}
+\index{GLU\_\-BEGIN@{GLU\_\-BEGIN}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-BEGIN}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-BEGIN~GLU\_\-TESS\_\-BEGIN}}
+\label{_g_l_u_8h_945fba28defb5852e4d8abbe27893ab6}
+
+
+
+
+Definition at line 573 of file GLU.h.\hypertarget{_g_l_u_8h_1c08ae6af01c5e8bd44eac448e4381ca}{
+\index{GLU.h@{GLU.h}!GLU\_\-CCW@{GLU\_\-CCW}}
+\index{GLU\_\-CCW@{GLU\_\-CCW}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-CCW}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-CCW~100121}}
+\label{_g_l_u_8h_1c08ae6af01c5e8bd44eac448e4381ca}
+
+
+
+
+Definition at line 567 of file GLU.h.\hypertarget{_g_l_u_8h_9f8abcc6c5e767ef1ed5214709bae581}{
+\index{GLU.h@{GLU.h}!GLU\_\-CULLING@{GLU\_\-CULLING}}
+\index{GLU\_\-CULLING@{GLU\_\-CULLING}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-CULLING}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-CULLING~100201}}
+\label{_g_l_u_8h_9f8abcc6c5e767ef1ed5214709bae581}
+
+
+
+
+Definition at line 491 of file GLU.h.\hypertarget{_g_l_u_8h_42360086eae7b4b0f5a4900456bd8240}{
+\index{GLU.h@{GLU.h}!GLU\_\-CW@{GLU\_\-CW}}
+\index{GLU\_\-CW@{GLU\_\-CW}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-CW}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-CW~100120}}
+\label{_g_l_u_8h_42360086eae7b4b0f5a4900456bd8240}
+
+
+
+
+Definition at line 566 of file GLU.h.\hypertarget{_g_l_u_8h_91be6f4b03239680689f758f5f91beae}{
+\index{GLU.h@{GLU.h}!GLU\_\-DISPLAY\_\-MODE@{GLU\_\-DISPLAY\_\-MODE}}
+\index{GLU\_\-DISPLAY\_\-MODE@{GLU\_\-DISPLAY\_\-MODE}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-DISPLAY\_\-MODE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-DISPLAY\_\-MODE~100204}}
+\label{_g_l_u_8h_91be6f4b03239680689f758f5f91beae}
+
+
+
+
+Definition at line 493 of file GLU.h.\hypertarget{_g_l_u_8h_94fd97760251f5e2c9d83884c75a9d77}{
+\index{GLU.h@{GLU.h}!GLU\_\-DOMAIN\_\-DISTANCE@{GLU\_\-DOMAIN\_\-DISTANCE}}
+\index{GLU\_\-DOMAIN\_\-DISTANCE@{GLU\_\-DOMAIN\_\-DISTANCE}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-DOMAIN\_\-DISTANCE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-DOMAIN\_\-DISTANCE~100217}}
+\label{_g_l_u_8h_94fd97760251f5e2c9d83884c75a9d77}
+
+
+
+
+Definition at line 502 of file GLU.h.\hypertarget{_g_l_u_8h_ee656b4bd63f19a4744e547a661b631e}{
+\index{GLU.h@{GLU.h}!GLU\_\-EDGE\_\-FLAG@{GLU\_\-EDGE\_\-FLAG}}
+\index{GLU\_\-EDGE\_\-FLAG@{GLU\_\-EDGE\_\-FLAG}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-EDGE\_\-FLAG}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-EDGE\_\-FLAG~GLU\_\-TESS\_\-EDGE\_\-FLAG}}
+\label{_g_l_u_8h_ee656b4bd63f19a4744e547a661b631e}
+
+
+
+
+Definition at line 577 of file GLU.h.\hypertarget{_g_l_u_8h_e074e12ecab2f67aca4e3b1870af8c3a}{
+\index{GLU.h@{GLU.h}!GLU\_\-END@{GLU\_\-END}}
+\index{GLU\_\-END@{GLU\_\-END}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-END}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-END~GLU\_\-TESS\_\-END}}
+\label{_g_l_u_8h_e074e12ecab2f67aca4e3b1870af8c3a}
+
+
+
+
+Definition at line 575 of file GLU.h.\hypertarget{_g_l_u_8h_f44823da975ff5a131ca76c12707bc76}{
+\index{GLU.h@{GLU.h}!GLU\_\-ERROR@{GLU\_\-ERROR}}
+\index{GLU\_\-ERROR@{GLU\_\-ERROR}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-ERROR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-ERROR~GLU\_\-TESS\_\-ERROR}}
+\label{_g_l_u_8h_f44823da975ff5a131ca76c12707bc76}
+
+
+
+
+Definition at line 576 of file GLU.h.\hypertarget{_g_l_u_8h_dd0af769f9ce55c8cf7ff8c7a113ab2a}{
+\index{GLU.h@{GLU.h}!GLU\_\-EXTENSIONS@{GLU\_\-EXTENSIONS}}
+\index{GLU\_\-EXTENSIONS@{GLU\_\-EXTENSIONS}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-EXTENSIONS}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-EXTENSIONS~100801}}
+\label{_g_l_u_8h_dd0af769f9ce55c8cf7ff8c7a113ab2a}
+
+
+
+
+Definition at line 401 of file GLU.h.\hypertarget{_g_l_u_8h_b90b1ffe2e30fe401daabadf0f71a84e}{
+\index{GLU.h@{GLU.h}!GLU\_\-EXTERIOR@{GLU\_\-EXTERIOR}}
+\index{GLU\_\-EXTERIOR@{GLU\_\-EXTERIOR}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-EXTERIOR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-EXTERIOR~100123}}
+\label{_g_l_u_8h_b90b1ffe2e30fe401daabadf0f71a84e}
+
+
+
+
+Definition at line 569 of file GLU.h.\hypertarget{_g_l_u_8h_d00464d4f93848420066edcc07f9f5a8}{
+\index{GLU.h@{GLU.h}!GLU\_\-FALSE@{GLU\_\-FALSE}}
+\index{GLU\_\-FALSE@{GLU\_\-FALSE}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-FALSE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-FALSE~GL\_\-FALSE}}
+\label{_g_l_u_8h_d00464d4f93848420066edcc07f9f5a8}
+
+
+
+
+Definition at line 405 of file GLU.h.\hypertarget{_g_l_u_8h_db6674fd5a6fd19a4229c0dcb29abaad}{
+\index{GLU.h@{GLU.h}!GLU\_\-FILL@{GLU\_\-FILL}}
+\index{GLU\_\-FILL@{GLU\_\-FILL}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-FILL}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-FILL~100012}}
+\label{_g_l_u_8h_db6674fd5a6fd19a4229c0dcb29abaad}
+
+
+
+
+Definition at line 418 of file GLU.h.\hypertarget{_g_l_u_8h_214b3dce6ad63fdfee4b2de1a8b7a7e3}{
+\index{GLU.h@{GLU.h}!GLU\_\-FLAT@{GLU\_\-FLAT}}
+\index{GLU\_\-FLAT@{GLU\_\-FLAT}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-FLAT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-FLAT~100001}}
+\label{_g_l_u_8h_214b3dce6ad63fdfee4b2de1a8b7a7e3}
+
+
+
+
+Definition at line 412 of file GLU.h.\hypertarget{_g_l_u_8h_1aa4ff5206972899394ef3afd747ed3e}{
+\index{GLU.h@{GLU.h}!GLU\_\-INCOMPATIBLE\_\-GL\_\-VERSION@{GLU\_\-INCOMPATIBLE\_\-GL\_\-VERSION}}
+\index{GLU\_\-INCOMPATIBLE\_\-GL\_\-VERSION@{GLU\_\-INCOMPATIBLE\_\-GL\_\-VERSION}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-INCOMPATIBLE\_\-GL\_\-VERSION}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-INCOMPATIBLE\_\-GL\_\-VERSION~100903}}
+\label{_g_l_u_8h_1aa4ff5206972899394ef3afd747ed3e}
+
+
+
+
+Definition at line 397 of file GLU.h.\hypertarget{_g_l_u_8h_9adb29408dba0f9f4b838ca7bfe1740d}{
+\index{GLU.h@{GLU.h}!GLU\_\-INSIDE@{GLU\_\-INSIDE}}
+\index{GLU\_\-INSIDE@{GLU\_\-INSIDE}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-INSIDE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-INSIDE~100021}}
+\label{_g_l_u_8h_9adb29408dba0f9f4b838ca7bfe1740d}
+
+
+
+
+Definition at line 423 of file GLU.h.\hypertarget{_g_l_u_8h_46f20c443f4880e18871b965ee8743ff}{
+\index{GLU.h@{GLU.h}!GLU\_\-INTERIOR@{GLU\_\-INTERIOR}}
+\index{GLU\_\-INTERIOR@{GLU\_\-INTERIOR}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-INTERIOR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-INTERIOR~100122}}
+\label{_g_l_u_8h_46f20c443f4880e18871b965ee8743ff}
+
+
+
+
+Definition at line 568 of file GLU.h.\hypertarget{_g_l_u_8h_107445469c3c6a6933cad7f1961e6574}{
+\index{GLU.h@{GLU.h}!GLU\_\-INVALID\_\-ENUM@{GLU\_\-INVALID\_\-ENUM}}
+\index{GLU\_\-INVALID\_\-ENUM@{GLU\_\-INVALID\_\-ENUM}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-INVALID\_\-ENUM}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-INVALID\_\-ENUM~100900}}
+\label{_g_l_u_8h_107445469c3c6a6933cad7f1961e6574}
+
+
+
+
+Definition at line 394 of file GLU.h.\hypertarget{_g_l_u_8h_fc9a5aa36627cbd5dc2c58462307c509}{
+\index{GLU.h@{GLU.h}!GLU\_\-INVALID\_\-VALUE@{GLU\_\-INVALID\_\-VALUE}}
+\index{GLU\_\-INVALID\_\-VALUE@{GLU\_\-INVALID\_\-VALUE}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-INVALID\_\-VALUE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-INVALID\_\-VALUE~100901}}
+\label{_g_l_u_8h_fc9a5aa36627cbd5dc2c58462307c509}
+
+
+
+
+Definition at line 395 of file GLU.h.\hypertarget{_g_l_u_8h_aaaee2be8eefaeb5cf9346c2997e9661}{
+\index{GLU.h@{GLU.h}!GLU\_\-LINE@{GLU\_\-LINE}}
+\index{GLU\_\-LINE@{GLU\_\-LINE}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-LINE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-LINE~100011}}
+\label{_g_l_u_8h_aaaee2be8eefaeb5cf9346c2997e9661}
+
+
+
+
+Definition at line 417 of file GLU.h.\hypertarget{_g_l_u_8h_e08497fa03216cd933d84793efd6ae38}{
+\index{GLU.h@{GLU.h}!GLU\_\-MAP1\_\-TRIM\_\-2@{GLU\_\-MAP1\_\-TRIM\_\-2}}
+\index{GLU\_\-MAP1\_\-TRIM\_\-2@{GLU\_\-MAP1\_\-TRIM\_\-2}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-MAP1\_\-TRIM\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-MAP1\_\-TRIM\_\-2~100210}}
+\label{_g_l_u_8h_e08497fa03216cd933d84793efd6ae38}
+
+
+
+
+Definition at line 506 of file GLU.h.\hypertarget{_g_l_u_8h_41b4b3f8bf3ef909d86b2f9ab70041e4}{
+\index{GLU.h@{GLU.h}!GLU\_\-MAP1\_\-TRIM\_\-3@{GLU\_\-MAP1\_\-TRIM\_\-3}}
+\index{GLU\_\-MAP1\_\-TRIM\_\-3@{GLU\_\-MAP1\_\-TRIM\_\-3}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-MAP1\_\-TRIM\_\-3}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-MAP1\_\-TRIM\_\-3~100211}}
+\label{_g_l_u_8h_41b4b3f8bf3ef909d86b2f9ab70041e4}
+
+
+
+
+Definition at line 507 of file GLU.h.\hypertarget{_g_l_u_8h_23ba1c967223429aa5a8ed72f100fd69}{
+\index{GLU.h@{GLU.h}!GLU\_\-NONE@{GLU\_\-NONE}}
+\index{GLU\_\-NONE@{GLU\_\-NONE}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-NONE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-NONE~100002}}
+\label{_g_l_u_8h_23ba1c967223429aa5a8ed72f100fd69}
+
+
+
+
+Definition at line 413 of file GLU.h.\hypertarget{_g_l_u_8h_d8d9353fce8b683ec7cba87614a0d83c}{
+\index{GLU.h@{GLU.h}!GLU\_\-NURBS\_\-ERROR1@{GLU\_\-NURBS\_\-ERROR1}}
+\index{GLU\_\-NURBS\_\-ERROR1@{GLU\_\-NURBS\_\-ERROR1}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-NURBS\_\-ERROR1}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-NURBS\_\-ERROR1~100251}}
+\label{_g_l_u_8h_d8d9353fce8b683ec7cba87614a0d83c}
+
+
+
+
+Definition at line 518 of file GLU.h.\hypertarget{_g_l_u_8h_d354a6f1e57650f08d89115410b99df0}{
+\index{GLU.h@{GLU.h}!GLU\_\-NURBS\_\-ERROR10@{GLU\_\-NURBS\_\-ERROR10}}
+\index{GLU\_\-NURBS\_\-ERROR10@{GLU\_\-NURBS\_\-ERROR10}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-NURBS\_\-ERROR10}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-NURBS\_\-ERROR10~100260}}
+\label{_g_l_u_8h_d354a6f1e57650f08d89115410b99df0}
+
+
+
+
+Definition at line 527 of file GLU.h.\hypertarget{_g_l_u_8h_1df04a280dc6d704e05379bd879f6450}{
+\index{GLU.h@{GLU.h}!GLU\_\-NURBS\_\-ERROR11@{GLU\_\-NURBS\_\-ERROR11}}
+\index{GLU\_\-NURBS\_\-ERROR11@{GLU\_\-NURBS\_\-ERROR11}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-NURBS\_\-ERROR11}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-NURBS\_\-ERROR11~100261}}
+\label{_g_l_u_8h_1df04a280dc6d704e05379bd879f6450}
+
+
+
+
+Definition at line 528 of file GLU.h.\hypertarget{_g_l_u_8h_e81556d361060c7cf36a9ad92de8867b}{
+\index{GLU.h@{GLU.h}!GLU\_\-NURBS\_\-ERROR12@{GLU\_\-NURBS\_\-ERROR12}}
+\index{GLU\_\-NURBS\_\-ERROR12@{GLU\_\-NURBS\_\-ERROR12}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-NURBS\_\-ERROR12}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-NURBS\_\-ERROR12~100262}}
+\label{_g_l_u_8h_e81556d361060c7cf36a9ad92de8867b}
+
+
+
+
+Definition at line 529 of file GLU.h.\hypertarget{_g_l_u_8h_b9b6976d6353b6f32723be6abd7edafd}{
+\index{GLU.h@{GLU.h}!GLU\_\-NURBS\_\-ERROR13@{GLU\_\-NURBS\_\-ERROR13}}
+\index{GLU\_\-NURBS\_\-ERROR13@{GLU\_\-NURBS\_\-ERROR13}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-NURBS\_\-ERROR13}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-NURBS\_\-ERROR13~100263}}
+\label{_g_l_u_8h_b9b6976d6353b6f32723be6abd7edafd}
+
+
+
+
+Definition at line 530 of file GLU.h.\hypertarget{_g_l_u_8h_0886432c508c03f4781d4b1c807d6cd6}{
+\index{GLU.h@{GLU.h}!GLU\_\-NURBS\_\-ERROR14@{GLU\_\-NURBS\_\-ERROR14}}
+\index{GLU\_\-NURBS\_\-ERROR14@{GLU\_\-NURBS\_\-ERROR14}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-NURBS\_\-ERROR14}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-NURBS\_\-ERROR14~100264}}
+\label{_g_l_u_8h_0886432c508c03f4781d4b1c807d6cd6}
+
+
+
+
+Definition at line 531 of file GLU.h.\hypertarget{_g_l_u_8h_7f81bf2f2893dc318267e023cc7c5c4a}{
+\index{GLU.h@{GLU.h}!GLU\_\-NURBS\_\-ERROR15@{GLU\_\-NURBS\_\-ERROR15}}
+\index{GLU\_\-NURBS\_\-ERROR15@{GLU\_\-NURBS\_\-ERROR15}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-NURBS\_\-ERROR15}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-NURBS\_\-ERROR15~100265}}
+\label{_g_l_u_8h_7f81bf2f2893dc318267e023cc7c5c4a}
+
+
+
+
+Definition at line 532 of file GLU.h.\hypertarget{_g_l_u_8h_1974abfd5d5ac202ac1b3a6658d457b1}{
+\index{GLU.h@{GLU.h}!GLU\_\-NURBS\_\-ERROR16@{GLU\_\-NURBS\_\-ERROR16}}
+\index{GLU\_\-NURBS\_\-ERROR16@{GLU\_\-NURBS\_\-ERROR16}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-NURBS\_\-ERROR16}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-NURBS\_\-ERROR16~100266}}
+\label{_g_l_u_8h_1974abfd5d5ac202ac1b3a6658d457b1}
+
+
+
+
+Definition at line 533 of file GLU.h.\hypertarget{_g_l_u_8h_3bc49dd5b7fff60847ce949186c3b784}{
+\index{GLU.h@{GLU.h}!GLU\_\-NURBS\_\-ERROR17@{GLU\_\-NURBS\_\-ERROR17}}
+\index{GLU\_\-NURBS\_\-ERROR17@{GLU\_\-NURBS\_\-ERROR17}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-NURBS\_\-ERROR17}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-NURBS\_\-ERROR17~100267}}
+\label{_g_l_u_8h_3bc49dd5b7fff60847ce949186c3b784}
+
+
+
+
+Definition at line 534 of file GLU.h.\hypertarget{_g_l_u_8h_573da5467f7c7ba4154cc8242bab2887}{
+\index{GLU.h@{GLU.h}!GLU\_\-NURBS\_\-ERROR18@{GLU\_\-NURBS\_\-ERROR18}}
+\index{GLU\_\-NURBS\_\-ERROR18@{GLU\_\-NURBS\_\-ERROR18}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-NURBS\_\-ERROR18}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-NURBS\_\-ERROR18~100268}}
+\label{_g_l_u_8h_573da5467f7c7ba4154cc8242bab2887}
+
+
+
+
+Definition at line 535 of file GLU.h.\hypertarget{_g_l_u_8h_42276c70abc5cc11d16b1ca88e92f428}{
+\index{GLU.h@{GLU.h}!GLU\_\-NURBS\_\-ERROR19@{GLU\_\-NURBS\_\-ERROR19}}
+\index{GLU\_\-NURBS\_\-ERROR19@{GLU\_\-NURBS\_\-ERROR19}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-NURBS\_\-ERROR19}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-NURBS\_\-ERROR19~100269}}
+\label{_g_l_u_8h_42276c70abc5cc11d16b1ca88e92f428}
+
+
+
+
+Definition at line 536 of file GLU.h.\hypertarget{_g_l_u_8h_688df97e2180f93af5ac1665dd90141c}{
+\index{GLU.h@{GLU.h}!GLU\_\-NURBS\_\-ERROR2@{GLU\_\-NURBS\_\-ERROR2}}
+\index{GLU\_\-NURBS\_\-ERROR2@{GLU\_\-NURBS\_\-ERROR2}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-NURBS\_\-ERROR2}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-NURBS\_\-ERROR2~100252}}
+\label{_g_l_u_8h_688df97e2180f93af5ac1665dd90141c}
+
+
+
+
+Definition at line 519 of file GLU.h.\hypertarget{_g_l_u_8h_31e9dad9d1a62c71af73075c09e147a8}{
+\index{GLU.h@{GLU.h}!GLU\_\-NURBS\_\-ERROR20@{GLU\_\-NURBS\_\-ERROR20}}
+\index{GLU\_\-NURBS\_\-ERROR20@{GLU\_\-NURBS\_\-ERROR20}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-NURBS\_\-ERROR20}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-NURBS\_\-ERROR20~100270}}
+\label{_g_l_u_8h_31e9dad9d1a62c71af73075c09e147a8}
+
+
+
+
+Definition at line 537 of file GLU.h.\hypertarget{_g_l_u_8h_f5cebd5951d08955437baaac53796392}{
+\index{GLU.h@{GLU.h}!GLU\_\-NURBS\_\-ERROR21@{GLU\_\-NURBS\_\-ERROR21}}
+\index{GLU\_\-NURBS\_\-ERROR21@{GLU\_\-NURBS\_\-ERROR21}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-NURBS\_\-ERROR21}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-NURBS\_\-ERROR21~100271}}
+\label{_g_l_u_8h_f5cebd5951d08955437baaac53796392}
+
+
+
+
+Definition at line 538 of file GLU.h.\hypertarget{_g_l_u_8h_f8034fc1c8448dbca7bd28ceff841d4f}{
+\index{GLU.h@{GLU.h}!GLU\_\-NURBS\_\-ERROR22@{GLU\_\-NURBS\_\-ERROR22}}
+\index{GLU\_\-NURBS\_\-ERROR22@{GLU\_\-NURBS\_\-ERROR22}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-NURBS\_\-ERROR22}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-NURBS\_\-ERROR22~100272}}
+\label{_g_l_u_8h_f8034fc1c8448dbca7bd28ceff841d4f}
+
+
+
+
+Definition at line 539 of file GLU.h.\hypertarget{_g_l_u_8h_05ceb0f79cfcd49695718f6b0240605b}{
+\index{GLU.h@{GLU.h}!GLU\_\-NURBS\_\-ERROR23@{GLU\_\-NURBS\_\-ERROR23}}
+\index{GLU\_\-NURBS\_\-ERROR23@{GLU\_\-NURBS\_\-ERROR23}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-NURBS\_\-ERROR23}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-NURBS\_\-ERROR23~100273}}
+\label{_g_l_u_8h_05ceb0f79cfcd49695718f6b0240605b}
+
+
+
+
+Definition at line 540 of file GLU.h.\hypertarget{_g_l_u_8h_41e5f06428557fc4d58e1b842c12b542}{
+\index{GLU.h@{GLU.h}!GLU\_\-NURBS\_\-ERROR24@{GLU\_\-NURBS\_\-ERROR24}}
+\index{GLU\_\-NURBS\_\-ERROR24@{GLU\_\-NURBS\_\-ERROR24}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-NURBS\_\-ERROR24}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-NURBS\_\-ERROR24~100274}}
+\label{_g_l_u_8h_41e5f06428557fc4d58e1b842c12b542}
+
+
+
+
+Definition at line 541 of file GLU.h.\hypertarget{_g_l_u_8h_02f7c30390b8e4f7d6183d957203e8d6}{
+\index{GLU.h@{GLU.h}!GLU\_\-NURBS\_\-ERROR25@{GLU\_\-NURBS\_\-ERROR25}}
+\index{GLU\_\-NURBS\_\-ERROR25@{GLU\_\-NURBS\_\-ERROR25}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-NURBS\_\-ERROR25}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-NURBS\_\-ERROR25~100275}}
+\label{_g_l_u_8h_02f7c30390b8e4f7d6183d957203e8d6}
+
+
+
+
+Definition at line 542 of file GLU.h.\hypertarget{_g_l_u_8h_86707ded11ea308bce9df22c7efcd367}{
+\index{GLU.h@{GLU.h}!GLU\_\-NURBS\_\-ERROR26@{GLU\_\-NURBS\_\-ERROR26}}
+\index{GLU\_\-NURBS\_\-ERROR26@{GLU\_\-NURBS\_\-ERROR26}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-NURBS\_\-ERROR26}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-NURBS\_\-ERROR26~100276}}
+\label{_g_l_u_8h_86707ded11ea308bce9df22c7efcd367}
+
+
+
+
+Definition at line 543 of file GLU.h.\hypertarget{_g_l_u_8h_789dcab3b79e669602bfd55dc1b1b968}{
+\index{GLU.h@{GLU.h}!GLU\_\-NURBS\_\-ERROR27@{GLU\_\-NURBS\_\-ERROR27}}
+\index{GLU\_\-NURBS\_\-ERROR27@{GLU\_\-NURBS\_\-ERROR27}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-NURBS\_\-ERROR27}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-NURBS\_\-ERROR27~100277}}
+\label{_g_l_u_8h_789dcab3b79e669602bfd55dc1b1b968}
+
+
+
+
+Definition at line 544 of file GLU.h.\hypertarget{_g_l_u_8h_707fcb018ddb78225705ef6fd2f4ae5a}{
+\index{GLU.h@{GLU.h}!GLU\_\-NURBS\_\-ERROR28@{GLU\_\-NURBS\_\-ERROR28}}
+\index{GLU\_\-NURBS\_\-ERROR28@{GLU\_\-NURBS\_\-ERROR28}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-NURBS\_\-ERROR28}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-NURBS\_\-ERROR28~100278}}
+\label{_g_l_u_8h_707fcb018ddb78225705ef6fd2f4ae5a}
+
+
+
+
+Definition at line 545 of file GLU.h.\hypertarget{_g_l_u_8h_e0dd18e410295b4dba72fc27fc22b480}{
+\index{GLU.h@{GLU.h}!GLU\_\-NURBS\_\-ERROR29@{GLU\_\-NURBS\_\-ERROR29}}
+\index{GLU\_\-NURBS\_\-ERROR29@{GLU\_\-NURBS\_\-ERROR29}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-NURBS\_\-ERROR29}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-NURBS\_\-ERROR29~100279}}
+\label{_g_l_u_8h_e0dd18e410295b4dba72fc27fc22b480}
+
+
+
+
+Definition at line 546 of file GLU.h.\hypertarget{_g_l_u_8h_8489014b5d6ddf4c2b4deec42706bbf3}{
+\index{GLU.h@{GLU.h}!GLU\_\-NURBS\_\-ERROR3@{GLU\_\-NURBS\_\-ERROR3}}
+\index{GLU\_\-NURBS\_\-ERROR3@{GLU\_\-NURBS\_\-ERROR3}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-NURBS\_\-ERROR3}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-NURBS\_\-ERROR3~100253}}
+\label{_g_l_u_8h_8489014b5d6ddf4c2b4deec42706bbf3}
+
+
+
+
+Definition at line 520 of file GLU.h.\hypertarget{_g_l_u_8h_c28cb77945723c12d70805aa4fb92427}{
+\index{GLU.h@{GLU.h}!GLU\_\-NURBS\_\-ERROR30@{GLU\_\-NURBS\_\-ERROR30}}
+\index{GLU\_\-NURBS\_\-ERROR30@{GLU\_\-NURBS\_\-ERROR30}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-NURBS\_\-ERROR30}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-NURBS\_\-ERROR30~100280}}
+\label{_g_l_u_8h_c28cb77945723c12d70805aa4fb92427}
+
+
+
+
+Definition at line 547 of file GLU.h.\hypertarget{_g_l_u_8h_4641116507ef28fcaeb66fbfbc92263f}{
+\index{GLU.h@{GLU.h}!GLU\_\-NURBS\_\-ERROR31@{GLU\_\-NURBS\_\-ERROR31}}
+\index{GLU\_\-NURBS\_\-ERROR31@{GLU\_\-NURBS\_\-ERROR31}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-NURBS\_\-ERROR31}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-NURBS\_\-ERROR31~100281}}
+\label{_g_l_u_8h_4641116507ef28fcaeb66fbfbc92263f}
+
+
+
+
+Definition at line 548 of file GLU.h.\hypertarget{_g_l_u_8h_4e074895f71f6daa4a2b87f45fc04838}{
+\index{GLU.h@{GLU.h}!GLU\_\-NURBS\_\-ERROR32@{GLU\_\-NURBS\_\-ERROR32}}
+\index{GLU\_\-NURBS\_\-ERROR32@{GLU\_\-NURBS\_\-ERROR32}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-NURBS\_\-ERROR32}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-NURBS\_\-ERROR32~100282}}
+\label{_g_l_u_8h_4e074895f71f6daa4a2b87f45fc04838}
+
+
+
+
+Definition at line 549 of file GLU.h.\hypertarget{_g_l_u_8h_53a96ba2cc2b0954ce247fd85e25ecf4}{
+\index{GLU.h@{GLU.h}!GLU\_\-NURBS\_\-ERROR33@{GLU\_\-NURBS\_\-ERROR33}}
+\index{GLU\_\-NURBS\_\-ERROR33@{GLU\_\-NURBS\_\-ERROR33}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-NURBS\_\-ERROR33}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-NURBS\_\-ERROR33~100283}}
+\label{_g_l_u_8h_53a96ba2cc2b0954ce247fd85e25ecf4}
+
+
+
+
+Definition at line 550 of file GLU.h.\hypertarget{_g_l_u_8h_d030a61fe32478cebab468dcb22d6237}{
+\index{GLU.h@{GLU.h}!GLU\_\-NURBS\_\-ERROR34@{GLU\_\-NURBS\_\-ERROR34}}
+\index{GLU\_\-NURBS\_\-ERROR34@{GLU\_\-NURBS\_\-ERROR34}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-NURBS\_\-ERROR34}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-NURBS\_\-ERROR34~100284}}
+\label{_g_l_u_8h_d030a61fe32478cebab468dcb22d6237}
+
+
+
+
+Definition at line 551 of file GLU.h.\hypertarget{_g_l_u_8h_2ad3bd9b0d40c5aeb62969382d2bf856}{
+\index{GLU.h@{GLU.h}!GLU\_\-NURBS\_\-ERROR35@{GLU\_\-NURBS\_\-ERROR35}}
+\index{GLU\_\-NURBS\_\-ERROR35@{GLU\_\-NURBS\_\-ERROR35}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-NURBS\_\-ERROR35}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-NURBS\_\-ERROR35~100285}}
+\label{_g_l_u_8h_2ad3bd9b0d40c5aeb62969382d2bf856}
+
+
+
+
+Definition at line 552 of file GLU.h.\hypertarget{_g_l_u_8h_f5276e37a6c3d751091c0497f92a3f81}{
+\index{GLU.h@{GLU.h}!GLU\_\-NURBS\_\-ERROR36@{GLU\_\-NURBS\_\-ERROR36}}
+\index{GLU\_\-NURBS\_\-ERROR36@{GLU\_\-NURBS\_\-ERROR36}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-NURBS\_\-ERROR36}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-NURBS\_\-ERROR36~100286}}
+\label{_g_l_u_8h_f5276e37a6c3d751091c0497f92a3f81}
+
+
+
+
+Definition at line 553 of file GLU.h.\hypertarget{_g_l_u_8h_3a5c96766e8c4355d41adc703db8c0e5}{
+\index{GLU.h@{GLU.h}!GLU\_\-NURBS\_\-ERROR37@{GLU\_\-NURBS\_\-ERROR37}}
+\index{GLU\_\-NURBS\_\-ERROR37@{GLU\_\-NURBS\_\-ERROR37}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-NURBS\_\-ERROR37}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-NURBS\_\-ERROR37~100287}}
+\label{_g_l_u_8h_3a5c96766e8c4355d41adc703db8c0e5}
+
+
+
+
+Definition at line 554 of file GLU.h.\hypertarget{_g_l_u_8h_f00ff23365bec51fd40a88235d8ad2b1}{
+\index{GLU.h@{GLU.h}!GLU\_\-NURBS\_\-ERROR4@{GLU\_\-NURBS\_\-ERROR4}}
+\index{GLU\_\-NURBS\_\-ERROR4@{GLU\_\-NURBS\_\-ERROR4}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-NURBS\_\-ERROR4}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-NURBS\_\-ERROR4~100254}}
+\label{_g_l_u_8h_f00ff23365bec51fd40a88235d8ad2b1}
+
+
+
+
+Definition at line 521 of file GLU.h.\hypertarget{_g_l_u_8h_8c26688c346e4ebdb1f8b192c55c1dbd}{
+\index{GLU.h@{GLU.h}!GLU\_\-NURBS\_\-ERROR5@{GLU\_\-NURBS\_\-ERROR5}}
+\index{GLU\_\-NURBS\_\-ERROR5@{GLU\_\-NURBS\_\-ERROR5}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-NURBS\_\-ERROR5}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-NURBS\_\-ERROR5~100255}}
+\label{_g_l_u_8h_8c26688c346e4ebdb1f8b192c55c1dbd}
+
+
+
+
+Definition at line 522 of file GLU.h.\hypertarget{_g_l_u_8h_9f839ba87f5725026466b412f4d5d243}{
+\index{GLU.h@{GLU.h}!GLU\_\-NURBS\_\-ERROR6@{GLU\_\-NURBS\_\-ERROR6}}
+\index{GLU\_\-NURBS\_\-ERROR6@{GLU\_\-NURBS\_\-ERROR6}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-NURBS\_\-ERROR6}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-NURBS\_\-ERROR6~100256}}
+\label{_g_l_u_8h_9f839ba87f5725026466b412f4d5d243}
+
+
+
+
+Definition at line 523 of file GLU.h.\hypertarget{_g_l_u_8h_1e7aab676cc5ace0ea03a27f9a01e0cb}{
+\index{GLU.h@{GLU.h}!GLU\_\-NURBS\_\-ERROR7@{GLU\_\-NURBS\_\-ERROR7}}
+\index{GLU\_\-NURBS\_\-ERROR7@{GLU\_\-NURBS\_\-ERROR7}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-NURBS\_\-ERROR7}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-NURBS\_\-ERROR7~100257}}
+\label{_g_l_u_8h_1e7aab676cc5ace0ea03a27f9a01e0cb}
+
+
+
+
+Definition at line 524 of file GLU.h.\hypertarget{_g_l_u_8h_b3bea0a74f7c9550e54392b1b8dbc967}{
+\index{GLU.h@{GLU.h}!GLU\_\-NURBS\_\-ERROR8@{GLU\_\-NURBS\_\-ERROR8}}
+\index{GLU\_\-NURBS\_\-ERROR8@{GLU\_\-NURBS\_\-ERROR8}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-NURBS\_\-ERROR8}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-NURBS\_\-ERROR8~100258}}
+\label{_g_l_u_8h_b3bea0a74f7c9550e54392b1b8dbc967}
+
+
+
+
+Definition at line 525 of file GLU.h.\hypertarget{_g_l_u_8h_310aa18b72a16c62b3cae0a7af3041e0}{
+\index{GLU.h@{GLU.h}!GLU\_\-NURBS\_\-ERROR9@{GLU\_\-NURBS\_\-ERROR9}}
+\index{GLU\_\-NURBS\_\-ERROR9@{GLU\_\-NURBS\_\-ERROR9}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-NURBS\_\-ERROR9}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-NURBS\_\-ERROR9~100259}}
+\label{_g_l_u_8h_310aa18b72a16c62b3cae0a7af3041e0}
+
+
+
+
+Definition at line 526 of file GLU.h.\hypertarget{_g_l_u_8h_e188a4ef44029a16dd30469a2ba952c7}{
+\index{GLU.h@{GLU.h}!GLU\_\-OUT\_\-OF\_\-MEMORY@{GLU\_\-OUT\_\-OF\_\-MEMORY}}
+\index{GLU\_\-OUT\_\-OF\_\-MEMORY@{GLU\_\-OUT\_\-OF\_\-MEMORY}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-OUT\_\-OF\_\-MEMORY}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-OUT\_\-OF\_\-MEMORY~100902}}
+\label{_g_l_u_8h_e188a4ef44029a16dd30469a2ba952c7}
+
+
+
+
+Definition at line 396 of file GLU.h.\hypertarget{_g_l_u_8h_1367eaff00112cc07a2b0a2e231644ea}{
+\index{GLU.h@{GLU.h}!GLU\_\-OUTLINE\_\-PATCH@{GLU\_\-OUTLINE\_\-PATCH}}
+\index{GLU\_\-OUTLINE\_\-PATCH@{GLU\_\-OUTLINE\_\-PATCH}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-OUTLINE\_\-PATCH}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-OUTLINE\_\-PATCH~100241}}
+\label{_g_l_u_8h_1367eaff00112cc07a2b0a2e231644ea}
+
+
+
+
+Definition at line 512 of file GLU.h.\hypertarget{_g_l_u_8h_bbdcacdba7403cd9095fead866960ab6}{
+\index{GLU.h@{GLU.h}!GLU\_\-OUTLINE\_\-POLYGON@{GLU\_\-OUTLINE\_\-POLYGON}}
+\index{GLU\_\-OUTLINE\_\-POLYGON@{GLU\_\-OUTLINE\_\-POLYGON}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-OUTLINE\_\-POLYGON}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-OUTLINE\_\-POLYGON~100240}}
+\label{_g_l_u_8h_bbdcacdba7403cd9095fead866960ab6}
+
+
+
+
+Definition at line 511 of file GLU.h.\hypertarget{_g_l_u_8h_023a2f5205994b8bebacba9c584beb45}{
+\index{GLU.h@{GLU.h}!GLU\_\-OUTSIDE@{GLU\_\-OUTSIDE}}
+\index{GLU\_\-OUTSIDE@{GLU\_\-OUTSIDE}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-OUTSIDE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-OUTSIDE~100020}}
+\label{_g_l_u_8h_023a2f5205994b8bebacba9c584beb45}
+
+
+
+
+Definition at line 422 of file GLU.h.\hypertarget{_g_l_u_8h_ca315a6aa7e63df46ea44fd6e52d5830}{
+\index{GLU.h@{GLU.h}!GLU\_\-PARAMETRIC\_\-ERROR@{GLU\_\-PARAMETRIC\_\-ERROR}}
+\index{GLU\_\-PARAMETRIC\_\-ERROR@{GLU\_\-PARAMETRIC\_\-ERROR}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-PARAMETRIC\_\-ERROR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-PARAMETRIC\_\-ERROR~100216}}
+\label{_g_l_u_8h_ca315a6aa7e63df46ea44fd6e52d5830}
+
+
+
+
+Definition at line 501 of file GLU.h.\hypertarget{_g_l_u_8h_de32add9238f9a19bbdffd8db0db5247}{
+\index{GLU.h@{GLU.h}!GLU\_\-PARAMETRIC\_\-TOLERANCE@{GLU\_\-PARAMETRIC\_\-TOLERANCE}}
+\index{GLU\_\-PARAMETRIC\_\-TOLERANCE@{GLU\_\-PARAMETRIC\_\-TOLERANCE}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-PARAMETRIC\_\-TOLERANCE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-PARAMETRIC\_\-TOLERANCE~100202}}
+\label{_g_l_u_8h_de32add9238f9a19bbdffd8db0db5247}
+
+
+
+
+Definition at line 494 of file GLU.h.\hypertarget{_g_l_u_8h_02378cb14be125584bdb1293934ae394}{
+\index{GLU.h@{GLU.h}!GLU\_\-PATH\_\-LENGTH@{GLU\_\-PATH\_\-LENGTH}}
+\index{GLU\_\-PATH\_\-LENGTH@{GLU\_\-PATH\_\-LENGTH}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-PATH\_\-LENGTH}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-PATH\_\-LENGTH~100215}}
+\label{_g_l_u_8h_02378cb14be125584bdb1293934ae394}
+
+
+
+
+Definition at line 500 of file GLU.h.\hypertarget{_g_l_u_8h_045641151aa5ded8ece02bcd25c4e60e}{
+\index{GLU.h@{GLU.h}!GLU\_\-POINT@{GLU\_\-POINT}}
+\index{GLU\_\-POINT@{GLU\_\-POINT}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-POINT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-POINT~100010}}
+\label{_g_l_u_8h_045641151aa5ded8ece02bcd25c4e60e}
+
+
+
+
+Definition at line 416 of file GLU.h.\hypertarget{_g_l_u_8h_fa7ae3b739c2e0ec5231a9f6acb11e5a}{
+\index{GLU.h@{GLU.h}!GLU\_\-SAMPLING\_\-METHOD@{GLU\_\-SAMPLING\_\-METHOD}}
+\index{GLU\_\-SAMPLING\_\-METHOD@{GLU\_\-SAMPLING\_\-METHOD}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-SAMPLING\_\-METHOD}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-SAMPLING\_\-METHOD~100205}}
+\label{_g_l_u_8h_fa7ae3b739c2e0ec5231a9f6acb11e5a}
+
+
+
+
+Definition at line 495 of file GLU.h.\hypertarget{_g_l_u_8h_30932339ac9e41798cff80350cf79f81}{
+\index{GLU.h@{GLU.h}!GLU\_\-SAMPLING\_\-TOLERANCE@{GLU\_\-SAMPLING\_\-TOLERANCE}}
+\index{GLU\_\-SAMPLING\_\-TOLERANCE@{GLU\_\-SAMPLING\_\-TOLERANCE}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-SAMPLING\_\-TOLERANCE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-SAMPLING\_\-TOLERANCE~100203}}
+\label{_g_l_u_8h_30932339ac9e41798cff80350cf79f81}
+
+
+
+
+Definition at line 492 of file GLU.h.\hypertarget{_g_l_u_8h_9ff4607f7b16091dec274ed723cd2c30}{
+\index{GLU.h@{GLU.h}!GLU\_\-SILHOUETTE@{GLU\_\-SILHOUETTE}}
+\index{GLU\_\-SILHOUETTE@{GLU\_\-SILHOUETTE}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-SILHOUETTE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-SILHOUETTE~100013}}
+\label{_g_l_u_8h_9ff4607f7b16091dec274ed723cd2c30}
+
+
+
+
+Definition at line 419 of file GLU.h.\hypertarget{_g_l_u_8h_0c478dd515aa749a029cfb834503020d}{
+\index{GLU.h@{GLU.h}!GLU\_\-SMOOTH@{GLU\_\-SMOOTH}}
+\index{GLU\_\-SMOOTH@{GLU\_\-SMOOTH}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-SMOOTH}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-SMOOTH~100000}}
+\label{_g_l_u_8h_0c478dd515aa749a029cfb834503020d}
+
+
+
+
+Definition at line 411 of file GLU.h.\hypertarget{_g_l_u_8h_a81cca2ef5c3ac7dd8cffb29b7917479}{
+\index{GLU.h@{GLU.h}!GLU\_\-TESS\_\-BEGIN@{GLU\_\-TESS\_\-BEGIN}}
+\index{GLU\_\-TESS\_\-BEGIN@{GLU\_\-TESS\_\-BEGIN}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-TESS\_\-BEGIN}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-TESS\_\-BEGIN~100100}}
+\label{_g_l_u_8h_a81cca2ef5c3ac7dd8cffb29b7917479}
+
+
+
+
+Definition at line 446 of file GLU.h.\hypertarget{_g_l_u_8h_1e7dcb5e30811e1883ad4fb4bdc53099}{
+\index{GLU.h@{GLU.h}!GLU\_\-TESS\_\-BEGIN\_\-DATA@{GLU\_\-TESS\_\-BEGIN\_\-DATA}}
+\index{GLU\_\-TESS\_\-BEGIN\_\-DATA@{GLU\_\-TESS\_\-BEGIN\_\-DATA}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-TESS\_\-BEGIN\_\-DATA}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-TESS\_\-BEGIN\_\-DATA~100106}}
+\label{_g_l_u_8h_1e7dcb5e30811e1883ad4fb4bdc53099}
+
+
+
+
+Definition at line 455 of file GLU.h.\hypertarget{_g_l_u_8h_11ff3ac7e21e23e824f1edadbe650c0c}{
+\index{GLU.h@{GLU.h}!GLU\_\-TESS\_\-BOUNDARY\_\-ONLY@{GLU\_\-TESS\_\-BOUNDARY\_\-ONLY}}
+\index{GLU\_\-TESS\_\-BOUNDARY\_\-ONLY@{GLU\_\-TESS\_\-BOUNDARY\_\-ONLY}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-TESS\_\-BOUNDARY\_\-ONLY}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-TESS\_\-BOUNDARY\_\-ONLY~100141}}
+\label{_g_l_u_8h_11ff3ac7e21e23e824f1edadbe650c0c}
+
+
+
+
+Definition at line 435 of file GLU.h.\hypertarget{_g_l_u_8h_bb1f5d54021c03360c1682a59e41c555}{
+\index{GLU.h@{GLU.h}!GLU\_\-TESS\_\-COMBINE@{GLU\_\-TESS\_\-COMBINE}}
+\index{GLU\_\-TESS\_\-COMBINE@{GLU\_\-TESS\_\-COMBINE}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-TESS\_\-COMBINE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-TESS\_\-COMBINE~100105}}
+\label{_g_l_u_8h_bb1f5d54021c03360c1682a59e41c555}
+
+
+
+
+Definition at line 451 of file GLU.h.\hypertarget{_g_l_u_8h_21ef34b0d19eb4641eb6bd5cc3b087a3}{
+\index{GLU.h@{GLU.h}!GLU\_\-TESS\_\-COMBINE\_\-DATA@{GLU\_\-TESS\_\-COMBINE\_\-DATA}}
+\index{GLU\_\-TESS\_\-COMBINE\_\-DATA@{GLU\_\-TESS\_\-COMBINE\_\-DATA}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-TESS\_\-COMBINE\_\-DATA}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-TESS\_\-COMBINE\_\-DATA~100111}}
+\label{_g_l_u_8h_21ef34b0d19eb4641eb6bd5cc3b087a3}
+
+
+
+
+Definition at line 464 of file GLU.h.\hypertarget{_g_l_u_8h_a39f4c24ac877334fcc144dda403502f}{
+\index{GLU.h@{GLU.h}!GLU\_\-TESS\_\-COORD\_\-TOO\_\-LARGE@{GLU\_\-TESS\_\-COORD\_\-TOO\_\-LARGE}}
+\index{GLU\_\-TESS\_\-COORD\_\-TOO\_\-LARGE@{GLU\_\-TESS\_\-COORD\_\-TOO\_\-LARGE}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-TESS\_\-COORD\_\-TOO\_\-LARGE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-TESS\_\-COORD\_\-TOO\_\-LARGE~GLU\_\-TESS\_\-ERROR5}}
+\label{_g_l_u_8h_a39f4c24ac877334fcc144dda403502f}
+
+
+
+
+Definition at line 484 of file GLU.h.\hypertarget{_g_l_u_8h_71e2881a1c341439918b88af7424afd6}{
+\index{GLU.h@{GLU.h}!GLU\_\-TESS\_\-EDGE\_\-FLAG@{GLU\_\-TESS\_\-EDGE\_\-FLAG}}
+\index{GLU\_\-TESS\_\-EDGE\_\-FLAG@{GLU\_\-TESS\_\-EDGE\_\-FLAG}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-TESS\_\-EDGE\_\-FLAG}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-TESS\_\-EDGE\_\-FLAG~100104}}
+\label{_g_l_u_8h_71e2881a1c341439918b88af7424afd6}
+
+
+
+
+Definition at line 450 of file GLU.h.\hypertarget{_g_l_u_8h_985a59a41182bc8033caacdd0a8c4465}{
+\index{GLU.h@{GLU.h}!GLU\_\-TESS\_\-EDGE\_\-FLAG\_\-DATA@{GLU\_\-TESS\_\-EDGE\_\-FLAG\_\-DATA}}
+\index{GLU\_\-TESS\_\-EDGE\_\-FLAG\_\-DATA@{GLU\_\-TESS\_\-EDGE\_\-FLAG\_\-DATA}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-TESS\_\-EDGE\_\-FLAG\_\-DATA}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-TESS\_\-EDGE\_\-FLAG\_\-DATA~100110}}
+\label{_g_l_u_8h_985a59a41182bc8033caacdd0a8c4465}
+
+
+
+
+Definition at line 462 of file GLU.h.\hypertarget{_g_l_u_8h_5f7b7ca47e62203406116509994b4507}{
+\index{GLU.h@{GLU.h}!GLU\_\-TESS\_\-END@{GLU\_\-TESS\_\-END}}
+\index{GLU\_\-TESS\_\-END@{GLU\_\-TESS\_\-END}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-TESS\_\-END}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-TESS\_\-END~100102}}
+\label{_g_l_u_8h_5f7b7ca47e62203406116509994b4507}
+
+
+
+
+Definition at line 448 of file GLU.h.\hypertarget{_g_l_u_8h_4f7e648481e8e3a3e753cc01c66b56ab}{
+\index{GLU.h@{GLU.h}!GLU\_\-TESS\_\-END\_\-DATA@{GLU\_\-TESS\_\-END\_\-DATA}}
+\index{GLU\_\-TESS\_\-END\_\-DATA@{GLU\_\-TESS\_\-END\_\-DATA}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-TESS\_\-END\_\-DATA}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-TESS\_\-END\_\-DATA~100108}}
+\label{_g_l_u_8h_4f7e648481e8e3a3e753cc01c66b56ab}
+
+
+
+
+Definition at line 459 of file GLU.h.\hypertarget{_g_l_u_8h_bd12e5af1742322c20f780b96356a134}{
+\index{GLU.h@{GLU.h}!GLU\_\-TESS\_\-ERROR@{GLU\_\-TESS\_\-ERROR}}
+\index{GLU\_\-TESS\_\-ERROR@{GLU\_\-TESS\_\-ERROR}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-TESS\_\-ERROR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-TESS\_\-ERROR~100103}}
+\label{_g_l_u_8h_bd12e5af1742322c20f780b96356a134}
+
+
+
+
+Definition at line 449 of file GLU.h.\hypertarget{_g_l_u_8h_5fc77a56e7cef85b38e0a9c0afaf4507}{
+\index{GLU.h@{GLU.h}!GLU\_\-TESS\_\-ERROR1@{GLU\_\-TESS\_\-ERROR1}}
+\index{GLU\_\-TESS\_\-ERROR1@{GLU\_\-TESS\_\-ERROR1}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-TESS\_\-ERROR1}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-TESS\_\-ERROR1~100151}}
+\label{_g_l_u_8h_5fc77a56e7cef85b38e0a9c0afaf4507}
+
+
+
+
+Definition at line 471 of file GLU.h.\hypertarget{_g_l_u_8h_a17dcf37427471cff5223e610d9c8264}{
+\index{GLU.h@{GLU.h}!GLU\_\-TESS\_\-ERROR2@{GLU\_\-TESS\_\-ERROR2}}
+\index{GLU\_\-TESS\_\-ERROR2@{GLU\_\-TESS\_\-ERROR2}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-TESS\_\-ERROR2}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-TESS\_\-ERROR2~100152}}
+\label{_g_l_u_8h_a17dcf37427471cff5223e610d9c8264}
+
+
+
+
+Definition at line 472 of file GLU.h.\hypertarget{_g_l_u_8h_4207936e5fcf6a61bfde4178dc2407d2}{
+\index{GLU.h@{GLU.h}!GLU\_\-TESS\_\-ERROR3@{GLU\_\-TESS\_\-ERROR3}}
+\index{GLU\_\-TESS\_\-ERROR3@{GLU\_\-TESS\_\-ERROR3}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-TESS\_\-ERROR3}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-TESS\_\-ERROR3~100153}}
+\label{_g_l_u_8h_4207936e5fcf6a61bfde4178dc2407d2}
+
+
+
+
+Definition at line 473 of file GLU.h.\hypertarget{_g_l_u_8h_aa07074f540484997de25e23e47ee083}{
+\index{GLU.h@{GLU.h}!GLU\_\-TESS\_\-ERROR4@{GLU\_\-TESS\_\-ERROR4}}
+\index{GLU\_\-TESS\_\-ERROR4@{GLU\_\-TESS\_\-ERROR4}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-TESS\_\-ERROR4}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-TESS\_\-ERROR4~100154}}
+\label{_g_l_u_8h_aa07074f540484997de25e23e47ee083}
+
+
+
+
+Definition at line 474 of file GLU.h.\hypertarget{_g_l_u_8h_48c1413c62308e77d47e7f01781a0501}{
+\index{GLU.h@{GLU.h}!GLU\_\-TESS\_\-ERROR5@{GLU\_\-TESS\_\-ERROR5}}
+\index{GLU\_\-TESS\_\-ERROR5@{GLU\_\-TESS\_\-ERROR5}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-TESS\_\-ERROR5}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-TESS\_\-ERROR5~100155}}
+\label{_g_l_u_8h_48c1413c62308e77d47e7f01781a0501}
+
+
+
+
+Definition at line 475 of file GLU.h.\hypertarget{_g_l_u_8h_edf6eb03165035584e308c295a8366f0}{
+\index{GLU.h@{GLU.h}!GLU\_\-TESS\_\-ERROR6@{GLU\_\-TESS\_\-ERROR6}}
+\index{GLU\_\-TESS\_\-ERROR6@{GLU\_\-TESS\_\-ERROR6}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-TESS\_\-ERROR6}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-TESS\_\-ERROR6~100156}}
+\label{_g_l_u_8h_edf6eb03165035584e308c295a8366f0}
+
+
+
+
+Definition at line 476 of file GLU.h.\hypertarget{_g_l_u_8h_1fb8ca60ab25adae8e1ec159ca0ae131}{
+\index{GLU.h@{GLU.h}!GLU\_\-TESS\_\-ERROR7@{GLU\_\-TESS\_\-ERROR7}}
+\index{GLU\_\-TESS\_\-ERROR7@{GLU\_\-TESS\_\-ERROR7}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-TESS\_\-ERROR7}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-TESS\_\-ERROR7~100157}}
+\label{_g_l_u_8h_1fb8ca60ab25adae8e1ec159ca0ae131}
+
+
+
+
+Definition at line 477 of file GLU.h.\hypertarget{_g_l_u_8h_76e30d1e14037277e6710086a86a0c18}{
+\index{GLU.h@{GLU.h}!GLU\_\-TESS\_\-ERROR8@{GLU\_\-TESS\_\-ERROR8}}
+\index{GLU\_\-TESS\_\-ERROR8@{GLU\_\-TESS\_\-ERROR8}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-TESS\_\-ERROR8}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-TESS\_\-ERROR8~100158}}
+\label{_g_l_u_8h_76e30d1e14037277e6710086a86a0c18}
+
+
+
+
+Definition at line 478 of file GLU.h.\hypertarget{_g_l_u_8h_f2df4b5e08ac813f3fa98cde7a4a7180}{
+\index{GLU.h@{GLU.h}!GLU\_\-TESS\_\-ERROR\_\-DATA@{GLU\_\-TESS\_\-ERROR\_\-DATA}}
+\index{GLU\_\-TESS\_\-ERROR\_\-DATA@{GLU\_\-TESS\_\-ERROR\_\-DATA}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-TESS\_\-ERROR\_\-DATA}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-TESS\_\-ERROR\_\-DATA~100109}}
+\label{_g_l_u_8h_f2df4b5e08ac813f3fa98cde7a4a7180}
+
+
+
+
+Definition at line 460 of file GLU.h.\hypertarget{_g_l_u_8h_deeea517eda7978cdc34294f2b9b24a6}{
+\index{GLU.h@{GLU.h}!GLU\_\-TESS\_\-MAX\_\-COORD@{GLU\_\-TESS\_\-MAX\_\-COORD}}
+\index{GLU\_\-TESS\_\-MAX\_\-COORD@{GLU\_\-TESS\_\-MAX\_\-COORD}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-TESS\_\-MAX\_\-COORD}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-TESS\_\-MAX\_\-COORD~1.0e150}}
+\label{_g_l_u_8h_deeea517eda7978cdc34294f2b9b24a6}
+
+
+
+
+Definition at line 431 of file GLU.h.\hypertarget{_g_l_u_8h_2991ebeae1430af30ca377c620271fd8}{
+\index{GLU.h@{GLU.h}!GLU\_\-TESS\_\-MISSING\_\-BEGIN\_\-CONTOUR@{GLU\_\-TESS\_\-MISSING\_\-BEGIN\_\-CONTOUR}}
+\index{GLU\_\-TESS\_\-MISSING\_\-BEGIN\_\-CONTOUR@{GLU\_\-TESS\_\-MISSING\_\-BEGIN\_\-CONTOUR}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-TESS\_\-MISSING\_\-BEGIN\_\-CONTOUR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-TESS\_\-MISSING\_\-BEGIN\_\-CONTOUR~GLU\_\-TESS\_\-ERROR2}}
+\label{_g_l_u_8h_2991ebeae1430af30ca377c620271fd8}
+
+
+
+
+Definition at line 481 of file GLU.h.\hypertarget{_g_l_u_8h_c904aa78d662ee038a3e743ce4f8b61b}{
+\index{GLU.h@{GLU.h}!GLU\_\-TESS\_\-MISSING\_\-BEGIN\_\-POLYGON@{GLU\_\-TESS\_\-MISSING\_\-BEGIN\_\-POLYGON}}
+\index{GLU\_\-TESS\_\-MISSING\_\-BEGIN\_\-POLYGON@{GLU\_\-TESS\_\-MISSING\_\-BEGIN\_\-POLYGON}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-TESS\_\-MISSING\_\-BEGIN\_\-POLYGON}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-TESS\_\-MISSING\_\-BEGIN\_\-POLYGON~GLU\_\-TESS\_\-ERROR1}}
+\label{_g_l_u_8h_c904aa78d662ee038a3e743ce4f8b61b}
+
+
+
+
+Definition at line 480 of file GLU.h.\hypertarget{_g_l_u_8h_8d00d413ff007957f342183c3d4d09f8}{
+\index{GLU.h@{GLU.h}!GLU\_\-TESS\_\-MISSING\_\-END\_\-CONTOUR@{GLU\_\-TESS\_\-MISSING\_\-END\_\-CONTOUR}}
+\index{GLU\_\-TESS\_\-MISSING\_\-END\_\-CONTOUR@{GLU\_\-TESS\_\-MISSING\_\-END\_\-CONTOUR}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-TESS\_\-MISSING\_\-END\_\-CONTOUR}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-TESS\_\-MISSING\_\-END\_\-CONTOUR~GLU\_\-TESS\_\-ERROR4}}
+\label{_g_l_u_8h_8d00d413ff007957f342183c3d4d09f8}
+
+
+
+
+Definition at line 483 of file GLU.h.\hypertarget{_g_l_u_8h_e21f2bc14f880c74f2573c44a264757b}{
+\index{GLU.h@{GLU.h}!GLU\_\-TESS\_\-MISSING\_\-END\_\-POLYGON@{GLU\_\-TESS\_\-MISSING\_\-END\_\-POLYGON}}
+\index{GLU\_\-TESS\_\-MISSING\_\-END\_\-POLYGON@{GLU\_\-TESS\_\-MISSING\_\-END\_\-POLYGON}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-TESS\_\-MISSING\_\-END\_\-POLYGON}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-TESS\_\-MISSING\_\-END\_\-POLYGON~GLU\_\-TESS\_\-ERROR3}}
+\label{_g_l_u_8h_e21f2bc14f880c74f2573c44a264757b}
+
+
+
+
+Definition at line 482 of file GLU.h.\hypertarget{_g_l_u_8h_a8dde6e717ede12dbf6acde347cc6a40}{
+\index{GLU.h@{GLU.h}!GLU\_\-TESS\_\-NEED\_\-COMBINE\_\-CALLBACK@{GLU\_\-TESS\_\-NEED\_\-COMBINE\_\-CALLBACK}}
+\index{GLU\_\-TESS\_\-NEED\_\-COMBINE\_\-CALLBACK@{GLU\_\-TESS\_\-NEED\_\-COMBINE\_\-CALLBACK}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-TESS\_\-NEED\_\-COMBINE\_\-CALLBACK}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-TESS\_\-NEED\_\-COMBINE\_\-CALLBACK~GLU\_\-TESS\_\-ERROR6}}
+\label{_g_l_u_8h_a8dde6e717ede12dbf6acde347cc6a40}
+
+
+
+
+Definition at line 485 of file GLU.h.\hypertarget{_g_l_u_8h_95fd66e8ddac85bc30a722675b2b1e60}{
+\index{GLU.h@{GLU.h}!GLU\_\-TESS\_\-TOLERANCE@{GLU\_\-TESS\_\-TOLERANCE}}
+\index{GLU\_\-TESS\_\-TOLERANCE@{GLU\_\-TESS\_\-TOLERANCE}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-TESS\_\-TOLERANCE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-TESS\_\-TOLERANCE~100142}}
+\label{_g_l_u_8h_95fd66e8ddac85bc30a722675b2b1e60}
+
+
+
+
+Definition at line 436 of file GLU.h.\hypertarget{_g_l_u_8h_0de05a8802a26295e3c66b4e0f0db539}{
+\index{GLU.h@{GLU.h}!GLU\_\-TESS\_\-VERTEX@{GLU\_\-TESS\_\-VERTEX}}
+\index{GLU\_\-TESS\_\-VERTEX@{GLU\_\-TESS\_\-VERTEX}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-TESS\_\-VERTEX}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-TESS\_\-VERTEX~100101}}
+\label{_g_l_u_8h_0de05a8802a26295e3c66b4e0f0db539}
+
+
+
+
+Definition at line 447 of file GLU.h.\hypertarget{_g_l_u_8h_a59813f82fcd03d0b81c3de0d6afe60c}{
+\index{GLU.h@{GLU.h}!GLU\_\-TESS\_\-VERTEX\_\-DATA@{GLU\_\-TESS\_\-VERTEX\_\-DATA}}
+\index{GLU\_\-TESS\_\-VERTEX\_\-DATA@{GLU\_\-TESS\_\-VERTEX\_\-DATA}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-TESS\_\-VERTEX\_\-DATA}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-TESS\_\-VERTEX\_\-DATA~100107}}
+\label{_g_l_u_8h_a59813f82fcd03d0b81c3de0d6afe60c}
+
+
+
+
+Definition at line 457 of file GLU.h.\hypertarget{_g_l_u_8h_fd53ee516e6424d8fc53066782c61239}{
+\index{GLU.h@{GLU.h}!GLU\_\-TESS\_\-WINDING\_\-ABS\_\-GEQ\_\-TWO@{GLU\_\-TESS\_\-WINDING\_\-ABS\_\-GEQ\_\-TWO}}
+\index{GLU\_\-TESS\_\-WINDING\_\-ABS\_\-GEQ\_\-TWO@{GLU\_\-TESS\_\-WINDING\_\-ABS\_\-GEQ\_\-TWO}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-TESS\_\-WINDING\_\-ABS\_\-GEQ\_\-TWO}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-TESS\_\-WINDING\_\-ABS\_\-GEQ\_\-TWO~100134}}
+\label{_g_l_u_8h_fd53ee516e6424d8fc53066782c61239}
+
+
+
+
+Definition at line 443 of file GLU.h.\hypertarget{_g_l_u_8h_448b386a6eb0dafc79a73261465f3a37}{
+\index{GLU.h@{GLU.h}!GLU\_\-TESS\_\-WINDING\_\-NEGATIVE@{GLU\_\-TESS\_\-WINDING\_\-NEGATIVE}}
+\index{GLU\_\-TESS\_\-WINDING\_\-NEGATIVE@{GLU\_\-TESS\_\-WINDING\_\-NEGATIVE}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-TESS\_\-WINDING\_\-NEGATIVE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-TESS\_\-WINDING\_\-NEGATIVE~100133}}
+\label{_g_l_u_8h_448b386a6eb0dafc79a73261465f3a37}
+
+
+
+
+Definition at line 442 of file GLU.h.\hypertarget{_g_l_u_8h_0b467e8a63b8084f1ed4ef2edf0c0a70}{
+\index{GLU.h@{GLU.h}!GLU\_\-TESS\_\-WINDING\_\-NONZERO@{GLU\_\-TESS\_\-WINDING\_\-NONZERO}}
+\index{GLU\_\-TESS\_\-WINDING\_\-NONZERO@{GLU\_\-TESS\_\-WINDING\_\-NONZERO}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-TESS\_\-WINDING\_\-NONZERO}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-TESS\_\-WINDING\_\-NONZERO~100131}}
+\label{_g_l_u_8h_0b467e8a63b8084f1ed4ef2edf0c0a70}
+
+
+
+
+Definition at line 440 of file GLU.h.\hypertarget{_g_l_u_8h_a1746cdfda16da9215a3bfee49e4c430}{
+\index{GLU.h@{GLU.h}!GLU\_\-TESS\_\-WINDING\_\-ODD@{GLU\_\-TESS\_\-WINDING\_\-ODD}}
+\index{GLU\_\-TESS\_\-WINDING\_\-ODD@{GLU\_\-TESS\_\-WINDING\_\-ODD}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-TESS\_\-WINDING\_\-ODD}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-TESS\_\-WINDING\_\-ODD~100130}}
+\label{_g_l_u_8h_a1746cdfda16da9215a3bfee49e4c430}
+
+
+
+
+Definition at line 439 of file GLU.h.\hypertarget{_g_l_u_8h_0e096dbb0182d6bf29efbcccd7988953}{
+\index{GLU.h@{GLU.h}!GLU\_\-TESS\_\-WINDING\_\-POSITIVE@{GLU\_\-TESS\_\-WINDING\_\-POSITIVE}}
+\index{GLU\_\-TESS\_\-WINDING\_\-POSITIVE@{GLU\_\-TESS\_\-WINDING\_\-POSITIVE}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-TESS\_\-WINDING\_\-POSITIVE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-TESS\_\-WINDING\_\-POSITIVE~100132}}
+\label{_g_l_u_8h_0e096dbb0182d6bf29efbcccd7988953}
+
+
+
+
+Definition at line 441 of file GLU.h.\hypertarget{_g_l_u_8h_6e83a83a1e821171f61890b6a1e4415c}{
+\index{GLU.h@{GLU.h}!GLU\_\-TESS\_\-WINDING\_\-RULE@{GLU\_\-TESS\_\-WINDING\_\-RULE}}
+\index{GLU\_\-TESS\_\-WINDING\_\-RULE@{GLU\_\-TESS\_\-WINDING\_\-RULE}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-TESS\_\-WINDING\_\-RULE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-TESS\_\-WINDING\_\-RULE~100140}}
+\label{_g_l_u_8h_6e83a83a1e821171f61890b6a1e4415c}
+
+
+
+
+Definition at line 434 of file GLU.h.\hypertarget{_g_l_u_8h_1e9978cac957a14b03b9a95949da3605}{
+\index{GLU.h@{GLU.h}!GLU\_\-TRUE@{GLU\_\-TRUE}}
+\index{GLU\_\-TRUE@{GLU\_\-TRUE}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-TRUE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-TRUE~GL\_\-TRUE}}
+\label{_g_l_u_8h_1e9978cac957a14b03b9a95949da3605}
+
+
+
+
+Definition at line 404 of file GLU.h.\hypertarget{_g_l_u_8h_7907fa823414b968d006e90955ec5800}{
+\index{GLU.h@{GLU.h}!GLU\_\-U\_\-STEP@{GLU\_\-U\_\-STEP}}
+\index{GLU\_\-U\_\-STEP@{GLU\_\-U\_\-STEP}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-U\_\-STEP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-U\_\-STEP~100206}}
+\label{_g_l_u_8h_7907fa823414b968d006e90955ec5800}
+
+
+
+
+Definition at line 496 of file GLU.h.\hypertarget{_g_l_u_8h_5601b54506b15e8eb30b0ed770b31a21}{
+\index{GLU.h@{GLU.h}!GLU\_\-UNKNOWN@{GLU\_\-UNKNOWN}}
+\index{GLU\_\-UNKNOWN@{GLU\_\-UNKNOWN}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-UNKNOWN}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-UNKNOWN~100124}}
+\label{_g_l_u_8h_5601b54506b15e8eb30b0ed770b31a21}
+
+
+
+
+Definition at line 570 of file GLU.h.\hypertarget{_g_l_u_8h_af38951bc05589d1781317d98e84b181}{
+\index{GLU.h@{GLU.h}!GLU\_\-V\_\-STEP@{GLU\_\-V\_\-STEP}}
+\index{GLU\_\-V\_\-STEP@{GLU\_\-V\_\-STEP}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-V\_\-STEP}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-V\_\-STEP~100207}}
+\label{_g_l_u_8h_af38951bc05589d1781317d98e84b181}
+
+
+
+
+Definition at line 497 of file GLU.h.\hypertarget{_g_l_u_8h_e4d9674a8e0e69c847db49bcd7ec34dc}{
+\index{GLU.h@{GLU.h}!GLU\_\-VERSION@{GLU\_\-VERSION}}
+\index{GLU\_\-VERSION@{GLU\_\-VERSION}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-VERSION}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-VERSION~100800}}
+\label{_g_l_u_8h_e4d9674a8e0e69c847db49bcd7ec34dc}
+
+
+
+
+Definition at line 400 of file GLU.h.\hypertarget{_g_l_u_8h_5f05a9efbfbaa9dfcab9c996b8963a7c}{
+\index{GLU.h@{GLU.h}!GLU\_\-VERSION\_\-1\_\-1@{GLU\_\-VERSION\_\-1\_\-1}}
+\index{GLU\_\-VERSION\_\-1\_\-1@{GLU\_\-VERSION\_\-1\_\-1}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-VERSION\_\-1\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-VERSION\_\-1\_\-1~1}}
+\label{_g_l_u_8h_5f05a9efbfbaa9dfcab9c996b8963a7c}
+
+
+
+
+Definition at line 390 of file GLU.h.\hypertarget{_g_l_u_8h_70c5c62d2201b6f1fd995f71769850ec}{
+\index{GLU.h@{GLU.h}!GLU\_\-VERSION\_\-1\_\-2@{GLU\_\-VERSION\_\-1\_\-2}}
+\index{GLU\_\-VERSION\_\-1\_\-2@{GLU\_\-VERSION\_\-1\_\-2}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-VERSION\_\-1\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-VERSION\_\-1\_\-2~1}}
+\label{_g_l_u_8h_70c5c62d2201b6f1fd995f71769850ec}
+
+
+
+
+Definition at line 391 of file GLU.h.\hypertarget{_g_l_u_8h_37fe4d0f5f86109dda9835b73142b4ab}{
+\index{GLU.h@{GLU.h}!GLU\_\-VERTEX@{GLU\_\-VERTEX}}
+\index{GLU\_\-VERTEX@{GLU\_\-VERTEX}!GLU.h@{GLU.h}}
+\subsubsection[{GLU\_\-VERTEX}]{\setlength{\rightskip}{0pt plus 5cm}\#define GLU\_\-VERTEX~GLU\_\-TESS\_\-VERTEX}}
+\label{_g_l_u_8h_37fe4d0f5f86109dda9835b73142b4ab}
+
+
+
+
+Definition at line 574 of file GLU.h.\hypertarget{_g_l_u_8h_ea80a2795b4e5fd67ca480a0dfe1b1fe}{
+\index{GLU.h@{GLU.h}!gluErrorStringWIN@{gluErrorStringWIN}}
+\index{gluErrorStringWIN@{gluErrorStringWIN}!GLU.h@{GLU.h}}
+\subsubsection[{gluErrorStringWIN}]{\setlength{\rightskip}{0pt plus 5cm}\#define gluErrorStringWIN(errCode)~( ( LPCWSTR ) gluErrorString( errCode ) )}}
+\label{_g_l_u_8h_ea80a2795b4e5fd67ca480a0dfe1b1fe}
+
+
+
+
+Definition at line 57 of file GLU.h.
+
+\subsection{Typedef Documentation}
+\hypertarget{_g_l_u_8h_4e1d329b89ee7e3f8d7a4be6ebc75254}{
+\index{GLU.h@{GLU.h}!GLfloat@{GLfloat}}
+\index{GLfloat@{GLfloat}!GLU.h@{GLU.h}}
+\subsubsection[{GLfloat}]{\setlength{\rightskip}{0pt plus 5cm}typedef void$\ast$ typedef void {\bf GLfloat}\mbox{[}4\mbox{]}}}
+\label{_g_l_u_8h_4e1d329b89ee7e3f8d7a4be6ebc75254}
+
+
+
+
+Definition at line 369 of file GLU.h.\hypertarget{_g_l_u_8h_d7cd1bf6201e0ac45d5c80f00c7a5cc6}{
+\index{GLU.h@{GLU.h}!GLUnurbs@{GLUnurbs}}
+\index{GLUnurbs@{GLUnurbs}!GLU.h@{GLU.h}}
+\subsubsection[{GLUnurbs}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GLUnurbs} {\bf GLUnurbs}}}
+\label{_g_l_u_8h_d7cd1bf6201e0ac45d5c80f00c7a5cc6}
+
+
+
+
+Definition at line 165 of file GLU.h.\hypertarget{_g_l_u_8h_3ae38cbddae11368b0983b80e3ad8ac5}{
+\index{GLU.h@{GLU.h}!GLUnurbsObj@{GLUnurbsObj}}
+\index{GLUnurbsObj@{GLUnurbsObj}!GLU.h@{GLU.h}}
+\subsubsection[{GLUnurbsObj}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GLUnurbs} {\bf GLUnurbsObj}}}
+\label{_g_l_u_8h_3ae38cbddae11368b0983b80e3ad8ac5}
+
+
+
+
+Definition at line 170 of file GLU.h.\hypertarget{_g_l_u_8h_101ef3784c466660e922c88e6ed3164a}{
+\index{GLU.h@{GLU.h}!GLUquadric@{GLUquadric}}
+\index{GLUquadric@{GLUquadric}!GLU.h@{GLU.h}}
+\subsubsection[{GLUquadric}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GLUquadric} {\bf GLUquadric}}}
+\label{_g_l_u_8h_101ef3784c466660e922c88e6ed3164a}
+
+
+
+
+Definition at line 166 of file GLU.h.\hypertarget{_g_l_u_8h_3d9af4292c1f0ed516a08ff1388a0224}{
+\index{GLU.h@{GLU.h}!GLUquadricObj@{GLUquadricObj}}
+\index{GLUquadricObj@{GLUquadricObj}!GLU.h@{GLU.h}}
+\subsubsection[{GLUquadricObj}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GLUquadric} {\bf GLUquadricObj}}}
+\label{_g_l_u_8h_3d9af4292c1f0ed516a08ff1388a0224}
+
+
+
+
+Definition at line 171 of file GLU.h.\hypertarget{_g_l_u_8h_65d8559e5a2f80c5ed1dee9697627194}{
+\index{GLU.h@{GLU.h}!GLUtesselator@{GLUtesselator}}
+\index{GLUtesselator@{GLUtesselator}!GLU.h@{GLU.h}}
+\subsubsection[{GLUtesselator}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GLUtesselator} {\bf GLUtesselator}}}
+\label{_g_l_u_8h_65d8559e5a2f80c5ed1dee9697627194}
+
+
+
+
+Definition at line 167 of file GLU.h.\hypertarget{_g_l_u_8h_1f3ab21c5a3c7bf646d89f29e5605c66}{
+\index{GLU.h@{GLU.h}!GLUtesselatorObj@{GLUtesselatorObj}}
+\index{GLUtesselatorObj@{GLUtesselatorObj}!GLU.h@{GLU.h}}
+\subsubsection[{GLUtesselatorObj}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GLUtesselator} {\bf GLUtesselatorObj}}}
+\label{_g_l_u_8h_1f3ab21c5a3c7bf646d89f29e5605c66}
+
+
+
+
+Definition at line 172 of file GLU.h.\hypertarget{_g_l_u_8h_d98ac98d9b9031d7ff19194c5dfbd07d}{
+\index{GLU.h@{GLU.h}!GLUtriangulatorObj@{GLUtriangulatorObj}}
+\index{GLUtriangulatorObj@{GLUtriangulatorObj}!GLU.h@{GLU.h}}
+\subsubsection[{GLUtriangulatorObj}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf GLUtesselator} {\bf GLUtriangulatorObj}}}
+\label{_g_l_u_8h_d98ac98d9b9031d7ff19194c5dfbd07d}
+
+
+
+
+Definition at line 173 of file GLU.h.\hypertarget{_g_l_u_8h_d1bb4b2dc4d2c8b7423c4c9afbf2b484}{
+\index{GLU.h@{GLU.h}!void@{void}}
+\index{void@{void}!GLU.h@{GLU.h}}
+\subsubsection[{void}]{\setlength{\rightskip}{0pt plus 5cm}typedef void $\ast$typedef void void void $\ast$typedef void(CALLBACK $\ast$GLUnurbsErrorProc)(GLenum) (CALLBACK $\ast$ {\em GLUtessEndDataProc})}}
+\label{_g_l_u_8h_d1bb4b2dc4d2c8b7423c4c9afbf2b484}
+
+
+
+
+Definition at line 375 of file GLU.h.
+
+\subsection{Function Documentation}
+\hypertarget{_g_l_u_8h_2338cb68b832ef86444a27c7b1d7b01f}{
+\index{GLU.h@{GLU.h}!gluBeginCurve@{gluBeginCurve}}
+\index{gluBeginCurve@{gluBeginCurve}!GLU.h@{GLU.h}}
+\subsubsection[{gluBeginCurve}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY gluBeginCurve ({\bf GLUnurbs} $\ast$ {\em nobj})}}
+\label{_g_l_u_8h_2338cb68b832ef86444a27c7b1d7b01f}
+
+
+\hypertarget{_g_l_u_8h_20cfe0132043e463b8b09123b5eab370}{
+\index{GLU.h@{GLU.h}!gluBeginPolygon@{gluBeginPolygon}}
+\index{gluBeginPolygon@{gluBeginPolygon}!GLU.h@{GLU.h}}
+\subsubsection[{gluBeginPolygon}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY gluBeginPolygon ({\bf GLUtesselator} $\ast$ {\em tess})}}
+\label{_g_l_u_8h_20cfe0132043e463b8b09123b5eab370}
+
+
+\hypertarget{_g_l_u_8h_611362b80e1cac917bbbec1c1fa6c018}{
+\index{GLU.h@{GLU.h}!gluBeginSurface@{gluBeginSurface}}
+\index{gluBeginSurface@{gluBeginSurface}!GLU.h@{GLU.h}}
+\subsubsection[{gluBeginSurface}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY gluBeginSurface ({\bf GLUnurbs} $\ast$ {\em nobj})}}
+\label{_g_l_u_8h_611362b80e1cac917bbbec1c1fa6c018}
+
+
+\hypertarget{_g_l_u_8h_1343784e33953426200a13d2bfb0b790}{
+\index{GLU.h@{GLU.h}!gluBeginTrim@{gluBeginTrim}}
+\index{gluBeginTrim@{gluBeginTrim}!GLU.h@{GLU.h}}
+\subsubsection[{gluBeginTrim}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY gluBeginTrim ({\bf GLUnurbs} $\ast$ {\em nobj})}}
+\label{_g_l_u_8h_1343784e33953426200a13d2bfb0b790}
+
+
+\hypertarget{_g_l_u_8h_0b66d8645689d90c08a0d99aaf5d0934}{
+\index{GLU.h@{GLU.h}!gluBuild1DMipmaps@{gluBuild1DMipmaps}}
+\index{gluBuild1DMipmaps@{gluBuild1DMipmaps}!GLU.h@{GLU.h}}
+\subsubsection[{gluBuild1DMipmaps}]{\setlength{\rightskip}{0pt plus 5cm}int APIENTRY gluBuild1DMipmaps (GLenum {\em target}, \/  GLint {\em components}, \/  GLint {\em width}, \/  GLenum {\em format}, \/  GLenum {\em type}, \/  const void $\ast$ {\em data})}}
+\label{_g_l_u_8h_0b66d8645689d90c08a0d99aaf5d0934}
+
+
+\hypertarget{_g_l_u_8h_444103e8ac3771f4a8d09fb33c427ed2}{
+\index{GLU.h@{GLU.h}!gluBuild2DMipmaps@{gluBuild2DMipmaps}}
+\index{gluBuild2DMipmaps@{gluBuild2DMipmaps}!GLU.h@{GLU.h}}
+\subsubsection[{gluBuild2DMipmaps}]{\setlength{\rightskip}{0pt plus 5cm}int APIENTRY gluBuild2DMipmaps (GLenum {\em target}, \/  GLint {\em components}, \/  GLint {\em width}, \/  GLint {\em height}, \/  GLenum {\em format}, \/  GLenum {\em type}, \/  const void $\ast$ {\em data})}}
+\label{_g_l_u_8h_444103e8ac3771f4a8d09fb33c427ed2}
+
+
+\hypertarget{_g_l_u_8h_0118747beeca84ec17090f30f0b22119}{
+\index{GLU.h@{GLU.h}!gluCylinder@{gluCylinder}}
+\index{gluCylinder@{gluCylinder}!GLU.h@{GLU.h}}
+\subsubsection[{gluCylinder}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY gluCylinder ({\bf GLUquadric} $\ast$ {\em qobj}, \/  {\bf GLdouble} {\em baseRadius}, \/  {\bf GLdouble} {\em topRadius}, \/  {\bf GLdouble} {\em height}, \/  GLint {\em slices}, \/  GLint {\em stacks})}}
+\label{_g_l_u_8h_0118747beeca84ec17090f30f0b22119}
+
+
+\hypertarget{_g_l_u_8h_4f579902386e9588590291373922561d}{
+\index{GLU.h@{GLU.h}!gluDeleteNurbsRenderer@{gluDeleteNurbsRenderer}}
+\index{gluDeleteNurbsRenderer@{gluDeleteNurbsRenderer}!GLU.h@{GLU.h}}
+\subsubsection[{gluDeleteNurbsRenderer}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY gluDeleteNurbsRenderer ({\bf GLUnurbs} $\ast$ {\em nobj})}}
+\label{_g_l_u_8h_4f579902386e9588590291373922561d}
+
+
+\hypertarget{_g_l_u_8h_93665f30a4629c07641c3bd4fbdf9982}{
+\index{GLU.h@{GLU.h}!gluDeleteQuadric@{gluDeleteQuadric}}
+\index{gluDeleteQuadric@{gluDeleteQuadric}!GLU.h@{GLU.h}}
+\subsubsection[{gluDeleteQuadric}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY gluDeleteQuadric ({\bf GLUquadric} $\ast$ {\em state})}}
+\label{_g_l_u_8h_93665f30a4629c07641c3bd4fbdf9982}
+
+
+\hypertarget{_g_l_u_8h_695cdf1aa0fc02fb5cb7e0d2d1b62c95}{
+\index{GLU.h@{GLU.h}!gluDeleteTess@{gluDeleteTess}}
+\index{gluDeleteTess@{gluDeleteTess}!GLU.h@{GLU.h}}
+\subsubsection[{gluDeleteTess}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY gluDeleteTess ({\bf GLUtesselator} $\ast$ {\em tess})}}
+\label{_g_l_u_8h_695cdf1aa0fc02fb5cb7e0d2d1b62c95}
+
+
+\hypertarget{_g_l_u_8h_85e6971dbc24083e75da91bcf400cf0d}{
+\index{GLU.h@{GLU.h}!gluDisk@{gluDisk}}
+\index{gluDisk@{gluDisk}!GLU.h@{GLU.h}}
+\subsubsection[{gluDisk}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY gluDisk ({\bf GLUquadric} $\ast$ {\em qobj}, \/  {\bf GLdouble} {\em innerRadius}, \/  {\bf GLdouble} {\em outerRadius}, \/  GLint {\em slices}, \/  GLint {\em loops})}}
+\label{_g_l_u_8h_85e6971dbc24083e75da91bcf400cf0d}
+
+
+\hypertarget{_g_l_u_8h_fe80dcd1b122e724b398a9267237f065}{
+\index{GLU.h@{GLU.h}!gluEndCurve@{gluEndCurve}}
+\index{gluEndCurve@{gluEndCurve}!GLU.h@{GLU.h}}
+\subsubsection[{gluEndCurve}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY gluEndCurve ({\bf GLUnurbs} $\ast$ {\em nobj})}}
+\label{_g_l_u_8h_fe80dcd1b122e724b398a9267237f065}
+
+
+\hypertarget{_g_l_u_8h_7da57f0b5aab1a59306a534d081da68a}{
+\index{GLU.h@{GLU.h}!gluEndPolygon@{gluEndPolygon}}
+\index{gluEndPolygon@{gluEndPolygon}!GLU.h@{GLU.h}}
+\subsubsection[{gluEndPolygon}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY gluEndPolygon ({\bf GLUtesselator} $\ast$ {\em tess})}}
+\label{_g_l_u_8h_7da57f0b5aab1a59306a534d081da68a}
+
+
+\hypertarget{_g_l_u_8h_23e3854d47c5b79c8bda221e2f15251c}{
+\index{GLU.h@{GLU.h}!gluEndSurface@{gluEndSurface}}
+\index{gluEndSurface@{gluEndSurface}!GLU.h@{GLU.h}}
+\subsubsection[{gluEndSurface}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY gluEndSurface ({\bf GLUnurbs} $\ast$ {\em nobj})}}
+\label{_g_l_u_8h_23e3854d47c5b79c8bda221e2f15251c}
+
+
+\hypertarget{_g_l_u_8h_e9c11085c3dc0a415ad9524a9aba5141}{
+\index{GLU.h@{GLU.h}!gluEndTrim@{gluEndTrim}}
+\index{gluEndTrim@{gluEndTrim}!GLU.h@{GLU.h}}
+\subsubsection[{gluEndTrim}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY gluEndTrim ({\bf GLUnurbs} $\ast$ {\em nobj})}}
+\label{_g_l_u_8h_e9c11085c3dc0a415ad9524a9aba5141}
+
+
+\hypertarget{_g_l_u_8h_957bf8cb7732b315345b7000348bccb4}{
+\index{GLU.h@{GLU.h}!gluErrorString@{gluErrorString}}
+\index{gluErrorString@{gluErrorString}!GLU.h@{GLU.h}}
+\subsubsection[{gluErrorString}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf GLubyte}$\ast$ APIENTRY gluErrorString (GLenum {\em errCode})}}
+\label{_g_l_u_8h_957bf8cb7732b315345b7000348bccb4}
+
+
+\hypertarget{_g_l_u_8h_4bc679a07fb8608a42b2d88c19f976e2}{
+\index{GLU.h@{GLU.h}!gluErrorUnicodeStringEXT@{gluErrorUnicodeStringEXT}}
+\index{gluErrorUnicodeStringEXT@{gluErrorUnicodeStringEXT}!GLU.h@{GLU.h}}
+\subsubsection[{gluErrorUnicodeStringEXT}]{\setlength{\rightskip}{0pt plus 5cm}const wchar\_\-t$\ast$ APIENTRY gluErrorUnicodeStringEXT (GLenum {\em errCode})}}
+\label{_g_l_u_8h_4bc679a07fb8608a42b2d88c19f976e2}
+
+
+\hypertarget{_g_l_u_8h_f6328ed27bed957b77200cf1b5a88923}{
+\index{GLU.h@{GLU.h}!gluGetNurbsProperty@{gluGetNurbsProperty}}
+\index{gluGetNurbsProperty@{gluGetNurbsProperty}!GLU.h@{GLU.h}}
+\subsubsection[{gluGetNurbsProperty}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY gluGetNurbsProperty ({\bf GLUnurbs} $\ast$ {\em nobj}, \/  GLenum {\em property}, \/  {\bf GLfloat} $\ast$ {\em value})}}
+\label{_g_l_u_8h_f6328ed27bed957b77200cf1b5a88923}
+
+
+\hypertarget{_g_l_u_8h_7195d5fb09fb9e9ad257baec2a2ed3ee}{
+\index{GLU.h@{GLU.h}!gluGetString@{gluGetString}}
+\index{gluGetString@{gluGetString}!GLU.h@{GLU.h}}
+\subsubsection[{gluGetString}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf GLubyte}$\ast$ APIENTRY gluGetString (GLenum {\em name})}}
+\label{_g_l_u_8h_7195d5fb09fb9e9ad257baec2a2ed3ee}
+
+
+\hypertarget{_g_l_u_8h_2966d0355fd523ebb4090b0a55efbe8b}{
+\index{GLU.h@{GLU.h}!gluGetTessProperty@{gluGetTessProperty}}
+\index{gluGetTessProperty@{gluGetTessProperty}!GLU.h@{GLU.h}}
+\subsubsection[{gluGetTessProperty}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY gluGetTessProperty ({\bf GLUtesselator} $\ast$ {\em tess}, \/  GLenum {\em which}, \/  {\bf GLdouble} $\ast$ {\em value})}}
+\label{_g_l_u_8h_2966d0355fd523ebb4090b0a55efbe8b}
+
+
+\hypertarget{_g_l_u_8h_1aae1f28344ceaf7b61570c8c97eb61d}{
+\index{GLU.h@{GLU.h}!gluLoadSamplingMatrices@{gluLoadSamplingMatrices}}
+\index{gluLoadSamplingMatrices@{gluLoadSamplingMatrices}!GLU.h@{GLU.h}}
+\subsubsection[{gluLoadSamplingMatrices}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY gluLoadSamplingMatrices ({\bf GLUnurbs} $\ast$ {\em nobj}, \/  const {\bf GLfloat} {\em modelMatrix}\mbox{[}16\mbox{]}, \/  const {\bf GLfloat} {\em projMatrix}\mbox{[}16\mbox{]}, \/  const GLint {\em viewport}\mbox{[}4\mbox{]})}}
+\label{_g_l_u_8h_1aae1f28344ceaf7b61570c8c97eb61d}
+
+
+\hypertarget{_g_l_u_8h_975899d72def2c584581f42fe6300993}{
+\index{GLU.h@{GLU.h}!gluLookAt@{gluLookAt}}
+\index{gluLookAt@{gluLookAt}!GLU.h@{GLU.h}}
+\subsubsection[{gluLookAt}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY gluLookAt ({\bf GLdouble} {\em eyex}, \/  {\bf GLdouble} {\em eyey}, \/  {\bf GLdouble} {\em eyez}, \/  {\bf GLdouble} {\em centerx}, \/  {\bf GLdouble} {\em centery}, \/  {\bf GLdouble} {\em centerz}, \/  {\bf GLdouble} {\em upx}, \/  {\bf GLdouble} {\em upy}, \/  {\bf GLdouble} {\em upz})}}
+\label{_g_l_u_8h_975899d72def2c584581f42fe6300993}
+
+
+\hypertarget{_g_l_u_8h_f515a826fed04fced2fee490df5e8a1e}{
+\index{GLU.h@{GLU.h}!gluNewNurbsRenderer@{gluNewNurbsRenderer}}
+\index{gluNewNurbsRenderer@{gluNewNurbsRenderer}!GLU.h@{GLU.h}}
+\subsubsection[{gluNewNurbsRenderer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GLUnurbs}$\ast$ APIENTRY gluNewNurbsRenderer (void)}}
+\label{_g_l_u_8h_f515a826fed04fced2fee490df5e8a1e}
+
+
+\hypertarget{_g_l_u_8h_905fc34ba68e2231e3d98c6ce28cd786}{
+\index{GLU.h@{GLU.h}!gluNewQuadric@{gluNewQuadric}}
+\index{gluNewQuadric@{gluNewQuadric}!GLU.h@{GLU.h}}
+\subsubsection[{gluNewQuadric}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GLUquadric}$\ast$ APIENTRY gluNewQuadric (void)}}
+\label{_g_l_u_8h_905fc34ba68e2231e3d98c6ce28cd786}
+
+
+\hypertarget{_g_l_u_8h_98632ff69c4fafa0c628b4652c761e28}{
+\index{GLU.h@{GLU.h}!gluNewTess@{gluNewTess}}
+\index{gluNewTess@{gluNewTess}!GLU.h@{GLU.h}}
+\subsubsection[{gluNewTess}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GLUtesselator}$\ast$ APIENTRY gluNewTess (void)}}
+\label{_g_l_u_8h_98632ff69c4fafa0c628b4652c761e28}
+
+
+\hypertarget{_g_l_u_8h_e98760537550d85bacc8e3c87610711e}{
+\index{GLU.h@{GLU.h}!gluNextContour@{gluNextContour}}
+\index{gluNextContour@{gluNextContour}!GLU.h@{GLU.h}}
+\subsubsection[{gluNextContour}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY gluNextContour ({\bf GLUtesselator} $\ast$ {\em tess}, \/  GLenum {\em type})}}
+\label{_g_l_u_8h_e98760537550d85bacc8e3c87610711e}
+
+
+\hypertarget{_g_l_u_8h_c93d6201308aa60bf4805252814e7927}{
+\index{GLU.h@{GLU.h}!gluNurbsCallback@{gluNurbsCallback}}
+\index{gluNurbsCallback@{gluNurbsCallback}!GLU.h@{GLU.h}}
+\subsubsection[{gluNurbsCallback}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY gluNurbsCallback ({\bf GLUnurbs} $\ast$ {\em nobj}, \/  GLenum {\em which}, \/  void(CALLBACK $\ast$fn)())}}
+\label{_g_l_u_8h_c93d6201308aa60bf4805252814e7927}
+
+
+\hypertarget{_g_l_u_8h_1f9b26fc3597049d6d4881ebfa67304d}{
+\index{GLU.h@{GLU.h}!gluNurbsCurve@{gluNurbsCurve}}
+\index{gluNurbsCurve@{gluNurbsCurve}!GLU.h@{GLU.h}}
+\subsubsection[{gluNurbsCurve}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY gluNurbsCurve ({\bf GLUnurbs} $\ast$ {\em nobj}, \/  GLint {\em nknots}, \/  {\bf GLfloat} $\ast$ {\em knot}, \/  GLint {\em stride}, \/  {\bf GLfloat} $\ast$ {\em ctlarray}, \/  GLint {\em order}, \/  GLenum {\em type})}}
+\label{_g_l_u_8h_1f9b26fc3597049d6d4881ebfa67304d}
+
+
+\hypertarget{_g_l_u_8h_24b5cfd4023efb4cd6f5e65e4749d70d}{
+\index{GLU.h@{GLU.h}!gluNurbsProperty@{gluNurbsProperty}}
+\index{gluNurbsProperty@{gluNurbsProperty}!GLU.h@{GLU.h}}
+\subsubsection[{gluNurbsProperty}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY gluNurbsProperty ({\bf GLUnurbs} $\ast$ {\em nobj}, \/  GLenum {\em property}, \/  {\bf GLfloat} {\em value})}}
+\label{_g_l_u_8h_24b5cfd4023efb4cd6f5e65e4749d70d}
+
+
+\hypertarget{_g_l_u_8h_741fac9ddeb67f3e9a11b705200f58a1}{
+\index{GLU.h@{GLU.h}!gluNurbsSurface@{gluNurbsSurface}}
+\index{gluNurbsSurface@{gluNurbsSurface}!GLU.h@{GLU.h}}
+\subsubsection[{gluNurbsSurface}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY gluNurbsSurface ({\bf GLUnurbs} $\ast$ {\em nobj}, \/  GLint {\em sknot\_\-count}, \/  float $\ast$ {\em sknot}, \/  GLint {\em tknot\_\-count}, \/  {\bf GLfloat} $\ast$ {\em tknot}, \/  GLint {\em s\_\-stride}, \/  GLint {\em t\_\-stride}, \/  {\bf GLfloat} $\ast$ {\em ctlarray}, \/  GLint {\em sorder}, \/  GLint {\em torder}, \/  GLenum {\em type})}}
+\label{_g_l_u_8h_741fac9ddeb67f3e9a11b705200f58a1}
+
+
+\hypertarget{_g_l_u_8h_75ebd65d73748c0f4f4ad56bf49f6372}{
+\index{GLU.h@{GLU.h}!gluOrtho2D@{gluOrtho2D}}
+\index{gluOrtho2D@{gluOrtho2D}!GLU.h@{GLU.h}}
+\subsubsection[{gluOrtho2D}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY gluOrtho2D ({\bf GLdouble} {\em left}, \/  {\bf GLdouble} {\em right}, \/  {\bf GLdouble} {\em bottom}, \/  {\bf GLdouble} {\em top})}}
+\label{_g_l_u_8h_75ebd65d73748c0f4f4ad56bf49f6372}
+
+
+\hypertarget{_g_l_u_8h_a7f0b63b457c0bc897b75f703342256d}{
+\index{GLU.h@{GLU.h}!gluPartialDisk@{gluPartialDisk}}
+\index{gluPartialDisk@{gluPartialDisk}!GLU.h@{GLU.h}}
+\subsubsection[{gluPartialDisk}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY gluPartialDisk ({\bf GLUquadric} $\ast$ {\em qobj}, \/  {\bf GLdouble} {\em innerRadius}, \/  {\bf GLdouble} {\em outerRadius}, \/  GLint {\em slices}, \/  GLint {\em loops}, \/  {\bf GLdouble} {\em startAngle}, \/  {\bf GLdouble} {\em sweepAngle})}}
+\label{_g_l_u_8h_a7f0b63b457c0bc897b75f703342256d}
+
+
+\hypertarget{_g_l_u_8h_e76044cd9896ded66446ebacc87cd8de}{
+\index{GLU.h@{GLU.h}!gluPerspective@{gluPerspective}}
+\index{gluPerspective@{gluPerspective}!GLU.h@{GLU.h}}
+\subsubsection[{gluPerspective}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY gluPerspective ({\bf GLdouble} {\em fovy}, \/  {\bf GLdouble} {\em aspect}, \/  {\bf GLdouble} {\em zNear}, \/  {\bf GLdouble} {\em zFar})}}
+\label{_g_l_u_8h_e76044cd9896ded66446ebacc87cd8de}
+
+
+\hypertarget{_g_l_u_8h_8f2109b6882a24bd4faeadb4f052c1b9}{
+\index{GLU.h@{GLU.h}!gluPickMatrix@{gluPickMatrix}}
+\index{gluPickMatrix@{gluPickMatrix}!GLU.h@{GLU.h}}
+\subsubsection[{gluPickMatrix}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY gluPickMatrix ({\bf GLdouble} {\em x}, \/  {\bf GLdouble} {\em y}, \/  {\bf GLdouble} {\em width}, \/  {\bf GLdouble} {\em height}, \/  GLint {\em viewport}\mbox{[}4\mbox{]})}}
+\label{_g_l_u_8h_8f2109b6882a24bd4faeadb4f052c1b9}
+
+
+\hypertarget{_g_l_u_8h_af9bf9028a98739b64d032f23fb94827}{
+\index{GLU.h@{GLU.h}!gluProject@{gluProject}}
+\index{gluProject@{gluProject}!GLU.h@{GLU.h}}
+\subsubsection[{gluProject}]{\setlength{\rightskip}{0pt plus 5cm}int APIENTRY gluProject ({\bf GLdouble} {\em objx}, \/  {\bf GLdouble} {\em objy}, \/  {\bf GLdouble} {\em objz}, \/  const {\bf GLdouble} {\em modelMatrix}\mbox{[}16\mbox{]}, \/  const {\bf GLdouble} {\em projMatrix}\mbox{[}16\mbox{]}, \/  const GLint {\em viewport}\mbox{[}4\mbox{]}, \/  {\bf GLdouble} $\ast$ {\em winx}, \/  {\bf GLdouble} $\ast$ {\em winy}, \/  {\bf GLdouble} $\ast$ {\em winz})}}
+\label{_g_l_u_8h_af9bf9028a98739b64d032f23fb94827}
+
+
+\hypertarget{_g_l_u_8h_7375e09ef7211afb0766ae11adf2dc4b}{
+\index{GLU.h@{GLU.h}!gluPwlCurve@{gluPwlCurve}}
+\index{gluPwlCurve@{gluPwlCurve}!GLU.h@{GLU.h}}
+\subsubsection[{gluPwlCurve}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY gluPwlCurve ({\bf GLUnurbs} $\ast$ {\em nobj}, \/  GLint {\em count}, \/  {\bf GLfloat} $\ast$ {\em array}, \/  GLint {\em stride}, \/  GLenum {\em type})}}
+\label{_g_l_u_8h_7375e09ef7211afb0766ae11adf2dc4b}
+
+
+\hypertarget{_g_l_u_8h_f9daf4a92a8757976bbbafb5d4d33bad}{
+\index{GLU.h@{GLU.h}!gluQuadricCallback@{gluQuadricCallback}}
+\index{gluQuadricCallback@{gluQuadricCallback}!GLU.h@{GLU.h}}
+\subsubsection[{gluQuadricCallback}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY gluQuadricCallback ({\bf GLUquadric} $\ast$ {\em qobj}, \/  GLenum {\em which}, \/  void(CALLBACK $\ast$fn)())}}
+\label{_g_l_u_8h_f9daf4a92a8757976bbbafb5d4d33bad}
+
+
+\hypertarget{_g_l_u_8h_1bd8a235b86a60933796e5894970da07}{
+\index{GLU.h@{GLU.h}!gluQuadricDrawStyle@{gluQuadricDrawStyle}}
+\index{gluQuadricDrawStyle@{gluQuadricDrawStyle}!GLU.h@{GLU.h}}
+\subsubsection[{gluQuadricDrawStyle}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY gluQuadricDrawStyle ({\bf GLUquadric} $\ast$ {\em quadObject}, \/  GLenum {\em drawStyle})}}
+\label{_g_l_u_8h_1bd8a235b86a60933796e5894970da07}
+
+
+\hypertarget{_g_l_u_8h_02aee176ad26a1af6db56116e4a6a132}{
+\index{GLU.h@{GLU.h}!gluQuadricNormals@{gluQuadricNormals}}
+\index{gluQuadricNormals@{gluQuadricNormals}!GLU.h@{GLU.h}}
+\subsubsection[{gluQuadricNormals}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY gluQuadricNormals ({\bf GLUquadric} $\ast$ {\em quadObject}, \/  GLenum {\em normals})}}
+\label{_g_l_u_8h_02aee176ad26a1af6db56116e4a6a132}
+
+
+\hypertarget{_g_l_u_8h_332f0466440711969c82466419b0563e}{
+\index{GLU.h@{GLU.h}!gluQuadricOrientation@{gluQuadricOrientation}}
+\index{gluQuadricOrientation@{gluQuadricOrientation}!GLU.h@{GLU.h}}
+\subsubsection[{gluQuadricOrientation}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY gluQuadricOrientation ({\bf GLUquadric} $\ast$ {\em quadObject}, \/  GLenum {\em orientation})}}
+\label{_g_l_u_8h_332f0466440711969c82466419b0563e}
+
+
+\hypertarget{_g_l_u_8h_329693c78b422e87185575c5e57a9112}{
+\index{GLU.h@{GLU.h}!gluQuadricTexture@{gluQuadricTexture}}
+\index{gluQuadricTexture@{gluQuadricTexture}!GLU.h@{GLU.h}}
+\subsubsection[{gluQuadricTexture}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY gluQuadricTexture ({\bf GLUquadric} $\ast$ {\em quadObject}, \/  GLboolean {\em textureCoords})}}
+\label{_g_l_u_8h_329693c78b422e87185575c5e57a9112}
+
+
+\hypertarget{_g_l_u_8h_bb30397b84d810d2623f5d5ceffa5d95}{
+\index{GLU.h@{GLU.h}!gluScaleImage@{gluScaleImage}}
+\index{gluScaleImage@{gluScaleImage}!GLU.h@{GLU.h}}
+\subsubsection[{gluScaleImage}]{\setlength{\rightskip}{0pt plus 5cm}int APIENTRY gluScaleImage (GLenum {\em format}, \/  GLint {\em widthin}, \/  GLint {\em heightin}, \/  GLenum {\em typein}, \/  const void $\ast$ {\em datain}, \/  GLint {\em widthout}, \/  GLint {\em heightout}, \/  GLenum {\em typeout}, \/  void $\ast$ {\em dataout})}}
+\label{_g_l_u_8h_bb30397b84d810d2623f5d5ceffa5d95}
+
+
+\hypertarget{_g_l_u_8h_f06bb76aa3115f99db1ef77a0cc85684}{
+\index{GLU.h@{GLU.h}!gluSphere@{gluSphere}}
+\index{gluSphere@{gluSphere}!GLU.h@{GLU.h}}
+\subsubsection[{gluSphere}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY gluSphere ({\bf GLUquadric} $\ast$ {\em qobj}, \/  {\bf GLdouble} {\em radius}, \/  GLint {\em slices}, \/  GLint {\em stacks})}}
+\label{_g_l_u_8h_f06bb76aa3115f99db1ef77a0cc85684}
+
+
+\hypertarget{_g_l_u_8h_8d50dd8052920f425c13fbc2c9a7d449}{
+\index{GLU.h@{GLU.h}!gluTessBeginContour@{gluTessBeginContour}}
+\index{gluTessBeginContour@{gluTessBeginContour}!GLU.h@{GLU.h}}
+\subsubsection[{gluTessBeginContour}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY gluTessBeginContour ({\bf GLUtesselator} $\ast$ {\em tess})}}
+\label{_g_l_u_8h_8d50dd8052920f425c13fbc2c9a7d449}
+
+
+\hypertarget{_g_l_u_8h_700f9c1265e944ed1bcd4e48d002be73}{
+\index{GLU.h@{GLU.h}!gluTessBeginPolygon@{gluTessBeginPolygon}}
+\index{gluTessBeginPolygon@{gluTessBeginPolygon}!GLU.h@{GLU.h}}
+\subsubsection[{gluTessBeginPolygon}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY gluTessBeginPolygon ({\bf GLUtesselator} $\ast$ {\em tess}, \/  void $\ast$ {\em polygon\_\-data})}}
+\label{_g_l_u_8h_700f9c1265e944ed1bcd4e48d002be73}
+
+
+\hypertarget{_g_l_u_8h_dfa596e31d6447a759525ff65887b81c}{
+\index{GLU.h@{GLU.h}!gluTessCallback@{gluTessCallback}}
+\index{gluTessCallback@{gluTessCallback}!GLU.h@{GLU.h}}
+\subsubsection[{gluTessCallback}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY gluTessCallback ({\bf GLUtesselator} $\ast$ {\em tess}, \/  GLenum {\em which}, \/  void(CALLBACK $\ast$fn)())}}
+\label{_g_l_u_8h_dfa596e31d6447a759525ff65887b81c}
+
+
+\hypertarget{_g_l_u_8h_8b92999dd8e0610d3d0968515d1ba4f1}{
+\index{GLU.h@{GLU.h}!gluTessEndContour@{gluTessEndContour}}
+\index{gluTessEndContour@{gluTessEndContour}!GLU.h@{GLU.h}}
+\subsubsection[{gluTessEndContour}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY gluTessEndContour ({\bf GLUtesselator} $\ast$ {\em tess})}}
+\label{_g_l_u_8h_8b92999dd8e0610d3d0968515d1ba4f1}
+
+
+\hypertarget{_g_l_u_8h_566bd2f54ee00aa61fb71fe5a1257e6b}{
+\index{GLU.h@{GLU.h}!gluTessEndPolygon@{gluTessEndPolygon}}
+\index{gluTessEndPolygon@{gluTessEndPolygon}!GLU.h@{GLU.h}}
+\subsubsection[{gluTessEndPolygon}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY gluTessEndPolygon ({\bf GLUtesselator} $\ast$ {\em tess})}}
+\label{_g_l_u_8h_566bd2f54ee00aa61fb71fe5a1257e6b}
+
+
+\hypertarget{_g_l_u_8h_95bf576f609e3a6e4a847b0a82071d54}{
+\index{GLU.h@{GLU.h}!gluTessNormal@{gluTessNormal}}
+\index{gluTessNormal@{gluTessNormal}!GLU.h@{GLU.h}}
+\subsubsection[{gluTessNormal}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY gluTessNormal ({\bf GLUtesselator} $\ast$ {\em tess}, \/  {\bf GLdouble} {\em x}, \/  {\bf GLdouble} {\em y}, \/  {\bf GLdouble} {\em z})}}
+\label{_g_l_u_8h_95bf576f609e3a6e4a847b0a82071d54}
+
+
+\hypertarget{_g_l_u_8h_b0ab157f10d7db1834ecd5bb42837116}{
+\index{GLU.h@{GLU.h}!gluTessProperty@{gluTessProperty}}
+\index{gluTessProperty@{gluTessProperty}!GLU.h@{GLU.h}}
+\subsubsection[{gluTessProperty}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY gluTessProperty ({\bf GLUtesselator} $\ast$ {\em tess}, \/  GLenum {\em which}, \/  {\bf GLdouble} {\em value})}}
+\label{_g_l_u_8h_b0ab157f10d7db1834ecd5bb42837116}
+
+
+\hypertarget{_g_l_u_8h_f8e44f75e6ab3440e70207b4cf1abeb1}{
+\index{GLU.h@{GLU.h}!gluTessVertex@{gluTessVertex}}
+\index{gluTessVertex@{gluTessVertex}!GLU.h@{GLU.h}}
+\subsubsection[{gluTessVertex}]{\setlength{\rightskip}{0pt plus 5cm}void APIENTRY gluTessVertex ({\bf GLUtesselator} $\ast$ {\em tess}, \/  {\bf GLdouble} {\em coords}\mbox{[}3\mbox{]}, \/  void $\ast$ {\em data})}}
+\label{_g_l_u_8h_f8e44f75e6ab3440e70207b4cf1abeb1}
+
+
+\hypertarget{_g_l_u_8h_a3b8b64c4abd85c4d66c52a725c2bd6b}{
+\index{GLU.h@{GLU.h}!gluUnProject@{gluUnProject}}
+\index{gluUnProject@{gluUnProject}!GLU.h@{GLU.h}}
+\subsubsection[{gluUnProject}]{\setlength{\rightskip}{0pt plus 5cm}int APIENTRY gluUnProject ({\bf GLdouble} {\em winx}, \/  {\bf GLdouble} {\em winy}, \/  {\bf GLdouble} {\em winz}, \/  const {\bf GLdouble} {\em modelMatrix}\mbox{[}16\mbox{]}, \/  const {\bf GLdouble} {\em projMatrix}\mbox{[}16\mbox{]}, \/  const GLint {\em viewport}\mbox{[}4\mbox{]}, \/  {\bf GLdouble} $\ast$ {\em objx}, \/  {\bf GLdouble} $\ast$ {\em objy}, \/  {\bf GLdouble} $\ast$ {\em objz})}}
+\label{_g_l_u_8h_a3b8b64c4abd85c4d66c52a725c2bd6b}
+
+
+\hypertarget{_g_l_u_8h_5a0dfa848c92fc5d621a878bc233ef25}{
+\index{GLU.h@{GLU.h}!void@{void}}
+\index{void@{void}!GLU.h@{GLU.h}}
+\subsubsection[{void}]{\setlength{\rightskip}{0pt plus 5cm}typedef void (CALLBACK $\ast$ {\em GLUquadricErrorProc})}}
+\label{_g_l_u_8h_5a0dfa848c92fc5d621a878bc233ef25}
+
+

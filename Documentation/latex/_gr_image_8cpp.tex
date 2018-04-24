@@ -1,0 +1,191 @@
+\hypertarget{_gr_image_8cpp}{
+\section{C:/Bootstrap/ProjectBX/Engine/Graphics/GrImage.cpp File Reference}
+\label{_gr_image_8cpp}\index{C:/Bootstrap/ProjectBX/Engine/Graphics/GrImage.cpp@{C:/Bootstrap/ProjectBX/Engine/Graphics/GrImage.cpp}}
+}
+{\tt \#include \char`\"{}graphics\_\-afx.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrImage.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrDXT.h\char`\"{}}\par
+{\tt \#include \char`\"{}UReader.h\char`\"{}}\par
+{\tt \#include \char`\"{}MVec3.h\char`\"{}}\par
+{\tt \#include \char`\"{}RFileMgr.h\char`\"{}}\par
+{\tt \#include \char`\"{}GLSubsys.h\char`\"{}}\par
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \hyperlink{_gr_image_8cpp_649f0acb888e63120f0c27a0b8ae38da}{MAKE\_\-FOUR\_\-CC}(c1, c2, c3, c4)~( ( c1 ) $|$ ( ( c2 )$<$$<$8 ) $|$ ( ( c3 )$<$$<$16 ) $|$ ( ( c4 )$<$$<$24 ) )
+\item 
+\#define \hyperlink{_gr_image_8cpp_f8d723fd07f99d3708a4271f84c46917}{PACK\_\-QFLOAT}(\hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v})~( ( unsigned char )( Clamp( ( float )( \hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v} ) $\ast$ 0.5f + 0.5f, -1.0f, 1.0f ) $\ast$ 254.0f ) )
+\item 
+\#define \hyperlink{_gr_image_8cpp_31341b2a1a1e53594fa5020192ceb721}{UNPACK\_\-QFLOAT}(\hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v})~( float( ( Min( ( float )( \hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v} ), 254.0f ) / 254.0f $\ast$ 2.0f ) - 1.0f ) )
+\end{CompactItemize}
+\subsection*{Typedefs}
+\begin{CompactItemize}
+\item 
+typedef void $\ast$($\ast$ \hyperlink{_gr_image_8cpp_95ff3a920a0785ea52bda115c1bd775e}{GenMipLevelFunc} )(void $\ast$srcIn, unsigned int srcWidth, unsigned int srcHeight, unsigned int elemsPerPixel)
+\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+unsigned int \hyperlink{_gr_image_8cpp_ec346a4089e104ec2d4b52d5795ba510}{\_\-elemsPerPixel} \mbox{[}$\,$\mbox{]}
+\item 
+const GLenum \hyperlink{_gr_image_8cpp_543c1023f77a0cb14b40482df6409a49}{\_\-imageFormatMap} \mbox{[}$\,$\mbox{]}
+\item 
+const GLenum \hyperlink{_gr_image_8cpp_662c8db9b47b41ac37d92f574f46b80d}{\_\-imageTypeMap} \mbox{[}$\,$\mbox{]}
+\item 
+unsigned int \hyperlink{_gr_image_8cpp_f639e4bfbaea828e7eef103797dee332}{\_\-elemSize} \mbox{[}$\,$\mbox{]}
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_gr_image_8cpp_649f0acb888e63120f0c27a0b8ae38da}{
+\index{GrImage.cpp@{GrImage.cpp}!MAKE\_\-FOUR\_\-CC@{MAKE\_\-FOUR\_\-CC}}
+\index{MAKE\_\-FOUR\_\-CC@{MAKE\_\-FOUR\_\-CC}!GrImage.cpp@{GrImage.cpp}}
+\subsubsection[{MAKE\_\-FOUR\_\-CC}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAKE\_\-FOUR\_\-CC(c1, \/  c2, \/  c3, \/  c4)~( ( c1 ) $|$ ( ( c2 )$<$$<$8 ) $|$ ( ( c3 )$<$$<$16 ) $|$ ( ( c4 )$<$$<$24 ) )}}
+\label{_gr_image_8cpp_649f0acb888e63120f0c27a0b8ae38da}
+
+
+
+
+Definition at line 30 of file GrImage.cpp.\hypertarget{_gr_image_8cpp_f8d723fd07f99d3708a4271f84c46917}{
+\index{GrImage.cpp@{GrImage.cpp}!PACK\_\-QFLOAT@{PACK\_\-QFLOAT}}
+\index{PACK\_\-QFLOAT@{PACK\_\-QFLOAT}!GrImage.cpp@{GrImage.cpp}}
+\subsubsection[{PACK\_\-QFLOAT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PACK\_\-QFLOAT({\bf v})~( ( unsigned char )( Clamp( ( float )( {\bf v} ) $\ast$ 0.5f + 0.5f, -1.0f, 1.0f ) $\ast$ 254.0f ) )}}
+\label{_gr_image_8cpp_f8d723fd07f99d3708a4271f84c46917}
+
+
+
+
+Definition at line 33 of file GrImage.cpp.\hypertarget{_gr_image_8cpp_31341b2a1a1e53594fa5020192ceb721}{
+\index{GrImage.cpp@{GrImage.cpp}!UNPACK\_\-QFLOAT@{UNPACK\_\-QFLOAT}}
+\index{UNPACK\_\-QFLOAT@{UNPACK\_\-QFLOAT}!GrImage.cpp@{GrImage.cpp}}
+\subsubsection[{UNPACK\_\-QFLOAT}]{\setlength{\rightskip}{0pt plus 5cm}\#define UNPACK\_\-QFLOAT({\bf v})~( float( ( Min( ( float )( {\bf v} ), 254.0f ) / 254.0f $\ast$ 2.0f ) - 1.0f ) )}}
+\label{_gr_image_8cpp_31341b2a1a1e53594fa5020192ceb721}
+
+
+
+
+Definition at line 34 of file GrImage.cpp.
+
+\subsection{Typedef Documentation}
+\hypertarget{_gr_image_8cpp_95ff3a920a0785ea52bda115c1bd775e}{
+\index{GrImage.cpp@{GrImage.cpp}!GenMipLevelFunc@{GenMipLevelFunc}}
+\index{GenMipLevelFunc@{GenMipLevelFunc}!GrImage.cpp@{GrImage.cpp}}
+\subsubsection[{GenMipLevelFunc}]{\setlength{\rightskip}{0pt plus 5cm}typedef void$\ast$( $\ast$ {\bf GenMipLevelFunc})(void $\ast$srcIn, unsigned int srcWidth, unsigned int srcHeight, unsigned int elemsPerPixel)}}
+\label{_gr_image_8cpp_95ff3a920a0785ea52bda115c1bd775e}
+
+
+
+
+Definition at line 101 of file GrImage.cpp.
+
+\subsection{Variable Documentation}
+\hypertarget{_gr_image_8cpp_f639e4bfbaea828e7eef103797dee332}{
+\index{GrImage.cpp@{GrImage.cpp}!\_\-elemSize@{\_\-elemSize}}
+\index{\_\-elemSize@{\_\-elemSize}!GrImage.cpp@{GrImage.cpp}}
+\subsubsection[{\_\-elemSize}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf \_\-elemSize}\mbox{[}$\,$\mbox{]}}}
+\label{_gr_image_8cpp_f639e4bfbaea828e7eef103797dee332}
+
+
+\textbf{Initial value:}
+
+\begin{Code}\begin{verbatim}
+{
+        1,                      
+        1,                      
+        4,                      
+        4,                      
+        1,                      
+        4,                      
+        1,                      
+        4,                      
+        4,                      
+        1,                      
+        1,                      
+        1,                      
+}
+\end{verbatim}
+\end{Code}
+
+
+Definition at line 81 of file GrImage.cpp.\hypertarget{_gr_image_8cpp_ec346a4089e104ec2d4b52d5795ba510}{
+\index{GrImage.cpp@{GrImage.cpp}!\_\-elemsPerPixel@{\_\-elemsPerPixel}}
+\index{\_\-elemsPerPixel@{\_\-elemsPerPixel}!GrImage.cpp@{GrImage.cpp}}
+\subsubsection[{\_\-elemsPerPixel}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf \_\-elemsPerPixel}\mbox{[}$\,$\mbox{]}}}
+\label{_gr_image_8cpp_ec346a4089e104ec2d4b52d5795ba510}
+
+
+\textbf{Initial value:}
+
+\begin{Code}\begin{verbatim}
+{
+        3,              
+        4,              
+        3,              
+        4,              
+        1,              
+        1,              
+        2,              
+        2,              
+        1,              
+}
+\end{verbatim}
+\end{Code}
+
+
+Definition at line 36 of file GrImage.cpp.\hypertarget{_gr_image_8cpp_543c1023f77a0cb14b40482df6409a49}{
+\index{GrImage.cpp@{GrImage.cpp}!\_\-imageFormatMap@{\_\-imageFormatMap}}
+\index{\_\-imageFormatMap@{\_\-imageFormatMap}!GrImage.cpp@{GrImage.cpp}}
+\subsubsection[{\_\-imageFormatMap}]{\setlength{\rightskip}{0pt plus 5cm}const GLenum {\bf \_\-imageFormatMap}\mbox{[}$\,$\mbox{]}}}
+\label{_gr_image_8cpp_543c1023f77a0cb14b40482df6409a49}
+
+
+\textbf{Initial value:}
+
+\begin{Code}\begin{verbatim}
+{
+        GL_BGR,                         
+        GL_BGRA,                        
+        GL_RGB,                         
+        GL_RGBA,                        
+        GL_RED,                         
+        GL_RED,                         
+        GL_LUMINANCE_ALPHA,     
+        GL_LUMINANCE_ALPHA,     
+        GL_DEPTH_COMPONENT,     
+        GL_COMPRESSED_RGB_S3TC_DXT1_EXT,
+        GL_COMPRESSED_RGBA_S3TC_DXT1_EXT,
+        GL_COMPRESSED_RGBA_S3TC_DXT5_EXT,
+}
+\end{verbatim}
+\end{Code}
+
+
+Definition at line 49 of file GrImage.cpp.\hypertarget{_gr_image_8cpp_662c8db9b47b41ac37d92f574f46b80d}{
+\index{GrImage.cpp@{GrImage.cpp}!\_\-imageTypeMap@{\_\-imageTypeMap}}
+\index{\_\-imageTypeMap@{\_\-imageTypeMap}!GrImage.cpp@{GrImage.cpp}}
+\subsubsection[{\_\-imageTypeMap}]{\setlength{\rightskip}{0pt plus 5cm}const GLenum {\bf \_\-imageTypeMap}\mbox{[}$\,$\mbox{]}}}
+\label{_gr_image_8cpp_662c8db9b47b41ac37d92f574f46b80d}
+
+
+\textbf{Initial value:}
+
+\begin{Code}\begin{verbatim}
+{
+        GL_UNSIGNED_BYTE,                       
+        GL_UNSIGNED_BYTE,                       
+        GL_FLOAT,                                       
+        GL_FLOAT,                                       
+        GL_UNSIGNED_BYTE,                       
+        GL_FLOAT,                                       
+        GL_UNSIGNED_BYTE,                       
+        GL_FLOAT,                                       
+        GL_FLOAT,                                       
+        GL_UNSIGNED_BYTE,
+        GL_UNSIGNED_BYTE,
+        GL_UNSIGNED_BYTE,
+}
+\end{verbatim}
+\end{Code}
+
+
+Definition at line 65 of file GrImage.cpp.

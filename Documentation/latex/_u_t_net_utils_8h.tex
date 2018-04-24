@@ -1,0 +1,128 @@
+\hypertarget{_u_t_net_utils_8h}{
+\section{C:/Bootstrap/ProjectBX/Engine/UberTexture/UTNetUtils.h File Reference}
+\label{_u_t_net_utils_8h}\index{C:/Bootstrap/ProjectBX/Engine/UberTexture/UTNetUtils.h@{C:/Bootstrap/ProjectBX/Engine/UberTexture/UTNetUtils.h}}
+}
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \hyperlink{_u_t_net_utils_8h_900f7799cb8607e12f65d4396151a3df}{\_\-\_\-w64}
+\end{CompactItemize}
+\subsection*{Typedefs}
+\begin{CompactItemize}
+\item 
+typedef \_\-\_\-w64 unsigned int \hyperlink{_u_t_net_utils_8h_7d68bb01e985882c1c12dbc3b0468c9a}{SOCKET}
+\end{CompactItemize}
+\subsection*{Enumerations}
+\begin{CompactItemize}
+\item 
+enum \hyperlink{_u_t_net_utils_8h_6072f6a2e5f4578f7b0307456d3cf422}{SOCKETTYPE} \{ \hyperlink{_u_t_net_utils_8h_6072f6a2e5f4578f7b0307456d3cf422701039b4242688d99ab08f6df2ae14df}{ST\_\-STREAMING}
+ \}
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+const char $\ast$ \hyperlink{_u_t_net_utils_8h_f5e3a6aa03da89f0ccf0168e5f70474e}{UTGetErrorString} ()
+\item 
+hostent $\ast$ \hyperlink{_u_t_net_utils_8h_840ba88ec974578d0326d9b98e5a9752}{UTResolveHostAddress} (const char $\ast$\hyperlink{glext__bak_8h_86e3d190561a4ae1e195e1a2bcc83db5}{address})
+\item 
+void \hyperlink{_u_t_net_utils_8h_155f21544a54ceb1297f6e73a91f0cea}{UTMakeSockAddr} (sockaddr\_\-in $\ast$\hyperlink{glext__bak_8h_b9d96bf51d75cea2751acf016110f070}{addr}, unsigned long ip, unsigned short port)
+\item 
+bool \hyperlink{_u_t_net_utils_8h_a5b88f7df64d0074dc02bb29230e7eb3}{UTSetSocketAsync} (\hyperlink{_u_t_net_utils_8h_7d68bb01e985882c1c12dbc3b0468c9a}{SOCKET} socket, bool async)
+\item 
+bool \hyperlink{_u_t_net_utils_8h_f48faf21fce801a4872417296258f4f8}{UTSetSocketBuffered} (\hyperlink{_u_t_net_utils_8h_7d68bb01e985882c1c12dbc3b0468c9a}{SOCKET} socket, bool buffered)
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_u_t_net_utils_8h_900f7799cb8607e12f65d4396151a3df}{
+\index{UTNetUtils.h@{UTNetUtils.h}!\_\-\_\-w64@{\_\-\_\-w64}}
+\index{\_\-\_\-w64@{\_\-\_\-w64}!UTNetUtils.h@{UTNetUtils.h}}
+\subsubsection[{\_\-\_\-w64}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-\_\-w64}}
+\label{_u_t_net_utils_8h_900f7799cb8607e12f65d4396151a3df}
+
+
+
+
+Definition at line 16 of file UTNetUtils.h.
+
+\subsection{Typedef Documentation}
+\hypertarget{_u_t_net_utils_8h_7d68bb01e985882c1c12dbc3b0468c9a}{
+\index{UTNetUtils.h@{UTNetUtils.h}!SOCKET@{SOCKET}}
+\index{SOCKET@{SOCKET}!UTNetUtils.h@{UTNetUtils.h}}
+\subsubsection[{SOCKET}]{\setlength{\rightskip}{0pt plus 5cm}typedef \_\-\_\-w64 unsigned int {\bf SOCKET}}}
+\label{_u_t_net_utils_8h_7d68bb01e985882c1c12dbc3b0468c9a}
+
+
+
+
+Definition at line 19 of file UTNetUtils.h.
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{_u_t_net_utils_8h_6072f6a2e5f4578f7b0307456d3cf422}{
+\index{UTNetUtils.h@{UTNetUtils.h}!SOCKETTYPE@{SOCKETTYPE}}
+\index{SOCKETTYPE@{SOCKETTYPE}!UTNetUtils.h@{UTNetUtils.h}}
+\subsubsection[{SOCKETTYPE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf SOCKETTYPE}}}
+\label{_u_t_net_utils_8h_6072f6a2e5f4578f7b0307456d3cf422}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{ST\_\-STREAMING@{ST\_\-STREAMING}!UTNetUtils.h@{UTNetUtils.h}}\index{UTNetUtils.h@{UTNetUtils.h}!ST\_\-STREAMING@{ST\_\-STREAMING}}\item[{\em 
+\hypertarget{_u_t_net_utils_8h_6072f6a2e5f4578f7b0307456d3cf422701039b4242688d99ab08f6df2ae14df}{
+ST\_\-STREAMING}
+\label{_u_t_net_utils_8h_6072f6a2e5f4578f7b0307456d3cf422701039b4242688d99ab08f6df2ae14df}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 21 of file UTNetUtils.h.
+
+\subsection{Function Documentation}
+\hypertarget{_u_t_net_utils_8h_f5e3a6aa03da89f0ccf0168e5f70474e}{
+\index{UTNetUtils.h@{UTNetUtils.h}!UTGetErrorString@{UTGetErrorString}}
+\index{UTGetErrorString@{UTGetErrorString}!UTNetUtils.h@{UTNetUtils.h}}
+\subsubsection[{UTGetErrorString}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ UTGetErrorString ()}}
+\label{_u_t_net_utils_8h_f5e3a6aa03da89f0ccf0168e5f70474e}
+
+
+
+
+Definition at line 23 of file UTNetUtils.cpp.\hypertarget{_u_t_net_utils_8h_155f21544a54ceb1297f6e73a91f0cea}{
+\index{UTNetUtils.h@{UTNetUtils.h}!UTMakeSockAddr@{UTMakeSockAddr}}
+\index{UTMakeSockAddr@{UTMakeSockAddr}!UTNetUtils.h@{UTNetUtils.h}}
+\subsubsection[{UTMakeSockAddr}]{\setlength{\rightskip}{0pt plus 5cm}void UTMakeSockAddr (sockaddr\_\-in $\ast$ {\em addr}, \/  unsigned long {\em ip}, \/  unsigned short {\em port})}}
+\label{_u_t_net_utils_8h_155f21544a54ceb1297f6e73a91f0cea}
+
+
+
+
+Definition at line 121 of file UTNetUtils.cpp.\hypertarget{_u_t_net_utils_8h_840ba88ec974578d0326d9b98e5a9752}{
+\index{UTNetUtils.h@{UTNetUtils.h}!UTResolveHostAddress@{UTResolveHostAddress}}
+\index{UTResolveHostAddress@{UTResolveHostAddress}!UTNetUtils.h@{UTNetUtils.h}}
+\subsubsection[{UTResolveHostAddress}]{\setlength{\rightskip}{0pt plus 5cm}hostent$\ast$ UTResolveHostAddress (const char $\ast$ {\em address})}}
+\label{_u_t_net_utils_8h_840ba88ec974578d0326d9b98e5a9752}
+
+
+
+
+Definition at line 77 of file UTNetUtils.cpp.\hypertarget{_u_t_net_utils_8h_a5b88f7df64d0074dc02bb29230e7eb3}{
+\index{UTNetUtils.h@{UTNetUtils.h}!UTSetSocketAsync@{UTSetSocketAsync}}
+\index{UTSetSocketAsync@{UTSetSocketAsync}!UTNetUtils.h@{UTNetUtils.h}}
+\subsubsection[{UTSetSocketAsync}]{\setlength{\rightskip}{0pt plus 5cm}bool UTSetSocketAsync ({\bf SOCKET} {\em socket}, \/  bool {\em async})}}
+\label{_u_t_net_utils_8h_a5b88f7df64d0074dc02bb29230e7eb3}
+
+
+
+
+Definition at line 130 of file UTNetUtils.cpp.\hypertarget{_u_t_net_utils_8h_f48faf21fce801a4872417296258f4f8}{
+\index{UTNetUtils.h@{UTNetUtils.h}!UTSetSocketBuffered@{UTSetSocketBuffered}}
+\index{UTSetSocketBuffered@{UTSetSocketBuffered}!UTNetUtils.h@{UTNetUtils.h}}
+\subsubsection[{UTSetSocketBuffered}]{\setlength{\rightskip}{0pt plus 5cm}bool UTSetSocketBuffered ({\bf SOCKET} {\em socket}, \/  bool {\em buffered})}}
+\label{_u_t_net_utils_8h_f48faf21fce801a4872417296258f4f8}
+
+
+
+
+Definition at line 144 of file UTNetUtils.cpp.

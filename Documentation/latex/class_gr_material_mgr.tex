@@ -1,0 +1,202 @@
+\hypertarget{class_gr_material_mgr}{
+\section{GrMaterialMgr Class Reference}
+\label{class_gr_material_mgr}\index{GrMaterialMgr@{GrMaterialMgr}}
+}
+{\tt \#include $<$GrMaterialMgr.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_material_mgr_f8c35eace8645ea7aa4be86286438670}{GrMaterialMgr} ()
+\item 
+\hyperlink{class_gr_material_mgr_6f3351d8076b7507fa619d690a5080bc}{$\sim$GrMaterialMgr} ()
+\item 
+\hyperlink{enums_8h_697c1ee1354746841860d5bf9f81c033}{EGRQUALITY} \hyperlink{class_gr_material_mgr_9a75c5cd132b7bffec133e4d9e8f4221}{GetShadingQuality} () const 
+\item 
+void \hyperlink{class_gr_material_mgr_1d585959cdac4e110fce8cdaa39310fa}{SetShadingQuality} (\hyperlink{enums_8h_697c1ee1354746841860d5bf9f81c033}{EGRQUALITY} quality)
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_material}{GrMaterial} $>$ \hyperlink{class_gr_material_mgr_7134ce45c3dc3b873ea2c5deb896ba08}{SetMaterial} (const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, const \hyperlink{struct_gr_material_1_1_s_info}{GrMaterial::SInfo} \&info)
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_material}{GrMaterial} $>$ \hyperlink{class_gr_material_mgr_5cd1ffc48f5700668491231502af7be9}{GetMaterial} (const \hyperlink{class_u_path}{UPath} \&\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&error)
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_material}{GrMaterial} $>$ \hyperlink{class_gr_material_mgr_43336b522deb18479fb8a40756ef37f0}{GetDefaultMaterial} ()
+\item 
+bool \hyperlink{class_gr_material_mgr_fd19248af5f08710d9607b9db84c52b5}{ReloadMaterial} (const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&error)
+\item 
+void \hyperlink{class_gr_material_mgr_c0272e7cbc2981ad1996ac569346054f}{ReloadAll} ()
+\item 
+void \hyperlink{class_gr_material_mgr_24e6473a848193ef15400e817debc4a0}{UnloadAll} ()
+\item 
+void \hyperlink{class_gr_material_mgr_fd6d9312e225637c1300dc0703c853f7}{Update} ()
+\item 
+unsigned int \hyperlink{class_gr_material_mgr_2e5b48c6003f1d3449ba8dbff47d4fc7}{GetMaterialCount} () const 
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_material}{GrMaterial} $>$ \hyperlink{class_gr_material_mgr_ce15b2856e2cbcb867f012daac7e8ed2}{GetMaterialByIdx} (unsigned int \hyperlink{glext__bak_8h_57f14e05b1900f16a2da82ade47d0c6d}{index})
+\item 
+void \hyperlink{class_gr_material_mgr_e3b56eb5530047e084fb96c595da517b}{PreContextReset} ()
+\item 
+void \hyperlink{class_gr_material_mgr_daadacddba70859d762f1d776bfcfcb1}{PostContextReset} ()
+\item 
+void \hyperlink{class_gr_material_mgr_1bdfefc758711cf3d91e5a3cff632ffc}{GetScriptName} (\hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&scriptName, const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&materialName)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 26 of file GrMaterialMgr.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_material_mgr_f8c35eace8645ea7aa4be86286438670}{
+\index{GrMaterialMgr@{GrMaterialMgr}!GrMaterialMgr@{GrMaterialMgr}}
+\index{GrMaterialMgr@{GrMaterialMgr}!GrMaterialMgr@{GrMaterialMgr}}
+\subsubsection[{GrMaterialMgr}]{\setlength{\rightskip}{0pt plus 5cm}GrMaterialMgr::GrMaterialMgr ()}}
+\label{class_gr_material_mgr_f8c35eace8645ea7aa4be86286438670}
+
+
+
+
+Definition at line 43 of file GrMaterialMgr.cpp.\hypertarget{class_gr_material_mgr_6f3351d8076b7507fa619d690a5080bc}{
+\index{GrMaterialMgr@{GrMaterialMgr}!$\sim$GrMaterialMgr@{$\sim$GrMaterialMgr}}
+\index{$\sim$GrMaterialMgr@{$\sim$GrMaterialMgr}!GrMaterialMgr@{GrMaterialMgr}}
+\subsubsection[{$\sim$GrMaterialMgr}]{\setlength{\rightskip}{0pt plus 5cm}GrMaterialMgr::$\sim$GrMaterialMgr ()}}
+\label{class_gr_material_mgr_6f3351d8076b7507fa619d690a5080bc}
+
+
+
+
+Definition at line 119 of file GrMaterialMgr.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_material_mgr_43336b522deb18479fb8a40756ef37f0}{
+\index{GrMaterialMgr@{GrMaterialMgr}!GetDefaultMaterial@{GetDefaultMaterial}}
+\index{GetDefaultMaterial@{GetDefaultMaterial}!GrMaterialMgr@{GrMaterialMgr}}
+\subsubsection[{GetDefaultMaterial}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrMaterial} $>$ GrMaterialMgr::GetDefaultMaterial ()}}
+\label{class_gr_material_mgr_43336b522deb18479fb8a40756ef37f0}
+
+
+
+
+Definition at line 199 of file GrMaterialMgr.cpp.\hypertarget{class_gr_material_mgr_5cd1ffc48f5700668491231502af7be9}{
+\index{GrMaterialMgr@{GrMaterialMgr}!GetMaterial@{GetMaterial}}
+\index{GetMaterial@{GetMaterial}!GrMaterialMgr@{GrMaterialMgr}}
+\subsubsection[{GetMaterial}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrMaterial} $>$ GrMaterialMgr::GetMaterial (const {\bf UPath} \& {\em name}, \/  {\bf tstring} \& {\em error})}}
+\label{class_gr_material_mgr_5cd1ffc48f5700668491231502af7be9}
+
+
+
+
+Definition at line 155 of file GrMaterialMgr.cpp.\hypertarget{class_gr_material_mgr_ce15b2856e2cbcb867f012daac7e8ed2}{
+\index{GrMaterialMgr@{GrMaterialMgr}!GetMaterialByIdx@{GetMaterialByIdx}}
+\index{GetMaterialByIdx@{GetMaterialByIdx}!GrMaterialMgr@{GrMaterialMgr}}
+\subsubsection[{GetMaterialByIdx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrMaterial} $>$ GrMaterialMgr::GetMaterialByIdx (unsigned int {\em index})}}
+\label{class_gr_material_mgr_ce15b2856e2cbcb867f012daac7e8ed2}
+
+
+
+
+Definition at line 270 of file GrMaterialMgr.cpp.\hypertarget{class_gr_material_mgr_2e5b48c6003f1d3449ba8dbff47d4fc7}{
+\index{GrMaterialMgr@{GrMaterialMgr}!GetMaterialCount@{GetMaterialCount}}
+\index{GetMaterialCount@{GetMaterialCount}!GrMaterialMgr@{GrMaterialMgr}}
+\subsubsection[{GetMaterialCount}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrMaterialMgr::GetMaterialCount () const}}
+\label{class_gr_material_mgr_2e5b48c6003f1d3449ba8dbff47d4fc7}
+
+
+
+
+Definition at line 263 of file GrMaterialMgr.cpp.\hypertarget{class_gr_material_mgr_1bdfefc758711cf3d91e5a3cff632ffc}{
+\index{GrMaterialMgr@{GrMaterialMgr}!GetScriptName@{GetScriptName}}
+\index{GetScriptName@{GetScriptName}!GrMaterialMgr@{GrMaterialMgr}}
+\subsubsection[{GetScriptName}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialMgr::GetScriptName ({\bf tstring} \& {\em scriptName}, \/  const {\bf tstring} \& {\em materialName})}}
+\label{class_gr_material_mgr_1bdfefc758711cf3d91e5a3cff632ffc}
+
+
+
+
+Definition at line 308 of file GrMaterialMgr.cpp.\hypertarget{class_gr_material_mgr_9a75c5cd132b7bffec133e4d9e8f4221}{
+\index{GrMaterialMgr@{GrMaterialMgr}!GetShadingQuality@{GetShadingQuality}}
+\index{GetShadingQuality@{GetShadingQuality}!GrMaterialMgr@{GrMaterialMgr}}
+\subsubsection[{GetShadingQuality}]{\setlength{\rightskip}{0pt plus 5cm}{\bf EGRQUALITY} GrMaterialMgr::GetShadingQuality () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_mgr_9a75c5cd132b7bffec133e4d9e8f4221}
+
+
+
+
+Definition at line 33 of file GrMaterialMgr.h.\hypertarget{class_gr_material_mgr_daadacddba70859d762f1d776bfcfcb1}{
+\index{GrMaterialMgr@{GrMaterialMgr}!PostContextReset@{PostContextReset}}
+\index{PostContextReset@{PostContextReset}!GrMaterialMgr@{GrMaterialMgr}}
+\subsubsection[{PostContextReset}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialMgr::PostContextReset ()}}
+\label{class_gr_material_mgr_daadacddba70859d762f1d776bfcfcb1}
+
+
+
+
+Definition at line 291 of file GrMaterialMgr.cpp.\hypertarget{class_gr_material_mgr_e3b56eb5530047e084fb96c595da517b}{
+\index{GrMaterialMgr@{GrMaterialMgr}!PreContextReset@{PreContextReset}}
+\index{PreContextReset@{PreContextReset}!GrMaterialMgr@{GrMaterialMgr}}
+\subsubsection[{PreContextReset}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialMgr::PreContextReset ()}}
+\label{class_gr_material_mgr_e3b56eb5530047e084fb96c595da517b}
+
+
+
+
+Definition at line 277 of file GrMaterialMgr.cpp.\hypertarget{class_gr_material_mgr_c0272e7cbc2981ad1996ac569346054f}{
+\index{GrMaterialMgr@{GrMaterialMgr}!ReloadAll@{ReloadAll}}
+\index{ReloadAll@{ReloadAll}!GrMaterialMgr@{GrMaterialMgr}}
+\subsubsection[{ReloadAll}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialMgr::ReloadAll ()}}
+\label{class_gr_material_mgr_c0272e7cbc2981ad1996ac569346054f}
+
+
+
+
+Definition at line 216 of file GrMaterialMgr.cpp.\hypertarget{class_gr_material_mgr_fd19248af5f08710d9607b9db84c52b5}{
+\index{GrMaterialMgr@{GrMaterialMgr}!ReloadMaterial@{ReloadMaterial}}
+\index{ReloadMaterial@{ReloadMaterial}!GrMaterialMgr@{GrMaterialMgr}}
+\subsubsection[{ReloadMaterial}]{\setlength{\rightskip}{0pt plus 5cm}bool GrMaterialMgr::ReloadMaterial (const {\bf tstring} \& {\em name}, \/  {\bf tstring} \& {\em error})}}
+\label{class_gr_material_mgr_fd19248af5f08710d9607b9db84c52b5}
+
+
+
+
+Definition at line 206 of file GrMaterialMgr.cpp.\hypertarget{class_gr_material_mgr_7134ce45c3dc3b873ea2c5deb896ba08}{
+\index{GrMaterialMgr@{GrMaterialMgr}!SetMaterial@{SetMaterial}}
+\index{SetMaterial@{SetMaterial}!GrMaterialMgr@{GrMaterialMgr}}
+\subsubsection[{SetMaterial}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrMaterial} $>$ GrMaterialMgr::SetMaterial (const {\bf tstring} \& {\em name}, \/  const {\bf GrMaterial::SInfo} \& {\em info})}}
+\label{class_gr_material_mgr_7134ce45c3dc3b873ea2c5deb896ba08}
+
+
+
+
+Definition at line 132 of file GrMaterialMgr.cpp.\hypertarget{class_gr_material_mgr_1d585959cdac4e110fce8cdaa39310fa}{
+\index{GrMaterialMgr@{GrMaterialMgr}!SetShadingQuality@{SetShadingQuality}}
+\index{SetShadingQuality@{SetShadingQuality}!GrMaterialMgr@{GrMaterialMgr}}
+\subsubsection[{SetShadingQuality}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialMgr::SetShadingQuality ({\bf EGRQUALITY} {\em quality})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_mgr_1d585959cdac4e110fce8cdaa39310fa}
+
+
+
+
+Definition at line 34 of file GrMaterialMgr.h.\hypertarget{class_gr_material_mgr_24e6473a848193ef15400e817debc4a0}{
+\index{GrMaterialMgr@{GrMaterialMgr}!UnloadAll@{UnloadAll}}
+\index{UnloadAll@{UnloadAll}!GrMaterialMgr@{GrMaterialMgr}}
+\subsubsection[{UnloadAll}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialMgr::UnloadAll ()}}
+\label{class_gr_material_mgr_24e6473a848193ef15400e817debc4a0}
+
+
+
+
+Definition at line 242 of file GrMaterialMgr.cpp.\hypertarget{class_gr_material_mgr_fd6d9312e225637c1300dc0703c853f7}{
+\index{GrMaterialMgr@{GrMaterialMgr}!Update@{Update}}
+\index{Update@{Update}!GrMaterialMgr@{GrMaterialMgr}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialMgr::Update ()}}
+\label{class_gr_material_mgr_fd6d9312e225637c1300dc0703c853f7}
+
+
+
+
+Definition at line 251 of file GrMaterialMgr.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_material_mgr_8h}{GrMaterialMgr.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_material_mgr_8cpp}{GrMaterialMgr.cpp}\end{CompactItemize}

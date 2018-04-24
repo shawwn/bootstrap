@@ -1,0 +1,191 @@
+\hypertarget{class_gr_render_util}{
+\section{GrRenderUtil Class Reference}
+\label{class_gr_render_util}\index{GrRenderUtil@{GrRenderUtil}}
+}
+{\tt \#include $<$GrRenderUtil.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_render_util_046984eb05f9c2caaacf759ba5b383e6}{GrRenderUtil} ()
+\item 
+\hyperlink{class_gr_render_util_cc6a5f205a3784e3814ecffd2b45c621}{$\sim$GrRenderUtil} ()
+\item 
+void \hyperlink{class_gr_render_util_7927ea8c2c13526dc291ad0812a8da46}{DrawScreenQuad} (float minS=0.0f, float minT=0.0f, float maxS=1.0f, float maxT=1.0f)
+\item 
+void \hyperlink{class_gr_render_util_715942e2d678c7bd222f49497cb8d80e}{DrawQuad} (float sx, float sy, float \hyperlink{glext__bak_8h_d47d000a8e40b26a33682e10ae32a1b6}{w}, float h, float minS=0.0f, float minT=0.0f, float maxS=1.0f, float maxT=1.0f)
+\item 
+void \hyperlink{class_gr_render_util_a277a3afe58a89dc92ac242d83330eb1}{SetupColoredRender} (const \hyperlink{class_gr_camera}{GrCamera} \&camera, bool wireframe, bool additive)
+\item 
+void \hyperlink{class_gr_render_util_77102bada1fcd509f9b18d5ff274807e}{DrawColoredPoint} (const \hyperlink{class_gr_camera}{GrCamera} \&camera, const \hyperlink{class_m_vec3}{MVec3} \&pos, const \hyperlink{class_gr_color}{GrColor} \&\hyperlink{glext_8h_3ea846f998d64f079b86052b6c4193a8}{color}, unsigned int sizeInPixels=1)
+\item 
+void \hyperlink{class_gr_render_util_43fcf0adfd8aff3ede03fb334970993b}{DrawColoredLine} (const \hyperlink{class_m_vec3}{MVec3} \&pos1, const \hyperlink{class_m_vec3}{MVec3} \&pos2, const \hyperlink{class_gr_color}{GrColor} \&\hyperlink{glext_8h_3ea846f998d64f079b86052b6c4193a8}{color})
+\item 
+void \hyperlink{class_gr_render_util_59cc101b118c5d85270f3d2e7f737007}{DrawColoredTriangle} (const \hyperlink{class_m_vec3}{MVec3} \&pos1, const \hyperlink{class_m_vec3}{MVec3} \&pos2, const \hyperlink{class_m_vec3}{MVec3} \&pos3, const \hyperlink{class_gr_color}{GrColor} \&\hyperlink{glext_8h_3ea846f998d64f079b86052b6c4193a8}{color})
+\item 
+void \hyperlink{class_gr_render_util_d10d280236c7ab0ffa19c61a47a1afce}{DrawColoredSphere} (const \hyperlink{class_m_vec3}{MVec3} \&pos, float radius, const \hyperlink{class_gr_color}{GrColor} \&\hyperlink{glext_8h_3ea846f998d64f079b86052b6c4193a8}{color}, unsigned int slices=32)
+\item 
+void \hyperlink{class_gr_render_util_f53586276257c886ea2d3c526db1d233}{DrawColoredCone} (const \hyperlink{class_m_vec3}{MVec3} \&pos, float theta, float \hyperlink{wglext_8h_74efbdef71b2e5711088ae39fc925d2d}{length}, const \hyperlink{class_gr_color}{GrColor} \&\hyperlink{glext_8h_3ea846f998d64f079b86052b6c4193a8}{color}, unsigned int slices=32)
+\item 
+void \hyperlink{class_gr_render_util_754e864fcf78c7f20fa4a417475960cc}{DrawColoredCube} (const \hyperlink{class_m_vec3}{MVec3} \&pos, float \hyperlink{wglext_8h_74efbdef71b2e5711088ae39fc925d2d}{length}, const \hyperlink{class_gr_color}{GrColor} \&\hyperlink{glext_8h_3ea846f998d64f079b86052b6c4193a8}{color})
+\item 
+void \hyperlink{class_gr_render_util_8c4e206af04748afd131741ef7be632c}{DrawColoredAABox} (const \hyperlink{class_m_a_a_box}{MAABox} \&aaBox, const \hyperlink{class_gr_color}{GrColor} \&\hyperlink{glext_8h_3ea846f998d64f079b86052b6c4193a8}{color})
+\item 
+void \hyperlink{class_gr_render_util_2393c582878b53d17b85ab809f44f15c}{DrawColoredAABox} (const \hyperlink{class_m_vec3}{MVec3} \&minExts, const \hyperlink{class_m_vec3}{MVec3} \&maxExts, const \hyperlink{class_gr_color}{GrColor} \&\hyperlink{glext_8h_3ea846f998d64f079b86052b6c4193a8}{color})
+\item 
+void \hyperlink{class_gr_render_util_5cd3a6ac45a9d948b093495641d907dd}{DrawColoredOBox} (const \hyperlink{class_m_mat4x4}{MMat4x4} \&\hyperlink{glext__bak_8h_07993c0d92c1aeeb357ba0495c8b5325}{transform}, const \hyperlink{class_m_vec3}{MVec3} \&halfExtents, const \hyperlink{class_gr_color}{GrColor} \&\hyperlink{glext_8h_3ea846f998d64f079b86052b6c4193a8}{color})
+\item 
+void \hyperlink{class_gr_render_util_ed7cf8334d73eb87da59905af527b2bb}{DrawColoredFrustum} (const \hyperlink{class_gr_frustum}{GrFrustum} \&frustum, const \hyperlink{class_gr_color}{GrColor} \&\hyperlink{glext_8h_3ea846f998d64f079b86052b6c4193a8}{color})
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 25 of file GrRenderUtil.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_render_util_046984eb05f9c2caaacf759ba5b383e6}{
+\index{GrRenderUtil@{GrRenderUtil}!GrRenderUtil@{GrRenderUtil}}
+\index{GrRenderUtil@{GrRenderUtil}!GrRenderUtil@{GrRenderUtil}}
+\subsubsection[{GrRenderUtil}]{\setlength{\rightskip}{0pt plus 5cm}GrRenderUtil::GrRenderUtil ()}}
+\label{class_gr_render_util_046984eb05f9c2caaacf759ba5b383e6}
+
+
+
+
+Definition at line 65 of file GrRenderUtil.cpp.\hypertarget{class_gr_render_util_cc6a5f205a3784e3814ecffd2b45c621}{
+\index{GrRenderUtil@{GrRenderUtil}!$\sim$GrRenderUtil@{$\sim$GrRenderUtil}}
+\index{$\sim$GrRenderUtil@{$\sim$GrRenderUtil}!GrRenderUtil@{GrRenderUtil}}
+\subsubsection[{$\sim$GrRenderUtil}]{\setlength{\rightskip}{0pt plus 5cm}GrRenderUtil::$\sim$GrRenderUtil ()}}
+\label{class_gr_render_util_cc6a5f205a3784e3814ecffd2b45c621}
+
+
+
+
+Definition at line 73 of file GrRenderUtil.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_render_util_2393c582878b53d17b85ab809f44f15c}{
+\index{GrRenderUtil@{GrRenderUtil}!DrawColoredAABox@{DrawColoredAABox}}
+\index{DrawColoredAABox@{DrawColoredAABox}!GrRenderUtil@{GrRenderUtil}}
+\subsubsection[{DrawColoredAABox}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderUtil::DrawColoredAABox (const {\bf MVec3} \& {\em minExts}, \/  const {\bf MVec3} \& {\em maxExts}, \/  const {\bf GrColor} \& {\em color})}}
+\label{class_gr_render_util_2393c582878b53d17b85ab809f44f15c}
+
+
+
+
+Definition at line 468 of file GrRenderUtil.cpp.\hypertarget{class_gr_render_util_8c4e206af04748afd131741ef7be632c}{
+\index{GrRenderUtil@{GrRenderUtil}!DrawColoredAABox@{DrawColoredAABox}}
+\index{DrawColoredAABox@{DrawColoredAABox}!GrRenderUtil@{GrRenderUtil}}
+\subsubsection[{DrawColoredAABox}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderUtil::DrawColoredAABox (const {\bf MAABox} \& {\em aaBox}, \/  const {\bf GrColor} \& {\em color})}}
+\label{class_gr_render_util_8c4e206af04748afd131741ef7be632c}
+
+
+
+
+Definition at line 459 of file GrRenderUtil.cpp.\hypertarget{class_gr_render_util_f53586276257c886ea2d3c526db1d233}{
+\index{GrRenderUtil@{GrRenderUtil}!DrawColoredCone@{DrawColoredCone}}
+\index{DrawColoredCone@{DrawColoredCone}!GrRenderUtil@{GrRenderUtil}}
+\subsubsection[{DrawColoredCone}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderUtil::DrawColoredCone (const {\bf MVec3} \& {\em pos}, \/  float {\em theta}, \/  float {\em length}, \/  const {\bf GrColor} \& {\em color}, \/  unsigned int {\em slices} = {\tt 32})}}
+\label{class_gr_render_util_f53586276257c886ea2d3c526db1d233}
+
+
+
+
+Definition at line 369 of file GrRenderUtil.cpp.\hypertarget{class_gr_render_util_754e864fcf78c7f20fa4a417475960cc}{
+\index{GrRenderUtil@{GrRenderUtil}!DrawColoredCube@{DrawColoredCube}}
+\index{DrawColoredCube@{DrawColoredCube}!GrRenderUtil@{GrRenderUtil}}
+\subsubsection[{DrawColoredCube}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderUtil::DrawColoredCube (const {\bf MVec3} \& {\em pos}, \/  float {\em length}, \/  const {\bf GrColor} \& {\em color})}}
+\label{class_gr_render_util_754e864fcf78c7f20fa4a417475960cc}
+
+
+
+
+Definition at line 448 of file GrRenderUtil.cpp.\hypertarget{class_gr_render_util_ed7cf8334d73eb87da59905af527b2bb}{
+\index{GrRenderUtil@{GrRenderUtil}!DrawColoredFrustum@{DrawColoredFrustum}}
+\index{DrawColoredFrustum@{DrawColoredFrustum}!GrRenderUtil@{GrRenderUtil}}
+\subsubsection[{DrawColoredFrustum}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderUtil::DrawColoredFrustum (const {\bf GrFrustum} \& {\em frustum}, \/  const {\bf GrColor} \& {\em color})}}
+\label{class_gr_render_util_ed7cf8334d73eb87da59905af527b2bb}
+
+
+
+
+Definition at line 675 of file GrRenderUtil.cpp.\hypertarget{class_gr_render_util_43fcf0adfd8aff3ede03fb334970993b}{
+\index{GrRenderUtil@{GrRenderUtil}!DrawColoredLine@{DrawColoredLine}}
+\index{DrawColoredLine@{DrawColoredLine}!GrRenderUtil@{GrRenderUtil}}
+\subsubsection[{DrawColoredLine}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderUtil::DrawColoredLine (const {\bf MVec3} \& {\em pos1}, \/  const {\bf MVec3} \& {\em pos2}, \/  const {\bf GrColor} \& {\em color})}}
+\label{class_gr_render_util_43fcf0adfd8aff3ede03fb334970993b}
+
+
+
+
+Definition at line 317 of file GrRenderUtil.cpp.\hypertarget{class_gr_render_util_5cd3a6ac45a9d948b093495641d907dd}{
+\index{GrRenderUtil@{GrRenderUtil}!DrawColoredOBox@{DrawColoredOBox}}
+\index{DrawColoredOBox@{DrawColoredOBox}!GrRenderUtil@{GrRenderUtil}}
+\subsubsection[{DrawColoredOBox}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderUtil::DrawColoredOBox (const {\bf MMat4x4} \& {\em transform}, \/  const {\bf MVec3} \& {\em halfExtents}, \/  const {\bf GrColor} \& {\em color})}}
+\label{class_gr_render_util_5cd3a6ac45a9d948b093495641d907dd}
+
+
+
+
+Definition at line 579 of file GrRenderUtil.cpp.\hypertarget{class_gr_render_util_77102bada1fcd509f9b18d5ff274807e}{
+\index{GrRenderUtil@{GrRenderUtil}!DrawColoredPoint@{DrawColoredPoint}}
+\index{DrawColoredPoint@{DrawColoredPoint}!GrRenderUtil@{GrRenderUtil}}
+\subsubsection[{DrawColoredPoint}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderUtil::DrawColoredPoint (const {\bf GrCamera} \& {\em camera}, \/  const {\bf MVec3} \& {\em pos}, \/  const {\bf GrColor} \& {\em color}, \/  unsigned int {\em sizeInPixels} = {\tt 1})}}
+\label{class_gr_render_util_77102bada1fcd509f9b18d5ff274807e}
+
+
+
+
+Definition at line 162 of file GrRenderUtil.cpp.\hypertarget{class_gr_render_util_d10d280236c7ab0ffa19c61a47a1afce}{
+\index{GrRenderUtil@{GrRenderUtil}!DrawColoredSphere@{DrawColoredSphere}}
+\index{DrawColoredSphere@{DrawColoredSphere}!GrRenderUtil@{GrRenderUtil}}
+\subsubsection[{DrawColoredSphere}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderUtil::DrawColoredSphere (const {\bf MVec3} \& {\em pos}, \/  float {\em radius}, \/  const {\bf GrColor} \& {\em color}, \/  unsigned int {\em slices} = {\tt 32})}}
+\label{class_gr_render_util_d10d280236c7ab0ffa19c61a47a1afce}
+
+
+
+
+Definition at line 216 of file GrRenderUtil.cpp.\hypertarget{class_gr_render_util_59cc101b118c5d85270f3d2e7f737007}{
+\index{GrRenderUtil@{GrRenderUtil}!DrawColoredTriangle@{DrawColoredTriangle}}
+\index{DrawColoredTriangle@{DrawColoredTriangle}!GrRenderUtil@{GrRenderUtil}}
+\subsubsection[{DrawColoredTriangle}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderUtil::DrawColoredTriangle (const {\bf MVec3} \& {\em pos1}, \/  const {\bf MVec3} \& {\em pos2}, \/  const {\bf MVec3} \& {\em pos3}, \/  const {\bf GrColor} \& {\em color})}}
+\label{class_gr_render_util_59cc101b118c5d85270f3d2e7f737007}
+
+
+
+
+Definition at line 342 of file GrRenderUtil.cpp.\hypertarget{class_gr_render_util_715942e2d678c7bd222f49497cb8d80e}{
+\index{GrRenderUtil@{GrRenderUtil}!DrawQuad@{DrawQuad}}
+\index{DrawQuad@{DrawQuad}!GrRenderUtil@{GrRenderUtil}}
+\subsubsection[{DrawQuad}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderUtil::DrawQuad (float {\em sx}, \/  float {\em sy}, \/  float {\em w}, \/  float {\em h}, \/  float {\em minS} = {\tt 0.0f}, \/  float {\em minT} = {\tt 0.0f}, \/  float {\em maxS} = {\tt 1.0f}, \/  float {\em maxT} = {\tt 1.0f})}}
+\label{class_gr_render_util_715942e2d678c7bd222f49497cb8d80e}
+
+
+
+
+Definition at line 114 of file GrRenderUtil.cpp.\hypertarget{class_gr_render_util_7927ea8c2c13526dc291ad0812a8da46}{
+\index{GrRenderUtil@{GrRenderUtil}!DrawScreenQuad@{DrawScreenQuad}}
+\index{DrawScreenQuad@{DrawScreenQuad}!GrRenderUtil@{GrRenderUtil}}
+\subsubsection[{DrawScreenQuad}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderUtil::DrawScreenQuad (float {\em minS} = {\tt 0.0f}, \/  float {\em minT} = {\tt 0.0f}, \/  float {\em maxS} = {\tt 1.0f}, \/  float {\em maxT} = {\tt 1.0f})}}
+\label{class_gr_render_util_7927ea8c2c13526dc291ad0812a8da46}
+
+
+
+
+Definition at line 85 of file GrRenderUtil.cpp.\hypertarget{class_gr_render_util_a277a3afe58a89dc92ac242d83330eb1}{
+\index{GrRenderUtil@{GrRenderUtil}!SetupColoredRender@{SetupColoredRender}}
+\index{SetupColoredRender@{SetupColoredRender}!GrRenderUtil@{GrRenderUtil}}
+\subsubsection[{SetupColoredRender}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderUtil::SetupColoredRender (const {\bf GrCamera} \& {\em camera}, \/  bool {\em wireframe}, \/  bool {\em additive})}}
+\label{class_gr_render_util_a277a3afe58a89dc92ac242d83330eb1}
+
+
+
+
+Definition at line 143 of file GrRenderUtil.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_render_util_8h}{GrRenderUtil.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_render_util_8cpp}{GrRenderUtil.cpp}\end{CompactItemize}

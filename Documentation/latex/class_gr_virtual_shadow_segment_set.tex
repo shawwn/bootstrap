@@ -1,0 +1,99 @@
+\hypertarget{class_gr_virtual_shadow_segment_set}{
+\section{GrVirtualShadowSegmentSet Class Reference}
+\label{class_gr_virtual_shadow_segment_set}\index{GrVirtualShadowSegmentSet@{GrVirtualShadowSegmentSet}}
+}
+{\tt \#include $<$GrVirtualShadowSegmentSet.h$>$}
+
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+struct \hyperlink{struct_gr_virtual_shadow_segment_set_1_1_s_a_a_box2_d}{SAABox2D}
+\item 
+struct \textbf{SSegment}
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_virtual_shadow_segment_set_82e00df096614e8665e53a50555a2b8a}{GrVirtualShadowSegmentSet} (const \hyperlink{class_gr_camera}{GrCamera} \&viewerCamera, unsigned int segmentCount, float firstSize)
+\item 
+\hyperlink{class_gr_virtual_shadow_segment_set_e91a62dfaca674a03d9a66a4df3d7f23}{$\sim$GrVirtualShadowSegmentSet} ()
+\item 
+void \hyperlink{class_gr_virtual_shadow_segment_set_92e15d9d6393687920a408901ba53cd2}{UpdateSegments} (const \hyperlink{class_gr_camera}{GrCamera} \&faceCamera, float \hyperlink{glext__bak_8h_6180492a53d6843c599d9934a5facf65}{border}, float distBias)
+\item 
+unsigned int \hyperlink{class_gr_virtual_shadow_segment_set_2289656379ca28ba3c9927dde5e5db39}{GetSegmentCount} () const 
+\item 
+const \hyperlink{struct_gr_virtual_shadow_segment_set_1_1_s_a_a_box2_d}{SAABox2D} \& \hyperlink{class_gr_virtual_shadow_segment_set_25b9adc6e79330f077e34c834521a16d}{GetSegmentAABox} (unsigned int segment) const 
+\item 
+bool \hyperlink{class_gr_virtual_shadow_segment_set_2ba9048945a0a60bb9cb59f3e8796887}{IsSegmentVisible} (unsigned int segment) const 
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 22 of file GrVirtualShadowSegmentSet.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_virtual_shadow_segment_set_82e00df096614e8665e53a50555a2b8a}{
+\index{GrVirtualShadowSegmentSet@{GrVirtualShadowSegmentSet}!GrVirtualShadowSegmentSet@{GrVirtualShadowSegmentSet}}
+\index{GrVirtualShadowSegmentSet@{GrVirtualShadowSegmentSet}!GrVirtualShadowSegmentSet@{GrVirtualShadowSegmentSet}}
+\subsubsection[{GrVirtualShadowSegmentSet}]{\setlength{\rightskip}{0pt plus 5cm}GrVirtualShadowSegmentSet::GrVirtualShadowSegmentSet (const {\bf GrCamera} \& {\em viewerCamera}, \/  unsigned int {\em segmentCount}, \/  float {\em firstSize})}}
+\label{class_gr_virtual_shadow_segment_set_82e00df096614e8665e53a50555a2b8a}
+
+
+
+
+Definition at line 27 of file GrVirtualShadowSegmentSet.cpp.\hypertarget{class_gr_virtual_shadow_segment_set_e91a62dfaca674a03d9a66a4df3d7f23}{
+\index{GrVirtualShadowSegmentSet@{GrVirtualShadowSegmentSet}!$\sim$GrVirtualShadowSegmentSet@{$\sim$GrVirtualShadowSegmentSet}}
+\index{$\sim$GrVirtualShadowSegmentSet@{$\sim$GrVirtualShadowSegmentSet}!GrVirtualShadowSegmentSet@{GrVirtualShadowSegmentSet}}
+\subsubsection[{$\sim$GrVirtualShadowSegmentSet}]{\setlength{\rightskip}{0pt plus 5cm}GrVirtualShadowSegmentSet::$\sim$GrVirtualShadowSegmentSet ()}}
+\label{class_gr_virtual_shadow_segment_set_e91a62dfaca674a03d9a66a4df3d7f23}
+
+
+
+
+Definition at line 87 of file GrVirtualShadowSegmentSet.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_virtual_shadow_segment_set_25b9adc6e79330f077e34c834521a16d}{
+\index{GrVirtualShadowSegmentSet@{GrVirtualShadowSegmentSet}!GetSegmentAABox@{GetSegmentAABox}}
+\index{GetSegmentAABox@{GetSegmentAABox}!GrVirtualShadowSegmentSet@{GrVirtualShadowSegmentSet}}
+\subsubsection[{GetSegmentAABox}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf GrVirtualShadowSegmentSet::SAABox2D} \& GrVirtualShadowSegmentSet::GetSegmentAABox (unsigned int {\em segment}) const}}
+\label{class_gr_virtual_shadow_segment_set_25b9adc6e79330f077e34c834521a16d}
+
+
+
+
+Definition at line 274 of file GrVirtualShadowSegmentSet.cpp.\hypertarget{class_gr_virtual_shadow_segment_set_2289656379ca28ba3c9927dde5e5db39}{
+\index{GrVirtualShadowSegmentSet@{GrVirtualShadowSegmentSet}!GetSegmentCount@{GetSegmentCount}}
+\index{GetSegmentCount@{GetSegmentCount}!GrVirtualShadowSegmentSet@{GrVirtualShadowSegmentSet}}
+\subsubsection[{GetSegmentCount}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrVirtualShadowSegmentSet::GetSegmentCount () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_virtual_shadow_segment_set_2289656379ca28ba3c9927dde5e5db39}
+
+
+
+
+Definition at line 41 of file GrVirtualShadowSegmentSet.h.\hypertarget{class_gr_virtual_shadow_segment_set_2ba9048945a0a60bb9cb59f3e8796887}{
+\index{GrVirtualShadowSegmentSet@{GrVirtualShadowSegmentSet}!IsSegmentVisible@{IsSegmentVisible}}
+\index{IsSegmentVisible@{IsSegmentVisible}!GrVirtualShadowSegmentSet@{GrVirtualShadowSegmentSet}}
+\subsubsection[{IsSegmentVisible}]{\setlength{\rightskip}{0pt plus 5cm}bool GrVirtualShadowSegmentSet::IsSegmentVisible (unsigned int {\em segment}) const}}
+\label{class_gr_virtual_shadow_segment_set_2ba9048945a0a60bb9cb59f3e8796887}
+
+
+
+
+Definition at line 282 of file GrVirtualShadowSegmentSet.cpp.\hypertarget{class_gr_virtual_shadow_segment_set_92e15d9d6393687920a408901ba53cd2}{
+\index{GrVirtualShadowSegmentSet@{GrVirtualShadowSegmentSet}!UpdateSegments@{UpdateSegments}}
+\index{UpdateSegments@{UpdateSegments}!GrVirtualShadowSegmentSet@{GrVirtualShadowSegmentSet}}
+\subsubsection[{UpdateSegments}]{\setlength{\rightskip}{0pt plus 5cm}void GrVirtualShadowSegmentSet::UpdateSegments (const {\bf GrCamera} \& {\em faceCamera}, \/  float {\em border}, \/  float {\em distBias})}}
+\label{class_gr_virtual_shadow_segment_set_92e15d9d6393687920a408901ba53cd2}
+
+
+
+
+Definition at line 99 of file GrVirtualShadowSegmentSet.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_virtual_shadow_segment_set_8h}{GrVirtualShadowSegmentSet.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_virtual_shadow_segment_set_8cpp}{GrVirtualShadowSegmentSet.cpp}\end{CompactItemize}

@@ -1,0 +1,256 @@
+\hypertarget{class_gr_k_f_anim_data}{
+\section{GrKFAnimData Class Reference}
+\label{class_gr_k_f_anim_data}\index{GrKFAnimData@{GrKFAnimData}}
+}
+{\tt \#include $<$GrKFAnimData.h$>$}
+
+Inheritance diagram for GrKFAnimData::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_gr_k_f_anim_data}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+struct \hyperlink{struct_gr_k_f_anim_data_1_1_s_rot_key_frame}{SRotKeyFrame}
+\item 
+struct \hyperlink{struct_gr_k_f_anim_data_1_1_s_scale_key_frame}{SScaleKeyFrame}
+\item 
+struct \hyperlink{struct_gr_k_f_anim_data_1_1_s_translate_key_frame}{STranslateKeyFrame}
+\end{CompactItemize}
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef \hyperlink{class_u_fast_array}{UFastArray}$<$ \hyperlink{struct_gr_k_f_anim_data_1_1_s_rot_key_frame}{SRotKeyFrame} $>$ \hyperlink{class_gr_k_f_anim_data_3ec7db018331bb9a3d0b8ced4f22859a}{RotKeyArray}
+\item 
+typedef \hyperlink{class_u_fast_array}{UFastArray}$<$ \hyperlink{struct_gr_k_f_anim_data_1_1_s_scale_key_frame}{SScaleKeyFrame} $>$ \hyperlink{class_gr_k_f_anim_data_60223633a25292285068192bd20f71dc}{ScaleKeyArray}
+\item 
+typedef \hyperlink{class_u_fast_array}{UFastArray}$<$ \hyperlink{struct_gr_k_f_anim_data_1_1_s_translate_key_frame}{STranslateKeyFrame} $>$ \hyperlink{class_gr_k_f_anim_data_38d6be96467bdb179c733bb1ed40d36f}{TranslateKeyArray}
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_k_f_anim_data_3eb49b566e57e8864da2a6cd801af2fe}{GrKFAnimData} (const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&targetName, float duration, const \hyperlink{class_u_fast_array}{UFastArray}$<$ \hyperlink{struct_gr_k_f_anim_data_1_1_s_rot_key_frame}{SRotKeyFrame} $>$ \&rotKeys, const \hyperlink{class_u_fast_array}{UFastArray}$<$ \hyperlink{struct_gr_k_f_anim_data_1_1_s_scale_key_frame}{SScaleKeyFrame} $>$ \&scaleKeys, const \hyperlink{class_u_fast_array}{UFastArray}$<$ \hyperlink{struct_gr_k_f_anim_data_1_1_s_translate_key_frame}{STranslateKeyFrame} $>$ \&translateKeys)
+\item 
+\hyperlink{class_gr_k_f_anim_data_3d55c09cf537c58a6a83eba0818e2b83}{GrKFAnimData} (\hyperlink{class_u_reader}{UReader} \&reader)
+\item 
+\hyperlink{class_gr_k_f_anim_data_93cd2a5c279af2b5c8718808383e65d9}{$\sim$GrKFAnimData} ()
+\item 
+float \hyperlink{class_gr_k_f_anim_data_e741a43f1dee1899c19991f7e2fbcd7a}{GetDuration} () const 
+\item 
+const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \& \hyperlink{class_gr_k_f_anim_data_b6567627550f063030476e6bd58fb72b}{GetTargetName} () const 
+\item 
+unsigned int \hyperlink{class_gr_k_f_anim_data_9d7773764a0a4a6816b3feec7c7ea350}{GetRotKFCount} ()
+\item 
+unsigned int \hyperlink{class_gr_k_f_anim_data_f74c053a04b17c4c8a939d74ff255e65}{GetScaleKFCount} ()
+\item 
+unsigned int \hyperlink{class_gr_k_f_anim_data_5a804a1ef5236f33533f2c42e4d47589}{GetTranslateKFCount} ()
+\item 
+const \hyperlink{struct_gr_k_f_anim_data_1_1_s_rot_key_frame}{SRotKeyFrame} \& \hyperlink{class_gr_k_f_anim_data_f6cfbffb7c637eb8fe5305d36a7f2ebf}{GetRotKF} (unsigned int idx)
+\item 
+const \hyperlink{struct_gr_k_f_anim_data_1_1_s_scale_key_frame}{SScaleKeyFrame} \& \hyperlink{class_gr_k_f_anim_data_5dd218dbf01f0898af6b7abd891a743d}{GetScaleKF} (unsigned int idx)
+\item 
+const \hyperlink{struct_gr_k_f_anim_data_1_1_s_translate_key_frame}{STranslateKeyFrame} \& \hyperlink{class_gr_k_f_anim_data_bf3fbd8ffab0b28a70a13cbe571fd267}{GetTranslateKF} (unsigned int idx)
+\item 
+const \hyperlink{class_u_fast_array}{RotKeyArray} \& \hyperlink{class_gr_k_f_anim_data_47c324fefce09f6f44417a363beefd1f}{GetRotKFArray} () const 
+\item 
+const \hyperlink{class_u_fast_array}{ScaleKeyArray} \& \hyperlink{class_gr_k_f_anim_data_3e3baf34cc6fc43210abf023922249fd}{GetScaleKFArray} () const 
+\item 
+const \hyperlink{class_u_fast_array}{TranslateKeyArray} \& \hyperlink{class_gr_k_f_anim_data_12bc47bbcae2a4b2f6c1e2752f5892fc}{GetTranslateKFArray} () const 
+\item 
+void \hyperlink{class_gr_k_f_anim_data_daa2dfc535b931dfcbeb52fcf0630d8c}{Save} (\hyperlink{class_u_writer}{UWriter} \&writer)
+\item 
+void \hyperlink{class_gr_k_f_anim_data_1cf48bc46744b33fc701998b77f71ead}{Load} (\hyperlink{class_u_reader}{UReader} \&reader)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 26 of file GrKFAnimData.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_gr_k_f_anim_data_3ec7db018331bb9a3d0b8ced4f22859a}{
+\index{GrKFAnimData@{GrKFAnimData}!RotKeyArray@{RotKeyArray}}
+\index{RotKeyArray@{RotKeyArray}!GrKFAnimData@{GrKFAnimData}}
+\subsubsection[{RotKeyArray}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf UFastArray}$<$ {\bf SRotKeyFrame} $>$ {\bf GrKFAnimData::RotKeyArray}}}
+\label{class_gr_k_f_anim_data_3ec7db018331bb9a3d0b8ced4f22859a}
+
+
+
+
+Definition at line 51 of file GrKFAnimData.h.\hypertarget{class_gr_k_f_anim_data_60223633a25292285068192bd20f71dc}{
+\index{GrKFAnimData@{GrKFAnimData}!ScaleKeyArray@{ScaleKeyArray}}
+\index{ScaleKeyArray@{ScaleKeyArray}!GrKFAnimData@{GrKFAnimData}}
+\subsubsection[{ScaleKeyArray}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf UFastArray}$<$ {\bf SScaleKeyFrame} $>$ {\bf GrKFAnimData::ScaleKeyArray}}}
+\label{class_gr_k_f_anim_data_60223633a25292285068192bd20f71dc}
+
+
+
+
+Definition at line 52 of file GrKFAnimData.h.\hypertarget{class_gr_k_f_anim_data_38d6be96467bdb179c733bb1ed40d36f}{
+\index{GrKFAnimData@{GrKFAnimData}!TranslateKeyArray@{TranslateKeyArray}}
+\index{TranslateKeyArray@{TranslateKeyArray}!GrKFAnimData@{GrKFAnimData}}
+\subsubsection[{TranslateKeyArray}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf UFastArray}$<$ {\bf STranslateKeyFrame} $>$ {\bf GrKFAnimData::TranslateKeyArray}}}
+\label{class_gr_k_f_anim_data_38d6be96467bdb179c733bb1ed40d36f}
+
+
+
+
+Definition at line 53 of file GrKFAnimData.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_k_f_anim_data_3eb49b566e57e8864da2a6cd801af2fe}{
+\index{GrKFAnimData@{GrKFAnimData}!GrKFAnimData@{GrKFAnimData}}
+\index{GrKFAnimData@{GrKFAnimData}!GrKFAnimData@{GrKFAnimData}}
+\subsubsection[{GrKFAnimData}]{\setlength{\rightskip}{0pt plus 5cm}GrKFAnimData::GrKFAnimData (const {\bf tstring} \& {\em targetName}, \/  float {\em duration}, \/  const {\bf UFastArray}$<$ {\bf SRotKeyFrame} $>$ \& {\em rotKeys}, \/  const {\bf UFastArray}$<$ {\bf SScaleKeyFrame} $>$ \& {\em scaleKeys}, \/  const {\bf UFastArray}$<$ {\bf STranslateKeyFrame} $>$ \& {\em translateKeys})}}
+\label{class_gr_k_f_anim_data_3eb49b566e57e8864da2a6cd801af2fe}
+
+
+
+
+Definition at line 22 of file GrKFAnimData.cpp.\hypertarget{class_gr_k_f_anim_data_3d55c09cf537c58a6a83eba0818e2b83}{
+\index{GrKFAnimData@{GrKFAnimData}!GrKFAnimData@{GrKFAnimData}}
+\index{GrKFAnimData@{GrKFAnimData}!GrKFAnimData@{GrKFAnimData}}
+\subsubsection[{GrKFAnimData}]{\setlength{\rightskip}{0pt plus 5cm}GrKFAnimData::GrKFAnimData ({\bf UReader} \& {\em reader})}}
+\label{class_gr_k_f_anim_data_3d55c09cf537c58a6a83eba0818e2b83}
+
+
+
+
+Definition at line 36 of file GrKFAnimData.cpp.\hypertarget{class_gr_k_f_anim_data_93cd2a5c279af2b5c8718808383e65d9}{
+\index{GrKFAnimData@{GrKFAnimData}!$\sim$GrKFAnimData@{$\sim$GrKFAnimData}}
+\index{$\sim$GrKFAnimData@{$\sim$GrKFAnimData}!GrKFAnimData@{GrKFAnimData}}
+\subsubsection[{$\sim$GrKFAnimData}]{\setlength{\rightskip}{0pt plus 5cm}GrKFAnimData::$\sim$GrKFAnimData ()}}
+\label{class_gr_k_f_anim_data_93cd2a5c279af2b5c8718808383e65d9}
+
+
+
+
+Definition at line 47 of file GrKFAnimData.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_k_f_anim_data_e741a43f1dee1899c19991f7e2fbcd7a}{
+\index{GrKFAnimData@{GrKFAnimData}!GetDuration@{GetDuration}}
+\index{GetDuration@{GetDuration}!GrKFAnimData@{GrKFAnimData}}
+\subsubsection[{GetDuration}]{\setlength{\rightskip}{0pt plus 5cm}float GrKFAnimData::GetDuration () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_k_f_anim_data_e741a43f1dee1899c19991f7e2fbcd7a}
+
+
+
+
+Definition at line 60 of file GrKFAnimData.h.\hypertarget{class_gr_k_f_anim_data_f6cfbffb7c637eb8fe5305d36a7f2ebf}{
+\index{GrKFAnimData@{GrKFAnimData}!GetRotKF@{GetRotKF}}
+\index{GetRotKF@{GetRotKF}!GrKFAnimData@{GrKFAnimData}}
+\subsubsection[{GetRotKF}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf GrKFAnimData::SRotKeyFrame} \& GrKFAnimData::GetRotKF (unsigned int {\em idx})}}
+\label{class_gr_k_f_anim_data_f6cfbffb7c637eb8fe5305d36a7f2ebf}
+
+
+
+
+Definition at line 59 of file GrKFAnimData.cpp.\hypertarget{class_gr_k_f_anim_data_47c324fefce09f6f44417a363beefd1f}{
+\index{GrKFAnimData@{GrKFAnimData}!GetRotKFArray@{GetRotKFArray}}
+\index{GetRotKFArray@{GetRotKFArray}!GrKFAnimData@{GrKFAnimData}}
+\subsubsection[{GetRotKFArray}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf RotKeyArray}\& GrKFAnimData::GetRotKFArray () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_k_f_anim_data_47c324fefce09f6f44417a363beefd1f}
+
+
+
+
+Definition at line 72 of file GrKFAnimData.h.\hypertarget{class_gr_k_f_anim_data_9d7773764a0a4a6816b3feec7c7ea350}{
+\index{GrKFAnimData@{GrKFAnimData}!GetRotKFCount@{GetRotKFCount}}
+\index{GetRotKFCount@{GetRotKFCount}!GrKFAnimData@{GrKFAnimData}}
+\subsubsection[{GetRotKFCount}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrKFAnimData::GetRotKFCount ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_k_f_anim_data_9d7773764a0a4a6816b3feec7c7ea350}
+
+
+
+
+Definition at line 64 of file GrKFAnimData.h.\hypertarget{class_gr_k_f_anim_data_5dd218dbf01f0898af6b7abd891a743d}{
+\index{GrKFAnimData@{GrKFAnimData}!GetScaleKF@{GetScaleKF}}
+\index{GetScaleKF@{GetScaleKF}!GrKFAnimData@{GrKFAnimData}}
+\subsubsection[{GetScaleKF}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf GrKFAnimData::SScaleKeyFrame} \& GrKFAnimData::GetScaleKF (unsigned int {\em idx})}}
+\label{class_gr_k_f_anim_data_5dd218dbf01f0898af6b7abd891a743d}
+
+
+
+
+Definition at line 67 of file GrKFAnimData.cpp.\hypertarget{class_gr_k_f_anim_data_3e3baf34cc6fc43210abf023922249fd}{
+\index{GrKFAnimData@{GrKFAnimData}!GetScaleKFArray@{GetScaleKFArray}}
+\index{GetScaleKFArray@{GetScaleKFArray}!GrKFAnimData@{GrKFAnimData}}
+\subsubsection[{GetScaleKFArray}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf ScaleKeyArray}\& GrKFAnimData::GetScaleKFArray () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_k_f_anim_data_3e3baf34cc6fc43210abf023922249fd}
+
+
+
+
+Definition at line 73 of file GrKFAnimData.h.\hypertarget{class_gr_k_f_anim_data_f74c053a04b17c4c8a939d74ff255e65}{
+\index{GrKFAnimData@{GrKFAnimData}!GetScaleKFCount@{GetScaleKFCount}}
+\index{GetScaleKFCount@{GetScaleKFCount}!GrKFAnimData@{GrKFAnimData}}
+\subsubsection[{GetScaleKFCount}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrKFAnimData::GetScaleKFCount ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_k_f_anim_data_f74c053a04b17c4c8a939d74ff255e65}
+
+
+
+
+Definition at line 65 of file GrKFAnimData.h.\hypertarget{class_gr_k_f_anim_data_b6567627550f063030476e6bd58fb72b}{
+\index{GrKFAnimData@{GrKFAnimData}!GetTargetName@{GetTargetName}}
+\index{GetTargetName@{GetTargetName}!GrKFAnimData@{GrKFAnimData}}
+\subsubsection[{GetTargetName}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf tstring}\& GrKFAnimData::GetTargetName () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_k_f_anim_data_b6567627550f063030476e6bd58fb72b}
+
+
+
+
+Definition at line 62 of file GrKFAnimData.h.\hypertarget{class_gr_k_f_anim_data_bf3fbd8ffab0b28a70a13cbe571fd267}{
+\index{GrKFAnimData@{GrKFAnimData}!GetTranslateKF@{GetTranslateKF}}
+\index{GetTranslateKF@{GetTranslateKF}!GrKFAnimData@{GrKFAnimData}}
+\subsubsection[{GetTranslateKF}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf GrKFAnimData::STranslateKeyFrame} \& GrKFAnimData::GetTranslateKF (unsigned int {\em idx})}}
+\label{class_gr_k_f_anim_data_bf3fbd8ffab0b28a70a13cbe571fd267}
+
+
+
+
+Definition at line 75 of file GrKFAnimData.cpp.\hypertarget{class_gr_k_f_anim_data_12bc47bbcae2a4b2f6c1e2752f5892fc}{
+\index{GrKFAnimData@{GrKFAnimData}!GetTranslateKFArray@{GetTranslateKFArray}}
+\index{GetTranslateKFArray@{GetTranslateKFArray}!GrKFAnimData@{GrKFAnimData}}
+\subsubsection[{GetTranslateKFArray}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf TranslateKeyArray}\& GrKFAnimData::GetTranslateKFArray () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_k_f_anim_data_12bc47bbcae2a4b2f6c1e2752f5892fc}
+
+
+
+
+Definition at line 74 of file GrKFAnimData.h.\hypertarget{class_gr_k_f_anim_data_5a804a1ef5236f33533f2c42e4d47589}{
+\index{GrKFAnimData@{GrKFAnimData}!GetTranslateKFCount@{GetTranslateKFCount}}
+\index{GetTranslateKFCount@{GetTranslateKFCount}!GrKFAnimData@{GrKFAnimData}}
+\subsubsection[{GetTranslateKFCount}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrKFAnimData::GetTranslateKFCount ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_k_f_anim_data_5a804a1ef5236f33533f2c42e4d47589}
+
+
+
+
+Definition at line 66 of file GrKFAnimData.h.\hypertarget{class_gr_k_f_anim_data_1cf48bc46744b33fc701998b77f71ead}{
+\index{GrKFAnimData@{GrKFAnimData}!Load@{Load}}
+\index{Load@{Load}!GrKFAnimData@{GrKFAnimData}}
+\subsubsection[{Load}]{\setlength{\rightskip}{0pt plus 5cm}void GrKFAnimData::Load ({\bf UReader} \& {\em reader})}}
+\label{class_gr_k_f_anim_data_1cf48bc46744b33fc701998b77f71ead}
+
+
+
+
+Definition at line 126 of file GrKFAnimData.cpp.\hypertarget{class_gr_k_f_anim_data_daa2dfc535b931dfcbeb52fcf0630d8c}{
+\index{GrKFAnimData@{GrKFAnimData}!Save@{Save}}
+\index{Save@{Save}!GrKFAnimData@{GrKFAnimData}}
+\subsubsection[{Save}]{\setlength{\rightskip}{0pt plus 5cm}void GrKFAnimData::Save ({\bf UWriter} \& {\em writer})}}
+\label{class_gr_k_f_anim_data_daa2dfc535b931dfcbeb52fcf0630d8c}
+
+
+
+
+Definition at line 83 of file GrKFAnimData.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_k_f_anim_data_8h}{GrKFAnimData.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_k_f_anim_data_8cpp}{GrKFAnimData.cpp}\end{CompactItemize}

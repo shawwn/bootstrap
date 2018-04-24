@@ -1,0 +1,279 @@
+\hypertarget{_f_s_disk_serv_8h}{
+\section{C:/Bootstrap/ProjectBX/Engine/FileSystem/FSDiskServ.h File Reference}
+\label{_f_s_disk_serv_8h}\index{C:/Bootstrap/ProjectBX/Engine/FileSystem/FSDiskServ.h@{C:/Bootstrap/ProjectBX/Engine/FileSystem/FSDiskServ.h}}
+}
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+struct \hyperlink{struct_s_f_s_file_read_buffer__t}{SFSFileReadBuffer\_\-t}
+\item 
+struct \hyperlink{struct_s_f_s_file_write_buffer__t}{SFSFileWriteBuffer\_\-t}
+\item 
+struct \hyperlink{struct_s_f_s_file_map__t}{SFSFileMap\_\-t}
+\end{CompactItemize}
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \hyperlink{_f_s_disk_serv_8h_2814b42b6973facb8a5c61d548a0f7df}{FS\_\-FILE\_\-FLAG\_\-CREATE\_\-ALWAYS}~0x0001
+\item 
+\#define \hyperlink{_f_s_disk_serv_8h_b66b8115f52b2492ba9bc3362a9e9da1}{FS\_\-FILE\_\-FLAG\_\-OPEN\_\-ALWAYS}~0x0002
+\item 
+\#define \hyperlink{_f_s_disk_serv_8h_60eb9079b948d946a7cd7eb3741741b3}{FS\_\-FILE\_\-FLAG\_\-READ}~0x0004
+\item 
+\#define \hyperlink{_f_s_disk_serv_8h_1ca62fb541490d8da3caa283ef137664}{FS\_\-FILE\_\-FLAG\_\-WRITE}~0x0008
+\item 
+\#define \hyperlink{_f_s_disk_serv_8h_c42ca6e82a1a313d7191ec0177a0596a}{FS\_\-FILE\_\-FLAG\_\-CONTIGUOUS}~0x0010
+\item 
+\#define \hyperlink{_f_s_disk_serv_8h_0f6bbf8731c9cf9859810948ea751be8}{FS\_\-FILE\_\-FLAG\_\-USE\_\-DMA}~0x0020
+\item 
+\#define \hyperlink{_f_s_disk_serv_8h_08eb85ecc5402f34f9ef86c27f178c72}{FS\_\-FILE\_\-WRITE\_\-REORDER}~0x0040
+\item 
+\#define \hyperlink{_f_s_disk_serv_8h_5b4710c708ad243f91bc75b60a322892}{FS\_\-FILE\_\-BEGIN}~0
+\item 
+\#define \hyperlink{_f_s_disk_serv_8h_75c46608ada8f762e8765bb5ca189aa8}{FS\_\-FILE\_\-CURRENT}~1
+\item 
+\#define \hyperlink{_f_s_disk_serv_8h_b2f0491d3f1f2e8028151cacb7de0278}{FS\_\-FILE\_\-END}~2
+\end{CompactItemize}
+\subsection*{Typedefs}
+\begin{CompactItemize}
+\item 
+typedef struct \hyperlink{struct_s_f_s_file_read_buffer__t}{SFSFileReadBuffer\_\-t} \hyperlink{_f_s_disk_serv_8h_c26c5736857c03ad091229ad0a0faa80}{SFSFileReadBuffer}
+\item 
+typedef struct \hyperlink{struct_s_f_s_file_write_buffer__t}{SFSFileWriteBuffer\_\-t} \hyperlink{_f_s_disk_serv_8h_bc15fed2b9242609aa8aaabdf46697f4}{SFSFileWriteBuffer}
+\item 
+typedef struct \hyperlink{struct_s_f_s_file_map__t}{SFSFileMap\_\-t} \hyperlink{_f_s_disk_serv_8h_c285a0a294598faae9d009f6a1594575}{SFSFileMap}
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+void \hyperlink{_f_s_disk_serv_8h_639bb9787444e8c425eec0256793d968}{FS\_\-ScanDrives} ()
+\item 
+void $\ast$ \hyperlink{_f_s_disk_serv_8h_64815f6582883caa8b5e134620e36d47}{FS\_\-OpenFile} (const \hyperlink{filesystem__afx_8h_08b81c947811e6def5d8994fd4d76481}{FSchar} $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, unsigned int \hyperlink{_u_t_message_8h_0a3c0b351ab09281b662a9ff4f900a53}{flags})
+\item 
+void \hyperlink{_f_s_disk_serv_8h_5a68c779c26cd02b2f7b17851f363683}{FS\_\-CloseFile} (void $\ast$handle)
+\item 
+\hyperlink{filesystem__afx_8h_2dfedf2033eee861d23c808f79ed5837}{FSsize} \hyperlink{_f_s_disk_serv_8h_06899e7652bf3e71c758ff036404d635}{FS\_\-GetFileSize} (void $\ast$handle)
+\item 
+void \hyperlink{_f_s_disk_serv_8h_9e21afbbba101c7dc7be9a43fd5291f6}{FS\_\-ReadFile} (\hyperlink{struct_s_f_s_file_read_buffer__t}{SFSFileReadBuffer} $\ast$\hyperlink{glext__bak_8h_92034251bfd455d524a9b5610cddba00}{dst}, void $\ast$file, \hyperlink{filesystem__afx_8h_2dfedf2033eee861d23c808f79ed5837}{FSsize} \hyperlink{glext__bak_8h_a782f3aea23e3c30029c811241dc2c82}{offset}, unsigned int \hyperlink{glext__bak_8h_3d1e3edfcf61ca2d831883e1afbad89e}{size})
+\item 
+void \hyperlink{_f_s_disk_serv_8h_c7abe5c9b19a9611de00573a09fd3a61}{FS\_\-WriteFile} (void $\ast$file, \hyperlink{filesystem__afx_8h_2dfedf2033eee861d23c808f79ed5837}{FSsize} \hyperlink{glext__bak_8h_a782f3aea23e3c30029c811241dc2c82}{offset}, \hyperlink{struct_s_f_s_file_write_buffer__t}{SFSFileWriteBuffer} $\ast$\hyperlink{glext__bak_8h_72e0fdf0f845ded60b1fada9e9195cd7}{src}, unsigned int \hyperlink{glext__bak_8h_3d1e3edfcf61ca2d831883e1afbad89e}{size})
+\item 
+void \hyperlink{_f_s_disk_serv_8h_b8abbd85f1942b0f3dca1793ea4e8978}{FS\_\-Wait} (volatile int $\ast$gate)
+\item 
+bool \hyperlink{_f_s_disk_serv_8h_013362d3615068eee7220194a88a4d73}{FS\_\-IsComplete} (volatile int $\ast$gate)
+\item 
+bool \hyperlink{_f_s_disk_serv_8h_34306284dd0c7f5c8f91de947b3e43f1}{FS\_\-IsReadComplete} (\hyperlink{struct_s_f_s_file_read_buffer__t}{SFSFileReadBuffer} $\ast$readBuffer)
+\item 
+bool \hyperlink{_f_s_disk_serv_8h_da15545e379beea3118877a61f7c4df6}{FS\_\-IsWriteComplete} (\hyperlink{struct_s_f_s_file_write_buffer__t}{SFSFileWriteBuffer} $\ast$writeBuffer)
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_f_s_disk_serv_8h_5b4710c708ad243f91bc75b60a322892}{
+\index{FSDiskServ.h@{FSDiskServ.h}!FS\_\-FILE\_\-BEGIN@{FS\_\-FILE\_\-BEGIN}}
+\index{FS\_\-FILE\_\-BEGIN@{FS\_\-FILE\_\-BEGIN}!FSDiskServ.h@{FSDiskServ.h}}
+\subsubsection[{FS\_\-FILE\_\-BEGIN}]{\setlength{\rightskip}{0pt plus 5cm}\#define FS\_\-FILE\_\-BEGIN~0}}
+\label{_f_s_disk_serv_8h_5b4710c708ad243f91bc75b60a322892}
+
+
+
+
+Definition at line 55 of file FSDiskServ.h.\hypertarget{_f_s_disk_serv_8h_75c46608ada8f762e8765bb5ca189aa8}{
+\index{FSDiskServ.h@{FSDiskServ.h}!FS\_\-FILE\_\-CURRENT@{FS\_\-FILE\_\-CURRENT}}
+\index{FS\_\-FILE\_\-CURRENT@{FS\_\-FILE\_\-CURRENT}!FSDiskServ.h@{FSDiskServ.h}}
+\subsubsection[{FS\_\-FILE\_\-CURRENT}]{\setlength{\rightskip}{0pt plus 5cm}\#define FS\_\-FILE\_\-CURRENT~1}}
+\label{_f_s_disk_serv_8h_75c46608ada8f762e8765bb5ca189aa8}
+
+
+
+
+Definition at line 58 of file FSDiskServ.h.\hypertarget{_f_s_disk_serv_8h_b2f0491d3f1f2e8028151cacb7de0278}{
+\index{FSDiskServ.h@{FSDiskServ.h}!FS\_\-FILE\_\-END@{FS\_\-FILE\_\-END}}
+\index{FS\_\-FILE\_\-END@{FS\_\-FILE\_\-END}!FSDiskServ.h@{FSDiskServ.h}}
+\subsubsection[{FS\_\-FILE\_\-END}]{\setlength{\rightskip}{0pt plus 5cm}\#define FS\_\-FILE\_\-END~2}}
+\label{_f_s_disk_serv_8h_b2f0491d3f1f2e8028151cacb7de0278}
+
+
+
+
+Definition at line 61 of file FSDiskServ.h.\hypertarget{_f_s_disk_serv_8h_c42ca6e82a1a313d7191ec0177a0596a}{
+\index{FSDiskServ.h@{FSDiskServ.h}!FS\_\-FILE\_\-FLAG\_\-CONTIGUOUS@{FS\_\-FILE\_\-FLAG\_\-CONTIGUOUS}}
+\index{FS\_\-FILE\_\-FLAG\_\-CONTIGUOUS@{FS\_\-FILE\_\-FLAG\_\-CONTIGUOUS}!FSDiskServ.h@{FSDiskServ.h}}
+\subsubsection[{FS\_\-FILE\_\-FLAG\_\-CONTIGUOUS}]{\setlength{\rightskip}{0pt plus 5cm}\#define FS\_\-FILE\_\-FLAG\_\-CONTIGUOUS~0x0010}}
+\label{_f_s_disk_serv_8h_c42ca6e82a1a313d7191ec0177a0596a}
+
+
+
+
+Definition at line 37 of file FSDiskServ.h.\hypertarget{_f_s_disk_serv_8h_2814b42b6973facb8a5c61d548a0f7df}{
+\index{FSDiskServ.h@{FSDiskServ.h}!FS\_\-FILE\_\-FLAG\_\-CREATE\_\-ALWAYS@{FS\_\-FILE\_\-FLAG\_\-CREATE\_\-ALWAYS}}
+\index{FS\_\-FILE\_\-FLAG\_\-CREATE\_\-ALWAYS@{FS\_\-FILE\_\-FLAG\_\-CREATE\_\-ALWAYS}!FSDiskServ.h@{FSDiskServ.h}}
+\subsubsection[{FS\_\-FILE\_\-FLAG\_\-CREATE\_\-ALWAYS}]{\setlength{\rightskip}{0pt plus 5cm}\#define FS\_\-FILE\_\-FLAG\_\-CREATE\_\-ALWAYS~0x0001}}
+\label{_f_s_disk_serv_8h_2814b42b6973facb8a5c61d548a0f7df}
+
+
+
+
+Definition at line 19 of file FSDiskServ.h.\hypertarget{_f_s_disk_serv_8h_b66b8115f52b2492ba9bc3362a9e9da1}{
+\index{FSDiskServ.h@{FSDiskServ.h}!FS\_\-FILE\_\-FLAG\_\-OPEN\_\-ALWAYS@{FS\_\-FILE\_\-FLAG\_\-OPEN\_\-ALWAYS}}
+\index{FS\_\-FILE\_\-FLAG\_\-OPEN\_\-ALWAYS@{FS\_\-FILE\_\-FLAG\_\-OPEN\_\-ALWAYS}!FSDiskServ.h@{FSDiskServ.h}}
+\subsubsection[{FS\_\-FILE\_\-FLAG\_\-OPEN\_\-ALWAYS}]{\setlength{\rightskip}{0pt plus 5cm}\#define FS\_\-FILE\_\-FLAG\_\-OPEN\_\-ALWAYS~0x0002}}
+\label{_f_s_disk_serv_8h_b66b8115f52b2492ba9bc3362a9e9da1}
+
+
+
+
+Definition at line 23 of file FSDiskServ.h.\hypertarget{_f_s_disk_serv_8h_60eb9079b948d946a7cd7eb3741741b3}{
+\index{FSDiskServ.h@{FSDiskServ.h}!FS\_\-FILE\_\-FLAG\_\-READ@{FS\_\-FILE\_\-FLAG\_\-READ}}
+\index{FS\_\-FILE\_\-FLAG\_\-READ@{FS\_\-FILE\_\-FLAG\_\-READ}!FSDiskServ.h@{FSDiskServ.h}}
+\subsubsection[{FS\_\-FILE\_\-FLAG\_\-READ}]{\setlength{\rightskip}{0pt plus 5cm}\#define FS\_\-FILE\_\-FLAG\_\-READ~0x0004}}
+\label{_f_s_disk_serv_8h_60eb9079b948d946a7cd7eb3741741b3}
+
+
+
+
+Definition at line 27 of file FSDiskServ.h.\hypertarget{_f_s_disk_serv_8h_0f6bbf8731c9cf9859810948ea751be8}{
+\index{FSDiskServ.h@{FSDiskServ.h}!FS\_\-FILE\_\-FLAG\_\-USE\_\-DMA@{FS\_\-FILE\_\-FLAG\_\-USE\_\-DMA}}
+\index{FS\_\-FILE\_\-FLAG\_\-USE\_\-DMA@{FS\_\-FILE\_\-FLAG\_\-USE\_\-DMA}!FSDiskServ.h@{FSDiskServ.h}}
+\subsubsection[{FS\_\-FILE\_\-FLAG\_\-USE\_\-DMA}]{\setlength{\rightskip}{0pt plus 5cm}\#define FS\_\-FILE\_\-FLAG\_\-USE\_\-DMA~0x0020}}
+\label{_f_s_disk_serv_8h_0f6bbf8731c9cf9859810948ea751be8}
+
+
+
+
+Definition at line 42 of file FSDiskServ.h.\hypertarget{_f_s_disk_serv_8h_1ca62fb541490d8da3caa283ef137664}{
+\index{FSDiskServ.h@{FSDiskServ.h}!FS\_\-FILE\_\-FLAG\_\-WRITE@{FS\_\-FILE\_\-FLAG\_\-WRITE}}
+\index{FS\_\-FILE\_\-FLAG\_\-WRITE@{FS\_\-FILE\_\-FLAG\_\-WRITE}!FSDiskServ.h@{FSDiskServ.h}}
+\subsubsection[{FS\_\-FILE\_\-FLAG\_\-WRITE}]{\setlength{\rightskip}{0pt plus 5cm}\#define FS\_\-FILE\_\-FLAG\_\-WRITE~0x0008}}
+\label{_f_s_disk_serv_8h_1ca62fb541490d8da3caa283ef137664}
+
+
+
+
+Definition at line 31 of file FSDiskServ.h.\hypertarget{_f_s_disk_serv_8h_08eb85ecc5402f34f9ef86c27f178c72}{
+\index{FSDiskServ.h@{FSDiskServ.h}!FS\_\-FILE\_\-WRITE\_\-REORDER@{FS\_\-FILE\_\-WRITE\_\-REORDER}}
+\index{FS\_\-FILE\_\-WRITE\_\-REORDER@{FS\_\-FILE\_\-WRITE\_\-REORDER}!FSDiskServ.h@{FSDiskServ.h}}
+\subsubsection[{FS\_\-FILE\_\-WRITE\_\-REORDER}]{\setlength{\rightskip}{0pt plus 5cm}\#define FS\_\-FILE\_\-WRITE\_\-REORDER~0x0040}}
+\label{_f_s_disk_serv_8h_08eb85ecc5402f34f9ef86c27f178c72}
+
+
+
+
+Definition at line 48 of file FSDiskServ.h.
+
+\subsection{Typedef Documentation}
+\hypertarget{_f_s_disk_serv_8h_c285a0a294598faae9d009f6a1594575}{
+\index{FSDiskServ.h@{FSDiskServ.h}!SFSFileMap@{SFSFileMap}}
+\index{SFSFileMap@{SFSFileMap}!FSDiskServ.h@{FSDiskServ.h}}
+\subsubsection[{SFSFileMap}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf SFSFileMap\_\-t}  {\bf SFSFileMap}}}
+\label{_f_s_disk_serv_8h_c285a0a294598faae9d009f6a1594575}
+
+
+\hypertarget{_f_s_disk_serv_8h_c26c5736857c03ad091229ad0a0faa80}{
+\index{FSDiskServ.h@{FSDiskServ.h}!SFSFileReadBuffer@{SFSFileReadBuffer}}
+\index{SFSFileReadBuffer@{SFSFileReadBuffer}!FSDiskServ.h@{FSDiskServ.h}}
+\subsubsection[{SFSFileReadBuffer}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf SFSFileReadBuffer\_\-t}  {\bf SFSFileReadBuffer}}}
+\label{_f_s_disk_serv_8h_c26c5736857c03ad091229ad0a0faa80}
+
+
+\hypertarget{_f_s_disk_serv_8h_bc15fed2b9242609aa8aaabdf46697f4}{
+\index{FSDiskServ.h@{FSDiskServ.h}!SFSFileWriteBuffer@{SFSFileWriteBuffer}}
+\index{SFSFileWriteBuffer@{SFSFileWriteBuffer}!FSDiskServ.h@{FSDiskServ.h}}
+\subsubsection[{SFSFileWriteBuffer}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf SFSFileWriteBuffer\_\-t}  {\bf SFSFileWriteBuffer}}}
+\label{_f_s_disk_serv_8h_bc15fed2b9242609aa8aaabdf46697f4}
+
+
+
+
+\subsection{Function Documentation}
+\hypertarget{_f_s_disk_serv_8h_5a68c779c26cd02b2f7b17851f363683}{
+\index{FSDiskServ.h@{FSDiskServ.h}!FS\_\-CloseFile@{FS\_\-CloseFile}}
+\index{FS\_\-CloseFile@{FS\_\-CloseFile}!FSDiskServ.h@{FSDiskServ.h}}
+\subsubsection[{FS\_\-CloseFile}]{\setlength{\rightskip}{0pt plus 5cm}void FS\_\-CloseFile (void $\ast$ {\em handle})}}
+\label{_f_s_disk_serv_8h_5a68c779c26cd02b2f7b17851f363683}
+
+
+
+
+Definition at line 328 of file FSDiskServ\_\-W32.cpp.\hypertarget{_f_s_disk_serv_8h_06899e7652bf3e71c758ff036404d635}{
+\index{FSDiskServ.h@{FSDiskServ.h}!FS\_\-GetFileSize@{FS\_\-GetFileSize}}
+\index{FS\_\-GetFileSize@{FS\_\-GetFileSize}!FSDiskServ.h@{FSDiskServ.h}}
+\subsubsection[{FS\_\-GetFileSize}]{\setlength{\rightskip}{0pt plus 5cm}{\bf FSsize} FS\_\-GetFileSize (void $\ast$ {\em handle})}}
+\label{_f_s_disk_serv_8h_06899e7652bf3e71c758ff036404d635}
+
+
+
+
+Definition at line 357 of file FSDiskServ\_\-W32.cpp.\hypertarget{_f_s_disk_serv_8h_013362d3615068eee7220194a88a4d73}{
+\index{FSDiskServ.h@{FSDiskServ.h}!FS\_\-IsComplete@{FS\_\-IsComplete}}
+\index{FS\_\-IsComplete@{FS\_\-IsComplete}!FSDiskServ.h@{FSDiskServ.h}}
+\subsubsection[{FS\_\-IsComplete}]{\setlength{\rightskip}{0pt plus 5cm}bool FS\_\-IsComplete (volatile int $\ast$ {\em gate})}}
+\label{_f_s_disk_serv_8h_013362d3615068eee7220194a88a4d73}
+
+
+
+
+Definition at line 467 of file FSDiskServ\_\-W32.cpp.\hypertarget{_f_s_disk_serv_8h_34306284dd0c7f5c8f91de947b3e43f1}{
+\index{FSDiskServ.h@{FSDiskServ.h}!FS\_\-IsReadComplete@{FS\_\-IsReadComplete}}
+\index{FS\_\-IsReadComplete@{FS\_\-IsReadComplete}!FSDiskServ.h@{FSDiskServ.h}}
+\subsubsection[{FS\_\-IsReadComplete}]{\setlength{\rightskip}{0pt plus 5cm}bool FS\_\-IsReadComplete ({\bf SFSFileReadBuffer} $\ast$ {\em readBuffer})}}
+\label{_f_s_disk_serv_8h_34306284dd0c7f5c8f91de947b3e43f1}
+
+
+
+
+Definition at line 474 of file FSDiskServ\_\-W32.cpp.\hypertarget{_f_s_disk_serv_8h_da15545e379beea3118877a61f7c4df6}{
+\index{FSDiskServ.h@{FSDiskServ.h}!FS\_\-IsWriteComplete@{FS\_\-IsWriteComplete}}
+\index{FS\_\-IsWriteComplete@{FS\_\-IsWriteComplete}!FSDiskServ.h@{FSDiskServ.h}}
+\subsubsection[{FS\_\-IsWriteComplete}]{\setlength{\rightskip}{0pt plus 5cm}bool FS\_\-IsWriteComplete ({\bf SFSFileWriteBuffer} $\ast$ {\em writeBuffer})}}
+\label{_f_s_disk_serv_8h_da15545e379beea3118877a61f7c4df6}
+
+
+
+
+Definition at line 480 of file FSDiskServ\_\-W32.cpp.\hypertarget{_f_s_disk_serv_8h_64815f6582883caa8b5e134620e36d47}{
+\index{FSDiskServ.h@{FSDiskServ.h}!FS\_\-OpenFile@{FS\_\-OpenFile}}
+\index{FS\_\-OpenFile@{FS\_\-OpenFile}!FSDiskServ.h@{FSDiskServ.h}}
+\subsubsection[{FS\_\-OpenFile}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ FS\_\-OpenFile (const {\bf FSchar} $\ast$ {\em name}, \/  unsigned int {\em flags})}}
+\label{_f_s_disk_serv_8h_64815f6582883caa8b5e134620e36d47}
+
+
+
+
+Definition at line 167 of file FSDiskServ\_\-W32.cpp.\hypertarget{_f_s_disk_serv_8h_9e21afbbba101c7dc7be9a43fd5291f6}{
+\index{FSDiskServ.h@{FSDiskServ.h}!FS\_\-ReadFile@{FS\_\-ReadFile}}
+\index{FS\_\-ReadFile@{FS\_\-ReadFile}!FSDiskServ.h@{FSDiskServ.h}}
+\subsubsection[{FS\_\-ReadFile}]{\setlength{\rightskip}{0pt plus 5cm}void FS\_\-ReadFile ({\bf SFSFileReadBuffer} $\ast$ {\em dst}, \/  void $\ast$ {\em file}, \/  {\bf FSsize} {\em offset}, \/  unsigned int {\em size})}}
+\label{_f_s_disk_serv_8h_9e21afbbba101c7dc7be9a43fd5291f6}
+
+
+
+
+Definition at line 375 of file FSDiskServ\_\-W32.cpp.\hypertarget{_f_s_disk_serv_8h_639bb9787444e8c425eec0256793d968}{
+\index{FSDiskServ.h@{FSDiskServ.h}!FS\_\-ScanDrives@{FS\_\-ScanDrives}}
+\index{FS\_\-ScanDrives@{FS\_\-ScanDrives}!FSDiskServ.h@{FSDiskServ.h}}
+\subsubsection[{FS\_\-ScanDrives}]{\setlength{\rightskip}{0pt plus 5cm}void FS\_\-ScanDrives ()}}
+\label{_f_s_disk_serv_8h_639bb9787444e8c425eec0256793d968}
+
+
+
+
+Definition at line 154 of file FSDiskServ\_\-W32.cpp.\hypertarget{_f_s_disk_serv_8h_b8abbd85f1942b0f3dca1793ea4e8978}{
+\index{FSDiskServ.h@{FSDiskServ.h}!FS\_\-Wait@{FS\_\-Wait}}
+\index{FS\_\-Wait@{FS\_\-Wait}!FSDiskServ.h@{FSDiskServ.h}}
+\subsubsection[{FS\_\-Wait}]{\setlength{\rightskip}{0pt plus 5cm}void FS\_\-Wait (volatile int $\ast$ {\em gate})}}
+\label{_f_s_disk_serv_8h_b8abbd85f1942b0f3dca1793ea4e8978}
+
+
+
+
+Definition at line 459 of file FSDiskServ\_\-W32.cpp.\hypertarget{_f_s_disk_serv_8h_c7abe5c9b19a9611de00573a09fd3a61}{
+\index{FSDiskServ.h@{FSDiskServ.h}!FS\_\-WriteFile@{FS\_\-WriteFile}}
+\index{FS\_\-WriteFile@{FS\_\-WriteFile}!FSDiskServ.h@{FSDiskServ.h}}
+\subsubsection[{FS\_\-WriteFile}]{\setlength{\rightskip}{0pt plus 5cm}void FS\_\-WriteFile (void $\ast$ {\em file}, \/  {\bf FSsize} {\em offset}, \/  {\bf SFSFileWriteBuffer} $\ast$ {\em src}, \/  unsigned int {\em size})}}
+\label{_f_s_disk_serv_8h_c7abe5c9b19a9611de00573a09fd3a61}
+
+
+
+
+Definition at line 417 of file FSDiskServ\_\-W32.cpp.

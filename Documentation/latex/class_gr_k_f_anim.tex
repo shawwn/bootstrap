@@ -1,0 +1,122 @@
+\hypertarget{class_gr_k_f_anim}{
+\section{GrKFAnim Class Reference}
+\label{class_gr_k_f_anim}\index{GrKFAnim@{GrKFAnim}}
+}
+{\tt \#include $<$GrKFAnim.h$>$}
+
+Inheritance diagram for GrKFAnim::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_gr_k_f_anim}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_k_f_anim_cfb1ff66e711a5047085b9faf152f681}{GrKFAnim} (const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, const \hyperlink{class_u_fast_array}{UFastArray}$<$ \hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_k_f_anim_data}{GrKFAnimData} $>$ $>$ \&kfData, float blendWeight=1.0f, float speed=1.0f)
+\item 
+\hyperlink{class_gr_k_f_anim_bcd2ef342c645de6251bcc3644290e1d}{GrKFAnim} (\hyperlink{class_u_reader}{UReader} \&reader)
+\item 
+\hyperlink{class_gr_k_f_anim_1ed2fbe268f028e23976632df59e83e2}{$\sim$GrKFAnim} ()
+\item 
+void \hyperlink{class_gr_k_f_anim_6eee5e58add387a6d0356805da36af38}{SetClamp} (bool \hyperlink{glext_8h_3878d3005eeb2d2ef414abc752ba3c9b}{clamp})
+\item 
+bool \hyperlink{class_gr_k_f_anim_31b6c71e8e7382814e55f88a8d8f93a9}{GetClamp} () const 
+\item 
+\hyperlink{class_gr_anim}{GrAnim} $\ast$ \hyperlink{class_gr_k_f_anim_5392ada1053eff8dcb27fa727e107f79}{Clone} () const 
+\item 
+void \hyperlink{class_gr_k_f_anim_698bd445e35a2f55b87accdbf2f63f96}{Save} (\hyperlink{class_u_writer}{UWriter} \&writer)
+\item 
+void \hyperlink{class_gr_k_f_anim_16030b5b8f3c4711713f791ad3e937df}{Load} (\hyperlink{class_u_reader}{UReader} \&reader)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 27 of file GrKFAnim.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_k_f_anim_cfb1ff66e711a5047085b9faf152f681}{
+\index{GrKFAnim@{GrKFAnim}!GrKFAnim@{GrKFAnim}}
+\index{GrKFAnim@{GrKFAnim}!GrKFAnim@{GrKFAnim}}
+\subsubsection[{GrKFAnim}]{\setlength{\rightskip}{0pt plus 5cm}GrKFAnim::GrKFAnim (const {\bf tstring} \& {\em name}, \/  const {\bf UFastArray}$<$ {\bf URef}$<$ {\bf GrKFAnimData} $>$ $>$ \& {\em kfData}, \/  float {\em blendWeight} = {\tt 1.0f}, \/  float {\em speed} = {\tt 1.0f})}}
+\label{class_gr_k_f_anim_cfb1ff66e711a5047085b9faf152f681}
+
+
+
+
+Definition at line 28 of file GrKFAnim.cpp.\hypertarget{class_gr_k_f_anim_bcd2ef342c645de6251bcc3644290e1d}{
+\index{GrKFAnim@{GrKFAnim}!GrKFAnim@{GrKFAnim}}
+\index{GrKFAnim@{GrKFAnim}!GrKFAnim@{GrKFAnim}}
+\subsubsection[{GrKFAnim}]{\setlength{\rightskip}{0pt plus 5cm}GrKFAnim::GrKFAnim ({\bf UReader} \& {\em reader})}}
+\label{class_gr_k_f_anim_bcd2ef342c645de6251bcc3644290e1d}
+
+
+
+
+Definition at line 44 of file GrKFAnim.cpp.\hypertarget{class_gr_k_f_anim_1ed2fbe268f028e23976632df59e83e2}{
+\index{GrKFAnim@{GrKFAnim}!$\sim$GrKFAnim@{$\sim$GrKFAnim}}
+\index{$\sim$GrKFAnim@{$\sim$GrKFAnim}!GrKFAnim@{GrKFAnim}}
+\subsubsection[{$\sim$GrKFAnim}]{\setlength{\rightskip}{0pt plus 5cm}GrKFAnim::$\sim$GrKFAnim ()}}
+\label{class_gr_k_f_anim_1ed2fbe268f028e23976632df59e83e2}
+
+
+
+
+Definition at line 71 of file GrKFAnim.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_k_f_anim_5392ada1053eff8dcb27fa727e107f79}{
+\index{GrKFAnim@{GrKFAnim}!Clone@{Clone}}
+\index{Clone@{Clone}!GrKFAnim@{GrKFAnim}}
+\subsubsection[{Clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrAnim} $\ast$ GrKFAnim::Clone () const\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{class_gr_k_f_anim_5392ada1053eff8dcb27fa727e107f79}
+
+
+
+
+Reimplemented from \hyperlink{class_gr_anim_2964f4d1c2a3b51ff301b03590d26bac}{GrAnim}.
+
+Definition at line 83 of file GrKFAnim.cpp.\hypertarget{class_gr_k_f_anim_31b6c71e8e7382814e55f88a8d8f93a9}{
+\index{GrKFAnim@{GrKFAnim}!GetClamp@{GetClamp}}
+\index{GetClamp@{GetClamp}!GrKFAnim@{GrKFAnim}}
+\subsubsection[{GetClamp}]{\setlength{\rightskip}{0pt plus 5cm}bool GrKFAnim::GetClamp () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_k_f_anim_31b6c71e8e7382814e55f88a8d8f93a9}
+
+
+
+
+Definition at line 35 of file GrKFAnim.h.\hypertarget{class_gr_k_f_anim_16030b5b8f3c4711713f791ad3e937df}{
+\index{GrKFAnim@{GrKFAnim}!Load@{Load}}
+\index{Load@{Load}!GrKFAnim@{GrKFAnim}}
+\subsubsection[{Load}]{\setlength{\rightskip}{0pt plus 5cm}void GrKFAnim::Load ({\bf UReader} \& {\em reader})}}
+\label{class_gr_k_f_anim_16030b5b8f3c4711713f791ad3e937df}
+
+
+
+
+Definition at line 114 of file GrKFAnim.cpp.\hypertarget{class_gr_k_f_anim_698bd445e35a2f55b87accdbf2f63f96}{
+\index{GrKFAnim@{GrKFAnim}!Save@{Save}}
+\index{Save@{Save}!GrKFAnim@{GrKFAnim}}
+\subsubsection[{Save}]{\setlength{\rightskip}{0pt plus 5cm}void GrKFAnim::Save ({\bf UWriter} \& {\em writer})}}
+\label{class_gr_k_f_anim_698bd445e35a2f55b87accdbf2f63f96}
+
+
+
+
+Definition at line 92 of file GrKFAnim.cpp.\hypertarget{class_gr_k_f_anim_6eee5e58add387a6d0356805da36af38}{
+\index{GrKFAnim@{GrKFAnim}!SetClamp@{SetClamp}}
+\index{SetClamp@{SetClamp}!GrKFAnim@{GrKFAnim}}
+\subsubsection[{SetClamp}]{\setlength{\rightskip}{0pt plus 5cm}void GrKFAnim::SetClamp (bool {\em clamp})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_k_f_anim_6eee5e58add387a6d0356805da36af38}
+
+
+
+
+Definition at line 34 of file GrKFAnim.h.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_k_f_anim_8h}{GrKFAnim.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_k_f_anim_8cpp}{GrKFAnim.cpp}\end{CompactItemize}

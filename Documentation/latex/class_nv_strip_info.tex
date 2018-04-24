@@ -1,0 +1,197 @@
+\hypertarget{class_nv_strip_info}{
+\section{NvStripInfo Class Reference}
+\label{class_nv_strip_info}\index{NvStripInfo@{NvStripInfo}}
+}
+{\tt \#include $<$NvTriStripObjects.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_nv_strip_info_bff0ec4c94a3d7a54d6c2f6a9752f979}{NvStripInfo} (const \hyperlink{class_nv_strip_start_info}{NvStripStartInfo} \&startInfo, int stripId, int experimentId=-1)
+\item 
+bool \hyperlink{class_nv_strip_info_f6c1f7debc45a19d3025231bc8ea7dd8}{IsExperiment} () const 
+\item 
+bool \hyperlink{class_nv_strip_info_702a14b14312b436f64d481623e67615}{IsInStrip} (const \hyperlink{class_nv_face_info}{NvFaceInfo} $\ast$faceInfo) const 
+\item 
+bool \hyperlink{class_nv_strip_info_2ad96d160c282ac7921c33c0ce1c12b0}{SharesEdge} (const \hyperlink{class_nv_face_info}{NvFaceInfo} $\ast$faceInfo, \hyperlink{_nv_tri_strip_objects_8h_58592f6a13118931e843d05574249663}{NvEdgeInfoVec} \&edgeInfos)
+\item 
+void \hyperlink{class_nv_strip_info_3944545c70cac884f64248b8f100ec0a}{Combine} (const \hyperlink{_nv_tri_strip_objects_8h_93d0a2f26991e801145908bc4d3d9156}{NvFaceInfoVec} \&forward, const \hyperlink{_nv_tri_strip_objects_8h_93d0a2f26991e801145908bc4d3d9156}{NvFaceInfoVec} \&backward)
+\item 
+bool \hyperlink{class_nv_strip_info_3c611dfae22e219ed0eedcb95fd33d1c}{Unique} (\hyperlink{_nv_tri_strip_objects_8h_93d0a2f26991e801145908bc4d3d9156}{NvFaceInfoVec} \&faceVec, \hyperlink{class_nv_face_info}{NvFaceInfo} $\ast$\hyperlink{glext_8h_676ca580c460c0154eb58200433d2a9e}{face})
+\item 
+bool \hyperlink{class_nv_strip_info_39fda0ba3c1858cf70f9925e7f6db775}{IsMarked} (\hyperlink{class_nv_face_info}{NvFaceInfo} $\ast$faceInfo)
+\item 
+void \hyperlink{class_nv_strip_info_39fa1a91968f900b5fa1280f018ac15b}{MarkTriangle} (\hyperlink{class_nv_face_info}{NvFaceInfo} $\ast$faceInfo)
+\item 
+void \hyperlink{class_nv_strip_info_af6dc94b04e07e3d404a23e829cfadeb}{Build} (\hyperlink{_nv_tri_strip_objects_8h_58592f6a13118931e843d05574249663}{NvEdgeInfoVec} \&edgeInfos, \hyperlink{_nv_tri_strip_objects_8h_93d0a2f26991e801145908bc4d3d9156}{NvFaceInfoVec} \&faceInfos)
+\end{CompactItemize}
+\subsection*{Public Attributes}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_nv_strip_start_info}{NvStripStartInfo} \hyperlink{class_nv_strip_info_010bfd6d2e52445176a7cbfb79a53d05}{m\_\-startInfo}
+\item 
+\hyperlink{_nv_tri_strip_objects_8h_93d0a2f26991e801145908bc4d3d9156}{NvFaceInfoVec} \hyperlink{class_nv_strip_info_5920a296e1f7f1146893ee6672d76aee}{m\_\-faces}
+\item 
+int \hyperlink{class_nv_strip_info_d22113688db1e746fb0956473ceca96f}{m\_\-stripId}
+\item 
+int \hyperlink{class_nv_strip_info_c206788f90d9e14394972cd7ea989c1d}{m\_\-experimentId}
+\item 
+bool \hyperlink{class_nv_strip_info_670cb128ad83879668b1a8e90ed2462c}{visited}
+\item 
+int \hyperlink{class_nv_strip_info_91a71056da89624852630282c30b3b10}{m\_\-numDegenerates}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 119 of file NvTriStripObjects.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_nv_strip_info_bff0ec4c94a3d7a54d6c2f6a9752f979}{
+\index{NvStripInfo@{NvStripInfo}!NvStripInfo@{NvStripInfo}}
+\index{NvStripInfo@{NvStripInfo}!NvStripInfo@{NvStripInfo}}
+\subsubsection[{NvStripInfo}]{\setlength{\rightskip}{0pt plus 5cm}NvStripInfo::NvStripInfo (const {\bf NvStripStartInfo} \& {\em startInfo}, \/  int {\em stripId}, \/  int {\em experimentId} = {\tt -1})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_nv_strip_info_bff0ec4c94a3d7a54d6c2f6a9752f979}
+
+
+
+
+Definition at line 123 of file NvTriStripObjects.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_nv_strip_info_af6dc94b04e07e3d404a23e829cfadeb}{
+\index{NvStripInfo@{NvStripInfo}!Build@{Build}}
+\index{Build@{Build}!NvStripInfo@{NvStripInfo}}
+\subsubsection[{Build}]{\setlength{\rightskip}{0pt plus 5cm}void NvStripInfo::Build ({\bf NvEdgeInfoVec} \& {\em edgeInfos}, \/  {\bf NvFaceInfoVec} \& {\em faceInfos})}}
+\label{class_nv_strip_info_af6dc94b04e07e3d404a23e829cfadeb}
+
+
+
+
+Definition at line 562 of file NvTriStripObjects.cpp.\hypertarget{class_nv_strip_info_3944545c70cac884f64248b8f100ec0a}{
+\index{NvStripInfo@{NvStripInfo}!Combine@{Combine}}
+\index{Combine@{Combine}!NvStripInfo@{NvStripInfo}}
+\subsubsection[{Combine}]{\setlength{\rightskip}{0pt plus 5cm}void NvStripInfo::Combine (const {\bf NvFaceInfoVec} \& {\em forward}, \/  const {\bf NvFaceInfoVec} \& {\em backward})}}
+\label{class_nv_strip_info_3944545c70cac884f64248b8f100ec0a}
+
+
+
+
+Definition at line 718 of file NvTriStripObjects.cpp.\hypertarget{class_nv_strip_info_f6c1f7debc45a19d3025231bc8ea7dd8}{
+\index{NvStripInfo@{NvStripInfo}!IsExperiment@{IsExperiment}}
+\index{IsExperiment@{IsExperiment}!NvStripInfo@{NvStripInfo}}
+\subsubsection[{IsExperiment}]{\setlength{\rightskip}{0pt plus 5cm}bool NvStripInfo::IsExperiment () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_nv_strip_info_f6c1f7debc45a19d3025231bc8ea7dd8}
+
+
+
+
+Definition at line 133 of file NvTriStripObjects.h.\hypertarget{class_nv_strip_info_702a14b14312b436f64d481623e67615}{
+\index{NvStripInfo@{NvStripInfo}!IsInStrip@{IsInStrip}}
+\index{IsInStrip@{IsInStrip}!NvStripInfo@{NvStripInfo}}
+\subsubsection[{IsInStrip}]{\setlength{\rightskip}{0pt plus 5cm}bool NvStripInfo::IsInStrip (const {\bf NvFaceInfo} $\ast$ {\em faceInfo}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_nv_strip_info_702a14b14312b436f64d481623e67615}
+
+
+
+
+Definition at line 135 of file NvTriStripObjects.h.\hypertarget{class_nv_strip_info_39fda0ba3c1858cf70f9925e7f6db775}{
+\index{NvStripInfo@{NvStripInfo}!IsMarked@{IsMarked}}
+\index{IsMarked@{IsMarked}!NvStripInfo@{NvStripInfo}}
+\subsubsection[{IsMarked}]{\setlength{\rightskip}{0pt plus 5cm}bool NvStripInfo::IsMarked ({\bf NvFaceInfo} $\ast$ {\em faceInfo})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_nv_strip_info_39fda0ba3c1858cf70f9925e7f6db775}
+
+
+
+
+Definition at line 492 of file NvTriStripObjects.cpp.\hypertarget{class_nv_strip_info_39fa1a91968f900b5fa1280f018ac15b}{
+\index{NvStripInfo@{NvStripInfo}!MarkTriangle@{MarkTriangle}}
+\index{MarkTriangle@{MarkTriangle}!NvStripInfo@{NvStripInfo}}
+\subsubsection[{MarkTriangle}]{\setlength{\rightskip}{0pt plus 5cm}void NvStripInfo::MarkTriangle ({\bf NvFaceInfo} $\ast$ {\em faceInfo})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_nv_strip_info_39fa1a91968f900b5fa1280f018ac15b}
+
+
+
+
+Definition at line 502 of file NvTriStripObjects.cpp.\hypertarget{class_nv_strip_info_2ad96d160c282ac7921c33c0ce1c12b0}{
+\index{NvStripInfo@{NvStripInfo}!SharesEdge@{SharesEdge}}
+\index{SharesEdge@{SharesEdge}!NvStripInfo@{NvStripInfo}}
+\subsubsection[{SharesEdge}]{\setlength{\rightskip}{0pt plus 5cm}bool NvStripInfo::SharesEdge (const {\bf NvFaceInfo} $\ast$ {\em faceInfo}, \/  {\bf NvEdgeInfoVec} \& {\em edgeInfos})}}
+\label{class_nv_strip_info_2ad96d160c282ac7921c33c0ce1c12b0}
+
+
+
+
+Definition at line 738 of file NvTriStripObjects.cpp.\hypertarget{class_nv_strip_info_3c611dfae22e219ed0eedcb95fd33d1c}{
+\index{NvStripInfo@{NvStripInfo}!Unique@{Unique}}
+\index{Unique@{Unique}!NvStripInfo@{NvStripInfo}}
+\subsubsection[{Unique}]{\setlength{\rightskip}{0pt plus 5cm}bool NvStripInfo::Unique ({\bf NvFaceInfoVec} \& {\em faceVec}, \/  {\bf NvFaceInfo} $\ast$ {\em face})}}
+\label{class_nv_strip_info_3c611dfae22e219ed0eedcb95fd33d1c}
+
+
+
+
+Definition at line 516 of file NvTriStripObjects.cpp.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_nv_strip_info_c206788f90d9e14394972cd7ea989c1d}{
+\index{NvStripInfo@{NvStripInfo}!m\_\-experimentId@{m\_\-experimentId}}
+\index{m\_\-experimentId@{m\_\-experimentId}!NvStripInfo@{NvStripInfo}}
+\subsubsection[{m\_\-experimentId}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf NvStripInfo::m\_\-experimentId}}}
+\label{class_nv_strip_info_c206788f90d9e14394972cd7ea989c1d}
+
+
+
+
+Definition at line 162 of file NvTriStripObjects.h.\hypertarget{class_nv_strip_info_5920a296e1f7f1146893ee6672d76aee}{
+\index{NvStripInfo@{NvStripInfo}!m\_\-faces@{m\_\-faces}}
+\index{m\_\-faces@{m\_\-faces}!NvStripInfo@{NvStripInfo}}
+\subsubsection[{m\_\-faces}]{\setlength{\rightskip}{0pt plus 5cm}{\bf NvFaceInfoVec} {\bf NvStripInfo::m\_\-faces}}}
+\label{class_nv_strip_info_5920a296e1f7f1146893ee6672d76aee}
+
+
+
+
+Definition at line 160 of file NvTriStripObjects.h.\hypertarget{class_nv_strip_info_91a71056da89624852630282c30b3b10}{
+\index{NvStripInfo@{NvStripInfo}!m\_\-numDegenerates@{m\_\-numDegenerates}}
+\index{m\_\-numDegenerates@{m\_\-numDegenerates}!NvStripInfo@{NvStripInfo}}
+\subsubsection[{m\_\-numDegenerates}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf NvStripInfo::m\_\-numDegenerates}}}
+\label{class_nv_strip_info_91a71056da89624852630282c30b3b10}
+
+
+
+
+Definition at line 166 of file NvTriStripObjects.h.\hypertarget{class_nv_strip_info_010bfd6d2e52445176a7cbfb79a53d05}{
+\index{NvStripInfo@{NvStripInfo}!m\_\-startInfo@{m\_\-startInfo}}
+\index{m\_\-startInfo@{m\_\-startInfo}!NvStripInfo@{NvStripInfo}}
+\subsubsection[{m\_\-startInfo}]{\setlength{\rightskip}{0pt plus 5cm}{\bf NvStripStartInfo} {\bf NvStripInfo::m\_\-startInfo}}}
+\label{class_nv_strip_info_010bfd6d2e52445176a7cbfb79a53d05}
+
+
+
+
+Definition at line 159 of file NvTriStripObjects.h.\hypertarget{class_nv_strip_info_d22113688db1e746fb0956473ceca96f}{
+\index{NvStripInfo@{NvStripInfo}!m\_\-stripId@{m\_\-stripId}}
+\index{m\_\-stripId@{m\_\-stripId}!NvStripInfo@{NvStripInfo}}
+\subsubsection[{m\_\-stripId}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf NvStripInfo::m\_\-stripId}}}
+\label{class_nv_strip_info_d22113688db1e746fb0956473ceca96f}
+
+
+
+
+Definition at line 161 of file NvTriStripObjects.h.\hypertarget{class_nv_strip_info_670cb128ad83879668b1a8e90ed2462c}{
+\index{NvStripInfo@{NvStripInfo}!visited@{visited}}
+\index{visited@{visited}!NvStripInfo@{NvStripInfo}}
+\subsubsection[{visited}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf NvStripInfo::visited}}}
+\label{class_nv_strip_info_670cb128ad83879668b1a8e90ed2462c}
+
+
+
+
+Definition at line 164 of file NvTriStripObjects.h.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/NVTriStrip/\hyperlink{_nv_tri_strip_objects_8h}{NvTriStripObjects.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/NVTriStrip/\hyperlink{_nv_tri_strip_objects_8cpp}{NvTriStripObjects.cpp}\end{CompactItemize}

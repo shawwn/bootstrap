@@ -1,0 +1,999 @@
+\hypertarget{common__afx_8h}{
+\section{C:/Bootstrap/ProjectBX/Engine/Common/common\_\-afx.h File Reference}
+\label{common__afx_8h}\index{C:/Bootstrap/ProjectBX/Engine/Common/common\_\-afx.h@{C:/Bootstrap/ProjectBX/Engine/Common/common\_\-afx.h}}
+}
+{\tt \#include $<$windows.h$>$}\par
+{\tt \#include $<$tchar.h$>$}\par
+{\tt \#include $<$string$>$}\par
+{\tt \#include $<$sstream$>$}\par
+{\tt \#include $<$vector$>$}\par
+{\tt \#include $<$math.h$>$}\par
+{\tt \#include $<$float.h$>$}\par
+{\tt \#include $<$malloc.h$>$}\par
+{\tt \#include \char`\"{}filesystem\_\-afx.h\char`\"{}}\par
+{\tt \#include $<$mmintrin.h$>$}\par
+{\tt \#include $<$xmmintrin.h$>$}\par
+{\tt \#include \char`\"{}URef.h\char`\"{}}\par
+{\tt \#include \char`\"{}UConstRef.h\char`\"{}}\par
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+class \hyperlink{class_bootstrap_static_assert_fail_3_01true_01_4}{BootstrapStaticAssertFail$<$ true $>$}
+\end{CompactItemize}
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \hyperlink{common__afx_8h_c50762666aa00bd3a4308158510f1748}{\_\-WIN32\_\-WINNT}~0x0500
+\item 
+\#define \hyperlink{common__afx_8h_c7bef5d85e3dcd73eef56ad39ffc84a9}{WIN32\_\-LEAN\_\-AND\_\-MEAN}
+\item 
+\#define \hyperlink{common__afx_8h_e38a11c55fe40ae3b41b95b254e189a2}{\_\-INC\_\-TYPEINFO}
+\item 
+\#define \hyperlink{common__afx_8h_3c880cd36b3430950a8910e46318e903}{\_\-\_\-INTERNAL\_\-MATH\_\-IMPL}
+\item 
+\#define \hyperlink{common__afx_8h_6eaeeda5a5180552a78ce254eff2fc42}{BOOTSTRAP\_\-MACRO\_\-APPEND\_\-DO\_\-IT}(\hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x}, \hyperlink{wglext_8h_9298c7ad619074f5285b32c6b72bfdea}{y})~\hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x}\#\#\hyperlink{wglext_8h_9298c7ad619074f5285b32c6b72bfdea}{y}
+\item 
+\#define \hyperlink{common__afx_8h_395bb20f4c97f3573d6fcf951d0b3852}{BOOTSTRAP\_\-MACRO\_\-APPEND}(\hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x}, \hyperlink{wglext_8h_9298c7ad619074f5285b32c6b72bfdea}{y})~BOOTSTRAP\_\-MACRO\_\-APPEND\_\-DO\_\-IT( \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x}, \hyperlink{wglext_8h_9298c7ad619074f5285b32c6b72bfdea}{y} )
+\item 
+\#define \hyperlink{common__afx_8h_1b81499b7e6faacd5700929de7cdf9f9}{BOOTSTRAP\_\-STATIC\_\-ASSERT\_\-MANGLE\_\-LINE\_\-NUMBER}(\hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x})~BOOTSTRAP\_\-MACRO\_\-APPEND( \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x}, \_\-\_\-LINE\_\-\_\- )
+\item 
+\#define \hyperlink{common__afx_8h_3b7363cf55188b681be1c3df2fefd38f}{B\_\-STATIC\_\-ASSERT}(\hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x})
+\item 
+\#define \hyperlink{common__afx_8h_989b3aa9f5cf57ba1f2a01db9d855efb}{B\_\-GLOBAL\_\-STATIC\_\-ASSERT}(\hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x})~typedef BootstrapStaticAssertFail$<$ ( \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x} ) $>$ bootstrap\_\-static\_\-assert\_\-fail\_\-type
+\item 
+\#define \hyperlink{common__afx_8h_2630490ce4292ed6d05359d2957796b8}{B\_\-ASSERT}(\hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x})
+\item 
+\#define \hyperlink{common__afx_8h_b7017537090be31ed41b17e6d25330d6}{B\_\-ERROR}(msg)~\{	B\_\-ASSERT( false );	\hyperlink{common__afx_8h_b0099a1f90d3873033a53daa9f40c67b}{HandleError}( \char`\"{}\%s, line \%d:$\backslash$\hyperlink{glext__bak_8h_0788d3762d0c3c76e4c094d8078b4c27}{n}$\backslash$\hyperlink{glext__bak_8h_0788d3762d0c3c76e4c094d8078b4c27}{n}\%\hyperlink{glext__bak_8h_d585a1393cfa368fa9dc3d8ebff640d5}{s}\char`\"{}, \_\-\_\-FILE\_\-\_\-, \_\-\_\-LINE\_\-\_\-, ( \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring}( \char`\"{}\char`\"{} ) + msg ).c\_\-str() );	\}
+\item 
+\#define \hyperlink{common__afx_8h_598a3330b3c21701223ee0ca14316eca}{PI}~3.141592f
+\item 
+\#define \hyperlink{common__afx_8h_e3ec3219e4eee3b0992bfd59c2e2bc42}{HALF\_\-PI}~1.570796f
+\item 
+\#define \hyperlink{common__afx_8h_3b947f4b635461030ff2d87833e5049e}{TWO\_\-PI}~6.283184f
+\item 
+\#define \hyperlink{common__afx_8h_c6193efc2328e638df7196f13db151b4}{ONE\_\-OVER\_\-PI}~0.318309f
+\item 
+\#define \hyperlink{common__afx_8h_afe696ac3c4a4216c062813b0ac891f8}{ONE\_\-OVER\_\-TWO\_\-PI}~0.1591545f
+\item 
+\#define \hyperlink{common__afx_8h_514396dd60fa0621c83072091fb2a0cd}{SQRT2}~1.414213f
+\item 
+\#define \hyperlink{common__afx_8h_f5716bea18cfef6964af8b6eab9a6508}{COS\_\-45}~0.707106f
+\item 
+\#define \hyperlink{common__afx_8h_07484107e6d9fdf38b53edf631d6511d}{E}~2.71828183f
+\item 
+\#define \hyperlink{common__afx_8h_a44132e721a849c45084ea4291d62c4f}{fopen\_\-s}(FP, \hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, \hyperlink{glext__bak_8h_1e71d9c196e4683cc06c4b54d53f7ef5}{mode})~$\ast$(FP)=fopen(\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name},\hyperlink{glext__bak_8h_1e71d9c196e4683cc06c4b54d53f7ef5}{mode})
+\end{CompactItemize}
+\subsection*{Typedefs}
+\begin{CompactItemize}
+\item 
+typedef \hyperlink{glext__bak_8h_949953309cda1573a7c5fd4ffe65904c}{std::string} \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring}
+\item 
+typedef long long \hyperlink{common__afx_8h_2e015c96ada30f1fdb9322f7af889c10}{\_\-\_\-int64}
+\item 
+typedef std::vector$<$ \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} $>$ \hyperlink{common__afx_8h_bbe97053cf0e0dff5e7e474804cc48f5}{TokenContainer}
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+void \hyperlink{common__afx_8h_c415616c8d5f1df71308de030ffafe10}{VSPrintF} (\hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&out, const char $\ast$fmt, va\_\-list marker)
+\item 
+void \hyperlink{common__afx_8h_5de02b3008ee828e87118a8f52780e06}{SPrintF} (\hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&out, const char $\ast$fmt,...)
+\item 
+bool \hyperlink{common__afx_8h_57be1bf0723f638d0d40c91339bd6f05}{IsPow2} (unsigned int i)
+\item 
+unsigned int \hyperlink{common__afx_8h_22e9e0de4acb763b9ae4b973a2ce3820}{FindPow2} (unsigned int \hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v})
+\item 
+{\footnotesize template$<$typename \_\-T $>$ }\\\_\-T \hyperlink{common__afx_8h_0296e17691267defafdfde06589f50d5}{Min} (const \_\-T \&\hyperlink{glext__bak_8h_3309789fc188587d666cda5ece79cf82}{a}, const \_\-T \&\hyperlink{glext__bak_8h_0f71581a41fd2264c8944126dabbd010}{b})
+\item 
+{\footnotesize template$<$typename \_\-T $>$ }\\\_\-T \hyperlink{common__afx_8h_dd09d155ffe827b203d3236b451752e7}{Max} (const \_\-T \&\hyperlink{glext__bak_8h_3309789fc188587d666cda5ece79cf82}{a}, const \_\-T \&\hyperlink{glext__bak_8h_0f71581a41fd2264c8944126dabbd010}{b})
+\item 
+{\footnotesize template$<$typename \_\-T $>$ }\\\_\-T \hyperlink{common__afx_8h_de0f1d8a58fa081cd90c9ee9c6077bf4}{Min3} (const \_\-T \&\hyperlink{glext__bak_8h_3309789fc188587d666cda5ece79cf82}{a}, const \_\-T \&\hyperlink{glext__bak_8h_0f71581a41fd2264c8944126dabbd010}{b}, const \_\-T \&\hyperlink{glext__bak_8h_4c662e60c03c48f5718de0c175211fb0}{c})
+\item 
+{\footnotesize template$<$typename \_\-T $>$ }\\\_\-T \hyperlink{common__afx_8h_33921919086132106ca09666fcf7432a}{Max3} (const \_\-T \&\hyperlink{glext__bak_8h_3309789fc188587d666cda5ece79cf82}{a}, const \_\-T \&\hyperlink{glext__bak_8h_0f71581a41fd2264c8944126dabbd010}{b}, const \_\-T \&\hyperlink{glext__bak_8h_4c662e60c03c48f5718de0c175211fb0}{c})
+\item 
+{\footnotesize template$<$typename \_\-T $>$ }\\\_\-T \hyperlink{common__afx_8h_7d665224bfbd26fbf37dab8360bdf352}{Clamp} (const \_\-T \&\hyperlink{glext__bak_8h_3309789fc188587d666cda5ece79cf82}{a}, const \_\-T \&min, const \_\-T \&max)
+\item 
+{\footnotesize template$<$typename \_\-T $>$ }\\void \hyperlink{common__afx_8h_400f1491dc09805bdbb254cb258e7b41}{Swap} (\_\-T \&\hyperlink{glext__bak_8h_3309789fc188587d666cda5ece79cf82}{a}, \_\-T \&\hyperlink{glext__bak_8h_0f71581a41fd2264c8944126dabbd010}{b})
+\item 
+{\footnotesize template$<$typename \_\-T $>$ }\\\_\-T \hyperlink{common__afx_8h_9443605a3554459dd5144f28f698d16d}{Sqr} (const \_\-T \&\hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v})
+\item 
+\hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \& \hyperlink{common__afx_8h_38b85977546a616c96b494d4c6481297}{operator$<$$<$} (\hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&\hyperlink{glext__bak_8h_d585a1393cfa368fa9dc3d8ebff640d5}{s}, float f)
+\item 
+\hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \& \hyperlink{common__afx_8h_a5e26487036f1d66e2528220d94a0865}{operator$<$$<$} (\hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&\hyperlink{glext__bak_8h_d585a1393cfa368fa9dc3d8ebff640d5}{s}, int f)
+\item 
+\hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \& \hyperlink{common__afx_8h_d2a7f8fc89071d0291525bd907df0c91}{operator$<$$<$} (\hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&\hyperlink{glext__bak_8h_d585a1393cfa368fa9dc3d8ebff640d5}{s}, unsigned int f)
+\item 
+float \hyperlink{common__afx_8h_116293816763dfdfd39b4bc70c38b465}{DegToRad} (float deg)
+\item 
+float \hyperlink{common__afx_8h_02a3e34ecc7f2a48193151ae91a92434}{RadToDeg} (float rad)
+\item 
+float \hyperlink{common__afx_8h_30d55f5ec21ae390b0ecc55cc21db571}{Tan} (float theta)
+\item 
+float \hyperlink{common__afx_8h_ed3c0bce670160f89fca79b5d0de1a76}{Cos} (float theta)
+\item 
+float \hyperlink{common__afx_8h_15c4437929569821a369c1f0df5ab3b5}{Sin} (float theta)
+\item 
+float \hyperlink{common__afx_8h_64a3766e9632b394265b661fd3ad1c67}{ATan} (float \hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v})
+\item 
+float \hyperlink{common__afx_8h_a76c333a8dfb1148d17cdbb72a6541af}{ATan2} (float \hyperlink{wglext_8h_9298c7ad619074f5285b32c6b72bfdea}{y}, float \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x})
+\item 
+float \hyperlink{common__afx_8h_02f1241d1471688a4578a6431368e15b}{ACos} (float \hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v})
+\item 
+float \hyperlink{common__afx_8h_b2d03690ffbd25530b6d9b6404c811ca}{ASin} (float \hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v})
+\item 
+float \hyperlink{common__afx_8h_d7752a7ed75d8ebf6dfa7fbdcca395ba}{Floor} (float \hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v})
+\item 
+float \hyperlink{common__afx_8h_5dd3cb8a1d3c9b552f314c2d475a25a2}{Ceil} (float \hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v})
+\item 
+float \hyperlink{common__afx_8h_542388ff3f7df4aaad4b3fedb44ce6a2}{Fract} (float \hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v})
+\item 
+float \hyperlink{common__afx_8h_28313dfeda7c503b70ae96a4e3ab1bc3}{Sqrt} (float \hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v})
+\item 
+float \hyperlink{common__afx_8h_8b9271c5b1156867f41e4bff995849cb}{Log} (float \hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v})
+\item 
+float \hyperlink{common__afx_8h_df309c61a344cf812c926af221641f24}{Log2} (float \hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v})
+\item 
+unsigned int \hyperlink{common__afx_8h_47815fb7f86303e11030b58db0765240}{Log2} (unsigned int \hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v})
+\item 
+float \hyperlink{common__afx_8h_c4ed1d31e99d1fae9ba70d0eb0a48350}{Log10} (float \hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v})
+\item 
+float \hyperlink{common__afx_8h_586cbe39b69be85e48e77b9082d9b863}{InvSqrtFast} (float \hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v})
+\item 
+float \hyperlink{common__afx_8h_b6a31f24ba366e3f8086e7f4f73402b2}{Pow} (float \hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v}, float exp)
+\item 
+float \hyperlink{common__afx_8h_1b74109bcede0e97a5d220760cbefb79}{Exp} (float \hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v})
+\item 
+{\footnotesize template$<$typename \_\-T $>$ }\\\_\-T \hyperlink{common__afx_8h_7b41d482448c80b0a0e2d2c1fac77bfd}{Abs} (\_\-T \hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v})
+\item 
+float \hyperlink{common__afx_8h_de5abfceb03ddba213afb4829c33cb35}{Abs} (float \hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v})
+\item 
+float \hyperlink{common__afx_8h_9a42048c76fe4753dc4fc63f08fb0c9a}{Sign} (float \hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v})
+\item 
+bool \hyperlink{common__afx_8h_6a9bceba921c241fdf22470b4ebeb07a}{IsNaN} (float \hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v})
+\item 
+double \hyperlink{common__afx_8h_d9c0702c2654a221c495482a244f3bc4}{AbsD} (double \hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v})
+\item 
+double \hyperlink{common__afx_8h_da03542675b37e7bc426226a6101185b}{SqrtD} (double \hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v})
+\item 
+bool \hyperlink{common__afx_8h_545697a73b59dcb9620bbfa6f68c9b7b}{ApproxEqual} (float \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x}, float \hyperlink{wglext_8h_9298c7ad619074f5285b32c6b72bfdea}{y}, float epsilon=0.0001f)
+\item 
+size\_\-t \hyperlink{common__afx_8h_d6d35eeb3a4a81953b19438d0eb763b4}{StrLenUTF8} (const char $\ast$str)
+\item 
+const char $\ast$ \hyperlink{common__afx_8h_58bd80811de61ba55f2a86d8a45e64fa}{NextCharUTF8} (const char $\ast$str)
+\item 
+unsigned int \hyperlink{common__afx_8h_4d00857d5248a0b5a194edace1607985}{GetCharLenUTF8} (const char $\ast$chr)
+\item 
+{\footnotesize template$<$typename \_\-T $>$ }\\void \hyperlink{common__afx_8h_733360b881690d74f0d299b9fab80897}{SolveQuadratic} (float \&posInt, float \&negInt, const \_\-T \&\hyperlink{glext__bak_8h_3309789fc188587d666cda5ece79cf82}{a}, const \_\-T \&\hyperlink{glext__bak_8h_0f71581a41fd2264c8944126dabbd010}{b}, const \_\-T \&\hyperlink{glext__bak_8h_4c662e60c03c48f5718de0c175211fb0}{c})
+\item 
+void \hyperlink{common__afx_8h_9f04579206286b6dc8c9708063450144}{MemSet} (void $\ast$\hyperlink{glext__bak_8h_92034251bfd455d524a9b5610cddba00}{dst}, unsigned int \hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v}, unsigned int \hyperlink{glext__bak_8h_3d1e3edfcf61ca2d831883e1afbad89e}{size})
+\item 
+void \hyperlink{common__afx_8h_21167a1e8b0403ea171eaad5adf40b41}{MemCopy} (void $\ast$\hyperlink{glext__bak_8h_92034251bfd455d524a9b5610cddba00}{dst}, const void $\ast$\hyperlink{glext__bak_8h_72e0fdf0f845ded60b1fada9e9195cd7}{src}, unsigned int \hyperlink{glext__bak_8h_3d1e3edfcf61ca2d831883e1afbad89e}{size})
+\item 
+void $\ast$ \hyperlink{common__afx_8h_408828bf7887e862154788b40930b54a}{AlignedAlloc} (unsigned int alignmentPow2, unsigned int \hyperlink{glext__bak_8h_3d1e3edfcf61ca2d831883e1afbad89e}{size})
+\item 
+void \hyperlink{common__afx_8h_2fd85effcc325614b972f5a87070d6b2}{AlignedFree} (void $\ast$alignedMemory)
+\item 
+void $\ast$ \hyperlink{common__afx_8h_a38123a381fda4eb71767e320a1331d1}{TempAlloc} (unsigned int \hyperlink{glext__bak_8h_3d1e3edfcf61ca2d831883e1afbad89e}{size})
+\item 
+void \hyperlink{common__afx_8h_4f8b297dfd37bb5e5081041d840d19cf}{TempFree} (void $\ast$mem)
+\item 
+{\footnotesize template$<$typename \_\-TT $>$ }\\\_\-TT $\ast$ \hyperlink{common__afx_8h_49eb56914e0fb10c2ad3c4abeae9820d}{AlignedNew} (unsigned int alignmentPow2, const \_\-TT \&prototype)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{common__afx_8h_4de45396ed23edc78617f4a86c9e2eb2}{AlignedDelete} (T $\ast$object)
+\item 
+unsigned int \hyperlink{common__afx_8h_9a7b34c49c5af703e8d7264477614bff}{HashMem32} (const void $\ast$mem, unsigned int \hyperlink{glext__bak_8h_3d1e3edfcf61ca2d831883e1afbad89e}{size}, unsigned int hashStart=2166136261UL)
+\item 
+unsigned \hyperlink{common__afx_8h_2e015c96ada30f1fdb9322f7af889c10}{\_\-\_\-int64} \hyperlink{common__afx_8h_30e93740379715d701fadb007c3147a6}{HashMem64} (const void $\ast$mem, unsigned int \hyperlink{glext__bak_8h_3d1e3edfcf61ca2d831883e1afbad89e}{size}, unsigned \hyperlink{common__afx_8h_2e015c96ada30f1fdb9322f7af889c10}{\_\-\_\-int64} hashStart=14695981039346656037ULL)
+\item 
+{\footnotesize template$<$typename \_\-T $>$ }\\\_\-T \hyperlink{common__afx_8h_e20a4605f6fec4ca1a7b573217082f02}{Align16} (\_\-T \hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v})
+\item 
+{\footnotesize template$<$typename \_\-T $>$ }\\\_\-T \hyperlink{common__afx_8h_e1fb23c1e592f53f89861e329acc843a}{Lerp} (const \_\-T \&\hyperlink{glext__bak_8h_8f5597b6002609ead33af221dcf29790}{v0}, const \_\-T \&\hyperlink{glext__bak_8h_435c176a02c061b43e19bdf7c86cceae}{v1}, float \hyperlink{glext__bak_8h_00140d6f5c548b26daf170bf16e86a6d}{t})
+\item 
+{\footnotesize template$<$typename \_\-T $>$ }\\\_\-T \hyperlink{common__afx_8h_4dca04762a53102f461e45e2c368dc59}{Bezier3} (const \_\-T \&\hyperlink{glext__bak_8h_8f5597b6002609ead33af221dcf29790}{v0}, const \_\-T \&cp1, const \_\-T \&cp2, const \_\-T \&\hyperlink{glext__bak_8h_0928f6d0f0f794ba000a21dfae422136}{v2}, float \hyperlink{glext__bak_8h_00140d6f5c548b26daf170bf16e86a6d}{t})
+\item 
+void \hyperlink{common__afx_8h_eaed719a9e4f4c1c3268e57ffe93da89}{StrTokenize} (\hyperlink{common__afx_8h_bbe97053cf0e0dff5e7e474804cc48f5}{TokenContainer} \&tokens, const char $\ast$str)
+\item 
+\hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \& \hyperlink{common__afx_8h_a3e9003e5e1c9d89db20dd1768b1788e}{StrToLower} (\hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&str)
+\item 
+{\footnotesize template$<$typename \_\-T , class iterator $>$ }\\void \hyperlink{common__afx_8h_47011226fb8cfe2fc14382b095dddb1a}{FastVectorErase} (std::vector$<$ \_\-T $>$ \&vec, iterator iter)
+\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+int($\ast$ \hyperlink{common__afx_8h_9a9db7e5564db86ade0e8b792ca2320c}{PrintF} )(const char $\ast$fmt,...)
+\item 
+void($\ast$ \hyperlink{common__afx_8h_b0099a1f90d3873033a53daa9f40c67b}{HandleError} )(const char $\ast$fmt,...)
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{common__afx_8h_3c880cd36b3430950a8910e46318e903}{
+\index{common\_\-afx.h@{common\_\-afx.h}!\_\-\_\-INTERNAL\_\-MATH\_\-IMPL@{\_\-\_\-INTERNAL\_\-MATH\_\-IMPL}}
+\index{\_\-\_\-INTERNAL\_\-MATH\_\-IMPL@{\_\-\_\-INTERNAL\_\-MATH\_\-IMPL}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{\_\-\_\-INTERNAL\_\-MATH\_\-IMPL}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-\_\-INTERNAL\_\-MATH\_\-IMPL}}
+\label{common__afx_8h_3c880cd36b3430950a8910e46318e903}
+
+
+
+
+Definition at line 25 of file common\_\-afx.h.\hypertarget{common__afx_8h_e38a11c55fe40ae3b41b95b254e189a2}{
+\index{common\_\-afx.h@{common\_\-afx.h}!\_\-INC\_\-TYPEINFO@{\_\-INC\_\-TYPEINFO}}
+\index{\_\-INC\_\-TYPEINFO@{\_\-INC\_\-TYPEINFO}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{\_\-INC\_\-TYPEINFO}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-INC\_\-TYPEINFO}}
+\label{common__afx_8h_e38a11c55fe40ae3b41b95b254e189a2}
+
+
+
+
+Definition at line 14 of file common\_\-afx.h.\hypertarget{common__afx_8h_c50762666aa00bd3a4308158510f1748}{
+\index{common\_\-afx.h@{common\_\-afx.h}!\_\-WIN32\_\-WINNT@{\_\-WIN32\_\-WINNT}}
+\index{\_\-WIN32\_\-WINNT@{\_\-WIN32\_\-WINNT}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{\_\-WIN32\_\-WINNT}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-WIN32\_\-WINNT~0x0500}}
+\label{common__afx_8h_c50762666aa00bd3a4308158510f1748}
+
+
+
+
+Definition at line 7 of file common\_\-afx.h.\hypertarget{common__afx_8h_2630490ce4292ed6d05359d2957796b8}{
+\index{common\_\-afx.h@{common\_\-afx.h}!B\_\-ASSERT@{B\_\-ASSERT}}
+\index{B\_\-ASSERT@{B\_\-ASSERT}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{B\_\-ASSERT}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\_\-ASSERT({\bf x})}}
+\label{common__afx_8h_2630490ce4292ed6d05359d2957796b8}
+
+
+
+
+Definition at line 100 of file common\_\-afx.h.\hypertarget{common__afx_8h_b7017537090be31ed41b17e6d25330d6}{
+\index{common\_\-afx.h@{common\_\-afx.h}!B\_\-ERROR@{B\_\-ERROR}}
+\index{B\_\-ERROR@{B\_\-ERROR}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{B\_\-ERROR}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\_\-ERROR(msg)~\{	B\_\-ASSERT( false );	{\bf HandleError}( \char`\"{}\%s, line \%d:$\backslash${\bf n}$\backslash${\bf n}\%{\bf s}\char`\"{}, \_\-\_\-FILE\_\-\_\-, \_\-\_\-LINE\_\-\_\-, ( {\bf tstring}( \char`\"{}\char`\"{} ) + msg ).c\_\-str() );	\}}}
+\label{common__afx_8h_b7017537090be31ed41b17e6d25330d6}
+
+
+
+
+Definition at line 114 of file common\_\-afx.h.\hypertarget{common__afx_8h_989b3aa9f5cf57ba1f2a01db9d855efb}{
+\index{common\_\-afx.h@{common\_\-afx.h}!B\_\-GLOBAL\_\-STATIC\_\-ASSERT@{B\_\-GLOBAL\_\-STATIC\_\-ASSERT}}
+\index{B\_\-GLOBAL\_\-STATIC\_\-ASSERT@{B\_\-GLOBAL\_\-STATIC\_\-ASSERT}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{B\_\-GLOBAL\_\-STATIC\_\-ASSERT}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\_\-GLOBAL\_\-STATIC\_\-ASSERT({\bf x})~typedef BootstrapStaticAssertFail$<$ ( {\bf x} ) $>$ bootstrap\_\-static\_\-assert\_\-fail\_\-type}}
+\label{common__afx_8h_989b3aa9f5cf57ba1f2a01db9d855efb}
+
+
+
+
+Definition at line 89 of file common\_\-afx.h.\hypertarget{common__afx_8h_3b7363cf55188b681be1c3df2fefd38f}{
+\index{common\_\-afx.h@{common\_\-afx.h}!B\_\-STATIC\_\-ASSERT@{B\_\-STATIC\_\-ASSERT}}
+\index{B\_\-STATIC\_\-ASSERT@{B\_\-STATIC\_\-ASSERT}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{B\_\-STATIC\_\-ASSERT}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\_\-STATIC\_\-ASSERT({\bf x})}}
+\label{common__afx_8h_3b7363cf55188b681be1c3df2fefd38f}
+
+
+\textbf{Value:}
+
+\begin{Code}\begin{verbatim}class BOOTSTRAP_STATIC_ASSERT_MANGLE_LINE_NUMBER( bootstrap_static_assert_fail_class ) { \
+                inline void fail()                                                                      \
+                {                                                                                                       \
+                        BootstrapStaticAssertFail< ( x ) > failure;             \
+                        failure = failure;                                                              \
+                }                                                                                                       \
+        };
+\end{verbatim}
+\end{Code}
+
+
+Definition at line 79 of file common\_\-afx.h.\hypertarget{common__afx_8h_395bb20f4c97f3573d6fcf951d0b3852}{
+\index{common\_\-afx.h@{common\_\-afx.h}!BOOTSTRAP\_\-MACRO\_\-APPEND@{BOOTSTRAP\_\-MACRO\_\-APPEND}}
+\index{BOOTSTRAP\_\-MACRO\_\-APPEND@{BOOTSTRAP\_\-MACRO\_\-APPEND}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{BOOTSTRAP\_\-MACRO\_\-APPEND}]{\setlength{\rightskip}{0pt plus 5cm}\#define BOOTSTRAP\_\-MACRO\_\-APPEND({\bf x}, \/  {\bf y})~BOOTSTRAP\_\-MACRO\_\-APPEND\_\-DO\_\-IT( {\bf x}, {\bf y} )}}
+\label{common__afx_8h_395bb20f4c97f3573d6fcf951d0b3852}
+
+
+
+
+Definition at line 68 of file common\_\-afx.h.\hypertarget{common__afx_8h_6eaeeda5a5180552a78ce254eff2fc42}{
+\index{common\_\-afx.h@{common\_\-afx.h}!BOOTSTRAP\_\-MACRO\_\-APPEND\_\-DO\_\-IT@{BOOTSTRAP\_\-MACRO\_\-APPEND\_\-DO\_\-IT}}
+\index{BOOTSTRAP\_\-MACRO\_\-APPEND\_\-DO\_\-IT@{BOOTSTRAP\_\-MACRO\_\-APPEND\_\-DO\_\-IT}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{BOOTSTRAP\_\-MACRO\_\-APPEND\_\-DO\_\-IT}]{\setlength{\rightskip}{0pt plus 5cm}\#define BOOTSTRAP\_\-MACRO\_\-APPEND\_\-DO\_\-IT({\bf x}, \/  {\bf y})~{\bf x}\#\#{\bf y}}}
+\label{common__afx_8h_6eaeeda5a5180552a78ce254eff2fc42}
+
+
+
+
+Definition at line 67 of file common\_\-afx.h.\hypertarget{common__afx_8h_1b81499b7e6faacd5700929de7cdf9f9}{
+\index{common\_\-afx.h@{common\_\-afx.h}!BOOTSTRAP\_\-STATIC\_\-ASSERT\_\-MANGLE\_\-LINE\_\-NUMBER@{BOOTSTRAP\_\-STATIC\_\-ASSERT\_\-MANGLE\_\-LINE\_\-NUMBER}}
+\index{BOOTSTRAP\_\-STATIC\_\-ASSERT\_\-MANGLE\_\-LINE\_\-NUMBER@{BOOTSTRAP\_\-STATIC\_\-ASSERT\_\-MANGLE\_\-LINE\_\-NUMBER}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{BOOTSTRAP\_\-STATIC\_\-ASSERT\_\-MANGLE\_\-LINE\_\-NUMBER}]{\setlength{\rightskip}{0pt plus 5cm}\#define BOOTSTRAP\_\-STATIC\_\-ASSERT\_\-MANGLE\_\-LINE\_\-NUMBER({\bf x})~BOOTSTRAP\_\-MACRO\_\-APPEND( {\bf x}, \_\-\_\-LINE\_\-\_\- )}}
+\label{common__afx_8h_1b81499b7e6faacd5700929de7cdf9f9}
+
+
+
+
+Definition at line 73 of file common\_\-afx.h.\hypertarget{common__afx_8h_f5716bea18cfef6964af8b6eab9a6508}{
+\index{common\_\-afx.h@{common\_\-afx.h}!COS\_\-45@{COS\_\-45}}
+\index{COS\_\-45@{COS\_\-45}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{COS\_\-45}]{\setlength{\rightskip}{0pt plus 5cm}\#define COS\_\-45~0.707106f}}
+\label{common__afx_8h_f5716bea18cfef6964af8b6eab9a6508}
+
+
+
+
+Definition at line 122 of file common\_\-afx.h.\hypertarget{common__afx_8h_07484107e6d9fdf38b53edf631d6511d}{
+\index{common\_\-afx.h@{common\_\-afx.h}!E@{E}}
+\index{E@{E}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{E}]{\setlength{\rightskip}{0pt plus 5cm}\#define E~2.71828183f}}
+\label{common__afx_8h_07484107e6d9fdf38b53edf631d6511d}
+
+
+
+
+Definition at line 124 of file common\_\-afx.h.\hypertarget{common__afx_8h_a44132e721a849c45084ea4291d62c4f}{
+\index{common\_\-afx.h@{common\_\-afx.h}!fopen\_\-s@{fopen\_\-s}}
+\index{fopen\_\-s@{fopen\_\-s}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{fopen\_\-s}]{\setlength{\rightskip}{0pt plus 5cm}\#define fopen\_\-s(FP, \/  {\bf name}, \/  {\bf mode})~$\ast$(FP)=fopen({\bf name},{\bf mode})}}
+\label{common__afx_8h_a44132e721a849c45084ea4291d62c4f}
+
+
+
+
+Definition at line 406 of file common\_\-afx.h.\hypertarget{common__afx_8h_e3ec3219e4eee3b0992bfd59c2e2bc42}{
+\index{common\_\-afx.h@{common\_\-afx.h}!HALF\_\-PI@{HALF\_\-PI}}
+\index{HALF\_\-PI@{HALF\_\-PI}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{HALF\_\-PI}]{\setlength{\rightskip}{0pt plus 5cm}\#define HALF\_\-PI~1.570796f}}
+\label{common__afx_8h_e3ec3219e4eee3b0992bfd59c2e2bc42}
+
+
+
+
+Definition at line 117 of file common\_\-afx.h.\hypertarget{common__afx_8h_c6193efc2328e638df7196f13db151b4}{
+\index{common\_\-afx.h@{common\_\-afx.h}!ONE\_\-OVER\_\-PI@{ONE\_\-OVER\_\-PI}}
+\index{ONE\_\-OVER\_\-PI@{ONE\_\-OVER\_\-PI}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{ONE\_\-OVER\_\-PI}]{\setlength{\rightskip}{0pt plus 5cm}\#define ONE\_\-OVER\_\-PI~0.318309f}}
+\label{common__afx_8h_c6193efc2328e638df7196f13db151b4}
+
+
+
+
+Definition at line 119 of file common\_\-afx.h.\hypertarget{common__afx_8h_afe696ac3c4a4216c062813b0ac891f8}{
+\index{common\_\-afx.h@{common\_\-afx.h}!ONE\_\-OVER\_\-TWO\_\-PI@{ONE\_\-OVER\_\-TWO\_\-PI}}
+\index{ONE\_\-OVER\_\-TWO\_\-PI@{ONE\_\-OVER\_\-TWO\_\-PI}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{ONE\_\-OVER\_\-TWO\_\-PI}]{\setlength{\rightskip}{0pt plus 5cm}\#define ONE\_\-OVER\_\-TWO\_\-PI~0.1591545f}}
+\label{common__afx_8h_afe696ac3c4a4216c062813b0ac891f8}
+
+
+
+
+Definition at line 120 of file common\_\-afx.h.\hypertarget{common__afx_8h_598a3330b3c21701223ee0ca14316eca}{
+\index{common\_\-afx.h@{common\_\-afx.h}!PI@{PI}}
+\index{PI@{PI}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{PI}]{\setlength{\rightskip}{0pt plus 5cm}\#define PI~3.141592f}}
+\label{common__afx_8h_598a3330b3c21701223ee0ca14316eca}
+
+
+
+
+Definition at line 116 of file common\_\-afx.h.\hypertarget{common__afx_8h_514396dd60fa0621c83072091fb2a0cd}{
+\index{common\_\-afx.h@{common\_\-afx.h}!SQRT2@{SQRT2}}
+\index{SQRT2@{SQRT2}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{SQRT2}]{\setlength{\rightskip}{0pt plus 5cm}\#define SQRT2~1.414213f}}
+\label{common__afx_8h_514396dd60fa0621c83072091fb2a0cd}
+
+
+
+
+Definition at line 121 of file common\_\-afx.h.\hypertarget{common__afx_8h_3b947f4b635461030ff2d87833e5049e}{
+\index{common\_\-afx.h@{common\_\-afx.h}!TWO\_\-PI@{TWO\_\-PI}}
+\index{TWO\_\-PI@{TWO\_\-PI}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{TWO\_\-PI}]{\setlength{\rightskip}{0pt plus 5cm}\#define TWO\_\-PI~6.283184f}}
+\label{common__afx_8h_3b947f4b635461030ff2d87833e5049e}
+
+
+
+
+Definition at line 118 of file common\_\-afx.h.\hypertarget{common__afx_8h_c7bef5d85e3dcd73eef56ad39ffc84a9}{
+\index{common\_\-afx.h@{common\_\-afx.h}!WIN32\_\-LEAN\_\-AND\_\-MEAN@{WIN32\_\-LEAN\_\-AND\_\-MEAN}}
+\index{WIN32\_\-LEAN\_\-AND\_\-MEAN@{WIN32\_\-LEAN\_\-AND\_\-MEAN}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{WIN32\_\-LEAN\_\-AND\_\-MEAN}]{\setlength{\rightskip}{0pt plus 5cm}\#define WIN32\_\-LEAN\_\-AND\_\-MEAN}}
+\label{common__afx_8h_c7bef5d85e3dcd73eef56ad39ffc84a9}
+
+
+
+
+Definition at line 10 of file common\_\-afx.h.
+
+\subsection{Typedef Documentation}
+\hypertarget{common__afx_8h_2e015c96ada30f1fdb9322f7af889c10}{
+\index{common\_\-afx.h@{common\_\-afx.h}!\_\-\_\-int64@{\_\-\_\-int64}}
+\index{\_\-\_\-int64@{\_\-\_\-int64}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{\_\-\_\-int64}]{\setlength{\rightskip}{0pt plus 5cm}typedef long long {\bf \_\-\_\-int64}}}
+\label{common__afx_8h_2e015c96ada30f1fdb9322f7af889c10}
+
+
+
+
+Definition at line 128 of file common\_\-afx.h.\hypertarget{common__afx_8h_bbe97053cf0e0dff5e7e474804cc48f5}{
+\index{common\_\-afx.h@{common\_\-afx.h}!TokenContainer@{TokenContainer}}
+\index{TokenContainer@{TokenContainer}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{TokenContainer}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<$ {\bf tstring} $>$ {\bf TokenContainer}}}
+\label{common__afx_8h_bbe97053cf0e0dff5e7e474804cc48f5}
+
+
+
+
+Definition at line 392 of file common\_\-afx.h.\hypertarget{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{
+\index{common\_\-afx.h@{common\_\-afx.h}!tstring@{tstring}}
+\index{tstring@{tstring}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{tstring}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf std::string} {\bf tstring}}}
+\label{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}
+
+
+
+
+Definition at line 64 of file common\_\-afx.h.
+
+\subsection{Function Documentation}
+\hypertarget{common__afx_8h_de5abfceb03ddba213afb4829c33cb35}{
+\index{common\_\-afx.h@{common\_\-afx.h}!Abs@{Abs}}
+\index{Abs@{Abs}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{Abs}]{\setlength{\rightskip}{0pt plus 5cm}float Abs (float {\em v})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_de5abfceb03ddba213afb4829c33cb35}
+
+
+
+
+Definition at line 212 of file common\_\-afx.h.\hypertarget{common__afx_8h_7b41d482448c80b0a0e2d2c1fac77bfd}{
+\index{common\_\-afx.h@{common\_\-afx.h}!Abs@{Abs}}
+\index{Abs@{Abs}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{Abs}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-T $>$ \_\-T Abs (\_\-T {\em v})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_7b41d482448c80b0a0e2d2c1fac77bfd}
+
+
+
+
+Definition at line 211 of file common\_\-afx.h.\hypertarget{common__afx_8h_d9c0702c2654a221c495482a244f3bc4}{
+\index{common\_\-afx.h@{common\_\-afx.h}!AbsD@{AbsD}}
+\index{AbsD@{AbsD}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{AbsD}]{\setlength{\rightskip}{0pt plus 5cm}double AbsD (double {\em v})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_d9c0702c2654a221c495482a244f3bc4}
+
+
+
+
+Definition at line 215 of file common\_\-afx.h.\hypertarget{common__afx_8h_02f1241d1471688a4578a6431368e15b}{
+\index{common\_\-afx.h@{common\_\-afx.h}!ACos@{ACos}}
+\index{ACos@{ACos}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{ACos}]{\setlength{\rightskip}{0pt plus 5cm}float ACos (float {\em v})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_02f1241d1471688a4578a6431368e15b}
+
+
+
+
+Definition at line 172 of file common\_\-afx.h.\hypertarget{common__afx_8h_e20a4605f6fec4ca1a7b573217082f02}{
+\index{common\_\-afx.h@{common\_\-afx.h}!Align16@{Align16}}
+\index{Align16@{Align16}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{Align16}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-T $>$ \_\-T Align16 (\_\-T {\em v})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_e20a4605f6fec4ca1a7b573217082f02}
+
+
+
+
+Definition at line 269 of file common\_\-afx.h.\hypertarget{common__afx_8h_408828bf7887e862154788b40930b54a}{
+\index{common\_\-afx.h@{common\_\-afx.h}!AlignedAlloc@{AlignedAlloc}}
+\index{AlignedAlloc@{AlignedAlloc}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{AlignedAlloc}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ AlignedAlloc (unsigned int {\em alignmentPow2}, \/  unsigned int {\em size})}}
+\label{common__afx_8h_408828bf7887e862154788b40930b54a}
+
+
+
+
+Definition at line 297 of file common\_\-afx.cpp.\hypertarget{common__afx_8h_4de45396ed23edc78617f4a86c9e2eb2}{
+\index{common\_\-afx.h@{common\_\-afx.h}!AlignedDelete@{AlignedDelete}}
+\index{AlignedDelete@{AlignedDelete}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{AlignedDelete}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void AlignedDelete (T $\ast$ {\em object})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_4de45396ed23edc78617f4a86c9e2eb2}
+
+
+
+
+Definition at line 256 of file common\_\-afx.h.\hypertarget{common__afx_8h_2fd85effcc325614b972f5a87070d6b2}{
+\index{common\_\-afx.h@{common\_\-afx.h}!AlignedFree@{AlignedFree}}
+\index{AlignedFree@{AlignedFree}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{AlignedFree}]{\setlength{\rightskip}{0pt plus 5cm}void AlignedFree (void $\ast$ {\em alignedMemory})}}
+\label{common__afx_8h_2fd85effcc325614b972f5a87070d6b2}
+
+
+
+
+Definition at line 324 of file common\_\-afx.cpp.\hypertarget{common__afx_8h_49eb56914e0fb10c2ad3c4abeae9820d}{
+\index{common\_\-afx.h@{common\_\-afx.h}!AlignedNew@{AlignedNew}}
+\index{AlignedNew@{AlignedNew}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{AlignedNew}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-TT $>$ \_\-TT$\ast$ AlignedNew (unsigned int {\em alignmentPow2}, \/  const \_\-TT \& {\em prototype})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_49eb56914e0fb10c2ad3c4abeae9820d}
+
+
+
+
+Definition at line 250 of file common\_\-afx.h.\hypertarget{common__afx_8h_545697a73b59dcb9620bbfa6f68c9b7b}{
+\index{common\_\-afx.h@{common\_\-afx.h}!ApproxEqual@{ApproxEqual}}
+\index{ApproxEqual@{ApproxEqual}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{ApproxEqual}]{\setlength{\rightskip}{0pt plus 5cm}bool ApproxEqual (float {\em x}, \/  float {\em y}, \/  float {\em epsilon} = {\tt 0.0001f})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_545697a73b59dcb9620bbfa6f68c9b7b}
+
+
+
+
+Definition at line 217 of file common\_\-afx.h.\hypertarget{common__afx_8h_b2d03690ffbd25530b6d9b6404c811ca}{
+\index{common\_\-afx.h@{common\_\-afx.h}!ASin@{ASin}}
+\index{ASin@{ASin}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{ASin}]{\setlength{\rightskip}{0pt plus 5cm}float ASin (float {\em v})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_b2d03690ffbd25530b6d9b6404c811ca}
+
+
+
+
+Definition at line 173 of file common\_\-afx.h.\hypertarget{common__afx_8h_64a3766e9632b394265b661fd3ad1c67}{
+\index{common\_\-afx.h@{common\_\-afx.h}!ATan@{ATan}}
+\index{ATan@{ATan}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{ATan}]{\setlength{\rightskip}{0pt plus 5cm}float ATan (float {\em v})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_64a3766e9632b394265b661fd3ad1c67}
+
+
+
+
+Definition at line 170 of file common\_\-afx.h.\hypertarget{common__afx_8h_a76c333a8dfb1148d17cdbb72a6541af}{
+\index{common\_\-afx.h@{common\_\-afx.h}!ATan2@{ATan2}}
+\index{ATan2@{ATan2}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{ATan2}]{\setlength{\rightskip}{0pt plus 5cm}float ATan2 (float {\em y}, \/  float {\em x})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_a76c333a8dfb1148d17cdbb72a6541af}
+
+
+
+
+Definition at line 171 of file common\_\-afx.h.\hypertarget{common__afx_8h_4dca04762a53102f461e45e2c368dc59}{
+\index{common\_\-afx.h@{common\_\-afx.h}!Bezier3@{Bezier3}}
+\index{Bezier3@{Bezier3}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{Bezier3}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-T $>$ \_\-T Bezier3 (const \_\-T \& {\em v0}, \/  const \_\-T \& {\em cp1}, \/  const \_\-T \& {\em cp2}, \/  const \_\-T \& {\em v2}, \/  float {\em t})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_4dca04762a53102f461e45e2c368dc59}
+
+
+
+
+Definition at line 282 of file common\_\-afx.h.\hypertarget{common__afx_8h_5dd3cb8a1d3c9b552f314c2d475a25a2}{
+\index{common\_\-afx.h@{common\_\-afx.h}!Ceil@{Ceil}}
+\index{Ceil@{Ceil}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{Ceil}]{\setlength{\rightskip}{0pt plus 5cm}float Ceil (float {\em v})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_5dd3cb8a1d3c9b552f314c2d475a25a2}
+
+
+
+
+Definition at line 175 of file common\_\-afx.h.\hypertarget{common__afx_8h_7d665224bfbd26fbf37dab8360bdf352}{
+\index{common\_\-afx.h@{common\_\-afx.h}!Clamp@{Clamp}}
+\index{Clamp@{Clamp}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{Clamp}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-T $>$ \_\-T Clamp (const \_\-T \& {\em a}, \/  const \_\-T \& {\em min}, \/  const \_\-T \& {\em max})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_7d665224bfbd26fbf37dab8360bdf352}
+
+
+
+
+Definition at line 151 of file common\_\-afx.h.\hypertarget{common__afx_8h_ed3c0bce670160f89fca79b5d0de1a76}{
+\index{common\_\-afx.h@{common\_\-afx.h}!Cos@{Cos}}
+\index{Cos@{Cos}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{Cos}]{\setlength{\rightskip}{0pt plus 5cm}float Cos (float {\em theta})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_ed3c0bce670160f89fca79b5d0de1a76}
+
+
+
+
+Definition at line 168 of file common\_\-afx.h.\hypertarget{common__afx_8h_116293816763dfdfd39b4bc70c38b465}{
+\index{common\_\-afx.h@{common\_\-afx.h}!DegToRad@{DegToRad}}
+\index{DegToRad@{DegToRad}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{DegToRad}]{\setlength{\rightskip}{0pt plus 5cm}float DegToRad (float {\em deg})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_116293816763dfdfd39b4bc70c38b465}
+
+
+
+
+Definition at line 165 of file common\_\-afx.h.\hypertarget{common__afx_8h_1b74109bcede0e97a5d220760cbefb79}{
+\index{common\_\-afx.h@{common\_\-afx.h}!Exp@{Exp}}
+\index{Exp@{Exp}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{Exp}]{\setlength{\rightskip}{0pt plus 5cm}float Exp (float {\em v})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_1b74109bcede0e97a5d220760cbefb79}
+
+
+
+
+Definition at line 210 of file common\_\-afx.h.\hypertarget{common__afx_8h_47011226fb8cfe2fc14382b095dddb1a}{
+\index{common\_\-afx.h@{common\_\-afx.h}!FastVectorErase@{FastVectorErase}}
+\index{FastVectorErase@{FastVectorErase}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{FastVectorErase}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-T , class iterator $>$ void FastVectorErase (std::vector$<$ \_\-T $>$ \& {\em vec}, \/  iterator {\em iter})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_47011226fb8cfe2fc14382b095dddb1a}
+
+
+
+
+Definition at line 398 of file common\_\-afx.h.\hypertarget{common__afx_8h_22e9e0de4acb763b9ae4b973a2ce3820}{
+\index{common\_\-afx.h@{common\_\-afx.h}!FindPow2@{FindPow2}}
+\index{FindPow2@{FindPow2}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{FindPow2}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int FindPow2 (unsigned int {\em v})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_22e9e0de4acb763b9ae4b973a2ce3820}
+
+
+
+
+Definition at line 132 of file common\_\-afx.h.\hypertarget{common__afx_8h_d7752a7ed75d8ebf6dfa7fbdcca395ba}{
+\index{common\_\-afx.h@{common\_\-afx.h}!Floor@{Floor}}
+\index{Floor@{Floor}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{Floor}]{\setlength{\rightskip}{0pt plus 5cm}float Floor (float {\em v})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_d7752a7ed75d8ebf6dfa7fbdcca395ba}
+
+
+
+
+Definition at line 174 of file common\_\-afx.h.\hypertarget{common__afx_8h_542388ff3f7df4aaad4b3fedb44ce6a2}{
+\index{common\_\-afx.h@{common\_\-afx.h}!Fract@{Fract}}
+\index{Fract@{Fract}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{Fract}]{\setlength{\rightskip}{0pt plus 5cm}float Fract (float {\em v})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_542388ff3f7df4aaad4b3fedb44ce6a2}
+
+
+
+
+Definition at line 176 of file common\_\-afx.h.\hypertarget{common__afx_8h_4d00857d5248a0b5a194edace1607985}{
+\index{common\_\-afx.h@{common\_\-afx.h}!GetCharLenUTF8@{GetCharLenUTF8}}
+\index{GetCharLenUTF8@{GetCharLenUTF8}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{GetCharLenUTF8}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GetCharLenUTF8 (const char $\ast$ {\em chr})}}
+\label{common__afx_8h_4d00857d5248a0b5a194edace1607985}
+
+
+
+
+Definition at line 136 of file common\_\-afx.cpp.\hypertarget{common__afx_8h_9a7b34c49c5af703e8d7264477614bff}{
+\index{common\_\-afx.h@{common\_\-afx.h}!HashMem32@{HashMem32}}
+\index{HashMem32@{HashMem32}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{HashMem32}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int HashMem32 (const void $\ast$ {\em mem}, \/  unsigned int {\em size}, \/  unsigned int {\em hashStart} = {\tt 2166136261UL})}}
+\label{common__afx_8h_9a7b34c49c5af703e8d7264477614bff}
+
+
+
+
+Definition at line 160 of file common\_\-afx.cpp.\hypertarget{common__afx_8h_30e93740379715d701fadb007c3147a6}{
+\index{common\_\-afx.h@{common\_\-afx.h}!HashMem64@{HashMem64}}
+\index{HashMem64@{HashMem64}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{HashMem64}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf \_\-\_\-int64} HashMem64 (const void $\ast$ {\em mem}, \/  unsigned int {\em size}, \/  unsigned {\bf \_\-\_\-int64} {\em hashStart} = {\tt 14695981039346656037ULL})}}
+\label{common__afx_8h_30e93740379715d701fadb007c3147a6}
+
+
+
+
+Definition at line 179 of file common\_\-afx.cpp.\hypertarget{common__afx_8h_586cbe39b69be85e48e77b9082d9b863}{
+\index{common\_\-afx.h@{common\_\-afx.h}!InvSqrtFast@{InvSqrtFast}}
+\index{InvSqrtFast@{InvSqrtFast}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{InvSqrtFast}]{\setlength{\rightskip}{0pt plus 5cm}float InvSqrtFast (float {\em v})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_586cbe39b69be85e48e77b9082d9b863}
+
+
+
+
+Definition at line 191 of file common\_\-afx.h.\hypertarget{common__afx_8h_6a9bceba921c241fdf22470b4ebeb07a}{
+\index{common\_\-afx.h@{common\_\-afx.h}!IsNaN@{IsNaN}}
+\index{IsNaN@{IsNaN}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{IsNaN}]{\setlength{\rightskip}{0pt plus 5cm}bool IsNaN (float {\em v})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_6a9bceba921c241fdf22470b4ebeb07a}
+
+
+
+
+Definition at line 214 of file common\_\-afx.h.\hypertarget{common__afx_8h_57be1bf0723f638d0d40c91339bd6f05}{
+\index{common\_\-afx.h@{common\_\-afx.h}!IsPow2@{IsPow2}}
+\index{IsPow2@{IsPow2}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{IsPow2}]{\setlength{\rightskip}{0pt plus 5cm}bool IsPow2 (unsigned int {\em i})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_57be1bf0723f638d0d40c91339bd6f05}
+
+
+
+
+Definition at line 131 of file common\_\-afx.h.\hypertarget{common__afx_8h_e1fb23c1e592f53f89861e329acc843a}{
+\index{common\_\-afx.h@{common\_\-afx.h}!Lerp@{Lerp}}
+\index{Lerp@{Lerp}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{Lerp}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-T $>$ \_\-T Lerp (const \_\-T \& {\em v0}, \/  const \_\-T \& {\em v1}, \/  float {\em t})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_e1fb23c1e592f53f89861e329acc843a}
+
+
+
+
+Definition at line 277 of file common\_\-afx.h.\hypertarget{common__afx_8h_8b9271c5b1156867f41e4bff995849cb}{
+\index{common\_\-afx.h@{common\_\-afx.h}!Log@{Log}}
+\index{Log@{Log}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{Log}]{\setlength{\rightskip}{0pt plus 5cm}float Log (float {\em v})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_8b9271c5b1156867f41e4bff995849cb}
+
+
+
+
+Definition at line 178 of file common\_\-afx.h.\hypertarget{common__afx_8h_c4ed1d31e99d1fae9ba70d0eb0a48350}{
+\index{common\_\-afx.h@{common\_\-afx.h}!Log10@{Log10}}
+\index{Log10@{Log10}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{Log10}]{\setlength{\rightskip}{0pt plus 5cm}float Log10 (float {\em v})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_c4ed1d31e99d1fae9ba70d0eb0a48350}
+
+
+
+
+Definition at line 190 of file common\_\-afx.h.\hypertarget{common__afx_8h_47815fb7f86303e11030b58db0765240}{
+\index{common\_\-afx.h@{common\_\-afx.h}!Log2@{Log2}}
+\index{Log2@{Log2}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{Log2}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Log2 (unsigned int {\em v})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_47815fb7f86303e11030b58db0765240}
+
+
+
+
+Definition at line 180 of file common\_\-afx.h.\hypertarget{common__afx_8h_df309c61a344cf812c926af221641f24}{
+\index{common\_\-afx.h@{common\_\-afx.h}!Log2@{Log2}}
+\index{Log2@{Log2}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{Log2}]{\setlength{\rightskip}{0pt plus 5cm}float Log2 (float {\em v})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_df309c61a344cf812c926af221641f24}
+
+
+
+
+Definition at line 179 of file common\_\-afx.h.\hypertarget{common__afx_8h_dd09d155ffe827b203d3236b451752e7}{
+\index{common\_\-afx.h@{common\_\-afx.h}!Max@{Max}}
+\index{Max@{Max}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{Max}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-T $>$ \_\-T Max (const \_\-T \& {\em a}, \/  const \_\-T \& {\em b})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_dd09d155ffe827b203d3236b451752e7}
+
+
+
+
+Definition at line 148 of file common\_\-afx.h.\hypertarget{common__afx_8h_33921919086132106ca09666fcf7432a}{
+\index{common\_\-afx.h@{common\_\-afx.h}!Max3@{Max3}}
+\index{Max3@{Max3}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{Max3}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-T $>$ \_\-T Max3 (const \_\-T \& {\em a}, \/  const \_\-T \& {\em b}, \/  const \_\-T \& {\em c})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_33921919086132106ca09666fcf7432a}
+
+
+
+
+Definition at line 150 of file common\_\-afx.h.\hypertarget{common__afx_8h_21167a1e8b0403ea171eaad5adf40b41}{
+\index{common\_\-afx.h@{common\_\-afx.h}!MemCopy@{MemCopy}}
+\index{MemCopy@{MemCopy}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{MemCopy}]{\setlength{\rightskip}{0pt plus 5cm}void MemCopy (void $\ast$ {\em dst}, \/  const void $\ast$ {\em src}, \/  unsigned int {\em size})}}
+\label{common__afx_8h_21167a1e8b0403ea171eaad5adf40b41}
+
+
+
+
+Definition at line 398 of file common\_\-afx.cpp.\hypertarget{common__afx_8h_9f04579206286b6dc8c9708063450144}{
+\index{common\_\-afx.h@{common\_\-afx.h}!MemSet@{MemSet}}
+\index{MemSet@{MemSet}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{MemSet}]{\setlength{\rightskip}{0pt plus 5cm}void MemSet (void $\ast$ {\em dst}, \/  unsigned int {\em v}, \/  unsigned int {\em size})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_9f04579206286b6dc8c9708063450144}
+
+
+
+
+Definition at line 234 of file common\_\-afx.h.\hypertarget{common__afx_8h_0296e17691267defafdfde06589f50d5}{
+\index{common\_\-afx.h@{common\_\-afx.h}!Min@{Min}}
+\index{Min@{Min}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{Min}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-T $>$ \_\-T Min (const \_\-T \& {\em a}, \/  const \_\-T \& {\em b})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_0296e17691267defafdfde06589f50d5}
+
+
+
+
+Definition at line 147 of file common\_\-afx.h.\hypertarget{common__afx_8h_de0f1d8a58fa081cd90c9ee9c6077bf4}{
+\index{common\_\-afx.h@{common\_\-afx.h}!Min3@{Min3}}
+\index{Min3@{Min3}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{Min3}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-T $>$ \_\-T Min3 (const \_\-T \& {\em a}, \/  const \_\-T \& {\em b}, \/  const \_\-T \& {\em c})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_de0f1d8a58fa081cd90c9ee9c6077bf4}
+
+
+
+
+Definition at line 149 of file common\_\-afx.h.\hypertarget{common__afx_8h_58bd80811de61ba55f2a86d8a45e64fa}{
+\index{common\_\-afx.h@{common\_\-afx.h}!NextCharUTF8@{NextCharUTF8}}
+\index{NextCharUTF8@{NextCharUTF8}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{NextCharUTF8}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ NextCharUTF8 (const char $\ast$ {\em str})}}
+\label{common__afx_8h_58bd80811de61ba55f2a86d8a45e64fa}
+
+
+
+
+Definition at line 111 of file common\_\-afx.cpp.\hypertarget{common__afx_8h_d2a7f8fc89071d0291525bd907df0c91}{
+\index{common\_\-afx.h@{common\_\-afx.h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tstring}\& operator$<$$<$ ({\bf tstring} \& {\em s}, \/  unsigned int {\em f})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_d2a7f8fc89071d0291525bd907df0c91}
+
+
+
+
+Definition at line 162 of file common\_\-afx.h.\hypertarget{common__afx_8h_a5e26487036f1d66e2528220d94a0865}{
+\index{common\_\-afx.h@{common\_\-afx.h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tstring}\& operator$<$$<$ ({\bf tstring} \& {\em s}, \/  int {\em f})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_a5e26487036f1d66e2528220d94a0865}
+
+
+
+
+Definition at line 161 of file common\_\-afx.h.\hypertarget{common__afx_8h_38b85977546a616c96b494d4c6481297}{
+\index{common\_\-afx.h@{common\_\-afx.h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tstring}\& operator$<$$<$ ({\bf tstring} \& {\em s}, \/  float {\em f})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_38b85977546a616c96b494d4c6481297}
+
+
+
+
+Definition at line 160 of file common\_\-afx.h.\hypertarget{common__afx_8h_b6a31f24ba366e3f8086e7f4f73402b2}{
+\index{common\_\-afx.h@{common\_\-afx.h}!Pow@{Pow}}
+\index{Pow@{Pow}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{Pow}]{\setlength{\rightskip}{0pt plus 5cm}float Pow (float {\em v}, \/  float {\em exp})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_b6a31f24ba366e3f8086e7f4f73402b2}
+
+
+
+
+Definition at line 209 of file common\_\-afx.h.\hypertarget{common__afx_8h_02a3e34ecc7f2a48193151ae91a92434}{
+\index{common\_\-afx.h@{common\_\-afx.h}!RadToDeg@{RadToDeg}}
+\index{RadToDeg@{RadToDeg}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{RadToDeg}]{\setlength{\rightskip}{0pt plus 5cm}float RadToDeg (float {\em rad})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_02a3e34ecc7f2a48193151ae91a92434}
+
+
+
+
+Definition at line 166 of file common\_\-afx.h.\hypertarget{common__afx_8h_9a42048c76fe4753dc4fc63f08fb0c9a}{
+\index{common\_\-afx.h@{common\_\-afx.h}!Sign@{Sign}}
+\index{Sign@{Sign}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{Sign}]{\setlength{\rightskip}{0pt plus 5cm}float Sign (float {\em v})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_9a42048c76fe4753dc4fc63f08fb0c9a}
+
+
+
+
+Definition at line 213 of file common\_\-afx.h.\hypertarget{common__afx_8h_15c4437929569821a369c1f0df5ab3b5}{
+\index{common\_\-afx.h@{common\_\-afx.h}!Sin@{Sin}}
+\index{Sin@{Sin}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{Sin}]{\setlength{\rightskip}{0pt plus 5cm}float Sin (float {\em theta})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_15c4437929569821a369c1f0df5ab3b5}
+
+
+
+
+Definition at line 169 of file common\_\-afx.h.\hypertarget{common__afx_8h_733360b881690d74f0d299b9fab80897}{
+\index{common\_\-afx.h@{common\_\-afx.h}!SolveQuadratic@{SolveQuadratic}}
+\index{SolveQuadratic@{SolveQuadratic}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{SolveQuadratic}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-T $>$ void SolveQuadratic (float \& {\em posInt}, \/  float \& {\em negInt}, \/  const \_\-T \& {\em a}, \/  const \_\-T \& {\em b}, \/  const \_\-T \& {\em c})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_733360b881690d74f0d299b9fab80897}
+
+
+
+
+Definition at line 225 of file common\_\-afx.h.\hypertarget{common__afx_8h_5de02b3008ee828e87118a8f52780e06}{
+\index{common\_\-afx.h@{common\_\-afx.h}!SPrintF@{SPrintF}}
+\index{SPrintF@{SPrintF}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{SPrintF}]{\setlength{\rightskip}{0pt plus 5cm}void SPrintF ({\bf tstring} \& {\em out}, \/  const char $\ast$ {\em fmt}, \/   {\em ...})}}
+\label{common__afx_8h_5de02b3008ee828e87118a8f52780e06}
+
+
+
+
+Definition at line 93 of file common\_\-afx.cpp.\hypertarget{common__afx_8h_9443605a3554459dd5144f28f698d16d}{
+\index{common\_\-afx.h@{common\_\-afx.h}!Sqr@{Sqr}}
+\index{Sqr@{Sqr}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{Sqr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-T $>$ \_\-T Sqr (const \_\-T \& {\em v})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_9443605a3554459dd5144f28f698d16d}
+
+
+
+
+Definition at line 157 of file common\_\-afx.h.\hypertarget{common__afx_8h_28313dfeda7c503b70ae96a4e3ab1bc3}{
+\index{common\_\-afx.h@{common\_\-afx.h}!Sqrt@{Sqrt}}
+\index{Sqrt@{Sqrt}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{Sqrt}]{\setlength{\rightskip}{0pt plus 5cm}float Sqrt (float {\em v})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_28313dfeda7c503b70ae96a4e3ab1bc3}
+
+
+
+
+Definition at line 177 of file common\_\-afx.h.\hypertarget{common__afx_8h_da03542675b37e7bc426226a6101185b}{
+\index{common\_\-afx.h@{common\_\-afx.h}!SqrtD@{SqrtD}}
+\index{SqrtD@{SqrtD}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{SqrtD}]{\setlength{\rightskip}{0pt plus 5cm}double SqrtD (double {\em v})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_da03542675b37e7bc426226a6101185b}
+
+
+
+
+Definition at line 216 of file common\_\-afx.h.\hypertarget{common__afx_8h_d6d35eeb3a4a81953b19438d0eb763b4}{
+\index{common\_\-afx.h@{common\_\-afx.h}!StrLenUTF8@{StrLenUTF8}}
+\index{StrLenUTF8@{StrLenUTF8}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{StrLenUTF8}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t StrLenUTF8 (const char $\ast$ {\em str})}}
+\label{common__afx_8h_d6d35eeb3a4a81953b19438d0eb763b4}
+
+
+
+
+Definition at line 103 of file common\_\-afx.cpp.\hypertarget{common__afx_8h_eaed719a9e4f4c1c3268e57ffe93da89}{
+\index{common\_\-afx.h@{common\_\-afx.h}!StrTokenize@{StrTokenize}}
+\index{StrTokenize@{StrTokenize}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{StrTokenize}]{\setlength{\rightskip}{0pt plus 5cm}void StrTokenize ({\bf TokenContainer} \& {\em tokens}, \/  const char $\ast$ {\em str})}}
+\label{common__afx_8h_eaed719a9e4f4c1c3268e57ffe93da89}
+
+
+
+
+Definition at line 603 of file common\_\-afx.cpp.\hypertarget{common__afx_8h_a3e9003e5e1c9d89db20dd1768b1788e}{
+\index{common\_\-afx.h@{common\_\-afx.h}!StrToLower@{StrToLower}}
+\index{StrToLower@{StrToLower}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{StrToLower}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tstring}\& StrToLower ({\bf tstring} \& {\em str})}}
+\label{common__afx_8h_a3e9003e5e1c9d89db20dd1768b1788e}
+
+
+
+
+Definition at line 626 of file common\_\-afx.cpp.\hypertarget{common__afx_8h_400f1491dc09805bdbb254cb258e7b41}{
+\index{common\_\-afx.h@{common\_\-afx.h}!Swap@{Swap}}
+\index{Swap@{Swap}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{Swap}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-T $>$ void Swap (\_\-T \& {\em a}, \/  \_\-T \& {\em b})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_400f1491dc09805bdbb254cb258e7b41}
+
+
+
+
+Definition at line 156 of file common\_\-afx.h.\hypertarget{common__afx_8h_30d55f5ec21ae390b0ecc55cc21db571}{
+\index{common\_\-afx.h@{common\_\-afx.h}!Tan@{Tan}}
+\index{Tan@{Tan}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{Tan}]{\setlength{\rightskip}{0pt plus 5cm}float Tan (float {\em theta})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{common__afx_8h_30d55f5ec21ae390b0ecc55cc21db571}
+
+
+
+
+Definition at line 167 of file common\_\-afx.h.\hypertarget{common__afx_8h_a38123a381fda4eb71767e320a1331d1}{
+\index{common\_\-afx.h@{common\_\-afx.h}!TempAlloc@{TempAlloc}}
+\index{TempAlloc@{TempAlloc}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{TempAlloc}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ TempAlloc (unsigned int {\em size})}}
+\label{common__afx_8h_a38123a381fda4eb71767e320a1331d1}
+
+
+
+
+Definition at line 344 of file common\_\-afx.cpp.\hypertarget{common__afx_8h_4f8b297dfd37bb5e5081041d840d19cf}{
+\index{common\_\-afx.h@{common\_\-afx.h}!TempFree@{TempFree}}
+\index{TempFree@{TempFree}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{TempFree}]{\setlength{\rightskip}{0pt plus 5cm}void TempFree (void $\ast$ {\em mem})}}
+\label{common__afx_8h_4f8b297dfd37bb5e5081041d840d19cf}
+
+
+
+
+Definition at line 355 of file common\_\-afx.cpp.\hypertarget{common__afx_8h_c415616c8d5f1df71308de030ffafe10}{
+\index{common\_\-afx.h@{common\_\-afx.h}!VSPrintF@{VSPrintF}}
+\index{VSPrintF@{VSPrintF}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{VSPrintF}]{\setlength{\rightskip}{0pt plus 5cm}void VSPrintF ({\bf tstring} \& {\em out}, \/  const char $\ast$ {\em fmt}, \/  va\_\-list {\em marker})}}
+\label{common__afx_8h_c415616c8d5f1df71308de030ffafe10}
+
+
+
+
+Definition at line 39 of file common\_\-afx.cpp.
+
+\subsection{Variable Documentation}
+\hypertarget{common__afx_8h_b0099a1f90d3873033a53daa9f40c67b}{
+\index{common\_\-afx.h@{common\_\-afx.h}!HandleError@{HandleError}}
+\index{HandleError@{HandleError}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{HandleError}]{\setlength{\rightskip}{0pt plus 5cm}void( $\ast$ {\bf HandleError})(const char $\ast$fmt,...)}}
+\label{common__afx_8h_b0099a1f90d3873033a53daa9f40c67b}
+
+
+\hypertarget{common__afx_8h_9a9db7e5564db86ade0e8b792ca2320c}{
+\index{common\_\-afx.h@{common\_\-afx.h}!PrintF@{PrintF}}
+\index{PrintF@{PrintF}!common_afx.h@{common\_\-afx.h}}
+\subsubsection[{PrintF}]{\setlength{\rightskip}{0pt plus 5cm}int( $\ast$ {\bf PrintF})(const char $\ast$fmt,...)}}
+\label{common__afx_8h_9a9db7e5564db86ade0e8b792ca2320c}
+
+

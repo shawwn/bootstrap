@@ -1,0 +1,126 @@
+\hypertarget{_t_main_8cpp}{
+\section{C:/Bootstrap/ProjectBX/Engine/Test/TMain.cpp File Reference}
+\label{_t_main_8cpp}\index{C:/Bootstrap/ProjectBX/Engine/Test/TMain.cpp@{C:/Bootstrap/ProjectBX/Engine/Test/TMain.cpp}}
+}
+{\tt \#include \char`\"{}test\_\-afx.h\char`\"{}}\par
+{\tt \#include $<$windows.h$>$}\par
+{\tt \#include $<$mmsystem.h$>$}\par
+{\tt \#include \char`\"{}TGeomCompress.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrPolygonNode.h\char`\"{}}\par
+{\tt \#include \char`\"{}UHuffman.h\char`\"{}}\par
+{\tt \#include \char`\"{}URand.h\char`\"{}}\par
+{\tt \#include \char`\"{}RFileMgr.h\char`\"{}}\par
+{\tt \#include \char`\"{}UExprMgr.h\char`\"{}}\par
+{\tt \#include \char`\"{}RRsrcMgr.h\char`\"{}}\par
+{\tt \#include \char`\"{}GLSubsys.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrSubsys.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrCamera.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrScene.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrUTLoader.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrUTAtlas.h\char`\"{}}\par
+{\tt \#include \char`\"{}EdImportDAE.h\char`\"{}}\par
+{\tt \#include \char`\"{}MSVD.h\char`\"{}}\par
+{\tt \#include \char`\"{}UFixed.h\char`\"{}}\par
+{\tt \#include \char`\"{}Compress.h\char`\"{}}\par
+{\tt \#include \char`\"{}FSDiskServ.h\char`\"{}}\par
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \hyperlink{_t_main_8cpp_50267f06977d60b462f43ad330ffcf33}{WINDOW\_\-CLASS\_\-NAME}~\char`\"{}TestApp\_\-GLWindow\char`\"{}
+\item 
+\#define \hyperlink{_t_main_8cpp_3adf7b7b13572f2baf3379a8f2f4220a}{WINDOW\_\-TITLE}~\char`\"{}TestApp v1.0\char`\"{}
+\item 
+\#define \hyperlink{_t_main_8cpp_e8a6a989aeb359370ce72bc7076c8093}{KEY\_\-MOVE\_\-LEFT}~0x01
+\item 
+\#define \hyperlink{_t_main_8cpp_e688d0367b52a1c6160fac05a08c5ba4}{KEY\_\-MOVE\_\-RIGHT}~0x02
+\item 
+\#define \hyperlink{_t_main_8cpp_00e4de0eea897e5b5ec532d8e4ebd975}{KEY\_\-MOVE\_\-FORWARD}~0x04
+\item 
+\#define \hyperlink{_t_main_8cpp_f5cd5a1bb919b8c6434b16d422ce73c4}{KEY\_\-MOVE\_\-BACKWARD}~0x08
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+int \_\-\_\-stdcall \hyperlink{_t_main_8cpp_4d9d796e1a47510d7c521afe05d4e8d3}{WinMain} (HINSTANCE hInst, HINSTANCE hPrev, LPSTR lpCmdLine, int nCmdShow)
+\item 
+LRESULT CALLBACK \hyperlink{_t_main_8cpp_733cb4cb845b13dea6b1b6a7e3ceec4e}{WindowProc} (HWND window, UINT message, WPARAM wparam, LPARAM lparam)
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_t_main_8cpp_f5cd5a1bb919b8c6434b16d422ce73c4}{
+\index{TMain.cpp@{TMain.cpp}!KEY\_\-MOVE\_\-BACKWARD@{KEY\_\-MOVE\_\-BACKWARD}}
+\index{KEY\_\-MOVE\_\-BACKWARD@{KEY\_\-MOVE\_\-BACKWARD}!TMain.cpp@{TMain.cpp}}
+\subsubsection[{KEY\_\-MOVE\_\-BACKWARD}]{\setlength{\rightskip}{0pt plus 5cm}\#define KEY\_\-MOVE\_\-BACKWARD~0x08}}
+\label{_t_main_8cpp_f5cd5a1bb919b8c6434b16d422ce73c4}
+
+
+
+
+Definition at line 39 of file TMain.cpp.\hypertarget{_t_main_8cpp_00e4de0eea897e5b5ec532d8e4ebd975}{
+\index{TMain.cpp@{TMain.cpp}!KEY\_\-MOVE\_\-FORWARD@{KEY\_\-MOVE\_\-FORWARD}}
+\index{KEY\_\-MOVE\_\-FORWARD@{KEY\_\-MOVE\_\-FORWARD}!TMain.cpp@{TMain.cpp}}
+\subsubsection[{KEY\_\-MOVE\_\-FORWARD}]{\setlength{\rightskip}{0pt plus 5cm}\#define KEY\_\-MOVE\_\-FORWARD~0x04}}
+\label{_t_main_8cpp_00e4de0eea897e5b5ec532d8e4ebd975}
+
+
+
+
+Definition at line 38 of file TMain.cpp.\hypertarget{_t_main_8cpp_e8a6a989aeb359370ce72bc7076c8093}{
+\index{TMain.cpp@{TMain.cpp}!KEY\_\-MOVE\_\-LEFT@{KEY\_\-MOVE\_\-LEFT}}
+\index{KEY\_\-MOVE\_\-LEFT@{KEY\_\-MOVE\_\-LEFT}!TMain.cpp@{TMain.cpp}}
+\subsubsection[{KEY\_\-MOVE\_\-LEFT}]{\setlength{\rightskip}{0pt plus 5cm}\#define KEY\_\-MOVE\_\-LEFT~0x01}}
+\label{_t_main_8cpp_e8a6a989aeb359370ce72bc7076c8093}
+
+
+
+
+Definition at line 36 of file TMain.cpp.\hypertarget{_t_main_8cpp_e688d0367b52a1c6160fac05a08c5ba4}{
+\index{TMain.cpp@{TMain.cpp}!KEY\_\-MOVE\_\-RIGHT@{KEY\_\-MOVE\_\-RIGHT}}
+\index{KEY\_\-MOVE\_\-RIGHT@{KEY\_\-MOVE\_\-RIGHT}!TMain.cpp@{TMain.cpp}}
+\subsubsection[{KEY\_\-MOVE\_\-RIGHT}]{\setlength{\rightskip}{0pt plus 5cm}\#define KEY\_\-MOVE\_\-RIGHT~0x02}}
+\label{_t_main_8cpp_e688d0367b52a1c6160fac05a08c5ba4}
+
+
+
+
+Definition at line 37 of file TMain.cpp.\hypertarget{_t_main_8cpp_50267f06977d60b462f43ad330ffcf33}{
+\index{TMain.cpp@{TMain.cpp}!WINDOW\_\-CLASS\_\-NAME@{WINDOW\_\-CLASS\_\-NAME}}
+\index{WINDOW\_\-CLASS\_\-NAME@{WINDOW\_\-CLASS\_\-NAME}!TMain.cpp@{TMain.cpp}}
+\subsubsection[{WINDOW\_\-CLASS\_\-NAME}]{\setlength{\rightskip}{0pt plus 5cm}\#define WINDOW\_\-CLASS\_\-NAME~\char`\"{}TestApp\_\-GLWindow\char`\"{}}}
+\label{_t_main_8cpp_50267f06977d60b462f43ad330ffcf33}
+
+
+
+
+Definition at line 33 of file TMain.cpp.\hypertarget{_t_main_8cpp_3adf7b7b13572f2baf3379a8f2f4220a}{
+\index{TMain.cpp@{TMain.cpp}!WINDOW\_\-TITLE@{WINDOW\_\-TITLE}}
+\index{WINDOW\_\-TITLE@{WINDOW\_\-TITLE}!TMain.cpp@{TMain.cpp}}
+\subsubsection[{WINDOW\_\-TITLE}]{\setlength{\rightskip}{0pt plus 5cm}\#define WINDOW\_\-TITLE~\char`\"{}TestApp v1.0\char`\"{}}}
+\label{_t_main_8cpp_3adf7b7b13572f2baf3379a8f2f4220a}
+
+
+
+
+Definition at line 34 of file TMain.cpp.
+
+\subsection{Function Documentation}
+\hypertarget{_t_main_8cpp_733cb4cb845b13dea6b1b6a7e3ceec4e}{
+\index{TMain.cpp@{TMain.cpp}!WindowProc@{WindowProc}}
+\index{WindowProc@{WindowProc}!TMain.cpp@{TMain.cpp}}
+\subsubsection[{WindowProc}]{\setlength{\rightskip}{0pt plus 5cm}LRESULT CALLBACK WindowProc (HWND {\em window}, \/  UINT {\em message}, \/  WPARAM {\em wparam}, \/  LPARAM {\em lparam})}}
+\label{_t_main_8cpp_733cb4cb845b13dea6b1b6a7e3ceec4e}
+
+
+
+
+Definition at line 254 of file TMain.cpp.\hypertarget{_t_main_8cpp_4d9d796e1a47510d7c521afe05d4e8d3}{
+\index{TMain.cpp@{TMain.cpp}!WinMain@{WinMain}}
+\index{WinMain@{WinMain}!TMain.cpp@{TMain.cpp}}
+\subsubsection[{WinMain}]{\setlength{\rightskip}{0pt plus 5cm}int \_\-\_\-stdcall WinMain (HINSTANCE {\em hInst}, \/  HINSTANCE {\em hPrev}, \/  LPSTR {\em lpCmdLine}, \/  int {\em nCmdShow})}}
+\label{_t_main_8cpp_4d9d796e1a47510d7c521afe05d4e8d3}
+
+
+
+
+Definition at line 66 of file TMain.cpp.

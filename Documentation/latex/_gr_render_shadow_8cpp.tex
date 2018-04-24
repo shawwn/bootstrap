@@ -1,0 +1,87 @@
+\hypertarget{_gr_render_shadow_8cpp}{
+\section{C:/Bootstrap/ProjectBX/Engine/Graphics/GrRenderShadow.cpp File Reference}
+\label{_gr_render_shadow_8cpp}\index{C:/Bootstrap/ProjectBX/Engine/Graphics/GrRenderShadow.cpp@{C:/Bootstrap/ProjectBX/Engine/Graphics/GrRenderShadow.cpp}}
+}
+{\tt \#include \char`\"{}graphics\_\-afx.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrRenderShadow.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrTextureMgr.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrTextureBase.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrRenderTargetMgr.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrRenderTarget.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrRenderbuffer.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrRenderUtil.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrShaderMgr.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrShader.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrCamera.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrImage.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrLight.h\char`\"{}}\par
+{\tt \#include \char`\"{}GLSubsys.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrTypes.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrUtil.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrRenderList.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrMaterial.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrMaterialPass.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrMeshInst.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrStreamingIB.h\char`\"{}}\par
+{\tt \#include \char`\"{}MQuat.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrDebug.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrVirtualShadowSegmentSet.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrMeshVB.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrMeshIB.h\char`\"{}}\par
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \hyperlink{_gr_render_shadow_8cpp_a31fd311bf7d2f2a23f8655fdccdef60}{SHADOW\_\-VERTEX\_\-COMPONENTS\_\-ALPHA}
+\item 
+\#define \hyperlink{_gr_render_shadow_8cpp_5cb8fd999cebc545d56ad018b6115ec0}{DEPTH\_\-MERGE\_\-SAMPLER\_\-LAYER0}~0
+\item 
+\#define \hyperlink{_gr_render_shadow_8cpp_ee75da902e20dca67408a3c226c02ad3}{DEPTH\_\-MERGE\_\-SAMPLER\_\-LAYER1}~1
+\item 
+\#define \hyperlink{_gr_render_shadow_8cpp_141f7c5f8376a333b10d7657dad19d62}{DEPTH\_\-PEEL\_\-SAMPLER\_\-TOPLAYER}~15
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_gr_render_shadow_8cpp_5cb8fd999cebc545d56ad018b6115ec0}{
+\index{GrRenderShadow.cpp@{GrRenderShadow.cpp}!DEPTH\_\-MERGE\_\-SAMPLER\_\-LAYER0@{DEPTH\_\-MERGE\_\-SAMPLER\_\-LAYER0}}
+\index{DEPTH\_\-MERGE\_\-SAMPLER\_\-LAYER0@{DEPTH\_\-MERGE\_\-SAMPLER\_\-LAYER0}!GrRenderShadow.cpp@{GrRenderShadow.cpp}}
+\subsubsection[{DEPTH\_\-MERGE\_\-SAMPLER\_\-LAYER0}]{\setlength{\rightskip}{0pt plus 5cm}\#define DEPTH\_\-MERGE\_\-SAMPLER\_\-LAYER0~0}}
+\label{_gr_render_shadow_8cpp_5cb8fd999cebc545d56ad018b6115ec0}
+
+
+
+
+Definition at line 41 of file GrRenderShadow.cpp.\hypertarget{_gr_render_shadow_8cpp_ee75da902e20dca67408a3c226c02ad3}{
+\index{GrRenderShadow.cpp@{GrRenderShadow.cpp}!DEPTH\_\-MERGE\_\-SAMPLER\_\-LAYER1@{DEPTH\_\-MERGE\_\-SAMPLER\_\-LAYER1}}
+\index{DEPTH\_\-MERGE\_\-SAMPLER\_\-LAYER1@{DEPTH\_\-MERGE\_\-SAMPLER\_\-LAYER1}!GrRenderShadow.cpp@{GrRenderShadow.cpp}}
+\subsubsection[{DEPTH\_\-MERGE\_\-SAMPLER\_\-LAYER1}]{\setlength{\rightskip}{0pt plus 5cm}\#define DEPTH\_\-MERGE\_\-SAMPLER\_\-LAYER1~1}}
+\label{_gr_render_shadow_8cpp_ee75da902e20dca67408a3c226c02ad3}
+
+
+
+
+Definition at line 42 of file GrRenderShadow.cpp.\hypertarget{_gr_render_shadow_8cpp_141f7c5f8376a333b10d7657dad19d62}{
+\index{GrRenderShadow.cpp@{GrRenderShadow.cpp}!DEPTH\_\-PEEL\_\-SAMPLER\_\-TOPLAYER@{DEPTH\_\-PEEL\_\-SAMPLER\_\-TOPLAYER}}
+\index{DEPTH\_\-PEEL\_\-SAMPLER\_\-TOPLAYER@{DEPTH\_\-PEEL\_\-SAMPLER\_\-TOPLAYER}!GrRenderShadow.cpp@{GrRenderShadow.cpp}}
+\subsubsection[{DEPTH\_\-PEEL\_\-SAMPLER\_\-TOPLAYER}]{\setlength{\rightskip}{0pt plus 5cm}\#define DEPTH\_\-PEEL\_\-SAMPLER\_\-TOPLAYER~15}}
+\label{_gr_render_shadow_8cpp_141f7c5f8376a333b10d7657dad19d62}
+
+
+
+
+Definition at line 43 of file GrRenderShadow.cpp.\hypertarget{_gr_render_shadow_8cpp_a31fd311bf7d2f2a23f8655fdccdef60}{
+\index{GrRenderShadow.cpp@{GrRenderShadow.cpp}!SHADOW\_\-VERTEX\_\-COMPONENTS\_\-ALPHA@{SHADOW\_\-VERTEX\_\-COMPONENTS\_\-ALPHA}}
+\index{SHADOW\_\-VERTEX\_\-COMPONENTS\_\-ALPHA@{SHADOW\_\-VERTEX\_\-COMPONENTS\_\-ALPHA}!GrRenderShadow.cpp@{GrRenderShadow.cpp}}
+\subsubsection[{SHADOW\_\-VERTEX\_\-COMPONENTS\_\-ALPHA}]{\setlength{\rightskip}{0pt plus 5cm}\#define SHADOW\_\-VERTEX\_\-COMPONENTS\_\-ALPHA}}
+\label{_gr_render_shadow_8cpp_a31fd311bf7d2f2a23f8655fdccdef60}
+
+
+\textbf{Value:}
+
+\begin{Code}\begin{verbatim}( GR_ATTRIB_POSITION_MASK | GR_ATTRIB_TANGENT_MASK | GR_ATTRIB_NORMAL_MASK | \
+                                                                                  GR_ATTRIB_BINORMAL_MASK | GR_ATTRIB_TEXCOORD_MASK )
+\end{verbatim}
+\end{Code}
+
+
+Definition at line 39 of file GrRenderShadow.cpp.

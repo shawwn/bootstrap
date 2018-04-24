@@ -1,0 +1,217 @@
+\hypertarget{_gr_d_x_t_8cpp}{
+\section{C:/Bootstrap/ProjectBX/Engine/Graphics/GrDXT.cpp File Reference}
+\label{_gr_d_x_t_8cpp}\index{C:/Bootstrap/ProjectBX/Engine/Graphics/GrDXT.cpp@{C:/Bootstrap/ProjectBX/Engine/Graphics/GrDXT.cpp}}
+}
+{\tt \#include \char`\"{}graphics\_\-afx.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrDXT.h\char`\"{}}\par
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \hyperlink{_gr_d_x_t_8cpp_d70aa2a8dfa4bb16bcf276525ed8f28e}{COLORBOX\_\-INSET\_\-SHIFT}~4
+\item 
+\#define \hyperlink{_gr_d_x_t_8cpp_2ed897de9b16b2d8df4cfb20dff37c31}{ALIGN\_\-16}~\_\-\_\-declspec( align( 16 ) )
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+void \hyperlink{_gr_d_x_t_8cpp_ea79e51a48321341147a6941296e88b1}{Extract4x4} (unsigned int $\ast$block, unsigned int $\ast$\hyperlink{glext__bak_8h_72e0fdf0f845ded60b1fada9e9195cd7}{src}, unsigned int srcWidth)
+\item 
+void \hyperlink{_gr_d_x_t_8cpp_07b96e0ea41b877ec445e7709162c6ca}{Extract4x4BGR} (unsigned char $\ast$block, unsigned char $\ast$\hyperlink{glext__bak_8h_72e0fdf0f845ded60b1fada9e9195cd7}{src}, unsigned int srcStride)
+\item 
+void \hyperlink{_gr_d_x_t_8cpp_b305a36de9037f74db50d680889c5219}{Extract4x4XY1} (unsigned char $\ast$block, unsigned char $\ast$\hyperlink{glext__bak_8h_72e0fdf0f845ded60b1fada9e9195cd7}{src}, unsigned int srcStride)
+\item 
+void \hyperlink{_gr_d_x_t_8cpp_1fdb75290722c62bee98e5c5074a0953}{MinMax} (unsigned char $\ast$min, unsigned char $\ast$max, unsigned char $\ast$block)
+\item 
+int \hyperlink{_gr_d_x_t_8cpp_594351b0aeb50d8e2917e00c382806b0}{ColorDistSqr} (unsigned char $\ast$color0, unsigned char $\ast$color1)
+\item 
+unsigned short \hyperlink{_gr_d_x_t_8cpp_a1ff9abbb8b314db2e2f2448081d4ae4}{ColorTo565} (const unsigned char $\ast$\hyperlink{glext_8h_3ea846f998d64f079b86052b6c4193a8}{color})
+\item 
+void \hyperlink{_gr_d_x_t_8cpp_2718b289e2a29c0b65f797943e308378}{CompressBlockBGR} (unsigned int $\ast$dest, unsigned char $\ast$block, unsigned char $\ast$min, unsigned char $\ast$max)
+\item 
+void \hyperlink{_gr_d_x_t_8cpp_f52d934a19e6d8cbe1f6bb4be63e2ce3}{CompressBlockAlpha} (unsigned int $\ast$dest, unsigned char $\ast$block, unsigned char $\ast$min, unsigned char $\ast$max)
+\item 
+unsigned int \hyperlink{_gr_d_x_t_8cpp_b7a13663aedeac66caf6543f6133bd8e}{CalcImageSizeDXT1} (unsigned int \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, unsigned int \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height})
+\item 
+unsigned int \hyperlink{_gr_d_x_t_8cpp_a19404b9b0e18bf7dd6568829478282a}{CalcImageSizeDXT5} (unsigned int \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, unsigned int \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height})
+\item 
+void \hyperlink{_gr_d_x_t_8cpp_be92fad224c6ac43e6b53fcc6a003a81}{CompressDXT1} (unsigned int $\ast$\hyperlink{glext__bak_8h_92034251bfd455d524a9b5610cddba00}{dst}, unsigned int \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, unsigned int \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height}, void $\ast$\hyperlink{glext__bak_8h_72e0fdf0f845ded60b1fada9e9195cd7}{src})
+\item 
+void \hyperlink{_gr_d_x_t_8cpp_8758097783ede2ba1339749cc90e3f55}{CompressDXT1BGR} (unsigned int $\ast$\hyperlink{glext__bak_8h_92034251bfd455d524a9b5610cddba00}{dst}, unsigned int \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, unsigned int \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height}, void $\ast$\hyperlink{glext__bak_8h_72e0fdf0f845ded60b1fada9e9195cd7}{src})
+\item 
+void \hyperlink{_gr_d_x_t_8cpp_4382e6418d4cb2a01b1df61a72d889f3}{CompressDXT5} (unsigned int $\ast$\hyperlink{glext__bak_8h_92034251bfd455d524a9b5610cddba00}{dst}, unsigned int \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, unsigned int \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height}, void $\ast$\hyperlink{glext__bak_8h_72e0fdf0f845ded60b1fada9e9195cd7}{src})
+\item 
+void \hyperlink{_gr_d_x_t_8cpp_fa4a392d3ebdddaddcee0f63639c13e3}{CompressDXT5XY1} (unsigned int $\ast$\hyperlink{glext__bak_8h_92034251bfd455d524a9b5610cddba00}{dst}, unsigned int \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, unsigned int \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height}, void $\ast$\hyperlink{glext__bak_8h_72e0fdf0f845ded60b1fada9e9195cd7}{src})
+\item 
+void \hyperlink{_gr_d_x_t_8cpp_9367b26f9770131cfe1d59ccf55bd07f}{FillDXT1} (void $\ast$\hyperlink{glext__bak_8h_92034251bfd455d524a9b5610cddba00}{dst}, unsigned int \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, unsigned int \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height}, unsigned char $\ast$bgrxColor)
+\item 
+void \hyperlink{_gr_d_x_t_8cpp_ddda053009cd1ebfe0f8c9ea17580094}{FillDXT5} (void $\ast$\hyperlink{glext__bak_8h_92034251bfd455d524a9b5610cddba00}{dst}, unsigned int \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, unsigned int \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height}, unsigned char $\ast$bgraColor)
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_gr_d_x_t_8cpp_2ed897de9b16b2d8df4cfb20dff37c31}{
+\index{GrDXT.cpp@{GrDXT.cpp}!ALIGN\_\-16@{ALIGN\_\-16}}
+\index{ALIGN\_\-16@{ALIGN\_\-16}!GrDXT.cpp@{GrDXT.cpp}}
+\subsubsection[{ALIGN\_\-16}]{\setlength{\rightskip}{0pt plus 5cm}\#define ALIGN\_\-16~\_\-\_\-declspec( align( 16 ) )}}
+\label{_gr_d_x_t_8cpp_2ed897de9b16b2d8df4cfb20dff37c31}
+
+
+
+
+Definition at line 32 of file GrDXT.cpp.\hypertarget{_gr_d_x_t_8cpp_d70aa2a8dfa4bb16bcf276525ed8f28e}{
+\index{GrDXT.cpp@{GrDXT.cpp}!COLORBOX\_\-INSET\_\-SHIFT@{COLORBOX\_\-INSET\_\-SHIFT}}
+\index{COLORBOX\_\-INSET\_\-SHIFT@{COLORBOX\_\-INSET\_\-SHIFT}!GrDXT.cpp@{GrDXT.cpp}}
+\subsubsection[{COLORBOX\_\-INSET\_\-SHIFT}]{\setlength{\rightskip}{0pt plus 5cm}\#define COLORBOX\_\-INSET\_\-SHIFT~4}}
+\label{_gr_d_x_t_8cpp_d70aa2a8dfa4bb16bcf276525ed8f28e}
+
+
+
+
+Definition at line 19 of file GrDXT.cpp.
+
+\subsection{Function Documentation}
+\hypertarget{_gr_d_x_t_8cpp_b7a13663aedeac66caf6543f6133bd8e}{
+\index{GrDXT.cpp@{GrDXT.cpp}!CalcImageSizeDXT1@{CalcImageSizeDXT1}}
+\index{CalcImageSizeDXT1@{CalcImageSizeDXT1}!GrDXT.cpp@{GrDXT.cpp}}
+\subsubsection[{CalcImageSizeDXT1}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int CalcImageSizeDXT1 (unsigned int {\em width}, \/  unsigned int {\em height})}}
+\label{_gr_d_x_t_8cpp_b7a13663aedeac66caf6543f6133bd8e}
+
+
+
+
+Definition at line 39 of file GrDXT.cpp.\hypertarget{_gr_d_x_t_8cpp_a19404b9b0e18bf7dd6568829478282a}{
+\index{GrDXT.cpp@{GrDXT.cpp}!CalcImageSizeDXT5@{CalcImageSizeDXT5}}
+\index{CalcImageSizeDXT5@{CalcImageSizeDXT5}!GrDXT.cpp@{GrDXT.cpp}}
+\subsubsection[{CalcImageSizeDXT5}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int CalcImageSizeDXT5 (unsigned int {\em width}, \/  unsigned int {\em height})}}
+\label{_gr_d_x_t_8cpp_a19404b9b0e18bf7dd6568829478282a}
+
+
+
+
+Definition at line 48 of file GrDXT.cpp.\hypertarget{_gr_d_x_t_8cpp_594351b0aeb50d8e2917e00c382806b0}{
+\index{GrDXT.cpp@{GrDXT.cpp}!ColorDistSqr@{ColorDistSqr}}
+\index{ColorDistSqr@{ColorDistSqr}!GrDXT.cpp@{GrDXT.cpp}}
+\subsubsection[{ColorDistSqr}]{\setlength{\rightskip}{0pt plus 5cm}int ColorDistSqr (unsigned char $\ast$ {\em color0}, \/  unsigned char $\ast$ {\em color1})}}
+\label{_gr_d_x_t_8cpp_594351b0aeb50d8e2917e00c382806b0}
+
+
+
+
+Definition at line 347 of file GrDXT.cpp.\hypertarget{_gr_d_x_t_8cpp_a1ff9abbb8b314db2e2f2448081d4ae4}{
+\index{GrDXT.cpp@{GrDXT.cpp}!ColorTo565@{ColorTo565}}
+\index{ColorTo565@{ColorTo565}!GrDXT.cpp@{GrDXT.cpp}}
+\subsubsection[{ColorTo565}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short ColorTo565 (const unsigned char $\ast$ {\em color})}}
+\label{_gr_d_x_t_8cpp_a1ff9abbb8b314db2e2f2448081d4ae4}
+
+
+
+
+Definition at line 355 of file GrDXT.cpp.\hypertarget{_gr_d_x_t_8cpp_f52d934a19e6d8cbe1f6bb4be63e2ce3}{
+\index{GrDXT.cpp@{GrDXT.cpp}!CompressBlockAlpha@{CompressBlockAlpha}}
+\index{CompressBlockAlpha@{CompressBlockAlpha}!GrDXT.cpp@{GrDXT.cpp}}
+\subsubsection[{CompressBlockAlpha}]{\setlength{\rightskip}{0pt plus 5cm}void CompressBlockAlpha (unsigned int $\ast$ {\em dest}, \/  unsigned char $\ast$ {\em block}, \/  unsigned char $\ast$ {\em min}, \/  unsigned char $\ast$ {\em max})}}
+\label{_gr_d_x_t_8cpp_f52d934a19e6d8cbe1f6bb4be63e2ce3}
+
+
+
+
+Definition at line 420 of file GrDXT.cpp.\hypertarget{_gr_d_x_t_8cpp_2718b289e2a29c0b65f797943e308378}{
+\index{GrDXT.cpp@{GrDXT.cpp}!CompressBlockBGR@{CompressBlockBGR}}
+\index{CompressBlockBGR@{CompressBlockBGR}!GrDXT.cpp@{GrDXT.cpp}}
+\subsubsection[{CompressBlockBGR}]{\setlength{\rightskip}{0pt plus 5cm}void CompressBlockBGR (unsigned int $\ast$ {\em dest}, \/  unsigned char $\ast$ {\em block}, \/  unsigned char $\ast$ {\em min}, \/  unsigned char $\ast$ {\em max})}}
+\label{_gr_d_x_t_8cpp_2718b289e2a29c0b65f797943e308378}
+
+
+
+
+Definition at line 364 of file GrDXT.cpp.\hypertarget{_gr_d_x_t_8cpp_be92fad224c6ac43e6b53fcc6a003a81}{
+\index{GrDXT.cpp@{GrDXT.cpp}!CompressDXT1@{CompressDXT1}}
+\index{CompressDXT1@{CompressDXT1}!GrDXT.cpp@{GrDXT.cpp}}
+\subsubsection[{CompressDXT1}]{\setlength{\rightskip}{0pt plus 5cm}void CompressDXT1 (unsigned int $\ast$ {\em dst}, \/  unsigned int {\em width}, \/  unsigned int {\em height}, \/  void $\ast$ {\em src})}}
+\label{_gr_d_x_t_8cpp_be92fad224c6ac43e6b53fcc6a003a81}
+
+
+
+
+Definition at line 57 of file GrDXT.cpp.\hypertarget{_gr_d_x_t_8cpp_8758097783ede2ba1339749cc90e3f55}{
+\index{GrDXT.cpp@{GrDXT.cpp}!CompressDXT1BGR@{CompressDXT1BGR}}
+\index{CompressDXT1BGR@{CompressDXT1BGR}!GrDXT.cpp@{GrDXT.cpp}}
+\subsubsection[{CompressDXT1BGR}]{\setlength{\rightskip}{0pt plus 5cm}void CompressDXT1BGR (unsigned int $\ast$ {\em dst}, \/  unsigned int {\em width}, \/  unsigned int {\em height}, \/  void $\ast$ {\em src})}}
+\label{_gr_d_x_t_8cpp_8758097783ede2ba1339749cc90e3f55}
+
+
+
+
+Definition at line 86 of file GrDXT.cpp.\hypertarget{_gr_d_x_t_8cpp_4382e6418d4cb2a01b1df61a72d889f3}{
+\index{GrDXT.cpp@{GrDXT.cpp}!CompressDXT5@{CompressDXT5}}
+\index{CompressDXT5@{CompressDXT5}!GrDXT.cpp@{GrDXT.cpp}}
+\subsubsection[{CompressDXT5}]{\setlength{\rightskip}{0pt plus 5cm}void CompressDXT5 (unsigned int $\ast$ {\em dst}, \/  unsigned int {\em width}, \/  unsigned int {\em height}, \/  void $\ast$ {\em src})}}
+\label{_gr_d_x_t_8cpp_4382e6418d4cb2a01b1df61a72d889f3}
+
+
+
+
+Definition at line 117 of file GrDXT.cpp.\hypertarget{_gr_d_x_t_8cpp_fa4a392d3ebdddaddcee0f63639c13e3}{
+\index{GrDXT.cpp@{GrDXT.cpp}!CompressDXT5XY1@{CompressDXT5XY1}}
+\index{CompressDXT5XY1@{CompressDXT5XY1}!GrDXT.cpp@{GrDXT.cpp}}
+\subsubsection[{CompressDXT5XY1}]{\setlength{\rightskip}{0pt plus 5cm}void CompressDXT5XY1 (unsigned int $\ast$ {\em dst}, \/  unsigned int {\em width}, \/  unsigned int {\em height}, \/  void $\ast$ {\em src})}}
+\label{_gr_d_x_t_8cpp_fa4a392d3ebdddaddcee0f63639c13e3}
+
+
+
+
+Definition at line 151 of file GrDXT.cpp.\hypertarget{_gr_d_x_t_8cpp_ea79e51a48321341147a6941296e88b1}{
+\index{GrDXT.cpp@{GrDXT.cpp}!Extract4x4@{Extract4x4}}
+\index{Extract4x4@{Extract4x4}!GrDXT.cpp@{GrDXT.cpp}}
+\subsubsection[{Extract4x4}]{\setlength{\rightskip}{0pt plus 5cm}void Extract4x4 (unsigned int $\ast$ {\em block}, \/  unsigned int $\ast$ {\em src}, \/  unsigned int {\em srcWidth})}}
+\label{_gr_d_x_t_8cpp_ea79e51a48321341147a6941296e88b1}
+
+
+
+
+Definition at line 244 of file GrDXT.cpp.\hypertarget{_gr_d_x_t_8cpp_07b96e0ea41b877ec445e7709162c6ca}{
+\index{GrDXT.cpp@{GrDXT.cpp}!Extract4x4BGR@{Extract4x4BGR}}
+\index{Extract4x4BGR@{Extract4x4BGR}!GrDXT.cpp@{GrDXT.cpp}}
+\subsubsection[{Extract4x4BGR}]{\setlength{\rightskip}{0pt plus 5cm}void Extract4x4BGR (unsigned char $\ast$ {\em block}, \/  unsigned char $\ast$ {\em src}, \/  unsigned int {\em srcStride})}}
+\label{_gr_d_x_t_8cpp_07b96e0ea41b877ec445e7709162c6ca}
+
+
+
+
+Definition at line 255 of file GrDXT.cpp.\hypertarget{_gr_d_x_t_8cpp_b305a36de9037f74db50d680889c5219}{
+\index{GrDXT.cpp@{GrDXT.cpp}!Extract4x4XY1@{Extract4x4XY1}}
+\index{Extract4x4XY1@{Extract4x4XY1}!GrDXT.cpp@{GrDXT.cpp}}
+\subsubsection[{Extract4x4XY1}]{\setlength{\rightskip}{0pt plus 5cm}void Extract4x4XY1 (unsigned char $\ast$ {\em block}, \/  unsigned char $\ast$ {\em src}, \/  unsigned int {\em srcStride})}}
+\label{_gr_d_x_t_8cpp_b305a36de9037f74db50d680889c5219}
+
+
+
+
+Definition at line 272 of file GrDXT.cpp.\hypertarget{_gr_d_x_t_8cpp_9367b26f9770131cfe1d59ccf55bd07f}{
+\index{GrDXT.cpp@{GrDXT.cpp}!FillDXT1@{FillDXT1}}
+\index{FillDXT1@{FillDXT1}!GrDXT.cpp@{GrDXT.cpp}}
+\subsubsection[{FillDXT1}]{\setlength{\rightskip}{0pt plus 5cm}void FillDXT1 (void $\ast$ {\em dst}, \/  unsigned int {\em width}, \/  unsigned int {\em height}, \/  unsigned char $\ast$ {\em bgrxColor})}}
+\label{_gr_d_x_t_8cpp_9367b26f9770131cfe1d59ccf55bd07f}
+
+
+
+
+Definition at line 192 of file GrDXT.cpp.\hypertarget{_gr_d_x_t_8cpp_ddda053009cd1ebfe0f8c9ea17580094}{
+\index{GrDXT.cpp@{GrDXT.cpp}!FillDXT5@{FillDXT5}}
+\index{FillDXT5@{FillDXT5}!GrDXT.cpp@{GrDXT.cpp}}
+\subsubsection[{FillDXT5}]{\setlength{\rightskip}{0pt plus 5cm}void FillDXT5 (void $\ast$ {\em dst}, \/  unsigned int {\em width}, \/  unsigned int {\em height}, \/  unsigned char $\ast$ {\em bgraColor})}}
+\label{_gr_d_x_t_8cpp_ddda053009cd1ebfe0f8c9ea17580094}
+
+
+
+
+Definition at line 211 of file GrDXT.cpp.\hypertarget{_gr_d_x_t_8cpp_1fdb75290722c62bee98e5c5074a0953}{
+\index{GrDXT.cpp@{GrDXT.cpp}!MinMax@{MinMax}}
+\index{MinMax@{MinMax}!GrDXT.cpp@{GrDXT.cpp}}
+\subsubsection[{MinMax}]{\setlength{\rightskip}{0pt plus 5cm}void MinMax (unsigned char $\ast$ {\em min}, \/  unsigned char $\ast$ {\em max}, \/  unsigned char $\ast$ {\em block})}}
+\label{_gr_d_x_t_8cpp_1fdb75290722c62bee98e5c5074a0953}
+
+
+
+
+Definition at line 289 of file GrDXT.cpp.

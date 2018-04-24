@@ -1,0 +1,213 @@
+\hypertarget{class_th_pipe_reader}{
+\section{ThPipeReader Class Reference}
+\label{class_th_pipe_reader}\index{ThPipeReader@{ThPipeReader}}
+}
+{\tt \#include $<$ThPipeReader.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_th_pipe_reader_66a72a215e2e5c9cd7baa25c62b869c2}{ThPipeReader} ()
+\item 
+\hyperlink{class_th_pipe_reader_b3bc38f4d40642940d678769b0c53b79}{ThPipeReader} (\hyperlink{class_th_pipe}{ThPipe} $\ast$pipe)
+\item 
+\hyperlink{class_th_pipe_reader_a81fc061dec7eb3b48b216679288ddb8}{$\sim$ThPipeReader} ()
+\item 
+void \hyperlink{class_th_pipe_reader_b8e2c24b096dd07d26e40da1bdd8e129}{Reset} (\hyperlink{class_th_pipe}{ThPipe} $\ast$pipe)
+\item 
+\hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \hyperlink{class_th_pipe_reader_1613d62288c1ca43e69b28ec6b1426dd}{ReadString} ()
+\item 
+char \hyperlink{class_th_pipe_reader_bfd9f2de05e08aac9281789a1de3ae26}{ReadChar} ()
+\item 
+unsigned char \hyperlink{class_th_pipe_reader_d8bad1a098466c6ce11053b38ff31df5}{ReadUChar} ()
+\item 
+short \hyperlink{class_th_pipe_reader_ad9c0b0d4f1e4a79509863d1a8f824fd}{ReadShort} ()
+\item 
+unsigned short \hyperlink{class_th_pipe_reader_c632e10f9d824076c8716b7daf928dc8}{ReadUShort} ()
+\item 
+int \hyperlink{class_th_pipe_reader_9ac28a28529feee55e127fbf3b5dbde3}{ReadInt} ()
+\item 
+unsigned int \hyperlink{class_th_pipe_reader_ca013702f2bf2a42d90d568d09fa10f9}{ReadUInt} ()
+\item 
+float \hyperlink{class_th_pipe_reader_0133c2b00c5ce367620c111c35fce496}{ReadFloat} ()
+\item 
+void \hyperlink{class_th_pipe_reader_ec4e943c71ffb3f29b07129fb2285cac}{ReadBytes} (void $\ast$\hyperlink{glext__bak_8h_c4fdb15bdbcd63430bab668b5419ed9f}{buffer}, unsigned int \hyperlink{wglext_8h_98d18d6b4e3ba4ed266c6fb54c839d70}{count})
+\item 
+{\footnotesize template$<$typename \_\-T $>$ }\\\_\-T \hyperlink{class_th_pipe_reader_dcd18ecfa379c59db0101002a46db107}{ReadValue} ()
+\item 
+void \hyperlink{class_th_pipe_reader_3ddf88fbd931b32aa11e8d80274686ea}{Skip} (unsigned int bytes)
+\item 
+void \hyperlink{class_th_pipe_reader_6bd170ad2cc37227e1cec282c7ea64a0}{Flush} ()
+\item 
+bool \hyperlink{class_th_pipe_reader_507edd4133881b06ac555f2991c0a665}{IsDataWaiting} () const 
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 19 of file ThPipeReader.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_th_pipe_reader_66a72a215e2e5c9cd7baa25c62b869c2}{
+\index{ThPipeReader@{ThPipeReader}!ThPipeReader@{ThPipeReader}}
+\index{ThPipeReader@{ThPipeReader}!ThPipeReader@{ThPipeReader}}
+\subsubsection[{ThPipeReader}]{\setlength{\rightskip}{0pt plus 5cm}ThPipeReader::ThPipeReader ()}}
+\label{class_th_pipe_reader_66a72a215e2e5c9cd7baa25c62b869c2}
+
+
+
+
+Definition at line 25 of file ThPipeReader.cpp.\hypertarget{class_th_pipe_reader_b3bc38f4d40642940d678769b0c53b79}{
+\index{ThPipeReader@{ThPipeReader}!ThPipeReader@{ThPipeReader}}
+\index{ThPipeReader@{ThPipeReader}!ThPipeReader@{ThPipeReader}}
+\subsubsection[{ThPipeReader}]{\setlength{\rightskip}{0pt plus 5cm}ThPipeReader::ThPipeReader ({\bf ThPipe} $\ast$ {\em pipe})}}
+\label{class_th_pipe_reader_b3bc38f4d40642940d678769b0c53b79}
+
+
+
+
+Definition at line 34 of file ThPipeReader.cpp.\hypertarget{class_th_pipe_reader_a81fc061dec7eb3b48b216679288ddb8}{
+\index{ThPipeReader@{ThPipeReader}!$\sim$ThPipeReader@{$\sim$ThPipeReader}}
+\index{$\sim$ThPipeReader@{$\sim$ThPipeReader}!ThPipeReader@{ThPipeReader}}
+\subsubsection[{$\sim$ThPipeReader}]{\setlength{\rightskip}{0pt plus 5cm}ThPipeReader::$\sim$ThPipeReader ()}}
+\label{class_th_pipe_reader_a81fc061dec7eb3b48b216679288ddb8}
+
+
+
+
+Definition at line 48 of file ThPipeReader.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_th_pipe_reader_6bd170ad2cc37227e1cec282c7ea64a0}{
+\index{ThPipeReader@{ThPipeReader}!Flush@{Flush}}
+\index{Flush@{Flush}!ThPipeReader@{ThPipeReader}}
+\subsubsection[{Flush}]{\setlength{\rightskip}{0pt plus 5cm}void ThPipeReader::Flush ()}}
+\label{class_th_pipe_reader_6bd170ad2cc37227e1cec282c7ea64a0}
+
+
+
+
+Definition at line 212 of file ThPipeReader.cpp.\hypertarget{class_th_pipe_reader_507edd4133881b06ac555f2991c0a665}{
+\index{ThPipeReader@{ThPipeReader}!IsDataWaiting@{IsDataWaiting}}
+\index{IsDataWaiting@{IsDataWaiting}!ThPipeReader@{ThPipeReader}}
+\subsubsection[{IsDataWaiting}]{\setlength{\rightskip}{0pt plus 5cm}bool ThPipeReader::IsDataWaiting () const}}
+\label{class_th_pipe_reader_507edd4133881b06ac555f2991c0a665}
+
+
+
+
+Definition at line 220 of file ThPipeReader.cpp.\hypertarget{class_th_pipe_reader_ec4e943c71ffb3f29b07129fb2285cac}{
+\index{ThPipeReader@{ThPipeReader}!ReadBytes@{ReadBytes}}
+\index{ReadBytes@{ReadBytes}!ThPipeReader@{ThPipeReader}}
+\subsubsection[{ReadBytes}]{\setlength{\rightskip}{0pt plus 5cm}void ThPipeReader::ReadBytes (void $\ast$ {\em buffer}, \/  unsigned int {\em count})}}
+\label{class_th_pipe_reader_ec4e943c71ffb3f29b07129fb2285cac}
+
+
+
+
+Definition at line 153 of file ThPipeReader.cpp.\hypertarget{class_th_pipe_reader_bfd9f2de05e08aac9281789a1de3ae26}{
+\index{ThPipeReader@{ThPipeReader}!ReadChar@{ReadChar}}
+\index{ReadChar@{ReadChar}!ThPipeReader@{ThPipeReader}}
+\subsubsection[{ReadChar}]{\setlength{\rightskip}{0pt plus 5cm}char ThPipeReader::ReadChar ()}}
+\label{class_th_pipe_reader_bfd9f2de05e08aac9281789a1de3ae26}
+
+
+
+
+Definition at line 94 of file ThPipeReader.cpp.\hypertarget{class_th_pipe_reader_0133c2b00c5ce367620c111c35fce496}{
+\index{ThPipeReader@{ThPipeReader}!ReadFloat@{ReadFloat}}
+\index{ReadFloat@{ReadFloat}!ThPipeReader@{ThPipeReader}}
+\subsubsection[{ReadFloat}]{\setlength{\rightskip}{0pt plus 5cm}float ThPipeReader::ReadFloat ()}}
+\label{class_th_pipe_reader_0133c2b00c5ce367620c111c35fce496}
+
+
+
+
+Definition at line 146 of file ThPipeReader.cpp.\hypertarget{class_th_pipe_reader_9ac28a28529feee55e127fbf3b5dbde3}{
+\index{ThPipeReader@{ThPipeReader}!ReadInt@{ReadInt}}
+\index{ReadInt@{ReadInt}!ThPipeReader@{ThPipeReader}}
+\subsubsection[{ReadInt}]{\setlength{\rightskip}{0pt plus 5cm}int ThPipeReader::ReadInt ()}}
+\label{class_th_pipe_reader_9ac28a28529feee55e127fbf3b5dbde3}
+
+
+
+
+Definition at line 132 of file ThPipeReader.cpp.\hypertarget{class_th_pipe_reader_ad9c0b0d4f1e4a79509863d1a8f824fd}{
+\index{ThPipeReader@{ThPipeReader}!ReadShort@{ReadShort}}
+\index{ReadShort@{ReadShort}!ThPipeReader@{ThPipeReader}}
+\subsubsection[{ReadShort}]{\setlength{\rightskip}{0pt plus 5cm}short ThPipeReader::ReadShort ()}}
+\label{class_th_pipe_reader_ad9c0b0d4f1e4a79509863d1a8f824fd}
+
+
+
+
+Definition at line 118 of file ThPipeReader.cpp.\hypertarget{class_th_pipe_reader_1613d62288c1ca43e69b28ec6b1426dd}{
+\index{ThPipeReader@{ThPipeReader}!ReadString@{ReadString}}
+\index{ReadString@{ReadString}!ThPipeReader@{ThPipeReader}}
+\subsubsection[{ReadString}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tstring} ThPipeReader::ReadString ()}}
+\label{class_th_pipe_reader_1613d62288c1ca43e69b28ec6b1426dd}
+
+
+
+
+Definition at line 75 of file ThPipeReader.cpp.\hypertarget{class_th_pipe_reader_d8bad1a098466c6ce11053b38ff31df5}{
+\index{ThPipeReader@{ThPipeReader}!ReadUChar@{ReadUChar}}
+\index{ReadUChar@{ReadUChar}!ThPipeReader@{ThPipeReader}}
+\subsubsection[{ReadUChar}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char ThPipeReader::ReadUChar ()}}
+\label{class_th_pipe_reader_d8bad1a098466c6ce11053b38ff31df5}
+
+
+
+
+Definition at line 106 of file ThPipeReader.cpp.\hypertarget{class_th_pipe_reader_ca013702f2bf2a42d90d568d09fa10f9}{
+\index{ThPipeReader@{ThPipeReader}!ReadUInt@{ReadUInt}}
+\index{ReadUInt@{ReadUInt}!ThPipeReader@{ThPipeReader}}
+\subsubsection[{ReadUInt}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int ThPipeReader::ReadUInt ()}}
+\label{class_th_pipe_reader_ca013702f2bf2a42d90d568d09fa10f9}
+
+
+
+
+Definition at line 139 of file ThPipeReader.cpp.\hypertarget{class_th_pipe_reader_c632e10f9d824076c8716b7daf928dc8}{
+\index{ThPipeReader@{ThPipeReader}!ReadUShort@{ReadUShort}}
+\index{ReadUShort@{ReadUShort}!ThPipeReader@{ThPipeReader}}
+\subsubsection[{ReadUShort}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short ThPipeReader::ReadUShort ()}}
+\label{class_th_pipe_reader_c632e10f9d824076c8716b7daf928dc8}
+
+
+
+
+Definition at line 125 of file ThPipeReader.cpp.\hypertarget{class_th_pipe_reader_dcd18ecfa379c59db0101002a46db107}{
+\index{ThPipeReader@{ThPipeReader}!ReadValue@{ReadValue}}
+\index{ReadValue@{ReadValue}!ThPipeReader@{ThPipeReader}}
+\subsubsection[{ReadValue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-T $>$ \_\-T ThPipeReader::ReadValue ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_th_pipe_reader_dcd18ecfa379c59db0101002a46db107}
+
+
+
+
+Definition at line 73 of file ThPipeReader.h.\hypertarget{class_th_pipe_reader_b8e2c24b096dd07d26e40da1bdd8e129}{
+\index{ThPipeReader@{ThPipeReader}!Reset@{Reset}}
+\index{Reset@{Reset}!ThPipeReader@{ThPipeReader}}
+\subsubsection[{Reset}]{\setlength{\rightskip}{0pt plus 5cm}void ThPipeReader::Reset ({\bf ThPipe} $\ast$ {\em pipe})}}
+\label{class_th_pipe_reader_b8e2c24b096dd07d26e40da1bdd8e129}
+
+
+
+
+Definition at line 60 of file ThPipeReader.cpp.\hypertarget{class_th_pipe_reader_3ddf88fbd931b32aa11e8d80274686ea}{
+\index{ThPipeReader@{ThPipeReader}!Skip@{Skip}}
+\index{Skip@{Skip}!ThPipeReader@{ThPipeReader}}
+\subsubsection[{Skip}]{\setlength{\rightskip}{0pt plus 5cm}void ThPipeReader::Skip (unsigned int {\em bytes})}}
+\label{class_th_pipe_reader_3ddf88fbd931b32aa11e8d80274686ea}
+
+
+
+
+Definition at line 189 of file ThPipeReader.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_th_pipe_reader_8h}{ThPipeReader.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_th_pipe_reader_8cpp}{ThPipeReader.cpp}\end{CompactItemize}

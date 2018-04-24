@@ -1,0 +1,163 @@
+\hypertarget{class_gr_query}{
+\section{GrQuery Class Reference}
+\label{class_gr_query}\index{GrQuery@{GrQuery}}
+}
+{\tt \#include $<$GrQuery.h$>$}
+
+Inheritance diagram for GrQuery::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_gr_query}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+enum \hyperlink{class_gr_query_932c1c9ceff8018b6f8420f282c2c38f}{EQUERYTYPE} \{ \hyperlink{class_gr_query_932c1c9ceff8018b6f8420f282c2c38fdefde3fbd36578dd412eadf2f0445e98}{EQT\_\-OCCLUSION}, 
+\hyperlink{class_gr_query_932c1c9ceff8018b6f8420f282c2c38f039eb3383e627e36b40a6d1f9ef00ef4}{EQT\_\-COUNT}
+ \}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_query_c0df4dcb95862062ebd6f79709cfaf61}{GrQuery} (\hyperlink{class_gr_query_932c1c9ceff8018b6f8420f282c2c38f}{EQUERYTYPE} queryType=EQT\_\-OCCLUSION)
+\item 
+\hyperlink{class_gr_query_cc96abe379dae515788dd66506a897d1}{$\sim$GrQuery} ()
+\item 
+unsigned int \hyperlink{class_gr_query_3534d970e30de6d5d9ea54d0d9e277d6}{GetQueryCounterBits} () const 
+\item 
+bool \hyperlink{class_gr_query_d73868c0e8a060755b675c68b940dbff}{IsResultAvailable} () const 
+\item 
+\hyperlink{common__afx_8h_2e015c96ada30f1fdb9322f7af889c10}{\_\-\_\-int64} \hyperlink{class_gr_query_3b028c5e929962cce0bafa5d0b95004c}{GetQueryResult} () const 
+\item 
+void \hyperlink{class_gr_query_2fed8cc1e8806f6ae422592978abc282}{BeginQuery} ()
+\item 
+void \hyperlink{class_gr_query_d228edca708b8ed86a27d3bc165b4e72}{EndQuery} ()
+\item 
+void \hyperlink{class_gr_query_7eede116866c6a843bba5ecf04240ec0}{PreContextReset} ()
+\item 
+void \hyperlink{class_gr_query_d7acbab0c865e8974de365fa6610f43e}{PostContextReset} ()
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 18 of file GrQuery.h.
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_gr_query_932c1c9ceff8018b6f8420f282c2c38f}{
+\index{GrQuery@{GrQuery}!EQUERYTYPE@{EQUERYTYPE}}
+\index{EQUERYTYPE@{EQUERYTYPE}!GrQuery@{GrQuery}}
+\subsubsection[{EQUERYTYPE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GrQuery::EQUERYTYPE}}}
+\label{class_gr_query_932c1c9ceff8018b6f8420f282c2c38f}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{EQT\_\-OCCLUSION@{EQT\_\-OCCLUSION}!GrQuery@{GrQuery}}\index{GrQuery@{GrQuery}!EQT\_\-OCCLUSION@{EQT\_\-OCCLUSION}}\item[{\em 
+\hypertarget{class_gr_query_932c1c9ceff8018b6f8420f282c2c38fdefde3fbd36578dd412eadf2f0445e98}{
+EQT\_\-OCCLUSION}
+\label{class_gr_query_932c1c9ceff8018b6f8420f282c2c38fdefde3fbd36578dd412eadf2f0445e98}
+}]\index{EQT\_\-COUNT@{EQT\_\-COUNT}!GrQuery@{GrQuery}}\index{GrQuery@{GrQuery}!EQT\_\-COUNT@{EQT\_\-COUNT}}\item[{\em 
+\hypertarget{class_gr_query_932c1c9ceff8018b6f8420f282c2c38f039eb3383e627e36b40a6d1f9ef00ef4}{
+EQT\_\-COUNT}
+\label{class_gr_query_932c1c9ceff8018b6f8420f282c2c38f039eb3383e627e36b40a6d1f9ef00ef4}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 21 of file GrQuery.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_query_c0df4dcb95862062ebd6f79709cfaf61}{
+\index{GrQuery@{GrQuery}!GrQuery@{GrQuery}}
+\index{GrQuery@{GrQuery}!GrQuery@{GrQuery}}
+\subsubsection[{GrQuery}]{\setlength{\rightskip}{0pt plus 5cm}GrQuery::GrQuery ({\bf EQUERYTYPE} {\em queryType} = {\tt EQT\_\-OCCLUSION})}}
+\label{class_gr_query_c0df4dcb95862062ebd6f79709cfaf61}
+
+
+
+
+Definition at line 43 of file GrQuery.cpp.\hypertarget{class_gr_query_cc96abe379dae515788dd66506a897d1}{
+\index{GrQuery@{GrQuery}!$\sim$GrQuery@{$\sim$GrQuery}}
+\index{$\sim$GrQuery@{$\sim$GrQuery}!GrQuery@{GrQuery}}
+\subsubsection[{$\sim$GrQuery}]{\setlength{\rightskip}{0pt plus 5cm}GrQuery::$\sim$GrQuery ()}}
+\label{class_gr_query_cc96abe379dae515788dd66506a897d1}
+
+
+
+
+Definition at line 53 of file GrQuery.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_query_2fed8cc1e8806f6ae422592978abc282}{
+\index{GrQuery@{GrQuery}!BeginQuery@{BeginQuery}}
+\index{BeginQuery@{BeginQuery}!GrQuery@{GrQuery}}
+\subsubsection[{BeginQuery}]{\setlength{\rightskip}{0pt plus 5cm}void GrQuery::BeginQuery ()}}
+\label{class_gr_query_2fed8cc1e8806f6ae422592978abc282}
+
+
+
+
+Definition at line 98 of file GrQuery.cpp.\hypertarget{class_gr_query_d228edca708b8ed86a27d3bc165b4e72}{
+\index{GrQuery@{GrQuery}!EndQuery@{EndQuery}}
+\index{EndQuery@{EndQuery}!GrQuery@{GrQuery}}
+\subsubsection[{EndQuery}]{\setlength{\rightskip}{0pt plus 5cm}void GrQuery::EndQuery ()}}
+\label{class_gr_query_d228edca708b8ed86a27d3bc165b4e72}
+
+
+
+
+Definition at line 112 of file GrQuery.cpp.\hypertarget{class_gr_query_3534d970e30de6d5d9ea54d0d9e277d6}{
+\index{GrQuery@{GrQuery}!GetQueryCounterBits@{GetQueryCounterBits}}
+\index{GetQueryCounterBits@{GetQueryCounterBits}!GrQuery@{GrQuery}}
+\subsubsection[{GetQueryCounterBits}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrQuery::GetQueryCounterBits () const}}
+\label{class_gr_query_3534d970e30de6d5d9ea54d0d9e277d6}
+
+
+
+
+Definition at line 66 of file GrQuery.cpp.\hypertarget{class_gr_query_3b028c5e929962cce0bafa5d0b95004c}{
+\index{GrQuery@{GrQuery}!GetQueryResult@{GetQueryResult}}
+\index{GetQueryResult@{GetQueryResult}!GrQuery@{GrQuery}}
+\subsubsection[{GetQueryResult}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \_\-\_\-int64} GrQuery::GetQueryResult () const}}
+\label{class_gr_query_3b028c5e929962cce0bafa5d0b95004c}
+
+
+
+
+Definition at line 87 of file GrQuery.cpp.\hypertarget{class_gr_query_d73868c0e8a060755b675c68b940dbff}{
+\index{GrQuery@{GrQuery}!IsResultAvailable@{IsResultAvailable}}
+\index{IsResultAvailable@{IsResultAvailable}!GrQuery@{GrQuery}}
+\subsubsection[{IsResultAvailable}]{\setlength{\rightskip}{0pt plus 5cm}bool GrQuery::IsResultAvailable () const}}
+\label{class_gr_query_d73868c0e8a060755b675c68b940dbff}
+
+
+
+
+Definition at line 76 of file GrQuery.cpp.\hypertarget{class_gr_query_d7acbab0c865e8974de365fa6610f43e}{
+\index{GrQuery@{GrQuery}!PostContextReset@{PostContextReset}}
+\index{PostContextReset@{PostContextReset}!GrQuery@{GrQuery}}
+\subsubsection[{PostContextReset}]{\setlength{\rightskip}{0pt plus 5cm}void GrQuery::PostContextReset ()}}
+\label{class_gr_query_d7acbab0c865e8974de365fa6610f43e}
+
+
+
+
+Definition at line 139 of file GrQuery.cpp.\hypertarget{class_gr_query_7eede116866c6a843bba5ecf04240ec0}{
+\index{GrQuery@{GrQuery}!PreContextReset@{PreContextReset}}
+\index{PreContextReset@{PreContextReset}!GrQuery@{GrQuery}}
+\subsubsection[{PreContextReset}]{\setlength{\rightskip}{0pt plus 5cm}void GrQuery::PreContextReset ()}}
+\label{class_gr_query_7eede116866c6a843bba5ecf04240ec0}
+
+
+
+
+Definition at line 127 of file GrQuery.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_query_8h}{GrQuery.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_query_8cpp}{GrQuery.cpp}\end{CompactItemize}

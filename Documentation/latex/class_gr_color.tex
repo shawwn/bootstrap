@@ -1,0 +1,360 @@
+\hypertarget{class_gr_color}{
+\section{GrColor Class Reference}
+\label{class_gr_color}\index{GrColor@{GrColor}}
+}
+{\tt \#include $<$GrColor.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_color_17afe5cf44819fde9b9303d6749c229e}{GrColor} ()
+\item 
+\hyperlink{class_gr_color_0dc264cb95a190125215e2e33ff673a1}{GrColor} (float intensity)
+\item 
+\hyperlink{class_gr_color_dcc77a569fe079c5fe1e199c7c08c03e}{GrColor} (float luminance, float \hyperlink{glext__bak_8h_3309789fc188587d666cda5ece79cf82}{a})
+\item 
+\hyperlink{class_gr_color_14158e777e2018dc6df18ea8711facbd}{GrColor} (float \hyperlink{glext__bak_8h_31034e24af8271ed8267858116fe2e48}{r}, float \hyperlink{glext__bak_8h_caceb3a655ff28b75259860bcb868f9f}{g}, float \hyperlink{glext__bak_8h_0f71581a41fd2264c8944126dabbd010}{b}, float \hyperlink{glext__bak_8h_3309789fc188587d666cda5ece79cf82}{a}=1.0f)
+\item 
+void \hyperlink{class_gr_color_4d973c54a9d67c7d61582c1454ae52e4}{SetR} (float \hyperlink{glext__bak_8h_31034e24af8271ed8267858116fe2e48}{r})
+\item 
+void \hyperlink{class_gr_color_0ffcc02bd3353035230813c5f2686e77}{SetG} (float \hyperlink{glext__bak_8h_caceb3a655ff28b75259860bcb868f9f}{g})
+\item 
+void \hyperlink{class_gr_color_71409afb6c4ac6765f1b92d80e25379e}{SetB} (float \hyperlink{glext__bak_8h_0f71581a41fd2264c8944126dabbd010}{b})
+\item 
+void \hyperlink{class_gr_color_160b009ce60dc997e554a0b82b4a238f}{SetA} (float \hyperlink{glext__bak_8h_3309789fc188587d666cda5ece79cf82}{a})
+\item 
+float \hyperlink{class_gr_color_2dfa131b3694f4643ebace7490e3a3a6}{GetR} () const 
+\item 
+float \hyperlink{class_gr_color_0d11096eccfbf065a7262f25d2e29c91}{GetG} () const 
+\item 
+float \hyperlink{class_gr_color_c273f31227f8cf2a7b70c491dc1fbe91}{GetB} () const 
+\item 
+float \hyperlink{class_gr_color_1d4f646b78299bb6af131fcc14fd1982}{GetA} () const 
+\item 
+float \hyperlink{class_gr_color_433f7b7fb1d4b548968b337797d1043b}{MaxRGB} () const 
+\item 
+float \hyperlink{class_gr_color_ecd825693d1a321c285e6fc68b918b2b}{MaxRGBA} () const 
+\item 
+\hyperlink{class_gr_color_01b3d412305d1df103e394ce70f91163}{operator float $\ast$} ()
+\item 
+\hyperlink{class_gr_color_92fd3a452f76e0243a775daf3b237b48}{operator const float $\ast$} () const 
+\item 
+bool \hyperlink{class_gr_color_a024a38e4863cade448b994b06c2ea2d}{IsGray} (float epsilon=0.001) const 
+\item 
+bool \hyperlink{class_gr_color_d210feeba40d05c520147b15745041f5}{ApproxEqual} (const \hyperlink{class_gr_color}{GrColor} \&\hyperlink{glext_8h_3ea846f998d64f079b86052b6c4193a8}{color}, float epsilon=0.001) const 
+\item 
+\hyperlink{class_gr_color}{GrColor} \hyperlink{class_gr_color_8fbcd991fa1427da6be51d5d7070861f}{Min} (const \hyperlink{class_gr_color}{GrColor} \&\hyperlink{glext_8h_3ea846f998d64f079b86052b6c4193a8}{color}) const 
+\item 
+\hyperlink{class_gr_color}{GrColor} \hyperlink{class_gr_color_b9460ce4ebfe9d2c5a83c48221a7bf4c}{Max} (const \hyperlink{class_gr_color}{GrColor} \&\hyperlink{glext_8h_3ea846f998d64f079b86052b6c4193a8}{color}) const 
+\item 
+bool \hyperlink{class_gr_color_9f8a562ac885147466319ebae124fbe3}{IsBetween} (const \hyperlink{class_gr_color}{GrColor} \&color1, const \hyperlink{class_gr_color}{GrColor} \&color2) const 
+\item 
+void \hyperlink{class_gr_color_838f112474fc99372ee1aac864b8ec66}{PackToBGR} (unsigned char $\ast$bgra) const 
+\item 
+void \hyperlink{class_gr_color_6ed58d5f43c9ad35717e84578bd8f51a}{PackToBGRA} (unsigned char $\ast$bgra) const 
+\item 
+void \hyperlink{class_gr_color_2ecf5448eba8df51f4138d693b88af82}{PackToRGBA} (unsigned char $\ast$rgba) const 
+\item 
+void \hyperlink{class_gr_color_c55903eb54845df927fbcf8f20ae6da0}{Save} (\hyperlink{class_u_writer}{UWriter} \&writer) const 
+\item 
+void \hyperlink{class_gr_color_266f03bb3ae07245da1d3c033d4c2c84}{Load} (\hyperlink{class_u_reader}{UReader} \&reader)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 18 of file GrColor.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_color_17afe5cf44819fde9b9303d6749c229e}{
+\index{GrColor@{GrColor}!GrColor@{GrColor}}
+\index{GrColor@{GrColor}!GrColor@{GrColor}}
+\subsubsection[{GrColor}]{\setlength{\rightskip}{0pt plus 5cm}GrColor::GrColor ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_color_17afe5cf44819fde9b9303d6749c229e}
+
+
+
+
+Definition at line 21 of file GrColor.h.\hypertarget{class_gr_color_0dc264cb95a190125215e2e33ff673a1}{
+\index{GrColor@{GrColor}!GrColor@{GrColor}}
+\index{GrColor@{GrColor}!GrColor@{GrColor}}
+\subsubsection[{GrColor}]{\setlength{\rightskip}{0pt plus 5cm}GrColor::GrColor (float {\em intensity})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_color_0dc264cb95a190125215e2e33ff673a1}
+
+
+
+
+Definition at line 22 of file GrColor.h.\hypertarget{class_gr_color_dcc77a569fe079c5fe1e199c7c08c03e}{
+\index{GrColor@{GrColor}!GrColor@{GrColor}}
+\index{GrColor@{GrColor}!GrColor@{GrColor}}
+\subsubsection[{GrColor}]{\setlength{\rightskip}{0pt plus 5cm}GrColor::GrColor (float {\em luminance}, \/  float {\em a})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_color_dcc77a569fe079c5fe1e199c7c08c03e}
+
+
+
+
+Definition at line 23 of file GrColor.h.\hypertarget{class_gr_color_14158e777e2018dc6df18ea8711facbd}{
+\index{GrColor@{GrColor}!GrColor@{GrColor}}
+\index{GrColor@{GrColor}!GrColor@{GrColor}}
+\subsubsection[{GrColor}]{\setlength{\rightskip}{0pt plus 5cm}GrColor::GrColor (float {\em r}, \/  float {\em g}, \/  float {\em b}, \/  float {\em a} = {\tt 1.0f})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_color_14158e777e2018dc6df18ea8711facbd}
+
+
+
+
+Definition at line 24 of file GrColor.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_color_d210feeba40d05c520147b15745041f5}{
+\index{GrColor@{GrColor}!ApproxEqual@{ApproxEqual}}
+\index{ApproxEqual@{ApproxEqual}!GrColor@{GrColor}}
+\subsubsection[{ApproxEqual}]{\setlength{\rightskip}{0pt plus 5cm}bool GrColor::ApproxEqual (const {\bf GrColor} \& {\em color}, \/  float {\em epsilon} = {\tt 0.001}) const}}
+\label{class_gr_color_d210feeba40d05c520147b15745041f5}
+
+
+
+
+Definition at line 41 of file GrColor.cpp.\hypertarget{class_gr_color_1d4f646b78299bb6af131fcc14fd1982}{
+\index{GrColor@{GrColor}!GetA@{GetA}}
+\index{GetA@{GetA}!GrColor@{GrColor}}
+\subsubsection[{GetA}]{\setlength{\rightskip}{0pt plus 5cm}float GrColor::GetA () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_color_1d4f646b78299bb6af131fcc14fd1982}
+
+
+
+
+Definition at line 34 of file GrColor.h.\hypertarget{class_gr_color_c273f31227f8cf2a7b70c491dc1fbe91}{
+\index{GrColor@{GrColor}!GetB@{GetB}}
+\index{GetB@{GetB}!GrColor@{GrColor}}
+\subsubsection[{GetB}]{\setlength{\rightskip}{0pt plus 5cm}float GrColor::GetB () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_color_c273f31227f8cf2a7b70c491dc1fbe91}
+
+
+
+
+Definition at line 33 of file GrColor.h.\hypertarget{class_gr_color_0d11096eccfbf065a7262f25d2e29c91}{
+\index{GrColor@{GrColor}!GetG@{GetG}}
+\index{GetG@{GetG}!GrColor@{GrColor}}
+\subsubsection[{GetG}]{\setlength{\rightskip}{0pt plus 5cm}float GrColor::GetG () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_color_0d11096eccfbf065a7262f25d2e29c91}
+
+
+
+
+Definition at line 32 of file GrColor.h.\hypertarget{class_gr_color_2dfa131b3694f4643ebace7490e3a3a6}{
+\index{GrColor@{GrColor}!GetR@{GetR}}
+\index{GetR@{GetR}!GrColor@{GrColor}}
+\subsubsection[{GetR}]{\setlength{\rightskip}{0pt plus 5cm}float GrColor::GetR () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_color_2dfa131b3694f4643ebace7490e3a3a6}
+
+
+
+
+Definition at line 31 of file GrColor.h.\hypertarget{class_gr_color_9f8a562ac885147466319ebae124fbe3}{
+\index{GrColor@{GrColor}!IsBetween@{IsBetween}}
+\index{IsBetween@{IsBetween}!GrColor@{GrColor}}
+\subsubsection[{IsBetween}]{\setlength{\rightskip}{0pt plus 5cm}bool GrColor::IsBetween (const {\bf GrColor} \& {\em color1}, \/  const {\bf GrColor} \& {\em color2}) const}}
+\label{class_gr_color_9f8a562ac885147466319ebae124fbe3}
+
+
+
+
+Definition at line 67 of file GrColor.cpp.\hypertarget{class_gr_color_a024a38e4863cade448b994b06c2ea2d}{
+\index{GrColor@{GrColor}!IsGray@{IsGray}}
+\index{IsGray@{IsGray}!GrColor@{GrColor}}
+\subsubsection[{IsGray}]{\setlength{\rightskip}{0pt plus 5cm}bool GrColor::IsGray (float {\em epsilon} = {\tt 0.001}) const}}
+\label{class_gr_color_a024a38e4863cade448b994b06c2ea2d}
+
+
+
+
+Definition at line 31 of file GrColor.cpp.\hypertarget{class_gr_color_266f03bb3ae07245da1d3c033d4c2c84}{
+\index{GrColor@{GrColor}!Load@{Load}}
+\index{Load@{Load}!GrColor@{GrColor}}
+\subsubsection[{Load}]{\setlength{\rightskip}{0pt plus 5cm}void GrColor::Load ({\bf UReader} \& {\em reader})}}
+\label{class_gr_color_266f03bb3ae07245da1d3c033d4c2c84}
+
+
+
+
+Definition at line 117 of file GrColor.cpp.\hypertarget{class_gr_color_b9460ce4ebfe9d2c5a83c48221a7bf4c}{
+\index{GrColor@{GrColor}!Max@{Max}}
+\index{Max@{Max}!GrColor@{GrColor}}
+\subsubsection[{Max}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrColor} GrColor::Max (const {\bf GrColor} \& {\em color}) const}}
+\label{class_gr_color_b9460ce4ebfe9d2c5a83c48221a7bf4c}
+
+
+
+
+Definition at line 59 of file GrColor.cpp.\hypertarget{class_gr_color_433f7b7fb1d4b548968b337797d1043b}{
+\index{GrColor@{GrColor}!MaxRGB@{MaxRGB}}
+\index{MaxRGB@{MaxRGB}!GrColor@{GrColor}}
+\subsubsection[{MaxRGB}]{\setlength{\rightskip}{0pt plus 5cm}float GrColor::MaxRGB () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_color_433f7b7fb1d4b548968b337797d1043b}
+
+
+
+
+Definition at line 36 of file GrColor.h.\hypertarget{class_gr_color_ecd825693d1a321c285e6fc68b918b2b}{
+\index{GrColor@{GrColor}!MaxRGBA@{MaxRGBA}}
+\index{MaxRGBA@{MaxRGBA}!GrColor@{GrColor}}
+\subsubsection[{MaxRGBA}]{\setlength{\rightskip}{0pt plus 5cm}float GrColor::MaxRGBA () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_color_ecd825693d1a321c285e6fc68b918b2b}
+
+
+
+
+Definition at line 37 of file GrColor.h.\hypertarget{class_gr_color_8fbcd991fa1427da6be51d5d7070861f}{
+\index{GrColor@{GrColor}!Min@{Min}}
+\index{Min@{Min}!GrColor@{GrColor}}
+\subsubsection[{Min}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrColor} GrColor::Min (const {\bf GrColor} \& {\em color}) const}}
+\label{class_gr_color_8fbcd991fa1427da6be51d5d7070861f}
+
+
+
+
+Definition at line 51 of file GrColor.cpp.\hypertarget{class_gr_color_92fd3a452f76e0243a775daf3b237b48}{
+\index{GrColor@{GrColor}!operator const float $\ast$@{operator const float $\ast$}}
+\index{operator const float $\ast$@{operator const float $\ast$}!GrColor@{GrColor}}
+\subsubsection[{operator const float $\ast$}]{\setlength{\rightskip}{0pt plus 5cm}GrColor::operator const float $\ast$ () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_color_92fd3a452f76e0243a775daf3b237b48}
+
+
+
+
+Definition at line 40 of file GrColor.h.\hypertarget{class_gr_color_01b3d412305d1df103e394ce70f91163}{
+\index{GrColor@{GrColor}!operator float $\ast$@{operator float $\ast$}}
+\index{operator float $\ast$@{operator float $\ast$}!GrColor@{GrColor}}
+\subsubsection[{operator float $\ast$}]{\setlength{\rightskip}{0pt plus 5cm}GrColor::operator float $\ast$ ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_color_01b3d412305d1df103e394ce70f91163}
+
+
+
+
+Definition at line 39 of file GrColor.h.\hypertarget{class_gr_color_838f112474fc99372ee1aac864b8ec66}{
+\index{GrColor@{GrColor}!PackToBGR@{PackToBGR}}
+\index{PackToBGR@{PackToBGR}!GrColor@{GrColor}}
+\subsubsection[{PackToBGR}]{\setlength{\rightskip}{0pt plus 5cm}void GrColor::PackToBGR (unsigned char $\ast$ {\em bgra}) const}}
+\label{class_gr_color_838f112474fc99372ee1aac864b8ec66}
+
+
+
+
+Definition at line 77 of file GrColor.cpp.\hypertarget{class_gr_color_6ed58d5f43c9ad35717e84578bd8f51a}{
+\index{GrColor@{GrColor}!PackToBGRA@{PackToBGRA}}
+\index{PackToBGRA@{PackToBGRA}!GrColor@{GrColor}}
+\subsubsection[{PackToBGRA}]{\setlength{\rightskip}{0pt plus 5cm}void GrColor::PackToBGRA (unsigned char $\ast$ {\em bgra}) const}}
+\label{class_gr_color_6ed58d5f43c9ad35717e84578bd8f51a}
+
+
+
+
+Definition at line 86 of file GrColor.cpp.\hypertarget{class_gr_color_2ecf5448eba8df51f4138d693b88af82}{
+\index{GrColor@{GrColor}!PackToRGBA@{PackToRGBA}}
+\index{PackToRGBA@{PackToRGBA}!GrColor@{GrColor}}
+\subsubsection[{PackToRGBA}]{\setlength{\rightskip}{0pt plus 5cm}void GrColor::PackToRGBA (unsigned char $\ast$ {\em rgba}) const}}
+\label{class_gr_color_2ecf5448eba8df51f4138d693b88af82}
+
+
+
+
+Definition at line 96 of file GrColor.cpp.\hypertarget{class_gr_color_c55903eb54845df927fbcf8f20ae6da0}{
+\index{GrColor@{GrColor}!Save@{Save}}
+\index{Save@{Save}!GrColor@{GrColor}}
+\subsubsection[{Save}]{\setlength{\rightskip}{0pt plus 5cm}void GrColor::Save ({\bf UWriter} \& {\em writer}) const}}
+\label{class_gr_color_c55903eb54845df927fbcf8f20ae6da0}
+
+
+
+
+Definition at line 106 of file GrColor.cpp.\hypertarget{class_gr_color_160b009ce60dc997e554a0b82b4a238f}{
+\index{GrColor@{GrColor}!SetA@{SetA}}
+\index{SetA@{SetA}!GrColor@{GrColor}}
+\subsubsection[{SetA}]{\setlength{\rightskip}{0pt plus 5cm}void GrColor::SetA (float {\em a})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_color_160b009ce60dc997e554a0b82b4a238f}
+
+
+
+
+Definition at line 29 of file GrColor.h.\hypertarget{class_gr_color_71409afb6c4ac6765f1b92d80e25379e}{
+\index{GrColor@{GrColor}!SetB@{SetB}}
+\index{SetB@{SetB}!GrColor@{GrColor}}
+\subsubsection[{SetB}]{\setlength{\rightskip}{0pt plus 5cm}void GrColor::SetB (float {\em b})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_color_71409afb6c4ac6765f1b92d80e25379e}
+
+
+
+
+Definition at line 28 of file GrColor.h.\hypertarget{class_gr_color_0ffcc02bd3353035230813c5f2686e77}{
+\index{GrColor@{GrColor}!SetG@{SetG}}
+\index{SetG@{SetG}!GrColor@{GrColor}}
+\subsubsection[{SetG}]{\setlength{\rightskip}{0pt plus 5cm}void GrColor::SetG (float {\em g})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_color_0ffcc02bd3353035230813c5f2686e77}
+
+
+
+
+Definition at line 27 of file GrColor.h.\hypertarget{class_gr_color_4d973c54a9d67c7d61582c1454ae52e4}{
+\index{GrColor@{GrColor}!SetR@{SetR}}
+\index{SetR@{SetR}!GrColor@{GrColor}}
+\subsubsection[{SetR}]{\setlength{\rightskip}{0pt plus 5cm}void GrColor::SetR (float {\em r})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_color_4d973c54a9d67c7d61582c1454ae52e4}
+
+
+
+
+Definition at line 26 of file GrColor.h.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_gr_color_39c59fb903350ca00983d5d8d4e85f74}{
+\index{GrColor@{GrColor}!\_\-a@{\_\-a}}
+\index{\_\-a@{\_\-a}!GrColor@{GrColor}}
+\subsubsection[{\_\-a}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf GrColor::\_\-a}}}
+\label{class_gr_color_39c59fb903350ca00983d5d8d4e85f74}
+
+
+
+
+Definition at line 67 of file GrColor.h.\hypertarget{class_gr_color_cd11b3fe02e4ce91d5f7aae9c738414f}{
+\index{GrColor@{GrColor}!\_\-b@{\_\-b}}
+\index{\_\-b@{\_\-b}!GrColor@{GrColor}}
+\subsubsection[{\_\-b}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf GrColor::\_\-b}}}
+\label{class_gr_color_cd11b3fe02e4ce91d5f7aae9c738414f}
+
+
+
+
+Definition at line 66 of file GrColor.h.\hypertarget{class_gr_color_ae8f07a4002a1da650c1f5265e34fca3}{
+\index{GrColor@{GrColor}!\_\-g@{\_\-g}}
+\index{\_\-g@{\_\-g}!GrColor@{GrColor}}
+\subsubsection[{\_\-g}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf GrColor::\_\-g}}}
+\label{class_gr_color_ae8f07a4002a1da650c1f5265e34fca3}
+
+
+
+
+Definition at line 65 of file GrColor.h.\hypertarget{class_gr_color_d68114b22f656f96d7e5bc6e49024bba}{
+\index{GrColor@{GrColor}!\_\-r@{\_\-r}}
+\index{\_\-r@{\_\-r}!GrColor@{GrColor}}
+\subsubsection[{\_\-r}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf GrColor::\_\-r}}}
+\label{class_gr_color_d68114b22f656f96d7e5bc6e49024bba}
+
+
+
+
+Definition at line 64 of file GrColor.h.\hypertarget{class_gr_color_a50723bde5e52e3f4146b2b12b9da33d}{
+\index{GrColor@{GrColor}!\_\-rgba@{\_\-rgba}}
+\index{\_\-rgba@{\_\-rgba}!GrColor@{GrColor}}
+\subsubsection[{\_\-rgba}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf GrColor::\_\-rgba}\mbox{[}4\mbox{]}}}
+\label{class_gr_color_a50723bde5e52e3f4146b2b12b9da33d}
+
+
+
+
+Definition at line 69 of file GrColor.h.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_color_8h}{GrColor.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_color_8cpp}{GrColor.cpp}\end{CompactItemize}

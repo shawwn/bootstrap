@@ -1,0 +1,120 @@
+\hypertarget{class_gr_u_t_sys_tile_cache}{
+\section{GrUTSysTileCache Class Reference}
+\label{class_gr_u_t_sys_tile_cache}\index{GrUTSysTileCache@{GrUTSysTileCache}}
+}
+{\tt \#include $<$GrUTSysTileCache.h$>$}
+
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+struct \textbf{STile}
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_u_t_sys_tile_cache_21adf6d6aceeaa392188406cc4f6862e}{GrUTSysTileCache} (unsigned int tileCount, bool dxtCompress)
+\item 
+\hyperlink{class_gr_u_t_sys_tile_cache_b4af6ca5eb48b3072c7748727d433c11}{$\sim$GrUTSysTileCache} ()
+\item 
+unsigned int \hyperlink{class_gr_u_t_sys_tile_cache_4da32a54ad566f5b56dc9f6883a714c6}{OpenUberTexture} (const \hyperlink{class_u_path}{UPath} \&path)
+\item 
+void \hyperlink{class_gr_u_t_sys_tile_cache_99709aa474875c406b71a3ea39b90e0b}{CloseUberTexture} (unsigned int \hyperlink{glext__bak_8h_58c2a664503e14ffb8f21012aabff3e9}{id})
+\item 
+\hyperlink{common__afx_8h_2e015c96ada30f1fdb9322f7af889c10}{\_\-\_\-int64} \hyperlink{class_gr_u_t_sys_tile_cache_0ade69d8a7eb2491b6c19b5dba8f1866}{GetTileID} (unsigned int texId, unsigned int mipLevel, unsigned int \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x}, unsigned int \hyperlink{wglext_8h_9298c7ad619074f5285b32c6b72bfdea}{y})
+\item 
+void \hyperlink{class_gr_u_t_sys_tile_cache_e62ec322ac0723cc5db77736e29e5b79}{Upload} (\hyperlink{class_gr_texture}{GrTexture} $\ast$\hyperlink{glext_8h_f9d0cbbbeb7414e786c41899e5a856d7}{target}, unsigned int dstX, unsigned int dstY, \hyperlink{common__afx_8h_2e015c96ada30f1fdb9322f7af889c10}{\_\-\_\-int64} tileId)
+\item 
+void \hyperlink{class_gr_u_t_sys_tile_cache_d6269bc51daf9f1913109a7bd5db8a02}{PreFetch} (\hyperlink{common__afx_8h_2e015c96ada30f1fdb9322f7af889c10}{\_\-\_\-int64} tileId)
+\item 
+void \hyperlink{class_gr_u_t_sys_tile_cache_66ecd3069a48c51e88582fc0383c3377}{Evict} (\hyperlink{common__afx_8h_2e015c96ada30f1fdb9322f7af889c10}{\_\-\_\-int64} tileId)
+\item 
+bool \hyperlink{class_gr_u_t_sys_tile_cache_d64362e1e41304db71b0804d7ea96c75}{IsResident} (\hyperlink{common__afx_8h_2e015c96ada30f1fdb9322f7af889c10}{\_\-\_\-int64} tileId) const 
+\item 
+void \hyperlink{class_gr_u_t_sys_tile_cache_3dec781213be39f8133dd38818ebf8fe}{Invalidate} (\hyperlink{common__afx_8h_2e015c96ada30f1fdb9322f7af889c10}{\_\-\_\-int64} tileId) const 
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 19 of file GrUTSysTileCache.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_u_t_sys_tile_cache_21adf6d6aceeaa392188406cc4f6862e}{
+\index{GrUTSysTileCache@{GrUTSysTileCache}!GrUTSysTileCache@{GrUTSysTileCache}}
+\index{GrUTSysTileCache@{GrUTSysTileCache}!GrUTSysTileCache@{GrUTSysTileCache}}
+\subsubsection[{GrUTSysTileCache}]{\setlength{\rightskip}{0pt plus 5cm}GrUTSysTileCache::GrUTSysTileCache (unsigned int {\em tileCount}, \/  bool {\em dxtCompress})}}
+\label{class_gr_u_t_sys_tile_cache_21adf6d6aceeaa392188406cc4f6862e}
+
+
+\hypertarget{class_gr_u_t_sys_tile_cache_b4af6ca5eb48b3072c7748727d433c11}{
+\index{GrUTSysTileCache@{GrUTSysTileCache}!$\sim$GrUTSysTileCache@{$\sim$GrUTSysTileCache}}
+\index{$\sim$GrUTSysTileCache@{$\sim$GrUTSysTileCache}!GrUTSysTileCache@{GrUTSysTileCache}}
+\subsubsection[{$\sim$GrUTSysTileCache}]{\setlength{\rightskip}{0pt plus 5cm}GrUTSysTileCache::$\sim$GrUTSysTileCache ()}}
+\label{class_gr_u_t_sys_tile_cache_b4af6ca5eb48b3072c7748727d433c11}
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_u_t_sys_tile_cache_99709aa474875c406b71a3ea39b90e0b}{
+\index{GrUTSysTileCache@{GrUTSysTileCache}!CloseUberTexture@{CloseUberTexture}}
+\index{CloseUberTexture@{CloseUberTexture}!GrUTSysTileCache@{GrUTSysTileCache}}
+\subsubsection[{CloseUberTexture}]{\setlength{\rightskip}{0pt plus 5cm}void GrUTSysTileCache::CloseUberTexture (unsigned int {\em id})}}
+\label{class_gr_u_t_sys_tile_cache_99709aa474875c406b71a3ea39b90e0b}
+
+
+\hypertarget{class_gr_u_t_sys_tile_cache_66ecd3069a48c51e88582fc0383c3377}{
+\index{GrUTSysTileCache@{GrUTSysTileCache}!Evict@{Evict}}
+\index{Evict@{Evict}!GrUTSysTileCache@{GrUTSysTileCache}}
+\subsubsection[{Evict}]{\setlength{\rightskip}{0pt plus 5cm}void GrUTSysTileCache::Evict ({\bf \_\-\_\-int64} {\em tileId})}}
+\label{class_gr_u_t_sys_tile_cache_66ecd3069a48c51e88582fc0383c3377}
+
+
+\hypertarget{class_gr_u_t_sys_tile_cache_0ade69d8a7eb2491b6c19b5dba8f1866}{
+\index{GrUTSysTileCache@{GrUTSysTileCache}!GetTileID@{GetTileID}}
+\index{GetTileID@{GetTileID}!GrUTSysTileCache@{GrUTSysTileCache}}
+\subsubsection[{GetTileID}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \_\-\_\-int64} GrUTSysTileCache::GetTileID (unsigned int {\em texId}, \/  unsigned int {\em mipLevel}, \/  unsigned int {\em x}, \/  unsigned int {\em y})}}
+\label{class_gr_u_t_sys_tile_cache_0ade69d8a7eb2491b6c19b5dba8f1866}
+
+
+\hypertarget{class_gr_u_t_sys_tile_cache_3dec781213be39f8133dd38818ebf8fe}{
+\index{GrUTSysTileCache@{GrUTSysTileCache}!Invalidate@{Invalidate}}
+\index{Invalidate@{Invalidate}!GrUTSysTileCache@{GrUTSysTileCache}}
+\subsubsection[{Invalidate}]{\setlength{\rightskip}{0pt plus 5cm}void GrUTSysTileCache::Invalidate ({\bf \_\-\_\-int64} {\em tileId}) const}}
+\label{class_gr_u_t_sys_tile_cache_3dec781213be39f8133dd38818ebf8fe}
+
+
+\hypertarget{class_gr_u_t_sys_tile_cache_d64362e1e41304db71b0804d7ea96c75}{
+\index{GrUTSysTileCache@{GrUTSysTileCache}!IsResident@{IsResident}}
+\index{IsResident@{IsResident}!GrUTSysTileCache@{GrUTSysTileCache}}
+\subsubsection[{IsResident}]{\setlength{\rightskip}{0pt plus 5cm}bool GrUTSysTileCache::IsResident ({\bf \_\-\_\-int64} {\em tileId}) const}}
+\label{class_gr_u_t_sys_tile_cache_d64362e1e41304db71b0804d7ea96c75}
+
+
+\hypertarget{class_gr_u_t_sys_tile_cache_4da32a54ad566f5b56dc9f6883a714c6}{
+\index{GrUTSysTileCache@{GrUTSysTileCache}!OpenUberTexture@{OpenUberTexture}}
+\index{OpenUberTexture@{OpenUberTexture}!GrUTSysTileCache@{GrUTSysTileCache}}
+\subsubsection[{OpenUberTexture}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrUTSysTileCache::OpenUberTexture (const {\bf UPath} \& {\em path})}}
+\label{class_gr_u_t_sys_tile_cache_4da32a54ad566f5b56dc9f6883a714c6}
+
+
+\hypertarget{class_gr_u_t_sys_tile_cache_d6269bc51daf9f1913109a7bd5db8a02}{
+\index{GrUTSysTileCache@{GrUTSysTileCache}!PreFetch@{PreFetch}}
+\index{PreFetch@{PreFetch}!GrUTSysTileCache@{GrUTSysTileCache}}
+\subsubsection[{PreFetch}]{\setlength{\rightskip}{0pt plus 5cm}void GrUTSysTileCache::PreFetch ({\bf \_\-\_\-int64} {\em tileId})}}
+\label{class_gr_u_t_sys_tile_cache_d6269bc51daf9f1913109a7bd5db8a02}
+
+
+\hypertarget{class_gr_u_t_sys_tile_cache_e62ec322ac0723cc5db77736e29e5b79}{
+\index{GrUTSysTileCache@{GrUTSysTileCache}!Upload@{Upload}}
+\index{Upload@{Upload}!GrUTSysTileCache@{GrUTSysTileCache}}
+\subsubsection[{Upload}]{\setlength{\rightskip}{0pt plus 5cm}void GrUTSysTileCache::Upload ({\bf GrTexture} $\ast$ {\em target}, \/  unsigned int {\em dstX}, \/  unsigned int {\em dstY}, \/  {\bf \_\-\_\-int64} {\em tileId})}}
+\label{class_gr_u_t_sys_tile_cache_e62ec322ac0723cc5db77736e29e5b79}
+
+
+
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_u_t_sys_tile_cache_8h}{GrUTSysTileCache.h}\end{CompactItemize}

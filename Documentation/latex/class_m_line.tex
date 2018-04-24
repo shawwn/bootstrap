@@ -1,0 +1,147 @@
+\hypertarget{class_m_line}{
+\section{MLine Class Reference}
+\label{class_m_line}\index{MLine@{MLine}}
+}
+{\tt \#include $<$MLine.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_m_line_a023c0040568a41cb63a3bdfc3600b24}{MLine} ()
+\item 
+\hyperlink{class_m_line_178a9637e3753f559c04ed0abcc74788}{MLine} (const \hyperlink{class_m_vec3}{MVec3} \&dir, const \hyperlink{class_m_vec3}{MVec3} \&pt)
+\item 
+\hyperlink{class_m_line_5d2d469c23838340ffa0acd84b255e44}{$\sim$MLine} ()
+\item 
+const \hyperlink{class_m_vec3}{MVec3} \& \hyperlink{class_m_line_376cbeab71b3d281f7bde73b610ee820}{GetDir} () const 
+\item 
+const \hyperlink{class_m_vec3}{MVec3} \& \hyperlink{class_m_line_218c7222844e18938f4f928fbb15135a}{GetPt} () const 
+\item 
+void \hyperlink{class_m_line_7b3fba942749f374c98ffee3472f7162}{SetDir} (const \hyperlink{class_m_vec3}{MVec3} \&dir)
+\item 
+void \hyperlink{class_m_line_a3f996dc4653721f464c47007d623370}{SetPt} (const \hyperlink{class_m_vec3}{MVec3} \&pt)
+\item 
+float \hyperlink{class_m_line_294f48086b09db9d67a8209776c8ee85}{Dist} (const \hyperlink{class_m_vec3}{MVec3} \&pt)
+\item 
+bool \hyperlink{class_m_line_2efbe33d2c8a438be9fb6ea44368165e}{IsCoLinear} (const \hyperlink{class_m_line}{MLine} \&line, float tolerance) const 
+\item 
+void \hyperlink{class_m_line_b0eb935747cb7dda550bfdcb4f67c535}{Load} (\hyperlink{class_u_reader}{UReader} \&reader)
+\item 
+void \hyperlink{class_m_line_fb250ec3be9ab81f80de8b23d9859106}{Save} (\hyperlink{class_u_writer}{UWriter} \&writer) const 
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 22 of file MLine.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_m_line_a023c0040568a41cb63a3bdfc3600b24}{
+\index{MLine@{MLine}!MLine@{MLine}}
+\index{MLine@{MLine}!MLine@{MLine}}
+\subsubsection[{MLine}]{\setlength{\rightskip}{0pt plus 5cm}MLine::MLine ()}}
+\label{class_m_line_a023c0040568a41cb63a3bdfc3600b24}
+
+
+
+
+Definition at line 25 of file MLine.cpp.\hypertarget{class_m_line_178a9637e3753f559c04ed0abcc74788}{
+\index{MLine@{MLine}!MLine@{MLine}}
+\index{MLine@{MLine}!MLine@{MLine}}
+\subsubsection[{MLine}]{\setlength{\rightskip}{0pt plus 5cm}MLine::MLine (const {\bf MVec3} \& {\em dir}, \/  const {\bf MVec3} \& {\em pt})}}
+\label{class_m_line_178a9637e3753f559c04ed0abcc74788}
+
+
+
+
+Definition at line 33 of file MLine.cpp.\hypertarget{class_m_line_5d2d469c23838340ffa0acd84b255e44}{
+\index{MLine@{MLine}!$\sim$MLine@{$\sim$MLine}}
+\index{$\sim$MLine@{$\sim$MLine}!MLine@{MLine}}
+\subsubsection[{$\sim$MLine}]{\setlength{\rightskip}{0pt plus 5cm}MLine::$\sim$MLine ()}}
+\label{class_m_line_5d2d469c23838340ffa0acd84b255e44}
+
+
+
+
+Definition at line 41 of file MLine.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_m_line_294f48086b09db9d67a8209776c8ee85}{
+\index{MLine@{MLine}!Dist@{Dist}}
+\index{Dist@{Dist}!MLine@{MLine}}
+\subsubsection[{Dist}]{\setlength{\rightskip}{0pt plus 5cm}float MLine::Dist (const {\bf MVec3} \& {\em pt})}}
+\label{class_m_line_294f48086b09db9d67a8209776c8ee85}
+
+
+
+
+Definition at line 62 of file MLine.cpp.\hypertarget{class_m_line_376cbeab71b3d281f7bde73b610ee820}{
+\index{MLine@{MLine}!GetDir@{GetDir}}
+\index{GetDir@{GetDir}!MLine@{MLine}}
+\subsubsection[{GetDir}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MVec3}\& MLine::GetDir () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_line_376cbeab71b3d281f7bde73b610ee820}
+
+
+
+
+Definition at line 30 of file MLine.h.\hypertarget{class_m_line_218c7222844e18938f4f928fbb15135a}{
+\index{MLine@{MLine}!GetPt@{GetPt}}
+\index{GetPt@{GetPt}!MLine@{MLine}}
+\subsubsection[{GetPt}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MVec3}\& MLine::GetPt () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_line_218c7222844e18938f4f928fbb15135a}
+
+
+
+
+Definition at line 31 of file MLine.h.\hypertarget{class_m_line_2efbe33d2c8a438be9fb6ea44368165e}{
+\index{MLine@{MLine}!IsCoLinear@{IsCoLinear}}
+\index{IsCoLinear@{IsCoLinear}!MLine@{MLine}}
+\subsubsection[{IsCoLinear}]{\setlength{\rightskip}{0pt plus 5cm}bool MLine::IsCoLinear (const {\bf MLine} \& {\em line}, \/  float {\em tolerance}) const}}
+\label{class_m_line_2efbe33d2c8a438be9fb6ea44368165e}
+
+
+
+
+Definition at line 72 of file MLine.cpp.\hypertarget{class_m_line_b0eb935747cb7dda550bfdcb4f67c535}{
+\index{MLine@{MLine}!Load@{Load}}
+\index{Load@{Load}!MLine@{MLine}}
+\subsubsection[{Load}]{\setlength{\rightskip}{0pt plus 5cm}void MLine::Load ({\bf UReader} \& {\em reader})}}
+\label{class_m_line_b0eb935747cb7dda550bfdcb4f67c535}
+
+
+
+
+Definition at line 88 of file MLine.cpp.\hypertarget{class_m_line_fb250ec3be9ab81f80de8b23d9859106}{
+\index{MLine@{MLine}!Save@{Save}}
+\index{Save@{Save}!MLine@{MLine}}
+\subsubsection[{Save}]{\setlength{\rightskip}{0pt plus 5cm}void MLine::Save ({\bf UWriter} \& {\em writer}) const}}
+\label{class_m_line_fb250ec3be9ab81f80de8b23d9859106}
+
+
+
+
+Definition at line 96 of file MLine.cpp.\hypertarget{class_m_line_7b3fba942749f374c98ffee3472f7162}{
+\index{MLine@{MLine}!SetDir@{SetDir}}
+\index{SetDir@{SetDir}!MLine@{MLine}}
+\subsubsection[{SetDir}]{\setlength{\rightskip}{0pt plus 5cm}void MLine::SetDir (const {\bf MVec3} \& {\em dir})}}
+\label{class_m_line_7b3fba942749f374c98ffee3472f7162}
+
+
+
+
+Definition at line 53 of file MLine.cpp.\hypertarget{class_m_line_a3f996dc4653721f464c47007d623370}{
+\index{MLine@{MLine}!SetPt@{SetPt}}
+\index{SetPt@{SetPt}!MLine@{MLine}}
+\subsubsection[{SetPt}]{\setlength{\rightskip}{0pt plus 5cm}void MLine::SetPt (const {\bf MVec3} \& {\em pt})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_line_a3f996dc4653721f464c47007d623370}
+
+
+
+
+Definition at line 34 of file MLine.h.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_m_line_8h}{MLine.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_m_line_8cpp}{MLine.cpp}\end{CompactItemize}

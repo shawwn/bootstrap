@@ -1,0 +1,261 @@
+\hypertarget{common__afx_8cpp}{
+\section{C:/Bootstrap/ProjectBX/Engine/Common/common\_\-afx.cpp File Reference}
+\label{common__afx_8cpp}\index{C:/Bootstrap/ProjectBX/Engine/Common/common\_\-afx.cpp@{C:/Bootstrap/ProjectBX/Engine/Common/common\_\-afx.cpp}}
+}
+{\tt \#include \char`\"{}common\_\-afx.h\char`\"{}}\par
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \hyperlink{common__afx_8cpp_35330ccdfd698fad86361c689925e675}{TEMP\_\-MEM\_\-SIZE}~1048576
+\item 
+\#define \hyperlink{common__afx_8cpp_1ac2f798df20a5e2a50a9674a4303a8b}{TINY\_\-BLOCK\_\-COPY}~64
+\item 
+\#define \hyperlink{common__afx_8cpp_0f38c68ed8752e5687761c5c54a7f8ee}{IN\_\-CACHE\_\-COPY}~64 $\ast$ 1024
+\item 
+\#define \hyperlink{common__afx_8cpp_5a55a3dbdd230ba94b93bd020993d61d}{UNCACHED\_\-COPY}~197 $\ast$ 1024
+\item 
+\#define \hyperlink{common__afx_8cpp_16bb9b264ba3329be2f5a9c83c54dde7}{BLOCK\_\-PREFETCH\_\-COPY}~infinity
+\item 
+\#define \hyperlink{common__afx_8cpp_bc45dfa89431b6e6dfdceca8080b937b}{CACHEBLOCK}~80h
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+void \hyperlink{common__afx_8cpp_c415616c8d5f1df71308de030ffafe10}{VSPrintF} (\hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&out, const char $\ast$fmt, va\_\-list marker)
+\item 
+void \hyperlink{common__afx_8cpp_5de02b3008ee828e87118a8f52780e06}{SPrintF} (\hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&out, const char $\ast$fmt,...)
+\item 
+size\_\-t \hyperlink{common__afx_8cpp_d6d35eeb3a4a81953b19438d0eb763b4}{StrLenUTF8} (const char $\ast$str)
+\item 
+const char $\ast$ \hyperlink{common__afx_8cpp_58bd80811de61ba55f2a86d8a45e64fa}{NextCharUTF8} (const char $\ast$str)
+\item 
+unsigned int \hyperlink{common__afx_8cpp_4d00857d5248a0b5a194edace1607985}{GetCharLenUTF8} (const char $\ast$chr)
+\item 
+unsigned int \hyperlink{common__afx_8cpp_b19f946d095ffc1c2e60309e6d2e75ed}{HashMem32} (const void $\ast$mem, unsigned int \hyperlink{glext__bak_8h_3d1e3edfcf61ca2d831883e1afbad89e}{size}, unsigned int hashStart)
+\item 
+unsigned \hyperlink{common__afx_8h_2e015c96ada30f1fdb9322f7af889c10}{\_\-\_\-int64} \hyperlink{common__afx_8cpp_112b1d49a048535f30ce9916f6c56c56}{HashMem64} (const void $\ast$mem, unsigned int \hyperlink{glext__bak_8h_3d1e3edfcf61ca2d831883e1afbad89e}{size}, unsigned \hyperlink{common__afx_8h_2e015c96ada30f1fdb9322f7af889c10}{\_\-\_\-int64} hashStart)
+\item 
+void $\ast$ \hyperlink{common__afx_8cpp_408828bf7887e862154788b40930b54a}{AlignedAlloc} (unsigned int alignmentPow2, unsigned int \hyperlink{glext__bak_8h_3d1e3edfcf61ca2d831883e1afbad89e}{size})
+\item 
+void \hyperlink{common__afx_8cpp_2fd85effcc325614b972f5a87070d6b2}{AlignedFree} (void $\ast$alignedMemory)
+\item 
+void $\ast$ \hyperlink{common__afx_8cpp_a38123a381fda4eb71767e320a1331d1}{TempAlloc} (unsigned int \hyperlink{glext__bak_8h_3d1e3edfcf61ca2d831883e1afbad89e}{size})
+\item 
+void \hyperlink{common__afx_8cpp_4f8b297dfd37bb5e5081041d840d19cf}{TempFree} (void $\ast$mem)
+\item 
+void \hyperlink{common__afx_8cpp_b4b15928b71967d4c4eb8c12c3108643}{MemCopy} (void $\ast$dest, const void $\ast$\hyperlink{glext__bak_8h_72e0fdf0f845ded60b1fada9e9195cd7}{src}, unsigned int \hyperlink{glext__bak_8h_0788d3762d0c3c76e4c094d8078b4c27}{n})
+\item 
+void \hyperlink{common__afx_8cpp_eaed719a9e4f4c1c3268e57ffe93da89}{StrTokenize} (\hyperlink{common__afx_8h_bbe97053cf0e0dff5e7e474804cc48f5}{TokenContainer} \&tokens, const char $\ast$str)
+\item 
+\hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \& \hyperlink{common__afx_8cpp_a3e9003e5e1c9d89db20dd1768b1788e}{StrToLower} (\hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&str)
+\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+int($\ast$ \hyperlink{common__afx_8cpp_f1a1e0f08b49000974368246e5b97f84}{PrintF} )(const char $\ast$txt,...) = PrintF\_\-Default
+\item 
+void($\ast$ \hyperlink{common__afx_8cpp_b0099a1f90d3873033a53daa9f40c67b}{HandleError} )(const char $\ast$fmt,...) = HandleError\_\-Default
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{common__afx_8cpp_16bb9b264ba3329be2f5a9c83c54dde7}{
+\index{common\_\-afx.cpp@{common\_\-afx.cpp}!BLOCK\_\-PREFETCH\_\-COPY@{BLOCK\_\-PREFETCH\_\-COPY}}
+\index{BLOCK\_\-PREFETCH\_\-COPY@{BLOCK\_\-PREFETCH\_\-COPY}!common_afx.cpp@{common\_\-afx.cpp}}
+\subsubsection[{BLOCK\_\-PREFETCH\_\-COPY}]{\setlength{\rightskip}{0pt plus 5cm}\#define BLOCK\_\-PREFETCH\_\-COPY~infinity}}
+\label{common__afx_8cpp_16bb9b264ba3329be2f5a9c83c54dde7}
+
+
+
+
+Definition at line 387 of file common\_\-afx.cpp.\hypertarget{common__afx_8cpp_bc45dfa89431b6e6dfdceca8080b937b}{
+\index{common\_\-afx.cpp@{common\_\-afx.cpp}!CACHEBLOCK@{CACHEBLOCK}}
+\index{CACHEBLOCK@{CACHEBLOCK}!common_afx.cpp@{common\_\-afx.cpp}}
+\subsubsection[{CACHEBLOCK}]{\setlength{\rightskip}{0pt plus 5cm}\#define CACHEBLOCK~80h}}
+\label{common__afx_8cpp_bc45dfa89431b6e6dfdceca8080b937b}
+
+
+
+
+Definition at line 395 of file common\_\-afx.cpp.\hypertarget{common__afx_8cpp_0f38c68ed8752e5687761c5c54a7f8ee}{
+\index{common\_\-afx.cpp@{common\_\-afx.cpp}!IN\_\-CACHE\_\-COPY@{IN\_\-CACHE\_\-COPY}}
+\index{IN\_\-CACHE\_\-COPY@{IN\_\-CACHE\_\-COPY}!common_afx.cpp@{common\_\-afx.cpp}}
+\subsubsection[{IN\_\-CACHE\_\-COPY}]{\setlength{\rightskip}{0pt plus 5cm}\#define IN\_\-CACHE\_\-COPY~64 $\ast$ 1024}}
+\label{common__afx_8cpp_0f38c68ed8752e5687761c5c54a7f8ee}
+
+
+
+
+Definition at line 376 of file common\_\-afx.cpp.\hypertarget{common__afx_8cpp_35330ccdfd698fad86361c689925e675}{
+\index{common\_\-afx.cpp@{common\_\-afx.cpp}!TEMP\_\-MEM\_\-SIZE@{TEMP\_\-MEM\_\-SIZE}}
+\index{TEMP\_\-MEM\_\-SIZE@{TEMP\_\-MEM\_\-SIZE}!common_afx.cpp@{common\_\-afx.cpp}}
+\subsubsection[{TEMP\_\-MEM\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define TEMP\_\-MEM\_\-SIZE~1048576}}
+\label{common__afx_8cpp_35330ccdfd698fad86361c689925e675}
+
+
+
+
+Definition at line 10 of file common\_\-afx.cpp.\hypertarget{common__afx_8cpp_1ac2f798df20a5e2a50a9674a4303a8b}{
+\index{common\_\-afx.cpp@{common\_\-afx.cpp}!TINY\_\-BLOCK\_\-COPY@{TINY\_\-BLOCK\_\-COPY}}
+\index{TINY\_\-BLOCK\_\-COPY@{TINY\_\-BLOCK\_\-COPY}!common_afx.cpp@{common\_\-afx.cpp}}
+\subsubsection[{TINY\_\-BLOCK\_\-COPY}]{\setlength{\rightskip}{0pt plus 5cm}\#define TINY\_\-BLOCK\_\-COPY~64}}
+\label{common__afx_8cpp_1ac2f798df20a5e2a50a9674a4303a8b}
+
+
+
+
+Definition at line 370 of file common\_\-afx.cpp.\hypertarget{common__afx_8cpp_5a55a3dbdd230ba94b93bd020993d61d}{
+\index{common\_\-afx.cpp@{common\_\-afx.cpp}!UNCACHED\_\-COPY@{UNCACHED\_\-COPY}}
+\index{UNCACHED\_\-COPY@{UNCACHED\_\-COPY}!common_afx.cpp@{common\_\-afx.cpp}}
+\subsubsection[{UNCACHED\_\-COPY}]{\setlength{\rightskip}{0pt plus 5cm}\#define UNCACHED\_\-COPY~197 $\ast$ 1024}}
+\label{common__afx_8cpp_5a55a3dbdd230ba94b93bd020993d61d}
+
+
+
+
+Definition at line 384 of file common\_\-afx.cpp.
+
+\subsection{Function Documentation}
+\hypertarget{common__afx_8cpp_408828bf7887e862154788b40930b54a}{
+\index{common\_\-afx.cpp@{common\_\-afx.cpp}!AlignedAlloc@{AlignedAlloc}}
+\index{AlignedAlloc@{AlignedAlloc}!common_afx.cpp@{common\_\-afx.cpp}}
+\subsubsection[{AlignedAlloc}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ AlignedAlloc (unsigned int {\em alignmentPow2}, \/  unsigned int {\em size})}}
+\label{common__afx_8cpp_408828bf7887e862154788b40930b54a}
+
+
+
+
+Definition at line 297 of file common\_\-afx.cpp.\hypertarget{common__afx_8cpp_2fd85effcc325614b972f5a87070d6b2}{
+\index{common\_\-afx.cpp@{common\_\-afx.cpp}!AlignedFree@{AlignedFree}}
+\index{AlignedFree@{AlignedFree}!common_afx.cpp@{common\_\-afx.cpp}}
+\subsubsection[{AlignedFree}]{\setlength{\rightskip}{0pt plus 5cm}void AlignedFree (void $\ast$ {\em alignedMemory})}}
+\label{common__afx_8cpp_2fd85effcc325614b972f5a87070d6b2}
+
+
+
+
+Definition at line 324 of file common\_\-afx.cpp.\hypertarget{common__afx_8cpp_4d00857d5248a0b5a194edace1607985}{
+\index{common\_\-afx.cpp@{common\_\-afx.cpp}!GetCharLenUTF8@{GetCharLenUTF8}}
+\index{GetCharLenUTF8@{GetCharLenUTF8}!common_afx.cpp@{common\_\-afx.cpp}}
+\subsubsection[{GetCharLenUTF8}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GetCharLenUTF8 (const char $\ast$ {\em chr})}}
+\label{common__afx_8cpp_4d00857d5248a0b5a194edace1607985}
+
+
+
+
+Definition at line 136 of file common\_\-afx.cpp.\hypertarget{common__afx_8cpp_b19f946d095ffc1c2e60309e6d2e75ed}{
+\index{common\_\-afx.cpp@{common\_\-afx.cpp}!HashMem32@{HashMem32}}
+\index{HashMem32@{HashMem32}!common_afx.cpp@{common\_\-afx.cpp}}
+\subsubsection[{HashMem32}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int HashMem32 (const void $\ast$ {\em mem}, \/  unsigned int {\em size}, \/  unsigned int {\em hashStart})}}
+\label{common__afx_8cpp_b19f946d095ffc1c2e60309e6d2e75ed}
+
+
+
+
+Definition at line 160 of file common\_\-afx.cpp.\hypertarget{common__afx_8cpp_112b1d49a048535f30ce9916f6c56c56}{
+\index{common\_\-afx.cpp@{common\_\-afx.cpp}!HashMem64@{HashMem64}}
+\index{HashMem64@{HashMem64}!common_afx.cpp@{common\_\-afx.cpp}}
+\subsubsection[{HashMem64}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf \_\-\_\-int64} HashMem64 (const void $\ast$ {\em mem}, \/  unsigned int {\em size}, \/  unsigned {\bf \_\-\_\-int64} {\em hashStart})}}
+\label{common__afx_8cpp_112b1d49a048535f30ce9916f6c56c56}
+
+
+
+
+Definition at line 179 of file common\_\-afx.cpp.\hypertarget{common__afx_8cpp_b4b15928b71967d4c4eb8c12c3108643}{
+\index{common\_\-afx.cpp@{common\_\-afx.cpp}!MemCopy@{MemCopy}}
+\index{MemCopy@{MemCopy}!common_afx.cpp@{common\_\-afx.cpp}}
+\subsubsection[{MemCopy}]{\setlength{\rightskip}{0pt plus 5cm}void MemCopy (void $\ast$ {\em dest}, \/  const void $\ast$ {\em src}, \/  unsigned int {\em n})}}
+\label{common__afx_8cpp_b4b15928b71967d4c4eb8c12c3108643}
+
+
+
+
+Definition at line 398 of file common\_\-afx.cpp.\hypertarget{common__afx_8cpp_58bd80811de61ba55f2a86d8a45e64fa}{
+\index{common\_\-afx.cpp@{common\_\-afx.cpp}!NextCharUTF8@{NextCharUTF8}}
+\index{NextCharUTF8@{NextCharUTF8}!common_afx.cpp@{common\_\-afx.cpp}}
+\subsubsection[{NextCharUTF8}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ NextCharUTF8 (const char $\ast$ {\em str})}}
+\label{common__afx_8cpp_58bd80811de61ba55f2a86d8a45e64fa}
+
+
+
+
+Definition at line 111 of file common\_\-afx.cpp.\hypertarget{common__afx_8cpp_5de02b3008ee828e87118a8f52780e06}{
+\index{common\_\-afx.cpp@{common\_\-afx.cpp}!SPrintF@{SPrintF}}
+\index{SPrintF@{SPrintF}!common_afx.cpp@{common\_\-afx.cpp}}
+\subsubsection[{SPrintF}]{\setlength{\rightskip}{0pt plus 5cm}void SPrintF ({\bf tstring} \& {\em out}, \/  const char $\ast$ {\em fmt}, \/   {\em ...})}}
+\label{common__afx_8cpp_5de02b3008ee828e87118a8f52780e06}
+
+
+
+
+Definition at line 93 of file common\_\-afx.cpp.\hypertarget{common__afx_8cpp_d6d35eeb3a4a81953b19438d0eb763b4}{
+\index{common\_\-afx.cpp@{common\_\-afx.cpp}!StrLenUTF8@{StrLenUTF8}}
+\index{StrLenUTF8@{StrLenUTF8}!common_afx.cpp@{common\_\-afx.cpp}}
+\subsubsection[{StrLenUTF8}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t StrLenUTF8 (const char $\ast$ {\em str})}}
+\label{common__afx_8cpp_d6d35eeb3a4a81953b19438d0eb763b4}
+
+
+
+
+Definition at line 103 of file common\_\-afx.cpp.\hypertarget{common__afx_8cpp_eaed719a9e4f4c1c3268e57ffe93da89}{
+\index{common\_\-afx.cpp@{common\_\-afx.cpp}!StrTokenize@{StrTokenize}}
+\index{StrTokenize@{StrTokenize}!common_afx.cpp@{common\_\-afx.cpp}}
+\subsubsection[{StrTokenize}]{\setlength{\rightskip}{0pt plus 5cm}void StrTokenize ({\bf TokenContainer} \& {\em tokens}, \/  const char $\ast$ {\em str})}}
+\label{common__afx_8cpp_eaed719a9e4f4c1c3268e57ffe93da89}
+
+
+
+
+Definition at line 603 of file common\_\-afx.cpp.\hypertarget{common__afx_8cpp_a3e9003e5e1c9d89db20dd1768b1788e}{
+\index{common\_\-afx.cpp@{common\_\-afx.cpp}!StrToLower@{StrToLower}}
+\index{StrToLower@{StrToLower}!common_afx.cpp@{common\_\-afx.cpp}}
+\subsubsection[{StrToLower}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tstring}\& StrToLower ({\bf tstring} \& {\em str})}}
+\label{common__afx_8cpp_a3e9003e5e1c9d89db20dd1768b1788e}
+
+
+
+
+Definition at line 626 of file common\_\-afx.cpp.\hypertarget{common__afx_8cpp_a38123a381fda4eb71767e320a1331d1}{
+\index{common\_\-afx.cpp@{common\_\-afx.cpp}!TempAlloc@{TempAlloc}}
+\index{TempAlloc@{TempAlloc}!common_afx.cpp@{common\_\-afx.cpp}}
+\subsubsection[{TempAlloc}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ TempAlloc (unsigned int {\em size})}}
+\label{common__afx_8cpp_a38123a381fda4eb71767e320a1331d1}
+
+
+
+
+Definition at line 344 of file common\_\-afx.cpp.\hypertarget{common__afx_8cpp_4f8b297dfd37bb5e5081041d840d19cf}{
+\index{common\_\-afx.cpp@{common\_\-afx.cpp}!TempFree@{TempFree}}
+\index{TempFree@{TempFree}!common_afx.cpp@{common\_\-afx.cpp}}
+\subsubsection[{TempFree}]{\setlength{\rightskip}{0pt plus 5cm}void TempFree (void $\ast$ {\em mem})}}
+\label{common__afx_8cpp_4f8b297dfd37bb5e5081041d840d19cf}
+
+
+
+
+Definition at line 355 of file common\_\-afx.cpp.\hypertarget{common__afx_8cpp_c415616c8d5f1df71308de030ffafe10}{
+\index{common\_\-afx.cpp@{common\_\-afx.cpp}!VSPrintF@{VSPrintF}}
+\index{VSPrintF@{VSPrintF}!common_afx.cpp@{common\_\-afx.cpp}}
+\subsubsection[{VSPrintF}]{\setlength{\rightskip}{0pt plus 5cm}void VSPrintF ({\bf tstring} \& {\em out}, \/  const char $\ast$ {\em fmt}, \/  va\_\-list {\em marker})}}
+\label{common__afx_8cpp_c415616c8d5f1df71308de030ffafe10}
+
+
+
+
+Definition at line 39 of file common\_\-afx.cpp.
+
+\subsection{Variable Documentation}
+\hypertarget{common__afx_8cpp_b0099a1f90d3873033a53daa9f40c67b}{
+\index{common\_\-afx.cpp@{common\_\-afx.cpp}!HandleError@{HandleError}}
+\index{HandleError@{HandleError}!common_afx.cpp@{common\_\-afx.cpp}}
+\subsubsection[{HandleError}]{\setlength{\rightskip}{0pt plus 5cm}void( $\ast$ {\bf HandleError})(const char $\ast$fmt,...) = HandleError\_\-Default}}
+\label{common__afx_8cpp_b0099a1f90d3873033a53daa9f40c67b}
+
+
+\hypertarget{common__afx_8cpp_f1a1e0f08b49000974368246e5b97f84}{
+\index{common\_\-afx.cpp@{common\_\-afx.cpp}!PrintF@{PrintF}}
+\index{PrintF@{PrintF}!common_afx.cpp@{common\_\-afx.cpp}}
+\subsubsection[{PrintF}]{\setlength{\rightskip}{0pt plus 5cm}int( $\ast$ {\bf PrintF})(const char $\ast$txt,...) = PrintF\_\-Default}}
+\label{common__afx_8cpp_f1a1e0f08b49000974368246e5b97f84}
+
+

@@ -1,0 +1,191 @@
+\hypertarget{class_gr_polygon_uber_patch}{
+\section{GrPolygonUberPatch Class Reference}
+\label{class_gr_polygon_uber_patch}\index{GrPolygonUberPatch@{GrPolygonUberPatch}}
+}
+{\tt \#include $<$GrPolygonUberPatch.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_polygon_uber_patch_e8720aea58f72f311e4350973a2e7cab}{GrPolygonUberPatch} (\hyperlink{class_gr_polygon_group}{GrPolygonGroup} $\ast$polygons, unsigned int $\ast$polyIndices, unsigned int polyCount, const \hyperlink{class_m_plane}{MPlane} \&worldPlane, const \hyperlink{class_m_mat4x4}{MMat4x4} \&uvTileMatrix, const \hyperlink{struct_s_vec2}{SVec2} \&uvPos, const \hyperlink{struct_s_vec2}{SVec2} \&uvSize)
+\item 
+\hyperlink{class_gr_polygon_uber_patch_da0fadb60007621660d501dabaf55a26}{$\sim$GrPolygonUberPatch} ()
+\item 
+const \hyperlink{class_m_a_a_box}{MAABox} \& \hyperlink{class_gr_polygon_uber_patch_5dce15b73ce4d3df04e23a0ea2a168c8}{GetAABox} () const 
+\item 
+const \hyperlink{struct_s_vec2}{SVec2} \& \hyperlink{class_gr_polygon_uber_patch_0ee8cbafeeb0689c62e1789d6c016574}{GetUVSizeInTiles} () const 
+\item 
+const \hyperlink{class_m_mat4x4}{MMat4x4} \& \hyperlink{class_gr_polygon_uber_patch_a2904f797da76512d80ede9386a0eadb}{GetLocalToUVMatrix} () const 
+\item 
+const \hyperlink{class_m_plane}{MPlane} \& \hyperlink{class_gr_polygon_uber_patch_19e95a74d689a75115f1fc8b46cd43d4}{GetSurfacePlane} () const 
+\item 
+void \hyperlink{class_gr_polygon_uber_patch_8504312de783f8dfe605932337209cd9}{AssignToUberTexture} (unsigned int uberTexIndex, unsigned int tileX, unsigned int tileY)
+\item 
+\hyperlink{class_gr_polygon_group}{GrPolygonGroup} $\ast$ \hyperlink{class_gr_polygon_uber_patch_1878a2441e199c1eeaa18a552c38311a}{GetPolygonGroup} () const 
+\item 
+unsigned int \hyperlink{class_gr_polygon_uber_patch_a47f629d10e1fe72be7ba2407626feca}{GetPolygonCount} () const 
+\item 
+unsigned int \hyperlink{class_gr_polygon_uber_patch_51940d367acf3e294341efc596f518cf}{GetPolygonIndex} (unsigned int i) const 
+\item 
+unsigned int \hyperlink{class_gr_polygon_uber_patch_37b7399470d8347fc40aba50ad8ff37b}{GetUberTextureIndex} () const 
+\item 
+unsigned int \hyperlink{class_gr_polygon_uber_patch_8eedf03ce219677c3e5a4d720ca856a6}{GetUberTileX} () const 
+\item 
+unsigned int \hyperlink{class_gr_polygon_uber_patch_7ec4418397af8fc4e5cb3300dd06a1d0}{GetUberTileY} () const 
+\item 
+unsigned int \hyperlink{class_gr_polygon_uber_patch_0bde2e89a95ba150051072210821db4b}{GetUberTileWidth} () const 
+\item 
+unsigned int \hyperlink{class_gr_polygon_uber_patch_7c11c389237f476236501ac915a11ff4}{GetUberTileHeight} () const 
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 24 of file GrPolygonUberPatch.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_polygon_uber_patch_e8720aea58f72f311e4350973a2e7cab}{
+\index{GrPolygonUberPatch@{GrPolygonUberPatch}!GrPolygonUberPatch@{GrPolygonUberPatch}}
+\index{GrPolygonUberPatch@{GrPolygonUberPatch}!GrPolygonUberPatch@{GrPolygonUberPatch}}
+\subsubsection[{GrPolygonUberPatch}]{\setlength{\rightskip}{0pt plus 5cm}GrPolygonUberPatch::GrPolygonUberPatch ({\bf GrPolygonGroup} $\ast$ {\em polygons}, \/  unsigned int $\ast$ {\em polyIndices}, \/  unsigned int {\em polyCount}, \/  const {\bf MPlane} \& {\em worldPlane}, \/  const {\bf MMat4x4} \& {\em uvTileMatrix}, \/  const {\bf SVec2} \& {\em uvPos}, \/  const {\bf SVec2} \& {\em uvSize})}}
+\label{class_gr_polygon_uber_patch_e8720aea58f72f311e4350973a2e7cab}
+
+
+
+
+Definition at line 26 of file GrPolygonUberPatch.cpp.\hypertarget{class_gr_polygon_uber_patch_da0fadb60007621660d501dabaf55a26}{
+\index{GrPolygonUberPatch@{GrPolygonUberPatch}!$\sim$GrPolygonUberPatch@{$\sim$GrPolygonUberPatch}}
+\index{$\sim$GrPolygonUberPatch@{$\sim$GrPolygonUberPatch}!GrPolygonUberPatch@{GrPolygonUberPatch}}
+\subsubsection[{$\sim$GrPolygonUberPatch}]{\setlength{\rightskip}{0pt plus 5cm}GrPolygonUberPatch::$\sim$GrPolygonUberPatch ()}}
+\label{class_gr_polygon_uber_patch_da0fadb60007621660d501dabaf55a26}
+
+
+
+
+Definition at line 59 of file GrPolygonUberPatch.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_polygon_uber_patch_8504312de783f8dfe605932337209cd9}{
+\index{GrPolygonUberPatch@{GrPolygonUberPatch}!AssignToUberTexture@{AssignToUberTexture}}
+\index{AssignToUberTexture@{AssignToUberTexture}!GrPolygonUberPatch@{GrPolygonUberPatch}}
+\subsubsection[{AssignToUberTexture}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonUberPatch::AssignToUberTexture (unsigned int {\em uberTexIndex}, \/  unsigned int {\em tileX}, \/  unsigned int {\em tileY})}}
+\label{class_gr_polygon_uber_patch_8504312de783f8dfe605932337209cd9}
+
+
+
+
+Definition at line 71 of file GrPolygonUberPatch.cpp.\hypertarget{class_gr_polygon_uber_patch_5dce15b73ce4d3df04e23a0ea2a168c8}{
+\index{GrPolygonUberPatch@{GrPolygonUberPatch}!GetAABox@{GetAABox}}
+\index{GetAABox@{GetAABox}!GrPolygonUberPatch@{GrPolygonUberPatch}}
+\subsubsection[{GetAABox}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MAABox}\& GrPolygonUberPatch::GetAABox () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_polygon_uber_patch_5dce15b73ce4d3df04e23a0ea2a168c8}
+
+
+
+
+Definition at line 34 of file GrPolygonUberPatch.h.\hypertarget{class_gr_polygon_uber_patch_a2904f797da76512d80ede9386a0eadb}{
+\index{GrPolygonUberPatch@{GrPolygonUberPatch}!GetLocalToUVMatrix@{GetLocalToUVMatrix}}
+\index{GetLocalToUVMatrix@{GetLocalToUVMatrix}!GrPolygonUberPatch@{GrPolygonUberPatch}}
+\subsubsection[{GetLocalToUVMatrix}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MMat4x4}\& GrPolygonUberPatch::GetLocalToUVMatrix () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_polygon_uber_patch_a2904f797da76512d80ede9386a0eadb}
+
+
+
+
+Definition at line 41 of file GrPolygonUberPatch.h.\hypertarget{class_gr_polygon_uber_patch_a47f629d10e1fe72be7ba2407626feca}{
+\index{GrPolygonUberPatch@{GrPolygonUberPatch}!GetPolygonCount@{GetPolygonCount}}
+\index{GetPolygonCount@{GetPolygonCount}!GrPolygonUberPatch@{GrPolygonUberPatch}}
+\subsubsection[{GetPolygonCount}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrPolygonUberPatch::GetPolygonCount () const}}
+\label{class_gr_polygon_uber_patch_a47f629d10e1fe72be7ba2407626feca}
+
+
+
+
+Definition at line 123 of file GrPolygonUberPatch.cpp.\hypertarget{class_gr_polygon_uber_patch_1878a2441e199c1eeaa18a552c38311a}{
+\index{GrPolygonUberPatch@{GrPolygonUberPatch}!GetPolygonGroup@{GetPolygonGroup}}
+\index{GetPolygonGroup@{GetPolygonGroup}!GrPolygonUberPatch@{GrPolygonUberPatch}}
+\subsubsection[{GetPolygonGroup}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrPolygonGroup} $\ast$ GrPolygonUberPatch::GetPolygonGroup () const}}
+\label{class_gr_polygon_uber_patch_1878a2441e199c1eeaa18a552c38311a}
+
+
+
+
+Definition at line 116 of file GrPolygonUberPatch.cpp.\hypertarget{class_gr_polygon_uber_patch_51940d367acf3e294341efc596f518cf}{
+\index{GrPolygonUberPatch@{GrPolygonUberPatch}!GetPolygonIndex@{GetPolygonIndex}}
+\index{GetPolygonIndex@{GetPolygonIndex}!GrPolygonUberPatch@{GrPolygonUberPatch}}
+\subsubsection[{GetPolygonIndex}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrPolygonUberPatch::GetPolygonIndex (unsigned int {\em i}) const}}
+\label{class_gr_polygon_uber_patch_51940d367acf3e294341efc596f518cf}
+
+
+
+
+Definition at line 130 of file GrPolygonUberPatch.cpp.\hypertarget{class_gr_polygon_uber_patch_19e95a74d689a75115f1fc8b46cd43d4}{
+\index{GrPolygonUberPatch@{GrPolygonUberPatch}!GetSurfacePlane@{GetSurfacePlane}}
+\index{GetSurfacePlane@{GetSurfacePlane}!GrPolygonUberPatch@{GrPolygonUberPatch}}
+\subsubsection[{GetSurfacePlane}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MPlane}\& GrPolygonUberPatch::GetSurfacePlane () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_polygon_uber_patch_19e95a74d689a75115f1fc8b46cd43d4}
+
+
+
+
+Definition at line 45 of file GrPolygonUberPatch.h.\hypertarget{class_gr_polygon_uber_patch_37b7399470d8347fc40aba50ad8ff37b}{
+\index{GrPolygonUberPatch@{GrPolygonUberPatch}!GetUberTextureIndex@{GetUberTextureIndex}}
+\index{GetUberTextureIndex@{GetUberTextureIndex}!GrPolygonUberPatch@{GrPolygonUberPatch}}
+\subsubsection[{GetUberTextureIndex}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrPolygonUberPatch::GetUberTextureIndex () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_polygon_uber_patch_37b7399470d8347fc40aba50ad8ff37b}
+
+
+
+
+Definition at line 57 of file GrPolygonUberPatch.h.\hypertarget{class_gr_polygon_uber_patch_7c11c389237f476236501ac915a11ff4}{
+\index{GrPolygonUberPatch@{GrPolygonUberPatch}!GetUberTileHeight@{GetUberTileHeight}}
+\index{GetUberTileHeight@{GetUberTileHeight}!GrPolygonUberPatch@{GrPolygonUberPatch}}
+\subsubsection[{GetUberTileHeight}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrPolygonUberPatch::GetUberTileHeight () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_polygon_uber_patch_7c11c389237f476236501ac915a11ff4}
+
+
+
+
+Definition at line 61 of file GrPolygonUberPatch.h.\hypertarget{class_gr_polygon_uber_patch_0bde2e89a95ba150051072210821db4b}{
+\index{GrPolygonUberPatch@{GrPolygonUberPatch}!GetUberTileWidth@{GetUberTileWidth}}
+\index{GetUberTileWidth@{GetUberTileWidth}!GrPolygonUberPatch@{GrPolygonUberPatch}}
+\subsubsection[{GetUberTileWidth}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrPolygonUberPatch::GetUberTileWidth () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_polygon_uber_patch_0bde2e89a95ba150051072210821db4b}
+
+
+
+
+Definition at line 60 of file GrPolygonUberPatch.h.\hypertarget{class_gr_polygon_uber_patch_8eedf03ce219677c3e5a4d720ca856a6}{
+\index{GrPolygonUberPatch@{GrPolygonUberPatch}!GetUberTileX@{GetUberTileX}}
+\index{GetUberTileX@{GetUberTileX}!GrPolygonUberPatch@{GrPolygonUberPatch}}
+\subsubsection[{GetUberTileX}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrPolygonUberPatch::GetUberTileX () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_polygon_uber_patch_8eedf03ce219677c3e5a4d720ca856a6}
+
+
+
+
+Definition at line 58 of file GrPolygonUberPatch.h.\hypertarget{class_gr_polygon_uber_patch_7ec4418397af8fc4e5cb3300dd06a1d0}{
+\index{GrPolygonUberPatch@{GrPolygonUberPatch}!GetUberTileY@{GetUberTileY}}
+\index{GetUberTileY@{GetUberTileY}!GrPolygonUberPatch@{GrPolygonUberPatch}}
+\subsubsection[{GetUberTileY}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrPolygonUberPatch::GetUberTileY () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_polygon_uber_patch_7ec4418397af8fc4e5cb3300dd06a1d0}
+
+
+
+
+Definition at line 59 of file GrPolygonUberPatch.h.\hypertarget{class_gr_polygon_uber_patch_0ee8cbafeeb0689c62e1789d6c016574}{
+\index{GrPolygonUberPatch@{GrPolygonUberPatch}!GetUVSizeInTiles@{GetUVSizeInTiles}}
+\index{GetUVSizeInTiles@{GetUVSizeInTiles}!GrPolygonUberPatch@{GrPolygonUberPatch}}
+\subsubsection[{GetUVSizeInTiles}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf SVec2}\& GrPolygonUberPatch::GetUVSizeInTiles () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_polygon_uber_patch_0ee8cbafeeb0689c62e1789d6c016574}
+
+
+
+
+Definition at line 37 of file GrPolygonUberPatch.h.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_polygon_uber_patch_8h}{GrPolygonUberPatch.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_polygon_uber_patch_8cpp}{GrPolygonUberPatch.cpp}\end{CompactItemize}

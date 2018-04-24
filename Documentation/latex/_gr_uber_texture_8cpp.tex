@@ -1,0 +1,208 @@
+\hypertarget{_gr_uber_texture_8cpp}{
+\section{C:/Bootstrap/ProjectBX/Engine/Graphics/GrUberTexture.cpp File Reference}
+\label{_gr_uber_texture_8cpp}\index{C:/Bootstrap/ProjectBX/Engine/Graphics/GrUberTexture.cpp@{C:/Bootstrap/ProjectBX/Engine/Graphics/GrUberTexture.cpp}}
+}
+{\tt \#include \char`\"{}graphics\_\-afx.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrUberTexture.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrUberDetailCache.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrTextureMgr.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrTexture.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrUTAtlas.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrUTLoader.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrConfig.h\char`\"{}}\par
+{\tt \#include \char`\"{}RFileMgr.h\char`\"{}}\par
+{\tt \#include \char`\"{}RFile.h\char`\"{}}\par
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \hyperlink{_gr_uber_texture_8cpp_fa4e2bd731ec8cd12d8b4dc8776111c9}{DETAIL\_\-TILE\_\-CACHE\_\-SIZE}~4096
+\item 
+\#define \hyperlink{_gr_uber_texture_8cpp_b6bf9ffc47257c149de8eb1be80b06cb}{DETAIL\_\-TILE\_\-BUMP\_\-SIZE}~2048
+\item 
+\#define \hyperlink{_gr_uber_texture_8cpp_a2c29559dce773d2794692741a94444e}{DETAIL\_\-TILE\_\-DIFFUSE\_\-SIZE}~4096
+\item 
+\#define \hyperlink{_gr_uber_texture_8cpp_f33a9d9d7199f31930cafae057ed547c}{DETAIL\_\-TILE\_\-SPECULAR\_\-SIZE}~4096
+\item 
+\#define \hyperlink{_gr_uber_texture_8cpp_38c71b86a39db5f98b8d71ab0de502e3}{DETAIL\_\-TILE\_\-SIZE}~10240
+\item 
+\#define \hyperlink{_gr_uber_texture_8cpp_726a329814db1bf6be66a932df025f61}{DETAIL\_\-ATLAS\_\-WIDTH}~( GR\_\-UBERTEX\_\-SIZE\_\-IN\_\-TEXELS / GR\_\-UBERTEX\_\-PATCH\_\-BOUNDARY )
+\item 
+\#define \hyperlink{_gr_uber_texture_8cpp_7108f99c7c728b1753f13f4206d7bcf5}{DETAIL\_\-ATLAS\_\-HEIGHT}~( GR\_\-UBERTEX\_\-SIZE\_\-IN\_\-TEXELS / GR\_\-UBERTEX\_\-PATCH\_\-BOUNDARY )
+\item 
+\#define \hyperlink{_gr_uber_texture_8cpp_e4daea77d83f9d2d4ae09931179b445d}{DETAIL\_\-ATLAS\_\-MEM\_\-PEL\_\-SIZE}~( 2 )
+\item 
+\#define \hyperlink{_gr_uber_texture_8cpp_e5772c08d58760cc713f3d7b336eb31b}{DETAIL\_\-ATLAS\_\-MEM\_\-WIDTH}~( GR\_\-UBERTEX\_\-SIZE\_\-IN\_\-TEXELS / GR\_\-UBERTEX\_\-PATCH\_\-BOUNDARY $\ast$ DETAIL\_\-ATLAS\_\-MEM\_\-PEL\_\-SIZE )
+\item 
+\#define \hyperlink{_gr_uber_texture_8cpp_6fb3ff2d935eb437a637edc714feb91c}{DETAIL\_\-ATLAS\_\-MEM\_\-HEIGHT}~( GR\_\-UBERTEX\_\-SIZE\_\-IN\_\-TEXELS / GR\_\-UBERTEX\_\-PATCH\_\-BOUNDARY )
+\item 
+\#define \hyperlink{_gr_uber_texture_8cpp_da4b1a669dd82d53e2a9132c188ac05f}{DETAIL\_\-ATLAS\_\-MEM\_\-SIZE}~( DETAIL\_\-ATLAS\_\-MEM\_\-WIDTH $\ast$ DETAIL\_\-ATLAS\_\-MEM\_\-HEIGHT )
+\item 
+\#define \hyperlink{_gr_uber_texture_8cpp_c27cee75130336f2aa1b26af175b5680}{DETAIL\_\-ATLAS\_\-ADDR}(ptr, \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x}, \hyperlink{wglext_8h_9298c7ad619074f5285b32c6b72bfdea}{y})~( ptr + \hyperlink{wglext_8h_9298c7ad619074f5285b32c6b72bfdea}{y} $\ast$ DETAIL\_\-ATLAS\_\-MEM\_\-WIDTH + \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x} $\ast$ DETAIL\_\-ATLAS\_\-MEM\_\-PEL\_\-SIZE )
+\item 
+\#define \hyperlink{_gr_uber_texture_8cpp_8ce629bee7a461861d514876c30d488e}{TILE\_\-BUMP\_\-OFFSET}(ptr)~( ( unsigned char$\ast$ )ptr +    0 )
+\item 
+\#define \hyperlink{_gr_uber_texture_8cpp_f7ab876e07b87026b2ec4005c8433647}{TILE\_\-DIFFUSE\_\-OFFSET}(ptr)~( ( unsigned char$\ast$ )ptr + 2048 )
+\item 
+\#define \hyperlink{_gr_uber_texture_8cpp_e8ba96ec7c10e2cead56592ec803adb5}{TILE\_\-SPECULAR\_\-OFFSET}(ptr)~( ( unsigned char$\ast$ )ptr + 6144 )
+\item 
+\#define \hyperlink{_gr_uber_texture_8cpp_c2eb9884d1dfa7073aee387753dfdb53}{LOWRES\_\-TEXTURE\_\-WIDTH}~2048
+\item 
+\#define \hyperlink{_gr_uber_texture_8cpp_cd1052df6fef199df4d426b6f8a7d333}{LOWRES\_\-TEXTURE\_\-HEIGHT}~2048
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_gr_uber_texture_8cpp_c27cee75130336f2aa1b26af175b5680}{
+\index{GrUberTexture.cpp@{GrUberTexture.cpp}!DETAIL\_\-ATLAS\_\-ADDR@{DETAIL\_\-ATLAS\_\-ADDR}}
+\index{DETAIL\_\-ATLAS\_\-ADDR@{DETAIL\_\-ATLAS\_\-ADDR}!GrUberTexture.cpp@{GrUberTexture.cpp}}
+\subsubsection[{DETAIL\_\-ATLAS\_\-ADDR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DETAIL\_\-ATLAS\_\-ADDR(ptr, \/  {\bf x}, \/  {\bf y})~( ptr + {\bf y} $\ast$ DETAIL\_\-ATLAS\_\-MEM\_\-WIDTH + {\bf x} $\ast$ DETAIL\_\-ATLAS\_\-MEM\_\-PEL\_\-SIZE )}}
+\label{_gr_uber_texture_8cpp_c27cee75130336f2aa1b26af175b5680}
+
+
+
+
+Definition at line 43 of file GrUberTexture.cpp.\hypertarget{_gr_uber_texture_8cpp_7108f99c7c728b1753f13f4206d7bcf5}{
+\index{GrUberTexture.cpp@{GrUberTexture.cpp}!DETAIL\_\-ATLAS\_\-HEIGHT@{DETAIL\_\-ATLAS\_\-HEIGHT}}
+\index{DETAIL\_\-ATLAS\_\-HEIGHT@{DETAIL\_\-ATLAS\_\-HEIGHT}!GrUberTexture.cpp@{GrUberTexture.cpp}}
+\subsubsection[{DETAIL\_\-ATLAS\_\-HEIGHT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DETAIL\_\-ATLAS\_\-HEIGHT~( GR\_\-UBERTEX\_\-SIZE\_\-IN\_\-TEXELS / GR\_\-UBERTEX\_\-PATCH\_\-BOUNDARY )}}
+\label{_gr_uber_texture_8cpp_7108f99c7c728b1753f13f4206d7bcf5}
+
+
+
+
+Definition at line 36 of file GrUberTexture.cpp.\hypertarget{_gr_uber_texture_8cpp_6fb3ff2d935eb437a637edc714feb91c}{
+\index{GrUberTexture.cpp@{GrUberTexture.cpp}!DETAIL\_\-ATLAS\_\-MEM\_\-HEIGHT@{DETAIL\_\-ATLAS\_\-MEM\_\-HEIGHT}}
+\index{DETAIL\_\-ATLAS\_\-MEM\_\-HEIGHT@{DETAIL\_\-ATLAS\_\-MEM\_\-HEIGHT}!GrUberTexture.cpp@{GrUberTexture.cpp}}
+\subsubsection[{DETAIL\_\-ATLAS\_\-MEM\_\-HEIGHT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DETAIL\_\-ATLAS\_\-MEM\_\-HEIGHT~( GR\_\-UBERTEX\_\-SIZE\_\-IN\_\-TEXELS / GR\_\-UBERTEX\_\-PATCH\_\-BOUNDARY )}}
+\label{_gr_uber_texture_8cpp_6fb3ff2d935eb437a637edc714feb91c}
+
+
+
+
+Definition at line 40 of file GrUberTexture.cpp.\hypertarget{_gr_uber_texture_8cpp_e4daea77d83f9d2d4ae09931179b445d}{
+\index{GrUberTexture.cpp@{GrUberTexture.cpp}!DETAIL\_\-ATLAS\_\-MEM\_\-PEL\_\-SIZE@{DETAIL\_\-ATLAS\_\-MEM\_\-PEL\_\-SIZE}}
+\index{DETAIL\_\-ATLAS\_\-MEM\_\-PEL\_\-SIZE@{DETAIL\_\-ATLAS\_\-MEM\_\-PEL\_\-SIZE}!GrUberTexture.cpp@{GrUberTexture.cpp}}
+\subsubsection[{DETAIL\_\-ATLAS\_\-MEM\_\-PEL\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DETAIL\_\-ATLAS\_\-MEM\_\-PEL\_\-SIZE~( 2 )}}
+\label{_gr_uber_texture_8cpp_e4daea77d83f9d2d4ae09931179b445d}
+
+
+
+
+Definition at line 38 of file GrUberTexture.cpp.\hypertarget{_gr_uber_texture_8cpp_da4b1a669dd82d53e2a9132c188ac05f}{
+\index{GrUberTexture.cpp@{GrUberTexture.cpp}!DETAIL\_\-ATLAS\_\-MEM\_\-SIZE@{DETAIL\_\-ATLAS\_\-MEM\_\-SIZE}}
+\index{DETAIL\_\-ATLAS\_\-MEM\_\-SIZE@{DETAIL\_\-ATLAS\_\-MEM\_\-SIZE}!GrUberTexture.cpp@{GrUberTexture.cpp}}
+\subsubsection[{DETAIL\_\-ATLAS\_\-MEM\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DETAIL\_\-ATLAS\_\-MEM\_\-SIZE~( DETAIL\_\-ATLAS\_\-MEM\_\-WIDTH $\ast$ DETAIL\_\-ATLAS\_\-MEM\_\-HEIGHT )}}
+\label{_gr_uber_texture_8cpp_da4b1a669dd82d53e2a9132c188ac05f}
+
+
+
+
+Definition at line 41 of file GrUberTexture.cpp.\hypertarget{_gr_uber_texture_8cpp_e5772c08d58760cc713f3d7b336eb31b}{
+\index{GrUberTexture.cpp@{GrUberTexture.cpp}!DETAIL\_\-ATLAS\_\-MEM\_\-WIDTH@{DETAIL\_\-ATLAS\_\-MEM\_\-WIDTH}}
+\index{DETAIL\_\-ATLAS\_\-MEM\_\-WIDTH@{DETAIL\_\-ATLAS\_\-MEM\_\-WIDTH}!GrUberTexture.cpp@{GrUberTexture.cpp}}
+\subsubsection[{DETAIL\_\-ATLAS\_\-MEM\_\-WIDTH}]{\setlength{\rightskip}{0pt plus 5cm}\#define DETAIL\_\-ATLAS\_\-MEM\_\-WIDTH~( GR\_\-UBERTEX\_\-SIZE\_\-IN\_\-TEXELS / GR\_\-UBERTEX\_\-PATCH\_\-BOUNDARY $\ast$ DETAIL\_\-ATLAS\_\-MEM\_\-PEL\_\-SIZE )}}
+\label{_gr_uber_texture_8cpp_e5772c08d58760cc713f3d7b336eb31b}
+
+
+
+
+Definition at line 39 of file GrUberTexture.cpp.\hypertarget{_gr_uber_texture_8cpp_726a329814db1bf6be66a932df025f61}{
+\index{GrUberTexture.cpp@{GrUberTexture.cpp}!DETAIL\_\-ATLAS\_\-WIDTH@{DETAIL\_\-ATLAS\_\-WIDTH}}
+\index{DETAIL\_\-ATLAS\_\-WIDTH@{DETAIL\_\-ATLAS\_\-WIDTH}!GrUberTexture.cpp@{GrUberTexture.cpp}}
+\subsubsection[{DETAIL\_\-ATLAS\_\-WIDTH}]{\setlength{\rightskip}{0pt plus 5cm}\#define DETAIL\_\-ATLAS\_\-WIDTH~( GR\_\-UBERTEX\_\-SIZE\_\-IN\_\-TEXELS / GR\_\-UBERTEX\_\-PATCH\_\-BOUNDARY )}}
+\label{_gr_uber_texture_8cpp_726a329814db1bf6be66a932df025f61}
+
+
+
+
+Definition at line 35 of file GrUberTexture.cpp.\hypertarget{_gr_uber_texture_8cpp_b6bf9ffc47257c149de8eb1be80b06cb}{
+\index{GrUberTexture.cpp@{GrUberTexture.cpp}!DETAIL\_\-TILE\_\-BUMP\_\-SIZE@{DETAIL\_\-TILE\_\-BUMP\_\-SIZE}}
+\index{DETAIL\_\-TILE\_\-BUMP\_\-SIZE@{DETAIL\_\-TILE\_\-BUMP\_\-SIZE}!GrUberTexture.cpp@{GrUberTexture.cpp}}
+\subsubsection[{DETAIL\_\-TILE\_\-BUMP\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DETAIL\_\-TILE\_\-BUMP\_\-SIZE~2048}}
+\label{_gr_uber_texture_8cpp_b6bf9ffc47257c149de8eb1be80b06cb}
+
+
+
+
+Definition at line 29 of file GrUberTexture.cpp.\hypertarget{_gr_uber_texture_8cpp_fa4e2bd731ec8cd12d8b4dc8776111c9}{
+\index{GrUberTexture.cpp@{GrUberTexture.cpp}!DETAIL\_\-TILE\_\-CACHE\_\-SIZE@{DETAIL\_\-TILE\_\-CACHE\_\-SIZE}}
+\index{DETAIL\_\-TILE\_\-CACHE\_\-SIZE@{DETAIL\_\-TILE\_\-CACHE\_\-SIZE}!GrUberTexture.cpp@{GrUberTexture.cpp}}
+\subsubsection[{DETAIL\_\-TILE\_\-CACHE\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DETAIL\_\-TILE\_\-CACHE\_\-SIZE~4096}}
+\label{_gr_uber_texture_8cpp_fa4e2bd731ec8cd12d8b4dc8776111c9}
+
+
+
+
+Definition at line 26 of file GrUberTexture.cpp.\hypertarget{_gr_uber_texture_8cpp_a2c29559dce773d2794692741a94444e}{
+\index{GrUberTexture.cpp@{GrUberTexture.cpp}!DETAIL\_\-TILE\_\-DIFFUSE\_\-SIZE@{DETAIL\_\-TILE\_\-DIFFUSE\_\-SIZE}}
+\index{DETAIL\_\-TILE\_\-DIFFUSE\_\-SIZE@{DETAIL\_\-TILE\_\-DIFFUSE\_\-SIZE}!GrUberTexture.cpp@{GrUberTexture.cpp}}
+\subsubsection[{DETAIL\_\-TILE\_\-DIFFUSE\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DETAIL\_\-TILE\_\-DIFFUSE\_\-SIZE~4096}}
+\label{_gr_uber_texture_8cpp_a2c29559dce773d2794692741a94444e}
+
+
+
+
+Definition at line 30 of file GrUberTexture.cpp.\hypertarget{_gr_uber_texture_8cpp_38c71b86a39db5f98b8d71ab0de502e3}{
+\index{GrUberTexture.cpp@{GrUberTexture.cpp}!DETAIL\_\-TILE\_\-SIZE@{DETAIL\_\-TILE\_\-SIZE}}
+\index{DETAIL\_\-TILE\_\-SIZE@{DETAIL\_\-TILE\_\-SIZE}!GrUberTexture.cpp@{GrUberTexture.cpp}}
+\subsubsection[{DETAIL\_\-TILE\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DETAIL\_\-TILE\_\-SIZE~10240}}
+\label{_gr_uber_texture_8cpp_38c71b86a39db5f98b8d71ab0de502e3}
+
+
+
+
+Definition at line 32 of file GrUberTexture.cpp.\hypertarget{_gr_uber_texture_8cpp_f33a9d9d7199f31930cafae057ed547c}{
+\index{GrUberTexture.cpp@{GrUberTexture.cpp}!DETAIL\_\-TILE\_\-SPECULAR\_\-SIZE@{DETAIL\_\-TILE\_\-SPECULAR\_\-SIZE}}
+\index{DETAIL\_\-TILE\_\-SPECULAR\_\-SIZE@{DETAIL\_\-TILE\_\-SPECULAR\_\-SIZE}!GrUberTexture.cpp@{GrUberTexture.cpp}}
+\subsubsection[{DETAIL\_\-TILE\_\-SPECULAR\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DETAIL\_\-TILE\_\-SPECULAR\_\-SIZE~4096}}
+\label{_gr_uber_texture_8cpp_f33a9d9d7199f31930cafae057ed547c}
+
+
+
+
+Definition at line 31 of file GrUberTexture.cpp.\hypertarget{_gr_uber_texture_8cpp_cd1052df6fef199df4d426b6f8a7d333}{
+\index{GrUberTexture.cpp@{GrUberTexture.cpp}!LOWRES\_\-TEXTURE\_\-HEIGHT@{LOWRES\_\-TEXTURE\_\-HEIGHT}}
+\index{LOWRES\_\-TEXTURE\_\-HEIGHT@{LOWRES\_\-TEXTURE\_\-HEIGHT}!GrUberTexture.cpp@{GrUberTexture.cpp}}
+\subsubsection[{LOWRES\_\-TEXTURE\_\-HEIGHT}]{\setlength{\rightskip}{0pt plus 5cm}\#define LOWRES\_\-TEXTURE\_\-HEIGHT~2048}}
+\label{_gr_uber_texture_8cpp_cd1052df6fef199df4d426b6f8a7d333}
+
+
+
+
+Definition at line 52 of file GrUberTexture.cpp.\hypertarget{_gr_uber_texture_8cpp_c2eb9884d1dfa7073aee387753dfdb53}{
+\index{GrUberTexture.cpp@{GrUberTexture.cpp}!LOWRES\_\-TEXTURE\_\-WIDTH@{LOWRES\_\-TEXTURE\_\-WIDTH}}
+\index{LOWRES\_\-TEXTURE\_\-WIDTH@{LOWRES\_\-TEXTURE\_\-WIDTH}!GrUberTexture.cpp@{GrUberTexture.cpp}}
+\subsubsection[{LOWRES\_\-TEXTURE\_\-WIDTH}]{\setlength{\rightskip}{0pt plus 5cm}\#define LOWRES\_\-TEXTURE\_\-WIDTH~2048}}
+\label{_gr_uber_texture_8cpp_c2eb9884d1dfa7073aee387753dfdb53}
+
+
+
+
+Definition at line 51 of file GrUberTexture.cpp.\hypertarget{_gr_uber_texture_8cpp_8ce629bee7a461861d514876c30d488e}{
+\index{GrUberTexture.cpp@{GrUberTexture.cpp}!TILE\_\-BUMP\_\-OFFSET@{TILE\_\-BUMP\_\-OFFSET}}
+\index{TILE\_\-BUMP\_\-OFFSET@{TILE\_\-BUMP\_\-OFFSET}!GrUberTexture.cpp@{GrUberTexture.cpp}}
+\subsubsection[{TILE\_\-BUMP\_\-OFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define TILE\_\-BUMP\_\-OFFSET(ptr)~( ( unsigned char$\ast$ )ptr +    0 )}}
+\label{_gr_uber_texture_8cpp_8ce629bee7a461861d514876c30d488e}
+
+
+
+
+Definition at line 46 of file GrUberTexture.cpp.\hypertarget{_gr_uber_texture_8cpp_f7ab876e07b87026b2ec4005c8433647}{
+\index{GrUberTexture.cpp@{GrUberTexture.cpp}!TILE\_\-DIFFUSE\_\-OFFSET@{TILE\_\-DIFFUSE\_\-OFFSET}}
+\index{TILE\_\-DIFFUSE\_\-OFFSET@{TILE\_\-DIFFUSE\_\-OFFSET}!GrUberTexture.cpp@{GrUberTexture.cpp}}
+\subsubsection[{TILE\_\-DIFFUSE\_\-OFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define TILE\_\-DIFFUSE\_\-OFFSET(ptr)~( ( unsigned char$\ast$ )ptr + 2048 )}}
+\label{_gr_uber_texture_8cpp_f7ab876e07b87026b2ec4005c8433647}
+
+
+
+
+Definition at line 47 of file GrUberTexture.cpp.\hypertarget{_gr_uber_texture_8cpp_e8ba96ec7c10e2cead56592ec803adb5}{
+\index{GrUberTexture.cpp@{GrUberTexture.cpp}!TILE\_\-SPECULAR\_\-OFFSET@{TILE\_\-SPECULAR\_\-OFFSET}}
+\index{TILE\_\-SPECULAR\_\-OFFSET@{TILE\_\-SPECULAR\_\-OFFSET}!GrUberTexture.cpp@{GrUberTexture.cpp}}
+\subsubsection[{TILE\_\-SPECULAR\_\-OFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define TILE\_\-SPECULAR\_\-OFFSET(ptr)~( ( unsigned char$\ast$ )ptr + 6144 )}}
+\label{_gr_uber_texture_8cpp_e8ba96ec7c10e2cead56592ec803adb5}
+
+
+
+
+Definition at line 48 of file GrUberTexture.cpp.

@@ -1,0 +1,279 @@
+\hypertarget{class_gr_anim}{
+\section{GrAnim Class Reference}
+\label{class_gr_anim}\index{GrAnim@{GrAnim}}
+}
+{\tt \#include $<$GrAnim.h$>$}
+
+Inheritance diagram for GrAnim::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_gr_anim}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_anim_e95ba9277c302b62a1aa920250850c78}{GrAnim} (const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, float blendWeight=1.0f, float speed=1.0f)
+\item 
+virtual \hyperlink{class_gr_anim_c2e84ed21513c92654d033c015003260}{$\sim$GrAnim} ()
+\item 
+virtual \hyperlink{class_gr_anim}{GrAnim} $\ast$ \hyperlink{class_gr_anim_2964f4d1c2a3b51ff301b03590d26bac}{Clone} () const 
+\item 
+const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \& \hyperlink{class_gr_anim_16847f80539915f15a8670858cc08461}{GetName} () const 
+\item 
+void \hyperlink{class_gr_anim_d3ec0402580565cd063b139be74c2337}{SetPlayer} (\hyperlink{class_gr_anim_player}{GrAnimPlayer} $\ast$player)
+\item 
+void \hyperlink{class_gr_anim_83ac6be64b6a8ea93ad373326c9ab2ee}{AddChild} (\hyperlink{class_gr_anim}{GrAnim} $\ast$child)
+\item 
+unsigned int \hyperlink{class_gr_anim_8a6f16cd1038ce6d266986df04e6be63}{GetChildCount} () const 
+\item 
+\hyperlink{class_gr_anim}{GrAnim} $\ast$ \hyperlink{class_gr_anim_db3b4e7c91b07cb1aa949ddfa4cb4211}{GetChild} (unsigned int idx)
+\item 
+void \hyperlink{class_gr_anim_812d2e9d6246923c1c6d3d93b3444a48}{RemoveChild} (\hyperlink{class_gr_anim}{GrAnim} $\ast$child)
+\item 
+void \hyperlink{class_gr_anim_6e433bc1fcdaea899f78bd51f2e0ffa7}{SetBlendWeight} (float weight)
+\item 
+void \hyperlink{class_gr_anim_c027292f0a1cc72c12f616a5e328ea50}{SetSpeed} (float speed)
+\item 
+float \hyperlink{class_gr_anim_f6af73be3d38c2ea62c5dac6a5d65196}{GetBlendWeight} () const 
+\item 
+float \hyperlink{class_gr_anim_de03c33c2cb87f9b72243afc77504973}{GetSpeed} () const 
+\item 
+void \hyperlink{class_gr_anim_7aa48461719836a8a2ad7ffff67a958c}{SeekTo} (float time)
+\item 
+float \hyperlink{class_gr_anim_6863fbadf721b2848290a320b617dc78}{GetDuration} ()
+\item 
+void \hyperlink{class_gr_anim_2ba496a35bd9ffef0eddd31b1f540d89}{ApplyPose} (float timeAdvance, float parentBlendWeight=1.0f)
+\end{CompactItemize}
+\subsection*{Protected Member Functions}
+\begin{CompactItemize}
+\item 
+void \hyperlink{class_gr_anim_3f5d565461de134898fad1dcfc04c17a}{SetName} (const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name})
+\item 
+void \hyperlink{class_gr_anim_d83af685b7a05de92682293829ca5268}{CloneChildren} (\hyperlink{class_gr_anim}{GrAnim} $\ast$parent) const 
+\item 
+virtual void \hyperlink{class_gr_anim_dec6db03770e91d166da4c5f87882a39}{OnApplyPose} (float timeAdvance, float blendWeight)
+\item 
+virtual void \hyperlink{class_gr_anim_9bf82e4b036b8a2649745dc993158067}{OnPlayerChange} (\hyperlink{class_gr_anim_player}{GrAnimPlayer} $\ast$player)
+\item 
+virtual void \hyperlink{class_gr_anim_8debb19e5a8a60ae9a4f2d4a95042108}{OnSeekTo} (float time)
+\item 
+virtual float \hyperlink{class_gr_anim_a3de284e428631ca76ddf0cc8af9b787}{OnGetDuration} ()
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 22 of file GrAnim.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_anim_e95ba9277c302b62a1aa920250850c78}{
+\index{GrAnim@{GrAnim}!GrAnim@{GrAnim}}
+\index{GrAnim@{GrAnim}!GrAnim@{GrAnim}}
+\subsubsection[{GrAnim}]{\setlength{\rightskip}{0pt plus 5cm}GrAnim::GrAnim (const {\bf tstring} \& {\em name}, \/  float {\em blendWeight} = {\tt 1.0f}, \/  float {\em speed} = {\tt 1.0f})}}
+\label{class_gr_anim_e95ba9277c302b62a1aa920250850c78}
+
+
+
+
+Definition at line 21 of file GrAnim.cpp.\hypertarget{class_gr_anim_c2e84ed21513c92654d033c015003260}{
+\index{GrAnim@{GrAnim}!$\sim$GrAnim@{$\sim$GrAnim}}
+\index{$\sim$GrAnim@{$\sim$GrAnim}!GrAnim@{GrAnim}}
+\subsubsection[{$\sim$GrAnim}]{\setlength{\rightskip}{0pt plus 5cm}GrAnim::$\sim$GrAnim ()\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{class_gr_anim_c2e84ed21513c92654d033c015003260}
+
+
+
+
+Definition at line 32 of file GrAnim.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_anim_83ac6be64b6a8ea93ad373326c9ab2ee}{
+\index{GrAnim@{GrAnim}!AddChild@{AddChild}}
+\index{AddChild@{AddChild}!GrAnim@{GrAnim}}
+\subsubsection[{AddChild}]{\setlength{\rightskip}{0pt plus 5cm}void GrAnim::AddChild ({\bf GrAnim} $\ast$ {\em child})}}
+\label{class_gr_anim_83ac6be64b6a8ea93ad373326c9ab2ee}
+
+
+
+
+Definition at line 73 of file GrAnim.cpp.\hypertarget{class_gr_anim_2ba496a35bd9ffef0eddd31b1f540d89}{
+\index{GrAnim@{GrAnim}!ApplyPose@{ApplyPose}}
+\index{ApplyPose@{ApplyPose}!GrAnim@{GrAnim}}
+\subsubsection[{ApplyPose}]{\setlength{\rightskip}{0pt plus 5cm}void GrAnim::ApplyPose (float {\em timeAdvance}, \/  float {\em parentBlendWeight} = {\tt 1.0f})}}
+\label{class_gr_anim_2ba496a35bd9ffef0eddd31b1f540d89}
+
+
+
+
+Definition at line 147 of file GrAnim.cpp.\hypertarget{class_gr_anim_2964f4d1c2a3b51ff301b03590d26bac}{
+\index{GrAnim@{GrAnim}!Clone@{Clone}}
+\index{Clone@{Clone}!GrAnim@{GrAnim}}
+\subsubsection[{Clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrAnim} $\ast$ GrAnim::Clone () const\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{class_gr_anim_2964f4d1c2a3b51ff301b03590d26bac}
+
+
+
+
+Reimplemented in \hyperlink{class_gr_k_f_anim_5392ada1053eff8dcb27fa727e107f79}{GrKFAnim}.
+
+Definition at line 46 of file GrAnim.cpp.\hypertarget{class_gr_anim_d83af685b7a05de92682293829ca5268}{
+\index{GrAnim@{GrAnim}!CloneChildren@{CloneChildren}}
+\index{CloneChildren@{CloneChildren}!GrAnim@{GrAnim}}
+\subsubsection[{CloneChildren}]{\setlength{\rightskip}{0pt plus 5cm}void GrAnim::CloneChildren ({\bf GrAnim} $\ast$ {\em parent}) const\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_gr_anim_d83af685b7a05de92682293829ca5268}
+
+
+
+
+Definition at line 172 of file GrAnim.cpp.\hypertarget{class_gr_anim_f6af73be3d38c2ea62c5dac6a5d65196}{
+\index{GrAnim@{GrAnim}!GetBlendWeight@{GetBlendWeight}}
+\index{GetBlendWeight@{GetBlendWeight}!GrAnim@{GrAnim}}
+\subsubsection[{GetBlendWeight}]{\setlength{\rightskip}{0pt plus 5cm}float GrAnim::GetBlendWeight () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_anim_f6af73be3d38c2ea62c5dac6a5d65196}
+
+
+
+
+Definition at line 46 of file GrAnim.h.\hypertarget{class_gr_anim_db3b4e7c91b07cb1aa949ddfa4cb4211}{
+\index{GrAnim@{GrAnim}!GetChild@{GetChild}}
+\index{GetChild@{GetChild}!GrAnim@{GrAnim}}
+\subsubsection[{GetChild}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrAnim} $\ast$ GrAnim::GetChild (unsigned int {\em idx})}}
+\label{class_gr_anim_db3b4e7c91b07cb1aa949ddfa4cb4211}
+
+
+
+
+Definition at line 96 of file GrAnim.cpp.\hypertarget{class_gr_anim_8a6f16cd1038ce6d266986df04e6be63}{
+\index{GrAnim@{GrAnim}!GetChildCount@{GetChildCount}}
+\index{GetChildCount@{GetChildCount}!GrAnim@{GrAnim}}
+\subsubsection[{GetChildCount}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrAnim::GetChildCount () const}}
+\label{class_gr_anim_8a6f16cd1038ce6d266986df04e6be63}
+
+
+
+
+Definition at line 89 of file GrAnim.cpp.\hypertarget{class_gr_anim_6863fbadf721b2848290a320b617dc78}{
+\index{GrAnim@{GrAnim}!GetDuration@{GetDuration}}
+\index{GetDuration@{GetDuration}!GrAnim@{GrAnim}}
+\subsubsection[{GetDuration}]{\setlength{\rightskip}{0pt plus 5cm}float GrAnim::GetDuration ()}}
+\label{class_gr_anim_6863fbadf721b2848290a320b617dc78}
+
+
+
+
+Definition at line 126 of file GrAnim.cpp.\hypertarget{class_gr_anim_16847f80539915f15a8670858cc08461}{
+\index{GrAnim@{GrAnim}!GetName@{GetName}}
+\index{GetName@{GetName}!GrAnim@{GrAnim}}
+\subsubsection[{GetName}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf tstring}\& GrAnim::GetName () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_anim_16847f80539915f15a8670858cc08461}
+
+
+
+
+Definition at line 30 of file GrAnim.h.\hypertarget{class_gr_anim_de03c33c2cb87f9b72243afc77504973}{
+\index{GrAnim@{GrAnim}!GetSpeed@{GetSpeed}}
+\index{GetSpeed@{GetSpeed}!GrAnim@{GrAnim}}
+\subsubsection[{GetSpeed}]{\setlength{\rightskip}{0pt plus 5cm}float GrAnim::GetSpeed () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_anim_de03c33c2cb87f9b72243afc77504973}
+
+
+
+
+Definition at line 47 of file GrAnim.h.\hypertarget{class_gr_anim_dec6db03770e91d166da4c5f87882a39}{
+\index{GrAnim@{GrAnim}!OnApplyPose@{OnApplyPose}}
+\index{OnApplyPose@{OnApplyPose}!GrAnim@{GrAnim}}
+\subsubsection[{OnApplyPose}]{\setlength{\rightskip}{0pt plus 5cm}virtual void GrAnim::OnApplyPose (float {\em timeAdvance}, \/  float {\em blendWeight})\hspace{0.3cm}{\tt  \mbox{[}inline, protected, virtual\mbox{]}}}}
+\label{class_gr_anim_dec6db03770e91d166da4c5f87882a39}
+
+
+
+
+Definition at line 62 of file GrAnim.h.\hypertarget{class_gr_anim_a3de284e428631ca76ddf0cc8af9b787}{
+\index{GrAnim@{GrAnim}!OnGetDuration@{OnGetDuration}}
+\index{OnGetDuration@{OnGetDuration}!GrAnim@{GrAnim}}
+\subsubsection[{OnGetDuration}]{\setlength{\rightskip}{0pt plus 5cm}virtual float GrAnim::OnGetDuration ()\hspace{0.3cm}{\tt  \mbox{[}inline, protected, virtual\mbox{]}}}}
+\label{class_gr_anim_a3de284e428631ca76ddf0cc8af9b787}
+
+
+
+
+Definition at line 65 of file GrAnim.h.\hypertarget{class_gr_anim_9bf82e4b036b8a2649745dc993158067}{
+\index{GrAnim@{GrAnim}!OnPlayerChange@{OnPlayerChange}}
+\index{OnPlayerChange@{OnPlayerChange}!GrAnim@{GrAnim}}
+\subsubsection[{OnPlayerChange}]{\setlength{\rightskip}{0pt plus 5cm}virtual void GrAnim::OnPlayerChange ({\bf GrAnimPlayer} $\ast$ {\em player})\hspace{0.3cm}{\tt  \mbox{[}inline, protected, virtual\mbox{]}}}}
+\label{class_gr_anim_9bf82e4b036b8a2649745dc993158067}
+
+
+
+
+Definition at line 63 of file GrAnim.h.\hypertarget{class_gr_anim_8debb19e5a8a60ae9a4f2d4a95042108}{
+\index{GrAnim@{GrAnim}!OnSeekTo@{OnSeekTo}}
+\index{OnSeekTo@{OnSeekTo}!GrAnim@{GrAnim}}
+\subsubsection[{OnSeekTo}]{\setlength{\rightskip}{0pt plus 5cm}virtual void GrAnim::OnSeekTo (float {\em time})\hspace{0.3cm}{\tt  \mbox{[}inline, protected, virtual\mbox{]}}}}
+\label{class_gr_anim_8debb19e5a8a60ae9a4f2d4a95042108}
+
+
+
+
+Definition at line 64 of file GrAnim.h.\hypertarget{class_gr_anim_812d2e9d6246923c1c6d3d93b3444a48}{
+\index{GrAnim@{GrAnim}!RemoveChild@{RemoveChild}}
+\index{RemoveChild@{RemoveChild}!GrAnim@{GrAnim}}
+\subsubsection[{RemoveChild}]{\setlength{\rightskip}{0pt plus 5cm}void GrAnim::RemoveChild ({\bf GrAnim} $\ast$ {\em child})}}
+\label{class_gr_anim_812d2e9d6246923c1c6d3d93b3444a48}
+
+
+
+
+Definition at line 104 of file GrAnim.cpp.\hypertarget{class_gr_anim_7aa48461719836a8a2ad7ffff67a958c}{
+\index{GrAnim@{GrAnim}!SeekTo@{SeekTo}}
+\index{SeekTo@{SeekTo}!GrAnim@{GrAnim}}
+\subsubsection[{SeekTo}]{\setlength{\rightskip}{0pt plus 5cm}void GrAnim::SeekTo (float {\em time})}}
+\label{class_gr_anim_7aa48461719836a8a2ad7ffff67a958c}
+
+
+
+
+Definition at line 115 of file GrAnim.cpp.\hypertarget{class_gr_anim_6e433bc1fcdaea899f78bd51f2e0ffa7}{
+\index{GrAnim@{GrAnim}!SetBlendWeight@{SetBlendWeight}}
+\index{SetBlendWeight@{SetBlendWeight}!GrAnim@{GrAnim}}
+\subsubsection[{SetBlendWeight}]{\setlength{\rightskip}{0pt plus 5cm}void GrAnim::SetBlendWeight (float {\em weight})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_anim_6e433bc1fcdaea899f78bd51f2e0ffa7}
+
+
+
+
+Definition at line 42 of file GrAnim.h.\hypertarget{class_gr_anim_3f5d565461de134898fad1dcfc04c17a}{
+\index{GrAnim@{GrAnim}!SetName@{SetName}}
+\index{SetName@{SetName}!GrAnim@{GrAnim}}
+\subsubsection[{SetName}]{\setlength{\rightskip}{0pt plus 5cm}void GrAnim::SetName (const {\bf tstring} \& {\em name})\hspace{0.3cm}{\tt  \mbox{[}inline, protected\mbox{]}}}}
+\label{class_gr_anim_3f5d565461de134898fad1dcfc04c17a}
+
+
+
+
+Definition at line 59 of file GrAnim.h.\hypertarget{class_gr_anim_d3ec0402580565cd063b139be74c2337}{
+\index{GrAnim@{GrAnim}!SetPlayer@{SetPlayer}}
+\index{SetPlayer@{SetPlayer}!GrAnim@{GrAnim}}
+\subsubsection[{SetPlayer}]{\setlength{\rightskip}{0pt plus 5cm}void GrAnim::SetPlayer ({\bf GrAnimPlayer} $\ast$ {\em player})}}
+\label{class_gr_anim_d3ec0402580565cd063b139be74c2337}
+
+
+
+
+Definition at line 57 of file GrAnim.cpp.\hypertarget{class_gr_anim_c027292f0a1cc72c12f616a5e328ea50}{
+\index{GrAnim@{GrAnim}!SetSpeed@{SetSpeed}}
+\index{SetSpeed@{SetSpeed}!GrAnim@{GrAnim}}
+\subsubsection[{SetSpeed}]{\setlength{\rightskip}{0pt plus 5cm}void GrAnim::SetSpeed (float {\em speed})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_anim_c027292f0a1cc72c12f616a5e328ea50}
+
+
+
+
+Definition at line 43 of file GrAnim.h.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_anim_8h}{GrAnim.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_anim_8cpp}{GrAnim.cpp}\end{CompactItemize}

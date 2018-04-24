@@ -1,0 +1,481 @@
+\hypertarget{struct_s_vec3}{
+\section{SVec3 Struct Reference}
+\label{struct_s_vec3}\index{SVec3@{SVec3}}
+}
+{\tt \#include $<$GrTypes.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{struct_s_vec3_c7b69a9f9a0f36dd127aace025c8660a}{SVec3} ()
+\item 
+\hyperlink{struct_s_vec3_3b9c3f6965913544d0f88d0dd4398e1d}{SVec3} (float \hyperlink{struct_s_vec3_a30ab4ca24f2b7968f6b21a97c28a812}{x}, float \hyperlink{struct_s_vec3_9e4d6ddc68169c650b437a7d1714f299}{y}, float \hyperlink{struct_s_vec3_d9d349dd9369afd5bd7d056e59b3ae4a}{z})
+\item 
+\hyperlink{struct_s_vec3_6b9a2eabcdf8d8044f184a1962ae5d5a}{SVec3} (const \hyperlink{class_m_vec3}{MVec3} \&vec)
+\item 
+float \hyperlink{struct_s_vec3_28f033f4e9073dcbe27d385e2cba1929}{Dist} (const \hyperlink{struct_s_vec3}{SVec3} \&vec) const 
+\item 
+float \hyperlink{struct_s_vec3_222b0f4cd0f52471ebf70dbad68dd03b}{DistSqr} (const \hyperlink{struct_s_vec3}{SVec3} \&vec) const 
+\item 
+float \hyperlink{struct_s_vec3_903103913dbda8f416cd4eaab7faa5f7}{Mag} () const 
+\item 
+float \hyperlink{struct_s_vec3_721348baa5a216e3784241336baa34f4}{MagSqr} () const 
+\item 
+float \hyperlink{struct_s_vec3_4f0aa544f63c27bde9e89363ca58c6a6}{Dot} (const \hyperlink{struct_s_vec3}{SVec3} \&vec) const 
+\item 
+float \hyperlink{struct_s_vec3_f3e9779336e5a54ecbdd254e0de35511}{Dot} (const \hyperlink{class_m_vec3}{MVec3} \&vec) const 
+\item 
+float \hyperlink{struct_s_vec3_250acbecacb21eda69e976bbab1866df}{AbsMax} () const 
+\item 
+void \hyperlink{struct_s_vec3_5b3afb295582e6c100e8a8ac931d1793}{Normalize} ()
+\item 
+\hyperlink{struct_s_vec3}{SVec3} \hyperlink{struct_s_vec3_cfb19f8729abb5eade96512a5153df07}{Normalized} () const 
+\item 
+void \hyperlink{struct_s_vec3_01a11562d5614c7b0b635b5ef9715c49}{NormalizeFast} ()
+\item 
+\hyperlink{struct_s_vec3}{SVec3} \hyperlink{struct_s_vec3_c7d0f668fc1d020f23c83df477e33ca2}{NormalizedFast} () const 
+\item 
+\hyperlink{struct_s_vec3}{SVec3} \& \hyperlink{struct_s_vec3_b50fa495fe66a74dfae638077e0bc850}{operator=} (const \hyperlink{class_m_vec3}{MVec3} \&\hyperlink{struct_s_vec3_e77f7ec6dd4b23199dce3e4dfaee9804}{v})
+\item 
+bool \hyperlink{struct_s_vec3_562f164e2c990dc5e870942b82e11004}{operator==} (const \hyperlink{struct_s_vec3}{SVec3} \&\hyperlink{struct_s_vec3_e77f7ec6dd4b23199dce3e4dfaee9804}{v}) const 
+\item 
+bool \hyperlink{struct_s_vec3_1149fc5a45c5b8fdbceddf313736be9c}{operator!=} (const \hyperlink{struct_s_vec3}{SVec3} \&\hyperlink{struct_s_vec3_e77f7ec6dd4b23199dce3e4dfaee9804}{v}) const 
+\item 
+\hyperlink{struct_s_vec3}{SVec3} \hyperlink{struct_s_vec3_64c7cbcbb060d5879af8e75b5a0f8a3e}{operator+} (const \hyperlink{struct_s_vec3}{SVec3} \&\hyperlink{struct_s_vec3_e77f7ec6dd4b23199dce3e4dfaee9804}{v}) const 
+\item 
+\hyperlink{struct_s_vec3}{SVec3} \hyperlink{struct_s_vec3_44a8977587b6d371890878767c5fe1e0}{operator-} (const \hyperlink{struct_s_vec3}{SVec3} \&\hyperlink{struct_s_vec3_e77f7ec6dd4b23199dce3e4dfaee9804}{v}) const 
+\item 
+\hyperlink{struct_s_vec3}{SVec3} \hyperlink{struct_s_vec3_0366aeb56a82c9455af3c1da0001c861}{operator$\ast$} (const \hyperlink{struct_s_vec3}{SVec3} \&\hyperlink{struct_s_vec3_e77f7ec6dd4b23199dce3e4dfaee9804}{v}) const 
+\item 
+\hyperlink{struct_s_vec3}{SVec3} \hyperlink{struct_s_vec3_e3d43793ba784f64df8bf332f1e8e2a7}{operator$\ast$} (float f) const 
+\item 
+\hyperlink{struct_s_vec3}{SVec3} \hyperlink{struct_s_vec3_453b45185eca2e60d4e42ccc3be6ad10}{operator/} (const \hyperlink{struct_s_vec3}{SVec3} \&\hyperlink{struct_s_vec3_e77f7ec6dd4b23199dce3e4dfaee9804}{v}) const 
+\item 
+\hyperlink{struct_s_vec3}{SVec3} \hyperlink{struct_s_vec3_9b3423fe8b3a948e79040e87e830fbf1}{operator/} (const float \hyperlink{glext__bak_8h_d585a1393cfa368fa9dc3d8ebff640d5}{s}) const 
+\item 
+\hyperlink{struct_s_vec3}{SVec3} \hyperlink{struct_s_vec3_0e2409af1f979a0253beebf4fdb65569}{operator-} () const 
+\item 
+\hyperlink{struct_s_vec3}{SVec3} \& \hyperlink{struct_s_vec3_4a1d77dd549c58455c0003e1445d1ad3}{operator$\ast$=} (const \hyperlink{struct_s_vec3}{SVec3} \&\hyperlink{struct_s_vec3_e77f7ec6dd4b23199dce3e4dfaee9804}{v})
+\item 
+\hyperlink{struct_s_vec3}{SVec3} \& \hyperlink{struct_s_vec3_eb70adcdab8bd8aa9351db18341ef6e0}{operator$\ast$=} (float \hyperlink{glext__bak_8h_d585a1393cfa368fa9dc3d8ebff640d5}{s})
+\item 
+\hyperlink{struct_s_vec3}{SVec3} \& \hyperlink{struct_s_vec3_9e47ed7dcdb8436f298025c3cdc8f75a}{operator/=} (const \hyperlink{struct_s_vec3}{SVec3} \&\hyperlink{struct_s_vec3_e77f7ec6dd4b23199dce3e4dfaee9804}{v})
+\item 
+\hyperlink{struct_s_vec3}{SVec3} \& \hyperlink{struct_s_vec3_270fb17ebc3651f2761e9ddd294e9e2d}{operator/=} (float \hyperlink{glext__bak_8h_d585a1393cfa368fa9dc3d8ebff640d5}{s})
+\item 
+\hyperlink{struct_s_vec3}{SVec3} \& \hyperlink{struct_s_vec3_1b2eb0d4a1f7616b3cbf3174fe4a7bcc}{operator+=} (const \hyperlink{struct_s_vec3}{SVec3} \&\hyperlink{struct_s_vec3_e77f7ec6dd4b23199dce3e4dfaee9804}{v})
+\item 
+\hyperlink{struct_s_vec3}{SVec3} \& \hyperlink{struct_s_vec3_907316ea6880e4b6c5816929d8f387f3}{operator+=} (float \hyperlink{glext__bak_8h_d585a1393cfa368fa9dc3d8ebff640d5}{s})
+\item 
+\hyperlink{struct_s_vec3}{SVec3} \& \hyperlink{struct_s_vec3_3927705cbbdba6a42b8ec8bd839b1528}{operator-=} (const \hyperlink{struct_s_vec3}{SVec3} \&\hyperlink{struct_s_vec3_e77f7ec6dd4b23199dce3e4dfaee9804}{v})
+\item 
+\hyperlink{struct_s_vec3}{SVec3} \& \hyperlink{struct_s_vec3_eeb11a8159ee71312203d2bab8f7c157}{operator-=} (float \hyperlink{glext__bak_8h_d585a1393cfa368fa9dc3d8ebff640d5}{s})
+\item 
+float \& \hyperlink{struct_s_vec3_80054be7f9f62d81c5612d69f32ba11c}{operator\mbox{[}$\,$\mbox{]}} (unsigned int idx)
+\item 
+const float \& \hyperlink{struct_s_vec3_200414903bec9b6bab6946b0d900dc40}{operator\mbox{[}$\,$\mbox{]}} (unsigned int idx) const 
+\item 
+\hyperlink{struct_s_vec3_feb6cc5887cb360146ca4add14f935dc}{operator MVec3} () const 
+\item 
+\hyperlink{struct_s_vec3}{SVec3} \hyperlink{struct_s_vec3_2f8cd2997092116b29bed46041e4dcc3}{Cross} (const \hyperlink{struct_s_vec3}{SVec3} \&\hyperlink{struct_s_vec3_e77f7ec6dd4b23199dce3e4dfaee9804}{v}) const 
+\end{CompactItemize}
+\subsection*{Public Attributes}
+\begin{CompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>float \hyperlink{struct_s_vec3_a30ab4ca24f2b7968f6b21a97c28a812}{x}\\
+\>\>float \hyperlink{struct_s_vec3_9e4d6ddc68169c650b437a7d1714f299}{y}\\
+\>\>float \hyperlink{struct_s_vec3_d9d349dd9369afd5bd7d056e59b3ae4a}{z}\\
+\>\} \\
+\>float \hyperlink{struct_s_vec3_e77f7ec6dd4b23199dce3e4dfaee9804}{v} \mbox{[}3\mbox{]}\\
+\}; \\
+
+\end{tabbing}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 69 of file GrTypes.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{struct_s_vec3_c7b69a9f9a0f36dd127aace025c8660a}{
+\index{SVec3@{SVec3}!SVec3@{SVec3}}
+\index{SVec3@{SVec3}!SVec3@{SVec3}}
+\subsubsection[{SVec3}]{\setlength{\rightskip}{0pt plus 5cm}SVec3::SVec3 ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{struct_s_vec3_c7b69a9f9a0f36dd127aace025c8660a}
+
+
+
+
+Definition at line 71 of file GrTypes.h.\hypertarget{struct_s_vec3_3b9c3f6965913544d0f88d0dd4398e1d}{
+\index{SVec3@{SVec3}!SVec3@{SVec3}}
+\index{SVec3@{SVec3}!SVec3@{SVec3}}
+\subsubsection[{SVec3}]{\setlength{\rightskip}{0pt plus 5cm}SVec3::SVec3 (float {\em x}, \/  float {\em y}, \/  float {\em z})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{struct_s_vec3_3b9c3f6965913544d0f88d0dd4398e1d}
+
+
+
+
+Definition at line 72 of file GrTypes.h.\hypertarget{struct_s_vec3_6b9a2eabcdf8d8044f184a1962ae5d5a}{
+\index{SVec3@{SVec3}!SVec3@{SVec3}}
+\index{SVec3@{SVec3}!SVec3@{SVec3}}
+\subsubsection[{SVec3}]{\setlength{\rightskip}{0pt plus 5cm}SVec3::SVec3 (const {\bf MVec3} \& {\em vec})}}
+\label{struct_s_vec3_6b9a2eabcdf8d8044f184a1962ae5d5a}
+
+
+
+
+Definition at line 115 of file GrTypes.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{struct_s_vec3_250acbecacb21eda69e976bbab1866df}{
+\index{SVec3@{SVec3}!AbsMax@{AbsMax}}
+\index{AbsMax@{AbsMax}!SVec3@{SVec3}}
+\subsubsection[{AbsMax}]{\setlength{\rightskip}{0pt plus 5cm}float SVec3::AbsMax () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{struct_s_vec3_250acbecacb21eda69e976bbab1866df}
+
+
+
+
+Definition at line 84 of file GrTypes.h.\hypertarget{struct_s_vec3_2f8cd2997092116b29bed46041e4dcc3}{
+\index{SVec3@{SVec3}!Cross@{Cross}}
+\index{Cross@{Cross}!SVec3@{SVec3}}
+\subsubsection[{Cross}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SVec3} SVec3::Cross (const {\bf SVec3} \& {\em v}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{struct_s_vec3_2f8cd2997092116b29bed46041e4dcc3}
+
+
+
+
+Definition at line 118 of file GrTypes.h.\hypertarget{struct_s_vec3_28f033f4e9073dcbe27d385e2cba1929}{
+\index{SVec3@{SVec3}!Dist@{Dist}}
+\index{Dist@{Dist}!SVec3@{SVec3}}
+\subsubsection[{Dist}]{\setlength{\rightskip}{0pt plus 5cm}float SVec3::Dist (const {\bf SVec3} \& {\em vec}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{struct_s_vec3_28f033f4e9073dcbe27d385e2cba1929}
+
+
+
+
+Definition at line 75 of file GrTypes.h.\hypertarget{struct_s_vec3_222b0f4cd0f52471ebf70dbad68dd03b}{
+\index{SVec3@{SVec3}!DistSqr@{DistSqr}}
+\index{DistSqr@{DistSqr}!SVec3@{SVec3}}
+\subsubsection[{DistSqr}]{\setlength{\rightskip}{0pt plus 5cm}float SVec3::DistSqr (const {\bf SVec3} \& {\em vec}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{struct_s_vec3_222b0f4cd0f52471ebf70dbad68dd03b}
+
+
+
+
+Definition at line 135 of file GrTypes.h.\hypertarget{struct_s_vec3_f3e9779336e5a54ecbdd254e0de35511}{
+\index{SVec3@{SVec3}!Dot@{Dot}}
+\index{Dot@{Dot}!SVec3@{SVec3}}
+\subsubsection[{Dot}]{\setlength{\rightskip}{0pt plus 5cm}float SVec3::Dot (const {\bf MVec3} \& {\em vec}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{struct_s_vec3_f3e9779336e5a54ecbdd254e0de35511}
+
+
+
+
+Definition at line 82 of file GrTypes.h.\hypertarget{struct_s_vec3_4f0aa544f63c27bde9e89363ca58c6a6}{
+\index{SVec3@{SVec3}!Dot@{Dot}}
+\index{Dot@{Dot}!SVec3@{SVec3}}
+\subsubsection[{Dot}]{\setlength{\rightskip}{0pt plus 5cm}float SVec3::Dot (const {\bf SVec3} \& {\em vec}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{struct_s_vec3_4f0aa544f63c27bde9e89363ca58c6a6}
+
+
+
+
+Definition at line 81 of file GrTypes.h.\hypertarget{struct_s_vec3_903103913dbda8f416cd4eaab7faa5f7}{
+\index{SVec3@{SVec3}!Mag@{Mag}}
+\index{Mag@{Mag}!SVec3@{SVec3}}
+\subsubsection[{Mag}]{\setlength{\rightskip}{0pt plus 5cm}float SVec3::Mag () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{struct_s_vec3_903103913dbda8f416cd4eaab7faa5f7}
+
+
+
+
+Definition at line 78 of file GrTypes.h.\hypertarget{struct_s_vec3_721348baa5a216e3784241336baa34f4}{
+\index{SVec3@{SVec3}!MagSqr@{MagSqr}}
+\index{MagSqr@{MagSqr}!SVec3@{SVec3}}
+\subsubsection[{MagSqr}]{\setlength{\rightskip}{0pt plus 5cm}float SVec3::MagSqr () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{struct_s_vec3_721348baa5a216e3784241336baa34f4}
+
+
+
+
+Definition at line 79 of file GrTypes.h.\hypertarget{struct_s_vec3_5b3afb295582e6c100e8a8ac931d1793}{
+\index{SVec3@{SVec3}!Normalize@{Normalize}}
+\index{Normalize@{Normalize}!SVec3@{SVec3}}
+\subsubsection[{Normalize}]{\setlength{\rightskip}{0pt plus 5cm}void SVec3::Normalize ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{struct_s_vec3_5b3afb295582e6c100e8a8ac931d1793}
+
+
+
+
+Definition at line 145 of file GrTypes.h.\hypertarget{struct_s_vec3_cfb19f8729abb5eade96512a5153df07}{
+\index{SVec3@{SVec3}!Normalized@{Normalized}}
+\index{Normalized@{Normalized}!SVec3@{SVec3}}
+\subsubsection[{Normalized}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SVec3} SVec3::Normalized () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{struct_s_vec3_cfb19f8729abb5eade96512a5153df07}
+
+
+
+
+Definition at line 162 of file GrTypes.h.\hypertarget{struct_s_vec3_c7d0f668fc1d020f23c83df477e33ca2}{
+\index{SVec3@{SVec3}!NormalizedFast@{NormalizedFast}}
+\index{NormalizedFast@{NormalizedFast}!SVec3@{SVec3}}
+\subsubsection[{NormalizedFast}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SVec3} SVec3::NormalizedFast () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{struct_s_vec3_c7d0f668fc1d020f23c83df477e33ca2}
+
+
+
+
+Definition at line 184 of file GrTypes.h.\hypertarget{struct_s_vec3_01a11562d5614c7b0b635b5ef9715c49}{
+\index{SVec3@{SVec3}!NormalizeFast@{NormalizeFast}}
+\index{NormalizeFast@{NormalizeFast}!SVec3@{SVec3}}
+\subsubsection[{NormalizeFast}]{\setlength{\rightskip}{0pt plus 5cm}void SVec3::NormalizeFast ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{struct_s_vec3_01a11562d5614c7b0b635b5ef9715c49}
+
+
+
+
+Definition at line 174 of file GrTypes.h.\hypertarget{struct_s_vec3_feb6cc5887cb360146ca4add14f935dc}{
+\index{SVec3@{SVec3}!operator MVec3@{operator MVec3}}
+\index{operator MVec3@{operator MVec3}!SVec3@{SVec3}}
+\subsubsection[{operator MVec3}]{\setlength{\rightskip}{0pt plus 5cm}SVec3::operator {\bf MVec3} () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{struct_s_vec3_feb6cc5887cb360146ca4add14f935dc}
+
+
+
+
+Definition at line 116 of file GrTypes.h.\hypertarget{struct_s_vec3_1149fc5a45c5b8fdbceddf313736be9c}{
+\index{SVec3@{SVec3}!operator!=@{operator!=}}
+\index{operator!=@{operator!=}!SVec3@{SVec3}}
+\subsubsection[{operator!=}]{\setlength{\rightskip}{0pt plus 5cm}bool SVec3::operator!= (const {\bf SVec3} \& {\em v}) const}}
+\label{struct_s_vec3_1149fc5a45c5b8fdbceddf313736be9c}
+
+
+
+
+Definition at line 142 of file GrTypes.cpp.\hypertarget{struct_s_vec3_e3d43793ba784f64df8bf332f1e8e2a7}{
+\index{SVec3@{SVec3}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!SVec3@{SVec3}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SVec3} SVec3::operator$\ast$ (float {\em f}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{struct_s_vec3_e3d43793ba784f64df8bf332f1e8e2a7}
+
+
+
+
+Definition at line 99 of file GrTypes.h.\hypertarget{struct_s_vec3_0366aeb56a82c9455af3c1da0001c861}{
+\index{SVec3@{SVec3}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!SVec3@{SVec3}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SVec3} SVec3::operator$\ast$ (const {\bf SVec3} \& {\em v}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{struct_s_vec3_0366aeb56a82c9455af3c1da0001c861}
+
+
+
+
+Definition at line 98 of file GrTypes.h.\hypertarget{struct_s_vec3_eb70adcdab8bd8aa9351db18341ef6e0}{
+\index{SVec3@{SVec3}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!SVec3@{SVec3}}
+\subsubsection[{operator$\ast$=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SVec3}\& SVec3::operator$\ast$= (float {\em s})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{struct_s_vec3_eb70adcdab8bd8aa9351db18341ef6e0}
+
+
+
+
+Definition at line 105 of file GrTypes.h.\hypertarget{struct_s_vec3_4a1d77dd549c58455c0003e1445d1ad3}{
+\index{SVec3@{SVec3}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!SVec3@{SVec3}}
+\subsubsection[{operator$\ast$=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SVec3}\& SVec3::operator$\ast$= (const {\bf SVec3} \& {\em v})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{struct_s_vec3_4a1d77dd549c58455c0003e1445d1ad3}
+
+
+
+
+Definition at line 104 of file GrTypes.h.\hypertarget{struct_s_vec3_64c7cbcbb060d5879af8e75b5a0f8a3e}{
+\index{SVec3@{SVec3}!operator+@{operator+}}
+\index{operator+@{operator+}!SVec3@{SVec3}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SVec3} SVec3::operator+ (const {\bf SVec3} \& {\em v}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{struct_s_vec3_64c7cbcbb060d5879af8e75b5a0f8a3e}
+
+
+
+
+Definition at line 96 of file GrTypes.h.\hypertarget{struct_s_vec3_907316ea6880e4b6c5816929d8f387f3}{
+\index{SVec3@{SVec3}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!SVec3@{SVec3}}
+\subsubsection[{operator+=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SVec3}\& SVec3::operator+= (float {\em s})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{struct_s_vec3_907316ea6880e4b6c5816929d8f387f3}
+
+
+
+
+Definition at line 109 of file GrTypes.h.\hypertarget{struct_s_vec3_1b2eb0d4a1f7616b3cbf3174fe4a7bcc}{
+\index{SVec3@{SVec3}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!SVec3@{SVec3}}
+\subsubsection[{operator+=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SVec3}\& SVec3::operator+= (const {\bf SVec3} \& {\em v})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{struct_s_vec3_1b2eb0d4a1f7616b3cbf3174fe4a7bcc}
+
+
+
+
+Definition at line 108 of file GrTypes.h.\hypertarget{struct_s_vec3_0e2409af1f979a0253beebf4fdb65569}{
+\index{SVec3@{SVec3}!operator-@{operator-}}
+\index{operator-@{operator-}!SVec3@{SVec3}}
+\subsubsection[{operator-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SVec3} SVec3::operator- () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{struct_s_vec3_0e2409af1f979a0253beebf4fdb65569}
+
+
+
+
+Definition at line 102 of file GrTypes.h.\hypertarget{struct_s_vec3_44a8977587b6d371890878767c5fe1e0}{
+\index{SVec3@{SVec3}!operator-@{operator-}}
+\index{operator-@{operator-}!SVec3@{SVec3}}
+\subsubsection[{operator-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SVec3} SVec3::operator- (const {\bf SVec3} \& {\em v}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{struct_s_vec3_44a8977587b6d371890878767c5fe1e0}
+
+
+
+
+Definition at line 97 of file GrTypes.h.\hypertarget{struct_s_vec3_eeb11a8159ee71312203d2bab8f7c157}{
+\index{SVec3@{SVec3}!operator-=@{operator-=}}
+\index{operator-=@{operator-=}!SVec3@{SVec3}}
+\subsubsection[{operator-=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SVec3}\& SVec3::operator-= (float {\em s})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{struct_s_vec3_eeb11a8159ee71312203d2bab8f7c157}
+
+
+
+
+Definition at line 111 of file GrTypes.h.\hypertarget{struct_s_vec3_3927705cbbdba6a42b8ec8bd839b1528}{
+\index{SVec3@{SVec3}!operator-=@{operator-=}}
+\index{operator-=@{operator-=}!SVec3@{SVec3}}
+\subsubsection[{operator-=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SVec3}\& SVec3::operator-= (const {\bf SVec3} \& {\em v})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{struct_s_vec3_3927705cbbdba6a42b8ec8bd839b1528}
+
+
+
+
+Definition at line 110 of file GrTypes.h.\hypertarget{struct_s_vec3_9b3423fe8b3a948e79040e87e830fbf1}{
+\index{SVec3@{SVec3}!operator/@{operator/}}
+\index{operator/@{operator/}!SVec3@{SVec3}}
+\subsubsection[{operator/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SVec3} SVec3::operator/ (const float {\em s}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{struct_s_vec3_9b3423fe8b3a948e79040e87e830fbf1}
+
+
+
+
+Definition at line 101 of file GrTypes.h.\hypertarget{struct_s_vec3_453b45185eca2e60d4e42ccc3be6ad10}{
+\index{SVec3@{SVec3}!operator/@{operator/}}
+\index{operator/@{operator/}!SVec3@{SVec3}}
+\subsubsection[{operator/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SVec3} SVec3::operator/ (const {\bf SVec3} \& {\em v}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{struct_s_vec3_453b45185eca2e60d4e42ccc3be6ad10}
+
+
+
+
+Definition at line 100 of file GrTypes.h.\hypertarget{struct_s_vec3_270fb17ebc3651f2761e9ddd294e9e2d}{
+\index{SVec3@{SVec3}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!SVec3@{SVec3}}
+\subsubsection[{operator/=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SVec3}\& SVec3::operator/= (float {\em s})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{struct_s_vec3_270fb17ebc3651f2761e9ddd294e9e2d}
+
+
+
+
+Definition at line 107 of file GrTypes.h.\hypertarget{struct_s_vec3_9e47ed7dcdb8436f298025c3cdc8f75a}{
+\index{SVec3@{SVec3}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!SVec3@{SVec3}}
+\subsubsection[{operator/=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SVec3}\& SVec3::operator/= (const {\bf SVec3} \& {\em v})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{struct_s_vec3_9e47ed7dcdb8436f298025c3cdc8f75a}
+
+
+
+
+Definition at line 106 of file GrTypes.h.\hypertarget{struct_s_vec3_b50fa495fe66a74dfae638077e0bc850}{
+\index{SVec3@{SVec3}!operator=@{operator=}}
+\index{operator=@{operator=}!SVec3@{SVec3}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SVec3} \& SVec3::operator= (const {\bf MVec3} \& {\em v})}}
+\label{struct_s_vec3_b50fa495fe66a74dfae638077e0bc850}
+
+
+
+
+Definition at line 125 of file GrTypes.cpp.\hypertarget{struct_s_vec3_562f164e2c990dc5e870942b82e11004}{
+\index{SVec3@{SVec3}!operator==@{operator==}}
+\index{operator==@{operator==}!SVec3@{SVec3}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool SVec3::operator== (const {\bf SVec3} \& {\em v}) const}}
+\label{struct_s_vec3_562f164e2c990dc5e870942b82e11004}
+
+
+
+
+Definition at line 135 of file GrTypes.cpp.\hypertarget{struct_s_vec3_200414903bec9b6bab6946b0d900dc40}{
+\index{SVec3@{SVec3}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!SVec3@{SVec3}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}const float\& SVec3::operator\mbox{[}$\,$\mbox{]} (unsigned int {\em idx}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{struct_s_vec3_200414903bec9b6bab6946b0d900dc40}
+
+
+
+
+Definition at line 114 of file GrTypes.h.\hypertarget{struct_s_vec3_80054be7f9f62d81c5612d69f32ba11c}{
+\index{SVec3@{SVec3}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!SVec3@{SVec3}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}float\& SVec3::operator\mbox{[}$\,$\mbox{]} (unsigned int {\em idx})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{struct_s_vec3_80054be7f9f62d81c5612d69f32ba11c}
+
+
+
+
+Definition at line 113 of file GrTypes.h.
+
+\subsection{Member Data Documentation}
+\hypertarget{struct_s_vec3_2aaf241ee0bba21d37fa3d21fe2f8538}{
+\subsubsection[{"@9}]{\setlength{\rightskip}{0pt plus 5cm}union \{ ... \} }}
+\label{struct_s_vec3_2aaf241ee0bba21d37fa3d21fe2f8538}
+
+
+\hypertarget{struct_s_vec3_e77f7ec6dd4b23199dce3e4dfaee9804}{
+\index{SVec3@{SVec3}!v@{v}}
+\index{v@{v}!SVec3@{SVec3}}
+\subsubsection[{v}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf SVec3::v}\mbox{[}3\mbox{]}}}
+\label{struct_s_vec3_e77f7ec6dd4b23199dce3e4dfaee9804}
+
+
+
+
+Definition at line 128 of file GrTypes.h.\hypertarget{struct_s_vec3_a30ab4ca24f2b7968f6b21a97c28a812}{
+\index{SVec3@{SVec3}!x@{x}}
+\index{x@{x}!SVec3@{SVec3}}
+\subsubsection[{x}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf SVec3::x}}}
+\label{struct_s_vec3_a30ab4ca24f2b7968f6b21a97c28a812}
+
+
+
+
+Definition at line 124 of file GrTypes.h.\hypertarget{struct_s_vec3_9e4d6ddc68169c650b437a7d1714f299}{
+\index{SVec3@{SVec3}!y@{y}}
+\index{y@{y}!SVec3@{SVec3}}
+\subsubsection[{y}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf SVec3::y}}}
+\label{struct_s_vec3_9e4d6ddc68169c650b437a7d1714f299}
+
+
+
+
+Definition at line 125 of file GrTypes.h.\hypertarget{struct_s_vec3_d9d349dd9369afd5bd7d056e59b3ae4a}{
+\index{SVec3@{SVec3}!z@{z}}
+\index{z@{z}!SVec3@{SVec3}}
+\subsubsection[{z}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf SVec3::z}}}
+\label{struct_s_vec3_d9d349dd9369afd5bd7d056e59b3ae4a}
+
+
+
+
+Definition at line 126 of file GrTypes.h.
+
+The documentation for this struct was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_types_8h}{GrTypes.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_types_8cpp}{GrTypes.cpp}\end{CompactItemize}

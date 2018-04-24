@@ -1,0 +1,160 @@
+\hypertarget{_nv_tri_strip_objects_8h}{
+\section{C:/Bootstrap/ProjectBX/Engine/Graphics/NVTriStrip/NvTriStripObjects.h File Reference}
+\label{_nv_tri_strip_objects_8h}\index{C:/Bootstrap/ProjectBX/Engine/Graphics/NVTriStrip/NvTriStripObjects.h@{C:/Bootstrap/ProjectBX/Engine/Graphics/NVTriStrip/NvTriStripObjects.h}}
+}
+{\tt \#include $<$assert.h$>$}\par
+{\tt \#include $<$windows.h$>$}\par
+{\tt \#include $<$vector$>$}\par
+{\tt \#include $<$list$>$}\par
+{\tt \#include \char`\"{}VertexCache.h\char`\"{}}\par
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+struct \hyperlink{struct_my_vertex}{MyVertex}
+\item 
+struct \hyperlink{struct_my_face}{MyFace}
+\item 
+class \hyperlink{class_nv_face_info}{NvFaceInfo}
+\item 
+class \hyperlink{class_nv_edge_info}{NvEdgeInfo}
+\item 
+class \hyperlink{class_nv_strip_start_info}{NvStripStartInfo}
+\item 
+class \hyperlink{class_nv_strip_info}{NvStripInfo}
+\item 
+class \hyperlink{class_nv_stripifier}{NvStripifier}
+\end{CompactItemize}
+\subsection*{Typedefs}
+\begin{CompactItemize}
+\item 
+typedef \hyperlink{struct_my_vertex}{MyVertex} \hyperlink{_nv_tri_strip_objects_8h_be536e7e5a15e927c435a598a537886a}{MyVector}
+\item 
+typedef std::vector$<$ \hyperlink{class_nv_face_info}{NvFaceInfo} $\ast$ $>$ \hyperlink{_nv_tri_strip_objects_8h_93d0a2f26991e801145908bc4d3d9156}{NvFaceInfoVec}
+\item 
+typedef std::list$<$ \hyperlink{class_nv_face_info}{NvFaceInfo} $\ast$ $>$ \hyperlink{_nv_tri_strip_objects_8h_283ce281e58a1f4d2747ef37ac7ae2af}{NvFaceInfoList}
+\item 
+typedef std::list$<$ \hyperlink{_nv_tri_strip_objects_8h_93d0a2f26991e801145908bc4d3d9156}{NvFaceInfoVec} $\ast$ $>$ \hyperlink{_nv_tri_strip_objects_8h_e066a76fffea36c4850f9a998c8f8292}{NvStripList}
+\item 
+typedef std::vector$<$ \hyperlink{class_nv_edge_info}{NvEdgeInfo} $\ast$ $>$ \hyperlink{_nv_tri_strip_objects_8h_58592f6a13118931e843d05574249663}{NvEdgeInfoVec}
+\item 
+typedef std::vector$<$ WORD $>$ \hyperlink{_nv_tri_strip_objects_8h_0e4014090627df01c862364a6acc4020}{WordVec}
+\item 
+typedef std::vector$<$ int $>$ \hyperlink{_nv_tri_strip_objects_8h_4c42bc5fa9b3648755b0148698307573}{IntVec}
+\item 
+typedef std::vector$<$ \hyperlink{struct_my_vertex}{MyVertex} $>$ \hyperlink{_nv_tri_strip_objects_8h_51100556e8948703626a845f4947dcf4}{MyVertexVec}
+\item 
+typedef std::vector$<$ \hyperlink{struct_my_face}{MyFace} $>$ \hyperlink{_nv_tri_strip_objects_8h_1732cccf59d7494c1bd5c5e1286d0ec5}{MyFaceVec}
+\item 
+typedef std::vector$<$ \hyperlink{class_nv_strip_info}{NvStripInfo} $\ast$ $>$ \hyperlink{_nv_tri_strip_objects_8h_83f9ba7bd0288dc93c5eed20e7f61170}{NvStripInfoVec}
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\void \hyperlink{_nv_tri_strip_objects_8h_e84ce5783728fb045126f7ecac34d075}{SWAP} (T \&\hyperlink{glext__bak_8h_ca916b85af9eae4cb53c9e76d2f1be53}{first}, T \&second)
+\end{CompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{_nv_tri_strip_objects_8h_4c42bc5fa9b3648755b0148698307573}{
+\index{NvTriStripObjects.h@{NvTriStripObjects.h}!IntVec@{IntVec}}
+\index{IntVec@{IntVec}!NvTriStripObjects.h@{NvTriStripObjects.h}}
+\subsubsection[{IntVec}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<$int$>$ {\bf IntVec}}}
+\label{_nv_tri_strip_objects_8h_4c42bc5fa9b3648755b0148698307573}
+
+
+
+
+Definition at line 106 of file NvTriStripObjects.h.\hypertarget{_nv_tri_strip_objects_8h_1732cccf59d7494c1bd5c5e1286d0ec5}{
+\index{NvTriStripObjects.h@{NvTriStripObjects.h}!MyFaceVec@{MyFaceVec}}
+\index{MyFaceVec@{MyFaceVec}!NvTriStripObjects.h@{NvTriStripObjects.h}}
+\subsubsection[{MyFaceVec}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<${\bf MyFace}$>$ {\bf MyFaceVec}}}
+\label{_nv_tri_strip_objects_8h_1732cccf59d7494c1bd5c5e1286d0ec5}
+
+
+
+
+Definition at line 108 of file NvTriStripObjects.h.\hypertarget{_nv_tri_strip_objects_8h_be536e7e5a15e927c435a598a537886a}{
+\index{NvTriStripObjects.h@{NvTriStripObjects.h}!MyVector@{MyVector}}
+\index{MyVector@{MyVector}!NvTriStripObjects.h@{NvTriStripObjects.h}}
+\subsubsection[{MyVector}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf MyVertex} {\bf MyVector}}}
+\label{_nv_tri_strip_objects_8h_be536e7e5a15e927c435a598a537886a}
+
+
+
+
+Definition at line 22 of file NvTriStripObjects.h.\hypertarget{_nv_tri_strip_objects_8h_51100556e8948703626a845f4947dcf4}{
+\index{NvTriStripObjects.h@{NvTriStripObjects.h}!MyVertexVec@{MyVertexVec}}
+\index{MyVertexVec@{MyVertexVec}!NvTriStripObjects.h@{NvTriStripObjects.h}}
+\subsubsection[{MyVertexVec}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<${\bf MyVertex}$>$ {\bf MyVertexVec}}}
+\label{_nv_tri_strip_objects_8h_51100556e8948703626a845f4947dcf4}
+
+
+
+
+Definition at line 107 of file NvTriStripObjects.h.\hypertarget{_nv_tri_strip_objects_8h_58592f6a13118931e843d05574249663}{
+\index{NvTriStripObjects.h@{NvTriStripObjects.h}!NvEdgeInfoVec@{NvEdgeInfoVec}}
+\index{NvEdgeInfoVec@{NvEdgeInfoVec}!NvTriStripObjects.h@{NvTriStripObjects.h}}
+\subsubsection[{NvEdgeInfoVec}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<${\bf NvEdgeInfo}$\ast$$>$ {\bf NvEdgeInfoVec}}}
+\label{_nv_tri_strip_objects_8h_58592f6a13118931e843d05574249663}
+
+
+
+
+Definition at line 103 of file NvTriStripObjects.h.\hypertarget{_nv_tri_strip_objects_8h_283ce281e58a1f4d2747ef37ac7ae2af}{
+\index{NvTriStripObjects.h@{NvTriStripObjects.h}!NvFaceInfoList@{NvFaceInfoList}}
+\index{NvFaceInfoList@{NvFaceInfoList}!NvTriStripObjects.h@{NvTriStripObjects.h}}
+\subsubsection[{NvFaceInfoList}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::list$<${\bf NvFaceInfo}$\ast$$>$ {\bf NvFaceInfoList}}}
+\label{_nv_tri_strip_objects_8h_283ce281e58a1f4d2747ef37ac7ae2af}
+
+
+
+
+Definition at line 101 of file NvTriStripObjects.h.\hypertarget{_nv_tri_strip_objects_8h_93d0a2f26991e801145908bc4d3d9156}{
+\index{NvTriStripObjects.h@{NvTriStripObjects.h}!NvFaceInfoVec@{NvFaceInfoVec}}
+\index{NvFaceInfoVec@{NvFaceInfoVec}!NvTriStripObjects.h@{NvTriStripObjects.h}}
+\subsubsection[{NvFaceInfoVec}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<${\bf NvFaceInfo}$\ast$$>$ {\bf NvFaceInfoVec}}}
+\label{_nv_tri_strip_objects_8h_93d0a2f26991e801145908bc4d3d9156}
+
+
+
+
+Definition at line 100 of file NvTriStripObjects.h.\hypertarget{_nv_tri_strip_objects_8h_83f9ba7bd0288dc93c5eed20e7f61170}{
+\index{NvTriStripObjects.h@{NvTriStripObjects.h}!NvStripInfoVec@{NvStripInfoVec}}
+\index{NvStripInfoVec@{NvStripInfoVec}!NvTriStripObjects.h@{NvTriStripObjects.h}}
+\subsubsection[{NvStripInfoVec}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<${\bf NvStripInfo}$\ast$$>$ {\bf NvStripInfoVec}}}
+\label{_nv_tri_strip_objects_8h_83f9ba7bd0288dc93c5eed20e7f61170}
+
+
+
+
+Definition at line 169 of file NvTriStripObjects.h.\hypertarget{_nv_tri_strip_objects_8h_e066a76fffea36c4850f9a998c8f8292}{
+\index{NvTriStripObjects.h@{NvTriStripObjects.h}!NvStripList@{NvStripList}}
+\index{NvStripList@{NvStripList}!NvTriStripObjects.h@{NvTriStripObjects.h}}
+\subsubsection[{NvStripList}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::list$<${\bf NvFaceInfoVec}$\ast$$>$ {\bf NvStripList}}}
+\label{_nv_tri_strip_objects_8h_e066a76fffea36c4850f9a998c8f8292}
+
+
+
+
+Definition at line 102 of file NvTriStripObjects.h.\hypertarget{_nv_tri_strip_objects_8h_0e4014090627df01c862364a6acc4020}{
+\index{NvTriStripObjects.h@{NvTriStripObjects.h}!WordVec@{WordVec}}
+\index{WordVec@{WordVec}!NvTriStripObjects.h@{NvTriStripObjects.h}}
+\subsubsection[{WordVec}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<$WORD$>$ {\bf WordVec}}}
+\label{_nv_tri_strip_objects_8h_0e4014090627df01c862364a6acc4020}
+
+
+
+
+Definition at line 105 of file NvTriStripObjects.h.
+
+\subsection{Function Documentation}
+\hypertarget{_nv_tri_strip_objects_8h_e84ce5783728fb045126f7ecac34d075}{
+\index{NvTriStripObjects.h@{NvTriStripObjects.h}!SWAP@{SWAP}}
+\index{SWAP@{SWAP}!NvTriStripObjects.h@{NvTriStripObjects.h}}
+\subsubsection[{SWAP}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void SWAP (T \& {\em first}, \/  T \& {\em second})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{_nv_tri_strip_objects_8h_e84ce5783728fb045126f7ecac34d075}
+
+
+
+
+Definition at line 111 of file NvTriStripObjects.h.

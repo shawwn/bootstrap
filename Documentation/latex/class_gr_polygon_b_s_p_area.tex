@@ -1,0 +1,296 @@
+\hypertarget{class_gr_polygon_b_s_p_area}{
+\section{GrPolygonBSPArea Class Reference}
+\label{class_gr_polygon_b_s_p_area}\index{GrPolygonBSPArea@{GrPolygonBSPArea}}
+}
+{\tt \#include $<$GrPolygonBSPArea.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef std::vector$<$ \hyperlink{class_gr_mesh_inst}{GrMeshInst} $\ast$ $>$ \hyperlink{class_gr_polygon_b_s_p_area_b824c31e82278ab2ad80a6401a6e3847}{MeshInstVector}
+\item 
+typedef \hyperlink{class_u_fast_array}{UFastArray}$<$ \hyperlink{class_gr_polygon_b_s_p_portal_set}{GrPolygonBSPPortalSet} $\ast$ $>$ \hyperlink{class_gr_polygon_b_s_p_area_685afa93a012b1cfa2aba2ed063116b1}{PortalSetArray}
+\item 
+typedef std::vector$<$ \hyperlink{class_gr_polygon_b_s_p_area}{GrPolygonBSPArea} $\ast$ $>$ \hyperlink{class_gr_polygon_b_s_p_area_38f1607c390fa9072023baccfefd88d1}{AreaVector}
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_polygon_b_s_p_area_9fdd7b9d43647ca566f1c00b20fc11ba}{GrPolygonBSPArea} (const \hyperlink{class_gr_polygon_group}{GrPolygonGroup} \&polygons)
+\item 
+\hyperlink{class_gr_polygon_b_s_p_area_c7e3331609edd245efdba8ef8b7e8cc4}{GrPolygonBSPArea} (\hyperlink{class_u_reader}{UReader} \&reader)
+\item 
+\hyperlink{class_gr_polygon_b_s_p_area_5892b7c346ad8b00b9c384211e9ed12d}{$\sim$GrPolygonBSPArea} ()
+\item 
+void \hyperlink{class_gr_polygon_b_s_p_area_15324cca2e63613b45d88de81b4f8666}{GetVisibilityData} (const std::vector$<$ unsigned int $>$ $\ast$$\ast$pvsIndices) const 
+\item 
+const \hyperlink{class_m_a_a_box}{MAABox} \& \hyperlink{class_gr_polygon_b_s_p_area_dab93dce455697f234e10a72b57806c9}{GetBoundingAABox} () const 
+\item 
+\hyperlink{class_m_sphere}{MSphere} \hyperlink{class_gr_polygon_b_s_p_area_3cc8969be9caa17c5beae9ff355ea462}{GetBoundingSphere} () const 
+\item 
+\hyperlink{class_gr_polygon_group}{GrPolygonGroup} \& \hyperlink{class_gr_polygon_b_s_p_area_63247847ab821f68c3c8d6b166ebc419}{GetPolygons} ()
+\item 
+const \hyperlink{class_gr_polygon_group}{GrPolygonGroup} \& \hyperlink{class_gr_polygon_b_s_p_area_bf71c666d5f57293255b47e577b6f757}{GetPolygons} () const 
+\item 
+void \hyperlink{class_gr_polygon_b_s_p_area_ced30316ed0ae05a05b8b5242ae9cc73}{GenUberTexData} (float texelsPerMeter)
+\item 
+void \hyperlink{class_gr_polygon_b_s_p_area_e32bb3ed77dc93651dbbaaf8ae55b5c8}{AddPortal} (\hyperlink{class_gr_polygon_b_s_p_portal_set}{GrPolygonBSPPortalSet} $\ast$portal)
+\item 
+void \hyperlink{class_gr_polygon_b_s_p_area_5149561c0870fd83f3a77d3e9b94072e}{FindNeighbors} (\hyperlink{class_gr_polygon_b_s_p_split}{GrPolygonBSPSplit} $\ast$root)
+\item 
+void \hyperlink{class_gr_polygon_b_s_p_area_2d77bc4b77ace5d859713e906db5e295}{FixTJuncs} ()
+\item 
+void \hyperlink{class_gr_polygon_b_s_p_area_93c40f74ada66587db01a2c044421d02}{CalcPVS} (const std::vector$<$ \hyperlink{class_gr_polygon_b_s_p_area}{GrPolygonBSPArea} $\ast$ $>$ \&leaves)
+\item 
+void \hyperlink{class_gr_polygon_b_s_p_area_e35cc92d44e0aed14c6b6d3dcc40ea40}{CalcPVSAllVisibleIndices} (unsigned int leafCount)
+\item 
+void \hyperlink{class_gr_polygon_b_s_p_area_1b7856f8931a29e532bb823fe9d0c78f}{CompressPVSData} (const std::vector$<$ \hyperlink{class_gr_polygon_b_s_p_area}{GrPolygonBSPArea} $\ast$ $>$ \&leaves)
+\item 
+bool \hyperlink{class_gr_polygon_b_s_p_area_6e7ef012b866a7d4d69e8fec2aa10ff3}{GetIntersect} (\hyperlink{class_m_vec3}{MVec3} \&hitPos, const \hyperlink{class_m_ray}{MRay} \&ray, float maxDist)
+\item 
+const \hyperlink{class_u_fast_array}{PortalSetArray} \& \hyperlink{class_gr_polygon_b_s_p_area_925ba1cab922c0cc8985f656f49e22b1}{GetPortalSets} () const 
+\item 
+void \hyperlink{class_gr_polygon_b_s_p_area_6985c4d6183a19c0bc0df57f8aa2c8fb}{GetUberTexData} (std::vector$<$ \hyperlink{class_gr_polygon_uber_patch_group}{GrPolygonUberPatchGroup} $\ast$ $>$ \&dataArray) const 
+\item 
+\hyperlink{class_gr_polygon_uber_patch_group}{GrPolygonUberPatchGroup} $\ast$ \hyperlink{class_gr_polygon_b_s_p_area_655bfe84fb8008826d8bda2eb2d6f482}{GetUberTexPatchGroup} () const 
+\item 
+void \hyperlink{class_gr_polygon_b_s_p_area_034f884ac7b83c468d3b1d2947950013}{Load} (\hyperlink{class_u_reader}{UReader} \&reader)
+\item 
+void \hyperlink{class_gr_polygon_b_s_p_area_22eb539982e6f805ef94c58294940aeb}{Save} (\hyperlink{class_u_writer}{UWriter} \&writer)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 37 of file GrPolygonBSPArea.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_gr_polygon_b_s_p_area_38f1607c390fa9072023baccfefd88d1}{
+\index{GrPolygonBSPArea@{GrPolygonBSPArea}!AreaVector@{AreaVector}}
+\index{AreaVector@{AreaVector}!GrPolygonBSPArea@{GrPolygonBSPArea}}
+\subsubsection[{AreaVector}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<$ {\bf GrPolygonBSPArea}$\ast$ $>$ {\bf GrPolygonBSPArea::AreaVector}}}
+\label{class_gr_polygon_b_s_p_area_38f1607c390fa9072023baccfefd88d1}
+
+
+
+
+Definition at line 42 of file GrPolygonBSPArea.h.\hypertarget{class_gr_polygon_b_s_p_area_b824c31e82278ab2ad80a6401a6e3847}{
+\index{GrPolygonBSPArea@{GrPolygonBSPArea}!MeshInstVector@{MeshInstVector}}
+\index{MeshInstVector@{MeshInstVector}!GrPolygonBSPArea@{GrPolygonBSPArea}}
+\subsubsection[{MeshInstVector}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<$ {\bf GrMeshInst}$\ast$ $>$ {\bf GrPolygonBSPArea::MeshInstVector}}}
+\label{class_gr_polygon_b_s_p_area_b824c31e82278ab2ad80a6401a6e3847}
+
+
+
+
+Definition at line 40 of file GrPolygonBSPArea.h.\hypertarget{class_gr_polygon_b_s_p_area_685afa93a012b1cfa2aba2ed063116b1}{
+\index{GrPolygonBSPArea@{GrPolygonBSPArea}!PortalSetArray@{PortalSetArray}}
+\index{PortalSetArray@{PortalSetArray}!GrPolygonBSPArea@{GrPolygonBSPArea}}
+\subsubsection[{PortalSetArray}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf UFastArray}$<$ {\bf GrPolygonBSPPortalSet}$\ast$ $>$ {\bf GrPolygonBSPArea::PortalSetArray}}}
+\label{class_gr_polygon_b_s_p_area_685afa93a012b1cfa2aba2ed063116b1}
+
+
+
+
+Definition at line 41 of file GrPolygonBSPArea.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_polygon_b_s_p_area_9fdd7b9d43647ca566f1c00b20fc11ba}{
+\index{GrPolygonBSPArea@{GrPolygonBSPArea}!GrPolygonBSPArea@{GrPolygonBSPArea}}
+\index{GrPolygonBSPArea@{GrPolygonBSPArea}!GrPolygonBSPArea@{GrPolygonBSPArea}}
+\subsubsection[{GrPolygonBSPArea}]{\setlength{\rightskip}{0pt plus 5cm}GrPolygonBSPArea::GrPolygonBSPArea (const {\bf GrPolygonGroup} \& {\em polygons})}}
+\label{class_gr_polygon_b_s_p_area_9fdd7b9d43647ca566f1c00b20fc11ba}
+
+
+
+
+Definition at line 34 of file GrPolygonBSPArea.cpp.\hypertarget{class_gr_polygon_b_s_p_area_c7e3331609edd245efdba8ef8b7e8cc4}{
+\index{GrPolygonBSPArea@{GrPolygonBSPArea}!GrPolygonBSPArea@{GrPolygonBSPArea}}
+\index{GrPolygonBSPArea@{GrPolygonBSPArea}!GrPolygonBSPArea@{GrPolygonBSPArea}}
+\subsubsection[{GrPolygonBSPArea}]{\setlength{\rightskip}{0pt plus 5cm}GrPolygonBSPArea::GrPolygonBSPArea ({\bf UReader} \& {\em reader})}}
+\label{class_gr_polygon_b_s_p_area_c7e3331609edd245efdba8ef8b7e8cc4}
+
+
+
+
+Definition at line 43 of file GrPolygonBSPArea.cpp.\hypertarget{class_gr_polygon_b_s_p_area_5892b7c346ad8b00b9c384211e9ed12d}{
+\index{GrPolygonBSPArea@{GrPolygonBSPArea}!$\sim$GrPolygonBSPArea@{$\sim$GrPolygonBSPArea}}
+\index{$\sim$GrPolygonBSPArea@{$\sim$GrPolygonBSPArea}!GrPolygonBSPArea@{GrPolygonBSPArea}}
+\subsubsection[{$\sim$GrPolygonBSPArea}]{\setlength{\rightskip}{0pt plus 5cm}GrPolygonBSPArea::$\sim$GrPolygonBSPArea ()}}
+\label{class_gr_polygon_b_s_p_area_5892b7c346ad8b00b9c384211e9ed12d}
+
+
+
+
+Definition at line 50 of file GrPolygonBSPArea.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_polygon_b_s_p_area_e32bb3ed77dc93651dbbaaf8ae55b5c8}{
+\index{GrPolygonBSPArea@{GrPolygonBSPArea}!AddPortal@{AddPortal}}
+\index{AddPortal@{AddPortal}!GrPolygonBSPArea@{GrPolygonBSPArea}}
+\subsubsection[{AddPortal}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonBSPArea::AddPortal ({\bf GrPolygonBSPPortalSet} $\ast$ {\em portal})}}
+\label{class_gr_polygon_b_s_p_area_e32bb3ed77dc93651dbbaaf8ae55b5c8}
+
+
+
+
+Definition at line 93 of file GrPolygonBSPArea.cpp.\hypertarget{class_gr_polygon_b_s_p_area_93c40f74ada66587db01a2c044421d02}{
+\index{GrPolygonBSPArea@{GrPolygonBSPArea}!CalcPVS@{CalcPVS}}
+\index{CalcPVS@{CalcPVS}!GrPolygonBSPArea@{GrPolygonBSPArea}}
+\subsubsection[{CalcPVS}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonBSPArea::CalcPVS (const std::vector$<$ {\bf GrPolygonBSPArea} $\ast$ $>$ \& {\em leaves})}}
+\label{class_gr_polygon_b_s_p_area_93c40f74ada66587db01a2c044421d02}
+
+
+
+
+Definition at line 179 of file GrPolygonBSPArea.cpp.\hypertarget{class_gr_polygon_b_s_p_area_e35cc92d44e0aed14c6b6d3dcc40ea40}{
+\index{GrPolygonBSPArea@{GrPolygonBSPArea}!CalcPVSAllVisibleIndices@{CalcPVSAllVisibleIndices}}
+\index{CalcPVSAllVisibleIndices@{CalcPVSAllVisibleIndices}!GrPolygonBSPArea@{GrPolygonBSPArea}}
+\subsubsection[{CalcPVSAllVisibleIndices}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonBSPArea::CalcPVSAllVisibleIndices (unsigned int {\em leafCount})}}
+\label{class_gr_polygon_b_s_p_area_e35cc92d44e0aed14c6b6d3dcc40ea40}
+
+
+
+
+Definition at line 252 of file GrPolygonBSPArea.cpp.\hypertarget{class_gr_polygon_b_s_p_area_1b7856f8931a29e532bb823fe9d0c78f}{
+\index{GrPolygonBSPArea@{GrPolygonBSPArea}!CompressPVSData@{CompressPVSData}}
+\index{CompressPVSData@{CompressPVSData}!GrPolygonBSPArea@{GrPolygonBSPArea}}
+\subsubsection[{CompressPVSData}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonBSPArea::CompressPVSData (const std::vector$<$ {\bf GrPolygonBSPArea} $\ast$ $>$ \& {\em leaves})}}
+\label{class_gr_polygon_b_s_p_area_1b7856f8931a29e532bb823fe9d0c78f}
+
+
+
+
+Definition at line 260 of file GrPolygonBSPArea.cpp.\hypertarget{class_gr_polygon_b_s_p_area_5149561c0870fd83f3a77d3e9b94072e}{
+\index{GrPolygonBSPArea@{GrPolygonBSPArea}!FindNeighbors@{FindNeighbors}}
+\index{FindNeighbors@{FindNeighbors}!GrPolygonBSPArea@{GrPolygonBSPArea}}
+\subsubsection[{FindNeighbors}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonBSPArea::FindNeighbors ({\bf GrPolygonBSPSplit} $\ast$ {\em root})}}
+\label{class_gr_polygon_b_s_p_area_5149561c0870fd83f3a77d3e9b94072e}
+
+
+
+
+Definition at line 133 of file GrPolygonBSPArea.cpp.\hypertarget{class_gr_polygon_b_s_p_area_2d77bc4b77ace5d859713e906db5e295}{
+\index{GrPolygonBSPArea@{GrPolygonBSPArea}!FixTJuncs@{FixTJuncs}}
+\index{FixTJuncs@{FixTJuncs}!GrPolygonBSPArea@{GrPolygonBSPArea}}
+\subsubsection[{FixTJuncs}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonBSPArea::FixTJuncs ()}}
+\label{class_gr_polygon_b_s_p_area_2d77bc4b77ace5d859713e906db5e295}
+
+
+
+
+Definition at line 162 of file GrPolygonBSPArea.cpp.\hypertarget{class_gr_polygon_b_s_p_area_ced30316ed0ae05a05b8b5242ae9cc73}{
+\index{GrPolygonBSPArea@{GrPolygonBSPArea}!GenUberTexData@{GenUberTexData}}
+\index{GenUberTexData@{GenUberTexData}!GrPolygonBSPArea@{GrPolygonBSPArea}}
+\subsubsection[{GenUberTexData}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonBSPArea::GenUberTexData (float {\em texelsPerMeter})}}
+\label{class_gr_polygon_b_s_p_area_ced30316ed0ae05a05b8b5242ae9cc73}
+
+
+
+
+Definition at line 84 of file GrPolygonBSPArea.cpp.\hypertarget{class_gr_polygon_b_s_p_area_dab93dce455697f234e10a72b57806c9}{
+\index{GrPolygonBSPArea@{GrPolygonBSPArea}!GetBoundingAABox@{GetBoundingAABox}}
+\index{GetBoundingAABox@{GetBoundingAABox}!GrPolygonBSPArea@{GrPolygonBSPArea}}
+\subsubsection[{GetBoundingAABox}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MAABox} \& GrPolygonBSPArea::GetBoundingAABox () const}}
+\label{class_gr_polygon_b_s_p_area_dab93dce455697f234e10a72b57806c9}
+
+
+
+
+Definition at line 70 of file GrPolygonBSPArea.cpp.\hypertarget{class_gr_polygon_b_s_p_area_3cc8969be9caa17c5beae9ff355ea462}{
+\index{GrPolygonBSPArea@{GrPolygonBSPArea}!GetBoundingSphere@{GetBoundingSphere}}
+\index{GetBoundingSphere@{GetBoundingSphere}!GrPolygonBSPArea@{GrPolygonBSPArea}}
+\subsubsection[{GetBoundingSphere}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MSphere} GrPolygonBSPArea::GetBoundingSphere () const}}
+\label{class_gr_polygon_b_s_p_area_3cc8969be9caa17c5beae9ff355ea462}
+
+
+
+
+Definition at line 77 of file GrPolygonBSPArea.cpp.\hypertarget{class_gr_polygon_b_s_p_area_6e7ef012b866a7d4d69e8fec2aa10ff3}{
+\index{GrPolygonBSPArea@{GrPolygonBSPArea}!GetIntersect@{GetIntersect}}
+\index{GetIntersect@{GetIntersect}!GrPolygonBSPArea@{GrPolygonBSPArea}}
+\subsubsection[{GetIntersect}]{\setlength{\rightskip}{0pt plus 5cm}bool GrPolygonBSPArea::GetIntersect ({\bf MVec3} \& {\em hitPos}, \/  const {\bf MRay} \& {\em ray}, \/  float {\em maxDist})}}
+\label{class_gr_polygon_b_s_p_area_6e7ef012b866a7d4d69e8fec2aa10ff3}
+
+
+
+
+Definition at line 287 of file GrPolygonBSPArea.cpp.\hypertarget{class_gr_polygon_b_s_p_area_bf71c666d5f57293255b47e577b6f757}{
+\index{GrPolygonBSPArea@{GrPolygonBSPArea}!GetPolygons@{GetPolygons}}
+\index{GetPolygons@{GetPolygons}!GrPolygonBSPArea@{GrPolygonBSPArea}}
+\subsubsection[{GetPolygons}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf GrPolygonGroup}\& GrPolygonBSPArea::GetPolygons () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_polygon_b_s_p_area_bf71c666d5f57293255b47e577b6f757}
+
+
+
+
+Definition at line 57 of file GrPolygonBSPArea.h.\hypertarget{class_gr_polygon_b_s_p_area_63247847ab821f68c3c8d6b166ebc419}{
+\index{GrPolygonBSPArea@{GrPolygonBSPArea}!GetPolygons@{GetPolygons}}
+\index{GetPolygons@{GetPolygons}!GrPolygonBSPArea@{GrPolygonBSPArea}}
+\subsubsection[{GetPolygons}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrPolygonGroup}\& GrPolygonBSPArea::GetPolygons ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_polygon_b_s_p_area_63247847ab821f68c3c8d6b166ebc419}
+
+
+
+
+Definition at line 56 of file GrPolygonBSPArea.h.\hypertarget{class_gr_polygon_b_s_p_area_925ba1cab922c0cc8985f656f49e22b1}{
+\index{GrPolygonBSPArea@{GrPolygonBSPArea}!GetPortalSets@{GetPortalSets}}
+\index{GetPortalSets@{GetPortalSets}!GrPolygonBSPArea@{GrPolygonBSPArea}}
+\subsubsection[{GetPortalSets}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf PortalSetArray}\& GrPolygonBSPArea::GetPortalSets () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_polygon_b_s_p_area_925ba1cab922c0cc8985f656f49e22b1}
+
+
+
+
+Definition at line 86 of file GrPolygonBSPArea.h.\hypertarget{class_gr_polygon_b_s_p_area_6985c4d6183a19c0bc0df57f8aa2c8fb}{
+\index{GrPolygonBSPArea@{GrPolygonBSPArea}!GetUberTexData@{GetUberTexData}}
+\index{GetUberTexData@{GetUberTexData}!GrPolygonBSPArea@{GrPolygonBSPArea}}
+\subsubsection[{GetUberTexData}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonBSPArea::GetUberTexData (std::vector$<$ {\bf GrPolygonUberPatchGroup} $\ast$ $>$ \& {\em dataArray}) const}}
+\label{class_gr_polygon_b_s_p_area_6985c4d6183a19c0bc0df57f8aa2c8fb}
+
+
+
+
+Definition at line 320 of file GrPolygonBSPArea.cpp.\hypertarget{class_gr_polygon_b_s_p_area_655bfe84fb8008826d8bda2eb2d6f482}{
+\index{GrPolygonBSPArea@{GrPolygonBSPArea}!GetUberTexPatchGroup@{GetUberTexPatchGroup}}
+\index{GetUberTexPatchGroup@{GetUberTexPatchGroup}!GrPolygonBSPArea@{GrPolygonBSPArea}}
+\subsubsection[{GetUberTexPatchGroup}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrPolygonUberPatchGroup}$\ast$ GrPolygonBSPArea::GetUberTexPatchGroup () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_polygon_b_s_p_area_655bfe84fb8008826d8bda2eb2d6f482}
+
+
+
+
+Definition at line 90 of file GrPolygonBSPArea.h.\hypertarget{class_gr_polygon_b_s_p_area_15324cca2e63613b45d88de81b4f8666}{
+\index{GrPolygonBSPArea@{GrPolygonBSPArea}!GetVisibilityData@{GetVisibilityData}}
+\index{GetVisibilityData@{GetVisibilityData}!GrPolygonBSPArea@{GrPolygonBSPArea}}
+\subsubsection[{GetVisibilityData}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonBSPArea::GetVisibilityData (const std::vector$<$ unsigned int $>$ $\ast$$\ast$ {\em pvsIndices}) const}}
+\label{class_gr_polygon_b_s_p_area_15324cca2e63613b45d88de81b4f8666}
+
+
+
+
+Definition at line 62 of file GrPolygonBSPArea.cpp.\hypertarget{class_gr_polygon_b_s_p_area_034f884ac7b83c468d3b1d2947950013}{
+\index{GrPolygonBSPArea@{GrPolygonBSPArea}!Load@{Load}}
+\index{Load@{Load}!GrPolygonBSPArea@{GrPolygonBSPArea}}
+\subsubsection[{Load}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonBSPArea::Load ({\bf UReader} \& {\em reader})}}
+\label{class_gr_polygon_b_s_p_area_034f884ac7b83c468d3b1d2947950013}
+
+
+
+
+Definition at line 328 of file GrPolygonBSPArea.cpp.\hypertarget{class_gr_polygon_b_s_p_area_22eb539982e6f805ef94c58294940aeb}{
+\index{GrPolygonBSPArea@{GrPolygonBSPArea}!Save@{Save}}
+\index{Save@{Save}!GrPolygonBSPArea@{GrPolygonBSPArea}}
+\subsubsection[{Save}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonBSPArea::Save ({\bf UWriter} \& {\em writer})}}
+\label{class_gr_polygon_b_s_p_area_22eb539982e6f805ef94c58294940aeb}
+
+
+
+
+Definition at line 345 of file GrPolygonBSPArea.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_polygon_b_s_p_area_8h}{GrPolygonBSPArea.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_polygon_b_s_p_area_8cpp}{GrPolygonBSPArea.cpp}\end{CompactItemize}

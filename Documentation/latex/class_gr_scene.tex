@@ -1,0 +1,520 @@
+\hypertarget{class_gr_scene}{
+\section{GrScene Class Reference}
+\label{class_gr_scene}\index{GrScene@{GrScene}}
+}
+{\tt \#include $<$GrScene.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef unsigned int \hyperlink{class_gr_scene_7645ba831bfac8f4543f59ff7b2c63bd}{PickFlags}
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_scene_e34b9d499e43774f936ead2aaa262538}{GrScene} ()
+\item 
+\hyperlink{class_gr_scene_282d695d3b86b54e68319f2297a2e8b4}{$\sim$GrScene} ()
+\item 
+const \hyperlink{class_u_path}{UPath} \& \hyperlink{class_gr_scene_3553093b4916089dbba484029cba2d11}{GetSceneDefPath} () const 
+\item 
+bool \hyperlink{class_gr_scene_dba42ed71a18bab46a9c02aefb6c5b36}{LoadScene} (const \hyperlink{class_u_path}{UPath} \&path, \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&errors)
+\item 
+void \hyperlink{class_gr_scene_b95fdcbb9647160d1491e8de740122a7}{Reset} (const \hyperlink{class_u_path}{UPath} \&sceneDefPath, const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, \hyperlink{class_gr_b_s_p_tree}{GrBSPTree} $\ast$bspTree, bool zUp)
+\item 
+bool \hyperlink{class_gr_scene_d7926eb0813b3d6802b735a8c9a7880f}{GetZUp} () const 
+\item 
+void \hyperlink{class_gr_scene_c54d822c42d667aff5aea61a64553402}{Update} (unsigned int gameTimeDelta, unsigned int sysTimeDelta)
+\item 
+void \hyperlink{class_gr_scene_73ef4498b63c8574ad8c34c81b8c5baf}{SetName} (const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name})
+\item 
+const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \& \hyperlink{class_gr_scene_e7530eaa5692d6eecde9b90d14ff6639}{GetName} () const 
+\item 
+void \hyperlink{class_gr_scene_52d1ea4f232a02be349daed6a108a6c6}{SetClearColor} (const \hyperlink{class_gr_color}{GrColor} \&\hyperlink{glext_8h_3ea846f998d64f079b86052b6c4193a8}{color})
+\item 
+const \hyperlink{class_gr_color}{GrColor} \& \hyperlink{class_gr_scene_09f41cffdbef52b99439473e482faef8}{GetClearColor} () const 
+\item 
+unsigned int \hyperlink{class_gr_scene_38c11228869fe18212a2e9828d7664bb}{GetSceneTime} () const 
+\item 
+unsigned int \hyperlink{class_gr_scene_6b41fa1f794c9c955beff22da3f2e948}{GetTimeDelta} () const 
+\item 
+unsigned int \hyperlink{class_gr_scene_fbe441d52737edbdf48e2f0925129ace}{GetFrameId} () const 
+\item 
+\hyperlink{class_gr_scene_7645ba831bfac8f4543f59ff7b2c63bd}{PickFlags} \hyperlink{class_gr_scene_55ff6809eccf8aee6efbe9093902e241}{Pick} (\hyperlink{class_gr_model}{GrModel} $\ast$\&model, \hyperlink{class_gr_model_node}{GrModelNode} $\ast$\&modelNode, \hyperlink{class_gr_mesh_inst}{GrMeshInst} $\ast$\&meshInst, \hyperlink{struct_gr_mesh_1_1_s_tri_collision}{GrMesh::STriCollision} \&hit, const \hyperlink{class_m_ray}{MRay} \&ray, \hyperlink{class_gr_scene_7645ba831bfac8f4543f59ff7b2c63bd}{PickFlags} \hyperlink{_u_t_message_8h_0a3c0b351ab09281b662a9ff4f900a53}{flags}=\hyperlink{class_gr_scene_a8cf807b21fc873fd6158af7ca6da3e5}{kPickAll})
+\item 
+\hyperlink{class_gr_b_s_p_tree}{GrBSPTree} $\ast$ \hyperlink{class_gr_scene_0b35a3a91dac9b66a606cedb305e6e03}{GetBSPTree} () const 
+\item 
+\hyperlink{class_gr_model}{GrModel} $\ast$ \hyperlink{class_gr_scene_77053ce45ce06b5253e28c63660bbe20}{GetRootModel} () const 
+\item 
+\hyperlink{class_gr_model}{GrModel} $\ast$ \hyperlink{class_gr_scene_b6bba978374af9a4e07fc144d7aaee4d}{GetSkyboxModel} () const 
+\item 
+void \hyperlink{class_gr_scene_edba5aec2c8d98d63416dd3be618a427}{AddLight} (\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_light}{GrLight} $>$ light)
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_light}{GrLight} $>$ \hyperlink{class_gr_scene_72b23cf24995f4e8ed564694e47111e5}{FindLight} (const char $\ast$\hyperlink{glext__bak_8h_58c2a664503e14ffb8f21012aabff3e9}{id}, int cmpLen=-1) const 
+\item 
+bool \hyperlink{class_gr_scene_d164195244a057f9a27808fed5e49a97}{RemoveLight} (const char $\ast$\hyperlink{glext__bak_8h_58c2a664503e14ffb8f21012aabff3e9}{id})
+\item 
+bool \hyperlink{class_gr_scene_56a9545a1667c9dae82eecb89c4a60d7}{RemoveLight} (\hyperlink{class_gr_light}{GrLight} $\ast$light)
+\item 
+unsigned int \hyperlink{class_gr_scene_0aecbaefcc7f4c2e7f03f9103df539ea}{GetLightCount} () const 
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_light}{GrLight} $>$ \hyperlink{class_gr_scene_afe37dfc9c622a8e711da54913de9f82}{GetLight} (unsigned int idx) const 
+\item 
+void \hyperlink{class_gr_scene_d8cf055496150d2f331ef24cf74dc0b6}{SetGlobalAmbience} (const \hyperlink{class_gr_color}{GrColor} \&ambience)
+\item 
+const \hyperlink{class_gr_color}{GrColor} \& \hyperlink{class_gr_scene_59c6545b88059447aac8f9ca4d1c3bf2}{GetGlobalAmbience} () const 
+\item 
+void \hyperlink{class_gr_scene_1834cc42ace852985a396a950847a57e}{SetLightEnable} (bool enabled)
+\item 
+void \hyperlink{class_gr_scene_4221a4094e3df2199d1192b84d57f741}{DbgSetWireframe} (bool wireframe)
+\item 
+bool \hyperlink{class_gr_scene_1115b4bd5df43fe6c184aeea371bb3c4}{DbgGetWireframe} () const 
+\item 
+void \hyperlink{class_gr_scene_a48f857953dfa7af6103b4a9bf6ee7c6}{DbgDrawHierarchy} ()
+\item 
+void \hyperlink{class_gr_scene_121b1f76ae65b017b644f2748fd52b05}{ShowAffected} (\hyperlink{class_gr_light}{GrLight} $\ast$light)
+\item 
+void \hyperlink{class_gr_scene_d0b2a12e012faf97823cab5067eb4fb0}{Cache} ()
+\item 
+void \hyperlink{class_gr_scene_cb24d3dbe6ccb8f318934a381d440541}{Evict} ()
+\item 
+void \hyperlink{class_gr_scene_881037f45a998cb19df5256943f9b50f}{Render} (const \hyperlink{class_gr_camera}{GrCamera} $\ast$camera)
+\item 
+void \hyperlink{class_gr_scene_5e92ae713e6a097e7407cb82c9a45db7}{RenderTexture} (const \hyperlink{class_gr_camera}{GrCamera} $\ast$camera, const \hyperlink{class_m_vec3}{MVec3} \&pvsEyePos)
+\item 
+void \hyperlink{class_gr_scene_29e762ce8bc2054ff7564cbae4aafea5}{Clear} ()
+\item 
+void \hyperlink{class_gr_scene_bd77c55363f70fdc20c346976948ab18}{Traverse} (\hyperlink{class_gr_scene_traverser}{GrSceneTraverser} $\ast$traverser, \hyperlink{class_gr_scene_7645ba831bfac8f4543f59ff7b2c63bd}{PickFlags} elems=\hyperlink{class_gr_scene_a8cf807b21fc873fd6158af7ca6da3e5}{kPickAll})
+\item 
+void \hyperlink{class_gr_scene_5a2aeac93da5261846c53b92d7333025}{FindMeshInstsInFrustum} (\hyperlink{class_gr_render_list}{GrRenderList} \&meshInsts, const \hyperlink{class_gr_frustum}{GrFrustum} \&frustum)
+\end{CompactItemize}
+\subsection*{Static Public Attributes}
+\begin{CompactItemize}
+\item 
+static const unsigned int \hyperlink{class_gr_scene_d8f34543a299f163c881ba927ca00ced}{kPickNone} = 0x00
+\item 
+static const unsigned int \hyperlink{class_gr_scene_a2d4949176b03e4de401133af3c7539c}{kPickBSP} = 0x01
+\item 
+static const unsigned int \hyperlink{class_gr_scene_812919af44c1508b2e91ef02618a3794}{kPickModels} = 0x02
+\item 
+static const unsigned int \hyperlink{class_gr_scene_f34d527cd99bc6bb9029a87a57de4b96}{kPickModelNodes} = 0x04
+\item 
+static const unsigned int \hyperlink{class_gr_scene_a8cf807b21fc873fd6158af7ca6da3e5}{kPickAll} = \hyperlink{class_gr_scene_a2d4949176b03e4de401133af3c7539c}{kPickBSP} $|$ \hyperlink{class_gr_scene_812919af44c1508b2e91ef02618a3794}{kPickModels} $|$ \hyperlink{class_gr_scene_f34d527cd99bc6bb9029a87a57de4b96}{kPickModelNodes}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 49 of file GrScene.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_gr_scene_7645ba831bfac8f4543f59ff7b2c63bd}{
+\index{GrScene@{GrScene}!PickFlags@{PickFlags}}
+\index{PickFlags@{PickFlags}!GrScene@{GrScene}}
+\subsubsection[{PickFlags}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int {\bf GrScene::PickFlags}}}
+\label{class_gr_scene_7645ba831bfac8f4543f59ff7b2c63bd}
+
+
+
+
+Definition at line 54 of file GrScene.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_scene_e34b9d499e43774f936ead2aaa262538}{
+\index{GrScene@{GrScene}!GrScene@{GrScene}}
+\index{GrScene@{GrScene}!GrScene@{GrScene}}
+\subsubsection[{GrScene}]{\setlength{\rightskip}{0pt plus 5cm}GrScene::GrScene ()}}
+\label{class_gr_scene_e34b9d499e43774f936ead2aaa262538}
+
+
+
+
+Definition at line 125 of file GrScene.cpp.\hypertarget{class_gr_scene_282d695d3b86b54e68319f2297a2e8b4}{
+\index{GrScene@{GrScene}!$\sim$GrScene@{$\sim$GrScene}}
+\index{$\sim$GrScene@{$\sim$GrScene}!GrScene@{GrScene}}
+\subsubsection[{$\sim$GrScene}]{\setlength{\rightskip}{0pt plus 5cm}GrScene::$\sim$GrScene ()}}
+\label{class_gr_scene_282d695d3b86b54e68319f2297a2e8b4}
+
+
+
+
+Definition at line 151 of file GrScene.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_scene_edba5aec2c8d98d63416dd3be618a427}{
+\index{GrScene@{GrScene}!AddLight@{AddLight}}
+\index{AddLight@{AddLight}!GrScene@{GrScene}}
+\subsubsection[{AddLight}]{\setlength{\rightskip}{0pt plus 5cm}void GrScene::AddLight ({\bf URef}$<$ {\bf GrLight} $>$ {\em light})}}
+\label{class_gr_scene_edba5aec2c8d98d63416dd3be618a427}
+
+
+
+
+Definition at line 325 of file GrScene.cpp.\hypertarget{class_gr_scene_d0b2a12e012faf97823cab5067eb4fb0}{
+\index{GrScene@{GrScene}!Cache@{Cache}}
+\index{Cache@{Cache}!GrScene@{GrScene}}
+\subsubsection[{Cache}]{\setlength{\rightskip}{0pt plus 5cm}void GrScene::Cache ()}}
+\label{class_gr_scene_d0b2a12e012faf97823cab5067eb4fb0}
+
+
+
+
+Definition at line 377 of file GrScene.cpp.\hypertarget{class_gr_scene_29e762ce8bc2054ff7564cbae4aafea5}{
+\index{GrScene@{GrScene}!Clear@{Clear}}
+\index{Clear@{Clear}!GrScene@{GrScene}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}void GrScene::Clear ()}}
+\label{class_gr_scene_29e762ce8bc2054ff7564cbae4aafea5}
+
+
+
+
+Definition at line 435 of file GrScene.cpp.\hypertarget{class_gr_scene_a48f857953dfa7af6103b4a9bf6ee7c6}{
+\index{GrScene@{GrScene}!DbgDrawHierarchy@{DbgDrawHierarchy}}
+\index{DbgDrawHierarchy@{DbgDrawHierarchy}!GrScene@{GrScene}}
+\subsubsection[{DbgDrawHierarchy}]{\setlength{\rightskip}{0pt plus 5cm}void GrScene::DbgDrawHierarchy ()}}
+\label{class_gr_scene_a48f857953dfa7af6103b4a9bf6ee7c6}
+
+
+
+
+Definition at line 370 of file GrScene.cpp.\hypertarget{class_gr_scene_1115b4bd5df43fe6c184aeea371bb3c4}{
+\index{GrScene@{GrScene}!DbgGetWireframe@{DbgGetWireframe}}
+\index{DbgGetWireframe@{DbgGetWireframe}!GrScene@{GrScene}}
+\subsubsection[{DbgGetWireframe}]{\setlength{\rightskip}{0pt plus 5cm}bool GrScene::DbgGetWireframe () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_scene_1115b4bd5df43fe6c184aeea371bb3c4}
+
+
+
+
+Definition at line 120 of file GrScene.h.\hypertarget{class_gr_scene_4221a4094e3df2199d1192b84d57f741}{
+\index{GrScene@{GrScene}!DbgSetWireframe@{DbgSetWireframe}}
+\index{DbgSetWireframe@{DbgSetWireframe}!GrScene@{GrScene}}
+\subsubsection[{DbgSetWireframe}]{\setlength{\rightskip}{0pt plus 5cm}void GrScene::DbgSetWireframe (bool {\em wireframe})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_scene_4221a4094e3df2199d1192b84d57f741}
+
+
+
+
+Definition at line 119 of file GrScene.h.\hypertarget{class_gr_scene_cb24d3dbe6ccb8f318934a381d440541}{
+\index{GrScene@{GrScene}!Evict@{Evict}}
+\index{Evict@{Evict}!GrScene@{GrScene}}
+\subsubsection[{Evict}]{\setlength{\rightskip}{0pt plus 5cm}void GrScene::Evict ()}}
+\label{class_gr_scene_cb24d3dbe6ccb8f318934a381d440541}
+
+
+
+
+Definition at line 386 of file GrScene.cpp.\hypertarget{class_gr_scene_72b23cf24995f4e8ed564694e47111e5}{
+\index{GrScene@{GrScene}!FindLight@{FindLight}}
+\index{FindLight@{FindLight}!GrScene@{GrScene}}
+\subsubsection[{FindLight}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrLight} $>$ GrScene::FindLight (const char $\ast$ {\em id}, \/  int {\em cmpLen} = {\tt -1}) const}}
+\label{class_gr_scene_72b23cf24995f4e8ed564694e47111e5}
+
+
+
+
+Definition at line 335 of file GrScene.cpp.\hypertarget{class_gr_scene_5a2aeac93da5261846c53b92d7333025}{
+\index{GrScene@{GrScene}!FindMeshInstsInFrustum@{FindMeshInstsInFrustum}}
+\index{FindMeshInstsInFrustum@{FindMeshInstsInFrustum}!GrScene@{GrScene}}
+\subsubsection[{FindMeshInstsInFrustum}]{\setlength{\rightskip}{0pt plus 5cm}void GrScene::FindMeshInstsInFrustum ({\bf GrRenderList} \& {\em meshInsts}, \/  const {\bf GrFrustum} \& {\em frustum})}}
+\label{class_gr_scene_5a2aeac93da5261846c53b92d7333025}
+
+
+
+
+Definition at line 453 of file GrScene.cpp.\hypertarget{class_gr_scene_0b35a3a91dac9b66a606cedb305e6e03}{
+\index{GrScene@{GrScene}!GetBSPTree@{GetBSPTree}}
+\index{GetBSPTree@{GetBSPTree}!GrScene@{GrScene}}
+\subsubsection[{GetBSPTree}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrBSPTree}$\ast$ GrScene::GetBSPTree () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_scene_0b35a3a91dac9b66a606cedb305e6e03}
+
+
+
+
+Definition at line 99 of file GrScene.h.\hypertarget{class_gr_scene_09f41cffdbef52b99439473e482faef8}{
+\index{GrScene@{GrScene}!GetClearColor@{GetClearColor}}
+\index{GetClearColor@{GetClearColor}!GrScene@{GrScene}}
+\subsubsection[{GetClearColor}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf GrColor}\& GrScene::GetClearColor () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_scene_09f41cffdbef52b99439473e482faef8}
+
+
+
+
+Definition at line 87 of file GrScene.h.\hypertarget{class_gr_scene_fbe441d52737edbdf48e2f0925129ace}{
+\index{GrScene@{GrScene}!GetFrameId@{GetFrameId}}
+\index{GetFrameId@{GetFrameId}!GrScene@{GrScene}}
+\subsubsection[{GetFrameId}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrScene::GetFrameId () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_scene_fbe441d52737edbdf48e2f0925129ace}
+
+
+
+
+Definition at line 92 of file GrScene.h.\hypertarget{class_gr_scene_59c6545b88059447aac8f9ca4d1c3bf2}{
+\index{GrScene@{GrScene}!GetGlobalAmbience@{GetGlobalAmbience}}
+\index{GetGlobalAmbience@{GetGlobalAmbience}!GrScene@{GrScene}}
+\subsubsection[{GetGlobalAmbience}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf GrColor}\& GrScene::GetGlobalAmbience () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_scene_59c6545b88059447aac8f9ca4d1c3bf2}
+
+
+
+
+Definition at line 113 of file GrScene.h.\hypertarget{class_gr_scene_afe37dfc9c622a8e711da54913de9f82}{
+\index{GrScene@{GrScene}!GetLight@{GetLight}}
+\index{GetLight@{GetLight}!GrScene@{GrScene}}
+\subsubsection[{GetLight}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrLight} $>$ GrScene::GetLight (unsigned int {\em idx}) const}}
+\label{class_gr_scene_afe37dfc9c622a8e711da54913de9f82}
+
+
+
+
+Definition at line 363 of file GrScene.cpp.\hypertarget{class_gr_scene_0aecbaefcc7f4c2e7f03f9103df539ea}{
+\index{GrScene@{GrScene}!GetLightCount@{GetLightCount}}
+\index{GetLightCount@{GetLightCount}!GrScene@{GrScene}}
+\subsubsection[{GetLightCount}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrScene::GetLightCount () const}}
+\label{class_gr_scene_0aecbaefcc7f4c2e7f03f9103df539ea}
+
+
+
+
+Definition at line 356 of file GrScene.cpp.\hypertarget{class_gr_scene_e7530eaa5692d6eecde9b90d14ff6639}{
+\index{GrScene@{GrScene}!GetName@{GetName}}
+\index{GetName@{GetName}!GrScene@{GrScene}}
+\subsubsection[{GetName}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf tstring}\& GrScene::GetName () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_scene_e7530eaa5692d6eecde9b90d14ff6639}
+
+
+
+
+Definition at line 83 of file GrScene.h.\hypertarget{class_gr_scene_77053ce45ce06b5253e28c63660bbe20}{
+\index{GrScene@{GrScene}!GetRootModel@{GetRootModel}}
+\index{GetRootModel@{GetRootModel}!GrScene@{GrScene}}
+\subsubsection[{GetRootModel}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrModel}$\ast$ GrScene::GetRootModel () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_scene_77053ce45ce06b5253e28c63660bbe20}
+
+
+
+
+Definition at line 100 of file GrScene.h.\hypertarget{class_gr_scene_3553093b4916089dbba484029cba2d11}{
+\index{GrScene@{GrScene}!GetSceneDefPath@{GetSceneDefPath}}
+\index{GetSceneDefPath@{GetSceneDefPath}!GrScene@{GrScene}}
+\subsubsection[{GetSceneDefPath}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf UPath}\& GrScene::GetSceneDefPath () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_scene_3553093b4916089dbba484029cba2d11}
+
+
+
+
+Definition at line 65 of file GrScene.h.\hypertarget{class_gr_scene_38c11228869fe18212a2e9828d7664bb}{
+\index{GrScene@{GrScene}!GetSceneTime@{GetSceneTime}}
+\index{GetSceneTime@{GetSceneTime}!GrScene@{GrScene}}
+\subsubsection[{GetSceneTime}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrScene::GetSceneTime () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_scene_38c11228869fe18212a2e9828d7664bb}
+
+
+
+
+Definition at line 90 of file GrScene.h.\hypertarget{class_gr_scene_b6bba978374af9a4e07fc144d7aaee4d}{
+\index{GrScene@{GrScene}!GetSkyboxModel@{GetSkyboxModel}}
+\index{GetSkyboxModel@{GetSkyboxModel}!GrScene@{GrScene}}
+\subsubsection[{GetSkyboxModel}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrModel}$\ast$ GrScene::GetSkyboxModel () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_scene_b6bba978374af9a4e07fc144d7aaee4d}
+
+
+
+
+Definition at line 101 of file GrScene.h.\hypertarget{class_gr_scene_6b41fa1f794c9c955beff22da3f2e948}{
+\index{GrScene@{GrScene}!GetTimeDelta@{GetTimeDelta}}
+\index{GetTimeDelta@{GetTimeDelta}!GrScene@{GrScene}}
+\subsubsection[{GetTimeDelta}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrScene::GetTimeDelta () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_scene_6b41fa1f794c9c955beff22da3f2e948}
+
+
+
+
+Definition at line 91 of file GrScene.h.\hypertarget{class_gr_scene_d7926eb0813b3d6802b735a8c9a7880f}{
+\index{GrScene@{GrScene}!GetZUp@{GetZUp}}
+\index{GetZUp@{GetZUp}!GrScene@{GrScene}}
+\subsubsection[{GetZUp}]{\setlength{\rightskip}{0pt plus 5cm}bool GrScene::GetZUp () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_scene_d7926eb0813b3d6802b735a8c9a7880f}
+
+
+
+
+Definition at line 74 of file GrScene.h.\hypertarget{class_gr_scene_dba42ed71a18bab46a9c02aefb6c5b36}{
+\index{GrScene@{GrScene}!LoadScene@{LoadScene}}
+\index{LoadScene@{LoadScene}!GrScene@{GrScene}}
+\subsubsection[{LoadScene}]{\setlength{\rightskip}{0pt plus 5cm}bool GrScene::LoadScene (const {\bf UPath} \& {\em path}, \/  {\bf tstring} \& {\em errors})}}
+\label{class_gr_scene_dba42ed71a18bab46a9c02aefb6c5b36}
+
+
+
+
+Definition at line 168 of file GrScene.cpp.\hypertarget{class_gr_scene_55ff6809eccf8aee6efbe9093902e241}{
+\index{GrScene@{GrScene}!Pick@{Pick}}
+\index{Pick@{Pick}!GrScene@{GrScene}}
+\subsubsection[{Pick}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrScene::PickFlags} GrScene::Pick ({\bf GrModel} $\ast$\& {\em model}, \/  {\bf GrModelNode} $\ast$\& {\em modelNode}, \/  {\bf GrMeshInst} $\ast$\& {\em meshInst}, \/  {\bf GrMesh::STriCollision} \& {\em hit}, \/  const {\bf MRay} \& {\em ray}, \/  {\bf PickFlags} {\em flags} = {\tt {\bf kPickAll}})}}
+\label{class_gr_scene_55ff6809eccf8aee6efbe9093902e241}
+
+
+
+
+Definition at line 194 of file GrScene.cpp.\hypertarget{class_gr_scene_56a9545a1667c9dae82eecb89c4a60d7}{
+\index{GrScene@{GrScene}!RemoveLight@{RemoveLight}}
+\index{RemoveLight@{RemoveLight}!GrScene@{GrScene}}
+\subsubsection[{RemoveLight}]{\setlength{\rightskip}{0pt plus 5cm}bool GrScene::RemoveLight ({\bf GrLight} $\ast$ {\em light})}}
+\label{class_gr_scene_56a9545a1667c9dae82eecb89c4a60d7}
+
+
+
+
+Definition at line 349 of file GrScene.cpp.\hypertarget{class_gr_scene_d164195244a057f9a27808fed5e49a97}{
+\index{GrScene@{GrScene}!RemoveLight@{RemoveLight}}
+\index{RemoveLight@{RemoveLight}!GrScene@{GrScene}}
+\subsubsection[{RemoveLight}]{\setlength{\rightskip}{0pt plus 5cm}bool GrScene::RemoveLight (const char $\ast$ {\em id})}}
+\label{class_gr_scene_d164195244a057f9a27808fed5e49a97}
+
+
+
+
+Definition at line 342 of file GrScene.cpp.\hypertarget{class_gr_scene_881037f45a998cb19df5256943f9b50f}{
+\index{GrScene@{GrScene}!Render@{Render}}
+\index{Render@{Render}!GrScene@{GrScene}}
+\subsubsection[{Render}]{\setlength{\rightskip}{0pt plus 5cm}void GrScene::Render (const {\bf GrCamera} $\ast$ {\em camera})}}
+\label{class_gr_scene_881037f45a998cb19df5256943f9b50f}
+
+
+
+
+Definition at line 395 of file GrScene.cpp.\hypertarget{class_gr_scene_5e92ae713e6a097e7407cb82c9a45db7}{
+\index{GrScene@{GrScene}!RenderTexture@{RenderTexture}}
+\index{RenderTexture@{RenderTexture}!GrScene@{GrScene}}
+\subsubsection[{RenderTexture}]{\setlength{\rightskip}{0pt plus 5cm}void GrScene::RenderTexture (const {\bf GrCamera} $\ast$ {\em camera}, \/  const {\bf MVec3} \& {\em pvsEyePos})}}
+\label{class_gr_scene_5e92ae713e6a097e7407cb82c9a45db7}
+
+
+
+
+Definition at line 421 of file GrScene.cpp.\hypertarget{class_gr_scene_b95fdcbb9647160d1491e8de740122a7}{
+\index{GrScene@{GrScene}!Reset@{Reset}}
+\index{Reset@{Reset}!GrScene@{GrScene}}
+\subsubsection[{Reset}]{\setlength{\rightskip}{0pt plus 5cm}void GrScene::Reset (const {\bf UPath} \& {\em sceneDefPath}, \/  const {\bf tstring} \& {\em name}, \/  {\bf GrBSPTree} $\ast$ {\em bspTree}, \/  bool {\em zUp})}}
+\label{class_gr_scene_b95fdcbb9647160d1491e8de740122a7}
+
+
+
+
+Definition at line 176 of file GrScene.cpp.\hypertarget{class_gr_scene_52d1ea4f232a02be349daed6a108a6c6}{
+\index{GrScene@{GrScene}!SetClearColor@{SetClearColor}}
+\index{SetClearColor@{SetClearColor}!GrScene@{GrScene}}
+\subsubsection[{SetClearColor}]{\setlength{\rightskip}{0pt plus 5cm}void GrScene::SetClearColor (const {\bf GrColor} \& {\em color})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_scene_52d1ea4f232a02be349daed6a108a6c6}
+
+
+
+
+Definition at line 86 of file GrScene.h.\hypertarget{class_gr_scene_d8cf055496150d2f331ef24cf74dc0b6}{
+\index{GrScene@{GrScene}!SetGlobalAmbience@{SetGlobalAmbience}}
+\index{SetGlobalAmbience@{SetGlobalAmbience}!GrScene@{GrScene}}
+\subsubsection[{SetGlobalAmbience}]{\setlength{\rightskip}{0pt plus 5cm}void GrScene::SetGlobalAmbience (const {\bf GrColor} \& {\em ambience})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_scene_d8cf055496150d2f331ef24cf74dc0b6}
+
+
+
+
+Definition at line 112 of file GrScene.h.\hypertarget{class_gr_scene_1834cc42ace852985a396a950847a57e}{
+\index{GrScene@{GrScene}!SetLightEnable@{SetLightEnable}}
+\index{SetLightEnable@{SetLightEnable}!GrScene@{GrScene}}
+\subsubsection[{SetLightEnable}]{\setlength{\rightskip}{0pt plus 5cm}void GrScene::SetLightEnable (bool {\em enabled})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_scene_1834cc42ace852985a396a950847a57e}
+
+
+
+
+Definition at line 116 of file GrScene.h.\hypertarget{class_gr_scene_73ef4498b63c8574ad8c34c81b8c5baf}{
+\index{GrScene@{GrScene}!SetName@{SetName}}
+\index{SetName@{SetName}!GrScene@{GrScene}}
+\subsubsection[{SetName}]{\setlength{\rightskip}{0pt plus 5cm}void GrScene::SetName (const {\bf tstring} \& {\em name})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_scene_73ef4498b63c8574ad8c34c81b8c5baf}
+
+
+
+
+Definition at line 80 of file GrScene.h.\hypertarget{class_gr_scene_121b1f76ae65b017b644f2748fd52b05}{
+\index{GrScene@{GrScene}!ShowAffected@{ShowAffected}}
+\index{ShowAffected@{ShowAffected}!GrScene@{GrScene}}
+\subsubsection[{ShowAffected}]{\setlength{\rightskip}{0pt plus 5cm}void GrScene::ShowAffected ({\bf GrLight} $\ast$ {\em light})}}
+\label{class_gr_scene_121b1f76ae65b017b644f2748fd52b05}
+
+
+\hypertarget{class_gr_scene_bd77c55363f70fdc20c346976948ab18}{
+\index{GrScene@{GrScene}!Traverse@{Traverse}}
+\index{Traverse@{Traverse}!GrScene@{GrScene}}
+\subsubsection[{Traverse}]{\setlength{\rightskip}{0pt plus 5cm}void GrScene::Traverse ({\bf GrSceneTraverser} $\ast$ {\em traverser}, \/  {\bf PickFlags} {\em elems} = {\tt {\bf kPickAll}})}}
+\label{class_gr_scene_bd77c55363f70fdc20c346976948ab18}
+
+
+
+
+Definition at line 442 of file GrScene.cpp.\hypertarget{class_gr_scene_c54d822c42d667aff5aea61a64553402}{
+\index{GrScene@{GrScene}!Update@{Update}}
+\index{Update@{Update}!GrScene@{GrScene}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void GrScene::Update (unsigned int {\em gameTimeDelta}, \/  unsigned int {\em sysTimeDelta})}}
+\label{class_gr_scene_c54d822c42d667aff5aea61a64553402}
+
+
+
+
+Definition at line 303 of file GrScene.cpp.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_gr_scene_a8cf807b21fc873fd6158af7ca6da3e5}{
+\index{GrScene@{GrScene}!kPickAll@{kPickAll}}
+\index{kPickAll@{kPickAll}!GrScene@{GrScene}}
+\subsubsection[{kPickAll}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int {\bf GrScene::kPickAll} = {\bf kPickBSP} $|$ {\bf kPickModels} $|$ {\bf kPickModelNodes}\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_gr_scene_a8cf807b21fc873fd6158af7ca6da3e5}
+
+
+
+
+Definition at line 59 of file GrScene.h.\hypertarget{class_gr_scene_a2d4949176b03e4de401133af3c7539c}{
+\index{GrScene@{GrScene}!kPickBSP@{kPickBSP}}
+\index{kPickBSP@{kPickBSP}!GrScene@{GrScene}}
+\subsubsection[{kPickBSP}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int {\bf GrScene::kPickBSP} = 0x01\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_gr_scene_a2d4949176b03e4de401133af3c7539c}
+
+
+
+
+Definition at line 56 of file GrScene.h.\hypertarget{class_gr_scene_f34d527cd99bc6bb9029a87a57de4b96}{
+\index{GrScene@{GrScene}!kPickModelNodes@{kPickModelNodes}}
+\index{kPickModelNodes@{kPickModelNodes}!GrScene@{GrScene}}
+\subsubsection[{kPickModelNodes}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int {\bf GrScene::kPickModelNodes} = 0x04\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_gr_scene_f34d527cd99bc6bb9029a87a57de4b96}
+
+
+
+
+Definition at line 58 of file GrScene.h.\hypertarget{class_gr_scene_812919af44c1508b2e91ef02618a3794}{
+\index{GrScene@{GrScene}!kPickModels@{kPickModels}}
+\index{kPickModels@{kPickModels}!GrScene@{GrScene}}
+\subsubsection[{kPickModels}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int {\bf GrScene::kPickModels} = 0x02\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_gr_scene_812919af44c1508b2e91ef02618a3794}
+
+
+
+
+Definition at line 57 of file GrScene.h.\hypertarget{class_gr_scene_d8f34543a299f163c881ba927ca00ced}{
+\index{GrScene@{GrScene}!kPickNone@{kPickNone}}
+\index{kPickNone@{kPickNone}!GrScene@{GrScene}}
+\subsubsection[{kPickNone}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int {\bf GrScene::kPickNone} = 0x00\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_gr_scene_d8f34543a299f163c881ba927ca00ced}
+
+
+
+
+Definition at line 55 of file GrScene.h.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_scene_8h}{GrScene.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_scene_8cpp}{GrScene.cpp}\end{CompactItemize}

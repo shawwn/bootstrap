@@ -1,0 +1,313 @@
+\hypertarget{class_u_fast_array}{
+\section{UFastArray$<$ \_\-Type, kCacheSize, kGrowSize $>$ Class Template Reference}
+\label{class_u_fast_array}\index{UFastArray@{UFastArray}}
+}
+{\tt \#include $<$UFastArray.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_u_fast_array_2310fb261513046671a265030604aaa1}{UFastArray} (unsigned int initSize=0)
+\item 
+\hyperlink{class_u_fast_array_c7ef0ae1aa140c21dd0461e79bdd237d}{UFastArray} (const \hyperlink{class_u_fast_array}{UFastArray} \&array)
+\item 
+\hyperlink{class_u_fast_array_6a643fc3aadc7114f343efdd5ddf9976}{$\sim$UFastArray} ()
+\item 
+unsigned int \hyperlink{class_u_fast_array_0f656de7d6eb46b1a090bd3b1c26cb35}{GetElemCount} () const 
+\item 
+\_\-Type \& \hyperlink{class_u_fast_array_47585b9f9bceaca22c294f2e961aa693}{operator\mbox{[}$\,$\mbox{]}} (unsigned int i)
+\item 
+const \_\-Type \& \hyperlink{class_u_fast_array_831daf82a5330a255728bf6236d31eb1}{operator\mbox{[}$\,$\mbox{]}} (unsigned int i) const 
+\item 
+\_\-Type \& \hyperlink{class_u_fast_array_63b17c1f39f318512e9f2fc73d0eabd7}{First} ()
+\item 
+const \_\-Type \& \hyperlink{class_u_fast_array_fc704c356efce5b8dfb26458f7fbf413}{First} () const 
+\item 
+\_\-Type \& \hyperlink{class_u_fast_array_6a006a084269457b6033e624999adc1c}{Last} ()
+\item 
+const \_\-Type \& \hyperlink{class_u_fast_array_a6ab8002f344c6faab090a89375b10f9}{Last} () const 
+\item 
+void \hyperlink{class_u_fast_array_ff7420c215117e8cdc91d27fd2519b13}{Insert} (unsigned int before, const \_\-Type \&elem)
+\item 
+void \hyperlink{class_u_fast_array_eef6f5a281cb95cf277c33714117ab05}{Erase} (unsigned int \hyperlink{glext__bak_8h_57f14e05b1900f16a2da82ade47d0c6d}{index})
+\item 
+void \hyperlink{class_u_fast_array_23fd2ded4aa241f76b313a925861c828}{Push} (const \_\-Type \&elem)
+\item 
+\_\-Type \& \hyperlink{class_u_fast_array_b2c21774ba42f9480a447095d4dde0ed}{Push} ()
+\item 
+\_\-Type \& \hyperlink{class_u_fast_array_fc4eda064bb9ee287f6217cb81a4fef8}{Pop} ()
+\item 
+void \hyperlink{class_u_fast_array_2f2a33eef1bbf4679b8a4231bf4228aa}{SwapErase} (unsigned int \hyperlink{glext__bak_8h_57f14e05b1900f16a2da82ade47d0c6d}{index})
+\item 
+void \hyperlink{class_u_fast_array_aab86583bca71336ee7122bc77aa861e}{Reserve} (unsigned int \hyperlink{glext__bak_8h_3d1e3edfcf61ca2d831883e1afbad89e}{size})
+\item 
+unsigned int \hyperlink{class_u_fast_array_19b5d66abeea2c7288423ff604348e57}{GetReserved} () const 
+\item 
+void \hyperlink{class_u_fast_array_406813631148524e47f65bb3be44db61}{Resize} (unsigned int \hyperlink{glext__bak_8h_3d1e3edfcf61ca2d831883e1afbad89e}{size}, const \_\-Type \&\hyperlink{glext__bak_8h_6a4f8a1a444e9080b297963b3db29fe0}{value})
+\item 
+{\footnotesize template$<$class \_\-Cmp $>$ }\\void \hyperlink{class_u_fast_array_3dff70d6c3f2ed43048a54311c842379}{Sort} (\_\-Cmp cmpLess)
+\item 
+void \hyperlink{class_u_fast_array_0014e3fe79bdb6c69e4e37028a38d5ff}{Sort} ()
+\item 
+{\footnotesize template$<$class \_\-Cmp $>$ }\\void \hyperlink{class_u_fast_array_31a5d8dde4048ed86ab37bab67ddc4e9}{SortRange} (\_\-Cmp cmpLess, unsigned int \hyperlink{glext__bak_8h_c55adc720a3098c1b454d2a4647f4361}{start}, unsigned \hyperlink{wglext_8h_98d18d6b4e3ba4ed266c6fb54c839d70}{count})
+\item 
+void \hyperlink{class_u_fast_array_49348ec3f8dc21f778392013f4b9c966}{SortRange} (unsigned int \hyperlink{glext__bak_8h_c55adc720a3098c1b454d2a4647f4361}{start}, unsigned \hyperlink{wglext_8h_98d18d6b4e3ba4ed266c6fb54c839d70}{count})
+\item 
+\hyperlink{class_u_fast_array}{UFastArray} \& \hyperlink{class_u_fast_array_91c515426b0745d5ed8b453aa410a738}{operator=} (const \hyperlink{class_u_fast_array}{UFastArray} \&array)
+\item 
+void \hyperlink{class_u_fast_array_97c6c9910cc6e541254eaaaa530d48a9}{Clear} ()
+\item 
+\_\-Type $\ast$ \hyperlink{class_u_fast_array_8db9c643b2bd8c7a2a4770e74ca76e31}{GetPtr} () const 
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class \_\-Type, unsigned int kCacheSize = 10, unsigned int kGrowSize = 10$>$ class UFastArray$<$ \_\-Type, kCacheSize, kGrowSize $>$}
+
+
+
+Definition at line 20 of file UFastArray.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_u_fast_array_2310fb261513046671a265030604aaa1}{
+\index{UFastArray@{UFastArray}!UFastArray@{UFastArray}}
+\index{UFastArray@{UFastArray}!UFastArray@{UFastArray}}
+\subsubsection[{UFastArray}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class \_\-Type , unsigned int kCacheSize, unsigned int kGrowSize$>$ {\bf UFastArray}$<$ \_\-Type, kCacheSize, kGrowSize $>$::{\bf UFastArray} (unsigned int {\em initSize} = {\tt 0})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_fast_array_2310fb261513046671a265030604aaa1}
+
+
+
+
+Definition at line 88 of file UFastArray.h.\hypertarget{class_u_fast_array_c7ef0ae1aa140c21dd0461e79bdd237d}{
+\index{UFastArray@{UFastArray}!UFastArray@{UFastArray}}
+\index{UFastArray@{UFastArray}!UFastArray@{UFastArray}}
+\subsubsection[{UFastArray}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class \_\-Type , unsigned int kCacheSize, unsigned int kGrowSize$>$ {\bf UFastArray}$<$ \_\-Type, kCacheSize, kGrowSize $>$::{\bf UFastArray} (const {\bf UFastArray}$<$ \_\-Type, kCacheSize, kGrowSize $>$ \& {\em array})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_fast_array_c7ef0ae1aa140c21dd0461e79bdd237d}
+
+
+
+
+Definition at line 98 of file UFastArray.h.\hypertarget{class_u_fast_array_6a643fc3aadc7114f343efdd5ddf9976}{
+\index{UFastArray@{UFastArray}!$\sim$UFastArray@{$\sim$UFastArray}}
+\index{$\sim$UFastArray@{$\sim$UFastArray}!UFastArray@{UFastArray}}
+\subsubsection[{$\sim$UFastArray}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class \_\-Type , unsigned int kCacheSize, unsigned int kGrowSize$>$ {\bf UFastArray}$<$ \_\-Type, kCacheSize, kGrowSize $>$::$\sim${\bf UFastArray} ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_fast_array_6a643fc3aadc7114f343efdd5ddf9976}
+
+
+
+
+Definition at line 108 of file UFastArray.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_u_fast_array_97c6c9910cc6e541254eaaaa530d48a9}{
+\index{UFastArray@{UFastArray}!Clear@{Clear}}
+\index{Clear@{Clear}!UFastArray@{UFastArray}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class \_\-Type, unsigned int kCacheSize = 10, unsigned int kGrowSize = 10$>$ void {\bf UFastArray}$<$ \_\-Type, kCacheSize, kGrowSize $>$::Clear ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_fast_array_97c6c9910cc6e541254eaaaa530d48a9}
+
+
+
+
+Definition at line 67 of file UFastArray.h.\hypertarget{class_u_fast_array_eef6f5a281cb95cf277c33714117ab05}{
+\index{UFastArray@{UFastArray}!Erase@{Erase}}
+\index{Erase@{Erase}!UFastArray@{UFastArray}}
+\subsubsection[{Erase}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class \_\-Type , unsigned int kCacheSize, unsigned int kGrowSize$>$ void {\bf UFastArray}$<$ \_\-Type, kCacheSize, kGrowSize $>$::Erase (unsigned int {\em index})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_fast_array_eef6f5a281cb95cf277c33714117ab05}
+
+
+
+
+Definition at line 139 of file UFastArray.h.\hypertarget{class_u_fast_array_fc704c356efce5b8dfb26458f7fbf413}{
+\index{UFastArray@{UFastArray}!First@{First}}
+\index{First@{First}!UFastArray@{UFastArray}}
+\subsubsection[{First}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class \_\-Type, unsigned int kCacheSize = 10, unsigned int kGrowSize = 10$>$ const \_\-Type\& {\bf UFastArray}$<$ \_\-Type, kCacheSize, kGrowSize $>$::First () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_fast_array_fc704c356efce5b8dfb26458f7fbf413}
+
+
+
+
+Definition at line 31 of file UFastArray.h.\hypertarget{class_u_fast_array_63b17c1f39f318512e9f2fc73d0eabd7}{
+\index{UFastArray@{UFastArray}!First@{First}}
+\index{First@{First}!UFastArray@{UFastArray}}
+\subsubsection[{First}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class \_\-Type, unsigned int kCacheSize = 10, unsigned int kGrowSize = 10$>$ \_\-Type\& {\bf UFastArray}$<$ \_\-Type, kCacheSize, kGrowSize $>$::First ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_fast_array_63b17c1f39f318512e9f2fc73d0eabd7}
+
+
+
+
+Definition at line 30 of file UFastArray.h.\hypertarget{class_u_fast_array_0f656de7d6eb46b1a090bd3b1c26cb35}{
+\index{UFastArray@{UFastArray}!GetElemCount@{GetElemCount}}
+\index{GetElemCount@{GetElemCount}!UFastArray@{UFastArray}}
+\subsubsection[{GetElemCount}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class \_\-Type, unsigned int kCacheSize = 10, unsigned int kGrowSize = 10$>$ unsigned int {\bf UFastArray}$<$ \_\-Type, kCacheSize, kGrowSize $>$::GetElemCount () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_fast_array_0f656de7d6eb46b1a090bd3b1c26cb35}
+
+
+
+
+Definition at line 27 of file UFastArray.h.\hypertarget{class_u_fast_array_8db9c643b2bd8c7a2a4770e74ca76e31}{
+\index{UFastArray@{UFastArray}!GetPtr@{GetPtr}}
+\index{GetPtr@{GetPtr}!UFastArray@{UFastArray}}
+\subsubsection[{GetPtr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class \_\-Type, unsigned int kCacheSize = 10, unsigned int kGrowSize = 10$>$ \_\-Type$\ast$ {\bf UFastArray}$<$ \_\-Type, kCacheSize, kGrowSize $>$::GetPtr () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_fast_array_8db9c643b2bd8c7a2a4770e74ca76e31}
+
+
+
+
+Definition at line 69 of file UFastArray.h.\hypertarget{class_u_fast_array_19b5d66abeea2c7288423ff604348e57}{
+\index{UFastArray@{UFastArray}!GetReserved@{GetReserved}}
+\index{GetReserved@{GetReserved}!UFastArray@{UFastArray}}
+\subsubsection[{GetReserved}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class \_\-Type, unsigned int kCacheSize = 10, unsigned int kGrowSize = 10$>$ unsigned int {\bf UFastArray}$<$ \_\-Type, kCacheSize, kGrowSize $>$::GetReserved () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_fast_array_19b5d66abeea2c7288423ff604348e57}
+
+
+
+
+Definition at line 47 of file UFastArray.h.\hypertarget{class_u_fast_array_ff7420c215117e8cdc91d27fd2519b13}{
+\index{UFastArray@{UFastArray}!Insert@{Insert}}
+\index{Insert@{Insert}!UFastArray@{UFastArray}}
+\subsubsection[{Insert}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class \_\-Type, unsigned int kCacheSize, unsigned int kGrowSize$>$ void {\bf UFastArray}$<$ \_\-Type, kCacheSize, kGrowSize $>$::Insert (unsigned int {\em before}, \/  const \_\-Type \& {\em elem})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_fast_array_ff7420c215117e8cdc91d27fd2519b13}
+
+
+
+
+Definition at line 122 of file UFastArray.h.\hypertarget{class_u_fast_array_a6ab8002f344c6faab090a89375b10f9}{
+\index{UFastArray@{UFastArray}!Last@{Last}}
+\index{Last@{Last}!UFastArray@{UFastArray}}
+\subsubsection[{Last}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class \_\-Type, unsigned int kCacheSize = 10, unsigned int kGrowSize = 10$>$ const \_\-Type\& {\bf UFastArray}$<$ \_\-Type, kCacheSize, kGrowSize $>$::Last () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_fast_array_a6ab8002f344c6faab090a89375b10f9}
+
+
+
+
+Definition at line 33 of file UFastArray.h.\hypertarget{class_u_fast_array_6a006a084269457b6033e624999adc1c}{
+\index{UFastArray@{UFastArray}!Last@{Last}}
+\index{Last@{Last}!UFastArray@{UFastArray}}
+\subsubsection[{Last}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class \_\-Type, unsigned int kCacheSize = 10, unsigned int kGrowSize = 10$>$ \_\-Type\& {\bf UFastArray}$<$ \_\-Type, kCacheSize, kGrowSize $>$::Last ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_fast_array_6a006a084269457b6033e624999adc1c}
+
+
+
+
+Definition at line 32 of file UFastArray.h.\hypertarget{class_u_fast_array_91c515426b0745d5ed8b453aa410a738}{
+\index{UFastArray@{UFastArray}!operator=@{operator=}}
+\index{operator=@{operator=}!UFastArray@{UFastArray}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class \_\-Type , unsigned int kCacheSize, unsigned int kGrowSize$>$ {\bf UFastArray}$<$ \_\-Type, kCacheSize, kGrowSize $>$ \& {\bf UFastArray}$<$ \_\-Type, kCacheSize, kGrowSize $>$::operator= (const {\bf UFastArray}$<$ \_\-Type, kCacheSize, kGrowSize $>$ \& {\em array})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_fast_array_91c515426b0745d5ed8b453aa410a738}
+
+
+
+
+Definition at line 212 of file UFastArray.h.\hypertarget{class_u_fast_array_831daf82a5330a255728bf6236d31eb1}{
+\index{UFastArray@{UFastArray}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!UFastArray@{UFastArray}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class \_\-Type, unsigned int kCacheSize = 10, unsigned int kGrowSize = 10$>$ const \_\-Type\& {\bf UFastArray}$<$ \_\-Type, kCacheSize, kGrowSize $>$::operator\mbox{[}$\,$\mbox{]} (unsigned int {\em i}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_fast_array_831daf82a5330a255728bf6236d31eb1}
+
+
+
+
+Definition at line 29 of file UFastArray.h.\hypertarget{class_u_fast_array_47585b9f9bceaca22c294f2e961aa693}{
+\index{UFastArray@{UFastArray}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!UFastArray@{UFastArray}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class \_\-Type, unsigned int kCacheSize = 10, unsigned int kGrowSize = 10$>$ \_\-Type\& {\bf UFastArray}$<$ \_\-Type, kCacheSize, kGrowSize $>$::operator\mbox{[}$\,$\mbox{]} (unsigned int {\em i})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_fast_array_47585b9f9bceaca22c294f2e961aa693}
+
+
+
+
+Definition at line 28 of file UFastArray.h.\hypertarget{class_u_fast_array_fc4eda064bb9ee287f6217cb81a4fef8}{
+\index{UFastArray@{UFastArray}!Pop@{Pop}}
+\index{Pop@{Pop}!UFastArray@{UFastArray}}
+\subsubsection[{Pop}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class \_\-Type , unsigned int kCacheSize, unsigned int kGrowSize$>$ \_\-Type \& {\bf UFastArray}$<$ \_\-Type, kCacheSize, kGrowSize $>$::Pop ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_fast_array_fc4eda064bb9ee287f6217cb81a4fef8}
+
+
+
+
+Definition at line 184 of file UFastArray.h.\hypertarget{class_u_fast_array_b2c21774ba42f9480a447095d4dde0ed}{
+\index{UFastArray@{UFastArray}!Push@{Push}}
+\index{Push@{Push}!UFastArray@{UFastArray}}
+\subsubsection[{Push}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class \_\-Type, unsigned int kCacheSize, unsigned int kGrowSize$>$ \_\-Type \& {\bf UFastArray}$<$ \_\-Type, kCacheSize, kGrowSize $>$::Push ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_fast_array_b2c21774ba42f9480a447095d4dde0ed}
+
+
+
+
+Definition at line 175 of file UFastArray.h.\hypertarget{class_u_fast_array_23fd2ded4aa241f76b313a925861c828}{
+\index{UFastArray@{UFastArray}!Push@{Push}}
+\index{Push@{Push}!UFastArray@{UFastArray}}
+\subsubsection[{Push}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class \_\-Type, unsigned int kCacheSize, unsigned int kGrowSize$>$ void {\bf UFastArray}$<$ \_\-Type, kCacheSize, kGrowSize $>$::Push (const \_\-Type \& {\em elem})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_fast_array_23fd2ded4aa241f76b313a925861c828}
+
+
+
+
+Definition at line 167 of file UFastArray.h.\hypertarget{class_u_fast_array_aab86583bca71336ee7122bc77aa861e}{
+\index{UFastArray@{UFastArray}!Reserve@{Reserve}}
+\index{Reserve@{Reserve}!UFastArray@{UFastArray}}
+\subsubsection[{Reserve}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class \_\-Type , unsigned int kCacheSize, unsigned int kGrowSize$>$ void {\bf UFastArray}$<$ \_\-Type, kCacheSize, kGrowSize $>$::Reserve (unsigned int {\em size})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_fast_array_aab86583bca71336ee7122bc77aa861e}
+
+
+
+
+Definition at line 193 of file UFastArray.h.\hypertarget{class_u_fast_array_406813631148524e47f65bb3be44db61}{
+\index{UFastArray@{UFastArray}!Resize@{Resize}}
+\index{Resize@{Resize}!UFastArray@{UFastArray}}
+\subsubsection[{Resize}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class \_\-Type, unsigned int kCacheSize, unsigned int kGrowSize$>$ void {\bf UFastArray}$<$ \_\-Type, kCacheSize, kGrowSize $>$::Resize (unsigned int {\em size}, \/  const \_\-Type \& {\em value})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_fast_array_406813631148524e47f65bb3be44db61}
+
+
+
+
+Definition at line 201 of file UFastArray.h.\hypertarget{class_u_fast_array_0014e3fe79bdb6c69e4e37028a38d5ff}{
+\index{UFastArray@{UFastArray}!Sort@{Sort}}
+\index{Sort@{Sort}!UFastArray@{UFastArray}}
+\subsubsection[{Sort}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class \_\-Type, unsigned int kCacheSize = 10, unsigned int kGrowSize = 10$>$ void {\bf UFastArray}$<$ \_\-Type, kCacheSize, kGrowSize $>$::Sort ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_fast_array_0014e3fe79bdb6c69e4e37028a38d5ff}
+
+
+
+
+Definition at line 54 of file UFastArray.h.\hypertarget{class_u_fast_array_3dff70d6c3f2ed43048a54311c842379}{
+\index{UFastArray@{UFastArray}!Sort@{Sort}}
+\index{Sort@{Sort}!UFastArray@{UFastArray}}
+\subsubsection[{Sort}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class \_\-Type, unsigned int kCacheSize = 10, unsigned int kGrowSize = 10$>$ template$<$class \_\-Cmp $>$ void {\bf UFastArray}$<$ \_\-Type, kCacheSize, kGrowSize $>$::Sort (\_\-Cmp {\em cmpLess})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_fast_array_3dff70d6c3f2ed43048a54311c842379}
+
+
+
+
+Definition at line 53 of file UFastArray.h.\hypertarget{class_u_fast_array_49348ec3f8dc21f778392013f4b9c966}{
+\index{UFastArray@{UFastArray}!SortRange@{SortRange}}
+\index{SortRange@{SortRange}!UFastArray@{UFastArray}}
+\subsubsection[{SortRange}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class \_\-Type, unsigned int kCacheSize = 10, unsigned int kGrowSize = 10$>$ void {\bf UFastArray}$<$ \_\-Type, kCacheSize, kGrowSize $>$::SortRange (unsigned int {\em start}, \/  unsigned {\em count})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_fast_array_49348ec3f8dc21f778392013f4b9c966}
+
+
+
+
+Definition at line 60 of file UFastArray.h.\hypertarget{class_u_fast_array_31a5d8dde4048ed86ab37bab67ddc4e9}{
+\index{UFastArray@{UFastArray}!SortRange@{SortRange}}
+\index{SortRange@{SortRange}!UFastArray@{UFastArray}}
+\subsubsection[{SortRange}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class \_\-Type, unsigned int kCacheSize = 10, unsigned int kGrowSize = 10$>$ template$<$class \_\-Cmp $>$ void {\bf UFastArray}$<$ \_\-Type, kCacheSize, kGrowSize $>$::SortRange (\_\-Cmp {\em cmpLess}, \/  unsigned int {\em start}, \/  unsigned {\em count})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_fast_array_31a5d8dde4048ed86ab37bab67ddc4e9}
+
+
+
+
+Definition at line 57 of file UFastArray.h.\hypertarget{class_u_fast_array_2f2a33eef1bbf4679b8a4231bf4228aa}{
+\index{UFastArray@{UFastArray}!SwapErase@{SwapErase}}
+\index{SwapErase@{SwapErase}!UFastArray@{UFastArray}}
+\subsubsection[{SwapErase}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class \_\-Type , unsigned int kCacheSize, unsigned int kGrowSize$>$ void {\bf UFastArray}$<$ \_\-Type, kCacheSize, kGrowSize $>$::SwapErase (unsigned int {\em index})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_fast_array_2f2a33eef1bbf4679b8a4231bf4228aa}
+
+
+
+
+Definition at line 154 of file UFastArray.h.
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_u_fast_array_8h}{UFastArray.h}\end{CompactItemize}

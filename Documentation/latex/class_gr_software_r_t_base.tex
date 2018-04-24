@@ -1,0 +1,119 @@
+\hypertarget{class_gr_software_r_t_base}{
+\section{GrSoftwareRTBase Class Reference}
+\label{class_gr_software_r_t_base}\index{GrSoftwareRTBase@{GrSoftwareRTBase}}
+}
+{\tt \#include $<$GrSoftwareRTBase.h$>$}
+
+Inheritance diagram for GrSoftwareRTBase::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_gr_software_r_t_base}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+virtual \hyperlink{class_gr_software_r_t_base_6858a3d2fcc6702636a224dfc562453e}{$\sim$GrSoftwareRTBase} ()=0
+\item 
+virtual unsigned int \hyperlink{class_gr_software_r_t_base_24d6fc1742e612d9fa304e2264bd9dd8}{GetBytesPerPel} () const =0
+\item 
+virtual unsigned int \hyperlink{class_gr_software_r_t_base_f1b868a5ca1e7444a44c280e76bd802d}{GetWidth} () const =0
+\item 
+virtual unsigned int \hyperlink{class_gr_software_r_t_base_28d12d92fea7b0a5891123fe7d5dfc74}{GetHeight} () const =0
+\item 
+virtual unsigned int \hyperlink{class_gr_software_r_t_base_9ed681a9c06bd9657f75e7590bfee5ac}{GetTile8x8Stride} () const =0
+\item 
+virtual unsigned char $\ast$ \hyperlink{class_gr_software_r_t_base_327778f4649ef0ac403a2eb9fde3031d}{BeginTile8x8} (unsigned int \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x}, unsigned int \hyperlink{wglext_8h_9298c7ad619074f5285b32c6b72bfdea}{y})=0
+\item 
+virtual unsigned char $\ast$ \hyperlink{class_gr_software_r_t_base_8105b579f48de033a1f78c98b843d3e9}{BeginTile8x8WriteOnly} (unsigned int \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x}, unsigned int \hyperlink{wglext_8h_9298c7ad619074f5285b32c6b72bfdea}{y})=0
+\item 
+virtual void \hyperlink{class_gr_software_r_t_base_152b9d2964518f0c50ff8ced3f3da097}{EndTile8x8} (unsigned int \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x}, unsigned int \hyperlink{wglext_8h_9298c7ad619074f5285b32c6b72bfdea}{y})=0
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 16 of file GrSoftwareRTBase.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_software_r_t_base_6858a3d2fcc6702636a224dfc562453e}{
+\index{GrSoftwareRTBase@{GrSoftwareRTBase}!$\sim$GrSoftwareRTBase@{$\sim$GrSoftwareRTBase}}
+\index{$\sim$GrSoftwareRTBase@{$\sim$GrSoftwareRTBase}!GrSoftwareRTBase@{GrSoftwareRTBase}}
+\subsubsection[{$\sim$GrSoftwareRTBase}]{\setlength{\rightskip}{0pt plus 5cm}virtual GrSoftwareRTBase::$\sim$GrSoftwareRTBase ()\hspace{0.3cm}{\tt  \mbox{[}inline, pure virtual\mbox{]}}}}
+\label{class_gr_software_r_t_base_6858a3d2fcc6702636a224dfc562453e}
+
+
+
+
+Definition at line 19 of file GrSoftwareRTBase.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_software_r_t_base_327778f4649ef0ac403a2eb9fde3031d}{
+\index{GrSoftwareRTBase@{GrSoftwareRTBase}!BeginTile8x8@{BeginTile8x8}}
+\index{BeginTile8x8@{BeginTile8x8}!GrSoftwareRTBase@{GrSoftwareRTBase}}
+\subsubsection[{BeginTile8x8}]{\setlength{\rightskip}{0pt plus 5cm}virtual unsigned char$\ast$ GrSoftwareRTBase::BeginTile8x8 (unsigned int {\em x}, \/  unsigned int {\em y})\hspace{0.3cm}{\tt  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_gr_software_r_t_base_327778f4649ef0ac403a2eb9fde3031d}
+
+
+
+
+Implemented in \hyperlink{class_i_x_null_r_t_ea6bb9f8e61bf8a53deab237d6c93fd2}{IXNullRT}, and \hyperlink{class_gr_software_r_t_buffer_cd1d8af57e8676b94e5e1e5c21fbb4db}{GrSoftwareRTBuffer}.\hypertarget{class_gr_software_r_t_base_8105b579f48de033a1f78c98b843d3e9}{
+\index{GrSoftwareRTBase@{GrSoftwareRTBase}!BeginTile8x8WriteOnly@{BeginTile8x8WriteOnly}}
+\index{BeginTile8x8WriteOnly@{BeginTile8x8WriteOnly}!GrSoftwareRTBase@{GrSoftwareRTBase}}
+\subsubsection[{BeginTile8x8WriteOnly}]{\setlength{\rightskip}{0pt plus 5cm}virtual unsigned char$\ast$ GrSoftwareRTBase::BeginTile8x8WriteOnly (unsigned int {\em x}, \/  unsigned int {\em y})\hspace{0.3cm}{\tt  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_gr_software_r_t_base_8105b579f48de033a1f78c98b843d3e9}
+
+
+
+
+Implemented in \hyperlink{class_i_x_null_r_t_2bf9c2cf6c9e67cd29739456f1bc4e11}{IXNullRT}, and \hyperlink{class_gr_software_r_t_buffer_f796e2b365ca4712537be3a927e565c6}{GrSoftwareRTBuffer}.\hypertarget{class_gr_software_r_t_base_152b9d2964518f0c50ff8ced3f3da097}{
+\index{GrSoftwareRTBase@{GrSoftwareRTBase}!EndTile8x8@{EndTile8x8}}
+\index{EndTile8x8@{EndTile8x8}!GrSoftwareRTBase@{GrSoftwareRTBase}}
+\subsubsection[{EndTile8x8}]{\setlength{\rightskip}{0pt plus 5cm}virtual void GrSoftwareRTBase::EndTile8x8 (unsigned int {\em x}, \/  unsigned int {\em y})\hspace{0.3cm}{\tt  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_gr_software_r_t_base_152b9d2964518f0c50ff8ced3f3da097}
+
+
+
+
+Implemented in \hyperlink{class_i_x_null_r_t_483a293eb0878d94101cf84ba12632cd}{IXNullRT}, and \hyperlink{class_gr_software_r_t_buffer_2e3662e5945e1f6df74f620f5b3b9b0f}{GrSoftwareRTBuffer}.\hypertarget{class_gr_software_r_t_base_24d6fc1742e612d9fa304e2264bd9dd8}{
+\index{GrSoftwareRTBase@{GrSoftwareRTBase}!GetBytesPerPel@{GetBytesPerPel}}
+\index{GetBytesPerPel@{GetBytesPerPel}!GrSoftwareRTBase@{GrSoftwareRTBase}}
+\subsubsection[{GetBytesPerPel}]{\setlength{\rightskip}{0pt plus 5cm}virtual unsigned int GrSoftwareRTBase::GetBytesPerPel () const\hspace{0.3cm}{\tt  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_gr_software_r_t_base_24d6fc1742e612d9fa304e2264bd9dd8}
+
+
+
+
+Implemented in \hyperlink{class_i_x_null_r_t_9217a8a15e5fde56c766502cdb1cdf4f}{IXNullRT}, and \hyperlink{class_gr_software_r_t_buffer_7dd0b05522440e0b8112e974095ce0aa}{GrSoftwareRTBuffer}.\hypertarget{class_gr_software_r_t_base_28d12d92fea7b0a5891123fe7d5dfc74}{
+\index{GrSoftwareRTBase@{GrSoftwareRTBase}!GetHeight@{GetHeight}}
+\index{GetHeight@{GetHeight}!GrSoftwareRTBase@{GrSoftwareRTBase}}
+\subsubsection[{GetHeight}]{\setlength{\rightskip}{0pt plus 5cm}virtual unsigned int GrSoftwareRTBase::GetHeight () const\hspace{0.3cm}{\tt  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_gr_software_r_t_base_28d12d92fea7b0a5891123fe7d5dfc74}
+
+
+
+
+Implemented in \hyperlink{class_i_x_null_r_t_5b13ae270a175d81819b723ed179d509}{IXNullRT}, and \hyperlink{class_gr_software_r_t_buffer_72eb1f3acc53e88f3f89d79226c4e1f2}{GrSoftwareRTBuffer}.\hypertarget{class_gr_software_r_t_base_9ed681a9c06bd9657f75e7590bfee5ac}{
+\index{GrSoftwareRTBase@{GrSoftwareRTBase}!GetTile8x8Stride@{GetTile8x8Stride}}
+\index{GetTile8x8Stride@{GetTile8x8Stride}!GrSoftwareRTBase@{GrSoftwareRTBase}}
+\subsubsection[{GetTile8x8Stride}]{\setlength{\rightskip}{0pt plus 5cm}virtual unsigned int GrSoftwareRTBase::GetTile8x8Stride () const\hspace{0.3cm}{\tt  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_gr_software_r_t_base_9ed681a9c06bd9657f75e7590bfee5ac}
+
+
+
+
+Implemented in \hyperlink{class_i_x_null_r_t_798d86cbd68ba16bfbc2fa9b8cdbde1c}{IXNullRT}, and \hyperlink{class_gr_software_r_t_buffer_c0be8c165c3d4a9f110880704f6b2c42}{GrSoftwareRTBuffer}.\hypertarget{class_gr_software_r_t_base_f1b868a5ca1e7444a44c280e76bd802d}{
+\index{GrSoftwareRTBase@{GrSoftwareRTBase}!GetWidth@{GetWidth}}
+\index{GetWidth@{GetWidth}!GrSoftwareRTBase@{GrSoftwareRTBase}}
+\subsubsection[{GetWidth}]{\setlength{\rightskip}{0pt plus 5cm}virtual unsigned int GrSoftwareRTBase::GetWidth () const\hspace{0.3cm}{\tt  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_gr_software_r_t_base_f1b868a5ca1e7444a44c280e76bd802d}
+
+
+
+
+Implemented in \hyperlink{class_i_x_null_r_t_f4d16738ce92117b4417835a826b88d8}{IXNullRT}, and \hyperlink{class_gr_software_r_t_buffer_c61ed73f4c054a6b3b6cf98e37741f87}{GrSoftwareRTBuffer}.
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_software_r_t_base_8h}{GrSoftwareRTBase.h}\end{CompactItemize}

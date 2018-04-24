@@ -1,0 +1,166 @@
+\hypertarget{class_gr_texture_cube}{
+\section{GrTextureCube Class Reference}
+\label{class_gr_texture_cube}\index{GrTextureCube@{GrTextureCube}}
+}
+{\tt \#include $<$GrTextureCube.h$>$}
+
+Inheritance diagram for GrTextureCube::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{class_gr_texture_cube}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+enum \hyperlink{class_gr_texture_cube_49c6f83c73520edfce04f4eb5dcfe6a0}{ECUBEFACE} \{ \par
+\hyperlink{class_gr_texture_cube_49c6f83c73520edfce04f4eb5dcfe6a08a94a7e78d62ffde00db8ad91b03b760}{CF\_\-POSITIVEX}, 
+\hyperlink{class_gr_texture_cube_49c6f83c73520edfce04f4eb5dcfe6a0e4eea2e34ece4cddd0eac3d0ccbc0852}{CF\_\-NEGATIVEX}, 
+\hyperlink{class_gr_texture_cube_49c6f83c73520edfce04f4eb5dcfe6a052e05dd6004cdcc6986c5d3264aef90e}{CF\_\-POSITIVEY}, 
+\hyperlink{class_gr_texture_cube_49c6f83c73520edfce04f4eb5dcfe6a01dbd31dcc4e3ff4399f07b14447516ae}{CF\_\-NEGATIVEY}, 
+\par
+\hyperlink{class_gr_texture_cube_49c6f83c73520edfce04f4eb5dcfe6a06d9e4198396a007bbbddeba12443f6ba}{CF\_\-POSITIVEZ}, 
+\hyperlink{class_gr_texture_cube_49c6f83c73520edfce04f4eb5dcfe6a05114dcd5206ee6bfbb45bf919dabb061}{CF\_\-NEGATIVEZ}
+ \}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_texture_cube_8668abef3149469fe1680350e56d194a}{GrTextureCube} (const \hyperlink{class_u_path}{UPath} \&\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, \hyperlink{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c}{GrTextureBase::EFORMAT} \hyperlink{glext__bak_8h_e2d3db041c6004a67047659b42f73a44}{format}, unsigned int \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, unsigned int \hyperlink{_u_t_message_8h_0a3c0b351ab09281b662a9ff4f900a53}{flags})
+\item 
+\hyperlink{class_gr_texture_cube_d703eec85745ee86d33cc30c54e99496}{GrTextureCube} (const \hyperlink{class_u_path}{UPath} \&\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, const \hyperlink{class_u_path}{UPath} $\ast$$\ast$images, \hyperlink{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c}{GrTextureBase::EFORMAT} \hyperlink{glext__bak_8h_e2d3db041c6004a67047659b42f73a44}{format}, unsigned int \hyperlink{_u_t_message_8h_0a3c0b351ab09281b662a9ff4f900a53}{flags}, bool cacheImages)
+\item 
+\hyperlink{class_gr_texture_cube_6721b847573cbeb2ad4ec7fc9d358329}{GrTextureCube} (const \hyperlink{class_u_path}{UPath} \&\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, \hyperlink{class_gr_image}{GrImage} $\ast$$\ast$images, \hyperlink{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c}{GrTextureBase::EFORMAT} \hyperlink{glext__bak_8h_e2d3db041c6004a67047659b42f73a44}{format}, unsigned int \hyperlink{_u_t_message_8h_0a3c0b351ab09281b662a9ff4f900a53}{flags})
+\item 
+\hyperlink{class_gr_texture_cube_db0024c06cac0f1e5cd6cbd6ba893e77}{$\sim$GrTextureCube} ()
+\item 
+unsigned int \hyperlink{class_gr_texture_cube_8b80ffcf02983fb848a70e12d31c07fa}{GetDim} () const 
+\item 
+void \hyperlink{class_gr_texture_cube_83627920cbb16d0bd7a2f9821c0125d1}{BindToFramebuffer} (unsigned int \hyperlink{glext__bak_8h_d8f97111cc6514af5f352219d1cceb40}{attachment}, \hyperlink{class_gr_texture_cube_49c6f83c73520edfce04f4eb5dcfe6a0}{ECUBEFACE} cubeFace)
+\end{CompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+static bool \hyperlink{class_gr_texture_cube_4b60a3b45e856404c29a5a702656f9d0}{IsValidImageSet} (\hyperlink{class_gr_image}{GrImage} $\ast$$\ast$images)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 20 of file GrTextureCube.h.
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_gr_texture_cube_49c6f83c73520edfce04f4eb5dcfe6a0}{
+\index{GrTextureCube@{GrTextureCube}!ECUBEFACE@{ECUBEFACE}}
+\index{ECUBEFACE@{ECUBEFACE}!GrTextureCube@{GrTextureCube}}
+\subsubsection[{ECUBEFACE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GrTextureCube::ECUBEFACE}}}
+\label{class_gr_texture_cube_49c6f83c73520edfce04f4eb5dcfe6a0}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{CF\_\-POSITIVEX@{CF\_\-POSITIVEX}!GrTextureCube@{GrTextureCube}}\index{GrTextureCube@{GrTextureCube}!CF\_\-POSITIVEX@{CF\_\-POSITIVEX}}\item[{\em 
+\hypertarget{class_gr_texture_cube_49c6f83c73520edfce04f4eb5dcfe6a08a94a7e78d62ffde00db8ad91b03b760}{
+CF\_\-POSITIVEX}
+\label{class_gr_texture_cube_49c6f83c73520edfce04f4eb5dcfe6a08a94a7e78d62ffde00db8ad91b03b760}
+}]\index{CF\_\-NEGATIVEX@{CF\_\-NEGATIVEX}!GrTextureCube@{GrTextureCube}}\index{GrTextureCube@{GrTextureCube}!CF\_\-NEGATIVEX@{CF\_\-NEGATIVEX}}\item[{\em 
+\hypertarget{class_gr_texture_cube_49c6f83c73520edfce04f4eb5dcfe6a0e4eea2e34ece4cddd0eac3d0ccbc0852}{
+CF\_\-NEGATIVEX}
+\label{class_gr_texture_cube_49c6f83c73520edfce04f4eb5dcfe6a0e4eea2e34ece4cddd0eac3d0ccbc0852}
+}]\index{CF\_\-POSITIVEY@{CF\_\-POSITIVEY}!GrTextureCube@{GrTextureCube}}\index{GrTextureCube@{GrTextureCube}!CF\_\-POSITIVEY@{CF\_\-POSITIVEY}}\item[{\em 
+\hypertarget{class_gr_texture_cube_49c6f83c73520edfce04f4eb5dcfe6a052e05dd6004cdcc6986c5d3264aef90e}{
+CF\_\-POSITIVEY}
+\label{class_gr_texture_cube_49c6f83c73520edfce04f4eb5dcfe6a052e05dd6004cdcc6986c5d3264aef90e}
+}]\index{CF\_\-NEGATIVEY@{CF\_\-NEGATIVEY}!GrTextureCube@{GrTextureCube}}\index{GrTextureCube@{GrTextureCube}!CF\_\-NEGATIVEY@{CF\_\-NEGATIVEY}}\item[{\em 
+\hypertarget{class_gr_texture_cube_49c6f83c73520edfce04f4eb5dcfe6a01dbd31dcc4e3ff4399f07b14447516ae}{
+CF\_\-NEGATIVEY}
+\label{class_gr_texture_cube_49c6f83c73520edfce04f4eb5dcfe6a01dbd31dcc4e3ff4399f07b14447516ae}
+}]\index{CF\_\-POSITIVEZ@{CF\_\-POSITIVEZ}!GrTextureCube@{GrTextureCube}}\index{GrTextureCube@{GrTextureCube}!CF\_\-POSITIVEZ@{CF\_\-POSITIVEZ}}\item[{\em 
+\hypertarget{class_gr_texture_cube_49c6f83c73520edfce04f4eb5dcfe6a06d9e4198396a007bbbddeba12443f6ba}{
+CF\_\-POSITIVEZ}
+\label{class_gr_texture_cube_49c6f83c73520edfce04f4eb5dcfe6a06d9e4198396a007bbbddeba12443f6ba}
+}]\index{CF\_\-NEGATIVEZ@{CF\_\-NEGATIVEZ}!GrTextureCube@{GrTextureCube}}\index{GrTextureCube@{GrTextureCube}!CF\_\-NEGATIVEZ@{CF\_\-NEGATIVEZ}}\item[{\em 
+\hypertarget{class_gr_texture_cube_49c6f83c73520edfce04f4eb5dcfe6a05114dcd5206ee6bfbb45bf919dabb061}{
+CF\_\-NEGATIVEZ}
+\label{class_gr_texture_cube_49c6f83c73520edfce04f4eb5dcfe6a05114dcd5206ee6bfbb45bf919dabb061}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 23 of file GrTextureCube.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_texture_cube_8668abef3149469fe1680350e56d194a}{
+\index{GrTextureCube@{GrTextureCube}!GrTextureCube@{GrTextureCube}}
+\index{GrTextureCube@{GrTextureCube}!GrTextureCube@{GrTextureCube}}
+\subsubsection[{GrTextureCube}]{\setlength{\rightskip}{0pt plus 5cm}GrTextureCube::GrTextureCube (const {\bf UPath} \& {\em name}, \/  {\bf GrTextureBase::EFORMAT} {\em format}, \/  unsigned int {\em width}, \/  unsigned int {\em flags})}}
+\label{class_gr_texture_cube_8668abef3149469fe1680350e56d194a}
+
+
+
+
+Definition at line 38 of file GrTextureCube.cpp.\hypertarget{class_gr_texture_cube_d703eec85745ee86d33cc30c54e99496}{
+\index{GrTextureCube@{GrTextureCube}!GrTextureCube@{GrTextureCube}}
+\index{GrTextureCube@{GrTextureCube}!GrTextureCube@{GrTextureCube}}
+\subsubsection[{GrTextureCube}]{\setlength{\rightskip}{0pt plus 5cm}GrTextureCube::GrTextureCube (const {\bf UPath} \& {\em name}, \/  const {\bf UPath} $\ast$$\ast$ {\em images}, \/  {\bf GrTextureBase::EFORMAT} {\em format}, \/  unsigned int {\em flags}, \/  bool {\em cacheImages})}}
+\label{class_gr_texture_cube_d703eec85745ee86d33cc30c54e99496}
+
+
+
+
+Definition at line 49 of file GrTextureCube.cpp.\hypertarget{class_gr_texture_cube_6721b847573cbeb2ad4ec7fc9d358329}{
+\index{GrTextureCube@{GrTextureCube}!GrTextureCube@{GrTextureCube}}
+\index{GrTextureCube@{GrTextureCube}!GrTextureCube@{GrTextureCube}}
+\subsubsection[{GrTextureCube}]{\setlength{\rightskip}{0pt plus 5cm}GrTextureCube::GrTextureCube (const {\bf UPath} \& {\em name}, \/  {\bf GrImage} $\ast$$\ast$ {\em images}, \/  {\bf GrTextureBase::EFORMAT} {\em format}, \/  unsigned int {\em flags})}}
+\label{class_gr_texture_cube_6721b847573cbeb2ad4ec7fc9d358329}
+
+
+
+
+Definition at line 75 of file GrTextureCube.cpp.\hypertarget{class_gr_texture_cube_db0024c06cac0f1e5cd6cbd6ba893e77}{
+\index{GrTextureCube@{GrTextureCube}!$\sim$GrTextureCube@{$\sim$GrTextureCube}}
+\index{$\sim$GrTextureCube@{$\sim$GrTextureCube}!GrTextureCube@{GrTextureCube}}
+\subsubsection[{$\sim$GrTextureCube}]{\setlength{\rightskip}{0pt plus 5cm}GrTextureCube::$\sim$GrTextureCube ()}}
+\label{class_gr_texture_cube_db0024c06cac0f1e5cd6cbd6ba893e77}
+
+
+
+
+Definition at line 97 of file GrTextureCube.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_texture_cube_83627920cbb16d0bd7a2f9821c0125d1}{
+\index{GrTextureCube@{GrTextureCube}!BindToFramebuffer@{BindToFramebuffer}}
+\index{BindToFramebuffer@{BindToFramebuffer}!GrTextureCube@{GrTextureCube}}
+\subsubsection[{BindToFramebuffer}]{\setlength{\rightskip}{0pt plus 5cm}void GrTextureCube::BindToFramebuffer (unsigned int {\em attachment}, \/  {\bf ECUBEFACE} {\em cubeFace})}}
+\label{class_gr_texture_cube_83627920cbb16d0bd7a2f9821c0125d1}
+
+
+
+
+Definition at line 140 of file GrTextureCube.cpp.\hypertarget{class_gr_texture_cube_8b80ffcf02983fb848a70e12d31c07fa}{
+\index{GrTextureCube@{GrTextureCube}!GetDim@{GetDim}}
+\index{GetDim@{GetDim}!GrTextureCube@{GrTextureCube}}
+\subsubsection[{GetDim}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrTextureCube::GetDim () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_texture_cube_8b80ffcf02983fb848a70e12d31c07fa}
+
+
+
+
+Definition at line 46 of file GrTextureCube.h.\hypertarget{class_gr_texture_cube_4b60a3b45e856404c29a5a702656f9d0}{
+\index{GrTextureCube@{GrTextureCube}!IsValidImageSet@{IsValidImageSet}}
+\index{IsValidImageSet@{IsValidImageSet}!GrTextureCube@{GrTextureCube}}
+\subsubsection[{IsValidImageSet}]{\setlength{\rightskip}{0pt plus 5cm}bool GrTextureCube::IsValidImageSet ({\bf GrImage} $\ast$$\ast$ {\em images})\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_gr_texture_cube_4b60a3b45e856404c29a5a702656f9d0}
+
+
+
+
+Definition at line 111 of file GrTextureCube.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_texture_cube_8h}{GrTextureCube.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_texture_cube_8cpp}{GrTextureCube.cpp}\end{CompactItemize}

@@ -1,0 +1,240 @@
+\hypertarget{class_u_huffman}{
+\section{UHuffman Class Reference}
+\label{class_u_huffman}\index{UHuffman@{UHuffman}}
+}
+{\tt \#include $<$UHuffman.h$>$}
+
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+struct \textbf{SDicEntry}
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_u_huffman_1f62da0268315dfc2699b2998bfbdfd4}{UHuffman} ()
+\item 
+\hyperlink{class_u_huffman_551d4efdc547d787e21ce00df8d9620b}{$\sim$UHuffman} ()
+\item 
+unsigned int \hyperlink{class_u_huffman_b67d54176bba1e872cbd7f5cf1f7da97}{Compress} (unsigned char $\ast$result, unsigned char $\ast$codeLengths, const void $\ast$srcData, unsigned int srcSize)
+\item 
+unsigned int \hyperlink{class_u_huffman_346391382b61c9da44b8895bcd2ccf6b}{Decompress} (unsigned char $\ast$result, const unsigned char $\ast$codeLengths, const void $\ast$compressedData, unsigned int srcBits)
+\item 
+void \hyperlink{class_u_huffman_bb7d56fc7fe5ac6c8176dcec7e33fb16}{CalcCodeLengths} (unsigned char $\ast$codeLengths, const unsigned char $\ast$srcData, unsigned int srcSize)
+\item 
+void \hyperlink{class_u_huffman_21fec644cfad4256adf8a14564945467}{CalcCodeLengths} (unsigned char $\ast$codeLengths, const unsigned int $\ast$scores)
+\item 
+void \hyperlink{class_u_huffman_40bee73e851e01e05190575b1e11e4bd}{SetCompStream} (unsigned char $\ast$compressedData, const unsigned char $\ast$codeLengths)
+\item 
+void \hyperlink{class_u_huffman_9597786e7e70571b8d790728380b71ac}{SetCompCodeLengths} (const unsigned char $\ast$codeLengths)
+\item 
+void \hyperlink{class_u_huffman_9787e1690a35cb0338b9225a2699b01e}{SetCompStreamFast} (unsigned char $\ast$compressedData)
+\item 
+unsigned int \hyperlink{class_u_huffman_6983a5b88a551be8221fcd69b1dfa6b7}{GetValueLen} (unsigned char \hyperlink{glext__bak_8h_6a4f8a1a444e9080b297963b3db29fe0}{value}) const 
+\item 
+void \hyperlink{class_u_huffman_0eda249aa726754bc2c936f81d38dd7f}{WriteValue} (unsigned char \hyperlink{glext__bak_8h_6a4f8a1a444e9080b297963b3db29fe0}{value})
+\item 
+unsigned int \hyperlink{class_u_huffman_516c71caadbb3ae69cff3d66453c140f}{FinishWriting} ()
+\item 
+void \hyperlink{class_u_huffman_4724b209df72141b8f40cdff1ce67c0e}{SetDecompStream} (const unsigned char $\ast$codeLengths, const unsigned char $\ast$compressedData, unsigned int srcBitCount)
+\item 
+void \hyperlink{class_u_huffman_96d45824c8002b45be38b9cf6ce36e02}{SetDecompCodeLengths} (const unsigned char $\ast$codeLengths)
+\item 
+void \hyperlink{class_u_huffman_bd37ac1f5c41a6e288d6068ad8e6bbf4}{BuildDecompFastTables} (unsigned char $\ast$symTable, unsigned char $\ast$lenTable, unsigned char $\ast$rareSymTable, unsigned short $\ast$maxCodeTable, unsigned char $\ast$rareCodeOffsetTable, const unsigned char $\ast$codeLengths)
+\item 
+void \hyperlink{class_u_huffman_3b8362f5138b30083836f777baa7e792}{SetDecompFastTables} (const unsigned char $\ast$symTable, const unsigned char $\ast$lenTable, const unsigned char $\ast$rareSymTable, const unsigned short $\ast$maxCodeTable, const unsigned char $\ast$rareCodeOffsetTable)
+\item 
+void \hyperlink{class_u_huffman_a6ec33a164afdf0b2dc7809a44603953}{SetDecompStreamFast} (const unsigned char $\ast$compressedData, unsigned int srcBitCount)
+\item 
+unsigned char \hyperlink{class_u_huffman_c7ca2b479e621b555778358d6b02aa11}{ReadValue} ()
+\item 
+bool \hyperlink{class_u_huffman_7286b963c43a2fa051e7a9956dc54e67}{IsReadFinished} ()
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 19 of file UHuffman.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_u_huffman_1f62da0268315dfc2699b2998bfbdfd4}{
+\index{UHuffman@{UHuffman}!UHuffman@{UHuffman}}
+\index{UHuffman@{UHuffman}!UHuffman@{UHuffman}}
+\subsubsection[{UHuffman}]{\setlength{\rightskip}{0pt plus 5cm}UHuffman::UHuffman ()}}
+\label{class_u_huffman_1f62da0268315dfc2699b2998bfbdfd4}
+
+
+
+
+Definition at line 84 of file UHuffman.cpp.\hypertarget{class_u_huffman_551d4efdc547d787e21ce00df8d9620b}{
+\index{UHuffman@{UHuffman}!$\sim$UHuffman@{$\sim$UHuffman}}
+\index{$\sim$UHuffman@{$\sim$UHuffman}!UHuffman@{UHuffman}}
+\subsubsection[{$\sim$UHuffman}]{\setlength{\rightskip}{0pt plus 5cm}UHuffman::$\sim$UHuffman ()}}
+\label{class_u_huffman_551d4efdc547d787e21ce00df8d9620b}
+
+
+
+
+Definition at line 92 of file UHuffman.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_u_huffman_bd37ac1f5c41a6e288d6068ad8e6bbf4}{
+\index{UHuffman@{UHuffman}!BuildDecompFastTables@{BuildDecompFastTables}}
+\index{BuildDecompFastTables@{BuildDecompFastTables}!UHuffman@{UHuffman}}
+\subsubsection[{BuildDecompFastTables}]{\setlength{\rightskip}{0pt plus 5cm}void UHuffman::BuildDecompFastTables (unsigned char $\ast$ {\em symTable}, \/  unsigned char $\ast$ {\em lenTable}, \/  unsigned char $\ast$ {\em rareSymTable}, \/  unsigned short $\ast$ {\em maxCodeTable}, \/  unsigned char $\ast$ {\em rareCodeOffsetTable}, \/  const unsigned char $\ast$ {\em codeLengths})}}
+\label{class_u_huffman_bd37ac1f5c41a6e288d6068ad8e6bbf4}
+
+
+
+
+Definition at line 329 of file UHuffman.cpp.\hypertarget{class_u_huffman_21fec644cfad4256adf8a14564945467}{
+\index{UHuffman@{UHuffman}!CalcCodeLengths@{CalcCodeLengths}}
+\index{CalcCodeLengths@{CalcCodeLengths}!UHuffman@{UHuffman}}
+\subsubsection[{CalcCodeLengths}]{\setlength{\rightskip}{0pt plus 5cm}void UHuffman::CalcCodeLengths (unsigned char $\ast$ {\em codeLengths}, \/  const unsigned int $\ast$ {\em scores})}}
+\label{class_u_huffman_21fec644cfad4256adf8a14564945467}
+
+
+
+
+Definition at line 162 of file UHuffman.cpp.\hypertarget{class_u_huffman_bb7d56fc7fe5ac6c8176dcec7e33fb16}{
+\index{UHuffman@{UHuffman}!CalcCodeLengths@{CalcCodeLengths}}
+\index{CalcCodeLengths@{CalcCodeLengths}!UHuffman@{UHuffman}}
+\subsubsection[{CalcCodeLengths}]{\setlength{\rightskip}{0pt plus 5cm}void UHuffman::CalcCodeLengths (unsigned char $\ast$ {\em codeLengths}, \/  const unsigned char $\ast$ {\em srcData}, \/  unsigned int {\em srcSize})}}
+\label{class_u_huffman_bb7d56fc7fe5ac6c8176dcec7e33fb16}
+
+
+
+
+Definition at line 143 of file UHuffman.cpp.\hypertarget{class_u_huffman_b67d54176bba1e872cbd7f5cf1f7da97}{
+\index{UHuffman@{UHuffman}!Compress@{Compress}}
+\index{Compress@{Compress}!UHuffman@{UHuffman}}
+\subsubsection[{Compress}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int UHuffman::Compress (unsigned char $\ast$ {\em result}, \/  unsigned char $\ast$ {\em codeLengths}, \/  const void $\ast$ {\em srcData}, \/  unsigned int {\em srcSize})}}
+\label{class_u_huffman_b67d54176bba1e872cbd7f5cf1f7da97}
+
+
+
+
+Definition at line 104 of file UHuffman.cpp.\hypertarget{class_u_huffman_346391382b61c9da44b8895bcd2ccf6b}{
+\index{UHuffman@{UHuffman}!Decompress@{Decompress}}
+\index{Decompress@{Decompress}!UHuffman@{UHuffman}}
+\subsubsection[{Decompress}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int UHuffman::Decompress (unsigned char $\ast$ {\em result}, \/  const unsigned char $\ast$ {\em codeLengths}, \/  const void $\ast$ {\em compressedData}, \/  unsigned int {\em srcBits})}}
+\label{class_u_huffman_346391382b61c9da44b8895bcd2ccf6b}
+
+
+
+
+Definition at line 126 of file UHuffman.cpp.\hypertarget{class_u_huffman_516c71caadbb3ae69cff3d66453c140f}{
+\index{UHuffman@{UHuffman}!FinishWriting@{FinishWriting}}
+\index{FinishWriting@{FinishWriting}!UHuffman@{UHuffman}}
+\subsubsection[{FinishWriting}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int UHuffman::FinishWriting ()}}
+\label{class_u_huffman_516c71caadbb3ae69cff3d66453c140f}
+
+
+
+
+Definition at line 298 of file UHuffman.cpp.\hypertarget{class_u_huffman_6983a5b88a551be8221fcd69b1dfa6b7}{
+\index{UHuffman@{UHuffman}!GetValueLen@{GetValueLen}}
+\index{GetValueLen@{GetValueLen}!UHuffman@{UHuffman}}
+\subsubsection[{GetValueLen}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int UHuffman::GetValueLen (unsigned char {\em value}) const}}
+\label{class_u_huffman_6983a5b88a551be8221fcd69b1dfa6b7}
+
+
+
+
+Definition at line 283 of file UHuffman.cpp.\hypertarget{class_u_huffman_7286b963c43a2fa051e7a9956dc54e67}{
+\index{UHuffman@{UHuffman}!IsReadFinished@{IsReadFinished}}
+\index{IsReadFinished@{IsReadFinished}!UHuffman@{UHuffman}}
+\subsubsection[{IsReadFinished}]{\setlength{\rightskip}{0pt plus 5cm}bool UHuffman::IsReadFinished ()}}
+\label{class_u_huffman_7286b963c43a2fa051e7a9956dc54e67}
+
+
+
+
+Definition at line 406 of file UHuffman.cpp.\hypertarget{class_u_huffman_c7ca2b479e621b555778358d6b02aa11}{
+\index{UHuffman@{UHuffman}!ReadValue@{ReadValue}}
+\index{ReadValue@{ReadValue}!UHuffman@{UHuffman}}
+\subsubsection[{ReadValue}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char UHuffman::ReadValue ()}}
+\label{class_u_huffman_c7ca2b479e621b555778358d6b02aa11}
+
+
+
+
+Definition at line 367 of file UHuffman.cpp.\hypertarget{class_u_huffman_9597786e7e70571b8d790728380b71ac}{
+\index{UHuffman@{UHuffman}!SetCompCodeLengths@{SetCompCodeLengths}}
+\index{SetCompCodeLengths@{SetCompCodeLengths}!UHuffman@{UHuffman}}
+\subsubsection[{SetCompCodeLengths}]{\setlength{\rightskip}{0pt plus 5cm}void UHuffman::SetCompCodeLengths (const unsigned char $\ast$ {\em codeLengths})}}
+\label{class_u_huffman_9597786e7e70571b8d790728380b71ac}
+
+
+
+
+Definition at line 267 of file UHuffman.cpp.\hypertarget{class_u_huffman_40bee73e851e01e05190575b1e11e4bd}{
+\index{UHuffman@{UHuffman}!SetCompStream@{SetCompStream}}
+\index{SetCompStream@{SetCompStream}!UHuffman@{UHuffman}}
+\subsubsection[{SetCompStream}]{\setlength{\rightskip}{0pt plus 5cm}void UHuffman::SetCompStream (unsigned char $\ast$ {\em compressedData}, \/  const unsigned char $\ast$ {\em codeLengths})}}
+\label{class_u_huffman_40bee73e851e01e05190575b1e11e4bd}
+
+
+
+
+Definition at line 256 of file UHuffman.cpp.\hypertarget{class_u_huffman_9787e1690a35cb0338b9225a2699b01e}{
+\index{UHuffman@{UHuffman}!SetCompStreamFast@{SetCompStreamFast}}
+\index{SetCompStreamFast@{SetCompStreamFast}!UHuffman@{UHuffman}}
+\subsubsection[{SetCompStreamFast}]{\setlength{\rightskip}{0pt plus 5cm}void UHuffman::SetCompStreamFast (unsigned char $\ast$ {\em compressedData})}}
+\label{class_u_huffman_9787e1690a35cb0338b9225a2699b01e}
+
+
+
+
+Definition at line 275 of file UHuffman.cpp.\hypertarget{class_u_huffman_96d45824c8002b45be38b9cf6ce36e02}{
+\index{UHuffman@{UHuffman}!SetDecompCodeLengths@{SetDecompCodeLengths}}
+\index{SetDecompCodeLengths@{SetDecompCodeLengths}!UHuffman@{UHuffman}}
+\subsubsection[{SetDecompCodeLengths}]{\setlength{\rightskip}{0pt plus 5cm}void UHuffman::SetDecompCodeLengths (const unsigned char $\ast$ {\em codeLengths})}}
+\label{class_u_huffman_96d45824c8002b45be38b9cf6ce36e02}
+
+
+
+
+Definition at line 321 of file UHuffman.cpp.\hypertarget{class_u_huffman_3b8362f5138b30083836f777baa7e792}{
+\index{UHuffman@{UHuffman}!SetDecompFastTables@{SetDecompFastTables}}
+\index{SetDecompFastTables@{SetDecompFastTables}!UHuffman@{UHuffman}}
+\subsubsection[{SetDecompFastTables}]{\setlength{\rightskip}{0pt plus 5cm}void UHuffman::SetDecompFastTables (const unsigned char $\ast$ {\em symTable}, \/  const unsigned char $\ast$ {\em lenTable}, \/  const unsigned char $\ast$ {\em rareSymTable}, \/  const unsigned short $\ast$ {\em maxCodeTable}, \/  const unsigned char $\ast$ {\em rareCodeOffsetTable})}}
+\label{class_u_huffman_3b8362f5138b30083836f777baa7e792}
+
+
+
+
+Definition at line 346 of file UHuffman.cpp.\hypertarget{class_u_huffman_4724b209df72141b8f40cdff1ce67c0e}{
+\index{UHuffman@{UHuffman}!SetDecompStream@{SetDecompStream}}
+\index{SetDecompStream@{SetDecompStream}!UHuffman@{UHuffman}}
+\subsubsection[{SetDecompStream}]{\setlength{\rightskip}{0pt plus 5cm}void UHuffman::SetDecompStream (const unsigned char $\ast$ {\em codeLengths}, \/  const unsigned char $\ast$ {\em compressedData}, \/  unsigned int {\em srcBitCount})}}
+\label{class_u_huffman_4724b209df72141b8f40cdff1ce67c0e}
+
+
+
+
+Definition at line 309 of file UHuffman.cpp.\hypertarget{class_u_huffman_a6ec33a164afdf0b2dc7809a44603953}{
+\index{UHuffman@{UHuffman}!SetDecompStreamFast@{SetDecompStreamFast}}
+\index{SetDecompStreamFast@{SetDecompStreamFast}!UHuffman@{UHuffman}}
+\subsubsection[{SetDecompStreamFast}]{\setlength{\rightskip}{0pt plus 5cm}void UHuffman::SetDecompStreamFast (const unsigned char $\ast$ {\em compressedData}, \/  unsigned int {\em srcBitCount})}}
+\label{class_u_huffman_a6ec33a164afdf0b2dc7809a44603953}
+
+
+
+
+Definition at line 360 of file UHuffman.cpp.\hypertarget{class_u_huffman_0eda249aa726754bc2c936f81d38dd7f}{
+\index{UHuffman@{UHuffman}!WriteValue@{WriteValue}}
+\index{WriteValue@{WriteValue}!UHuffman@{UHuffman}}
+\subsubsection[{WriteValue}]{\setlength{\rightskip}{0pt plus 5cm}void UHuffman::WriteValue (unsigned char {\em value})}}
+\label{class_u_huffman_0eda249aa726754bc2c936f81d38dd7f}
+
+
+
+
+Definition at line 290 of file UHuffman.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_u_huffman_8h}{UHuffman.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_u_huffman_8cpp}{UHuffman.cpp}\end{CompactItemize}

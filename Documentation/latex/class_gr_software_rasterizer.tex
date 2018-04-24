@@ -1,0 +1,248 @@
+\hypertarget{class_gr_software_rasterizer}{
+\section{GrSoftwareRasterizer Class Reference}
+\label{class_gr_software_rasterizer}\index{GrSoftwareRasterizer@{GrSoftwareRasterizer}}
+}
+{\tt \#include $<$GrSoftwareRasterizer.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+enum \{ \hyperlink{class_gr_software_rasterizer_b42d432567917cc2b4bc57cd96e5d7e349dc9744965746cb773cd7f159cb304d}{MAX\_\-RENDER\_\-TARGET\_\-COUNT} =  8
+ \}
+\item 
+typedef void($\ast$ \hyperlink{class_gr_software_rasterizer_04030d2fb613d917866570b1150e208b}{VertexProgram} )(\hyperlink{struct_s_vec4}{SVec4} \&output, \hyperlink{struct_s_vec4}{SVec4} $\ast$varying, const \hyperlink{struct_s_vec4}{SVec4} $\ast$vertexConstants, const \hyperlink{struct_s_polygon_vertex}{SPolygonVertex} \&vertex)
+\item 
+typedef void($\ast$ \hyperlink{class_gr_software_rasterizer_391d569a4a93dabc37cdc787f11c2e9a}{FragmentProgram} )(unsigned char $\ast$$\ast$output, unsigned int $\ast$outputBPP, const \hyperlink{struct_s_vec4}{SVec4} $\ast$fragmentConstants, const \hyperlink{struct_s_vec4}{SVec4} $\ast$varying, const \hyperlink{struct_s_vec4}{SVec4} $\ast$gradX, const \hyperlink{struct_s_vec4}{SVec4} $\ast$gradY, \hyperlink{class_gr_software_sampler}{GrSoftwareSampler} $\ast$\hyperlink{glext__bak_8h_76454c03d9d5c83988eddfce6abb7059}{textures})
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_software_rasterizer_4152bc0ee54f65d67451793cace04326}{GrSoftwareRasterizer} ()
+\item 
+\hyperlink{class_gr_software_rasterizer_374f835befa73886edbfa0888635f636}{$\sim$GrSoftwareRasterizer} ()
+\item 
+void \hyperlink{class_gr_software_rasterizer_e00f004845e02489d39864fbfb306435}{SetRenderLastPixel} (bool enabled)
+\item 
+void \hyperlink{class_gr_software_rasterizer_a5d85f57b17b61072eaf05f6f6d56f98}{SetRenderTarget} (unsigned int targetIdx, \hyperlink{class_gr_software_r_t_base}{GrSoftwareRTBase} $\ast$\hyperlink{glext_8h_f9d0cbbbeb7414e786c41899e5a856d7}{target})
+\item 
+void \hyperlink{class_gr_software_rasterizer_2a56d53611c7f50e13de3fdbd3b6c0a3}{SetVertexProgram} (\hyperlink{class_gr_software_rasterizer_04030d2fb613d917866570b1150e208b}{VertexProgram} vertexProg)
+\item 
+void \hyperlink{class_gr_software_rasterizer_660384a042b72d1f2e1235a938acc23b}{SetFragmentProgram} (\hyperlink{class_gr_software_rasterizer_391d569a4a93dabc37cdc787f11c2e9a}{FragmentProgram} fragmentProg)
+\item 
+void \hyperlink{class_gr_software_rasterizer_0c67a108c361c1b57fd133e2a2b2819f}{SetVertexConstant} (unsigned int idx, const \hyperlink{struct_s_vec4}{SVec4} \&\hyperlink{glext__bak_8h_6a4f8a1a444e9080b297963b3db29fe0}{value})
+\item 
+void \hyperlink{class_gr_software_rasterizer_ce6f2dcf3bffc89ecbfb4b12a185f06d}{SetVertexConstants} (unsigned int idx, const \hyperlink{class_m_mat4x4}{MMat4x4} \&\hyperlink{glext__bak_8h_6a4f8a1a444e9080b297963b3db29fe0}{value})
+\item 
+void \hyperlink{class_gr_software_rasterizer_cddd37af11129fa007df31f439e683cc}{SetFragmentConstant} (unsigned int idx, const \hyperlink{struct_s_vec4}{SVec4} \&\hyperlink{glext__bak_8h_6a4f8a1a444e9080b297963b3db29fe0}{value})
+\item 
+void \hyperlink{class_gr_software_rasterizer_1ed18c92ae0225a77954ec6371b74401}{SetFragmentConstants} (unsigned int idx, const \hyperlink{class_m_mat4x4}{MMat4x4} \&\hyperlink{glext__bak_8h_6a4f8a1a444e9080b297963b3db29fe0}{value})
+\item 
+void \hyperlink{class_gr_software_rasterizer_bd64403e6d390fcc8b1c1b24ccdbd2e3}{SetViewportTransform} (const \hyperlink{struct_s_vec2}{SVec2} \&\hyperlink{glext__bak_8h_281421b881aa7a1266842b73a3bc7655}{scale}, const \hyperlink{struct_s_vec2}{SVec2} \&\hyperlink{glext__bak_8h_a782f3aea23e3c30029c811241dc2c82}{offset})
+\item 
+void \hyperlink{class_gr_software_rasterizer_51810eee95ddc746a8a9021773ff6c1b}{SetSamplerTexture} (unsigned int idx, \hyperlink{class_gr_image}{GrImage} $\ast$\hyperlink{glext__bak_8h_8943555672bc4b8056204eb92329cafa}{image})
+\item 
+void \hyperlink{class_gr_software_rasterizer_e7b4972331ce39e47a82e4c9c19b584f}{SetSamplerColor} (unsigned int idx, unsigned \hyperlink{glext_8h_3ea846f998d64f079b86052b6c4193a8}{color})
+\item 
+void \hyperlink{class_gr_software_rasterizer_af148346dfc9a809ba804df800965bfa}{RenderPolygon} (const \hyperlink{class_gr_polygon}{GrPolygon} \&polygon)
+\item 
+void \hyperlink{class_gr_software_rasterizer_51c764b2c87c4bce658c9e57d772fb12}{RenderPolygons} (const std::vector$<$ \hyperlink{class_gr_polygon}{GrPolygon} $\ast$ $>$ \&polygons)
+\item 
+void \hyperlink{class_gr_software_rasterizer_88d35958cb87737f1d82a14ef513b10a}{RenderTriangleList} (const \hyperlink{struct_s_polygon_vertex}{SPolygonVertex} $\ast$vertices, unsigned int triCount)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 24 of file GrSoftwareRasterizer.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_gr_software_rasterizer_391d569a4a93dabc37cdc787f11c2e9a}{
+\index{GrSoftwareRasterizer@{GrSoftwareRasterizer}!FragmentProgram@{FragmentProgram}}
+\index{FragmentProgram@{FragmentProgram}!GrSoftwareRasterizer@{GrSoftwareRasterizer}}
+\subsubsection[{FragmentProgram}]{\setlength{\rightskip}{0pt plus 5cm}typedef void( $\ast$ {\bf GrSoftwareRasterizer::FragmentProgram})(unsigned char $\ast$$\ast$output, unsigned int $\ast$outputBPP, const {\bf SVec4} $\ast$fragmentConstants, const {\bf SVec4} $\ast$varying, const {\bf SVec4} $\ast$gradX, const {\bf SVec4} $\ast$gradY, {\bf GrSoftwareSampler} $\ast${\bf textures})}}
+\label{class_gr_software_rasterizer_391d569a4a93dabc37cdc787f11c2e9a}
+
+
+\hypertarget{class_gr_software_rasterizer_04030d2fb613d917866570b1150e208b}{
+\index{GrSoftwareRasterizer@{GrSoftwareRasterizer}!VertexProgram@{VertexProgram}}
+\index{VertexProgram@{VertexProgram}!GrSoftwareRasterizer@{GrSoftwareRasterizer}}
+\subsubsection[{VertexProgram}]{\setlength{\rightskip}{0pt plus 5cm}typedef void( $\ast$ {\bf GrSoftwareRasterizer::VertexProgram})({\bf SVec4} \&output, {\bf SVec4} $\ast$varying, const {\bf SVec4} $\ast$vertexConstants, const {\bf SPolygonVertex} \&vertex)}}
+\label{class_gr_software_rasterizer_04030d2fb613d917866570b1150e208b}
+
+
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_gr_software_rasterizer_b42d432567917cc2b4bc57cd96e5d7e3}{
+\subsubsection[{"@7}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}
+\label{class_gr_software_rasterizer_b42d432567917cc2b4bc57cd96e5d7e3}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{MAX\_\-RENDER\_\-TARGET\_\-COUNT@{MAX\_\-RENDER\_\-TARGET\_\-COUNT}!GrSoftwareRasterizer@{GrSoftwareRasterizer}}\index{GrSoftwareRasterizer@{GrSoftwareRasterizer}!MAX\_\-RENDER\_\-TARGET\_\-COUNT@{MAX\_\-RENDER\_\-TARGET\_\-COUNT}}\item[{\em 
+\hypertarget{class_gr_software_rasterizer_b42d432567917cc2b4bc57cd96e5d7e349dc9744965746cb773cd7f159cb304d}{
+MAX\_\-RENDER\_\-TARGET\_\-COUNT}
+\label{class_gr_software_rasterizer_b42d432567917cc2b4bc57cd96e5d7e349dc9744965746cb773cd7f159cb304d}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 31 of file GrSoftwareRasterizer.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_software_rasterizer_4152bc0ee54f65d67451793cace04326}{
+\index{GrSoftwareRasterizer@{GrSoftwareRasterizer}!GrSoftwareRasterizer@{GrSoftwareRasterizer}}
+\index{GrSoftwareRasterizer@{GrSoftwareRasterizer}!GrSoftwareRasterizer@{GrSoftwareRasterizer}}
+\subsubsection[{GrSoftwareRasterizer}]{\setlength{\rightskip}{0pt plus 5cm}GrSoftwareRasterizer::GrSoftwareRasterizer ()}}
+\label{class_gr_software_rasterizer_4152bc0ee54f65d67451793cace04326}
+
+
+
+
+Definition at line 184 of file GrSoftwareRasterizer.cpp.\hypertarget{class_gr_software_rasterizer_374f835befa73886edbfa0888635f636}{
+\index{GrSoftwareRasterizer@{GrSoftwareRasterizer}!$\sim$GrSoftwareRasterizer@{$\sim$GrSoftwareRasterizer}}
+\index{$\sim$GrSoftwareRasterizer@{$\sim$GrSoftwareRasterizer}!GrSoftwareRasterizer@{GrSoftwareRasterizer}}
+\subsubsection[{$\sim$GrSoftwareRasterizer}]{\setlength{\rightskip}{0pt plus 5cm}GrSoftwareRasterizer::$\sim$GrSoftwareRasterizer ()}}
+\label{class_gr_software_rasterizer_374f835befa73886edbfa0888635f636}
+
+
+
+
+Definition at line 207 of file GrSoftwareRasterizer.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_software_rasterizer_af148346dfc9a809ba804df800965bfa}{
+\index{GrSoftwareRasterizer@{GrSoftwareRasterizer}!RenderPolygon@{RenderPolygon}}
+\index{RenderPolygon@{RenderPolygon}!GrSoftwareRasterizer@{GrSoftwareRasterizer}}
+\subsubsection[{RenderPolygon}]{\setlength{\rightskip}{0pt plus 5cm}void GrSoftwareRasterizer::RenderPolygon (const {\bf GrPolygon} \& {\em polygon})}}
+\label{class_gr_software_rasterizer_af148346dfc9a809ba804df800965bfa}
+
+
+
+
+Definition at line 351 of file GrSoftwareRasterizer.cpp.\hypertarget{class_gr_software_rasterizer_51c764b2c87c4bce658c9e57d772fb12}{
+\index{GrSoftwareRasterizer@{GrSoftwareRasterizer}!RenderPolygons@{RenderPolygons}}
+\index{RenderPolygons@{RenderPolygons}!GrSoftwareRasterizer@{GrSoftwareRasterizer}}
+\subsubsection[{RenderPolygons}]{\setlength{\rightskip}{0pt plus 5cm}void GrSoftwareRasterizer::RenderPolygons (const std::vector$<$ {\bf GrPolygon} $\ast$ $>$ \& {\em polygons})}}
+\label{class_gr_software_rasterizer_51c764b2c87c4bce658c9e57d772fb12}
+
+
+
+
+Definition at line 372 of file GrSoftwareRasterizer.cpp.\hypertarget{class_gr_software_rasterizer_88d35958cb87737f1d82a14ef513b10a}{
+\index{GrSoftwareRasterizer@{GrSoftwareRasterizer}!RenderTriangleList@{RenderTriangleList}}
+\index{RenderTriangleList@{RenderTriangleList}!GrSoftwareRasterizer@{GrSoftwareRasterizer}}
+\subsubsection[{RenderTriangleList}]{\setlength{\rightskip}{0pt plus 5cm}void GrSoftwareRasterizer::RenderTriangleList (const {\bf SPolygonVertex} $\ast$ {\em vertices}, \/  unsigned int {\em triCount})}}
+\label{class_gr_software_rasterizer_88d35958cb87737f1d82a14ef513b10a}
+
+
+
+
+Definition at line 411 of file GrSoftwareRasterizer.cpp.\hypertarget{class_gr_software_rasterizer_cddd37af11129fa007df31f439e683cc}{
+\index{GrSoftwareRasterizer@{GrSoftwareRasterizer}!SetFragmentConstant@{SetFragmentConstant}}
+\index{SetFragmentConstant@{SetFragmentConstant}!GrSoftwareRasterizer@{GrSoftwareRasterizer}}
+\subsubsection[{SetFragmentConstant}]{\setlength{\rightskip}{0pt plus 5cm}void GrSoftwareRasterizer::SetFragmentConstant (unsigned int {\em idx}, \/  const {\bf SVec4} \& {\em value})}}
+\label{class_gr_software_rasterizer_cddd37af11129fa007df31f439e683cc}
+
+
+
+
+Definition at line 305 of file GrSoftwareRasterizer.cpp.\hypertarget{class_gr_software_rasterizer_1ed18c92ae0225a77954ec6371b74401}{
+\index{GrSoftwareRasterizer@{GrSoftwareRasterizer}!SetFragmentConstants@{SetFragmentConstants}}
+\index{SetFragmentConstants@{SetFragmentConstants}!GrSoftwareRasterizer@{GrSoftwareRasterizer}}
+\subsubsection[{SetFragmentConstants}]{\setlength{\rightskip}{0pt plus 5cm}void GrSoftwareRasterizer::SetFragmentConstants (unsigned int {\em idx}, \/  const {\bf MMat4x4} \& {\em value})}}
+\label{class_gr_software_rasterizer_1ed18c92ae0225a77954ec6371b74401}
+
+
+
+
+Definition at line 313 of file GrSoftwareRasterizer.cpp.\hypertarget{class_gr_software_rasterizer_660384a042b72d1f2e1235a938acc23b}{
+\index{GrSoftwareRasterizer@{GrSoftwareRasterizer}!SetFragmentProgram@{SetFragmentProgram}}
+\index{SetFragmentProgram@{SetFragmentProgram}!GrSoftwareRasterizer@{GrSoftwareRasterizer}}
+\subsubsection[{SetFragmentProgram}]{\setlength{\rightskip}{0pt plus 5cm}void GrSoftwareRasterizer::SetFragmentProgram ({\bf FragmentProgram} {\em fragmentProg})}}
+\label{class_gr_software_rasterizer_660384a042b72d1f2e1235a938acc23b}
+
+
+
+
+Definition at line 275 of file GrSoftwareRasterizer.cpp.\hypertarget{class_gr_software_rasterizer_e00f004845e02489d39864fbfb306435}{
+\index{GrSoftwareRasterizer@{GrSoftwareRasterizer}!SetRenderLastPixel@{SetRenderLastPixel}}
+\index{SetRenderLastPixel@{SetRenderLastPixel}!GrSoftwareRasterizer@{GrSoftwareRasterizer}}
+\subsubsection[{SetRenderLastPixel}]{\setlength{\rightskip}{0pt plus 5cm}void GrSoftwareRasterizer::SetRenderLastPixel (bool {\em enabled})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_software_rasterizer_e00f004845e02489d39864fbfb306435}
+
+
+
+
+Definition at line 38 of file GrSoftwareRasterizer.h.\hypertarget{class_gr_software_rasterizer_a5d85f57b17b61072eaf05f6f6d56f98}{
+\index{GrSoftwareRasterizer@{GrSoftwareRasterizer}!SetRenderTarget@{SetRenderTarget}}
+\index{SetRenderTarget@{SetRenderTarget}!GrSoftwareRasterizer@{GrSoftwareRasterizer}}
+\subsubsection[{SetRenderTarget}]{\setlength{\rightskip}{0pt plus 5cm}void GrSoftwareRasterizer::SetRenderTarget (unsigned int {\em targetIdx}, \/  {\bf GrSoftwareRTBase} $\ast$ {\em target})}}
+\label{class_gr_software_rasterizer_a5d85f57b17b61072eaf05f6f6d56f98}
+
+
+
+
+Definition at line 222 of file GrSoftwareRasterizer.cpp.\hypertarget{class_gr_software_rasterizer_e7b4972331ce39e47a82e4c9c19b584f}{
+\index{GrSoftwareRasterizer@{GrSoftwareRasterizer}!SetSamplerColor@{SetSamplerColor}}
+\index{SetSamplerColor@{SetSamplerColor}!GrSoftwareRasterizer@{GrSoftwareRasterizer}}
+\subsubsection[{SetSamplerColor}]{\setlength{\rightskip}{0pt plus 5cm}void GrSoftwareRasterizer::SetSamplerColor (unsigned int {\em idx}, \/  unsigned {\em color})}}
+\label{class_gr_software_rasterizer_e7b4972331ce39e47a82e4c9c19b584f}
+
+
+
+
+Definition at line 343 of file GrSoftwareRasterizer.cpp.\hypertarget{class_gr_software_rasterizer_51810eee95ddc746a8a9021773ff6c1b}{
+\index{GrSoftwareRasterizer@{GrSoftwareRasterizer}!SetSamplerTexture@{SetSamplerTexture}}
+\index{SetSamplerTexture@{SetSamplerTexture}!GrSoftwareRasterizer@{GrSoftwareRasterizer}}
+\subsubsection[{SetSamplerTexture}]{\setlength{\rightskip}{0pt plus 5cm}void GrSoftwareRasterizer::SetSamplerTexture (unsigned int {\em idx}, \/  {\bf GrImage} $\ast$ {\em image})}}
+\label{class_gr_software_rasterizer_51810eee95ddc746a8a9021773ff6c1b}
+
+
+
+
+Definition at line 335 of file GrSoftwareRasterizer.cpp.\hypertarget{class_gr_software_rasterizer_0c67a108c361c1b57fd133e2a2b2819f}{
+\index{GrSoftwareRasterizer@{GrSoftwareRasterizer}!SetVertexConstant@{SetVertexConstant}}
+\index{SetVertexConstant@{SetVertexConstant}!GrSoftwareRasterizer@{GrSoftwareRasterizer}}
+\subsubsection[{SetVertexConstant}]{\setlength{\rightskip}{0pt plus 5cm}void GrSoftwareRasterizer::SetVertexConstant (unsigned int {\em idx}, \/  const {\bf SVec4} \& {\em value})}}
+\label{class_gr_software_rasterizer_0c67a108c361c1b57fd133e2a2b2819f}
+
+
+
+
+Definition at line 283 of file GrSoftwareRasterizer.cpp.\hypertarget{class_gr_software_rasterizer_ce6f2dcf3bffc89ecbfb4b12a185f06d}{
+\index{GrSoftwareRasterizer@{GrSoftwareRasterizer}!SetVertexConstants@{SetVertexConstants}}
+\index{SetVertexConstants@{SetVertexConstants}!GrSoftwareRasterizer@{GrSoftwareRasterizer}}
+\subsubsection[{SetVertexConstants}]{\setlength{\rightskip}{0pt plus 5cm}void GrSoftwareRasterizer::SetVertexConstants (unsigned int {\em idx}, \/  const {\bf MMat4x4} \& {\em value})}}
+\label{class_gr_software_rasterizer_ce6f2dcf3bffc89ecbfb4b12a185f06d}
+
+
+
+
+Definition at line 291 of file GrSoftwareRasterizer.cpp.\hypertarget{class_gr_software_rasterizer_2a56d53611c7f50e13de3fdbd3b6c0a3}{
+\index{GrSoftwareRasterizer@{GrSoftwareRasterizer}!SetVertexProgram@{SetVertexProgram}}
+\index{SetVertexProgram@{SetVertexProgram}!GrSoftwareRasterizer@{GrSoftwareRasterizer}}
+\subsubsection[{SetVertexProgram}]{\setlength{\rightskip}{0pt plus 5cm}void GrSoftwareRasterizer::SetVertexProgram ({\bf VertexProgram} {\em vertexProg})}}
+\label{class_gr_software_rasterizer_2a56d53611c7f50e13de3fdbd3b6c0a3}
+
+
+
+
+Definition at line 267 of file GrSoftwareRasterizer.cpp.\hypertarget{class_gr_software_rasterizer_bd64403e6d390fcc8b1c1b24ccdbd2e3}{
+\index{GrSoftwareRasterizer@{GrSoftwareRasterizer}!SetViewportTransform@{SetViewportTransform}}
+\index{SetViewportTransform@{SetViewportTransform}!GrSoftwareRasterizer@{GrSoftwareRasterizer}}
+\subsubsection[{SetViewportTransform}]{\setlength{\rightskip}{0pt plus 5cm}void GrSoftwareRasterizer::SetViewportTransform (const {\bf SVec2} \& {\em scale}, \/  const {\bf SVec2} \& {\em offset})}}
+\label{class_gr_software_rasterizer_bd64403e6d390fcc8b1c1b24ccdbd2e3}
+
+
+
+
+Definition at line 327 of file GrSoftwareRasterizer.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_software_rasterizer_8h}{GrSoftwareRasterizer.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_software_rasterizer_8cpp}{GrSoftwareRasterizer.cpp}\end{CompactItemize}

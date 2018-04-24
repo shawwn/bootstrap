@@ -1,0 +1,154 @@
+\hypertarget{class_i_x_renderable}{
+\section{IXRenderable Class Reference}
+\label{class_i_x_renderable}\index{IXRenderable@{IXRenderable}}
+}
+Inheritance diagram for IXRenderable::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.6568cm]{class_i_x_renderable}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+enum \hyperlink{class_i_x_renderable_a83cb64592404acfb99afbc55a4ed8a8}{ETYPE} \{ \hyperlink{class_i_x_renderable_a83cb64592404acfb99afbc55a4ed8a84330ba990bc439cc6db7227ea872d6ff}{ET\_\-TEXTURE}, 
+\hyperlink{class_i_x_renderable_a83cb64592404acfb99afbc55a4ed8a81996a1c87b7fdc3bdb2c840f928e9d95}{ET\_\-TEXTURECUBE}, 
+\hyperlink{class_i_x_renderable_a83cb64592404acfb99afbc55a4ed8a8b82ed50babd41f736f18c62c0bd4f82a}{ET\_\-TEXTURERECT}, 
+\hyperlink{class_i_x_renderable_a83cb64592404acfb99afbc55a4ed8a8ab5d8d91dd99a5c558e9cbfa36e6b579}{ET\_\-RENDERBUFFER}
+ \}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_i_x_renderable_3b6b8d3b41c8ad45864922a1dedd3d04}{IXRenderable} ()
+\item 
+virtual \hyperlink{class_i_x_renderable_83506efaeb52b2170bf0c643edcb56aa}{$\sim$IXRenderable} ()
+\item 
+virtual \hyperlink{class_i_x_renderable_a83cb64592404acfb99afbc55a4ed8a8}{ETYPE} \hyperlink{class_i_x_renderable_aa7a8918c305cc562df3f3f44cd761d7}{GetType} () const =0
+\item 
+virtual void \hyperlink{class_i_x_renderable_c5ea40caedef9885429ab5c7dccb0163}{BindToFramebuffer} (unsigned int fbo, \hyperlink{class_gr_texture_cube_49c6f83c73520edfce04f4eb5dcfe6a0}{GrTextureCube::ECUBEFACE} \hyperlink{glext_8h_676ca580c460c0154eb58200433d2a9e}{face})=0
+\item 
+virtual \hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_texture_base}{GrTextureBase} $>$ \hyperlink{class_i_x_renderable_2a74a8b8f702af0557134858ec263aea}{GetTexture} () const 
+\item 
+virtual void \hyperlink{class_i_x_renderable_a6c88c0ccc0cc869114309de6843f5ac}{UnbindTexture} () const 
+\item 
+virtual void \hyperlink{class_i_x_renderable_4e47253020e9f0faabb51b37ee5e16ae}{AutoGenMipmaps} () const 
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 33 of file grrendertarget.cpp.
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_i_x_renderable_a83cb64592404acfb99afbc55a4ed8a8}{
+\index{IXRenderable@{IXRenderable}!ETYPE@{ETYPE}}
+\index{ETYPE@{ETYPE}!IXRenderable@{IXRenderable}}
+\subsubsection[{ETYPE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf IXRenderable::ETYPE}}}
+\label{class_i_x_renderable_a83cb64592404acfb99afbc55a4ed8a8}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{ET\_\-TEXTURE@{ET\_\-TEXTURE}!IXRenderable@{IXRenderable}}\index{IXRenderable@{IXRenderable}!ET\_\-TEXTURE@{ET\_\-TEXTURE}}\item[{\em 
+\hypertarget{class_i_x_renderable_a83cb64592404acfb99afbc55a4ed8a84330ba990bc439cc6db7227ea872d6ff}{
+ET\_\-TEXTURE}
+\label{class_i_x_renderable_a83cb64592404acfb99afbc55a4ed8a84330ba990bc439cc6db7227ea872d6ff}
+}]\index{ET\_\-TEXTURECUBE@{ET\_\-TEXTURECUBE}!IXRenderable@{IXRenderable}}\index{IXRenderable@{IXRenderable}!ET\_\-TEXTURECUBE@{ET\_\-TEXTURECUBE}}\item[{\em 
+\hypertarget{class_i_x_renderable_a83cb64592404acfb99afbc55a4ed8a81996a1c87b7fdc3bdb2c840f928e9d95}{
+ET\_\-TEXTURECUBE}
+\label{class_i_x_renderable_a83cb64592404acfb99afbc55a4ed8a81996a1c87b7fdc3bdb2c840f928e9d95}
+}]\index{ET\_\-TEXTURERECT@{ET\_\-TEXTURERECT}!IXRenderable@{IXRenderable}}\index{IXRenderable@{IXRenderable}!ET\_\-TEXTURERECT@{ET\_\-TEXTURERECT}}\item[{\em 
+\hypertarget{class_i_x_renderable_a83cb64592404acfb99afbc55a4ed8a8b82ed50babd41f736f18c62c0bd4f82a}{
+ET\_\-TEXTURERECT}
+\label{class_i_x_renderable_a83cb64592404acfb99afbc55a4ed8a8b82ed50babd41f736f18c62c0bd4f82a}
+}]\index{ET\_\-RENDERBUFFER@{ET\_\-RENDERBUFFER}!IXRenderable@{IXRenderable}}\index{IXRenderable@{IXRenderable}!ET\_\-RENDERBUFFER@{ET\_\-RENDERBUFFER}}\item[{\em 
+\hypertarget{class_i_x_renderable_a83cb64592404acfb99afbc55a4ed8a8ab5d8d91dd99a5c558e9cbfa36e6b579}{
+ET\_\-RENDERBUFFER}
+\label{class_i_x_renderable_a83cb64592404acfb99afbc55a4ed8a8ab5d8d91dd99a5c558e9cbfa36e6b579}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 36 of file grrendertarget.cpp.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_i_x_renderable_3b6b8d3b41c8ad45864922a1dedd3d04}{
+\index{IXRenderable@{IXRenderable}!IXRenderable@{IXRenderable}}
+\index{IXRenderable@{IXRenderable}!IXRenderable@{IXRenderable}}
+\subsubsection[{IXRenderable}]{\setlength{\rightskip}{0pt plus 5cm}IXRenderable::IXRenderable ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_i_x_renderable_3b6b8d3b41c8ad45864922a1dedd3d04}
+
+
+
+
+Definition at line 44 of file grrendertarget.cpp.\hypertarget{class_i_x_renderable_83506efaeb52b2170bf0c643edcb56aa}{
+\index{IXRenderable@{IXRenderable}!$\sim$IXRenderable@{$\sim$IXRenderable}}
+\index{$\sim$IXRenderable@{$\sim$IXRenderable}!IXRenderable@{IXRenderable}}
+\subsubsection[{$\sim$IXRenderable}]{\setlength{\rightskip}{0pt plus 5cm}virtual IXRenderable::$\sim$IXRenderable ()\hspace{0.3cm}{\tt  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_i_x_renderable_83506efaeb52b2170bf0c643edcb56aa}
+
+
+
+
+Definition at line 45 of file grrendertarget.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_i_x_renderable_4e47253020e9f0faabb51b37ee5e16ae}{
+\index{IXRenderable@{IXRenderable}!AutoGenMipmaps@{AutoGenMipmaps}}
+\index{AutoGenMipmaps@{AutoGenMipmaps}!IXRenderable@{IXRenderable}}
+\subsubsection[{AutoGenMipmaps}]{\setlength{\rightskip}{0pt plus 5cm}virtual void IXRenderable::AutoGenMipmaps () const\hspace{0.3cm}{\tt  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_i_x_renderable_4e47253020e9f0faabb51b37ee5e16ae}
+
+
+
+
+Reimplemented in \hyperlink{class_i_x_texture_renderable_192d19327613117b701f34a46025d028}{IXTextureRenderable}, \hyperlink{class_i_x_texture_cube_renderable_a3eac9a1a8de19d222ca98549a6f655f}{IXTextureCubeRenderable}, and \hyperlink{class_i_x_texture_rect_renderable_3f97d83058590ba5fc2f5f213931fcf1}{IXTextureRectRenderable}.
+
+Definition at line 54 of file grrendertarget.cpp.\hypertarget{class_i_x_renderable_c5ea40caedef9885429ab5c7dccb0163}{
+\index{IXRenderable@{IXRenderable}!BindToFramebuffer@{BindToFramebuffer}}
+\index{BindToFramebuffer@{BindToFramebuffer}!IXRenderable@{IXRenderable}}
+\subsubsection[{BindToFramebuffer}]{\setlength{\rightskip}{0pt plus 5cm}virtual void IXRenderable::BindToFramebuffer (unsigned int {\em fbo}, \/  {\bf GrTextureCube::ECUBEFACE} {\em face})\hspace{0.3cm}{\tt  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_i_x_renderable_c5ea40caedef9885429ab5c7dccb0163}
+
+
+
+
+Implemented in \hyperlink{class_i_x_texture_renderable_79cbe96edff769e27c5dbbcb1defdd2d}{IXTextureRenderable}, \hyperlink{class_i_x_texture_cube_renderable_01b1752841e74a9aa60229c855abcbac}{IXTextureCubeRenderable}, \hyperlink{class_i_x_texture_rect_renderable_0a40ad04c48447177dfda83ff287474a}{IXTextureRectRenderable}, and \hyperlink{class_i_x_buffer_renderable_87a8640a85c1d83ac4339a3d54897432}{IXBufferRenderable}.\hypertarget{class_i_x_renderable_2a74a8b8f702af0557134858ec263aea}{
+\index{IXRenderable@{IXRenderable}!GetTexture@{GetTexture}}
+\index{GetTexture@{GetTexture}!IXRenderable@{IXRenderable}}
+\subsubsection[{GetTexture}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf URef}$<$ {\bf GrTextureBase} $>$ IXRenderable::GetTexture () const\hspace{0.3cm}{\tt  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_i_x_renderable_2a74a8b8f702af0557134858ec263aea}
+
+
+
+
+Reimplemented in \hyperlink{class_i_x_texture_renderable_360a1f72f8781be9af2d9616b006ee31}{IXTextureRenderable}, \hyperlink{class_i_x_texture_cube_renderable_35c6be6d9d46593905c7bc41925115a5}{IXTextureCubeRenderable}, and \hyperlink{class_i_x_texture_rect_renderable_b257ec75b2b8544f82d4396f3d84a49a}{IXTextureRectRenderable}.
+
+Definition at line 52 of file grrendertarget.cpp.\hypertarget{class_i_x_renderable_aa7a8918c305cc562df3f3f44cd761d7}{
+\index{IXRenderable@{IXRenderable}!GetType@{GetType}}
+\index{GetType@{GetType}!IXRenderable@{IXRenderable}}
+\subsubsection[{GetType}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf ETYPE} IXRenderable::GetType () const\hspace{0.3cm}{\tt  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_i_x_renderable_aa7a8918c305cc562df3f3f44cd761d7}
+
+
+
+
+Implemented in \hyperlink{class_i_x_texture_renderable_51527120351185e79124254a61616fdb}{IXTextureRenderable}, \hyperlink{class_i_x_texture_cube_renderable_f6645f105588b641271bbb4f33f72037}{IXTextureCubeRenderable}, \hyperlink{class_i_x_texture_rect_renderable_ad98e9d375ae185a8472381bae5d646e}{IXTextureRectRenderable}, and \hyperlink{class_i_x_buffer_renderable_6aa2a8e39f8f73f7622761bb1f09ec5b}{IXBufferRenderable}.\hypertarget{class_i_x_renderable_a6c88c0ccc0cc869114309de6843f5ac}{
+\index{IXRenderable@{IXRenderable}!UnbindTexture@{UnbindTexture}}
+\index{UnbindTexture@{UnbindTexture}!IXRenderable@{IXRenderable}}
+\subsubsection[{UnbindTexture}]{\setlength{\rightskip}{0pt plus 5cm}virtual void IXRenderable::UnbindTexture () const\hspace{0.3cm}{\tt  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_i_x_renderable_a6c88c0ccc0cc869114309de6843f5ac}
+
+
+
+
+Reimplemented in \hyperlink{class_i_x_texture_renderable_6cf2f52580c043bdf381d1a6e13c09e9}{IXTextureRenderable}, \hyperlink{class_i_x_texture_cube_renderable_5c925a69c84be46731007be94bc415c6}{IXTextureCubeRenderable}, and \hyperlink{class_i_x_texture_rect_renderable_fd7cf5412255a00c33d84c17a22cbefa}{IXTextureRectRenderable}.
+
+Definition at line 53 of file grrendertarget.cpp.
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{grrendertarget_8cpp}{grrendertarget.cpp}\end{CompactItemize}

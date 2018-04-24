@@ -1,0 +1,202 @@
+\hypertarget{class_gr_framebuffer}{
+\section{GrFramebuffer Class Reference}
+\label{class_gr_framebuffer}\index{GrFramebuffer@{GrFramebuffer}}
+}
+{\tt \#include $<$GrFramebuffer.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_framebuffer_0433e1f6eb5632194138e0ce4749d9f0}{GrFramebuffer} (unsigned int \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, unsigned int \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height}, \hyperlink{enums_8h_697c1ee1354746841860d5bf9f81c033}{EGRQUALITY} quality, bool hdrEnable)
+\item 
+\hyperlink{class_gr_framebuffer_e94e0323428385049cc79200fb15a6b0}{$\sim$GrFramebuffer} ()
+\item 
+void \hyperlink{class_gr_framebuffer_68bc3b696f651f9c4a24834fc0f8c5ea}{SetHDRQuality} (\hyperlink{enums_8h_697c1ee1354746841860d5bf9f81c033}{EGRQUALITY} quality)
+\item 
+void \hyperlink{class_gr_framebuffer_8977d79d6a403f383c9fb98966366aa4}{SetHDREnable} (bool enabled)
+\item 
+\hyperlink{enums_8h_697c1ee1354746841860d5bf9f81c033}{EGRQUALITY} \hyperlink{class_gr_framebuffer_d139490101238ff1b4ab0f7e573da734}{GetHDRQuality} () const 
+\item 
+bool \hyperlink{class_gr_framebuffer_6e6bc83db539cd14a8bb7128e9416b46}{GetHDREnable} () const 
+\item 
+\hyperlink{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f6}{GrRenderTargetMgr::EFORMAT} \hyperlink{class_gr_framebuffer_28c6678e0d5bb83ea0ad0a6d1cf00a19}{GetColorFormat} () const 
+\item 
+\hyperlink{class_gr_render_target_mgr_66d0ebb49e9781283d824f19f4bbc3f6}{GrRenderTargetMgr::EFORMAT} \hyperlink{class_gr_framebuffer_fbeb94553e42babfc069cae3da658a38}{GetDepthFormat} () const 
+\item 
+unsigned int \hyperlink{class_gr_framebuffer_31437c5337b08fcb8c7677ab4cce01f3}{GetCurRenderWidth} () const 
+\item 
+unsigned int \hyperlink{class_gr_framebuffer_75e0ed08bb86b57d1168785c5005512c}{GetCurRenderHeight} () const 
+\item 
+void \hyperlink{class_gr_framebuffer_b5ef7902c9a6db344d3be04c5747a007}{BeginFrame} ()
+\item 
+void \hyperlink{class_gr_framebuffer_1e9e6b3669a0b5d3e07c92ba5290a8ec}{EndFrame} (unsigned int curTime)
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_texture_base}{GrTextureBase} $>$ \hyperlink{class_gr_framebuffer_c262b0f70df5aa7c47313b46894ffa7e}{CopyCurrentRender} (int srcX, int srcY, int \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, int \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height})
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_texture_base}{GrTextureBase} $>$ \hyperlink{class_gr_framebuffer_ba49556b67bae1454a162bc6c1df7bd3}{CopyCurrentDepth} (int srcX, int srcY, int \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, int \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height})
+\item 
+void \hyperlink{class_gr_framebuffer_0c735a474f9888324ca016596d5a8a85}{PreContextReset} ()
+\item 
+void \hyperlink{class_gr_framebuffer_12d434b383528bee386ad8b08ddc8c0a}{PostContextReset} (unsigned int \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, unsigned int \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height})
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 27 of file GrFramebuffer.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_framebuffer_0433e1f6eb5632194138e0ce4749d9f0}{
+\index{GrFramebuffer@{GrFramebuffer}!GrFramebuffer@{GrFramebuffer}}
+\index{GrFramebuffer@{GrFramebuffer}!GrFramebuffer@{GrFramebuffer}}
+\subsubsection[{GrFramebuffer}]{\setlength{\rightskip}{0pt plus 5cm}GrFramebuffer::GrFramebuffer (unsigned int {\em width}, \/  unsigned int {\em height}, \/  {\bf EGRQUALITY} {\em quality}, \/  bool {\em hdrEnable})}}
+\label{class_gr_framebuffer_0433e1f6eb5632194138e0ce4749d9f0}
+
+
+
+
+Definition at line 65 of file GrFramebuffer.cpp.\hypertarget{class_gr_framebuffer_e94e0323428385049cc79200fb15a6b0}{
+\index{GrFramebuffer@{GrFramebuffer}!$\sim$GrFramebuffer@{$\sim$GrFramebuffer}}
+\index{$\sim$GrFramebuffer@{$\sim$GrFramebuffer}!GrFramebuffer@{GrFramebuffer}}
+\subsubsection[{$\sim$GrFramebuffer}]{\setlength{\rightskip}{0pt plus 5cm}GrFramebuffer::$\sim$GrFramebuffer ()}}
+\label{class_gr_framebuffer_e94e0323428385049cc79200fb15a6b0}
+
+
+
+
+Definition at line 82 of file GrFramebuffer.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_framebuffer_b5ef7902c9a6db344d3be04c5747a007}{
+\index{GrFramebuffer@{GrFramebuffer}!BeginFrame@{BeginFrame}}
+\index{BeginFrame@{BeginFrame}!GrFramebuffer@{GrFramebuffer}}
+\subsubsection[{BeginFrame}]{\setlength{\rightskip}{0pt plus 5cm}void GrFramebuffer::BeginFrame ()}}
+\label{class_gr_framebuffer_b5ef7902c9a6db344d3be04c5747a007}
+
+
+
+
+Definition at line 127 of file GrFramebuffer.cpp.\hypertarget{class_gr_framebuffer_ba49556b67bae1454a162bc6c1df7bd3}{
+\index{GrFramebuffer@{GrFramebuffer}!CopyCurrentDepth@{CopyCurrentDepth}}
+\index{CopyCurrentDepth@{CopyCurrentDepth}!GrFramebuffer@{GrFramebuffer}}
+\subsubsection[{CopyCurrentDepth}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrTextureBase} $>$ GrFramebuffer::CopyCurrentDepth (int {\em srcX}, \/  int {\em srcY}, \/  int {\em width}, \/  int {\em height})}}
+\label{class_gr_framebuffer_ba49556b67bae1454a162bc6c1df7bd3}
+
+
+
+
+Definition at line 175 of file GrFramebuffer.cpp.\hypertarget{class_gr_framebuffer_c262b0f70df5aa7c47313b46894ffa7e}{
+\index{GrFramebuffer@{GrFramebuffer}!CopyCurrentRender@{CopyCurrentRender}}
+\index{CopyCurrentRender@{CopyCurrentRender}!GrFramebuffer@{GrFramebuffer}}
+\subsubsection[{CopyCurrentRender}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrTextureBase} $>$ GrFramebuffer::CopyCurrentRender (int {\em srcX}, \/  int {\em srcY}, \/  int {\em width}, \/  int {\em height})}}
+\label{class_gr_framebuffer_c262b0f70df5aa7c47313b46894ffa7e}
+
+
+
+
+Definition at line 153 of file GrFramebuffer.cpp.\hypertarget{class_gr_framebuffer_1e9e6b3669a0b5d3e07c92ba5290a8ec}{
+\index{GrFramebuffer@{GrFramebuffer}!EndFrame@{EndFrame}}
+\index{EndFrame@{EndFrame}!GrFramebuffer@{GrFramebuffer}}
+\subsubsection[{EndFrame}]{\setlength{\rightskip}{0pt plus 5cm}void GrFramebuffer::EndFrame (unsigned int {\em curTime})}}
+\label{class_gr_framebuffer_1e9e6b3669a0b5d3e07c92ba5290a8ec}
+
+
+
+
+Definition at line 138 of file GrFramebuffer.cpp.\hypertarget{class_gr_framebuffer_28c6678e0d5bb83ea0ad0a6d1cf00a19}{
+\index{GrFramebuffer@{GrFramebuffer}!GetColorFormat@{GetColorFormat}}
+\index{GetColorFormat@{GetColorFormat}!GrFramebuffer@{GrFramebuffer}}
+\subsubsection[{GetColorFormat}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrRenderTargetMgr::EFORMAT} GrFramebuffer::GetColorFormat () const}}
+\label{class_gr_framebuffer_28c6678e0d5bb83ea0ad0a6d1cf00a19}
+
+
+
+
+Definition at line 94 of file GrFramebuffer.cpp.\hypertarget{class_gr_framebuffer_75e0ed08bb86b57d1168785c5005512c}{
+\index{GrFramebuffer@{GrFramebuffer}!GetCurRenderHeight@{GetCurRenderHeight}}
+\index{GetCurRenderHeight@{GetCurRenderHeight}!GrFramebuffer@{GrFramebuffer}}
+\subsubsection[{GetCurRenderHeight}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrFramebuffer::GetCurRenderHeight () const}}
+\label{class_gr_framebuffer_75e0ed08bb86b57d1168785c5005512c}
+
+
+
+
+Definition at line 120 of file GrFramebuffer.cpp.\hypertarget{class_gr_framebuffer_31437c5337b08fcb8c7677ab4cce01f3}{
+\index{GrFramebuffer@{GrFramebuffer}!GetCurRenderWidth@{GetCurRenderWidth}}
+\index{GetCurRenderWidth@{GetCurRenderWidth}!GrFramebuffer@{GrFramebuffer}}
+\subsubsection[{GetCurRenderWidth}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrFramebuffer::GetCurRenderWidth () const}}
+\label{class_gr_framebuffer_31437c5337b08fcb8c7677ab4cce01f3}
+
+
+
+
+Definition at line 113 of file GrFramebuffer.cpp.\hypertarget{class_gr_framebuffer_fbeb94553e42babfc069cae3da658a38}{
+\index{GrFramebuffer@{GrFramebuffer}!GetDepthFormat@{GetDepthFormat}}
+\index{GetDepthFormat@{GetDepthFormat}!GrFramebuffer@{GrFramebuffer}}
+\subsubsection[{GetDepthFormat}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrRenderTargetMgr::EFORMAT} GrFramebuffer::GetDepthFormat () const}}
+\label{class_gr_framebuffer_fbeb94553e42babfc069cae3da658a38}
+
+
+
+
+Definition at line 106 of file GrFramebuffer.cpp.\hypertarget{class_gr_framebuffer_6e6bc83db539cd14a8bb7128e9416b46}{
+\index{GrFramebuffer@{GrFramebuffer}!GetHDREnable@{GetHDREnable}}
+\index{GetHDREnable@{GetHDREnable}!GrFramebuffer@{GrFramebuffer}}
+\subsubsection[{GetHDREnable}]{\setlength{\rightskip}{0pt plus 5cm}bool GrFramebuffer::GetHDREnable () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_framebuffer_6e6bc83db539cd14a8bb7128e9416b46}
+
+
+
+
+Definition at line 40 of file GrFramebuffer.h.\hypertarget{class_gr_framebuffer_d139490101238ff1b4ab0f7e573da734}{
+\index{GrFramebuffer@{GrFramebuffer}!GetHDRQuality@{GetHDRQuality}}
+\index{GetHDRQuality@{GetHDRQuality}!GrFramebuffer@{GrFramebuffer}}
+\subsubsection[{GetHDRQuality}]{\setlength{\rightskip}{0pt plus 5cm}{\bf EGRQUALITY} GrFramebuffer::GetHDRQuality () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_framebuffer_d139490101238ff1b4ab0f7e573da734}
+
+
+
+
+Definition at line 39 of file GrFramebuffer.h.\hypertarget{class_gr_framebuffer_12d434b383528bee386ad8b08ddc8c0a}{
+\index{GrFramebuffer@{GrFramebuffer}!PostContextReset@{PostContextReset}}
+\index{PostContextReset@{PostContextReset}!GrFramebuffer@{GrFramebuffer}}
+\subsubsection[{PostContextReset}]{\setlength{\rightskip}{0pt plus 5cm}void GrFramebuffer::PostContextReset (unsigned int {\em width}, \/  unsigned int {\em height})}}
+\label{class_gr_framebuffer_12d434b383528bee386ad8b08ddc8c0a}
+
+
+
+
+Definition at line 208 of file GrFramebuffer.cpp.\hypertarget{class_gr_framebuffer_0c735a474f9888324ca016596d5a8a85}{
+\index{GrFramebuffer@{GrFramebuffer}!PreContextReset@{PreContextReset}}
+\index{PreContextReset@{PreContextReset}!GrFramebuffer@{GrFramebuffer}}
+\subsubsection[{PreContextReset}]{\setlength{\rightskip}{0pt plus 5cm}void GrFramebuffer::PreContextReset ()}}
+\label{class_gr_framebuffer_0c735a474f9888324ca016596d5a8a85}
+
+
+
+
+Definition at line 197 of file GrFramebuffer.cpp.\hypertarget{class_gr_framebuffer_8977d79d6a403f383c9fb98966366aa4}{
+\index{GrFramebuffer@{GrFramebuffer}!SetHDREnable@{SetHDREnable}}
+\index{SetHDREnable@{SetHDREnable}!GrFramebuffer@{GrFramebuffer}}
+\subsubsection[{SetHDREnable}]{\setlength{\rightskip}{0pt plus 5cm}void GrFramebuffer::SetHDREnable (bool {\em enabled})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_framebuffer_8977d79d6a403f383c9fb98966366aa4}
+
+
+
+
+Definition at line 36 of file GrFramebuffer.h.\hypertarget{class_gr_framebuffer_68bc3b696f651f9c4a24834fc0f8c5ea}{
+\index{GrFramebuffer@{GrFramebuffer}!SetHDRQuality@{SetHDRQuality}}
+\index{SetHDRQuality@{SetHDRQuality}!GrFramebuffer@{GrFramebuffer}}
+\subsubsection[{SetHDRQuality}]{\setlength{\rightskip}{0pt plus 5cm}void GrFramebuffer::SetHDRQuality ({\bf EGRQUALITY} {\em quality})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_framebuffer_68bc3b696f651f9c4a24834fc0f8c5ea}
+
+
+
+
+Definition at line 35 of file GrFramebuffer.h.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_framebuffer_8h}{GrFramebuffer.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_framebuffer_8cpp}{GrFramebuffer.cpp}\end{CompactItemize}

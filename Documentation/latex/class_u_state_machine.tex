@@ -1,0 +1,150 @@
+\hypertarget{class_u_state_machine}{
+\section{UStateMachine$<$ \_\-T, kMaxStates, kMaxEvents $>$ Class Template Reference}
+\label{class_u_state_machine}\index{UStateMachine@{UStateMachine}}
+}
+{\tt \#include $<$UStateMachine.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef bool(\_\-T::$\ast$ \hyperlink{class_u_state_machine_963f51f22ea58913720e723b793db8f2}{Callback} )(unsigned int prevState, unsigned int event, unsigned int newState)
+\item 
+typedef void(\_\-T::$\ast$ \hyperlink{class_u_state_machine_15216ad4481a4d78546f59992e7aaffc}{UpdateCallback} )(unsigned int curState)
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_u_state_machine_482d71ab249a93962a3e969c7cb8820b}{UStateMachine} (unsigned int initState)
+\item 
+\hyperlink{class_u_state_machine_55bfac71d1d2793f130f351151e12768}{$\sim$UStateMachine} ()
+\item 
+unsigned int \hyperlink{class_u_state_machine_74c99f3a70fa39b073a5aad8df25e4ed}{GetCurState} () const 
+\item 
+void \hyperlink{class_u_state_machine_cbcab43339103431455ce82c9e059f90}{SendEvent} (\_\-T $\ast$thisPtr, unsigned int event)
+\item 
+void \hyperlink{class_u_state_machine_bf82a8c4731c6c736782ea9f2ccac1b4}{Update} (\_\-T $\ast$thisPtr)
+\item 
+void \hyperlink{class_u_state_machine_eb4c6dc6eaef564984dff22a2defe593}{SetTransition} (unsigned curState, unsigned int event, unsigned int toState, \hyperlink{class_u_state_machine_963f51f22ea58913720e723b793db8f2}{Callback} callback)
+\item 
+void \hyperlink{class_u_state_machine_4ad66bcfa1dd9b29fedccc5ee19d5a1d}{SetStateUpdateCallback} (unsigned int state, \hyperlink{class_u_state_machine_15216ad4481a4d78546f59992e7aaffc}{UpdateCallback} callback)
+\item 
+void \hyperlink{class_u_state_machine_a19a8b515f8343a99a6017c1dadf4d90}{SetStateEnterCallback} (unsigned int state, \hyperlink{class_u_state_machine_963f51f22ea58913720e723b793db8f2}{Callback} callback)
+\item 
+void \hyperlink{class_u_state_machine_b96d528933ba715d5a75d5f42cd193e0}{SetStateLeaveCallback} (unsigned int state, \hyperlink{class_u_state_machine_963f51f22ea58913720e723b793db8f2}{Callback} callback)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename \_\-T, const unsigned int kMaxStates, const unsigned int kMaxEvents$>$ class UStateMachine$<$ \_\-T, kMaxStates, kMaxEvents $>$}
+
+
+
+Definition at line 16 of file UStateMachine.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_u_state_machine_963f51f22ea58913720e723b793db8f2}{
+\index{UStateMachine@{UStateMachine}!Callback@{Callback}}
+\index{Callback@{Callback}!UStateMachine@{UStateMachine}}
+\subsubsection[{Callback}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-T , const unsigned int kMaxStates, const unsigned int kMaxEvents$>$ typedef bool( \_\-T::$\ast$ {\bf UStateMachine}$<$ \_\-T, kMaxStates, kMaxEvents $>$::{\bf Callback})(unsigned int prevState, unsigned int event, unsigned int newState)}}
+\label{class_u_state_machine_963f51f22ea58913720e723b793db8f2}
+
+
+\hypertarget{class_u_state_machine_15216ad4481a4d78546f59992e7aaffc}{
+\index{UStateMachine@{UStateMachine}!UpdateCallback@{UpdateCallback}}
+\index{UpdateCallback@{UpdateCallback}!UStateMachine@{UStateMachine}}
+\subsubsection[{UpdateCallback}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-T , const unsigned int kMaxStates, const unsigned int kMaxEvents$>$ typedef void( \_\-T::$\ast$ {\bf UStateMachine}$<$ \_\-T, kMaxStates, kMaxEvents $>$::{\bf UpdateCallback})(unsigned int curState)}}
+\label{class_u_state_machine_15216ad4481a4d78546f59992e7aaffc}
+
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_u_state_machine_482d71ab249a93962a3e969c7cb8820b}{
+\index{UStateMachine@{UStateMachine}!UStateMachine@{UStateMachine}}
+\index{UStateMachine@{UStateMachine}!UStateMachine@{UStateMachine}}
+\subsubsection[{UStateMachine}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-T , const unsigned int kMaxStates, const unsigned int kMaxEvents$>$ {\bf UStateMachine}$<$ \_\-T, kMaxStates, kMaxEvents $>$::{\bf UStateMachine} (unsigned int {\em initState})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_state_machine_482d71ab249a93962a3e969c7cb8820b}
+
+
+
+
+Definition at line 60 of file UStateMachine.h.\hypertarget{class_u_state_machine_55bfac71d1d2793f130f351151e12768}{
+\index{UStateMachine@{UStateMachine}!$\sim$UStateMachine@{$\sim$UStateMachine}}
+\index{$\sim$UStateMachine@{$\sim$UStateMachine}!UStateMachine@{UStateMachine}}
+\subsubsection[{$\sim$UStateMachine}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-T , const unsigned int kMaxStates, const unsigned int kMaxEvents$>$ {\bf UStateMachine}$<$ \_\-T, kMaxStates, kMaxEvents $>$::$\sim${\bf UStateMachine} ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_state_machine_55bfac71d1d2793f130f351151e12768}
+
+
+
+
+Definition at line 72 of file UStateMachine.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_u_state_machine_74c99f3a70fa39b073a5aad8df25e4ed}{
+\index{UStateMachine@{UStateMachine}!GetCurState@{GetCurState}}
+\index{GetCurState@{GetCurState}!UStateMachine@{UStateMachine}}
+\subsubsection[{GetCurState}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-T , const unsigned int kMaxStates, const unsigned int kMaxEvents$>$ unsigned int {\bf UStateMachine}$<$ \_\-T, kMaxStates, kMaxEvents $>$::GetCurState () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_state_machine_74c99f3a70fa39b073a5aad8df25e4ed}
+
+
+
+
+Definition at line 25 of file UStateMachine.h.\hypertarget{class_u_state_machine_cbcab43339103431455ce82c9e059f90}{
+\index{UStateMachine@{UStateMachine}!SendEvent@{SendEvent}}
+\index{SendEvent@{SendEvent}!UStateMachine@{UStateMachine}}
+\subsubsection[{SendEvent}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-T , const unsigned int kMaxStates, const unsigned int kMaxEvents$>$ void {\bf UStateMachine}$<$ \_\-T, kMaxStates, kMaxEvents $>$::SendEvent (\_\-T $\ast$ {\em thisPtr}, \/  unsigned int {\em event})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_state_machine_cbcab43339103431455ce82c9e059f90}
+
+
+
+
+Definition at line 85 of file UStateMachine.h.\hypertarget{class_u_state_machine_a19a8b515f8343a99a6017c1dadf4d90}{
+\index{UStateMachine@{UStateMachine}!SetStateEnterCallback@{SetStateEnterCallback}}
+\index{SetStateEnterCallback@{SetStateEnterCallback}!UStateMachine@{UStateMachine}}
+\subsubsection[{SetStateEnterCallback}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-T , const unsigned int kMaxStates, const unsigned int kMaxEvents$>$ void {\bf UStateMachine}$<$ \_\-T, kMaxStates, kMaxEvents $>$::SetStateEnterCallback (unsigned int {\em state}, \/  {\bf Callback} {\em callback})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_state_machine_a19a8b515f8343a99a6017c1dadf4d90}
+
+
+
+
+Definition at line 142 of file UStateMachine.h.\hypertarget{class_u_state_machine_b96d528933ba715d5a75d5f42cd193e0}{
+\index{UStateMachine@{UStateMachine}!SetStateLeaveCallback@{SetStateLeaveCallback}}
+\index{SetStateLeaveCallback@{SetStateLeaveCallback}!UStateMachine@{UStateMachine}}
+\subsubsection[{SetStateLeaveCallback}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-T , const unsigned int kMaxStates, const unsigned int kMaxEvents$>$ void {\bf UStateMachine}$<$ \_\-T, kMaxStates, kMaxEvents $>$::SetStateLeaveCallback (unsigned int {\em state}, \/  {\bf Callback} {\em callback})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_state_machine_b96d528933ba715d5a75d5f42cd193e0}
+
+
+
+
+Definition at line 150 of file UStateMachine.h.\hypertarget{class_u_state_machine_4ad66bcfa1dd9b29fedccc5ee19d5a1d}{
+\index{UStateMachine@{UStateMachine}!SetStateUpdateCallback@{SetStateUpdateCallback}}
+\index{SetStateUpdateCallback@{SetStateUpdateCallback}!UStateMachine@{UStateMachine}}
+\subsubsection[{SetStateUpdateCallback}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-T , const unsigned int kMaxStates, const unsigned int kMaxEvents$>$ void {\bf UStateMachine}$<$ \_\-T, kMaxStates, kMaxEvents $>$::SetStateUpdateCallback (unsigned int {\em state}, \/  {\bf UpdateCallback} {\em callback})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_state_machine_4ad66bcfa1dd9b29fedccc5ee19d5a1d}
+
+
+
+
+Definition at line 134 of file UStateMachine.h.\hypertarget{class_u_state_machine_eb4c6dc6eaef564984dff22a2defe593}{
+\index{UStateMachine@{UStateMachine}!SetTransition@{SetTransition}}
+\index{SetTransition@{SetTransition}!UStateMachine@{UStateMachine}}
+\subsubsection[{SetTransition}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-T , const unsigned int kMaxStates, const unsigned int kMaxEvents$>$ void {\bf UStateMachine}$<$ \_\-T, kMaxStates, kMaxEvents $>$::SetTransition (unsigned {\em curState}, \/  unsigned int {\em event}, \/  unsigned int {\em toState}, \/  {\bf Callback} {\em callback})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_state_machine_eb4c6dc6eaef564984dff22a2defe593}
+
+
+
+
+Definition at line 124 of file UStateMachine.h.\hypertarget{class_u_state_machine_bf82a8c4731c6c736782ea9f2ccac1b4}{
+\index{UStateMachine@{UStateMachine}!Update@{Update}}
+\index{Update@{Update}!UStateMachine@{UStateMachine}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-T , const unsigned int kMaxStates, const unsigned int kMaxEvents$>$ void {\bf UStateMachine}$<$ \_\-T, kMaxStates, kMaxEvents $>$::Update (\_\-T $\ast$ {\em thisPtr})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_state_machine_bf82a8c4731c6c736782ea9f2ccac1b4}
+
+
+
+
+Definition at line 115 of file UStateMachine.h.
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_u_state_machine_8h}{UStateMachine.h}\end{CompactItemize}

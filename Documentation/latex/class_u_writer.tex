@@ -1,0 +1,169 @@
+\hypertarget{class_u_writer}{
+\section{UWriter Class Reference}
+\label{class_u_writer}\index{UWriter@{UWriter}}
+}
+{\tt \#include $<$UWriter.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_u_writer_84ac4e433ef43762c38e973b50b2a900}{UWriter} (void $\ast$\hyperlink{glext__bak_8h_c4fdb15bdbcd63430bab668b5419ed9f}{buffer}, unsigned long \hyperlink{glext__bak_8h_3d1e3edfcf61ca2d831883e1afbad89e}{size}, unsigned long growSize, bool own)
+\item 
+\hyperlink{class_u_writer_676a90967b367e7787dfc1441a0f43cc}{UWriter} (unsigned long initSize=512, unsigned long growSize=512)
+\item 
+\hyperlink{class_u_writer_8121227135a3e5565f9fb01d3864b112}{$\sim$UWriter} ()
+\item 
+void \hyperlink{class_u_writer_bbe55ee0c4a3b202b365da202899d410}{WriteString} (const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&str, bool writeNullTerm=true)
+\item 
+void \hyperlink{class_u_writer_753241171303a3cc3257e323846f2d3f}{WriteString} (const char $\ast$str, bool writeNullTerm=true)
+\item 
+void \hyperlink{class_u_writer_3c706400f5fe0fe26cd8ebfe5a55d13a}{WriteChar} (char ch)
+\item 
+void \hyperlink{class_u_writer_ad53e1a9063eec9545834eb288fe0767}{WriteShort} (short \hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v})
+\item 
+void \hyperlink{class_u_writer_2012d798142a97cacf03227395c2e24c}{WriteInt} (int i)
+\item 
+void \hyperlink{class_u_writer_a1f6d44d3988a40cc188ab237c5edc0a}{WriteUInt} (unsigned int i)
+\item 
+void \hyperlink{class_u_writer_b70c7cb62e406390fb68ddbb22ad25e7}{WriteFloat} (float f)
+\item 
+void \hyperlink{class_u_writer_db6161ee8139f7215bddb0c0e9f7f427}{WriteBytes} (const void $\ast$\hyperlink{glext__bak_8h_c4fdb15bdbcd63430bab668b5419ed9f}{buffer}, unsigned int \hyperlink{wglext_8h_98d18d6b4e3ba4ed266c6fb54c839d70}{count})
+\item 
+unsigned long \hyperlink{class_u_writer_362bb4a3c111c793e22927a6b26afe0c}{GetBytesWritten} () const 
+\item 
+const void $\ast$ \hyperlink{class_u_writer_9bd5aca0223d14eea6a715449e613300}{GetBufferPtr} () const 
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 15 of file UWriter.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_u_writer_84ac4e433ef43762c38e973b50b2a900}{
+\index{UWriter@{UWriter}!UWriter@{UWriter}}
+\index{UWriter@{UWriter}!UWriter@{UWriter}}
+\subsubsection[{UWriter}]{\setlength{\rightskip}{0pt plus 5cm}UWriter::UWriter (void $\ast$ {\em buffer}, \/  unsigned long {\em size}, \/  unsigned long {\em growSize}, \/  bool {\em own})}}
+\label{class_u_writer_84ac4e433ef43762c38e973b50b2a900}
+
+
+
+
+Definition at line 19 of file UWriter.cpp.\hypertarget{class_u_writer_676a90967b367e7787dfc1441a0f43cc}{
+\index{UWriter@{UWriter}!UWriter@{UWriter}}
+\index{UWriter@{UWriter}!UWriter@{UWriter}}
+\subsubsection[{UWriter}]{\setlength{\rightskip}{0pt plus 5cm}UWriter::UWriter (unsigned long {\em initSize} = {\tt 512}, \/  unsigned long {\em growSize} = {\tt 512})}}
+\label{class_u_writer_676a90967b367e7787dfc1441a0f43cc}
+
+
+
+
+Definition at line 30 of file UWriter.cpp.\hypertarget{class_u_writer_8121227135a3e5565f9fb01d3864b112}{
+\index{UWriter@{UWriter}!$\sim$UWriter@{$\sim$UWriter}}
+\index{$\sim$UWriter@{$\sim$UWriter}!UWriter@{UWriter}}
+\subsubsection[{$\sim$UWriter}]{\setlength{\rightskip}{0pt plus 5cm}UWriter::$\sim$UWriter ()}}
+\label{class_u_writer_8121227135a3e5565f9fb01d3864b112}
+
+
+
+
+Definition at line 41 of file UWriter.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_u_writer_9bd5aca0223d14eea6a715449e613300}{
+\index{UWriter@{UWriter}!GetBufferPtr@{GetBufferPtr}}
+\index{GetBufferPtr@{GetBufferPtr}!UWriter@{UWriter}}
+\subsubsection[{GetBufferPtr}]{\setlength{\rightskip}{0pt plus 5cm}const void$\ast$ UWriter::GetBufferPtr () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_writer_9bd5aca0223d14eea6a715449e613300}
+
+
+
+
+Definition at line 32 of file UWriter.h.\hypertarget{class_u_writer_362bb4a3c111c793e22927a6b26afe0c}{
+\index{UWriter@{UWriter}!GetBytesWritten@{GetBytesWritten}}
+\index{GetBytesWritten@{GetBytesWritten}!UWriter@{UWriter}}
+\subsubsection[{GetBytesWritten}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long UWriter::GetBytesWritten () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_u_writer_362bb4a3c111c793e22927a6b26afe0c}
+
+
+
+
+Definition at line 31 of file UWriter.h.\hypertarget{class_u_writer_db6161ee8139f7215bddb0c0e9f7f427}{
+\index{UWriter@{UWriter}!WriteBytes@{WriteBytes}}
+\index{WriteBytes@{WriteBytes}!UWriter@{UWriter}}
+\subsubsection[{WriteBytes}]{\setlength{\rightskip}{0pt plus 5cm}void UWriter::WriteBytes (const void $\ast$ {\em buffer}, \/  unsigned int {\em count})}}
+\label{class_u_writer_db6161ee8139f7215bddb0c0e9f7f427}
+
+
+
+
+Definition at line 121 of file UWriter.cpp.\hypertarget{class_u_writer_3c706400f5fe0fe26cd8ebfe5a55d13a}{
+\index{UWriter@{UWriter}!WriteChar@{WriteChar}}
+\index{WriteChar@{WriteChar}!UWriter@{UWriter}}
+\subsubsection[{WriteChar}]{\setlength{\rightskip}{0pt plus 5cm}void UWriter::WriteChar (char {\em ch})}}
+\label{class_u_writer_3c706400f5fe0fe26cd8ebfe5a55d13a}
+
+
+
+
+Definition at line 76 of file UWriter.cpp.\hypertarget{class_u_writer_b70c7cb62e406390fb68ddbb22ad25e7}{
+\index{UWriter@{UWriter}!WriteFloat@{WriteFloat}}
+\index{WriteFloat@{WriteFloat}!UWriter@{UWriter}}
+\subsubsection[{WriteFloat}]{\setlength{\rightskip}{0pt plus 5cm}void UWriter::WriteFloat (float {\em f})}}
+\label{class_u_writer_b70c7cb62e406390fb68ddbb22ad25e7}
+
+
+
+
+Definition at line 112 of file UWriter.cpp.\hypertarget{class_u_writer_2012d798142a97cacf03227395c2e24c}{
+\index{UWriter@{UWriter}!WriteInt@{WriteInt}}
+\index{WriteInt@{WriteInt}!UWriter@{UWriter}}
+\subsubsection[{WriteInt}]{\setlength{\rightskip}{0pt plus 5cm}void UWriter::WriteInt (int {\em i})}}
+\label{class_u_writer_2012d798142a97cacf03227395c2e24c}
+
+
+
+
+Definition at line 94 of file UWriter.cpp.\hypertarget{class_u_writer_ad53e1a9063eec9545834eb288fe0767}{
+\index{UWriter@{UWriter}!WriteShort@{WriteShort}}
+\index{WriteShort@{WriteShort}!UWriter@{UWriter}}
+\subsubsection[{WriteShort}]{\setlength{\rightskip}{0pt plus 5cm}void UWriter::WriteShort (short {\em v})}}
+\label{class_u_writer_ad53e1a9063eec9545834eb288fe0767}
+
+
+
+
+Definition at line 85 of file UWriter.cpp.\hypertarget{class_u_writer_753241171303a3cc3257e323846f2d3f}{
+\index{UWriter@{UWriter}!WriteString@{WriteString}}
+\index{WriteString@{WriteString}!UWriter@{UWriter}}
+\subsubsection[{WriteString}]{\setlength{\rightskip}{0pt plus 5cm}void UWriter::WriteString (const char $\ast$ {\em str}, \/  bool {\em writeNullTerm} = {\tt true})}}
+\label{class_u_writer_753241171303a3cc3257e323846f2d3f}
+
+
+
+
+Definition at line 65 of file UWriter.cpp.\hypertarget{class_u_writer_bbe55ee0c4a3b202b365da202899d410}{
+\index{UWriter@{UWriter}!WriteString@{WriteString}}
+\index{WriteString@{WriteString}!UWriter@{UWriter}}
+\subsubsection[{WriteString}]{\setlength{\rightskip}{0pt plus 5cm}void UWriter::WriteString (const {\bf tstring} \& {\em str}, \/  bool {\em writeNullTerm} = {\tt true})}}
+\label{class_u_writer_bbe55ee0c4a3b202b365da202899d410}
+
+
+
+
+Definition at line 54 of file UWriter.cpp.\hypertarget{class_u_writer_a1f6d44d3988a40cc188ab237c5edc0a}{
+\index{UWriter@{UWriter}!WriteUInt@{WriteUInt}}
+\index{WriteUInt@{WriteUInt}!UWriter@{UWriter}}
+\subsubsection[{WriteUInt}]{\setlength{\rightskip}{0pt plus 5cm}void UWriter::WriteUInt (unsigned int {\em i})}}
+\label{class_u_writer_a1f6d44d3988a40cc188ab237c5edc0a}
+
+
+
+
+Definition at line 103 of file UWriter.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_u_writer_8h}{UWriter.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_u_writer_8cpp}{UWriter.cpp}\end{CompactItemize}

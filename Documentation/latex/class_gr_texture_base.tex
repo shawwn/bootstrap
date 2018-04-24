@@ -1,0 +1,634 @@
+\hypertarget{class_gr_texture_base}{
+\section{GrTextureBase Class Reference}
+\label{class_gr_texture_base}\index{GrTextureBase@{GrTextureBase}}
+}
+{\tt \#include $<$GrTextureBase.h$>$}
+
+Inheritance diagram for GrTextureBase::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{class_gr_texture_base}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+enum \hyperlink{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c}{EFORMAT} \{ \par
+\hyperlink{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c354ede58051dc7781836ab5b0d3eecce}{EF\_\-DXT1}, 
+\hyperlink{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c722680e4b4e68454dac4019c72810f31}{EF\_\-DXT5}, 
+\hyperlink{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687cc9b23f4c027025cb763a26987bf872eb}{EF\_\-DXT5R}, 
+\hyperlink{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c872cfb8680a70a7f02aaea4d7b1bd26b}{EF\_\-RGB16}, 
+\par
+\hyperlink{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687ca7c3890d328296e7d4585d88588ef90c}{EF\_\-RGB24}, 
+\hyperlink{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c816b7060f072b80f09c85d6b4a65a2a1}{EF\_\-RGB15\_\-A1}, 
+\hyperlink{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c7299859c496a8865b40024d76e6edfcd}{EF\_\-RGBA32}, 
+\hyperlink{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687cef44a075b0bdab2381607283bfd6ec65}{EF\_\-RGB48F}, 
+\par
+\hyperlink{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c49083663a804af33ec7afe10b304b8ca}{EF\_\-RGBA64F}, 
+\hyperlink{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c50d02863411610709b9c71ab1c879d57}{EF\_\-RGBA128F}, 
+\hyperlink{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c8e92bf8961d41784bd01bd20836696e6}{EF\_\-R8}, 
+\hyperlink{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687cfd1ee1ca46d79b66683bf20447a79f96}{EF\_\-RG16}, 
+\par
+\hyperlink{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c999b259cbadcf5c6e44b479ab5050f77}{EF\_\-L8}, 
+\hyperlink{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c53ac3129a7a6b0fffa12a2f590c7175f}{EF\_\-I8}, 
+\hyperlink{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c39cc2df2a89904fdf974644594e36067}{EF\_\-I16F}, 
+\hyperlink{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687cde609f274dc7439abc17ccffbf8c2a95}{EF\_\-A8}, 
+\par
+\hyperlink{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687ca8e8bf5ad64aa73119d52ab3535f1326}{EF\_\-LA16}, 
+\hyperlink{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687cd57c301520793d5844ca23a5f47f7b60}{EF\_\-LA32F}, 
+\hyperlink{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c1775e1ba3426990f650c54815621c86d}{EF\_\-NORMALMAP}, 
+\hyperlink{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687cfb1681fdea644264aedeef91c0b7d337}{EF\_\-HIGHDEFNORMALMAP}, 
+\par
+\hyperlink{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c71c05f345db0275987ed93102b755f7a}{EF\_\-DEPTH}, 
+\hyperlink{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c129f8287ab0fb19826d05cc209d66c3d}{EF\_\-DEPTHSTENCIL}, 
+\hyperlink{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c983e954e5c478c1cd15fff916318eeb7}{EF\_\-GUESS}, 
+\hyperlink{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687cc56be62e2bf809843d2063611fdea94f}{EF\_\-COUNT}
+ \}
+\item 
+enum \hyperlink{class_gr_texture_base_6220382496bf0115188ee6d9d70f5b5d}{EFILTERMODE} \{ \par
+\hyperlink{class_gr_texture_base_6220382496bf0115188ee6d9d70f5b5dca410d338eb019d221b8cb0b49c66565}{EFM\_\-ANISOTROPIC}, 
+\hyperlink{class_gr_texture_base_6220382496bf0115188ee6d9d70f5b5d06bb4059e46b00716b01397aa396af85}{EFM\_\-TRILINEAR}, 
+\hyperlink{class_gr_texture_base_6220382496bf0115188ee6d9d70f5b5d521a33bd1061e944ae2a1f497b9a289d}{EFM\_\-BILINEAR}, 
+\hyperlink{class_gr_texture_base_6220382496bf0115188ee6d9d70f5b5dd6b48555a143c7cf1edf0e27cf0eb2c4}{EFM\_\-NEAREST}, 
+\par
+\hyperlink{class_gr_texture_base_6220382496bf0115188ee6d9d70f5b5d854951f07817aceb62271cd05ea97d99}{EFM\_\-COUNT}
+ \}
+\item 
+enum \hyperlink{class_gr_texture_base_5ce3676de03c3c565a9a0995334e5308}{ETEXTURETYPE} \{ \hyperlink{class_gr_texture_base_5ce3676de03c3c565a9a0995334e5308d02dc086ce7c780adab8a7bb57a1bb19}{ETT\_\-2D}, 
+\hyperlink{class_gr_texture_base_5ce3676de03c3c565a9a0995334e5308758cc3ff79fc0537dd876f080ce55c59}{ETT\_\-3D}, 
+\hyperlink{class_gr_texture_base_5ce3676de03c3c565a9a0995334e53085a491542d9caa5f9543b500942b7b5a6}{ETT\_\-CUBE}, 
+\hyperlink{class_gr_texture_base_5ce3676de03c3c565a9a0995334e53088892a7cf7ff8a3e99d9fafdb3c0191c6}{ETT\_\-RECT}
+ \}
+\item 
+typedef unsigned int \hyperlink{class_gr_texture_base_bee6ecbc7a70ea5f2acab8341a9696b5}{Flags}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_texture_base_3927e8796074e075c490b8a1827ccc3b}{GrTextureBase} (const \hyperlink{class_u_path}{UPath} \&\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, unsigned int bindTarget, \hyperlink{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c}{EFORMAT} \hyperlink{glext__bak_8h_e2d3db041c6004a67047659b42f73a44}{format}, \hyperlink{class_gr_texture_base_bee6ecbc7a70ea5f2acab8341a9696b5}{Flags} \hyperlink{_u_t_message_8h_0a3c0b351ab09281b662a9ff4f900a53}{flags}, \hyperlink{class_gr_texture_base_5ce3676de03c3c565a9a0995334e5308}{ETEXTURETYPE} \hyperlink{glext__bak_8h_7d05960f4f1c1b11f3177dc963a45d86}{type})
+\item 
+virtual \hyperlink{class_gr_texture_base_dac31ced75ce320ff6aa16373b225085}{$\sim$GrTextureBase} ()
+\item 
+\hyperlink{class_gr_texture_base_5ce3676de03c3c565a9a0995334e5308}{ETEXTURETYPE} \hyperlink{class_gr_texture_base_d0b985795ad1856b64d17b8404b2ca08}{GetType} () const 
+\item 
+const \hyperlink{class_u_path}{UPath} \& \hyperlink{class_gr_texture_base_7e10acc5b93473c8149f3d7fa12fb905}{GetName} () const 
+\item 
+\hyperlink{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c}{EFORMAT} \hyperlink{class_gr_texture_base_9238a4bd7db2676e072b3eb85b14c684}{GetFormat} () const 
+\item 
+unsigned int \hyperlink{class_gr_texture_base_6ef12d9062a6178f2bf497334761f357}{GetFlags} () const 
+\item 
+unsigned int \hyperlink{class_gr_texture_base_d3d44c7785028f08063c8c446d0e91a1}{GetRedBitCount} () const 
+\item 
+unsigned int \hyperlink{class_gr_texture_base_f8b32cd3c21488e40e0667d6a253320a}{GetGreenBitCount} () const 
+\item 
+unsigned int \hyperlink{class_gr_texture_base_8f049be60f5a5d093575d72914451351}{GetBlueBitCount} () const 
+\item 
+unsigned int \hyperlink{class_gr_texture_base_4bac8a806715c03befeec5f83ceeb41f}{GetAlphaBitCount} () const 
+\item 
+unsigned int \hyperlink{class_gr_texture_base_62deff3983812f7ff630ceb7021cd7b8}{GetLuminanceBitCount} () const 
+\item 
+void \hyperlink{class_gr_texture_base_db1eeb663d3d3301f675832b646be22e}{SetUnloadable} (bool unloadable)
+\item 
+bool \hyperlink{class_gr_texture_base_23cf8ef52445d659a710959b6a387eee}{GetUnloadable} () const 
+\item 
+void \hyperlink{class_gr_texture_base_09675e3d061d4389c54ad7e0df5cb674}{SetFlags} (\hyperlink{class_gr_texture_base_bee6ecbc7a70ea5f2acab8341a9696b5}{Flags} \hyperlink{_u_t_message_8h_0a3c0b351ab09281b662a9ff4f900a53}{flags})
+\item 
+unsigned int \hyperlink{class_gr_texture_base_a165e1c3061d2b3e2446a6d6566487ed}{GetBindTarget} () const 
+\item 
+void \hyperlink{class_gr_texture_base_4458c1c8d784beb36b228813f3edc6f0}{Bind} (unsigned int texUnit)
+\item 
+void \hyperlink{class_gr_texture_base_2e8a9316666ee28a1fc47e90d7929f6a}{Bind} (unsigned int texUnit, unsigned int glMinFilter, unsigned int glMagFilter, unsigned int glAddressS, unsigned int glAddressT, float maxAnisotropy=1.0f, int mipBias=0)
+\item 
+void \hyperlink{class_gr_texture_base_936b0525e5e40c7a4a591c5c345ee0ca}{Unbind} ()
+\item 
+void \hyperlink{class_gr_texture_base_54326c425dda6eea167e84f45ca46ff3}{AutoGenMipmaps} ()
+\item 
+void \hyperlink{class_gr_texture_base_b2752d6e88cda86e8c45b601941aa9b5}{Recreate} ()
+\item 
+void \hyperlink{class_gr_texture_base_e926c5f732cafa47d1336cc9b7637a44}{PreContextReset} ()
+\item 
+void \hyperlink{class_gr_texture_base_80d48b8534d812f3b452a32087e3ac74}{PostContextReset} ()
+\item 
+unsigned int \hyperlink{class_gr_texture_base_eeb990c8830fe5d9f49224ab211df183}{GetGLHandle} () const 
+\end{CompactItemize}
+\subsection*{Static Public Attributes}
+\begin{CompactItemize}
+\item 
+static const unsigned int \hyperlink{class_gr_texture_base_47f4a8d764ba3c8e9e353a394edfcd2c}{kNoMipMap} = 0x0001
+\item 
+static const unsigned int \hyperlink{class_gr_texture_base_184780018f2b67996c9274798e52607e}{kNoCompress} = 0x0008
+\item 
+static const unsigned int \hyperlink{class_gr_texture_base_eadfc66a46b95c9a456782906da84890}{kBorder} = 0x0010
+\end{CompactItemize}
+\subsection*{Protected Member Functions}
+\begin{CompactItemize}
+\item 
+void \hyperlink{class_gr_texture_base_c350ea2f901475fc6cd8bfca56bc5b19}{Create} ()
+\item 
+bool \hyperlink{class_gr_texture_base_2c2c9ce5410067d710b26d4dfe37721d}{WasCreated} () const 
+\item 
+unsigned int \hyperlink{class_gr_texture_base_8be868ce1a1917e37ea1e72d2436a9b2}{GetTexHandle} () const 
+\item 
+unsigned int \hyperlink{class_gr_texture_base_ac63f0e0d108d3fa26b07222f2655f7a}{GetGLFormat} (\hyperlink{class_gr_image}{GrImage} $\ast$\hyperlink{glext__bak_8h_8943555672bc4b8056204eb92329cafa}{image})
+\item 
+\hyperlink{class_gr_image}{GrImage} $\ast$ \hyperlink{class_gr_texture_base_dcc745602c8ec90a262a1bd9a81556ce}{CreateImage} (const \hyperlink{class_u_path}{UPath} \&\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name})
+\item 
+virtual void \hyperlink{class_gr_texture_base_210a2e21f20c0c9da855315c72319cff}{UploadImage} (bool mipmap)=0
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 22 of file GrTextureBase.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_gr_texture_base_bee6ecbc7a70ea5f2acab8341a9696b5}{
+\index{GrTextureBase@{GrTextureBase}!Flags@{Flags}}
+\index{Flags@{Flags}!GrTextureBase@{GrTextureBase}}
+\subsubsection[{Flags}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int {\bf GrTextureBase::Flags}}}
+\label{class_gr_texture_base_bee6ecbc7a70ea5f2acab8341a9696b5}
+
+
+
+
+Definition at line 75 of file GrTextureBase.h.
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_gr_texture_base_6220382496bf0115188ee6d9d70f5b5d}{
+\index{GrTextureBase@{GrTextureBase}!EFILTERMODE@{EFILTERMODE}}
+\index{EFILTERMODE@{EFILTERMODE}!GrTextureBase@{GrTextureBase}}
+\subsubsection[{EFILTERMODE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GrTextureBase::EFILTERMODE}}}
+\label{class_gr_texture_base_6220382496bf0115188ee6d9d70f5b5d}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{EFM\_\-ANISOTROPIC@{EFM\_\-ANISOTROPIC}!GrTextureBase@{GrTextureBase}}\index{GrTextureBase@{GrTextureBase}!EFM\_\-ANISOTROPIC@{EFM\_\-ANISOTROPIC}}\item[{\em 
+\hypertarget{class_gr_texture_base_6220382496bf0115188ee6d9d70f5b5dca410d338eb019d221b8cb0b49c66565}{
+EFM\_\-ANISOTROPIC}
+\label{class_gr_texture_base_6220382496bf0115188ee6d9d70f5b5dca410d338eb019d221b8cb0b49c66565}
+}]\index{EFM\_\-TRILINEAR@{EFM\_\-TRILINEAR}!GrTextureBase@{GrTextureBase}}\index{GrTextureBase@{GrTextureBase}!EFM\_\-TRILINEAR@{EFM\_\-TRILINEAR}}\item[{\em 
+\hypertarget{class_gr_texture_base_6220382496bf0115188ee6d9d70f5b5d06bb4059e46b00716b01397aa396af85}{
+EFM\_\-TRILINEAR}
+\label{class_gr_texture_base_6220382496bf0115188ee6d9d70f5b5d06bb4059e46b00716b01397aa396af85}
+}]\index{EFM\_\-BILINEAR@{EFM\_\-BILINEAR}!GrTextureBase@{GrTextureBase}}\index{GrTextureBase@{GrTextureBase}!EFM\_\-BILINEAR@{EFM\_\-BILINEAR}}\item[{\em 
+\hypertarget{class_gr_texture_base_6220382496bf0115188ee6d9d70f5b5d521a33bd1061e944ae2a1f497b9a289d}{
+EFM\_\-BILINEAR}
+\label{class_gr_texture_base_6220382496bf0115188ee6d9d70f5b5d521a33bd1061e944ae2a1f497b9a289d}
+}]\index{EFM\_\-NEAREST@{EFM\_\-NEAREST}!GrTextureBase@{GrTextureBase}}\index{GrTextureBase@{GrTextureBase}!EFM\_\-NEAREST@{EFM\_\-NEAREST}}\item[{\em 
+\hypertarget{class_gr_texture_base_6220382496bf0115188ee6d9d70f5b5dd6b48555a143c7cf1edf0e27cf0eb2c4}{
+EFM\_\-NEAREST}
+\label{class_gr_texture_base_6220382496bf0115188ee6d9d70f5b5dd6b48555a143c7cf1edf0e27cf0eb2c4}
+}]\index{EFM\_\-COUNT@{EFM\_\-COUNT}!GrTextureBase@{GrTextureBase}}\index{GrTextureBase@{GrTextureBase}!EFM\_\-COUNT@{EFM\_\-COUNT}}\item[{\em 
+\hypertarget{class_gr_texture_base_6220382496bf0115188ee6d9d70f5b5d854951f07817aceb62271cd05ea97d99}{
+EFM\_\-COUNT}
+\label{class_gr_texture_base_6220382496bf0115188ee6d9d70f5b5d854951f07817aceb62271cd05ea97d99}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 57 of file GrTextureBase.h.\hypertarget{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c}{
+\index{GrTextureBase@{GrTextureBase}!EFORMAT@{EFORMAT}}
+\index{EFORMAT@{EFORMAT}!GrTextureBase@{GrTextureBase}}
+\subsubsection[{EFORMAT}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GrTextureBase::EFORMAT}}}
+\label{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{EF\_\-DXT1@{EF\_\-DXT1}!GrTextureBase@{GrTextureBase}}\index{GrTextureBase@{GrTextureBase}!EF\_\-DXT1@{EF\_\-DXT1}}\item[{\em 
+\hypertarget{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c354ede58051dc7781836ab5b0d3eecce}{
+EF\_\-DXT1}
+\label{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c354ede58051dc7781836ab5b0d3eecce}
+}]\index{EF\_\-DXT5@{EF\_\-DXT5}!GrTextureBase@{GrTextureBase}}\index{GrTextureBase@{GrTextureBase}!EF\_\-DXT5@{EF\_\-DXT5}}\item[{\em 
+\hypertarget{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c722680e4b4e68454dac4019c72810f31}{
+EF\_\-DXT5}
+\label{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c722680e4b4e68454dac4019c72810f31}
+}]\index{EF\_\-DXT5R@{EF\_\-DXT5R}!GrTextureBase@{GrTextureBase}}\index{GrTextureBase@{GrTextureBase}!EF\_\-DXT5R@{EF\_\-DXT5R}}\item[{\em 
+\hypertarget{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687cc9b23f4c027025cb763a26987bf872eb}{
+EF\_\-DXT5R}
+\label{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687cc9b23f4c027025cb763a26987bf872eb}
+}]\index{EF\_\-RGB16@{EF\_\-RGB16}!GrTextureBase@{GrTextureBase}}\index{GrTextureBase@{GrTextureBase}!EF\_\-RGB16@{EF\_\-RGB16}}\item[{\em 
+\hypertarget{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c872cfb8680a70a7f02aaea4d7b1bd26b}{
+EF\_\-RGB16}
+\label{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c872cfb8680a70a7f02aaea4d7b1bd26b}
+}]\index{EF\_\-RGB24@{EF\_\-RGB24}!GrTextureBase@{GrTextureBase}}\index{GrTextureBase@{GrTextureBase}!EF\_\-RGB24@{EF\_\-RGB24}}\item[{\em 
+\hypertarget{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687ca7c3890d328296e7d4585d88588ef90c}{
+EF\_\-RGB24}
+\label{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687ca7c3890d328296e7d4585d88588ef90c}
+}]\index{EF\_\-RGB15\_\-A1@{EF\_\-RGB15\_\-A1}!GrTextureBase@{GrTextureBase}}\index{GrTextureBase@{GrTextureBase}!EF\_\-RGB15\_\-A1@{EF\_\-RGB15\_\-A1}}\item[{\em 
+\hypertarget{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c816b7060f072b80f09c85d6b4a65a2a1}{
+EF\_\-RGB15\_\-A1}
+\label{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c816b7060f072b80f09c85d6b4a65a2a1}
+}]\index{EF\_\-RGBA32@{EF\_\-RGBA32}!GrTextureBase@{GrTextureBase}}\index{GrTextureBase@{GrTextureBase}!EF\_\-RGBA32@{EF\_\-RGBA32}}\item[{\em 
+\hypertarget{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c7299859c496a8865b40024d76e6edfcd}{
+EF\_\-RGBA32}
+\label{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c7299859c496a8865b40024d76e6edfcd}
+}]\index{EF\_\-RGB48F@{EF\_\-RGB48F}!GrTextureBase@{GrTextureBase}}\index{GrTextureBase@{GrTextureBase}!EF\_\-RGB48F@{EF\_\-RGB48F}}\item[{\em 
+\hypertarget{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687cef44a075b0bdab2381607283bfd6ec65}{
+EF\_\-RGB48F}
+\label{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687cef44a075b0bdab2381607283bfd6ec65}
+}]\index{EF\_\-RGBA64F@{EF\_\-RGBA64F}!GrTextureBase@{GrTextureBase}}\index{GrTextureBase@{GrTextureBase}!EF\_\-RGBA64F@{EF\_\-RGBA64F}}\item[{\em 
+\hypertarget{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c49083663a804af33ec7afe10b304b8ca}{
+EF\_\-RGBA64F}
+\label{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c49083663a804af33ec7afe10b304b8ca}
+}]\index{EF\_\-RGBA128F@{EF\_\-RGBA128F}!GrTextureBase@{GrTextureBase}}\index{GrTextureBase@{GrTextureBase}!EF\_\-RGBA128F@{EF\_\-RGBA128F}}\item[{\em 
+\hypertarget{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c50d02863411610709b9c71ab1c879d57}{
+EF\_\-RGBA128F}
+\label{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c50d02863411610709b9c71ab1c879d57}
+}]\index{EF\_\-R8@{EF\_\-R8}!GrTextureBase@{GrTextureBase}}\index{GrTextureBase@{GrTextureBase}!EF\_\-R8@{EF\_\-R8}}\item[{\em 
+\hypertarget{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c8e92bf8961d41784bd01bd20836696e6}{
+EF\_\-R8}
+\label{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c8e92bf8961d41784bd01bd20836696e6}
+}]\index{EF\_\-RG16@{EF\_\-RG16}!GrTextureBase@{GrTextureBase}}\index{GrTextureBase@{GrTextureBase}!EF\_\-RG16@{EF\_\-RG16}}\item[{\em 
+\hypertarget{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687cfd1ee1ca46d79b66683bf20447a79f96}{
+EF\_\-RG16}
+\label{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687cfd1ee1ca46d79b66683bf20447a79f96}
+}]\index{EF\_\-L8@{EF\_\-L8}!GrTextureBase@{GrTextureBase}}\index{GrTextureBase@{GrTextureBase}!EF\_\-L8@{EF\_\-L8}}\item[{\em 
+\hypertarget{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c999b259cbadcf5c6e44b479ab5050f77}{
+EF\_\-L8}
+\label{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c999b259cbadcf5c6e44b479ab5050f77}
+}]\index{EF\_\-I8@{EF\_\-I8}!GrTextureBase@{GrTextureBase}}\index{GrTextureBase@{GrTextureBase}!EF\_\-I8@{EF\_\-I8}}\item[{\em 
+\hypertarget{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c53ac3129a7a6b0fffa12a2f590c7175f}{
+EF\_\-I8}
+\label{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c53ac3129a7a6b0fffa12a2f590c7175f}
+}]\index{EF\_\-I16F@{EF\_\-I16F}!GrTextureBase@{GrTextureBase}}\index{GrTextureBase@{GrTextureBase}!EF\_\-I16F@{EF\_\-I16F}}\item[{\em 
+\hypertarget{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c39cc2df2a89904fdf974644594e36067}{
+EF\_\-I16F}
+\label{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c39cc2df2a89904fdf974644594e36067}
+}]\index{EF\_\-A8@{EF\_\-A8}!GrTextureBase@{GrTextureBase}}\index{GrTextureBase@{GrTextureBase}!EF\_\-A8@{EF\_\-A8}}\item[{\em 
+\hypertarget{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687cde609f274dc7439abc17ccffbf8c2a95}{
+EF\_\-A8}
+\label{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687cde609f274dc7439abc17ccffbf8c2a95}
+}]\index{EF\_\-LA16@{EF\_\-LA16}!GrTextureBase@{GrTextureBase}}\index{GrTextureBase@{GrTextureBase}!EF\_\-LA16@{EF\_\-LA16}}\item[{\em 
+\hypertarget{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687ca8e8bf5ad64aa73119d52ab3535f1326}{
+EF\_\-LA16}
+\label{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687ca8e8bf5ad64aa73119d52ab3535f1326}
+}]\index{EF\_\-LA32F@{EF\_\-LA32F}!GrTextureBase@{GrTextureBase}}\index{GrTextureBase@{GrTextureBase}!EF\_\-LA32F@{EF\_\-LA32F}}\item[{\em 
+\hypertarget{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687cd57c301520793d5844ca23a5f47f7b60}{
+EF\_\-LA32F}
+\label{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687cd57c301520793d5844ca23a5f47f7b60}
+}]\index{EF\_\-NORMALMAP@{EF\_\-NORMALMAP}!GrTextureBase@{GrTextureBase}}\index{GrTextureBase@{GrTextureBase}!EF\_\-NORMALMAP@{EF\_\-NORMALMAP}}\item[{\em 
+\hypertarget{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c1775e1ba3426990f650c54815621c86d}{
+EF\_\-NORMALMAP}
+\label{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c1775e1ba3426990f650c54815621c86d}
+}]\index{EF\_\-HIGHDEFNORMALMAP@{EF\_\-HIGHDEFNORMALMAP}!GrTextureBase@{GrTextureBase}}\index{GrTextureBase@{GrTextureBase}!EF\_\-HIGHDEFNORMALMAP@{EF\_\-HIGHDEFNORMALMAP}}\item[{\em 
+\hypertarget{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687cfb1681fdea644264aedeef91c0b7d337}{
+EF\_\-HIGHDEFNORMALMAP}
+\label{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687cfb1681fdea644264aedeef91c0b7d337}
+}]\index{EF\_\-DEPTH@{EF\_\-DEPTH}!GrTextureBase@{GrTextureBase}}\index{GrTextureBase@{GrTextureBase}!EF\_\-DEPTH@{EF\_\-DEPTH}}\item[{\em 
+\hypertarget{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c71c05f345db0275987ed93102b755f7a}{
+EF\_\-DEPTH}
+\label{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c71c05f345db0275987ed93102b755f7a}
+}]\index{EF\_\-DEPTHSTENCIL@{EF\_\-DEPTHSTENCIL}!GrTextureBase@{GrTextureBase}}\index{GrTextureBase@{GrTextureBase}!EF\_\-DEPTHSTENCIL@{EF\_\-DEPTHSTENCIL}}\item[{\em 
+\hypertarget{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c129f8287ab0fb19826d05cc209d66c3d}{
+EF\_\-DEPTHSTENCIL}
+\label{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c129f8287ab0fb19826d05cc209d66c3d}
+}]\index{EF\_\-GUESS@{EF\_\-GUESS}!GrTextureBase@{GrTextureBase}}\index{GrTextureBase@{GrTextureBase}!EF\_\-GUESS@{EF\_\-GUESS}}\item[{\em 
+\hypertarget{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c983e954e5c478c1cd15fff916318eeb7}{
+EF\_\-GUESS}
+\label{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c983e954e5c478c1cd15fff916318eeb7}
+}]\index{EF\_\-COUNT@{EF\_\-COUNT}!GrTextureBase@{GrTextureBase}}\index{GrTextureBase@{GrTextureBase}!EF\_\-COUNT@{EF\_\-COUNT}}\item[{\em 
+\hypertarget{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687cc56be62e2bf809843d2063611fdea94f}{
+EF\_\-COUNT}
+\label{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687cc56be62e2bf809843d2063611fdea94f}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 28 of file GrTextureBase.h.\hypertarget{class_gr_texture_base_5ce3676de03c3c565a9a0995334e5308}{
+\index{GrTextureBase@{GrTextureBase}!ETEXTURETYPE@{ETEXTURETYPE}}
+\index{ETEXTURETYPE@{ETEXTURETYPE}!GrTextureBase@{GrTextureBase}}
+\subsubsection[{ETEXTURETYPE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GrTextureBase::ETEXTURETYPE}}}
+\label{class_gr_texture_base_5ce3676de03c3c565a9a0995334e5308}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{ETT\_\-2D@{ETT\_\-2D}!GrTextureBase@{GrTextureBase}}\index{GrTextureBase@{GrTextureBase}!ETT\_\-2D@{ETT\_\-2D}}\item[{\em 
+\hypertarget{class_gr_texture_base_5ce3676de03c3c565a9a0995334e5308d02dc086ce7c780adab8a7bb57a1bb19}{
+ETT\_\-2D}
+\label{class_gr_texture_base_5ce3676de03c3c565a9a0995334e5308d02dc086ce7c780adab8a7bb57a1bb19}
+}]\index{ETT\_\-3D@{ETT\_\-3D}!GrTextureBase@{GrTextureBase}}\index{GrTextureBase@{GrTextureBase}!ETT\_\-3D@{ETT\_\-3D}}\item[{\em 
+\hypertarget{class_gr_texture_base_5ce3676de03c3c565a9a0995334e5308758cc3ff79fc0537dd876f080ce55c59}{
+ETT\_\-3D}
+\label{class_gr_texture_base_5ce3676de03c3c565a9a0995334e5308758cc3ff79fc0537dd876f080ce55c59}
+}]\index{ETT\_\-CUBE@{ETT\_\-CUBE}!GrTextureBase@{GrTextureBase}}\index{GrTextureBase@{GrTextureBase}!ETT\_\-CUBE@{ETT\_\-CUBE}}\item[{\em 
+\hypertarget{class_gr_texture_base_5ce3676de03c3c565a9a0995334e53085a491542d9caa5f9543b500942b7b5a6}{
+ETT\_\-CUBE}
+\label{class_gr_texture_base_5ce3676de03c3c565a9a0995334e53085a491542d9caa5f9543b500942b7b5a6}
+}]\index{ETT\_\-RECT@{ETT\_\-RECT}!GrTextureBase@{GrTextureBase}}\index{GrTextureBase@{GrTextureBase}!ETT\_\-RECT@{ETT\_\-RECT}}\item[{\em 
+\hypertarget{class_gr_texture_base_5ce3676de03c3c565a9a0995334e53088892a7cf7ff8a3e99d9fafdb3c0191c6}{
+ETT\_\-RECT}
+\label{class_gr_texture_base_5ce3676de03c3c565a9a0995334e53088892a7cf7ff8a3e99d9fafdb3c0191c6}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 66 of file GrTextureBase.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_texture_base_3927e8796074e075c490b8a1827ccc3b}{
+\index{GrTextureBase@{GrTextureBase}!GrTextureBase@{GrTextureBase}}
+\index{GrTextureBase@{GrTextureBase}!GrTextureBase@{GrTextureBase}}
+\subsubsection[{GrTextureBase}]{\setlength{\rightskip}{0pt plus 5cm}GrTextureBase::GrTextureBase (const {\bf UPath} \& {\em name}, \/  unsigned int {\em bindTarget}, \/  {\bf EFORMAT} {\em format}, \/  {\bf Flags} {\em flags}, \/  {\bf ETEXTURETYPE} {\em type})}}
+\label{class_gr_texture_base_3927e8796074e075c490b8a1827ccc3b}
+
+
+
+
+Definition at line 166 of file GrTextureBase.cpp.\hypertarget{class_gr_texture_base_dac31ced75ce320ff6aa16373b225085}{
+\index{GrTextureBase@{GrTextureBase}!$\sim$GrTextureBase@{$\sim$GrTextureBase}}
+\index{$\sim$GrTextureBase@{$\sim$GrTextureBase}!GrTextureBase@{GrTextureBase}}
+\subsubsection[{$\sim$GrTextureBase}]{\setlength{\rightskip}{0pt plus 5cm}GrTextureBase::$\sim$GrTextureBase ()\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{class_gr_texture_base_dac31ced75ce320ff6aa16373b225085}
+
+
+
+
+Definition at line 192 of file GrTextureBase.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_texture_base_54326c425dda6eea167e84f45ca46ff3}{
+\index{GrTextureBase@{GrTextureBase}!AutoGenMipmaps@{AutoGenMipmaps}}
+\index{AutoGenMipmaps@{AutoGenMipmaps}!GrTextureBase@{GrTextureBase}}
+\subsubsection[{AutoGenMipmaps}]{\setlength{\rightskip}{0pt plus 5cm}void GrTextureBase::AutoGenMipmaps ()}}
+\label{class_gr_texture_base_54326c425dda6eea167e84f45ca46ff3}
+
+
+
+
+Definition at line 288 of file GrTextureBase.cpp.\hypertarget{class_gr_texture_base_2e8a9316666ee28a1fc47e90d7929f6a}{
+\index{GrTextureBase@{GrTextureBase}!Bind@{Bind}}
+\index{Bind@{Bind}!GrTextureBase@{GrTextureBase}}
+\subsubsection[{Bind}]{\setlength{\rightskip}{0pt plus 5cm}void GrTextureBase::Bind (unsigned int {\em texUnit}, \/  unsigned int {\em glMinFilter}, \/  unsigned int {\em glMagFilter}, \/  unsigned int {\em glAddressS}, \/  unsigned int {\em glAddressT}, \/  float {\em maxAnisotropy} = {\tt 1.0f}, \/  int {\em mipBias} = {\tt 0})}}
+\label{class_gr_texture_base_2e8a9316666ee28a1fc47e90d7929f6a}
+
+
+
+
+Definition at line 223 of file GrTextureBase.cpp.\hypertarget{class_gr_texture_base_4458c1c8d784beb36b228813f3edc6f0}{
+\index{GrTextureBase@{GrTextureBase}!Bind@{Bind}}
+\index{Bind@{Bind}!GrTextureBase@{GrTextureBase}}
+\subsubsection[{Bind}]{\setlength{\rightskip}{0pt plus 5cm}void GrTextureBase::Bind (unsigned int {\em texUnit})}}
+\label{class_gr_texture_base_4458c1c8d784beb36b228813f3edc6f0}
+
+
+
+
+Definition at line 213 of file GrTextureBase.cpp.\hypertarget{class_gr_texture_base_c350ea2f901475fc6cd8bfca56bc5b19}{
+\index{GrTextureBase@{GrTextureBase}!Create@{Create}}
+\index{Create@{Create}!GrTextureBase@{GrTextureBase}}
+\subsubsection[{Create}]{\setlength{\rightskip}{0pt plus 5cm}void GrTextureBase::Create ()\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_gr_texture_base_c350ea2f901475fc6cd8bfca56bc5b19}
+
+
+
+
+Definition at line 343 of file GrTextureBase.cpp.\hypertarget{class_gr_texture_base_dcc745602c8ec90a262a1bd9a81556ce}{
+\index{GrTextureBase@{GrTextureBase}!CreateImage@{CreateImage}}
+\index{CreateImage@{CreateImage}!GrTextureBase@{GrTextureBase}}
+\subsubsection[{CreateImage}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrImage} $\ast$ GrTextureBase::CreateImage (const {\bf UPath} \& {\em name})\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_gr_texture_base_dcc745602c8ec90a262a1bd9a81556ce}
+
+
+
+
+Definition at line 433 of file GrTextureBase.cpp.\hypertarget{class_gr_texture_base_4bac8a806715c03befeec5f83ceeb41f}{
+\index{GrTextureBase@{GrTextureBase}!GetAlphaBitCount@{GetAlphaBitCount}}
+\index{GetAlphaBitCount@{GetAlphaBitCount}!GrTextureBase@{GrTextureBase}}
+\subsubsection[{GetAlphaBitCount}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrTextureBase::GetAlphaBitCount () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_texture_base_4bac8a806715c03befeec5f83ceeb41f}
+
+
+
+
+Definition at line 93 of file GrTextureBase.h.\hypertarget{class_gr_texture_base_a165e1c3061d2b3e2446a6d6566487ed}{
+\index{GrTextureBase@{GrTextureBase}!GetBindTarget@{GetBindTarget}}
+\index{GetBindTarget@{GetBindTarget}!GrTextureBase@{GrTextureBase}}
+\subsubsection[{GetBindTarget}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrTextureBase::GetBindTarget () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_texture_base_a165e1c3061d2b3e2446a6d6566487ed}
+
+
+
+
+Definition at line 103 of file GrTextureBase.h.\hypertarget{class_gr_texture_base_8f049be60f5a5d093575d72914451351}{
+\index{GrTextureBase@{GrTextureBase}!GetBlueBitCount@{GetBlueBitCount}}
+\index{GetBlueBitCount@{GetBlueBitCount}!GrTextureBase@{GrTextureBase}}
+\subsubsection[{GetBlueBitCount}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrTextureBase::GetBlueBitCount () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_texture_base_8f049be60f5a5d093575d72914451351}
+
+
+
+
+Definition at line 92 of file GrTextureBase.h.\hypertarget{class_gr_texture_base_6ef12d9062a6178f2bf497334761f357}{
+\index{GrTextureBase@{GrTextureBase}!GetFlags@{GetFlags}}
+\index{GetFlags@{GetFlags}!GrTextureBase@{GrTextureBase}}
+\subsubsection[{GetFlags}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrTextureBase::GetFlags () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_texture_base_6ef12d9062a6178f2bf497334761f357}
+
+
+
+
+Definition at line 88 of file GrTextureBase.h.\hypertarget{class_gr_texture_base_9238a4bd7db2676e072b3eb85b14c684}{
+\index{GrTextureBase@{GrTextureBase}!GetFormat@{GetFormat}}
+\index{GetFormat@{GetFormat}!GrTextureBase@{GrTextureBase}}
+\subsubsection[{GetFormat}]{\setlength{\rightskip}{0pt plus 5cm}{\bf EFORMAT} GrTextureBase::GetFormat () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_texture_base_9238a4bd7db2676e072b3eb85b14c684}
+
+
+
+
+Definition at line 87 of file GrTextureBase.h.\hypertarget{class_gr_texture_base_ac63f0e0d108d3fa26b07222f2655f7a}{
+\index{GrTextureBase@{GrTextureBase}!GetGLFormat@{GetGLFormat}}
+\index{GetGLFormat@{GetGLFormat}!GrTextureBase@{GrTextureBase}}
+\subsubsection[{GetGLFormat}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrTextureBase::GetGLFormat ({\bf GrImage} $\ast$ {\em image})\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{class_gr_texture_base_ac63f0e0d108d3fa26b07222f2655f7a}
+
+
+
+
+Definition at line 392 of file GrTextureBase.cpp.\hypertarget{class_gr_texture_base_eeb990c8830fe5d9f49224ab211df183}{
+\index{GrTextureBase@{GrTextureBase}!GetGLHandle@{GetGLHandle}}
+\index{GetGLHandle@{GetGLHandle}!GrTextureBase@{GrTextureBase}}
+\subsubsection[{GetGLHandle}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrTextureBase::GetGLHandle () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_texture_base_eeb990c8830fe5d9f49224ab211df183}
+
+
+
+
+Definition at line 132 of file GrTextureBase.h.\hypertarget{class_gr_texture_base_f8b32cd3c21488e40e0667d6a253320a}{
+\index{GrTextureBase@{GrTextureBase}!GetGreenBitCount@{GetGreenBitCount}}
+\index{GetGreenBitCount@{GetGreenBitCount}!GrTextureBase@{GrTextureBase}}
+\subsubsection[{GetGreenBitCount}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrTextureBase::GetGreenBitCount () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_texture_base_f8b32cd3c21488e40e0667d6a253320a}
+
+
+
+
+Definition at line 91 of file GrTextureBase.h.\hypertarget{class_gr_texture_base_62deff3983812f7ff630ceb7021cd7b8}{
+\index{GrTextureBase@{GrTextureBase}!GetLuminanceBitCount@{GetLuminanceBitCount}}
+\index{GetLuminanceBitCount@{GetLuminanceBitCount}!GrTextureBase@{GrTextureBase}}
+\subsubsection[{GetLuminanceBitCount}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrTextureBase::GetLuminanceBitCount () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_texture_base_62deff3983812f7ff630ceb7021cd7b8}
+
+
+
+
+Definition at line 94 of file GrTextureBase.h.\hypertarget{class_gr_texture_base_7e10acc5b93473c8149f3d7fa12fb905}{
+\index{GrTextureBase@{GrTextureBase}!GetName@{GetName}}
+\index{GetName@{GetName}!GrTextureBase@{GrTextureBase}}
+\subsubsection[{GetName}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf UPath}\& GrTextureBase::GetName () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_texture_base_7e10acc5b93473c8149f3d7fa12fb905}
+
+
+
+
+Definition at line 86 of file GrTextureBase.h.\hypertarget{class_gr_texture_base_d3d44c7785028f08063c8c446d0e91a1}{
+\index{GrTextureBase@{GrTextureBase}!GetRedBitCount@{GetRedBitCount}}
+\index{GetRedBitCount@{GetRedBitCount}!GrTextureBase@{GrTextureBase}}
+\subsubsection[{GetRedBitCount}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrTextureBase::GetRedBitCount () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_texture_base_d3d44c7785028f08063c8c446d0e91a1}
+
+
+
+
+Definition at line 90 of file GrTextureBase.h.\hypertarget{class_gr_texture_base_8be868ce1a1917e37ea1e72d2436a9b2}{
+\index{GrTextureBase@{GrTextureBase}!GetTexHandle@{GetTexHandle}}
+\index{GetTexHandle@{GetTexHandle}!GrTextureBase@{GrTextureBase}}
+\subsubsection[{GetTexHandle}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrTextureBase::GetTexHandle () const\hspace{0.3cm}{\tt  \mbox{[}inline, protected\mbox{]}}}}
+\label{class_gr_texture_base_8be868ce1a1917e37ea1e72d2436a9b2}
+
+
+
+
+Definition at line 137 of file GrTextureBase.h.\hypertarget{class_gr_texture_base_d0b985795ad1856b64d17b8404b2ca08}{
+\index{GrTextureBase@{GrTextureBase}!GetType@{GetType}}
+\index{GetType@{GetType}!GrTextureBase@{GrTextureBase}}
+\subsubsection[{GetType}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ETEXTURETYPE} GrTextureBase::GetType () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_texture_base_d0b985795ad1856b64d17b8404b2ca08}
+
+
+
+
+Definition at line 85 of file GrTextureBase.h.\hypertarget{class_gr_texture_base_23cf8ef52445d659a710959b6a387eee}{
+\index{GrTextureBase@{GrTextureBase}!GetUnloadable@{GetUnloadable}}
+\index{GetUnloadable@{GetUnloadable}!GrTextureBase@{GrTextureBase}}
+\subsubsection[{GetUnloadable}]{\setlength{\rightskip}{0pt plus 5cm}bool GrTextureBase::GetUnloadable () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_texture_base_23cf8ef52445d659a710959b6a387eee}
+
+
+
+
+Definition at line 97 of file GrTextureBase.h.\hypertarget{class_gr_texture_base_80d48b8534d812f3b452a32087e3ac74}{
+\index{GrTextureBase@{GrTextureBase}!PostContextReset@{PostContextReset}}
+\index{PostContextReset@{PostContextReset}!GrTextureBase@{GrTextureBase}}
+\subsubsection[{PostContextReset}]{\setlength{\rightskip}{0pt plus 5cm}void GrTextureBase::PostContextReset ()}}
+\label{class_gr_texture_base_80d48b8534d812f3b452a32087e3ac74}
+
+
+
+
+Definition at line 318 of file GrTextureBase.cpp.\hypertarget{class_gr_texture_base_e926c5f732cafa47d1336cc9b7637a44}{
+\index{GrTextureBase@{GrTextureBase}!PreContextReset@{PreContextReset}}
+\index{PreContextReset@{PreContextReset}!GrTextureBase@{GrTextureBase}}
+\subsubsection[{PreContextReset}]{\setlength{\rightskip}{0pt plus 5cm}void GrTextureBase::PreContextReset ()}}
+\label{class_gr_texture_base_e926c5f732cafa47d1336cc9b7637a44}
+
+
+
+
+Definition at line 309 of file GrTextureBase.cpp.\hypertarget{class_gr_texture_base_b2752d6e88cda86e8c45b601941aa9b5}{
+\index{GrTextureBase@{GrTextureBase}!Recreate@{Recreate}}
+\index{Recreate@{Recreate}!GrTextureBase@{GrTextureBase}}
+\subsubsection[{Recreate}]{\setlength{\rightskip}{0pt plus 5cm}void GrTextureBase::Recreate ()}}
+\label{class_gr_texture_base_b2752d6e88cda86e8c45b601941aa9b5}
+
+
+
+
+Definition at line 301 of file GrTextureBase.cpp.\hypertarget{class_gr_texture_base_09675e3d061d4389c54ad7e0df5cb674}{
+\index{GrTextureBase@{GrTextureBase}!SetFlags@{SetFlags}}
+\index{SetFlags@{SetFlags}!GrTextureBase@{GrTextureBase}}
+\subsubsection[{SetFlags}]{\setlength{\rightskip}{0pt plus 5cm}void GrTextureBase::SetFlags ({\bf Flags} {\em flags})}}
+\label{class_gr_texture_base_09675e3d061d4389c54ad7e0df5cb674}
+
+
+
+
+Definition at line 206 of file GrTextureBase.cpp.\hypertarget{class_gr_texture_base_db1eeb663d3d3301f675832b646be22e}{
+\index{GrTextureBase@{GrTextureBase}!SetUnloadable@{SetUnloadable}}
+\index{SetUnloadable@{SetUnloadable}!GrTextureBase@{GrTextureBase}}
+\subsubsection[{SetUnloadable}]{\setlength{\rightskip}{0pt plus 5cm}void GrTextureBase::SetUnloadable (bool {\em unloadable})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_texture_base_db1eeb663d3d3301f675832b646be22e}
+
+
+
+
+Definition at line 96 of file GrTextureBase.h.\hypertarget{class_gr_texture_base_936b0525e5e40c7a4a591c5c345ee0ca}{
+\index{GrTextureBase@{GrTextureBase}!Unbind@{Unbind}}
+\index{Unbind@{Unbind}!GrTextureBase@{GrTextureBase}}
+\subsubsection[{Unbind}]{\setlength{\rightskip}{0pt plus 5cm}void GrTextureBase::Unbind ()}}
+\label{class_gr_texture_base_936b0525e5e40c7a4a591c5c345ee0ca}
+
+
+
+
+Definition at line 277 of file GrTextureBase.cpp.\hypertarget{class_gr_texture_base_210a2e21f20c0c9da855315c72319cff}{
+\index{GrTextureBase@{GrTextureBase}!UploadImage@{UploadImage}}
+\index{UploadImage@{UploadImage}!GrTextureBase@{GrTextureBase}}
+\subsubsection[{UploadImage}]{\setlength{\rightskip}{0pt plus 5cm}virtual void GrTextureBase::UploadImage (bool {\em mipmap})\hspace{0.3cm}{\tt  \mbox{[}protected, pure virtual\mbox{]}}}}
+\label{class_gr_texture_base_210a2e21f20c0c9da855315c72319cff}
+
+
+\hypertarget{class_gr_texture_base_2c2c9ce5410067d710b26d4dfe37721d}{
+\index{GrTextureBase@{GrTextureBase}!WasCreated@{WasCreated}}
+\index{WasCreated@{WasCreated}!GrTextureBase@{GrTextureBase}}
+\subsubsection[{WasCreated}]{\setlength{\rightskip}{0pt plus 5cm}bool GrTextureBase::WasCreated () const\hspace{0.3cm}{\tt  \mbox{[}inline, protected\mbox{]}}}}
+\label{class_gr_texture_base_2c2c9ce5410067d710b26d4dfe37721d}
+
+
+
+
+Definition at line 136 of file GrTextureBase.h.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_gr_texture_base_eadfc66a46b95c9a456782906da84890}{
+\index{GrTextureBase@{GrTextureBase}!kBorder@{kBorder}}
+\index{kBorder@{kBorder}!GrTextureBase@{GrTextureBase}}
+\subsubsection[{kBorder}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int {\bf GrTextureBase::kBorder} = 0x0010\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_gr_texture_base_eadfc66a46b95c9a456782906da84890}
+
+
+
+
+Definition at line 78 of file GrTextureBase.h.\hypertarget{class_gr_texture_base_184780018f2b67996c9274798e52607e}{
+\index{GrTextureBase@{GrTextureBase}!kNoCompress@{kNoCompress}}
+\index{kNoCompress@{kNoCompress}!GrTextureBase@{GrTextureBase}}
+\subsubsection[{kNoCompress}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int {\bf GrTextureBase::kNoCompress} = 0x0008\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_gr_texture_base_184780018f2b67996c9274798e52607e}
+
+
+
+
+Definition at line 77 of file GrTextureBase.h.\hypertarget{class_gr_texture_base_47f4a8d764ba3c8e9e353a394edfcd2c}{
+\index{GrTextureBase@{GrTextureBase}!kNoMipMap@{kNoMipMap}}
+\index{kNoMipMap@{kNoMipMap}!GrTextureBase@{GrTextureBase}}
+\subsubsection[{kNoMipMap}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int {\bf GrTextureBase::kNoMipMap} = 0x0001\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_gr_texture_base_47f4a8d764ba3c8e9e353a394edfcd2c}
+
+
+
+
+Definition at line 76 of file GrTextureBase.h.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_texture_base_8h}{GrTextureBase.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_texture_base_8cpp}{GrTextureBase.cpp}\end{CompactItemize}

@@ -1,0 +1,197 @@
+\hypertarget{class_gr_texture}{
+\section{GrTexture Class Reference}
+\label{class_gr_texture}\index{GrTexture@{GrTexture}}
+}
+{\tt \#include $<$GrTexture.h$>$}
+
+Inheritance diagram for GrTexture::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{class_gr_texture}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_texture_5f32f1b6d6f4915477b3c7faaa16d709}{GrTexture} (const \hyperlink{class_u_path}{UPath} \&\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, \hyperlink{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c}{EFORMAT} \hyperlink{glext__bak_8h_e2d3db041c6004a67047659b42f73a44}{format}, unsigned int \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, unsigned int \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height}, unsigned int \hyperlink{_u_t_message_8h_0a3c0b351ab09281b662a9ff4f900a53}{flags})
+\item 
+\hyperlink{class_gr_texture_c134a41f404fb47416c5a0e374792737}{GrTexture} (const \hyperlink{class_u_path}{UPath} \&\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, const \hyperlink{class_u_path}{UPath} \&rsrcName, \hyperlink{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c}{EFORMAT} \hyperlink{glext__bak_8h_e2d3db041c6004a67047659b42f73a44}{format}, unsigned int \hyperlink{_u_t_message_8h_0a3c0b351ab09281b662a9ff4f900a53}{flags}, bool cacheImage)
+\item 
+\hyperlink{class_gr_texture_7705b602e3918639f58b799495529c68}{GrTexture} (const \hyperlink{class_u_path}{UPath} \&\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, \hyperlink{class_gr_image}{GrImage} $\ast$\hyperlink{glext__bak_8h_8943555672bc4b8056204eb92329cafa}{image}, \hyperlink{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c}{EFORMAT} \hyperlink{glext__bak_8h_e2d3db041c6004a67047659b42f73a44}{format}, unsigned int \hyperlink{_u_t_message_8h_0a3c0b351ab09281b662a9ff4f900a53}{flags})
+\item 
+\hyperlink{class_gr_texture_13f13092919de67e0cfc6bd14cf94ca1}{$\sim$GrTexture} ()
+\item 
+bool \hyperlink{class_gr_texture_3467681d14e81406629f9b611016aaa9}{FromFile} () const 
+\item 
+const \hyperlink{class_u_path}{UPath} \& \hyperlink{class_gr_texture_9dd7315f4f9ce115291f8d3fdc149594}{GetResourceName} () const 
+\item 
+\hyperlink{class_gr_image}{GrImage} $\ast$ \hyperlink{class_gr_texture_abe145a3b9a78ffcbb468ed493c97357}{GetOwnedImage} () const 
+\item 
+void \hyperlink{class_gr_texture_4d7fd1aa369f4083de4dee05abc8020b}{OwnedImageChanged} ()
+\item 
+unsigned int \hyperlink{class_gr_texture_74f19716b3fb47bed8fa89164304ff4a}{GetWidth} () const 
+\item 
+unsigned int \hyperlink{class_gr_texture_2b073d233b3501d76257589edc417996}{GetHeight} () const 
+\item 
+void \hyperlink{class_gr_texture_5e10056726037b39e6980e9cd81c984d}{SetHWShadowEnable} (bool enable)
+\item 
+void \hyperlink{class_gr_texture_c0d44e0f407c06a8c3282e0325faaf87}{BindToFramebuffer} (unsigned int \hyperlink{glext__bak_8h_d8f97111cc6514af5f352219d1cceb40}{attachment})
+\item 
+void \hyperlink{class_gr_texture_3cd234effbf7e79d1c82031ff842c69c}{UploadPixelData} (int dstLevel, int dstX, int dstY, int \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, int \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height}, const void $\ast$srcPels, GLenum srcFormat, GLenum srcType)
+\item 
+void \hyperlink{class_gr_texture_b1deb448c9ae51a1c6b06997e7ffba0f}{UploadPixelDataCompressed} (int dstLevel, int dstX, int dstY, int \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, int \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height}, const void $\ast$srcPels, GLenum srcFormat, unsigned int srcDataSize)
+\item 
+void \hyperlink{class_gr_texture_35c6eed25d22b0b360f57c518e2188b4}{DebugSave} (const char $\ast$fileName)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 24 of file GrTexture.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_texture_5f32f1b6d6f4915477b3c7faaa16d709}{
+\index{GrTexture@{GrTexture}!GrTexture@{GrTexture}}
+\index{GrTexture@{GrTexture}!GrTexture@{GrTexture}}
+\subsubsection[{GrTexture}]{\setlength{\rightskip}{0pt plus 5cm}GrTexture::GrTexture (const {\bf UPath} \& {\em name}, \/  {\bf EFORMAT} {\em format}, \/  unsigned int {\em width}, \/  unsigned int {\em height}, \/  unsigned int {\em flags})}}
+\label{class_gr_texture_5f32f1b6d6f4915477b3c7faaa16d709}
+
+
+
+
+Definition at line 40 of file GrTexture.cpp.\hypertarget{class_gr_texture_c134a41f404fb47416c5a0e374792737}{
+\index{GrTexture@{GrTexture}!GrTexture@{GrTexture}}
+\index{GrTexture@{GrTexture}!GrTexture@{GrTexture}}
+\subsubsection[{GrTexture}]{\setlength{\rightskip}{0pt plus 5cm}GrTexture::GrTexture (const {\bf UPath} \& {\em name}, \/  const {\bf UPath} \& {\em rsrcName}, \/  {\bf EFORMAT} {\em format}, \/  unsigned int {\em flags}, \/  bool {\em cacheImage})}}
+\label{class_gr_texture_c134a41f404fb47416c5a0e374792737}
+
+
+
+
+Definition at line 56 of file GrTexture.cpp.\hypertarget{class_gr_texture_7705b602e3918639f58b799495529c68}{
+\index{GrTexture@{GrTexture}!GrTexture@{GrTexture}}
+\index{GrTexture@{GrTexture}!GrTexture@{GrTexture}}
+\subsubsection[{GrTexture}]{\setlength{\rightskip}{0pt plus 5cm}GrTexture::GrTexture (const {\bf UPath} \& {\em name}, \/  {\bf GrImage} $\ast$ {\em image}, \/  {\bf EFORMAT} {\em format}, \/  unsigned int {\em flags})}}
+\label{class_gr_texture_7705b602e3918639f58b799495529c68}
+
+
+
+
+Definition at line 82 of file GrTexture.cpp.\hypertarget{class_gr_texture_13f13092919de67e0cfc6bd14cf94ca1}{
+\index{GrTexture@{GrTexture}!$\sim$GrTexture@{$\sim$GrTexture}}
+\index{$\sim$GrTexture@{$\sim$GrTexture}!GrTexture@{GrTexture}}
+\subsubsection[{$\sim$GrTexture}]{\setlength{\rightskip}{0pt plus 5cm}GrTexture::$\sim$GrTexture ()}}
+\label{class_gr_texture_13f13092919de67e0cfc6bd14cf94ca1}
+
+
+
+
+Definition at line 101 of file GrTexture.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_texture_c0d44e0f407c06a8c3282e0325faaf87}{
+\index{GrTexture@{GrTexture}!BindToFramebuffer@{BindToFramebuffer}}
+\index{BindToFramebuffer@{BindToFramebuffer}!GrTexture@{GrTexture}}
+\subsubsection[{BindToFramebuffer}]{\setlength{\rightskip}{0pt plus 5cm}void GrTexture::BindToFramebuffer (unsigned int {\em attachment})}}
+\label{class_gr_texture_c0d44e0f407c06a8c3282e0325faaf87}
+
+
+
+
+Definition at line 147 of file GrTexture.cpp.\hypertarget{class_gr_texture_35c6eed25d22b0b360f57c518e2188b4}{
+\index{GrTexture@{GrTexture}!DebugSave@{DebugSave}}
+\index{DebugSave@{DebugSave}!GrTexture@{GrTexture}}
+\subsubsection[{DebugSave}]{\setlength{\rightskip}{0pt plus 5cm}void GrTexture::DebugSave (const char $\ast$ {\em fileName})}}
+\label{class_gr_texture_35c6eed25d22b0b360f57c518e2188b4}
+
+
+
+
+Definition at line 193 of file GrTexture.cpp.\hypertarget{class_gr_texture_3467681d14e81406629f9b611016aaa9}{
+\index{GrTexture@{GrTexture}!FromFile@{FromFile}}
+\index{FromFile@{FromFile}!GrTexture@{GrTexture}}
+\subsubsection[{FromFile}]{\setlength{\rightskip}{0pt plus 5cm}bool GrTexture::FromFile () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_texture_3467681d14e81406629f9b611016aaa9}
+
+
+
+
+Definition at line 43 of file GrTexture.h.\hypertarget{class_gr_texture_2b073d233b3501d76257589edc417996}{
+\index{GrTexture@{GrTexture}!GetHeight@{GetHeight}}
+\index{GetHeight@{GetHeight}!GrTexture@{GrTexture}}
+\subsubsection[{GetHeight}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrTexture::GetHeight () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_texture_2b073d233b3501d76257589edc417996}
+
+
+
+
+Definition at line 57 of file GrTexture.h.\hypertarget{class_gr_texture_abe145a3b9a78ffcbb468ed493c97357}{
+\index{GrTexture@{GrTexture}!GetOwnedImage@{GetOwnedImage}}
+\index{GetOwnedImage@{GetOwnedImage}!GrTexture@{GrTexture}}
+\subsubsection[{GetOwnedImage}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrImage}$\ast$ GrTexture::GetOwnedImage () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_texture_abe145a3b9a78ffcbb468ed493c97357}
+
+
+
+
+Definition at line 49 of file GrTexture.h.\hypertarget{class_gr_texture_9dd7315f4f9ce115291f8d3fdc149594}{
+\index{GrTexture@{GrTexture}!GetResourceName@{GetResourceName}}
+\index{GetResourceName@{GetResourceName}!GrTexture@{GrTexture}}
+\subsubsection[{GetResourceName}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf UPath}\& GrTexture::GetResourceName () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_texture_9dd7315f4f9ce115291f8d3fdc149594}
+
+
+
+
+Definition at line 44 of file GrTexture.h.\hypertarget{class_gr_texture_74f19716b3fb47bed8fa89164304ff4a}{
+\index{GrTexture@{GrTexture}!GetWidth@{GetWidth}}
+\index{GetWidth@{GetWidth}!GrTexture@{GrTexture}}
+\subsubsection[{GetWidth}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrTexture::GetWidth () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_texture_74f19716b3fb47bed8fa89164304ff4a}
+
+
+
+
+Definition at line 56 of file GrTexture.h.\hypertarget{class_gr_texture_4d7fd1aa369f4083de4dee05abc8020b}{
+\index{GrTexture@{GrTexture}!OwnedImageChanged@{OwnedImageChanged}}
+\index{OwnedImageChanged@{OwnedImageChanged}!GrTexture@{GrTexture}}
+\subsubsection[{OwnedImageChanged}]{\setlength{\rightskip}{0pt plus 5cm}void GrTexture::OwnedImageChanged ()}}
+\label{class_gr_texture_4d7fd1aa369f4083de4dee05abc8020b}
+
+
+
+
+Definition at line 113 of file GrTexture.cpp.\hypertarget{class_gr_texture_5e10056726037b39e6980e9cd81c984d}{
+\index{GrTexture@{GrTexture}!SetHWShadowEnable@{SetHWShadowEnable}}
+\index{SetHWShadowEnable@{SetHWShadowEnable}!GrTexture@{GrTexture}}
+\subsubsection[{SetHWShadowEnable}]{\setlength{\rightskip}{0pt plus 5cm}void GrTexture::SetHWShadowEnable (bool {\em enable})}}
+\label{class_gr_texture_5e10056726037b39e6980e9cd81c984d}
+
+
+
+
+Definition at line 125 of file GrTexture.cpp.\hypertarget{class_gr_texture_3cd234effbf7e79d1c82031ff842c69c}{
+\index{GrTexture@{GrTexture}!UploadPixelData@{UploadPixelData}}
+\index{UploadPixelData@{UploadPixelData}!GrTexture@{GrTexture}}
+\subsubsection[{UploadPixelData}]{\setlength{\rightskip}{0pt plus 5cm}void GrTexture::UploadPixelData (int {\em dstLevel}, \/  int {\em dstX}, \/  int {\em dstY}, \/  int {\em width}, \/  int {\em height}, \/  const void $\ast$ {\em srcPels}, \/  GLenum {\em srcFormat}, \/  GLenum {\em srcType})}}
+\label{class_gr_texture_3cd234effbf7e79d1c82031ff842c69c}
+
+
+
+
+Definition at line 158 of file GrTexture.cpp.\hypertarget{class_gr_texture_b1deb448c9ae51a1c6b06997e7ffba0f}{
+\index{GrTexture@{GrTexture}!UploadPixelDataCompressed@{UploadPixelDataCompressed}}
+\index{UploadPixelDataCompressed@{UploadPixelDataCompressed}!GrTexture@{GrTexture}}
+\subsubsection[{UploadPixelDataCompressed}]{\setlength{\rightskip}{0pt plus 5cm}void GrTexture::UploadPixelDataCompressed (int {\em dstLevel}, \/  int {\em dstX}, \/  int {\em dstY}, \/  int {\em width}, \/  int {\em height}, \/  const void $\ast$ {\em srcPels}, \/  GLenum {\em srcFormat}, \/  unsigned int {\em srcDataSize})}}
+\label{class_gr_texture_b1deb448c9ae51a1c6b06997e7ffba0f}
+
+
+
+
+Definition at line 177 of file GrTexture.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_texture_8h}{GrTexture.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_texture_8cpp}{GrTexture.cpp}\end{CompactItemize}

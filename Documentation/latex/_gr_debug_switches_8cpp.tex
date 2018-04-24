@@ -1,0 +1,70 @@
+\hypertarget{_gr_debug_switches_8cpp}{
+\section{C:/Bootstrap/ProjectBX/Engine/Graphics/GrDebugSwitches.cpp File Reference}
+\label{_gr_debug_switches_8cpp}\index{C:/Bootstrap/ProjectBX/Engine/Graphics/GrDebugSwitches.cpp@{C:/Bootstrap/ProjectBX/Engine/Graphics/GrDebugSwitches.cpp}}
+}
+{\tt \#include \char`\"{}graphics\_\-afx.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrDebugSwitches.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrSubsys.h\char`\"{}}\par
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \hyperlink{_gr_debug_switches_8cpp_35f6c3447773ac29de612c241a05a1c9}{DECLARE\_\-BOOLEAN\_\-SWITCH}(\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name})
+\item 
+\#define \hyperlink{_gr_debug_switches_8cpp_63ea947c7fe6aa95fa28168c594b9f24}{REGISTER\_\-BOOLEAN\_\-SWITCH}(\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name})~\hyperlink{_gr_subsys_8h_cb23adbcd4af8e3a3f80d4b3727f8918}{gGrSubsys} $\rightarrow$ AddCommandHandler( \#\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, \hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}\#\#Proc )
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+void \hyperlink{_gr_debug_switches_8cpp_d0ac3938ef42e1b7be3fa997c0c08173}{GrRegisterDebugSwitches} ()
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_gr_debug_switches_8cpp_35f6c3447773ac29de612c241a05a1c9}{
+\index{GrDebugSwitches.cpp@{GrDebugSwitches.cpp}!DECLARE\_\-BOOLEAN\_\-SWITCH@{DECLARE\_\-BOOLEAN\_\-SWITCH}}
+\index{DECLARE\_\-BOOLEAN\_\-SWITCH@{DECLARE\_\-BOOLEAN\_\-SWITCH}!GrDebugSwitches.cpp@{GrDebugSwitches.cpp}}
+\subsubsection[{DECLARE\_\-BOOLEAN\_\-SWITCH}]{\setlength{\rightskip}{0pt plus 5cm}\#define DECLARE\_\-BOOLEAN\_\-SWITCH({\bf name})}}
+\label{_gr_debug_switches_8cpp_35f6c3447773ac29de612c241a05a1c9}
+
+
+\textbf{Value:}
+
+\begin{Code}\begin{verbatim}bool name = false; \
+        bool name##Proc( const tstring& command ) \
+        { \
+                char buf[ 6 ]; \
+                sscanf( command.c_str(), "%*s %5s", buf ); \
+                if ( stricmp( buf, "true" ) == 0 || strcmp( buf, "1" ) == 0 ) \
+                        name = true; \
+                else if ( stricmp( buf, "false" ) == 0 || strcmp( buf, "0" ) == 0 ) \
+                        name = false; \
+                else \
+                        return false; \
+                return true; \
+        }
+\end{verbatim}
+\end{Code}
+
+
+Definition at line 19 of file GrDebugSwitches.cpp.\hypertarget{_gr_debug_switches_8cpp_63ea947c7fe6aa95fa28168c594b9f24}{
+\index{GrDebugSwitches.cpp@{GrDebugSwitches.cpp}!REGISTER\_\-BOOLEAN\_\-SWITCH@{REGISTER\_\-BOOLEAN\_\-SWITCH}}
+\index{REGISTER\_\-BOOLEAN\_\-SWITCH@{REGISTER\_\-BOOLEAN\_\-SWITCH}!GrDebugSwitches.cpp@{GrDebugSwitches.cpp}}
+\subsubsection[{REGISTER\_\-BOOLEAN\_\-SWITCH}]{\setlength{\rightskip}{0pt plus 5cm}\#define REGISTER\_\-BOOLEAN\_\-SWITCH({\bf name})~{\bf gGrSubsys} $\rightarrow$ AddCommandHandler( \#{\bf name}, {\bf name}\#\#Proc )}}
+\label{_gr_debug_switches_8cpp_63ea947c7fe6aa95fa28168c594b9f24}
+
+
+
+
+Definition at line 35 of file GrDebugSwitches.cpp.
+
+\subsection{Function Documentation}
+\hypertarget{_gr_debug_switches_8cpp_d0ac3938ef42e1b7be3fa997c0c08173}{
+\index{GrDebugSwitches.cpp@{GrDebugSwitches.cpp}!GrRegisterDebugSwitches@{GrRegisterDebugSwitches}}
+\index{GrRegisterDebugSwitches@{GrRegisterDebugSwitches}!GrDebugSwitches.cpp@{GrDebugSwitches.cpp}}
+\subsubsection[{GrRegisterDebugSwitches}]{\setlength{\rightskip}{0pt plus 5cm}void GrRegisterDebugSwitches ()}}
+\label{_gr_debug_switches_8cpp_d0ac3938ef42e1b7be3fa997c0c08173}
+
+
+
+
+Definition at line 43 of file GrDebugSwitches.cpp.

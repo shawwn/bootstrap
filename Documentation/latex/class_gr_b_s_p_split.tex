@@ -1,0 +1,164 @@
+\hypertarget{class_gr_b_s_p_split}{
+\section{GrBSPSplit Class Reference}
+\label{class_gr_b_s_p_split}\index{GrBSPSplit@{GrBSPSplit}}
+}
+{\tt \#include $<$GrBSPSplit.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef std::vector$<$ \hyperlink{class_gr_mesh_inst}{GrMeshInst} $\ast$ $>$ \hyperlink{class_gr_b_s_p_split_0d83e2da4ca339cbb2bb2060b2bec99b}{MeshInstVec}
+\item 
+typedef std::vector$<$ \hyperlink{class_gr_mesh_combiner}{GrMeshCombiner} $\ast$ $>$ \hyperlink{class_gr_b_s_p_split_c43b3da58545a4586d6a7a451f5935af}{CombinerArray}
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_b_s_p_split_40e7d5a265ecb02482fed589590c9e9f}{GrBSPSplit} (\hyperlink{class_u_reader}{UReader} \&reader)
+\item 
+\hyperlink{class_gr_b_s_p_split_dfb634909406abfbadc2a5af029d7e1f}{GrBSPSplit} (\hyperlink{class_gr_b_s_p_split_c43b3da58545a4586d6a7a451f5935af}{CombinerArray} \&meshCombiners, const \hyperlink{class_gr_polygon_b_s_p_split}{GrPolygonBSPSplit} \&polygonBSPSplit, const \hyperlink{class_gr_polygon_uber_u_v_mapper}{GrPolygonUberUVMapper} \&mapper)
+\item 
+\hyperlink{class_gr_b_s_p_split_9bafe80ce7b2b9f769c3cfa81cb6ae74}{$\sim$GrBSPSplit} ()
+\item 
+const \hyperlink{class_m_a_a_box}{MAABox} \& \hyperlink{class_gr_b_s_p_split_d350a8e48025fdad328728bd7fdd4e59}{GetBounds} () const 
+\item 
+\hyperlink{class_gr_b_s_p_area}{GrBSPArea} $\ast$ \hyperlink{class_gr_b_s_p_split_3340c0f7673b0861c89f8b434b97271c}{GetArea} (const \hyperlink{class_m_vec3}{MVec3} \&pos)
+\item 
+void \hyperlink{class_gr_b_s_p_split_6bbc3680f991d069a2e7da4d1d5ae939}{GetAreas} (std::vector$<$ \hyperlink{class_gr_b_s_p_area}{GrBSPArea} $\ast$ $>$ \&areas)
+\item 
+bool \hyperlink{class_gr_b_s_p_split_0563f3ee8c06239078f320d1bab3c6f3}{Pick} (\hyperlink{class_gr_mesh_inst}{GrMeshInst} $\ast$\&meshInst, \hyperlink{struct_gr_mesh_1_1_s_tri_collision}{GrMesh::STriCollision} \&hit, const \hyperlink{class_gr_b_s_p_split_0d83e2da4ca339cbb2bb2060b2bec99b}{MeshInstVec} \&meshInsts, const \hyperlink{class_m_ray}{MRay} \&ray)
+\item 
+void \hyperlink{class_gr_b_s_p_split_dad2ea9500a1bedb5736e6d248f3d802}{Traverse} (\hyperlink{class_gr_scene_traverser}{GrSceneTraverser} $\ast$traverser, const \hyperlink{class_gr_b_s_p_split_0d83e2da4ca339cbb2bb2060b2bec99b}{MeshInstVec} \&meshes)
+\item 
+void \hyperlink{class_gr_b_s_p_split_126cdb20e5d6df4c722c1f6277364e89}{Load} (\hyperlink{class_u_reader}{UReader} \&reader)
+\item 
+void \hyperlink{class_gr_b_s_p_split_01c7a29e9a6a511fea57ee9e4bf53496}{Save} (\hyperlink{class_u_writer}{UWriter} \&writer)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 34 of file GrBSPSplit.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_gr_b_s_p_split_c43b3da58545a4586d6a7a451f5935af}{
+\index{GrBSPSplit@{GrBSPSplit}!CombinerArray@{CombinerArray}}
+\index{CombinerArray@{CombinerArray}!GrBSPSplit@{GrBSPSplit}}
+\subsubsection[{CombinerArray}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<$ {\bf GrMeshCombiner}$\ast$ $>$ {\bf GrBSPSplit::CombinerArray}}}
+\label{class_gr_b_s_p_split_c43b3da58545a4586d6a7a451f5935af}
+
+
+
+
+Definition at line 38 of file GrBSPSplit.h.\hypertarget{class_gr_b_s_p_split_0d83e2da4ca339cbb2bb2060b2bec99b}{
+\index{GrBSPSplit@{GrBSPSplit}!MeshInstVec@{MeshInstVec}}
+\index{MeshInstVec@{MeshInstVec}!GrBSPSplit@{GrBSPSplit}}
+\subsubsection[{MeshInstVec}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<$ {\bf GrMeshInst}$\ast$ $>$ {\bf GrBSPSplit::MeshInstVec}}}
+\label{class_gr_b_s_p_split_0d83e2da4ca339cbb2bb2060b2bec99b}
+
+
+
+
+Definition at line 37 of file GrBSPSplit.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_b_s_p_split_40e7d5a265ecb02482fed589590c9e9f}{
+\index{GrBSPSplit@{GrBSPSplit}!GrBSPSplit@{GrBSPSplit}}
+\index{GrBSPSplit@{GrBSPSplit}!GrBSPSplit@{GrBSPSplit}}
+\subsubsection[{GrBSPSplit}]{\setlength{\rightskip}{0pt plus 5cm}GrBSPSplit::GrBSPSplit ({\bf UReader} \& {\em reader})}}
+\label{class_gr_b_s_p_split_40e7d5a265ecb02482fed589590c9e9f}
+
+
+
+
+Definition at line 36 of file GrBSPSplit.cpp.\hypertarget{class_gr_b_s_p_split_dfb634909406abfbadc2a5af029d7e1f}{
+\index{GrBSPSplit@{GrBSPSplit}!GrBSPSplit@{GrBSPSplit}}
+\index{GrBSPSplit@{GrBSPSplit}!GrBSPSplit@{GrBSPSplit}}
+\subsubsection[{GrBSPSplit}]{\setlength{\rightskip}{0pt plus 5cm}GrBSPSplit::GrBSPSplit ({\bf CombinerArray} \& {\em meshCombiners}, \/  const {\bf GrPolygonBSPSplit} \& {\em polygonBSPSplit}, \/  const {\bf GrPolygonUberUVMapper} \& {\em mapper})}}
+\label{class_gr_b_s_p_split_dfb634909406abfbadc2a5af029d7e1f}
+
+
+
+
+Definition at line 46 of file GrBSPSplit.cpp.\hypertarget{class_gr_b_s_p_split_9bafe80ce7b2b9f769c3cfa81cb6ae74}{
+\index{GrBSPSplit@{GrBSPSplit}!$\sim$GrBSPSplit@{$\sim$GrBSPSplit}}
+\index{$\sim$GrBSPSplit@{$\sim$GrBSPSplit}!GrBSPSplit@{GrBSPSplit}}
+\subsubsection[{$\sim$GrBSPSplit}]{\setlength{\rightskip}{0pt plus 5cm}GrBSPSplit::$\sim$GrBSPSplit ()}}
+\label{class_gr_b_s_p_split_9bafe80ce7b2b9f769c3cfa81cb6ae74}
+
+
+
+
+Definition at line 72 of file GrBSPSplit.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_b_s_p_split_3340c0f7673b0861c89f8b434b97271c}{
+\index{GrBSPSplit@{GrBSPSplit}!GetArea@{GetArea}}
+\index{GetArea@{GetArea}!GrBSPSplit@{GrBSPSplit}}
+\subsubsection[{GetArea}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrBSPArea} $\ast$ GrBSPSplit::GetArea (const {\bf MVec3} \& {\em pos})}}
+\label{class_gr_b_s_p_split_3340c0f7673b0861c89f8b434b97271c}
+
+
+
+
+Definition at line 87 of file GrBSPSplit.cpp.\hypertarget{class_gr_b_s_p_split_6bbc3680f991d069a2e7da4d1d5ae939}{
+\index{GrBSPSplit@{GrBSPSplit}!GetAreas@{GetAreas}}
+\index{GetAreas@{GetAreas}!GrBSPSplit@{GrBSPSplit}}
+\subsubsection[{GetAreas}]{\setlength{\rightskip}{0pt plus 5cm}void GrBSPSplit::GetAreas (std::vector$<$ {\bf GrBSPArea} $\ast$ $>$ \& {\em areas})}}
+\label{class_gr_b_s_p_split_6bbc3680f991d069a2e7da4d1d5ae939}
+
+
+
+
+Definition at line 108 of file GrBSPSplit.cpp.\hypertarget{class_gr_b_s_p_split_d350a8e48025fdad328728bd7fdd4e59}{
+\index{GrBSPSplit@{GrBSPSplit}!GetBounds@{GetBounds}}
+\index{GetBounds@{GetBounds}!GrBSPSplit@{GrBSPSplit}}
+\subsubsection[{GetBounds}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MAABox}\& GrBSPSplit::GetBounds () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_b_s_p_split_d350a8e48025fdad328728bd7fdd4e59}
+
+
+
+
+Definition at line 46 of file GrBSPSplit.h.\hypertarget{class_gr_b_s_p_split_126cdb20e5d6df4c722c1f6277364e89}{
+\index{GrBSPSplit@{GrBSPSplit}!Load@{Load}}
+\index{Load@{Load}!GrBSPSplit@{GrBSPSplit}}
+\subsubsection[{Load}]{\setlength{\rightskip}{0pt plus 5cm}void GrBSPSplit::Load ({\bf UReader} \& {\em reader})}}
+\label{class_gr_b_s_p_split_126cdb20e5d6df4c722c1f6277364e89}
+
+
+
+
+Definition at line 177 of file GrBSPSplit.cpp.\hypertarget{class_gr_b_s_p_split_0563f3ee8c06239078f320d1bab3c6f3}{
+\index{GrBSPSplit@{GrBSPSplit}!Pick@{Pick}}
+\index{Pick@{Pick}!GrBSPSplit@{GrBSPSplit}}
+\subsubsection[{Pick}]{\setlength{\rightskip}{0pt plus 5cm}bool GrBSPSplit::Pick ({\bf GrMeshInst} $\ast$\& {\em meshInst}, \/  {\bf GrMesh::STriCollision} \& {\em hit}, \/  const {\bf MeshInstVec} \& {\em meshInsts}, \/  const {\bf MRay} \& {\em ray})}}
+\label{class_gr_b_s_p_split_0563f3ee8c06239078f320d1bab3c6f3}
+
+
+
+
+Definition at line 123 of file GrBSPSplit.cpp.\hypertarget{class_gr_b_s_p_split_01c7a29e9a6a511fea57ee9e4bf53496}{
+\index{GrBSPSplit@{GrBSPSplit}!Save@{Save}}
+\index{Save@{Save}!GrBSPSplit@{GrBSPSplit}}
+\subsubsection[{Save}]{\setlength{\rightskip}{0pt plus 5cm}void GrBSPSplit::Save ({\bf UWriter} \& {\em writer})}}
+\label{class_gr_b_s_p_split_01c7a29e9a6a511fea57ee9e4bf53496}
+
+
+
+
+Definition at line 198 of file GrBSPSplit.cpp.\hypertarget{class_gr_b_s_p_split_dad2ea9500a1bedb5736e6d248f3d802}{
+\index{GrBSPSplit@{GrBSPSplit}!Traverse@{Traverse}}
+\index{Traverse@{Traverse}!GrBSPSplit@{GrBSPSplit}}
+\subsubsection[{Traverse}]{\setlength{\rightskip}{0pt plus 5cm}void GrBSPSplit::Traverse ({\bf GrSceneTraverser} $\ast$ {\em traverser}, \/  const {\bf MeshInstVec} \& {\em meshes})}}
+\label{class_gr_b_s_p_split_dad2ea9500a1bedb5736e6d248f3d802}
+
+
+
+
+Definition at line 156 of file GrBSPSplit.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_b_s_p_split_8h}{GrBSPSplit.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_b_s_p_split_8cpp}{GrBSPSplit.cpp}\end{CompactItemize}

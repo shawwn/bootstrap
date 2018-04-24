@@ -1,0 +1,448 @@
+\hypertarget{_u_lexer_8h}{
+\section{C:/Bootstrap/ProjectBX/Engine/Common/ULexer.h File Reference}
+\label{_u_lexer_8h}\index{C:/Bootstrap/ProjectBX/Engine/Common/ULexer.h@{C:/Bootstrap/ProjectBX/Engine/Common/ULexer.h}}
+}
+{\tt \#include $<$vector$>$}\par
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+struct \hyperlink{struct_s_token}{SToken}
+\item 
+class \hyperlink{class_u_lexer}{ULexer}
+\end{CompactItemize}
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \hyperlink{_u_lexer_8h_9b78113f28d3d46f29e238070131eaab}{UL\_\-IDENTIFIER}~0x70000000
+\item 
+\#define \hyperlink{_u_lexer_8h_9c00ea3df3b7f2307c53c562c0f517d3}{UL\_\-NUMBER}~0x70000001
+\item 
+\#define \hyperlink{_u_lexer_8h_61e25b5a774f50543c3a7f27dbfc6513}{UL\_\-STRING}~0x70000002
+\item 
+\#define \hyperlink{_u_lexer_8h_67d397a0ba024f40bc7c7450df299a1c}{UL\_\-CHAR}~0x70000003
+\item 
+\#define \hyperlink{_u_lexer_8h_00ed9b6acaa7fdca0e5dac858453a5df}{UL\_\-EQUAL}~0x70000010
+\item 
+\#define \hyperlink{_u_lexer_8h_1f902f5924a4b2edc787ab4cac09292c}{UL\_\-PLUS}~0x70000011
+\item 
+\#define \hyperlink{_u_lexer_8h_86a2bf73fc927f0cdc06f927fb486512}{UL\_\-MINUS}~0x70000012
+\item 
+\#define \hyperlink{_u_lexer_8h_0a61458ec746092b4d4236bb94432156}{UL\_\-ASTERISK}~0x70000013
+\item 
+\#define \hyperlink{_u_lexer_8h_c0bca95db167fb0d818c71e08273fbe7}{UL\_\-SLASH}~0x70000014
+\item 
+\#define \hyperlink{_u_lexer_8h_dbd6120dd7a6d47419819d3e1ea491a2}{UL\_\-PERCENT}~0x70000015
+\item 
+\#define \hyperlink{_u_lexer_8h_d0e50b48e16cc5c27dcafea10a4aaf71}{UL\_\-EXCLAMATION}~0x70000016
+\item 
+\#define \hyperlink{_u_lexer_8h_909dd4ee2f3ad671e0c1119fc7345375}{UL\_\-AND}~0x70000017
+\item 
+\#define \hyperlink{_u_lexer_8h_5db854c3db3ed1fd8a9b80541e5d89e6}{UL\_\-OR}~0x70000018
+\item 
+\#define \hyperlink{_u_lexer_8h_2f4038dd7f514a1c69a89e247180be6d}{UL\_\-LSHIFT}~0x70000019
+\item 
+\#define \hyperlink{_u_lexer_8h_88a6f5332de77ad242322c13a0e621a1}{UL\_\-RSHIFT}~0x7000001A
+\item 
+\#define \hyperlink{_u_lexer_8h_2d23651b7715381bba8e191b75127be6}{UL\_\-PLUSPLUS}~0x7000001B
+\item 
+\#define \hyperlink{_u_lexer_8h_1c674c8da3a966dc62d375c04ee5a82b}{UL\_\-MINUSMINUS}~0x7000001C
+\item 
+\#define \hyperlink{_u_lexer_8h_73fdc35993ce7fff005a78d0ea91ccf3}{UL\_\-PLUSEQUAL}~0x7000001D
+\item 
+\#define \hyperlink{_u_lexer_8h_1ee32a3c080e252f07066548c13f83eb}{UL\_\-MINUSEQUAL}~0x7000001E
+\item 
+\#define \hyperlink{_u_lexer_8h_d3851e1ef890b93d4db7e41622960b17}{UL\_\-MULTIPLYEQUAL}~0x7000001F
+\item 
+\#define \hyperlink{_u_lexer_8h_92183e6fb3fc70b6d8e94a6f9dfa4a67}{UL\_\-DIVIDEEQUAL}~0x70000020
+\item 
+\#define \hyperlink{_u_lexer_8h_0f629d11a8e712742e49d0441b238940}{UL\_\-PERCENTEQUAL}~0x70000021
+\item 
+\#define \hyperlink{_u_lexer_8h_7f1959f265a520858860acc935dd84c4}{UL\_\-LSQUAREBRACE}~0x70000030
+\item 
+\#define \hyperlink{_u_lexer_8h_43f5febd86094fd702a6063082bb5a47}{UL\_\-RSQUAREBRACE}~0x70000031
+\item 
+\#define \hyperlink{_u_lexer_8h_45babc3cb5b64e2f0e066b92dbf7e926}{UL\_\-LPAREN}~0x70000032
+\item 
+\#define \hyperlink{_u_lexer_8h_3fb21b704184b01390caee21ae46ea33}{UL\_\-RPAREN}~0x70000033
+\item 
+\#define \hyperlink{_u_lexer_8h_f7cbbe2b1b439ab60c30660c733d2f9b}{UL\_\-LBRACE}~0x70000034
+\item 
+\#define \hyperlink{_u_lexer_8h_c8926c2c11fa57bb6a1406eb7429358f}{UL\_\-RBRACE}~0x70000035
+\item 
+\#define \hyperlink{_u_lexer_8h_50e94420937668407cb67328b4f19dbd}{UL\_\-LESS}~0x70000040
+\item 
+\#define \hyperlink{_u_lexer_8h_22fc9756a4eff9cc570cd404d2c41a6c}{UL\_\-GREATER}~0x70000041
+\item 
+\#define \hyperlink{_u_lexer_8h_06e6190bd8f6b34d2039592fd5698e32}{UL\_\-LESSEQUAL}~0x70000042
+\item 
+\#define \hyperlink{_u_lexer_8h_a366081e7081a63cc2e3fd02204b3c87}{UL\_\-GREATEREQUAL}~0x70000043
+\item 
+\#define \hyperlink{_u_lexer_8h_74c2d789fbeea5ab702e8ba252d06626}{UL\_\-NOTEQUAL}~0x70000044
+\item 
+\#define \hyperlink{_u_lexer_8h_b7966af1f24cfa12bcb8797615091530}{UL\_\-ISEQUAL}~0x70000045
+\item 
+\#define \hyperlink{_u_lexer_8h_7b44476847146f6a565fc0a48891a4da}{UL\_\-COMMA}~0x70000050
+\item 
+\#define \hyperlink{_u_lexer_8h_aa1b3d88911c3b274a4a3f47e2ce9261}{UL\_\-PERIOD}~0x70000051
+\item 
+\#define \hyperlink{_u_lexer_8h_58673dbe24573ac3a02af665b09b1158}{UL\_\-SEMICOLON}~0x70000052
+\item 
+\#define \hyperlink{_u_lexer_8h_4f9cfbf6830fc31ad6bf4a3d71e74182}{UL\_\-INDIRECTION}~0x70000060
+\item 
+\#define \hyperlink{_u_lexer_8h_0cf3ab786542b4b99a43178cc7a9130a}{UL\_\-EOS}~0x700000FF
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_u_lexer_8h_909dd4ee2f3ad671e0c1119fc7345375}{
+\index{ULexer.h@{ULexer.h}!UL\_\-AND@{UL\_\-AND}}
+\index{UL\_\-AND@{UL\_\-AND}!ULexer.h@{ULexer.h}}
+\subsubsection[{UL\_\-AND}]{\setlength{\rightskip}{0pt plus 5cm}\#define UL\_\-AND~0x70000017}}
+\label{_u_lexer_8h_909dd4ee2f3ad671e0c1119fc7345375}
+
+
+
+
+Definition at line 30 of file ULexer.h.\hypertarget{_u_lexer_8h_0a61458ec746092b4d4236bb94432156}{
+\index{ULexer.h@{ULexer.h}!UL\_\-ASTERISK@{UL\_\-ASTERISK}}
+\index{UL\_\-ASTERISK@{UL\_\-ASTERISK}!ULexer.h@{ULexer.h}}
+\subsubsection[{UL\_\-ASTERISK}]{\setlength{\rightskip}{0pt plus 5cm}\#define UL\_\-ASTERISK~0x70000013}}
+\label{_u_lexer_8h_0a61458ec746092b4d4236bb94432156}
+
+
+
+
+Definition at line 26 of file ULexer.h.\hypertarget{_u_lexer_8h_67d397a0ba024f40bc7c7450df299a1c}{
+\index{ULexer.h@{ULexer.h}!UL\_\-CHAR@{UL\_\-CHAR}}
+\index{UL\_\-CHAR@{UL\_\-CHAR}!ULexer.h@{ULexer.h}}
+\subsubsection[{UL\_\-CHAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UL\_\-CHAR~0x70000003}}
+\label{_u_lexer_8h_67d397a0ba024f40bc7c7450df299a1c}
+
+
+
+
+Definition at line 20 of file ULexer.h.\hypertarget{_u_lexer_8h_7b44476847146f6a565fc0a48891a4da}{
+\index{ULexer.h@{ULexer.h}!UL\_\-COMMA@{UL\_\-COMMA}}
+\index{UL\_\-COMMA@{UL\_\-COMMA}!ULexer.h@{ULexer.h}}
+\subsubsection[{UL\_\-COMMA}]{\setlength{\rightskip}{0pt plus 5cm}\#define UL\_\-COMMA~0x70000050}}
+\label{_u_lexer_8h_7b44476847146f6a565fc0a48891a4da}
+
+
+
+
+Definition at line 59 of file ULexer.h.\hypertarget{_u_lexer_8h_92183e6fb3fc70b6d8e94a6f9dfa4a67}{
+\index{ULexer.h@{ULexer.h}!UL\_\-DIVIDEEQUAL@{UL\_\-DIVIDEEQUAL}}
+\index{UL\_\-DIVIDEEQUAL@{UL\_\-DIVIDEEQUAL}!ULexer.h@{ULexer.h}}
+\subsubsection[{UL\_\-DIVIDEEQUAL}]{\setlength{\rightskip}{0pt plus 5cm}\#define UL\_\-DIVIDEEQUAL~0x70000020}}
+\label{_u_lexer_8h_92183e6fb3fc70b6d8e94a6f9dfa4a67}
+
+
+
+
+Definition at line 39 of file ULexer.h.\hypertarget{_u_lexer_8h_0cf3ab786542b4b99a43178cc7a9130a}{
+\index{ULexer.h@{ULexer.h}!UL\_\-EOS@{UL\_\-EOS}}
+\index{UL\_\-EOS@{UL\_\-EOS}!ULexer.h@{ULexer.h}}
+\subsubsection[{UL\_\-EOS}]{\setlength{\rightskip}{0pt plus 5cm}\#define UL\_\-EOS~0x700000FF}}
+\label{_u_lexer_8h_0cf3ab786542b4b99a43178cc7a9130a}
+
+
+
+
+Definition at line 67 of file ULexer.h.\hypertarget{_u_lexer_8h_00ed9b6acaa7fdca0e5dac858453a5df}{
+\index{ULexer.h@{ULexer.h}!UL\_\-EQUAL@{UL\_\-EQUAL}}
+\index{UL\_\-EQUAL@{UL\_\-EQUAL}!ULexer.h@{ULexer.h}}
+\subsubsection[{UL\_\-EQUAL}]{\setlength{\rightskip}{0pt plus 5cm}\#define UL\_\-EQUAL~0x70000010}}
+\label{_u_lexer_8h_00ed9b6acaa7fdca0e5dac858453a5df}
+
+
+
+
+Definition at line 23 of file ULexer.h.\hypertarget{_u_lexer_8h_d0e50b48e16cc5c27dcafea10a4aaf71}{
+\index{ULexer.h@{ULexer.h}!UL\_\-EXCLAMATION@{UL\_\-EXCLAMATION}}
+\index{UL\_\-EXCLAMATION@{UL\_\-EXCLAMATION}!ULexer.h@{ULexer.h}}
+\subsubsection[{UL\_\-EXCLAMATION}]{\setlength{\rightskip}{0pt plus 5cm}\#define UL\_\-EXCLAMATION~0x70000016}}
+\label{_u_lexer_8h_d0e50b48e16cc5c27dcafea10a4aaf71}
+
+
+
+
+Definition at line 29 of file ULexer.h.\hypertarget{_u_lexer_8h_22fc9756a4eff9cc570cd404d2c41a6c}{
+\index{ULexer.h@{ULexer.h}!UL\_\-GREATER@{UL\_\-GREATER}}
+\index{UL\_\-GREATER@{UL\_\-GREATER}!ULexer.h@{ULexer.h}}
+\subsubsection[{UL\_\-GREATER}]{\setlength{\rightskip}{0pt plus 5cm}\#define UL\_\-GREATER~0x70000041}}
+\label{_u_lexer_8h_22fc9756a4eff9cc570cd404d2c41a6c}
+
+
+
+
+Definition at line 52 of file ULexer.h.\hypertarget{_u_lexer_8h_a366081e7081a63cc2e3fd02204b3c87}{
+\index{ULexer.h@{ULexer.h}!UL\_\-GREATEREQUAL@{UL\_\-GREATEREQUAL}}
+\index{UL\_\-GREATEREQUAL@{UL\_\-GREATEREQUAL}!ULexer.h@{ULexer.h}}
+\subsubsection[{UL\_\-GREATEREQUAL}]{\setlength{\rightskip}{0pt plus 5cm}\#define UL\_\-GREATEREQUAL~0x70000043}}
+\label{_u_lexer_8h_a366081e7081a63cc2e3fd02204b3c87}
+
+
+
+
+Definition at line 54 of file ULexer.h.\hypertarget{_u_lexer_8h_9b78113f28d3d46f29e238070131eaab}{
+\index{ULexer.h@{ULexer.h}!UL\_\-IDENTIFIER@{UL\_\-IDENTIFIER}}
+\index{UL\_\-IDENTIFIER@{UL\_\-IDENTIFIER}!ULexer.h@{ULexer.h}}
+\subsubsection[{UL\_\-IDENTIFIER}]{\setlength{\rightskip}{0pt plus 5cm}\#define UL\_\-IDENTIFIER~0x70000000}}
+\label{_u_lexer_8h_9b78113f28d3d46f29e238070131eaab}
+
+
+
+
+Definition at line 15 of file ULexer.h.\hypertarget{_u_lexer_8h_4f9cfbf6830fc31ad6bf4a3d71e74182}{
+\index{ULexer.h@{ULexer.h}!UL\_\-INDIRECTION@{UL\_\-INDIRECTION}}
+\index{UL\_\-INDIRECTION@{UL\_\-INDIRECTION}!ULexer.h@{ULexer.h}}
+\subsubsection[{UL\_\-INDIRECTION}]{\setlength{\rightskip}{0pt plus 5cm}\#define UL\_\-INDIRECTION~0x70000060}}
+\label{_u_lexer_8h_4f9cfbf6830fc31ad6bf4a3d71e74182}
+
+
+
+
+Definition at line 64 of file ULexer.h.\hypertarget{_u_lexer_8h_b7966af1f24cfa12bcb8797615091530}{
+\index{ULexer.h@{ULexer.h}!UL\_\-ISEQUAL@{UL\_\-ISEQUAL}}
+\index{UL\_\-ISEQUAL@{UL\_\-ISEQUAL}!ULexer.h@{ULexer.h}}
+\subsubsection[{UL\_\-ISEQUAL}]{\setlength{\rightskip}{0pt plus 5cm}\#define UL\_\-ISEQUAL~0x70000045}}
+\label{_u_lexer_8h_b7966af1f24cfa12bcb8797615091530}
+
+
+
+
+Definition at line 56 of file ULexer.h.\hypertarget{_u_lexer_8h_f7cbbe2b1b439ab60c30660c733d2f9b}{
+\index{ULexer.h@{ULexer.h}!UL\_\-LBRACE@{UL\_\-LBRACE}}
+\index{UL\_\-LBRACE@{UL\_\-LBRACE}!ULexer.h@{ULexer.h}}
+\subsubsection[{UL\_\-LBRACE}]{\setlength{\rightskip}{0pt plus 5cm}\#define UL\_\-LBRACE~0x70000034}}
+\label{_u_lexer_8h_f7cbbe2b1b439ab60c30660c733d2f9b}
+
+
+
+
+Definition at line 47 of file ULexer.h.\hypertarget{_u_lexer_8h_50e94420937668407cb67328b4f19dbd}{
+\index{ULexer.h@{ULexer.h}!UL\_\-LESS@{UL\_\-LESS}}
+\index{UL\_\-LESS@{UL\_\-LESS}!ULexer.h@{ULexer.h}}
+\subsubsection[{UL\_\-LESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define UL\_\-LESS~0x70000040}}
+\label{_u_lexer_8h_50e94420937668407cb67328b4f19dbd}
+
+
+
+
+Definition at line 51 of file ULexer.h.\hypertarget{_u_lexer_8h_06e6190bd8f6b34d2039592fd5698e32}{
+\index{ULexer.h@{ULexer.h}!UL\_\-LESSEQUAL@{UL\_\-LESSEQUAL}}
+\index{UL\_\-LESSEQUAL@{UL\_\-LESSEQUAL}!ULexer.h@{ULexer.h}}
+\subsubsection[{UL\_\-LESSEQUAL}]{\setlength{\rightskip}{0pt plus 5cm}\#define UL\_\-LESSEQUAL~0x70000042}}
+\label{_u_lexer_8h_06e6190bd8f6b34d2039592fd5698e32}
+
+
+
+
+Definition at line 53 of file ULexer.h.\hypertarget{_u_lexer_8h_45babc3cb5b64e2f0e066b92dbf7e926}{
+\index{ULexer.h@{ULexer.h}!UL\_\-LPAREN@{UL\_\-LPAREN}}
+\index{UL\_\-LPAREN@{UL\_\-LPAREN}!ULexer.h@{ULexer.h}}
+\subsubsection[{UL\_\-LPAREN}]{\setlength{\rightskip}{0pt plus 5cm}\#define UL\_\-LPAREN~0x70000032}}
+\label{_u_lexer_8h_45babc3cb5b64e2f0e066b92dbf7e926}
+
+
+
+
+Definition at line 45 of file ULexer.h.\hypertarget{_u_lexer_8h_2f4038dd7f514a1c69a89e247180be6d}{
+\index{ULexer.h@{ULexer.h}!UL\_\-LSHIFT@{UL\_\-LSHIFT}}
+\index{UL\_\-LSHIFT@{UL\_\-LSHIFT}!ULexer.h@{ULexer.h}}
+\subsubsection[{UL\_\-LSHIFT}]{\setlength{\rightskip}{0pt plus 5cm}\#define UL\_\-LSHIFT~0x70000019}}
+\label{_u_lexer_8h_2f4038dd7f514a1c69a89e247180be6d}
+
+
+
+
+Definition at line 32 of file ULexer.h.\hypertarget{_u_lexer_8h_7f1959f265a520858860acc935dd84c4}{
+\index{ULexer.h@{ULexer.h}!UL\_\-LSQUAREBRACE@{UL\_\-LSQUAREBRACE}}
+\index{UL\_\-LSQUAREBRACE@{UL\_\-LSQUAREBRACE}!ULexer.h@{ULexer.h}}
+\subsubsection[{UL\_\-LSQUAREBRACE}]{\setlength{\rightskip}{0pt plus 5cm}\#define UL\_\-LSQUAREBRACE~0x70000030}}
+\label{_u_lexer_8h_7f1959f265a520858860acc935dd84c4}
+
+
+
+
+Definition at line 43 of file ULexer.h.\hypertarget{_u_lexer_8h_86a2bf73fc927f0cdc06f927fb486512}{
+\index{ULexer.h@{ULexer.h}!UL\_\-MINUS@{UL\_\-MINUS}}
+\index{UL\_\-MINUS@{UL\_\-MINUS}!ULexer.h@{ULexer.h}}
+\subsubsection[{UL\_\-MINUS}]{\setlength{\rightskip}{0pt plus 5cm}\#define UL\_\-MINUS~0x70000012}}
+\label{_u_lexer_8h_86a2bf73fc927f0cdc06f927fb486512}
+
+
+
+
+Definition at line 25 of file ULexer.h.\hypertarget{_u_lexer_8h_1ee32a3c080e252f07066548c13f83eb}{
+\index{ULexer.h@{ULexer.h}!UL\_\-MINUSEQUAL@{UL\_\-MINUSEQUAL}}
+\index{UL\_\-MINUSEQUAL@{UL\_\-MINUSEQUAL}!ULexer.h@{ULexer.h}}
+\subsubsection[{UL\_\-MINUSEQUAL}]{\setlength{\rightskip}{0pt plus 5cm}\#define UL\_\-MINUSEQUAL~0x7000001E}}
+\label{_u_lexer_8h_1ee32a3c080e252f07066548c13f83eb}
+
+
+
+
+Definition at line 37 of file ULexer.h.\hypertarget{_u_lexer_8h_1c674c8da3a966dc62d375c04ee5a82b}{
+\index{ULexer.h@{ULexer.h}!UL\_\-MINUSMINUS@{UL\_\-MINUSMINUS}}
+\index{UL\_\-MINUSMINUS@{UL\_\-MINUSMINUS}!ULexer.h@{ULexer.h}}
+\subsubsection[{UL\_\-MINUSMINUS}]{\setlength{\rightskip}{0pt plus 5cm}\#define UL\_\-MINUSMINUS~0x7000001C}}
+\label{_u_lexer_8h_1c674c8da3a966dc62d375c04ee5a82b}
+
+
+
+
+Definition at line 35 of file ULexer.h.\hypertarget{_u_lexer_8h_d3851e1ef890b93d4db7e41622960b17}{
+\index{ULexer.h@{ULexer.h}!UL\_\-MULTIPLYEQUAL@{UL\_\-MULTIPLYEQUAL}}
+\index{UL\_\-MULTIPLYEQUAL@{UL\_\-MULTIPLYEQUAL}!ULexer.h@{ULexer.h}}
+\subsubsection[{UL\_\-MULTIPLYEQUAL}]{\setlength{\rightskip}{0pt plus 5cm}\#define UL\_\-MULTIPLYEQUAL~0x7000001F}}
+\label{_u_lexer_8h_d3851e1ef890b93d4db7e41622960b17}
+
+
+
+
+Definition at line 38 of file ULexer.h.\hypertarget{_u_lexer_8h_74c2d789fbeea5ab702e8ba252d06626}{
+\index{ULexer.h@{ULexer.h}!UL\_\-NOTEQUAL@{UL\_\-NOTEQUAL}}
+\index{UL\_\-NOTEQUAL@{UL\_\-NOTEQUAL}!ULexer.h@{ULexer.h}}
+\subsubsection[{UL\_\-NOTEQUAL}]{\setlength{\rightskip}{0pt plus 5cm}\#define UL\_\-NOTEQUAL~0x70000044}}
+\label{_u_lexer_8h_74c2d789fbeea5ab702e8ba252d06626}
+
+
+
+
+Definition at line 55 of file ULexer.h.\hypertarget{_u_lexer_8h_9c00ea3df3b7f2307c53c562c0f517d3}{
+\index{ULexer.h@{ULexer.h}!UL\_\-NUMBER@{UL\_\-NUMBER}}
+\index{UL\_\-NUMBER@{UL\_\-NUMBER}!ULexer.h@{ULexer.h}}
+\subsubsection[{UL\_\-NUMBER}]{\setlength{\rightskip}{0pt plus 5cm}\#define UL\_\-NUMBER~0x70000001}}
+\label{_u_lexer_8h_9c00ea3df3b7f2307c53c562c0f517d3}
+
+
+
+
+Definition at line 18 of file ULexer.h.\hypertarget{_u_lexer_8h_5db854c3db3ed1fd8a9b80541e5d89e6}{
+\index{ULexer.h@{ULexer.h}!UL\_\-OR@{UL\_\-OR}}
+\index{UL\_\-OR@{UL\_\-OR}!ULexer.h@{ULexer.h}}
+\subsubsection[{UL\_\-OR}]{\setlength{\rightskip}{0pt plus 5cm}\#define UL\_\-OR~0x70000018}}
+\label{_u_lexer_8h_5db854c3db3ed1fd8a9b80541e5d89e6}
+
+
+
+
+Definition at line 31 of file ULexer.h.\hypertarget{_u_lexer_8h_dbd6120dd7a6d47419819d3e1ea491a2}{
+\index{ULexer.h@{ULexer.h}!UL\_\-PERCENT@{UL\_\-PERCENT}}
+\index{UL\_\-PERCENT@{UL\_\-PERCENT}!ULexer.h@{ULexer.h}}
+\subsubsection[{UL\_\-PERCENT}]{\setlength{\rightskip}{0pt plus 5cm}\#define UL\_\-PERCENT~0x70000015}}
+\label{_u_lexer_8h_dbd6120dd7a6d47419819d3e1ea491a2}
+
+
+
+
+Definition at line 28 of file ULexer.h.\hypertarget{_u_lexer_8h_0f629d11a8e712742e49d0441b238940}{
+\index{ULexer.h@{ULexer.h}!UL\_\-PERCENTEQUAL@{UL\_\-PERCENTEQUAL}}
+\index{UL\_\-PERCENTEQUAL@{UL\_\-PERCENTEQUAL}!ULexer.h@{ULexer.h}}
+\subsubsection[{UL\_\-PERCENTEQUAL}]{\setlength{\rightskip}{0pt plus 5cm}\#define UL\_\-PERCENTEQUAL~0x70000021}}
+\label{_u_lexer_8h_0f629d11a8e712742e49d0441b238940}
+
+
+
+
+Definition at line 40 of file ULexer.h.\hypertarget{_u_lexer_8h_aa1b3d88911c3b274a4a3f47e2ce9261}{
+\index{ULexer.h@{ULexer.h}!UL\_\-PERIOD@{UL\_\-PERIOD}}
+\index{UL\_\-PERIOD@{UL\_\-PERIOD}!ULexer.h@{ULexer.h}}
+\subsubsection[{UL\_\-PERIOD}]{\setlength{\rightskip}{0pt plus 5cm}\#define UL\_\-PERIOD~0x70000051}}
+\label{_u_lexer_8h_aa1b3d88911c3b274a4a3f47e2ce9261}
+
+
+
+
+Definition at line 60 of file ULexer.h.\hypertarget{_u_lexer_8h_1f902f5924a4b2edc787ab4cac09292c}{
+\index{ULexer.h@{ULexer.h}!UL\_\-PLUS@{UL\_\-PLUS}}
+\index{UL\_\-PLUS@{UL\_\-PLUS}!ULexer.h@{ULexer.h}}
+\subsubsection[{UL\_\-PLUS}]{\setlength{\rightskip}{0pt plus 5cm}\#define UL\_\-PLUS~0x70000011}}
+\label{_u_lexer_8h_1f902f5924a4b2edc787ab4cac09292c}
+
+
+
+
+Definition at line 24 of file ULexer.h.\hypertarget{_u_lexer_8h_73fdc35993ce7fff005a78d0ea91ccf3}{
+\index{ULexer.h@{ULexer.h}!UL\_\-PLUSEQUAL@{UL\_\-PLUSEQUAL}}
+\index{UL\_\-PLUSEQUAL@{UL\_\-PLUSEQUAL}!ULexer.h@{ULexer.h}}
+\subsubsection[{UL\_\-PLUSEQUAL}]{\setlength{\rightskip}{0pt plus 5cm}\#define UL\_\-PLUSEQUAL~0x7000001D}}
+\label{_u_lexer_8h_73fdc35993ce7fff005a78d0ea91ccf3}
+
+
+
+
+Definition at line 36 of file ULexer.h.\hypertarget{_u_lexer_8h_2d23651b7715381bba8e191b75127be6}{
+\index{ULexer.h@{ULexer.h}!UL\_\-PLUSPLUS@{UL\_\-PLUSPLUS}}
+\index{UL\_\-PLUSPLUS@{UL\_\-PLUSPLUS}!ULexer.h@{ULexer.h}}
+\subsubsection[{UL\_\-PLUSPLUS}]{\setlength{\rightskip}{0pt plus 5cm}\#define UL\_\-PLUSPLUS~0x7000001B}}
+\label{_u_lexer_8h_2d23651b7715381bba8e191b75127be6}
+
+
+
+
+Definition at line 34 of file ULexer.h.\hypertarget{_u_lexer_8h_c8926c2c11fa57bb6a1406eb7429358f}{
+\index{ULexer.h@{ULexer.h}!UL\_\-RBRACE@{UL\_\-RBRACE}}
+\index{UL\_\-RBRACE@{UL\_\-RBRACE}!ULexer.h@{ULexer.h}}
+\subsubsection[{UL\_\-RBRACE}]{\setlength{\rightskip}{0pt plus 5cm}\#define UL\_\-RBRACE~0x70000035}}
+\label{_u_lexer_8h_c8926c2c11fa57bb6a1406eb7429358f}
+
+
+
+
+Definition at line 48 of file ULexer.h.\hypertarget{_u_lexer_8h_3fb21b704184b01390caee21ae46ea33}{
+\index{ULexer.h@{ULexer.h}!UL\_\-RPAREN@{UL\_\-RPAREN}}
+\index{UL\_\-RPAREN@{UL\_\-RPAREN}!ULexer.h@{ULexer.h}}
+\subsubsection[{UL\_\-RPAREN}]{\setlength{\rightskip}{0pt plus 5cm}\#define UL\_\-RPAREN~0x70000033}}
+\label{_u_lexer_8h_3fb21b704184b01390caee21ae46ea33}
+
+
+
+
+Definition at line 46 of file ULexer.h.\hypertarget{_u_lexer_8h_88a6f5332de77ad242322c13a0e621a1}{
+\index{ULexer.h@{ULexer.h}!UL\_\-RSHIFT@{UL\_\-RSHIFT}}
+\index{UL\_\-RSHIFT@{UL\_\-RSHIFT}!ULexer.h@{ULexer.h}}
+\subsubsection[{UL\_\-RSHIFT}]{\setlength{\rightskip}{0pt plus 5cm}\#define UL\_\-RSHIFT~0x7000001A}}
+\label{_u_lexer_8h_88a6f5332de77ad242322c13a0e621a1}
+
+
+
+
+Definition at line 33 of file ULexer.h.\hypertarget{_u_lexer_8h_43f5febd86094fd702a6063082bb5a47}{
+\index{ULexer.h@{ULexer.h}!UL\_\-RSQUAREBRACE@{UL\_\-RSQUAREBRACE}}
+\index{UL\_\-RSQUAREBRACE@{UL\_\-RSQUAREBRACE}!ULexer.h@{ULexer.h}}
+\subsubsection[{UL\_\-RSQUAREBRACE}]{\setlength{\rightskip}{0pt plus 5cm}\#define UL\_\-RSQUAREBRACE~0x70000031}}
+\label{_u_lexer_8h_43f5febd86094fd702a6063082bb5a47}
+
+
+
+
+Definition at line 44 of file ULexer.h.\hypertarget{_u_lexer_8h_58673dbe24573ac3a02af665b09b1158}{
+\index{ULexer.h@{ULexer.h}!UL\_\-SEMICOLON@{UL\_\-SEMICOLON}}
+\index{UL\_\-SEMICOLON@{UL\_\-SEMICOLON}!ULexer.h@{ULexer.h}}
+\subsubsection[{UL\_\-SEMICOLON}]{\setlength{\rightskip}{0pt plus 5cm}\#define UL\_\-SEMICOLON~0x70000052}}
+\label{_u_lexer_8h_58673dbe24573ac3a02af665b09b1158}
+
+
+
+
+Definition at line 61 of file ULexer.h.\hypertarget{_u_lexer_8h_c0bca95db167fb0d818c71e08273fbe7}{
+\index{ULexer.h@{ULexer.h}!UL\_\-SLASH@{UL\_\-SLASH}}
+\index{UL\_\-SLASH@{UL\_\-SLASH}!ULexer.h@{ULexer.h}}
+\subsubsection[{UL\_\-SLASH}]{\setlength{\rightskip}{0pt plus 5cm}\#define UL\_\-SLASH~0x70000014}}
+\label{_u_lexer_8h_c0bca95db167fb0d818c71e08273fbe7}
+
+
+
+
+Definition at line 27 of file ULexer.h.\hypertarget{_u_lexer_8h_61e25b5a774f50543c3a7f27dbfc6513}{
+\index{ULexer.h@{ULexer.h}!UL\_\-STRING@{UL\_\-STRING}}
+\index{UL\_\-STRING@{UL\_\-STRING}!ULexer.h@{ULexer.h}}
+\subsubsection[{UL\_\-STRING}]{\setlength{\rightskip}{0pt plus 5cm}\#define UL\_\-STRING~0x70000002}}
+\label{_u_lexer_8h_61e25b5a774f50543c3a7f27dbfc6513}
+
+
+
+
+Definition at line 19 of file ULexer.h.

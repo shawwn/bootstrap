@@ -1,0 +1,290 @@
+\hypertarget{class_gr_projection}{
+\section{GrProjection Class Reference}
+\label{class_gr_projection}\index{GrProjection@{GrProjection}}
+}
+{\tt \#include $<$GrProjection.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_projection_55d2c10a1c3d7e47ce5b8b6fd69dd411}{GrProjection} (float fov, float farDist, float aspect, const \hyperlink{class_m_plane}{MPlane} \&nearClip)
+\item 
+\hyperlink{class_gr_projection_27b24c0dfda0a512db290333f1aecb07}{GrProjection} (float \hyperlink{glext_8h_85b8f6c07fbc1fb5d77c2ae090f21995}{left}, float \hyperlink{glext_8h_5ffadbbacc6b89cf6218bc43b384d3fe}{right}, float \hyperlink{glext_8h_95fc257e5ddf46f7db9d5e898cdf1991}{bottom}, float \hyperlink{glext_8h_5ab323daeacf8dfdb8f91132fecdca23}{top}, float far)
+\item 
+\hyperlink{class_gr_projection_24795b4bdf7379373e7560f25ec7b19b}{$\sim$GrProjection} ()
+\item 
+bool \hyperlink{class_gr_projection_abd3817acc3eeef6f80ff8e30fc1467c}{IsOrtho} () const 
+\item 
+void \hyperlink{class_gr_projection_29f014578f35e4a8386abda391966228}{BuildRayOffsets} (float \&px, float \&py, float \&ax, float \&ay, float \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x}, float \hyperlink{wglext_8h_9298c7ad619074f5285b32c6b72bfdea}{y})
+\item 
+void \hyperlink{class_gr_projection_f4b558c458d3a59acd574af5d7f84850}{SetFOV} (float fov)
+\item 
+void \hyperlink{class_gr_projection_a411d73393ffd79ae827bcad8de91090}{SetNearClip} (const \hyperlink{class_m_plane}{MPlane} \&nearClip)
+\item 
+void \hyperlink{class_gr_projection_3671a2d19ad8e30a24968fbe105563ee}{SetFarDist} (float farDist)
+\item 
+void \hyperlink{class_gr_projection_ecaec8627848803b87a11bd3638c2664}{SetAspect} (float aspect)
+\item 
+void \hyperlink{class_gr_projection_142d79699a01bc461466dccfcc3782ae}{SetLeft} (float \hyperlink{glext_8h_85b8f6c07fbc1fb5d77c2ae090f21995}{left})
+\item 
+void \hyperlink{class_gr_projection_5173c72eefb3030bbd7cf65be54aabcc}{SetRight} (float \hyperlink{glext_8h_5ffadbbacc6b89cf6218bc43b384d3fe}{right})
+\item 
+void \hyperlink{class_gr_projection_6d503181e9a11c369200bc57226aa6e5}{SetTop} (float \hyperlink{glext_8h_5ab323daeacf8dfdb8f91132fecdca23}{top})
+\item 
+void \hyperlink{class_gr_projection_f2103c25c9b29dccb2630e671b486147}{SetBottom} (float \hyperlink{glext_8h_95fc257e5ddf46f7db9d5e898cdf1991}{bottom})
+\item 
+float \hyperlink{class_gr_projection_6460a0de198599bf156dc32d059cccbe}{GetFOV} () const 
+\item 
+float \hyperlink{class_gr_projection_eac5317efd520d72958216a801915f35}{GetWidth} () const 
+\item 
+float \hyperlink{class_gr_projection_e09864554d7c9d1d2a28545bccb92fa4}{GetHeight} () const 
+\item 
+const \hyperlink{class_m_plane}{MPlane} \& \hyperlink{class_gr_projection_4d85a9dab08ee6ed9e840d34c1d9ea4e}{GetNearClip} () const 
+\item 
+float \hyperlink{class_gr_projection_ff3730ac4fd84de25306fa8e6d1abfa6}{GetFarDist} () const 
+\item 
+float \hyperlink{class_gr_projection_5690aacaed6e6c2e123bb96124253744}{GetAspect} () const 
+\item 
+float \hyperlink{class_gr_projection_259e5d940d8cd6685eafe37eb541238e}{GetLeft} () const 
+\item 
+float \hyperlink{class_gr_projection_076356ed413ff2aaab1b0f6af4cf8a3c}{GetRight} () const 
+\item 
+float \hyperlink{class_gr_projection_08d099fb02121d3ee0d6f4637c796ae7}{GetTop} () const 
+\item 
+float \hyperlink{class_gr_projection_ba40dc8e83e97f131286ef4daff3f459}{GetBottom} () const 
+\item 
+const \hyperlink{class_m_mat4x4}{MMat4x4} \& \hyperlink{class_gr_projection_1255da0c4733b6c9b53bb6d7266a6315}{GetMatrix} () const 
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 19 of file GrProjection.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_projection_55d2c10a1c3d7e47ce5b8b6fd69dd411}{
+\index{GrProjection@{GrProjection}!GrProjection@{GrProjection}}
+\index{GrProjection@{GrProjection}!GrProjection@{GrProjection}}
+\subsubsection[{GrProjection}]{\setlength{\rightskip}{0pt plus 5cm}GrProjection::GrProjection (float {\em fov}, \/  float {\em farDist}, \/  float {\em aspect}, \/  const {\bf MPlane} \& {\em nearClip})}}
+\label{class_gr_projection_55d2c10a1c3d7e47ce5b8b6fd69dd411}
+
+
+
+
+Definition at line 24 of file GrProjection.cpp.\hypertarget{class_gr_projection_27b24c0dfda0a512db290333f1aecb07}{
+\index{GrProjection@{GrProjection}!GrProjection@{GrProjection}}
+\index{GrProjection@{GrProjection}!GrProjection@{GrProjection}}
+\subsubsection[{GrProjection}]{\setlength{\rightskip}{0pt plus 5cm}GrProjection::GrProjection (float {\em left}, \/  float {\em right}, \/  float {\em bottom}, \/  float {\em top}, \/  float {\em far})}}
+\label{class_gr_projection_27b24c0dfda0a512db290333f1aecb07}
+
+
+
+
+Definition at line 39 of file GrProjection.cpp.\hypertarget{class_gr_projection_24795b4bdf7379373e7560f25ec7b19b}{
+\index{GrProjection@{GrProjection}!$\sim$GrProjection@{$\sim$GrProjection}}
+\index{$\sim$GrProjection@{$\sim$GrProjection}!GrProjection@{GrProjection}}
+\subsubsection[{$\sim$GrProjection}]{\setlength{\rightskip}{0pt plus 5cm}GrProjection::$\sim$GrProjection ()}}
+\label{class_gr_projection_24795b4bdf7379373e7560f25ec7b19b}
+
+
+
+
+Definition at line 54 of file GrProjection.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_projection_29f014578f35e4a8386abda391966228}{
+\index{GrProjection@{GrProjection}!BuildRayOffsets@{BuildRayOffsets}}
+\index{BuildRayOffsets@{BuildRayOffsets}!GrProjection@{GrProjection}}
+\subsubsection[{BuildRayOffsets}]{\setlength{\rightskip}{0pt plus 5cm}void GrProjection::BuildRayOffsets (float \& {\em px}, \/  float \& {\em py}, \/  float \& {\em ax}, \/  float \& {\em ay}, \/  float {\em x}, \/  float {\em y})}}
+\label{class_gr_projection_29f014578f35e4a8386abda391966228}
+
+
+
+
+Definition at line 66 of file GrProjection.cpp.\hypertarget{class_gr_projection_5690aacaed6e6c2e123bb96124253744}{
+\index{GrProjection@{GrProjection}!GetAspect@{GetAspect}}
+\index{GetAspect@{GetAspect}!GrProjection@{GrProjection}}
+\subsubsection[{GetAspect}]{\setlength{\rightskip}{0pt plus 5cm}float GrProjection::GetAspect () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_projection_5690aacaed6e6c2e123bb96124253744}
+
+
+
+
+Definition at line 53 of file GrProjection.h.\hypertarget{class_gr_projection_ba40dc8e83e97f131286ef4daff3f459}{
+\index{GrProjection@{GrProjection}!GetBottom@{GetBottom}}
+\index{GetBottom@{GetBottom}!GrProjection@{GrProjection}}
+\subsubsection[{GetBottom}]{\setlength{\rightskip}{0pt plus 5cm}float GrProjection::GetBottom () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_projection_ba40dc8e83e97f131286ef4daff3f459}
+
+
+
+
+Definition at line 57 of file GrProjection.h.\hypertarget{class_gr_projection_ff3730ac4fd84de25306fa8e6d1abfa6}{
+\index{GrProjection@{GrProjection}!GetFarDist@{GetFarDist}}
+\index{GetFarDist@{GetFarDist}!GrProjection@{GrProjection}}
+\subsubsection[{GetFarDist}]{\setlength{\rightskip}{0pt plus 5cm}float GrProjection::GetFarDist () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_projection_ff3730ac4fd84de25306fa8e6d1abfa6}
+
+
+
+
+Definition at line 52 of file GrProjection.h.\hypertarget{class_gr_projection_6460a0de198599bf156dc32d059cccbe}{
+\index{GrProjection@{GrProjection}!GetFOV@{GetFOV}}
+\index{GetFOV@{GetFOV}!GrProjection@{GrProjection}}
+\subsubsection[{GetFOV}]{\setlength{\rightskip}{0pt plus 5cm}float GrProjection::GetFOV () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_projection_6460a0de198599bf156dc32d059cccbe}
+
+
+
+
+Definition at line 48 of file GrProjection.h.\hypertarget{class_gr_projection_e09864554d7c9d1d2a28545bccb92fa4}{
+\index{GrProjection@{GrProjection}!GetHeight@{GetHeight}}
+\index{GetHeight@{GetHeight}!GrProjection@{GrProjection}}
+\subsubsection[{GetHeight}]{\setlength{\rightskip}{0pt plus 5cm}float GrProjection::GetHeight () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_projection_e09864554d7c9d1d2a28545bccb92fa4}
+
+
+
+
+Definition at line 50 of file GrProjection.h.\hypertarget{class_gr_projection_259e5d940d8cd6685eafe37eb541238e}{
+\index{GrProjection@{GrProjection}!GetLeft@{GetLeft}}
+\index{GetLeft@{GetLeft}!GrProjection@{GrProjection}}
+\subsubsection[{GetLeft}]{\setlength{\rightskip}{0pt plus 5cm}float GrProjection::GetLeft () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_projection_259e5d940d8cd6685eafe37eb541238e}
+
+
+
+
+Definition at line 54 of file GrProjection.h.\hypertarget{class_gr_projection_1255da0c4733b6c9b53bb6d7266a6315}{
+\index{GrProjection@{GrProjection}!GetMatrix@{GetMatrix}}
+\index{GetMatrix@{GetMatrix}!GrProjection@{GrProjection}}
+\subsubsection[{GetMatrix}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MMat4x4} \& GrProjection::GetMatrix () const}}
+\label{class_gr_projection_1255da0c4733b6c9b53bb6d7266a6315}
+
+
+
+
+Definition at line 110 of file GrProjection.cpp.\hypertarget{class_gr_projection_4d85a9dab08ee6ed9e840d34c1d9ea4e}{
+\index{GrProjection@{GrProjection}!GetNearClip@{GetNearClip}}
+\index{GetNearClip@{GetNearClip}!GrProjection@{GrProjection}}
+\subsubsection[{GetNearClip}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MPlane}\& GrProjection::GetNearClip () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_projection_4d85a9dab08ee6ed9e840d34c1d9ea4e}
+
+
+
+
+Definition at line 51 of file GrProjection.h.\hypertarget{class_gr_projection_076356ed413ff2aaab1b0f6af4cf8a3c}{
+\index{GrProjection@{GrProjection}!GetRight@{GetRight}}
+\index{GetRight@{GetRight}!GrProjection@{GrProjection}}
+\subsubsection[{GetRight}]{\setlength{\rightskip}{0pt plus 5cm}float GrProjection::GetRight () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_projection_076356ed413ff2aaab1b0f6af4cf8a3c}
+
+
+
+
+Definition at line 55 of file GrProjection.h.\hypertarget{class_gr_projection_08d099fb02121d3ee0d6f4637c796ae7}{
+\index{GrProjection@{GrProjection}!GetTop@{GetTop}}
+\index{GetTop@{GetTop}!GrProjection@{GrProjection}}
+\subsubsection[{GetTop}]{\setlength{\rightskip}{0pt plus 5cm}float GrProjection::GetTop () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_projection_08d099fb02121d3ee0d6f4637c796ae7}
+
+
+
+
+Definition at line 56 of file GrProjection.h.\hypertarget{class_gr_projection_eac5317efd520d72958216a801915f35}{
+\index{GrProjection@{GrProjection}!GetWidth@{GetWidth}}
+\index{GetWidth@{GetWidth}!GrProjection@{GrProjection}}
+\subsubsection[{GetWidth}]{\setlength{\rightskip}{0pt plus 5cm}float GrProjection::GetWidth () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_projection_eac5317efd520d72958216a801915f35}
+
+
+
+
+Definition at line 49 of file GrProjection.h.\hypertarget{class_gr_projection_abd3817acc3eeef6f80ff8e30fc1467c}{
+\index{GrProjection@{GrProjection}!IsOrtho@{IsOrtho}}
+\index{IsOrtho@{IsOrtho}!GrProjection@{GrProjection}}
+\subsubsection[{IsOrtho}]{\setlength{\rightskip}{0pt plus 5cm}bool GrProjection::IsOrtho () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_projection_abd3817acc3eeef6f80ff8e30fc1467c}
+
+
+
+
+Definition at line 31 of file GrProjection.h.\hypertarget{class_gr_projection_ecaec8627848803b87a11bd3638c2664}{
+\index{GrProjection@{GrProjection}!SetAspect@{SetAspect}}
+\index{SetAspect@{SetAspect}!GrProjection@{GrProjection}}
+\subsubsection[{SetAspect}]{\setlength{\rightskip}{0pt plus 5cm}void GrProjection::SetAspect (float {\em aspect})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_projection_ecaec8627848803b87a11bd3638c2664}
+
+
+
+
+Definition at line 42 of file GrProjection.h.\hypertarget{class_gr_projection_f2103c25c9b29dccb2630e671b486147}{
+\index{GrProjection@{GrProjection}!SetBottom@{SetBottom}}
+\index{SetBottom@{SetBottom}!GrProjection@{GrProjection}}
+\subsubsection[{SetBottom}]{\setlength{\rightskip}{0pt plus 5cm}void GrProjection::SetBottom (float {\em bottom})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_projection_f2103c25c9b29dccb2630e671b486147}
+
+
+
+
+Definition at line 46 of file GrProjection.h.\hypertarget{class_gr_projection_3671a2d19ad8e30a24968fbe105563ee}{
+\index{GrProjection@{GrProjection}!SetFarDist@{SetFarDist}}
+\index{SetFarDist@{SetFarDist}!GrProjection@{GrProjection}}
+\subsubsection[{SetFarDist}]{\setlength{\rightskip}{0pt plus 5cm}void GrProjection::SetFarDist (float {\em farDist})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_projection_3671a2d19ad8e30a24968fbe105563ee}
+
+
+
+
+Definition at line 41 of file GrProjection.h.\hypertarget{class_gr_projection_f4b558c458d3a59acd574af5d7f84850}{
+\index{GrProjection@{GrProjection}!SetFOV@{SetFOV}}
+\index{SetFOV@{SetFOV}!GrProjection@{GrProjection}}
+\subsubsection[{SetFOV}]{\setlength{\rightskip}{0pt plus 5cm}void GrProjection::SetFOV (float {\em fov})}}
+\label{class_gr_projection_f4b558c458d3a59acd574af5d7f84850}
+
+
+
+
+Definition at line 101 of file GrProjection.cpp.\hypertarget{class_gr_projection_142d79699a01bc461466dccfcc3782ae}{
+\index{GrProjection@{GrProjection}!SetLeft@{SetLeft}}
+\index{SetLeft@{SetLeft}!GrProjection@{GrProjection}}
+\subsubsection[{SetLeft}]{\setlength{\rightskip}{0pt plus 5cm}void GrProjection::SetLeft (float {\em left})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_projection_142d79699a01bc461466dccfcc3782ae}
+
+
+
+
+Definition at line 43 of file GrProjection.h.\hypertarget{class_gr_projection_a411d73393ffd79ae827bcad8de91090}{
+\index{GrProjection@{GrProjection}!SetNearClip@{SetNearClip}}
+\index{SetNearClip@{SetNearClip}!GrProjection@{GrProjection}}
+\subsubsection[{SetNearClip}]{\setlength{\rightskip}{0pt plus 5cm}void GrProjection::SetNearClip (const {\bf MPlane} \& {\em nearClip})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_projection_a411d73393ffd79ae827bcad8de91090}
+
+
+
+
+Definition at line 40 of file GrProjection.h.\hypertarget{class_gr_projection_5173c72eefb3030bbd7cf65be54aabcc}{
+\index{GrProjection@{GrProjection}!SetRight@{SetRight}}
+\index{SetRight@{SetRight}!GrProjection@{GrProjection}}
+\subsubsection[{SetRight}]{\setlength{\rightskip}{0pt plus 5cm}void GrProjection::SetRight (float {\em right})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_projection_5173c72eefb3030bbd7cf65be54aabcc}
+
+
+
+
+Definition at line 44 of file GrProjection.h.\hypertarget{class_gr_projection_6d503181e9a11c369200bc57226aa6e5}{
+\index{GrProjection@{GrProjection}!SetTop@{SetTop}}
+\index{SetTop@{SetTop}!GrProjection@{GrProjection}}
+\subsubsection[{SetTop}]{\setlength{\rightskip}{0pt plus 5cm}void GrProjection::SetTop (float {\em top})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_projection_6d503181e9a11c369200bc57226aa6e5}
+
+
+
+
+Definition at line 45 of file GrProjection.h.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_projection_8h}{GrProjection.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_projection_8cpp}{GrProjection.cpp}\end{CompactItemize}

@@ -1,0 +1,158 @@
+\hypertarget{class_gr_anim_x_form}{
+\section{GrAnimXForm Class Reference}
+\label{class_gr_anim_x_form}\index{GrAnimXForm@{GrAnimXForm}}
+}
+{\tt \#include $<$GrAnimXForm.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_anim_x_form_f72fc165f23278a120e67a83758e17c6}{GrAnimXForm} ()
+\item 
+\hyperlink{class_gr_anim_x_form_cc12f6a12d1779e8052e0c270136924d}{GrAnimXForm} (const \hyperlink{class_m_quat}{MQuat} \&rotate, const \hyperlink{class_m_vec3}{MVec3} \&translate, const \hyperlink{class_m_vec3}{MVec3} \&\hyperlink{glext__bak_8h_281421b881aa7a1266842b73a3bc7655}{scale})
+\item 
+\hyperlink{class_gr_anim_x_form_6c46438d6a672eb6d7d32f124ed479a1}{GrAnimXForm} (const \hyperlink{class_m_mat4x4}{MMat4x4} \&xform)
+\item 
+\hyperlink{class_gr_anim_x_form_caf2e3e62973312c7cf46d9afa85e76c}{$\sim$GrAnimXForm} ()
+\item 
+\hyperlink{class_gr_anim_x_form}{GrAnimXForm} \& \hyperlink{class_gr_anim_x_form_160982d52c32e88584f651876d18f409}{operator=} (const \hyperlink{class_m_mat4x4}{MMat4x4} \&xform)
+\item 
+void \hyperlink{class_gr_anim_x_form_0d25495d0795fedc1c50485fa3cbfb97}{SetRotate} (const \hyperlink{class_m_quat}{MQuat} \&rotate)
+\item 
+void \hyperlink{class_gr_anim_x_form_3940fe69794daeed09ff09ebd8716b49}{SetTranslate} (const \hyperlink{class_m_vec3}{MVec3} \&translate)
+\item 
+void \hyperlink{class_gr_anim_x_form_034e1b305eeb463ce6714e4b6f8691d0}{SetScale} (const \hyperlink{class_m_vec3}{MVec3} \&\hyperlink{glext__bak_8h_281421b881aa7a1266842b73a3bc7655}{scale})
+\item 
+void \hyperlink{class_gr_anim_x_form_0dd8f0c7cb5f5ba02bb03d66559e3509}{SetToIdentity} ()
+\item 
+void \hyperlink{class_gr_anim_x_form_0147d7336963feb4caafcf7d87c4307b}{BlendToFast} (const \hyperlink{class_gr_anim_x_form}{GrAnimXForm} \&xform, float \hyperlink{glext__bak_8h_00140d6f5c548b26daf170bf16e86a6d}{t})
+\item 
+void \hyperlink{class_gr_anim_x_form_cbda54501f740973df16cd03c9d0d75b}{Accumulate} (const \hyperlink{class_gr_anim_x_form}{GrAnimXForm} \&xform)
+\item 
+void \hyperlink{class_gr_anim_x_form_a0608b1365ddab9512aeb10827b42d4a}{BuildMatrix} (\hyperlink{class_m_mat4x4}{MMat4x4} \&mat)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 23 of file GrAnimXForm.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_anim_x_form_f72fc165f23278a120e67a83758e17c6}{
+\index{GrAnimXForm@{GrAnimXForm}!GrAnimXForm@{GrAnimXForm}}
+\index{GrAnimXForm@{GrAnimXForm}!GrAnimXForm@{GrAnimXForm}}
+\subsubsection[{GrAnimXForm}]{\setlength{\rightskip}{0pt plus 5cm}GrAnimXForm::GrAnimXForm ()}}
+\label{class_gr_anim_x_form_f72fc165f23278a120e67a83758e17c6}
+
+
+
+
+Definition at line 26 of file GrAnimXForm.cpp.\hypertarget{class_gr_anim_x_form_cc12f6a12d1779e8052e0c270136924d}{
+\index{GrAnimXForm@{GrAnimXForm}!GrAnimXForm@{GrAnimXForm}}
+\index{GrAnimXForm@{GrAnimXForm}!GrAnimXForm@{GrAnimXForm}}
+\subsubsection[{GrAnimXForm}]{\setlength{\rightskip}{0pt plus 5cm}GrAnimXForm::GrAnimXForm (const {\bf MQuat} \& {\em rotate}, \/  const {\bf MVec3} \& {\em translate}, \/  const {\bf MVec3} \& {\em scale})}}
+\label{class_gr_anim_x_form_cc12f6a12d1779e8052e0c270136924d}
+
+
+
+
+Definition at line 33 of file GrAnimXForm.cpp.\hypertarget{class_gr_anim_x_form_6c46438d6a672eb6d7d32f124ed479a1}{
+\index{GrAnimXForm@{GrAnimXForm}!GrAnimXForm@{GrAnimXForm}}
+\index{GrAnimXForm@{GrAnimXForm}!GrAnimXForm@{GrAnimXForm}}
+\subsubsection[{GrAnimXForm}]{\setlength{\rightskip}{0pt plus 5cm}GrAnimXForm::GrAnimXForm (const {\bf MMat4x4} \& {\em xform})}}
+\label{class_gr_anim_x_form_6c46438d6a672eb6d7d32f124ed479a1}
+
+
+
+
+Definition at line 42 of file GrAnimXForm.cpp.\hypertarget{class_gr_anim_x_form_caf2e3e62973312c7cf46d9afa85e76c}{
+\index{GrAnimXForm@{GrAnimXForm}!$\sim$GrAnimXForm@{$\sim$GrAnimXForm}}
+\index{$\sim$GrAnimXForm@{$\sim$GrAnimXForm}!GrAnimXForm@{GrAnimXForm}}
+\subsubsection[{$\sim$GrAnimXForm}]{\setlength{\rightskip}{0pt plus 5cm}GrAnimXForm::$\sim$GrAnimXForm ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_anim_x_form_caf2e3e62973312c7cf46d9afa85e76c}
+
+
+
+
+Definition at line 29 of file GrAnimXForm.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_anim_x_form_cbda54501f740973df16cd03c9d0d75b}{
+\index{GrAnimXForm@{GrAnimXForm}!Accumulate@{Accumulate}}
+\index{Accumulate@{Accumulate}!GrAnimXForm@{GrAnimXForm}}
+\subsubsection[{Accumulate}]{\setlength{\rightskip}{0pt plus 5cm}void GrAnimXForm::Accumulate (const {\bf GrAnimXForm} \& {\em xform})}}
+\label{class_gr_anim_x_form_cbda54501f740973df16cd03c9d0d75b}
+
+
+
+
+Definition at line 114 of file GrAnimXForm.cpp.\hypertarget{class_gr_anim_x_form_0147d7336963feb4caafcf7d87c4307b}{
+\index{GrAnimXForm@{GrAnimXForm}!BlendToFast@{BlendToFast}}
+\index{BlendToFast@{BlendToFast}!GrAnimXForm@{GrAnimXForm}}
+\subsubsection[{BlendToFast}]{\setlength{\rightskip}{0pt plus 5cm}void GrAnimXForm::BlendToFast (const {\bf GrAnimXForm} \& {\em xform}, \/  float {\em t})}}
+\label{class_gr_anim_x_form_0147d7336963feb4caafcf7d87c4307b}
+
+
+
+
+Definition at line 104 of file GrAnimXForm.cpp.\hypertarget{class_gr_anim_x_form_a0608b1365ddab9512aeb10827b42d4a}{
+\index{GrAnimXForm@{GrAnimXForm}!BuildMatrix@{BuildMatrix}}
+\index{BuildMatrix@{BuildMatrix}!GrAnimXForm@{GrAnimXForm}}
+\subsubsection[{BuildMatrix}]{\setlength{\rightskip}{0pt plus 5cm}void GrAnimXForm::BuildMatrix ({\bf MMat4x4} \& {\em mat})}}
+\label{class_gr_anim_x_form_a0608b1365ddab9512aeb10827b42d4a}
+
+
+
+
+Definition at line 123 of file GrAnimXForm.cpp.\hypertarget{class_gr_anim_x_form_160982d52c32e88584f651876d18f409}{
+\index{GrAnimXForm@{GrAnimXForm}!operator=@{operator=}}
+\index{operator=@{operator=}!GrAnimXForm@{GrAnimXForm}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrAnimXForm} \& GrAnimXForm::operator= (const {\bf MMat4x4} \& {\em xform})}}
+\label{class_gr_anim_x_form_160982d52c32e88584f651876d18f409}
+
+
+
+
+Definition at line 57 of file GrAnimXForm.cpp.\hypertarget{class_gr_anim_x_form_0d25495d0795fedc1c50485fa3cbfb97}{
+\index{GrAnimXForm@{GrAnimXForm}!SetRotate@{SetRotate}}
+\index{SetRotate@{SetRotate}!GrAnimXForm@{GrAnimXForm}}
+\subsubsection[{SetRotate}]{\setlength{\rightskip}{0pt plus 5cm}void GrAnimXForm::SetRotate (const {\bf MQuat} \& {\em rotate})}}
+\label{class_gr_anim_x_form_0d25495d0795fedc1c50485fa3cbfb97}
+
+
+
+
+Definition at line 67 of file GrAnimXForm.cpp.\hypertarget{class_gr_anim_x_form_034e1b305eeb463ce6714e4b6f8691d0}{
+\index{GrAnimXForm@{GrAnimXForm}!SetScale@{SetScale}}
+\index{SetScale@{SetScale}!GrAnimXForm@{GrAnimXForm}}
+\subsubsection[{SetScale}]{\setlength{\rightskip}{0pt plus 5cm}void GrAnimXForm::SetScale (const {\bf MVec3} \& {\em scale})}}
+\label{class_gr_anim_x_form_034e1b305eeb463ce6714e4b6f8691d0}
+
+
+
+
+Definition at line 81 of file GrAnimXForm.cpp.\hypertarget{class_gr_anim_x_form_0dd8f0c7cb5f5ba02bb03d66559e3509}{
+\index{GrAnimXForm@{GrAnimXForm}!SetToIdentity@{SetToIdentity}}
+\index{SetToIdentity@{SetToIdentity}!GrAnimXForm@{GrAnimXForm}}
+\subsubsection[{SetToIdentity}]{\setlength{\rightskip}{0pt plus 5cm}void GrAnimXForm::SetToIdentity ()}}
+\label{class_gr_anim_x_form_0dd8f0c7cb5f5ba02bb03d66559e3509}
+
+
+
+
+Definition at line 88 of file GrAnimXForm.cpp.\hypertarget{class_gr_anim_x_form_3940fe69794daeed09ff09ebd8716b49}{
+\index{GrAnimXForm@{GrAnimXForm}!SetTranslate@{SetTranslate}}
+\index{SetTranslate@{SetTranslate}!GrAnimXForm@{GrAnimXForm}}
+\subsubsection[{SetTranslate}]{\setlength{\rightskip}{0pt plus 5cm}void GrAnimXForm::SetTranslate (const {\bf MVec3} \& {\em translate})}}
+\label{class_gr_anim_x_form_3940fe69794daeed09ff09ebd8716b49}
+
+
+
+
+Definition at line 74 of file GrAnimXForm.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_anim_x_form_8h}{GrAnimXForm.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_anim_x_form_8cpp}{GrAnimXForm.cpp}\end{CompactItemize}

@@ -1,0 +1,225 @@
+\hypertarget{class_r_file_mgr}{
+\section{RFileMgr Class Reference}
+\label{class_r_file_mgr}\index{RFileMgr@{RFileMgr}}
+}
+{\tt \#include $<$RFileMgr.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef unsigned int \hyperlink{class_r_file_mgr_9ef0b4d0c3994a3aa8b0c76fe693038d}{Flags}
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_r_file_mgr_8de8601bc8f586106709bd1ee6dc0801}{RFileMgr} (const \hyperlink{class_u_path}{UPath} \&rootPath)
+\item 
+\hyperlink{class_r_file_mgr_3f092fc3435b44d499a21f23d1a30adc}{$\sim$RFileMgr} ()
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_r_file}{RFile} $>$ \hyperlink{class_r_file_mgr_d7f101aeebcb703282cfcb6c8eba67f9}{GetFile} (const \hyperlink{class_u_path}{UPath} \&path, \hyperlink{class_r_file_mgr_9ef0b4d0c3994a3aa8b0c76fe693038d}{Flags} \hyperlink{_u_t_message_8h_0a3c0b351ab09281b662a9ff4f900a53}{flags})
+\item 
+bool \hyperlink{class_r_file_mgr_e8ab22a950ebce68e26d4372c42e36bc}{Exists} (const \hyperlink{class_u_path}{UPath} \&relativeFilePath)
+\item 
+void \hyperlink{class_r_file_mgr_60eda25b74c9062989d18a118ccdb68b}{CreateDir} (const \hyperlink{class_u_path}{UPath} \&dirPath, bool relative=true)
+\item 
+void \hyperlink{class_r_file_mgr_d807748b4fb7900de77813bd6a7a64cd}{GetDirListing} (std::vector$<$ \hyperlink{class_u_path}{UPath} $>$ $\ast$files, std::vector$<$ \hyperlink{class_u_path}{UPath} $>$ $\ast$folders, const \hyperlink{class_u_path}{UPath} \&relativeDirPath)
+\item 
+bool \hyperlink{class_r_file_mgr_c3aa1b38e976cf9e75c81afb40522751}{CopyFile} (const \hyperlink{class_u_path}{UPath} \&dstPath, const \hyperlink{class_u_path}{UPath} \&srcPath)
+\item 
+const \hyperlink{class_u_path}{UPath} \& \hyperlink{class_r_file_mgr_0027774c5d4091aa024df4ff8aa61cfa}{GetRootPath} () const 
+\end{CompactItemize}
+\subsection*{Static Public Attributes}
+\begin{CompactItemize}
+\item 
+static const unsigned int \hyperlink{class_r_file_mgr_7a2b1f90a235a749b3c08e2839ceb16b}{kFlagCreateAlways} = FS\_\-FILE\_\-FLAG\_\-CREATE\_\-ALWAYS
+\item 
+static const unsigned int \hyperlink{class_r_file_mgr_d7c0ae342eb6917fac67e2e7fa48c3d1}{kFlagOpenAlways} = FS\_\-FILE\_\-FLAG\_\-OPEN\_\-ALWAYS
+\item 
+static const unsigned int \hyperlink{class_r_file_mgr_cf4103da9315f00f0ca524c2f263a1b4}{kFlagRead} = FS\_\-FILE\_\-FLAG\_\-READ
+\item 
+static const unsigned int \hyperlink{class_r_file_mgr_d50cfef45d5e20a1de1abc17c0691067}{kFlagWrite} = FS\_\-FILE\_\-FLAG\_\-WRITE
+\item 
+static const unsigned int \hyperlink{class_r_file_mgr_5be34be75972f8996d64b9310cbb1e27}{kFlagContiguous} = FS\_\-FILE\_\-FLAG\_\-CONTIGUOUS
+\item 
+static const unsigned int \hyperlink{class_r_file_mgr_6e99814567b23b9c78cb6c67297b195c}{kFlagDMA} = FS\_\-FILE\_\-FLAG\_\-USE\_\-DMA
+\item 
+static const unsigned int \hyperlink{class_r_file_mgr_9c85e5ddcd9516e3b05e57b539cae3d9}{kFlagReadWrite} = \hyperlink{class_r_file_mgr_cf4103da9315f00f0ca524c2f263a1b4}{kFlagRead} $|$ \hyperlink{class_r_file_mgr_d50cfef45d5e20a1de1abc17c0691067}{kFlagWrite}
+\item 
+static const unsigned int \hyperlink{class_r_file_mgr_8b1ee35639a13fda3783e38664d747ba}{kFlagWriteReorder} = FS\_\-FILE\_\-WRITE\_\-REORDER
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 30 of file RFileMgr.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_r_file_mgr_9ef0b4d0c3994a3aa8b0c76fe693038d}{
+\index{RFileMgr@{RFileMgr}!Flags@{Flags}}
+\index{Flags@{Flags}!RFileMgr@{RFileMgr}}
+\subsubsection[{Flags}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int {\bf RFileMgr::Flags}}}
+\label{class_r_file_mgr_9ef0b4d0c3994a3aa8b0c76fe693038d}
+
+
+
+
+Definition at line 33 of file RFileMgr.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_r_file_mgr_8de8601bc8f586106709bd1ee6dc0801}{
+\index{RFileMgr@{RFileMgr}!RFileMgr@{RFileMgr}}
+\index{RFileMgr@{RFileMgr}!RFileMgr@{RFileMgr}}
+\subsubsection[{RFileMgr}]{\setlength{\rightskip}{0pt plus 5cm}RFileMgr::RFileMgr (const {\bf UPath} \& {\em rootPath})}}
+\label{class_r_file_mgr_8de8601bc8f586106709bd1ee6dc0801}
+
+
+
+
+Definition at line 24 of file RFileMgr.cpp.\hypertarget{class_r_file_mgr_3f092fc3435b44d499a21f23d1a30adc}{
+\index{RFileMgr@{RFileMgr}!$\sim$RFileMgr@{$\sim$RFileMgr}}
+\index{$\sim$RFileMgr@{$\sim$RFileMgr}!RFileMgr@{RFileMgr}}
+\subsubsection[{$\sim$RFileMgr}]{\setlength{\rightskip}{0pt plus 5cm}RFileMgr::$\sim$RFileMgr ()}}
+\label{class_r_file_mgr_3f092fc3435b44d499a21f23d1a30adc}
+
+
+
+
+Definition at line 35 of file RFileMgr.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_r_file_mgr_c3aa1b38e976cf9e75c81afb40522751}{
+\index{RFileMgr@{RFileMgr}!CopyFile@{CopyFile}}
+\index{CopyFile@{CopyFile}!RFileMgr@{RFileMgr}}
+\subsubsection[{CopyFile}]{\setlength{\rightskip}{0pt plus 5cm}bool RFileMgr::CopyFile (const {\bf UPath} \& {\em dstPath}, \/  const {\bf UPath} \& {\em srcPath})}}
+\label{class_r_file_mgr_c3aa1b38e976cf9e75c81afb40522751}
+
+
+
+
+Definition at line 297 of file RFileMgr.cpp.\hypertarget{class_r_file_mgr_60eda25b74c9062989d18a118ccdb68b}{
+\index{RFileMgr@{RFileMgr}!CreateDir@{CreateDir}}
+\index{CreateDir@{CreateDir}!RFileMgr@{RFileMgr}}
+\subsubsection[{CreateDir}]{\setlength{\rightskip}{0pt plus 5cm}void RFileMgr::CreateDir (const {\bf UPath} \& {\em dirPath}, \/  bool {\em relative} = {\tt true})}}
+\label{class_r_file_mgr_60eda25b74c9062989d18a118ccdb68b}
+
+
+
+
+Definition at line 233 of file RFileMgr.cpp.\hypertarget{class_r_file_mgr_e8ab22a950ebce68e26d4372c42e36bc}{
+\index{RFileMgr@{RFileMgr}!Exists@{Exists}}
+\index{Exists@{Exists}!RFileMgr@{RFileMgr}}
+\subsubsection[{Exists}]{\setlength{\rightskip}{0pt plus 5cm}bool RFileMgr::Exists (const {\bf UPath} \& {\em relativeFilePath})}}
+\label{class_r_file_mgr_e8ab22a950ebce68e26d4372c42e36bc}
+
+
+
+
+Definition at line 212 of file RFileMgr.cpp.\hypertarget{class_r_file_mgr_d807748b4fb7900de77813bd6a7a64cd}{
+\index{RFileMgr@{RFileMgr}!GetDirListing@{GetDirListing}}
+\index{GetDirListing@{GetDirListing}!RFileMgr@{RFileMgr}}
+\subsubsection[{GetDirListing}]{\setlength{\rightskip}{0pt plus 5cm}void RFileMgr::GetDirListing (std::vector$<$ {\bf UPath} $>$ $\ast$ {\em files}, \/  std::vector$<$ {\bf UPath} $>$ $\ast$ {\em folders}, \/  const {\bf UPath} \& {\em relativeDirPath})}}
+\label{class_r_file_mgr_d807748b4fb7900de77813bd6a7a64cd}
+
+
+
+
+Definition at line 255 of file RFileMgr.cpp.\hypertarget{class_r_file_mgr_d7f101aeebcb703282cfcb6c8eba67f9}{
+\index{RFileMgr@{RFileMgr}!GetFile@{GetFile}}
+\index{GetFile@{GetFile}!RFileMgr@{RFileMgr}}
+\subsubsection[{GetFile}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf RFile} $>$ RFileMgr::GetFile (const {\bf UPath} \& {\em path}, \/  {\bf Flags} {\em flags})}}
+\label{class_r_file_mgr_d7f101aeebcb703282cfcb6c8eba67f9}
+
+
+
+
+Definition at line 95 of file RFileMgr.cpp.\hypertarget{class_r_file_mgr_0027774c5d4091aa024df4ff8aa61cfa}{
+\index{RFileMgr@{RFileMgr}!GetRootPath@{GetRootPath}}
+\index{GetRootPath@{GetRootPath}!RFileMgr@{RFileMgr}}
+\subsubsection[{GetRootPath}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf UPath}\& RFileMgr::GetRootPath () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_r_file_mgr_0027774c5d4091aa024df4ff8aa61cfa}
+
+
+
+
+Definition at line 63 of file RFileMgr.h.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_r_file_mgr_5be34be75972f8996d64b9310cbb1e27}{
+\index{RFileMgr@{RFileMgr}!kFlagContiguous@{kFlagContiguous}}
+\index{kFlagContiguous@{kFlagContiguous}!RFileMgr@{RFileMgr}}
+\subsubsection[{kFlagContiguous}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int {\bf RFileMgr::kFlagContiguous} = FS\_\-FILE\_\-FLAG\_\-CONTIGUOUS\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_r_file_mgr_5be34be75972f8996d64b9310cbb1e27}
+
+
+
+
+Definition at line 38 of file RFileMgr.h.\hypertarget{class_r_file_mgr_7a2b1f90a235a749b3c08e2839ceb16b}{
+\index{RFileMgr@{RFileMgr}!kFlagCreateAlways@{kFlagCreateAlways}}
+\index{kFlagCreateAlways@{kFlagCreateAlways}!RFileMgr@{RFileMgr}}
+\subsubsection[{kFlagCreateAlways}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int {\bf RFileMgr::kFlagCreateAlways} = FS\_\-FILE\_\-FLAG\_\-CREATE\_\-ALWAYS\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_r_file_mgr_7a2b1f90a235a749b3c08e2839ceb16b}
+
+
+
+
+Definition at line 34 of file RFileMgr.h.\hypertarget{class_r_file_mgr_6e99814567b23b9c78cb6c67297b195c}{
+\index{RFileMgr@{RFileMgr}!kFlagDMA@{kFlagDMA}}
+\index{kFlagDMA@{kFlagDMA}!RFileMgr@{RFileMgr}}
+\subsubsection[{kFlagDMA}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int {\bf RFileMgr::kFlagDMA} = FS\_\-FILE\_\-FLAG\_\-USE\_\-DMA\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_r_file_mgr_6e99814567b23b9c78cb6c67297b195c}
+
+
+
+
+Definition at line 39 of file RFileMgr.h.\hypertarget{class_r_file_mgr_d7c0ae342eb6917fac67e2e7fa48c3d1}{
+\index{RFileMgr@{RFileMgr}!kFlagOpenAlways@{kFlagOpenAlways}}
+\index{kFlagOpenAlways@{kFlagOpenAlways}!RFileMgr@{RFileMgr}}
+\subsubsection[{kFlagOpenAlways}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int {\bf RFileMgr::kFlagOpenAlways} = FS\_\-FILE\_\-FLAG\_\-OPEN\_\-ALWAYS\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_r_file_mgr_d7c0ae342eb6917fac67e2e7fa48c3d1}
+
+
+
+
+Definition at line 35 of file RFileMgr.h.\hypertarget{class_r_file_mgr_cf4103da9315f00f0ca524c2f263a1b4}{
+\index{RFileMgr@{RFileMgr}!kFlagRead@{kFlagRead}}
+\index{kFlagRead@{kFlagRead}!RFileMgr@{RFileMgr}}
+\subsubsection[{kFlagRead}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int {\bf RFileMgr::kFlagRead} = FS\_\-FILE\_\-FLAG\_\-READ\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_r_file_mgr_cf4103da9315f00f0ca524c2f263a1b4}
+
+
+
+
+Definition at line 36 of file RFileMgr.h.\hypertarget{class_r_file_mgr_9c85e5ddcd9516e3b05e57b539cae3d9}{
+\index{RFileMgr@{RFileMgr}!kFlagReadWrite@{kFlagReadWrite}}
+\index{kFlagReadWrite@{kFlagReadWrite}!RFileMgr@{RFileMgr}}
+\subsubsection[{kFlagReadWrite}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int {\bf RFileMgr::kFlagReadWrite} = {\bf kFlagRead} $|$ {\bf kFlagWrite}\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_r_file_mgr_9c85e5ddcd9516e3b05e57b539cae3d9}
+
+
+
+
+Definition at line 40 of file RFileMgr.h.\hypertarget{class_r_file_mgr_d50cfef45d5e20a1de1abc17c0691067}{
+\index{RFileMgr@{RFileMgr}!kFlagWrite@{kFlagWrite}}
+\index{kFlagWrite@{kFlagWrite}!RFileMgr@{RFileMgr}}
+\subsubsection[{kFlagWrite}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int {\bf RFileMgr::kFlagWrite} = FS\_\-FILE\_\-FLAG\_\-WRITE\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_r_file_mgr_d50cfef45d5e20a1de1abc17c0691067}
+
+
+
+
+Definition at line 37 of file RFileMgr.h.\hypertarget{class_r_file_mgr_8b1ee35639a13fda3783e38664d747ba}{
+\index{RFileMgr@{RFileMgr}!kFlagWriteReorder@{kFlagWriteReorder}}
+\index{kFlagWriteReorder@{kFlagWriteReorder}!RFileMgr@{RFileMgr}}
+\subsubsection[{kFlagWriteReorder}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int {\bf RFileMgr::kFlagWriteReorder} = FS\_\-FILE\_\-WRITE\_\-REORDER\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_r_file_mgr_8b1ee35639a13fda3783e38664d747ba}
+
+
+
+
+Definition at line 41 of file RFileMgr.h.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_r_file_mgr_8h}{RFileMgr.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_r_file_mgr_8cpp}{RFileMgr.cpp}\end{CompactItemize}

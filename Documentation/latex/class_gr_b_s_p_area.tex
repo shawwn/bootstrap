@@ -1,0 +1,235 @@
+\hypertarget{class_gr_b_s_p_area}{
+\section{GrBSPArea Class Reference}
+\label{class_gr_b_s_p_area}\index{GrBSPArea@{GrBSPArea}}
+}
+{\tt \#include $<$GrBSPArea.h$>$}
+
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+struct \hyperlink{struct_gr_b_s_p_area_1_1_s_mesh_inst_info}{SMeshInstInfo}
+\end{CompactItemize}
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef std::vector$<$ unsigned int $>$ \hyperlink{class_gr_b_s_p_area_71a5e7cae58da5ccbce3662b378784ec}{IndexArray}
+\item 
+typedef std::vector$<$ \hyperlink{class_gr_mesh_inst}{GrMeshInst} $\ast$ $>$ \hyperlink{class_gr_b_s_p_area_ca3e4c6211c02064ec2d70b4f61738a8}{MeshInstVec}
+\item 
+typedef std::vector$<$ \hyperlink{class_gr_mesh_combiner}{GrMeshCombiner} $\ast$ $>$ \hyperlink{class_gr_b_s_p_area_31bece0da485709ff48572c457c2a3f4}{CombinerArray}
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_b_s_p_area_1917808ab54ae082c728ac4a7d227d51}{GrBSPArea} (\hyperlink{class_u_reader}{UReader} \&reader)
+\item 
+\hyperlink{class_gr_b_s_p_area_c3b18df6dd0993c841482ed39ebe78ee}{GrBSPArea} (\hyperlink{class_gr_b_s_p_area_31bece0da485709ff48572c457c2a3f4}{CombinerArray} \&meshCombiners, const \hyperlink{class_gr_polygon_b_s_p_area}{GrPolygonBSPArea} \&polygonBSPArea, const \hyperlink{class_gr_polygon_uber_u_v_mapper}{GrPolygonUberUVMapper} \&uberMapper)
+\item 
+\hyperlink{class_gr_b_s_p_area_89f1cd22f5fcfd2fad44188428bcddd2}{$\sim$GrBSPArea} ()
+\item 
+void \hyperlink{class_gr_b_s_p_area_2ff5711022e0a216c6cfee8620e29c40}{SetLastVisibleFrameID} (unsigned int \hyperlink{glext__bak_8h_58c2a664503e14ffb8f21012aabff3e9}{id})
+\item 
+unsigned int \hyperlink{class_gr_b_s_p_area_416ac8fc68f1298b3130e65aa363bfff}{GetLastVisibleFrameID} () const 
+\item 
+unsigned int \hyperlink{class_gr_b_s_p_area_034cbc677c55de0bd1111aa138d32c0d}{GetMeshInstCount} () const 
+\item 
+const \hyperlink{struct_gr_b_s_p_area_1_1_s_mesh_inst_info}{SMeshInstInfo} \& \hyperlink{class_gr_b_s_p_area_3036d2ce15275f657603deb0c553a75e}{GetMeshInst} (unsigned int idx) const 
+\item 
+void \hyperlink{class_gr_b_s_p_area_f6ab8deb86e82210eb489399ecdc5c5b}{SetMeshInstLastVisibleFrameID} (unsigned int idx, unsigned int frameId)
+\item 
+const \hyperlink{class_m_a_a_box}{MAABox} \& \hyperlink{class_gr_b_s_p_area_7e13e61ee1c244898bbbedb5edfbbdfa}{GetBoundingBox} () const 
+\item 
+const \hyperlink{class_gr_b_s_p_area_71a5e7cae58da5ccbce3662b378784ec}{IndexArray} \& \hyperlink{class_gr_b_s_p_area_19f3afae82383d85b1afce1119b9c01e}{GetVisibleAreas} () const 
+\item 
+bool \hyperlink{class_gr_b_s_p_area_9f8a64fe54421b7a44623384ec846477}{Pick} (\hyperlink{class_gr_mesh_inst}{GrMeshInst} $\ast$\&meshInst, \hyperlink{struct_gr_mesh_1_1_s_tri_collision}{GrMesh::STriCollision} \&hit, const \hyperlink{class_gr_b_s_p_area_ca3e4c6211c02064ec2d70b4f61738a8}{MeshInstVec} \&meshes, const \hyperlink{class_m_ray}{MRay} \&ray)
+\item 
+void \hyperlink{class_gr_b_s_p_area_80374c27c8e8b56812437625236d5f9b}{Traverse} (\hyperlink{class_gr_scene_traverser}{GrSceneTraverser} $\ast$traverser, const \hyperlink{class_gr_b_s_p_area_ca3e4c6211c02064ec2d70b4f61738a8}{MeshInstVec} \&meshes)
+\item 
+\hyperlink{class_gr_uber_patch_set}{GrUberPatchSet} $\ast$ \hyperlink{class_gr_b_s_p_area_248885c47602b8b30198e011d05a9b1b}{GetUberPatchSet} () const 
+\item 
+void \hyperlink{class_gr_b_s_p_area_e0b79578e1c1ffc335e6f37d7daf6349}{Load} (\hyperlink{class_u_reader}{UReader} \&reader)
+\item 
+void \hyperlink{class_gr_b_s_p_area_5d647ed462a407fc32cf9101515e9c40}{Save} (\hyperlink{class_u_writer}{UWriter} \&writer)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 32 of file GrBSPArea.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_gr_b_s_p_area_31bece0da485709ff48572c457c2a3f4}{
+\index{GrBSPArea@{GrBSPArea}!CombinerArray@{CombinerArray}}
+\index{CombinerArray@{CombinerArray}!GrBSPArea@{GrBSPArea}}
+\subsubsection[{CombinerArray}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<$ {\bf GrMeshCombiner}$\ast$ $>$ {\bf GrBSPArea::CombinerArray}}}
+\label{class_gr_b_s_p_area_31bece0da485709ff48572c457c2a3f4}
+
+
+
+
+Definition at line 37 of file GrBSPArea.h.\hypertarget{class_gr_b_s_p_area_71a5e7cae58da5ccbce3662b378784ec}{
+\index{GrBSPArea@{GrBSPArea}!IndexArray@{IndexArray}}
+\index{IndexArray@{IndexArray}!GrBSPArea@{GrBSPArea}}
+\subsubsection[{IndexArray}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<$ unsigned int $>$ {\bf GrBSPArea::IndexArray}}}
+\label{class_gr_b_s_p_area_71a5e7cae58da5ccbce3662b378784ec}
+
+
+
+
+Definition at line 35 of file GrBSPArea.h.\hypertarget{class_gr_b_s_p_area_ca3e4c6211c02064ec2d70b4f61738a8}{
+\index{GrBSPArea@{GrBSPArea}!MeshInstVec@{MeshInstVec}}
+\index{MeshInstVec@{MeshInstVec}!GrBSPArea@{GrBSPArea}}
+\subsubsection[{MeshInstVec}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::vector$<$ {\bf GrMeshInst}$\ast$ $>$ {\bf GrBSPArea::MeshInstVec}}}
+\label{class_gr_b_s_p_area_ca3e4c6211c02064ec2d70b4f61738a8}
+
+
+
+
+Definition at line 36 of file GrBSPArea.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_b_s_p_area_1917808ab54ae082c728ac4a7d227d51}{
+\index{GrBSPArea@{GrBSPArea}!GrBSPArea@{GrBSPArea}}
+\index{GrBSPArea@{GrBSPArea}!GrBSPArea@{GrBSPArea}}
+\subsubsection[{GrBSPArea}]{\setlength{\rightskip}{0pt plus 5cm}GrBSPArea::GrBSPArea ({\bf UReader} \& {\em reader})}}
+\label{class_gr_b_s_p_area_1917808ab54ae082c728ac4a7d227d51}
+
+
+
+
+Definition at line 31 of file GrBSPArea.cpp.\hypertarget{class_gr_b_s_p_area_c3b18df6dd0993c841482ed39ebe78ee}{
+\index{GrBSPArea@{GrBSPArea}!GrBSPArea@{GrBSPArea}}
+\index{GrBSPArea@{GrBSPArea}!GrBSPArea@{GrBSPArea}}
+\subsubsection[{GrBSPArea}]{\setlength{\rightskip}{0pt plus 5cm}GrBSPArea::GrBSPArea ({\bf CombinerArray} \& {\em meshCombiners}, \/  const {\bf GrPolygonBSPArea} \& {\em polygonBSPArea}, \/  const {\bf GrPolygonUberUVMapper} \& {\em uberMapper})}}
+\label{class_gr_b_s_p_area_c3b18df6dd0993c841482ed39ebe78ee}
+
+
+
+
+Definition at line 40 of file GrBSPArea.cpp.\hypertarget{class_gr_b_s_p_area_89f1cd22f5fcfd2fad44188428bcddd2}{
+\index{GrBSPArea@{GrBSPArea}!$\sim$GrBSPArea@{$\sim$GrBSPArea}}
+\index{$\sim$GrBSPArea@{$\sim$GrBSPArea}!GrBSPArea@{GrBSPArea}}
+\subsubsection[{$\sim$GrBSPArea}]{\setlength{\rightskip}{0pt plus 5cm}GrBSPArea::$\sim$GrBSPArea ()}}
+\label{class_gr_b_s_p_area_89f1cd22f5fcfd2fad44188428bcddd2}
+
+
+
+
+Definition at line 68 of file GrBSPArea.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_b_s_p_area_7e13e61ee1c244898bbbedb5edfbbdfa}{
+\index{GrBSPArea@{GrBSPArea}!GetBoundingBox@{GetBoundingBox}}
+\index{GetBoundingBox@{GetBoundingBox}!GrBSPArea@{GrBSPArea}}
+\subsubsection[{GetBoundingBox}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MAABox} \& GrBSPArea::GetBoundingBox () const}}
+\label{class_gr_b_s_p_area_7e13e61ee1c244898bbbedb5edfbbdfa}
+
+
+
+
+Definition at line 88 of file GrBSPArea.cpp.\hypertarget{class_gr_b_s_p_area_416ac8fc68f1298b3130e65aa363bfff}{
+\index{GrBSPArea@{GrBSPArea}!GetLastVisibleFrameID@{GetLastVisibleFrameID}}
+\index{GetLastVisibleFrameID@{GetLastVisibleFrameID}!GrBSPArea@{GrBSPArea}}
+\subsubsection[{GetLastVisibleFrameID}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrBSPArea::GetLastVisibleFrameID () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_b_s_p_area_416ac8fc68f1298b3130e65aa363bfff}
+
+
+
+
+Definition at line 54 of file GrBSPArea.h.\hypertarget{class_gr_b_s_p_area_3036d2ce15275f657603deb0c553a75e}{
+\index{GrBSPArea@{GrBSPArea}!GetMeshInst@{GetMeshInst}}
+\index{GetMeshInst@{GetMeshInst}!GrBSPArea@{GrBSPArea}}
+\subsubsection[{GetMeshInst}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf SMeshInstInfo}\& GrBSPArea::GetMeshInst (unsigned int {\em idx}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_b_s_p_area_3036d2ce15275f657603deb0c553a75e}
+
+
+
+
+Definition at line 58 of file GrBSPArea.h.\hypertarget{class_gr_b_s_p_area_034cbc677c55de0bd1111aa138d32c0d}{
+\index{GrBSPArea@{GrBSPArea}!GetMeshInstCount@{GetMeshInstCount}}
+\index{GetMeshInstCount@{GetMeshInstCount}!GrBSPArea@{GrBSPArea}}
+\subsubsection[{GetMeshInstCount}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrBSPArea::GetMeshInstCount () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_b_s_p_area_034cbc677c55de0bd1111aa138d32c0d}
+
+
+
+
+Definition at line 57 of file GrBSPArea.h.\hypertarget{class_gr_b_s_p_area_248885c47602b8b30198e011d05a9b1b}{
+\index{GrBSPArea@{GrBSPArea}!GetUberPatchSet@{GetUberPatchSet}}
+\index{GetUberPatchSet@{GetUberPatchSet}!GrBSPArea@{GrBSPArea}}
+\subsubsection[{GetUberPatchSet}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrUberPatchSet}$\ast$ GrBSPArea::GetUberPatchSet () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_b_s_p_area_248885c47602b8b30198e011d05a9b1b}
+
+
+
+
+Definition at line 72 of file GrBSPArea.h.\hypertarget{class_gr_b_s_p_area_19f3afae82383d85b1afce1119b9c01e}{
+\index{GrBSPArea@{GrBSPArea}!GetVisibleAreas@{GetVisibleAreas}}
+\index{GetVisibleAreas@{GetVisibleAreas}!GrBSPArea@{GrBSPArea}}
+\subsubsection[{GetVisibleAreas}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf IndexArray}\& GrBSPArea::GetVisibleAreas () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_b_s_p_area_19f3afae82383d85b1afce1119b9c01e}
+
+
+
+
+Definition at line 65 of file GrBSPArea.h.\hypertarget{class_gr_b_s_p_area_e0b79578e1c1ffc335e6f37d7daf6349}{
+\index{GrBSPArea@{GrBSPArea}!Load@{Load}}
+\index{Load@{Load}!GrBSPArea@{GrBSPArea}}
+\subsubsection[{Load}]{\setlength{\rightskip}{0pt plus 5cm}void GrBSPArea::Load ({\bf UReader} \& {\em reader})}}
+\label{class_gr_b_s_p_area_e0b79578e1c1ffc335e6f37d7daf6349}
+
+
+
+
+Definition at line 167 of file GrBSPArea.cpp.\hypertarget{class_gr_b_s_p_area_9f8a64fe54421b7a44623384ec846477}{
+\index{GrBSPArea@{GrBSPArea}!Pick@{Pick}}
+\index{Pick@{Pick}!GrBSPArea@{GrBSPArea}}
+\subsubsection[{Pick}]{\setlength{\rightskip}{0pt plus 5cm}bool GrBSPArea::Pick ({\bf GrMeshInst} $\ast$\& {\em meshInst}, \/  {\bf GrMesh::STriCollision} \& {\em hit}, \/  const {\bf MeshInstVec} \& {\em meshes}, \/  const {\bf MRay} \& {\em ray})}}
+\label{class_gr_b_s_p_area_9f8a64fe54421b7a44623384ec846477}
+
+
+
+
+Definition at line 95 of file GrBSPArea.cpp.\hypertarget{class_gr_b_s_p_area_5d647ed462a407fc32cf9101515e9c40}{
+\index{GrBSPArea@{GrBSPArea}!Save@{Save}}
+\index{Save@{Save}!GrBSPArea@{GrBSPArea}}
+\subsubsection[{Save}]{\setlength{\rightskip}{0pt plus 5cm}void GrBSPArea::Save ({\bf UWriter} \& {\em writer})}}
+\label{class_gr_b_s_p_area_5d647ed462a407fc32cf9101515e9c40}
+
+
+
+
+Definition at line 203 of file GrBSPArea.cpp.\hypertarget{class_gr_b_s_p_area_2ff5711022e0a216c6cfee8620e29c40}{
+\index{GrBSPArea@{GrBSPArea}!SetLastVisibleFrameID@{SetLastVisibleFrameID}}
+\index{SetLastVisibleFrameID@{SetLastVisibleFrameID}!GrBSPArea@{GrBSPArea}}
+\subsubsection[{SetLastVisibleFrameID}]{\setlength{\rightskip}{0pt plus 5cm}void GrBSPArea::SetLastVisibleFrameID (unsigned int {\em id})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_b_s_p_area_2ff5711022e0a216c6cfee8620e29c40}
+
+
+
+
+Definition at line 53 of file GrBSPArea.h.\hypertarget{class_gr_b_s_p_area_f6ab8deb86e82210eb489399ecdc5c5b}{
+\index{GrBSPArea@{GrBSPArea}!SetMeshInstLastVisibleFrameID@{SetMeshInstLastVisibleFrameID}}
+\index{SetMeshInstLastVisibleFrameID@{SetMeshInstLastVisibleFrameID}!GrBSPArea@{GrBSPArea}}
+\subsubsection[{SetMeshInstLastVisibleFrameID}]{\setlength{\rightskip}{0pt plus 5cm}void GrBSPArea::SetMeshInstLastVisibleFrameID (unsigned int {\em idx}, \/  unsigned int {\em frameId})}}
+\label{class_gr_b_s_p_area_f6ab8deb86e82210eb489399ecdc5c5b}
+
+
+
+
+Definition at line 80 of file GrBSPArea.cpp.\hypertarget{class_gr_b_s_p_area_80374c27c8e8b56812437625236d5f9b}{
+\index{GrBSPArea@{GrBSPArea}!Traverse@{Traverse}}
+\index{Traverse@{Traverse}!GrBSPArea@{GrBSPArea}}
+\subsubsection[{Traverse}]{\setlength{\rightskip}{0pt plus 5cm}void GrBSPArea::Traverse ({\bf GrSceneTraverser} $\ast$ {\em traverser}, \/  const {\bf MeshInstVec} \& {\em meshes})}}
+\label{class_gr_b_s_p_area_80374c27c8e8b56812437625236d5f9b}
+
+
+
+
+Definition at line 148 of file GrBSPArea.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_b_s_p_area_8h}{GrBSPArea.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_b_s_p_area_8cpp}{GrBSPArea.cpp}\end{CompactItemize}

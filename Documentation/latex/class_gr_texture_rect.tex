@@ -1,0 +1,98 @@
+\hypertarget{class_gr_texture_rect}{
+\section{GrTextureRect Class Reference}
+\label{class_gr_texture_rect}\index{GrTextureRect@{GrTextureRect}}
+}
+{\tt \#include $<$GrTextureRect.h$>$}
+
+Inheritance diagram for GrTextureRect::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{class_gr_texture_rect}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_texture_rect_d9e2adcc0e64b50e658eb43d80a00368}{GrTextureRect} (const \hyperlink{class_u_path}{UPath} \&\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, \hyperlink{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c}{EFORMAT} \hyperlink{glext__bak_8h_e2d3db041c6004a67047659b42f73a44}{format}, unsigned int \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, unsigned int \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height})
+\item 
+\hyperlink{class_gr_texture_rect_cb5a5fe6cd3041f7c75a6ab5e624ad98}{$\sim$GrTextureRect} ()
+\item 
+unsigned int \hyperlink{class_gr_texture_rect_7e4df2f17a93340ba6bb98ab707dbe83}{GetWidth} () const 
+\item 
+unsigned int \hyperlink{class_gr_texture_rect_c6be29f7af211b67722dc48ffaa232df}{GetHeight} () const 
+\item 
+void \hyperlink{class_gr_texture_rect_a50c4865b823b882367fed497667f77b}{BindToFramebuffer} (unsigned int \hyperlink{glext__bak_8h_d8f97111cc6514af5f352219d1cceb40}{attachment})
+\item 
+void \hyperlink{class_gr_texture_rect_25477360df1bff07b870f655524d32fb}{UploadPixelData} (int dstX, int dstY, int \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, int \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height}, const void $\ast$srcPels, GLenum srcFormat, GLenum srcType)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 18 of file GrTextureRect.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_texture_rect_d9e2adcc0e64b50e658eb43d80a00368}{
+\index{GrTextureRect@{GrTextureRect}!GrTextureRect@{GrTextureRect}}
+\index{GrTextureRect@{GrTextureRect}!GrTextureRect@{GrTextureRect}}
+\subsubsection[{GrTextureRect}]{\setlength{\rightskip}{0pt plus 5cm}GrTextureRect::GrTextureRect (const {\bf UPath} \& {\em name}, \/  {\bf EFORMAT} {\em format}, \/  unsigned int {\em width}, \/  unsigned int {\em height})}}
+\label{class_gr_texture_rect_d9e2adcc0e64b50e658eb43d80a00368}
+
+
+
+
+Definition at line 51 of file GrTextureRect.cpp.\hypertarget{class_gr_texture_rect_cb5a5fe6cd3041f7c75a6ab5e624ad98}{
+\index{GrTextureRect@{GrTextureRect}!$\sim$GrTextureRect@{$\sim$GrTextureRect}}
+\index{$\sim$GrTextureRect@{$\sim$GrTextureRect}!GrTextureRect@{GrTextureRect}}
+\subsubsection[{$\sim$GrTextureRect}]{\setlength{\rightskip}{0pt plus 5cm}GrTextureRect::$\sim$GrTextureRect ()}}
+\label{class_gr_texture_rect_cb5a5fe6cd3041f7c75a6ab5e624ad98}
+
+
+
+
+Definition at line 61 of file GrTextureRect.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_texture_rect_a50c4865b823b882367fed497667f77b}{
+\index{GrTextureRect@{GrTextureRect}!BindToFramebuffer@{BindToFramebuffer}}
+\index{BindToFramebuffer@{BindToFramebuffer}!GrTextureRect@{GrTextureRect}}
+\subsubsection[{BindToFramebuffer}]{\setlength{\rightskip}{0pt plus 5cm}void GrTextureRect::BindToFramebuffer (unsigned int {\em attachment})}}
+\label{class_gr_texture_rect_a50c4865b823b882367fed497667f77b}
+
+
+
+
+Definition at line 73 of file GrTextureRect.cpp.\hypertarget{class_gr_texture_rect_c6be29f7af211b67722dc48ffaa232df}{
+\index{GrTextureRect@{GrTextureRect}!GetHeight@{GetHeight}}
+\index{GetHeight@{GetHeight}!GrTextureRect@{GrTextureRect}}
+\subsubsection[{GetHeight}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrTextureRect::GetHeight () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_texture_rect_c6be29f7af211b67722dc48ffaa232df}
+
+
+
+
+Definition at line 26 of file GrTextureRect.h.\hypertarget{class_gr_texture_rect_7e4df2f17a93340ba6bb98ab707dbe83}{
+\index{GrTextureRect@{GrTextureRect}!GetWidth@{GetWidth}}
+\index{GetWidth@{GetWidth}!GrTextureRect@{GrTextureRect}}
+\subsubsection[{GetWidth}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrTextureRect::GetWidth () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_texture_rect_7e4df2f17a93340ba6bb98ab707dbe83}
+
+
+
+
+Definition at line 25 of file GrTextureRect.h.\hypertarget{class_gr_texture_rect_25477360df1bff07b870f655524d32fb}{
+\index{GrTextureRect@{GrTextureRect}!UploadPixelData@{UploadPixelData}}
+\index{UploadPixelData@{UploadPixelData}!GrTextureRect@{GrTextureRect}}
+\subsubsection[{UploadPixelData}]{\setlength{\rightskip}{0pt plus 5cm}void GrTextureRect::UploadPixelData (int {\em dstX}, \/  int {\em dstY}, \/  int {\em width}, \/  int {\em height}, \/  const void $\ast$ {\em srcPels}, \/  GLenum {\em srcFormat}, \/  GLenum {\em srcType})}}
+\label{class_gr_texture_rect_25477360df1bff07b870f655524d32fb}
+
+
+
+
+Definition at line 84 of file GrTextureRect.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_texture_rect_8h}{GrTextureRect.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_texture_rect_8cpp}{GrTextureRect.cpp}\end{CompactItemize}

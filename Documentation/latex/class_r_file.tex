@@ -1,0 +1,175 @@
+\hypertarget{class_r_file}{
+\section{RFile Class Reference}
+\label{class_r_file}\index{RFile@{RFile}}
+}
+{\tt \#include $<$RFile.h$>$}
+
+Inheritance diagram for RFile::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{class_r_file}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_r_file_ffc05913a9571ccf38ccf645a75164c4}{RFile} (const \hyperlink{class_u_path}{UPath} \&\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, void $\ast$handle, unsigned int \hyperlink{_u_t_message_8h_0a3c0b351ab09281b662a9ff4f900a53}{flags})
+\item 
+\hyperlink{class_r_file_e99ed1a7be564abbe8be041bfe76397d}{$\sim$RFile} ()
+\item 
+void \hyperlink{class_r_file_4063ce34c2c766729da4e29ca2de79e3}{Reset} (void $\ast$handle, unsigned int \hyperlink{_u_t_message_8h_0a3c0b351ab09281b662a9ff4f900a53}{flags})
+\item 
+bool \hyperlink{class_r_file_0e6298d7ae56e674c44c5f25b5b23b0a}{CanRead} ()
+\item 
+bool \hyperlink{class_r_file_66152df59b7c0b3a6a385b00f5d27397}{CanWrite} ()
+\item 
+bool \hyperlink{class_r_file_72ab94152a88ad19b3c4db258bf49cb0}{Exists} () const 
+\item 
+bool \hyperlink{class_r_file_e2b38cee29eed7f4469aabc6a5eb3a6e}{Reload} () const 
+\item 
+void \hyperlink{class_r_file_e8e9458fd38f8c5a183b897e167fce3a}{Purge} () const 
+\item 
+const void $\ast$ \hyperlink{class_r_file_4958bbe180b2c4544968b4ee6975acbe}{GetData} () const 
+\item 
+\hyperlink{common__afx_8h_2e015c96ada30f1fdb9322f7af889c10}{\_\-\_\-int64} \hyperlink{class_r_file_8159fd984526bc46e8942a8e1ca3c10c}{GetSize} () const 
+\item 
+void \hyperlink{class_r_file_0ae8b25ea2cdbe65804418cb03f4b156}{WriteData} (\hyperlink{common__afx_8h_2e015c96ada30f1fdb9322f7af889c10}{\_\-\_\-int64} \hyperlink{glext__bak_8h_a782f3aea23e3c30029c811241dc2c82}{offset}, const void $\ast$\hyperlink{glext__bak_8h_72e0fdf0f845ded60b1fada9e9195cd7}{src}, unsigned int \hyperlink{glext__bak_8h_3d1e3edfcf61ca2d831883e1afbad89e}{size})
+\item 
+void $\ast$ \hyperlink{class_r_file_27601647d44f5232a50d32f81570a093}{GetHandle} () const 
+\item 
+unsigned int \hyperlink{class_r_file_a7a3a5a24e39a081e7198024b71e96a2}{GetFlags} () const 
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 18 of file RFile.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_r_file_ffc05913a9571ccf38ccf645a75164c4}{
+\index{RFile@{RFile}!RFile@{RFile}}
+\index{RFile@{RFile}!RFile@{RFile}}
+\subsubsection[{RFile}]{\setlength{\rightskip}{0pt plus 5cm}RFile::RFile (const {\bf UPath} \& {\em name}, \/  void $\ast$ {\em handle}, \/  unsigned int {\em flags})}}
+\label{class_r_file_ffc05913a9571ccf38ccf645a75164c4}
+
+
+
+
+Definition at line 29 of file RFile.cpp.\hypertarget{class_r_file_e99ed1a7be564abbe8be041bfe76397d}{
+\index{RFile@{RFile}!$\sim$RFile@{$\sim$RFile}}
+\index{$\sim$RFile@{$\sim$RFile}!RFile@{RFile}}
+\subsubsection[{$\sim$RFile}]{\setlength{\rightskip}{0pt plus 5cm}RFile::$\sim$RFile ()}}
+\label{class_r_file_e99ed1a7be564abbe8be041bfe76397d}
+
+
+
+
+Definition at line 41 of file RFile.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_r_file_0e6298d7ae56e674c44c5f25b5b23b0a}{
+\index{RFile@{RFile}!CanRead@{CanRead}}
+\index{CanRead@{CanRead}!RFile@{RFile}}
+\subsubsection[{CanRead}]{\setlength{\rightskip}{0pt plus 5cm}bool RFile::CanRead ()}}
+\label{class_r_file_0e6298d7ae56e674c44c5f25b5b23b0a}
+
+
+
+
+Definition at line 69 of file RFile.cpp.\hypertarget{class_r_file_66152df59b7c0b3a6a385b00f5d27397}{
+\index{RFile@{RFile}!CanWrite@{CanWrite}}
+\index{CanWrite@{CanWrite}!RFile@{RFile}}
+\subsubsection[{CanWrite}]{\setlength{\rightskip}{0pt plus 5cm}bool RFile::CanWrite ()}}
+\label{class_r_file_66152df59b7c0b3a6a385b00f5d27397}
+
+
+
+
+Definition at line 76 of file RFile.cpp.\hypertarget{class_r_file_72ab94152a88ad19b3c4db258bf49cb0}{
+\index{RFile@{RFile}!Exists@{Exists}}
+\index{Exists@{Exists}!RFile@{RFile}}
+\subsubsection[{Exists}]{\setlength{\rightskip}{0pt plus 5cm}bool RFile::Exists () const}}
+\label{class_r_file_72ab94152a88ad19b3c4db258bf49cb0}
+
+
+
+
+Definition at line 83 of file RFile.cpp.\hypertarget{class_r_file_4958bbe180b2c4544968b4ee6975acbe}{
+\index{RFile@{RFile}!GetData@{GetData}}
+\index{GetData@{GetData}!RFile@{RFile}}
+\subsubsection[{GetData}]{\setlength{\rightskip}{0pt plus 5cm}const void $\ast$ RFile::GetData () const}}
+\label{class_r_file_4958bbe180b2c4544968b4ee6975acbe}
+
+
+
+
+Definition at line 143 of file RFile.cpp.\hypertarget{class_r_file_a7a3a5a24e39a081e7198024b71e96a2}{
+\index{RFile@{RFile}!GetFlags@{GetFlags}}
+\index{GetFlags@{GetFlags}!RFile@{RFile}}
+\subsubsection[{GetFlags}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int RFile::GetFlags () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_r_file_a7a3a5a24e39a081e7198024b71e96a2}
+
+
+
+
+Definition at line 52 of file RFile.h.\hypertarget{class_r_file_27601647d44f5232a50d32f81570a093}{
+\index{RFile@{RFile}!GetHandle@{GetHandle}}
+\index{GetHandle@{GetHandle}!RFile@{RFile}}
+\subsubsection[{GetHandle}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ RFile::GetHandle () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_r_file_27601647d44f5232a50d32f81570a093}
+
+
+
+
+Definition at line 49 of file RFile.h.\hypertarget{class_r_file_8159fd984526bc46e8942a8e1ca3c10c}{
+\index{RFile@{RFile}!GetSize@{GetSize}}
+\index{GetSize@{GetSize}!RFile@{RFile}}
+\subsubsection[{GetSize}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \_\-\_\-int64} RFile::GetSize () const}}
+\label{class_r_file_8159fd984526bc46e8942a8e1ca3c10c}
+
+
+
+
+Definition at line 151 of file RFile.cpp.\hypertarget{class_r_file_e8e9458fd38f8c5a183b897e167fce3a}{
+\index{RFile@{RFile}!Purge@{Purge}}
+\index{Purge@{Purge}!RFile@{RFile}}
+\subsubsection[{Purge}]{\setlength{\rightskip}{0pt plus 5cm}void RFile::Purge () const}}
+\label{class_r_file_e8e9458fd38f8c5a183b897e167fce3a}
+
+
+
+
+Definition at line 134 of file RFile.cpp.\hypertarget{class_r_file_e2b38cee29eed7f4469aabc6a5eb3a6e}{
+\index{RFile@{RFile}!Reload@{Reload}}
+\index{Reload@{Reload}!RFile@{RFile}}
+\subsubsection[{Reload}]{\setlength{\rightskip}{0pt plus 5cm}bool RFile::Reload () const}}
+\label{class_r_file_e2b38cee29eed7f4469aabc6a5eb3a6e}
+
+
+
+
+Definition at line 90 of file RFile.cpp.\hypertarget{class_r_file_4063ce34c2c766729da4e29ca2de79e3}{
+\index{RFile@{RFile}!Reset@{Reset}}
+\index{Reset@{Reset}!RFile@{RFile}}
+\subsubsection[{Reset}]{\setlength{\rightskip}{0pt plus 5cm}void RFile::Reset (void $\ast$ {\em handle}, \/  unsigned int {\em flags})}}
+\label{class_r_file_4063ce34c2c766729da4e29ca2de79e3}
+
+
+
+
+Definition at line 54 of file RFile.cpp.\hypertarget{class_r_file_0ae8b25ea2cdbe65804418cb03f4b156}{
+\index{RFile@{RFile}!WriteData@{WriteData}}
+\index{WriteData@{WriteData}!RFile@{RFile}}
+\subsubsection[{WriteData}]{\setlength{\rightskip}{0pt plus 5cm}void RFile::WriteData ({\bf \_\-\_\-int64} {\em offset}, \/  const void $\ast$ {\em src}, \/  unsigned int {\em size})}}
+\label{class_r_file_0ae8b25ea2cdbe65804418cb03f4b156}
+
+
+
+
+Definition at line 158 of file RFile.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_r_file_8h}{RFile.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_r_file_8cpp}{RFile.cpp}\end{CompactItemize}

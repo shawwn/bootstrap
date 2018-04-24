@@ -1,0 +1,410 @@
+\hypertarget{class_gr_image}{
+\section{GrImage Class Reference}
+\label{class_gr_image}\index{GrImage@{GrImage}}
+}
+{\tt \#include $<$GrImage.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+enum \hyperlink{class_gr_image_55bbf2a220e037e07616bb9c3f049786}{EFORMAT} \{ \par
+\hyperlink{class_gr_image_55bbf2a220e037e07616bb9c3f049786356d268f21e4db1aae7c7e36dfe3c247}{EF\_\-BGR24}, 
+\hyperlink{class_gr_image_55bbf2a220e037e07616bb9c3f049786db8d3cc0284ad82ecdb9237383702dbd}{EF\_\-BGRA32}, 
+\hyperlink{class_gr_image_55bbf2a220e037e07616bb9c3f0497862849db7623d305d03c10171534380f39}{EF\_\-BGR96F}, 
+\hyperlink{class_gr_image_55bbf2a220e037e07616bb9c3f049786f09b7ae1c36d657ed15cd701306cdea7}{EF\_\-BGRA128F}, 
+\par
+\hyperlink{class_gr_image_55bbf2a220e037e07616bb9c3f049786a54c44d9d5b7aa6dbd156429857381d9}{EF\_\-I8}, 
+\hyperlink{class_gr_image_55bbf2a220e037e07616bb9c3f049786361d515c8fd8c47359cfece968f1f2fe}{EF\_\-I16F}, 
+\hyperlink{class_gr_image_55bbf2a220e037e07616bb9c3f0497862de663da4c35b7fe9a5d18311d58c7c3}{EF\_\-LA16}, 
+\hyperlink{class_gr_image_55bbf2a220e037e07616bb9c3f049786cbe17f3c0511f360dd9b53884fa0866a}{EF\_\-LA64F}, 
+\par
+\hyperlink{class_gr_image_55bbf2a220e037e07616bb9c3f049786b9d6d2d7c4e777cd5a0fe5a306b98b2e}{EF\_\-DEPTH}, 
+\hyperlink{class_gr_image_55bbf2a220e037e07616bb9c3f0497865c5f10f876b9ae7dd73aac384de111b9}{EF\_\-BGR\_\-DXT1}, 
+\hyperlink{class_gr_image_55bbf2a220e037e07616bb9c3f0497869527d3b19e4c628284621359a6ac2fb1}{EF\_\-BGRA\_\-DXT5}
+ \}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_image_cfe18463a50aaaadf5a059537f3aebe3}{GrImage} (const \hyperlink{class_u_path}{UPath} \&\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, \hyperlink{class_gr_image_55bbf2a220e037e07616bb9c3f049786}{EFORMAT} \hyperlink{glext__bak_8h_e2d3db041c6004a67047659b42f73a44}{format}, unsigned int \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, unsigned int \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height}, void $\ast$\hyperlink{glext__bak_8h_69926c009f2d52c6b6d2c76784af8c64}{data}=0)
+\item 
+\hyperlink{class_gr_image_b0282a1c9f181f55eecc2b8ec3fd8f5f}{GrImage} (const \hyperlink{class_u_path}{UPath} \&\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, unsigned long bgraColor)
+\item 
+\hyperlink{class_gr_image_da3f5e31181211ee5d86659bc02c88b0}{GrImage} (const \hyperlink{class_u_path}{UPath} \&\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, \hyperlink{class_u_reader}{UReader} \&reader)
+\item 
+\hyperlink{class_gr_image_f18a44493540afaae3df7a93700afa32}{GrImage} (const \hyperlink{class_gr_image}{GrImage} \&\hyperlink{glext__bak_8h_8943555672bc4b8056204eb92329cafa}{image})
+\item 
+\hyperlink{class_gr_image_e0891bd66f3e68c47d28ebd685908743}{$\sim$GrImage} ()
+\item 
+const \hyperlink{class_u_path}{UPath} \& \hyperlink{class_gr_image_05466580ff5934ea282b1ae32ee69cee}{GetName} () const 
+\item 
+\hyperlink{class_gr_image_55bbf2a220e037e07616bb9c3f049786}{EFORMAT} \hyperlink{class_gr_image_747e1e9fbe3f7faad890d217fe163d0d}{GetFormat} ()
+\item 
+unsigned int \hyperlink{class_gr_image_800124c1824ea3b75d989e0cab142ca7}{GetWidth} () const 
+\item 
+unsigned int \hyperlink{class_gr_image_5317f4f29d4145a774921960c54935af}{GetHeight} () const 
+\item 
+unsigned int \hyperlink{class_gr_image_b1d89088b96f628d59c886e1224f5ac2}{GetBytesPerPixel} () const 
+\item 
+unsigned int \hyperlink{class_gr_image_4dbab6db5578622e02b89ba5f5ebe5e3}{GetMaxMipCount} () const 
+\item 
+bool \hyperlink{class_gr_image_af38daff1672308197b7155c1d4fb2e3}{HasMipMaps} () const 
+\item 
+bool \hyperlink{class_gr_image_f56a1347e57f10348427f26a873e6626}{IsCompressed} () const 
+\item 
+void \hyperlink{class_gr_image_3e3182e9acf5bd5b9c93364a260823a1}{ConvertToI8} (bool keepMipMaps=true)
+\item 
+void \hyperlink{class_gr_image_f47bb843809a5cba9433c78887dc86b5}{ConvertToLA16} (bool keepMipMaps=true)
+\item 
+void \hyperlink{class_gr_image_505dfff967ff222a0bfac1bc24e4c6bd}{LumToAlpha} ()
+\item 
+void \hyperlink{class_gr_image_0a187b271d32fc3aa75a147b6e9e691b}{AlphaToLum} ()
+\item 
+void \hyperlink{class_gr_image_9529693888abcb6afa1831800d70274c}{ConvertBGR24ToBGRA32} ()
+\item 
+void \hyperlink{class_gr_image_65b8e5612f49397249c0d502ac451712}{SwizzleToBXRG} ()
+\item 
+void \hyperlink{class_gr_image_de98dd0d8da1c4ff3a4cd3d2b248ce68}{CompressDXT1} (bool normalMap)
+\item 
+void \hyperlink{class_gr_image_688d884b98edfbeb204fa3231c71c357}{CompressDXT5} (bool normalMap)
+\item 
+void \hyperlink{class_gr_image_7e0b6426aaba56cdda4ae76cd394d863}{GenMipMaps} (bool normalMap)
+\item 
+void \hyperlink{class_gr_image_af7a1554288af6dc8a5ef14aed1c6162}{ClearMipMaps} ()
+\item 
+void \hyperlink{class_gr_image_e405a9f4a875593784f7282a290c69ab}{TexImage2D} (unsigned int bindTarget, unsigned int glTexFormat, unsigned int startMip, unsigned int mipCount, bool normalMap)
+\item 
+void \hyperlink{class_gr_image_31668f20cc842a53d078f81731d7466b}{TexSubImage2D} (unsigned int bindTarget, unsigned int glTexFormat, unsigned int startMip, unsigned int mipCount, bool normalMap)
+\item 
+void \hyperlink{class_gr_image_0b346c74770977c9ec085152dcf4153e}{CompressedTexImage2D} (unsigned int bindTarget, unsigned int glTexFormat, unsigned int startMip, unsigned int mipCount, bool normalMap)
+\item 
+void $\ast$ \hyperlink{class_gr_image_2bdbae66e962b141e9b0509fa5d0baf5}{GetImageData} () const 
+\item 
+void $\ast$ \hyperlink{class_gr_image_00e8787cde46c9cb3c994cf365570094}{GetImageData} (unsigned int mipLevel)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 23 of file GrImage.h.
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_gr_image_55bbf2a220e037e07616bb9c3f049786}{
+\index{GrImage@{GrImage}!EFORMAT@{EFORMAT}}
+\index{EFORMAT@{EFORMAT}!GrImage@{GrImage}}
+\subsubsection[{EFORMAT}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GrImage::EFORMAT}}}
+\label{class_gr_image_55bbf2a220e037e07616bb9c3f049786}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{EF\_\-BGR24@{EF\_\-BGR24}!GrImage@{GrImage}}\index{GrImage@{GrImage}!EF\_\-BGR24@{EF\_\-BGR24}}\item[{\em 
+\hypertarget{class_gr_image_55bbf2a220e037e07616bb9c3f049786356d268f21e4db1aae7c7e36dfe3c247}{
+EF\_\-BGR24}
+\label{class_gr_image_55bbf2a220e037e07616bb9c3f049786356d268f21e4db1aae7c7e36dfe3c247}
+}]\index{EF\_\-BGRA32@{EF\_\-BGRA32}!GrImage@{GrImage}}\index{GrImage@{GrImage}!EF\_\-BGRA32@{EF\_\-BGRA32}}\item[{\em 
+\hypertarget{class_gr_image_55bbf2a220e037e07616bb9c3f049786db8d3cc0284ad82ecdb9237383702dbd}{
+EF\_\-BGRA32}
+\label{class_gr_image_55bbf2a220e037e07616bb9c3f049786db8d3cc0284ad82ecdb9237383702dbd}
+}]\index{EF\_\-BGR96F@{EF\_\-BGR96F}!GrImage@{GrImage}}\index{GrImage@{GrImage}!EF\_\-BGR96F@{EF\_\-BGR96F}}\item[{\em 
+\hypertarget{class_gr_image_55bbf2a220e037e07616bb9c3f0497862849db7623d305d03c10171534380f39}{
+EF\_\-BGR96F}
+\label{class_gr_image_55bbf2a220e037e07616bb9c3f0497862849db7623d305d03c10171534380f39}
+}]\index{EF\_\-BGRA128F@{EF\_\-BGRA128F}!GrImage@{GrImage}}\index{GrImage@{GrImage}!EF\_\-BGRA128F@{EF\_\-BGRA128F}}\item[{\em 
+\hypertarget{class_gr_image_55bbf2a220e037e07616bb9c3f049786f09b7ae1c36d657ed15cd701306cdea7}{
+EF\_\-BGRA128F}
+\label{class_gr_image_55bbf2a220e037e07616bb9c3f049786f09b7ae1c36d657ed15cd701306cdea7}
+}]\index{EF\_\-I8@{EF\_\-I8}!GrImage@{GrImage}}\index{GrImage@{GrImage}!EF\_\-I8@{EF\_\-I8}}\item[{\em 
+\hypertarget{class_gr_image_55bbf2a220e037e07616bb9c3f049786a54c44d9d5b7aa6dbd156429857381d9}{
+EF\_\-I8}
+\label{class_gr_image_55bbf2a220e037e07616bb9c3f049786a54c44d9d5b7aa6dbd156429857381d9}
+}]\index{EF\_\-I16F@{EF\_\-I16F}!GrImage@{GrImage}}\index{GrImage@{GrImage}!EF\_\-I16F@{EF\_\-I16F}}\item[{\em 
+\hypertarget{class_gr_image_55bbf2a220e037e07616bb9c3f049786361d515c8fd8c47359cfece968f1f2fe}{
+EF\_\-I16F}
+\label{class_gr_image_55bbf2a220e037e07616bb9c3f049786361d515c8fd8c47359cfece968f1f2fe}
+}]\index{EF\_\-LA16@{EF\_\-LA16}!GrImage@{GrImage}}\index{GrImage@{GrImage}!EF\_\-LA16@{EF\_\-LA16}}\item[{\em 
+\hypertarget{class_gr_image_55bbf2a220e037e07616bb9c3f0497862de663da4c35b7fe9a5d18311d58c7c3}{
+EF\_\-LA16}
+\label{class_gr_image_55bbf2a220e037e07616bb9c3f0497862de663da4c35b7fe9a5d18311d58c7c3}
+}]\index{EF\_\-LA64F@{EF\_\-LA64F}!GrImage@{GrImage}}\index{GrImage@{GrImage}!EF\_\-LA64F@{EF\_\-LA64F}}\item[{\em 
+\hypertarget{class_gr_image_55bbf2a220e037e07616bb9c3f049786cbe17f3c0511f360dd9b53884fa0866a}{
+EF\_\-LA64F}
+\label{class_gr_image_55bbf2a220e037e07616bb9c3f049786cbe17f3c0511f360dd9b53884fa0866a}
+}]\index{EF\_\-DEPTH@{EF\_\-DEPTH}!GrImage@{GrImage}}\index{GrImage@{GrImage}!EF\_\-DEPTH@{EF\_\-DEPTH}}\item[{\em 
+\hypertarget{class_gr_image_55bbf2a220e037e07616bb9c3f049786b9d6d2d7c4e777cd5a0fe5a306b98b2e}{
+EF\_\-DEPTH}
+\label{class_gr_image_55bbf2a220e037e07616bb9c3f049786b9d6d2d7c4e777cd5a0fe5a306b98b2e}
+}]\index{EF\_\-BGR\_\-DXT1@{EF\_\-BGR\_\-DXT1}!GrImage@{GrImage}}\index{GrImage@{GrImage}!EF\_\-BGR\_\-DXT1@{EF\_\-BGR\_\-DXT1}}\item[{\em 
+\hypertarget{class_gr_image_55bbf2a220e037e07616bb9c3f0497865c5f10f876b9ae7dd73aac384de111b9}{
+EF\_\-BGR\_\-DXT1}
+\label{class_gr_image_55bbf2a220e037e07616bb9c3f0497865c5f10f876b9ae7dd73aac384de111b9}
+}]\index{EF\_\-BGRA\_\-DXT5@{EF\_\-BGRA\_\-DXT5}!GrImage@{GrImage}}\index{GrImage@{GrImage}!EF\_\-BGRA\_\-DXT5@{EF\_\-BGRA\_\-DXT5}}\item[{\em 
+\hypertarget{class_gr_image_55bbf2a220e037e07616bb9c3f0497869527d3b19e4c628284621359a6ac2fb1}{
+EF\_\-BGRA\_\-DXT5}
+\label{class_gr_image_55bbf2a220e037e07616bb9c3f0497869527d3b19e4c628284621359a6ac2fb1}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 26 of file GrImage.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_image_cfe18463a50aaaadf5a059537f3aebe3}{
+\index{GrImage@{GrImage}!GrImage@{GrImage}}
+\index{GrImage@{GrImage}!GrImage@{GrImage}}
+\subsubsection[{GrImage}]{\setlength{\rightskip}{0pt plus 5cm}GrImage::GrImage (const {\bf UPath} \& {\em name}, \/  {\bf EFORMAT} {\em format}, \/  unsigned int {\em width}, \/  unsigned int {\em height}, \/  void $\ast$ {\em data} = {\tt 0})}}
+\label{class_gr_image_cfe18463a50aaaadf5a059537f3aebe3}
+
+
+
+
+Definition at line 126 of file GrImage.cpp.\hypertarget{class_gr_image_b0282a1c9f181f55eecc2b8ec3fd8f5f}{
+\index{GrImage@{GrImage}!GrImage@{GrImage}}
+\index{GrImage@{GrImage}!GrImage@{GrImage}}
+\subsubsection[{GrImage}]{\setlength{\rightskip}{0pt plus 5cm}GrImage::GrImage (const {\bf UPath} \& {\em name}, \/  unsigned long {\em bgraColor})}}
+\label{class_gr_image_b0282a1c9f181f55eecc2b8ec3fd8f5f}
+
+
+
+
+Definition at line 145 of file GrImage.cpp.\hypertarget{class_gr_image_da3f5e31181211ee5d86659bc02c88b0}{
+\index{GrImage@{GrImage}!GrImage@{GrImage}}
+\index{GrImage@{GrImage}!GrImage@{GrImage}}
+\subsubsection[{GrImage}]{\setlength{\rightskip}{0pt plus 5cm}GrImage::GrImage (const {\bf UPath} \& {\em name}, \/  {\bf UReader} \& {\em reader})}}
+\label{class_gr_image_da3f5e31181211ee5d86659bc02c88b0}
+
+
+
+
+Definition at line 160 of file GrImage.cpp.\hypertarget{class_gr_image_f18a44493540afaae3df7a93700afa32}{
+\index{GrImage@{GrImage}!GrImage@{GrImage}}
+\index{GrImage@{GrImage}!GrImage@{GrImage}}
+\subsubsection[{GrImage}]{\setlength{\rightskip}{0pt plus 5cm}GrImage::GrImage (const {\bf GrImage} \& {\em image})}}
+\label{class_gr_image_f18a44493540afaae3df7a93700afa32}
+
+
+
+
+Definition at line 173 of file GrImage.cpp.\hypertarget{class_gr_image_e0891bd66f3e68c47d28ebd685908743}{
+\index{GrImage@{GrImage}!$\sim$GrImage@{$\sim$GrImage}}
+\index{$\sim$GrImage@{$\sim$GrImage}!GrImage@{GrImage}}
+\subsubsection[{$\sim$GrImage}]{\setlength{\rightskip}{0pt plus 5cm}GrImage::$\sim$GrImage ()}}
+\label{class_gr_image_e0891bd66f3e68c47d28ebd685908743}
+
+
+
+
+Definition at line 190 of file GrImage.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_image_0a187b271d32fc3aa75a147b6e9e691b}{
+\index{GrImage@{GrImage}!AlphaToLum@{AlphaToLum}}
+\index{AlphaToLum@{AlphaToLum}!GrImage@{GrImage}}
+\subsubsection[{AlphaToLum}]{\setlength{\rightskip}{0pt plus 5cm}void GrImage::AlphaToLum ()}}
+\label{class_gr_image_0a187b271d32fc3aa75a147b6e9e691b}
+
+
+\hypertarget{class_gr_image_af7a1554288af6dc8a5ef14aed1c6162}{
+\index{GrImage@{GrImage}!ClearMipMaps@{ClearMipMaps}}
+\index{ClearMipMaps@{ClearMipMaps}!GrImage@{GrImage}}
+\subsubsection[{ClearMipMaps}]{\setlength{\rightskip}{0pt plus 5cm}void GrImage::ClearMipMaps ()}}
+\label{class_gr_image_af7a1554288af6dc8a5ef14aed1c6162}
+
+
+
+
+Definition at line 545 of file GrImage.cpp.\hypertarget{class_gr_image_de98dd0d8da1c4ff3a4cd3d2b248ce68}{
+\index{GrImage@{GrImage}!CompressDXT1@{CompressDXT1}}
+\index{CompressDXT1@{CompressDXT1}!GrImage@{GrImage}}
+\subsubsection[{CompressDXT1}]{\setlength{\rightskip}{0pt plus 5cm}void GrImage::CompressDXT1 (bool {\em normalMap})}}
+\label{class_gr_image_de98dd0d8da1c4ff3a4cd3d2b248ce68}
+
+
+
+
+Definition at line 455 of file GrImage.cpp.\hypertarget{class_gr_image_688d884b98edfbeb204fa3231c71c357}{
+\index{GrImage@{GrImage}!CompressDXT5@{CompressDXT5}}
+\index{CompressDXT5@{CompressDXT5}!GrImage@{GrImage}}
+\subsubsection[{CompressDXT5}]{\setlength{\rightskip}{0pt plus 5cm}void GrImage::CompressDXT5 (bool {\em normalMap})}}
+\label{class_gr_image_688d884b98edfbeb204fa3231c71c357}
+
+
+
+
+Definition at line 498 of file GrImage.cpp.\hypertarget{class_gr_image_0b346c74770977c9ec085152dcf4153e}{
+\index{GrImage@{GrImage}!CompressedTexImage2D@{CompressedTexImage2D}}
+\index{CompressedTexImage2D@{CompressedTexImage2D}!GrImage@{GrImage}}
+\subsubsection[{CompressedTexImage2D}]{\setlength{\rightskip}{0pt plus 5cm}void GrImage::CompressedTexImage2D (unsigned int {\em bindTarget}, \/  unsigned int {\em glTexFormat}, \/  unsigned int {\em startMip}, \/  unsigned int {\em mipCount}, \/  bool {\em normalMap})}}
+\label{class_gr_image_0b346c74770977c9ec085152dcf4153e}
+
+
+
+
+Definition at line 647 of file GrImage.cpp.\hypertarget{class_gr_image_9529693888abcb6afa1831800d70274c}{
+\index{GrImage@{GrImage}!ConvertBGR24ToBGRA32@{ConvertBGR24ToBGRA32}}
+\index{ConvertBGR24ToBGRA32@{ConvertBGR24ToBGRA32}!GrImage@{GrImage}}
+\subsubsection[{ConvertBGR24ToBGRA32}]{\setlength{\rightskip}{0pt plus 5cm}void GrImage::ConvertBGR24ToBGRA32 ()}}
+\label{class_gr_image_9529693888abcb6afa1831800d70274c}
+
+
+
+
+Definition at line 343 of file GrImage.cpp.\hypertarget{class_gr_image_3e3182e9acf5bd5b9c93364a260823a1}{
+\index{GrImage@{GrImage}!ConvertToI8@{ConvertToI8}}
+\index{ConvertToI8@{ConvertToI8}!GrImage@{GrImage}}
+\subsubsection[{ConvertToI8}]{\setlength{\rightskip}{0pt plus 5cm}void GrImage::ConvertToI8 (bool {\em keepMipMaps} = {\tt true})}}
+\label{class_gr_image_3e3182e9acf5bd5b9c93364a260823a1}
+
+
+
+
+Definition at line 222 of file GrImage.cpp.\hypertarget{class_gr_image_f47bb843809a5cba9433c78887dc86b5}{
+\index{GrImage@{GrImage}!ConvertToLA16@{ConvertToLA16}}
+\index{ConvertToLA16@{ConvertToLA16}!GrImage@{GrImage}}
+\subsubsection[{ConvertToLA16}]{\setlength{\rightskip}{0pt plus 5cm}void GrImage::ConvertToLA16 (bool {\em keepMipMaps} = {\tt true})}}
+\label{class_gr_image_f47bb843809a5cba9433c78887dc86b5}
+
+
+
+
+Definition at line 272 of file GrImage.cpp.\hypertarget{class_gr_image_7e0b6426aaba56cdda4ae76cd394d863}{
+\index{GrImage@{GrImage}!GenMipMaps@{GenMipMaps}}
+\index{GenMipMaps@{GenMipMaps}!GrImage@{GrImage}}
+\subsubsection[{GenMipMaps}]{\setlength{\rightskip}{0pt plus 5cm}void GrImage::GenMipMaps (bool {\em normalMap})}}
+\label{class_gr_image_7e0b6426aaba56cdda4ae76cd394d863}
+
+
+
+
+Definition at line 538 of file GrImage.cpp.\hypertarget{class_gr_image_b1d89088b96f628d59c886e1224f5ac2}{
+\index{GrImage@{GrImage}!GetBytesPerPixel@{GetBytesPerPixel}}
+\index{GetBytesPerPixel@{GetBytesPerPixel}!GrImage@{GrImage}}
+\subsubsection[{GetBytesPerPixel}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrImage::GetBytesPerPixel () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_image_b1d89088b96f628d59c886e1224f5ac2}
+
+
+
+
+Definition at line 52 of file GrImage.h.\hypertarget{class_gr_image_747e1e9fbe3f7faad890d217fe163d0d}{
+\index{GrImage@{GrImage}!GetFormat@{GetFormat}}
+\index{GetFormat@{GetFormat}!GrImage@{GrImage}}
+\subsubsection[{GetFormat}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrImage::EFORMAT} GrImage::GetFormat ()}}
+\label{class_gr_image_747e1e9fbe3f7faad890d217fe163d0d}
+
+
+
+
+Definition at line 208 of file GrImage.cpp.\hypertarget{class_gr_image_5317f4f29d4145a774921960c54935af}{
+\index{GrImage@{GrImage}!GetHeight@{GetHeight}}
+\index{GetHeight@{GetHeight}!GrImage@{GrImage}}
+\subsubsection[{GetHeight}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrImage::GetHeight () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_image_5317f4f29d4145a774921960c54935af}
+
+
+
+
+Definition at line 51 of file GrImage.h.\hypertarget{class_gr_image_00e8787cde46c9cb3c994cf365570094}{
+\index{GrImage@{GrImage}!GetImageData@{GetImageData}}
+\index{GetImageData@{GetImageData}!GrImage@{GrImage}}
+\subsubsection[{GetImageData}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ GrImage::GetImageData (unsigned int {\em mipLevel})}}
+\label{class_gr_image_00e8787cde46c9cb3c994cf365570094}
+
+
+
+
+Definition at line 701 of file GrImage.cpp.\hypertarget{class_gr_image_2bdbae66e962b141e9b0509fa5d0baf5}{
+\index{GrImage@{GrImage}!GetImageData@{GetImageData}}
+\index{GetImageData@{GetImageData}!GrImage@{GrImage}}
+\subsubsection[{GetImageData}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ GrImage::GetImageData () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_image_2bdbae66e962b141e9b0509fa5d0baf5}
+
+
+
+
+Definition at line 90 of file GrImage.h.\hypertarget{class_gr_image_4dbab6db5578622e02b89ba5f5ebe5e3}{
+\index{GrImage@{GrImage}!GetMaxMipCount@{GetMaxMipCount}}
+\index{GetMaxMipCount@{GetMaxMipCount}!GrImage@{GrImage}}
+\subsubsection[{GetMaxMipCount}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrImage::GetMaxMipCount () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_image_4dbab6db5578622e02b89ba5f5ebe5e3}
+
+
+
+
+Definition at line 53 of file GrImage.h.\hypertarget{class_gr_image_05466580ff5934ea282b1ae32ee69cee}{
+\index{GrImage@{GrImage}!GetName@{GetName}}
+\index{GetName@{GetName}!GrImage@{GrImage}}
+\subsubsection[{GetName}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf UPath}\& GrImage::GetName () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_image_05466580ff5934ea282b1ae32ee69cee}
+
+
+
+
+Definition at line 47 of file GrImage.h.\hypertarget{class_gr_image_800124c1824ea3b75d989e0cab142ca7}{
+\index{GrImage@{GrImage}!GetWidth@{GetWidth}}
+\index{GetWidth@{GetWidth}!GrImage@{GrImage}}
+\subsubsection[{GetWidth}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrImage::GetWidth () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_image_800124c1824ea3b75d989e0cab142ca7}
+
+
+
+
+Definition at line 50 of file GrImage.h.\hypertarget{class_gr_image_af38daff1672308197b7155c1d4fb2e3}{
+\index{GrImage@{GrImage}!HasMipMaps@{HasMipMaps}}
+\index{HasMipMaps@{HasMipMaps}!GrImage@{GrImage}}
+\subsubsection[{HasMipMaps}]{\setlength{\rightskip}{0pt plus 5cm}bool GrImage::HasMipMaps () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_image_af38daff1672308197b7155c1d4fb2e3}
+
+
+
+
+Definition at line 54 of file GrImage.h.\hypertarget{class_gr_image_f56a1347e57f10348427f26a873e6626}{
+\index{GrImage@{GrImage}!IsCompressed@{IsCompressed}}
+\index{IsCompressed@{IsCompressed}!GrImage@{GrImage}}
+\subsubsection[{IsCompressed}]{\setlength{\rightskip}{0pt plus 5cm}bool GrImage::IsCompressed () const}}
+\label{class_gr_image_f56a1347e57f10348427f26a873e6626}
+
+
+
+
+Definition at line 215 of file GrImage.cpp.\hypertarget{class_gr_image_505dfff967ff222a0bfac1bc24e4c6bd}{
+\index{GrImage@{GrImage}!LumToAlpha@{LumToAlpha}}
+\index{LumToAlpha@{LumToAlpha}!GrImage@{GrImage}}
+\subsubsection[{LumToAlpha}]{\setlength{\rightskip}{0pt plus 5cm}void GrImage::LumToAlpha ()}}
+\label{class_gr_image_505dfff967ff222a0bfac1bc24e4c6bd}
+
+
+\hypertarget{class_gr_image_65b8e5612f49397249c0d502ac451712}{
+\index{GrImage@{GrImage}!SwizzleToBXRG@{SwizzleToBXRG}}
+\index{SwizzleToBXRG@{SwizzleToBXRG}!GrImage@{GrImage}}
+\subsubsection[{SwizzleToBXRG}]{\setlength{\rightskip}{0pt plus 5cm}void GrImage::SwizzleToBXRG ()}}
+\label{class_gr_image_65b8e5612f49397249c0d502ac451712}
+
+
+
+
+Definition at line 388 of file GrImage.cpp.\hypertarget{class_gr_image_e405a9f4a875593784f7282a290c69ab}{
+\index{GrImage@{GrImage}!TexImage2D@{TexImage2D}}
+\index{TexImage2D@{TexImage2D}!GrImage@{GrImage}}
+\subsubsection[{TexImage2D}]{\setlength{\rightskip}{0pt plus 5cm}void GrImage::TexImage2D (unsigned int {\em bindTarget}, \/  unsigned int {\em glTexFormat}, \/  unsigned int {\em startMip}, \/  unsigned int {\em mipCount}, \/  bool {\em normalMap})}}
+\label{class_gr_image_e405a9f4a875593784f7282a290c69ab}
+
+
+
+
+Definition at line 561 of file GrImage.cpp.\hypertarget{class_gr_image_31668f20cc842a53d078f81731d7466b}{
+\index{GrImage@{GrImage}!TexSubImage2D@{TexSubImage2D}}
+\index{TexSubImage2D@{TexSubImage2D}!GrImage@{GrImage}}
+\subsubsection[{TexSubImage2D}]{\setlength{\rightskip}{0pt plus 5cm}void GrImage::TexSubImage2D (unsigned int {\em bindTarget}, \/  unsigned int {\em glTexFormat}, \/  unsigned int {\em startMip}, \/  unsigned int {\em mipCount}, \/  bool {\em normalMap})}}
+\label{class_gr_image_31668f20cc842a53d078f81731d7466b}
+
+
+
+
+Definition at line 603 of file GrImage.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_image_8h}{GrImage.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_image_8cpp}{GrImage.cpp}\end{CompactItemize}

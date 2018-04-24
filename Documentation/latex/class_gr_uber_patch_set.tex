@@ -1,0 +1,108 @@
+\hypertarget{class_gr_uber_patch_set}{
+\section{GrUberPatchSet Class Reference}
+\label{class_gr_uber_patch_set}\index{GrUberPatchSet@{GrUberPatchSet}}
+}
+{\tt \#include $<$GrUberPatchSet.h$>$}
+
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+struct \textbf{SPatchTileInfo}
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_uber_patch_set_68d0f34222103250196fac2f52b8f4d6}{GrUberPatchSet} (\hyperlink{class_gr_polygon_uber_patch_group}{GrPolygonUberPatchGroup} $\ast$uberData, const \hyperlink{class_gr_polygon_uber_u_v_mapper}{GrPolygonUberUVMapper} \&uberMapper)
+\item 
+\hyperlink{class_gr_uber_patch_set_de170763792a014a4ec60906e5a559cc}{GrUberPatchSet} (\hyperlink{class_u_reader}{UReader} \&reader)
+\item 
+\hyperlink{class_gr_uber_patch_set_fcdf11f4dd58e87b0db2e0c990ea9eda}{$\sim$GrUberPatchSet} ()
+\item 
+void \hyperlink{class_gr_uber_patch_set_6feafbdd216ce949255d0e0979b426d4}{SetWorldXForm} (const \hyperlink{class_m_mat4x4}{MMat4x4} \&worldXForm, const \hyperlink{class_m_mat3x3}{MMat3x3} \&worldNormalRot, const \hyperlink{class_m_mat4x4}{MMat4x4} \&invWorldXForm)
+\item 
+void \hyperlink{class_gr_uber_patch_set_bec24bb077003d70bb235500a3dfb43d}{CacheTiles} (const \hyperlink{class_gr_camera}{GrCamera} $\ast$camera, unsigned int screenWidth, unsigned int screenHeight)
+\item 
+void \hyperlink{class_gr_uber_patch_set_4ab7aa5b16b09be6984c3b3b9c1307f0}{Load} (\hyperlink{class_u_reader}{UReader} \&reader)
+\item 
+void \hyperlink{class_gr_uber_patch_set_53a1e10a947e715bd18568b138d53501}{Save} (\hyperlink{class_u_writer}{UWriter} \&writer)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 27 of file GrUberPatchSet.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_uber_patch_set_68d0f34222103250196fac2f52b8f4d6}{
+\index{GrUberPatchSet@{GrUberPatchSet}!GrUberPatchSet@{GrUberPatchSet}}
+\index{GrUberPatchSet@{GrUberPatchSet}!GrUberPatchSet@{GrUberPatchSet}}
+\subsubsection[{GrUberPatchSet}]{\setlength{\rightskip}{0pt plus 5cm}GrUberPatchSet::GrUberPatchSet ({\bf GrPolygonUberPatchGroup} $\ast$ {\em uberData}, \/  const {\bf GrPolygonUberUVMapper} \& {\em uberMapper})}}
+\label{class_gr_uber_patch_set_68d0f34222103250196fac2f52b8f4d6}
+
+
+
+
+Definition at line 45 of file GrUberPatchSet.cpp.\hypertarget{class_gr_uber_patch_set_de170763792a014a4ec60906e5a559cc}{
+\index{GrUberPatchSet@{GrUberPatchSet}!GrUberPatchSet@{GrUberPatchSet}}
+\index{GrUberPatchSet@{GrUberPatchSet}!GrUberPatchSet@{GrUberPatchSet}}
+\subsubsection[{GrUberPatchSet}]{\setlength{\rightskip}{0pt plus 5cm}GrUberPatchSet::GrUberPatchSet ({\bf UReader} \& {\em reader})}}
+\label{class_gr_uber_patch_set_de170763792a014a4ec60906e5a559cc}
+
+
+
+
+Definition at line 63 of file GrUberPatchSet.cpp.\hypertarget{class_gr_uber_patch_set_fcdf11f4dd58e87b0db2e0c990ea9eda}{
+\index{GrUberPatchSet@{GrUberPatchSet}!$\sim$GrUberPatchSet@{$\sim$GrUberPatchSet}}
+\index{$\sim$GrUberPatchSet@{$\sim$GrUberPatchSet}!GrUberPatchSet@{GrUberPatchSet}}
+\subsubsection[{$\sim$GrUberPatchSet}]{\setlength{\rightskip}{0pt plus 5cm}GrUberPatchSet::$\sim$GrUberPatchSet ()}}
+\label{class_gr_uber_patch_set_fcdf11f4dd58e87b0db2e0c990ea9eda}
+
+
+
+
+Definition at line 81 of file GrUberPatchSet.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_uber_patch_set_bec24bb077003d70bb235500a3dfb43d}{
+\index{GrUberPatchSet@{GrUberPatchSet}!CacheTiles@{CacheTiles}}
+\index{CacheTiles@{CacheTiles}!GrUberPatchSet@{GrUberPatchSet}}
+\subsubsection[{CacheTiles}]{\setlength{\rightskip}{0pt plus 5cm}void GrUberPatchSet::CacheTiles (const {\bf GrCamera} $\ast$ {\em camera}, \/  unsigned int {\em screenWidth}, \/  unsigned int {\em screenHeight})}}
+\label{class_gr_uber_patch_set_bec24bb077003d70bb235500a3dfb43d}
+
+
+
+
+Definition at line 110 of file GrUberPatchSet.cpp.\hypertarget{class_gr_uber_patch_set_4ab7aa5b16b09be6984c3b3b9c1307f0}{
+\index{GrUberPatchSet@{GrUberPatchSet}!Load@{Load}}
+\index{Load@{Load}!GrUberPatchSet@{GrUberPatchSet}}
+\subsubsection[{Load}]{\setlength{\rightskip}{0pt plus 5cm}void GrUberPatchSet::Load ({\bf UReader} \& {\em reader})}}
+\label{class_gr_uber_patch_set_4ab7aa5b16b09be6984c3b3b9c1307f0}
+
+
+
+
+Definition at line 252 of file GrUberPatchSet.cpp.\hypertarget{class_gr_uber_patch_set_53a1e10a947e715bd18568b138d53501}{
+\index{GrUberPatchSet@{GrUberPatchSet}!Save@{Save}}
+\index{Save@{Save}!GrUberPatchSet@{GrUberPatchSet}}
+\subsubsection[{Save}]{\setlength{\rightskip}{0pt plus 5cm}void GrUberPatchSet::Save ({\bf UWriter} \& {\em writer})}}
+\label{class_gr_uber_patch_set_53a1e10a947e715bd18568b138d53501}
+
+
+
+
+Definition at line 297 of file GrUberPatchSet.cpp.\hypertarget{class_gr_uber_patch_set_6feafbdd216ce949255d0e0979b426d4}{
+\index{GrUberPatchSet@{GrUberPatchSet}!SetWorldXForm@{SetWorldXForm}}
+\index{SetWorldXForm@{SetWorldXForm}!GrUberPatchSet@{GrUberPatchSet}}
+\subsubsection[{SetWorldXForm}]{\setlength{\rightskip}{0pt plus 5cm}void GrUberPatchSet::SetWorldXForm (const {\bf MMat4x4} \& {\em worldXForm}, \/  const {\bf MMat3x3} \& {\em worldNormalRot}, \/  const {\bf MMat4x4} \& {\em invWorldXForm})}}
+\label{class_gr_uber_patch_set_6feafbdd216ce949255d0e0979b426d4}
+
+
+
+
+Definition at line 93 of file GrUberPatchSet.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_uber_patch_set_8h}{GrUberPatchSet.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_uber_patch_set_8cpp}{GrUberPatchSet.cpp}\end{CompactItemize}

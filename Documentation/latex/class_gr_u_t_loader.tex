@@ -1,0 +1,179 @@
+\hypertarget{class_gr_u_t_loader}{
+\section{GrUTLoader Class Reference}
+\label{class_gr_u_t_loader}\index{GrUTLoader@{GrUTLoader}}
+}
+{\tt \#include $<$GrUTLoader.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+enum \hyperlink{class_gr_u_t_loader_328b8875d7cc411c1ad47f0d9279d8f2}{ECOLORMODE} \{ \hyperlink{class_gr_u_t_loader_328b8875d7cc411c1ad47f0d9279d8f29ec4865a1ef98ef310b97499681bbdc9}{EDM\_\-BGRA}, 
+\hyperlink{class_gr_u_t_loader_328b8875d7cc411c1ad47f0d9279d8f2b0937d274d38a74ec18365d251e853d2}{EDM\_\-BGRA\_\-DXT}, 
+\hyperlink{class_gr_u_t_loader_328b8875d7cc411c1ad47f0d9279d8f256ee2c13f924e5f97453e60e1c53fac2}{EDM\_\-YCoCg}, 
+\hyperlink{class_gr_u_t_loader_328b8875d7cc411c1ad47f0d9279d8f2965295944f1e1f65bb7ddce0508c4567}{EDM\_\-YCoCg\_\-DXT}
+ \}
+\item 
+typedef void($\ast$ \hyperlink{class_gr_u_t_loader_b2a7be2e554d43ef1a6b4851ef4e0f39}{ProgressCallback} )(const char $\ast$stepText, unsigned int stepCount, unsigned int step, unsigned int stepProgress)
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_u_t_loader_d422dad3e01b8a264d6b4e3976736e81}{GrUTLoader} (unsigned int workerThreadCount=2)
+\item 
+\hyperlink{class_gr_u_t_loader_470a07f30f44b351519508c66b11ef22}{$\sim$GrUTLoader} ()
+\item 
+\hyperlink{class_gr_u_t_atlas}{GrUTAtlas} $\ast$ \hyperlink{class_gr_u_t_loader_9a52f424b6e3bb62afbfbd05e13d048a}{CreateUbertex} (void $\ast$file, const void $\ast$tileUseBitMask, const void $\ast$metaData, unsigned int metaDataSize, \hyperlink{class_gr_u_t_loader_b2a7be2e554d43ef1a6b4851ef4e0f39}{ProgressCallback} callback)
+\item 
+\hyperlink{class_gr_u_t_atlas}{GrUTAtlas} $\ast$ \hyperlink{class_gr_u_t_loader_8e7dbf8a92517c281d2b0587a4bcdf55}{LoadUbertex} (void $\ast$file)
+\item 
+void \hyperlink{class_gr_u_t_loader_291cd71cede4de0eafd22aad048f50e6}{ChangeLayout} (void $\ast$file, const void $\ast$tileUseBitMask, \hyperlink{class_gr_u_t_loader_b2a7be2e554d43ef1a6b4851ef4e0f39}{ProgressCallback} callback)
+\item 
+void \hyperlink{class_gr_u_t_loader_c61068d4af869e277fa8303dd2fc6689}{FreeAtlas} (\hyperlink{class_gr_u_t_atlas}{GrUTAtlas} $\ast$atlas)
+\item 
+void \hyperlink{class_gr_u_t_loader_021fb0768072b4306207993a4e8e5415}{DecodeChunk} (void $\ast$\hyperlink{glext__bak_8h_92034251bfd455d524a9b5610cddba00}{dst}, volatile int $\ast$lock, void $\ast$file, unsigned int chunkIndex, \hyperlink{class_gr_u_t_loader_328b8875d7cc411c1ad47f0d9279d8f2}{ECOLORMODE} dxtMode=GrUTLoader::EDM\_\-BGRA\_\-DXT)
+\item 
+void \hyperlink{class_gr_u_t_loader_9eca6963597c1c7e5c1f378774606f2f}{WriteChunk} (void $\ast$file, unsigned int chunkIndex, const void $\ast$\hyperlink{glext__bak_8h_72e0fdf0f845ded60b1fada9e9195cd7}{src})
+\item 
+void \hyperlink{class_gr_u_t_loader_a2715cc250d1bdbb321200ef630756cb}{Flush} ()
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 22 of file GrUTLoader.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_gr_u_t_loader_b2a7be2e554d43ef1a6b4851ef4e0f39}{
+\index{GrUTLoader@{GrUTLoader}!ProgressCallback@{ProgressCallback}}
+\index{ProgressCallback@{ProgressCallback}!GrUTLoader@{GrUTLoader}}
+\subsubsection[{ProgressCallback}]{\setlength{\rightskip}{0pt plus 5cm}typedef void( $\ast$ {\bf GrUTLoader::ProgressCallback})(const char $\ast$stepText, unsigned int stepCount, unsigned int step, unsigned int stepProgress)}}
+\label{class_gr_u_t_loader_b2a7be2e554d43ef1a6b4851ef4e0f39}
+
+
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_gr_u_t_loader_328b8875d7cc411c1ad47f0d9279d8f2}{
+\index{GrUTLoader@{GrUTLoader}!ECOLORMODE@{ECOLORMODE}}
+\index{ECOLORMODE@{ECOLORMODE}!GrUTLoader@{GrUTLoader}}
+\subsubsection[{ECOLORMODE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GrUTLoader::ECOLORMODE}}}
+\label{class_gr_u_t_loader_328b8875d7cc411c1ad47f0d9279d8f2}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{EDM\_\-BGRA@{EDM\_\-BGRA}!GrUTLoader@{GrUTLoader}}\index{GrUTLoader@{GrUTLoader}!EDM\_\-BGRA@{EDM\_\-BGRA}}\item[{\em 
+\hypertarget{class_gr_u_t_loader_328b8875d7cc411c1ad47f0d9279d8f29ec4865a1ef98ef310b97499681bbdc9}{
+EDM\_\-BGRA}
+\label{class_gr_u_t_loader_328b8875d7cc411c1ad47f0d9279d8f29ec4865a1ef98ef310b97499681bbdc9}
+}]\index{EDM\_\-BGRA\_\-DXT@{EDM\_\-BGRA\_\-DXT}!GrUTLoader@{GrUTLoader}}\index{GrUTLoader@{GrUTLoader}!EDM\_\-BGRA\_\-DXT@{EDM\_\-BGRA\_\-DXT}}\item[{\em 
+\hypertarget{class_gr_u_t_loader_328b8875d7cc411c1ad47f0d9279d8f2b0937d274d38a74ec18365d251e853d2}{
+EDM\_\-BGRA\_\-DXT}
+\label{class_gr_u_t_loader_328b8875d7cc411c1ad47f0d9279d8f2b0937d274d38a74ec18365d251e853d2}
+}]\index{EDM\_\-YCoCg@{EDM\_\-YCoCg}!GrUTLoader@{GrUTLoader}}\index{GrUTLoader@{GrUTLoader}!EDM\_\-YCoCg@{EDM\_\-YCoCg}}\item[{\em 
+\hypertarget{class_gr_u_t_loader_328b8875d7cc411c1ad47f0d9279d8f256ee2c13f924e5f97453e60e1c53fac2}{
+EDM\_\-YCoCg}
+\label{class_gr_u_t_loader_328b8875d7cc411c1ad47f0d9279d8f256ee2c13f924e5f97453e60e1c53fac2}
+}]\index{EDM\_\-YCoCg\_\-DXT@{EDM\_\-YCoCg\_\-DXT}!GrUTLoader@{GrUTLoader}}\index{GrUTLoader@{GrUTLoader}!EDM\_\-YCoCg\_\-DXT@{EDM\_\-YCoCg\_\-DXT}}\item[{\em 
+\hypertarget{class_gr_u_t_loader_328b8875d7cc411c1ad47f0d9279d8f2965295944f1e1f65bb7ddce0508c4567}{
+EDM\_\-YCoCg\_\-DXT}
+\label{class_gr_u_t_loader_328b8875d7cc411c1ad47f0d9279d8f2965295944f1e1f65bb7ddce0508c4567}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 31 of file GrUTLoader.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_u_t_loader_d422dad3e01b8a264d6b4e3976736e81}{
+\index{GrUTLoader@{GrUTLoader}!GrUTLoader@{GrUTLoader}}
+\index{GrUTLoader@{GrUTLoader}!GrUTLoader@{GrUTLoader}}
+\subsubsection[{GrUTLoader}]{\setlength{\rightskip}{0pt plus 5cm}GrUTLoader::GrUTLoader (unsigned int {\em workerThreadCount} = {\tt 2})}}
+\label{class_gr_u_t_loader_d422dad3e01b8a264d6b4e3976736e81}
+
+
+
+
+Definition at line 141 of file GrUTLoader.cpp.\hypertarget{class_gr_u_t_loader_470a07f30f44b351519508c66b11ef22}{
+\index{GrUTLoader@{GrUTLoader}!$\sim$GrUTLoader@{$\sim$GrUTLoader}}
+\index{$\sim$GrUTLoader@{$\sim$GrUTLoader}!GrUTLoader@{GrUTLoader}}
+\subsubsection[{$\sim$GrUTLoader}]{\setlength{\rightskip}{0pt plus 5cm}GrUTLoader::$\sim$GrUTLoader ()}}
+\label{class_gr_u_t_loader_470a07f30f44b351519508c66b11ef22}
+
+
+
+
+Definition at line 189 of file GrUTLoader.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_u_t_loader_291cd71cede4de0eafd22aad048f50e6}{
+\index{GrUTLoader@{GrUTLoader}!ChangeLayout@{ChangeLayout}}
+\index{ChangeLayout@{ChangeLayout}!GrUTLoader@{GrUTLoader}}
+\subsubsection[{ChangeLayout}]{\setlength{\rightskip}{0pt plus 5cm}void GrUTLoader::ChangeLayout (void $\ast$ {\em file}, \/  const void $\ast$ {\em tileUseBitMask}, \/  {\bf ProgressCallback} {\em callback})}}
+\label{class_gr_u_t_loader_291cd71cede4de0eafd22aad048f50e6}
+
+
+
+
+Definition at line 380 of file GrUTLoader.cpp.\hypertarget{class_gr_u_t_loader_9a52f424b6e3bb62afbfbd05e13d048a}{
+\index{GrUTLoader@{GrUTLoader}!CreateUbertex@{CreateUbertex}}
+\index{CreateUbertex@{CreateUbertex}!GrUTLoader@{GrUTLoader}}
+\subsubsection[{CreateUbertex}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrUTAtlas} $\ast$ GrUTLoader::CreateUbertex (void $\ast$ {\em file}, \/  const void $\ast$ {\em tileUseBitMask}, \/  const void $\ast$ {\em metaData}, \/  unsigned int {\em metaDataSize}, \/  {\bf ProgressCallback} {\em callback})}}
+\label{class_gr_u_t_loader_9a52f424b6e3bb62afbfbd05e13d048a}
+
+
+
+
+Definition at line 228 of file GrUTLoader.cpp.\hypertarget{class_gr_u_t_loader_021fb0768072b4306207993a4e8e5415}{
+\index{GrUTLoader@{GrUTLoader}!DecodeChunk@{DecodeChunk}}
+\index{DecodeChunk@{DecodeChunk}!GrUTLoader@{GrUTLoader}}
+\subsubsection[{DecodeChunk}]{\setlength{\rightskip}{0pt plus 5cm}void GrUTLoader::DecodeChunk (void $\ast$ {\em dst}, \/  volatile int $\ast$ {\em lock}, \/  void $\ast$ {\em file}, \/  unsigned int {\em chunkIndex}, \/  {\bf ECOLORMODE} {\em dxtMode} = {\tt GrUTLoader::EDM\_\-BGRA\_\-DXT})}}
+\label{class_gr_u_t_loader_021fb0768072b4306207993a4e8e5415}
+
+
+
+
+Definition at line 401 of file GrUTLoader.cpp.\hypertarget{class_gr_u_t_loader_a2715cc250d1bdbb321200ef630756cb}{
+\index{GrUTLoader@{GrUTLoader}!Flush@{Flush}}
+\index{Flush@{Flush}!GrUTLoader@{GrUTLoader}}
+\subsubsection[{Flush}]{\setlength{\rightskip}{0pt plus 5cm}void GrUTLoader::Flush ()}}
+\label{class_gr_u_t_loader_a2715cc250d1bdbb321200ef630756cb}
+
+
+
+
+Definition at line 487 of file GrUTLoader.cpp.\hypertarget{class_gr_u_t_loader_c61068d4af869e277fa8303dd2fc6689}{
+\index{GrUTLoader@{GrUTLoader}!FreeAtlas@{FreeAtlas}}
+\index{FreeAtlas@{FreeAtlas}!GrUTLoader@{GrUTLoader}}
+\subsubsection[{FreeAtlas}]{\setlength{\rightskip}{0pt plus 5cm}void GrUTLoader::FreeAtlas ({\bf GrUTAtlas} $\ast$ {\em atlas})}}
+\label{class_gr_u_t_loader_c61068d4af869e277fa8303dd2fc6689}
+
+
+
+
+Definition at line 394 of file GrUTLoader.cpp.\hypertarget{class_gr_u_t_loader_8e7dbf8a92517c281d2b0587a4bcdf55}{
+\index{GrUTLoader@{GrUTLoader}!LoadUbertex@{LoadUbertex}}
+\index{LoadUbertex@{LoadUbertex}!GrUTLoader@{GrUTLoader}}
+\subsubsection[{LoadUbertex}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrUTAtlas} $\ast$ GrUTLoader::LoadUbertex (void $\ast$ {\em file})}}
+\label{class_gr_u_t_loader_8e7dbf8a92517c281d2b0587a4bcdf55}
+
+
+
+
+Definition at line 305 of file GrUTLoader.cpp.\hypertarget{class_gr_u_t_loader_9eca6963597c1c7e5c1f378774606f2f}{
+\index{GrUTLoader@{GrUTLoader}!WriteChunk@{WriteChunk}}
+\index{WriteChunk@{WriteChunk}!GrUTLoader@{GrUTLoader}}
+\subsubsection[{WriteChunk}]{\setlength{\rightskip}{0pt plus 5cm}void GrUTLoader::WriteChunk (void $\ast$ {\em file}, \/  unsigned int {\em chunkIndex}, \/  const void $\ast$ {\em src})}}
+\label{class_gr_u_t_loader_9eca6963597c1c7e5c1f378774606f2f}
+
+
+
+
+Definition at line 434 of file GrUTLoader.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_u_t_loader_8h}{GrUTLoader.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_u_t_loader_8cpp}{GrUTLoader.cpp}\end{CompactItemize}

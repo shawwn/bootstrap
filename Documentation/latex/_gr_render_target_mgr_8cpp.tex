@@ -1,0 +1,91 @@
+\hypertarget{_gr_render_target_mgr_8cpp}{
+\section{C:/Bootstrap/ProjectBX/Engine/Graphics/GrRenderTargetMgr.cpp File Reference}
+\label{_gr_render_target_mgr_8cpp}\index{C:/Bootstrap/ProjectBX/Engine/Graphics/GrRenderTargetMgr.cpp@{C:/Bootstrap/ProjectBX/Engine/Graphics/GrRenderTargetMgr.cpp}}
+}
+{\tt \#include \char`\"{}graphics\_\-afx.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrRenderTargetMgr.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrRenderTarget.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrRenderbuffer.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrTexture.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrTextureRect.h\char`\"{}}\par
+{\tt \#include \char`\"{}GLSubsys.h\char`\"{}}\par
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_render_target_mgr}{GrRenderTargetMgr} $\ast$ \hyperlink{_gr_render_target_mgr_8cpp_e724d8bfeb4bcd97146e35ca1646dd2f}{gGrRenderTargetMgr} = 0
+\item 
+\hyperlink{class_gr_renderbuffer_ebd137b0070a9c89e526afa508e2ad7a}{GrRenderbuffer::EFORMAT} \hyperlink{_gr_render_target_mgr_8cpp_c55db04244247fa1fa05dd68afcaf5ee}{bufferFmtMap} \mbox{[}GrRenderTargetMgr::EF\_\-COUNT\mbox{]}
+\item 
+\hyperlink{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c}{GrTextureBase::EFORMAT} \hyperlink{_gr_render_target_mgr_8cpp_357c2972eac91bba83726064df0b8b6e}{textureFmtMap} \mbox{[}GrRenderTargetMgr::EF\_\-COUNT\mbox{]}
+\end{CompactItemize}
+
+
+\subsection{Variable Documentation}
+\hypertarget{_gr_render_target_mgr_8cpp_c55db04244247fa1fa05dd68afcaf5ee}{
+\index{GrRenderTargetMgr.cpp@{GrRenderTargetMgr.cpp}!bufferFmtMap@{bufferFmtMap}}
+\index{bufferFmtMap@{bufferFmtMap}!GrRenderTargetMgr.cpp@{GrRenderTargetMgr.cpp}}
+\subsubsection[{bufferFmtMap}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrRenderbuffer::EFORMAT} {\bf bufferFmtMap}\mbox{[}GrRenderTargetMgr::EF\_\-COUNT\mbox{]}}}
+\label{_gr_render_target_mgr_8cpp_c55db04244247fa1fa05dd68afcaf5ee}
+
+
+\textbf{Initial value:}
+
+\begin{Code}\begin{verbatim}
+{
+        GrRenderbuffer::EF_RGBA,
+        GrRenderbuffer::EF_RGBA,
+        GrRenderbuffer::EF_RGBA,
+        GrRenderbuffer::EF_RGBA,
+        GrRenderbuffer::EF_RGBA,
+        GrRenderbuffer::EF_RGBA16F,
+        GrRenderbuffer::EF_RGBA32F,
+        GrRenderbuffer::EF_DEPTH,
+        GrRenderbuffer::EF_DEPTH16,
+        GrRenderbuffer::EF_DEPTH24,
+        GrRenderbuffer::EF_DEPTHSTENCIL,
+        GrRenderbuffer::EF_DEPTH24STENCIL8,
+        GrRenderbuffer::EF_RGBA,
+}
+\end{verbatim}
+\end{Code}
+
+
+Definition at line 21 of file GrRenderTargetMgr.cpp.\hypertarget{_gr_render_target_mgr_8cpp_e724d8bfeb4bcd97146e35ca1646dd2f}{
+\index{GrRenderTargetMgr.cpp@{GrRenderTargetMgr.cpp}!gGrRenderTargetMgr@{gGrRenderTargetMgr}}
+\index{gGrRenderTargetMgr@{gGrRenderTargetMgr}!GrRenderTargetMgr.cpp@{GrRenderTargetMgr.cpp}}
+\subsubsection[{gGrRenderTargetMgr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrRenderTargetMgr}$\ast$ {\bf gGrRenderTargetMgr} = 0}}
+\label{_gr_render_target_mgr_8cpp_e724d8bfeb4bcd97146e35ca1646dd2f}
+
+
+
+
+Definition at line 19 of file GrRenderTargetMgr.cpp.\hypertarget{_gr_render_target_mgr_8cpp_357c2972eac91bba83726064df0b8b6e}{
+\index{GrRenderTargetMgr.cpp@{GrRenderTargetMgr.cpp}!textureFmtMap@{textureFmtMap}}
+\index{textureFmtMap@{textureFmtMap}!GrRenderTargetMgr.cpp@{GrRenderTargetMgr.cpp}}
+\subsubsection[{textureFmtMap}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrTextureBase::EFORMAT} {\bf textureFmtMap}\mbox{[}GrRenderTargetMgr::EF\_\-COUNT\mbox{]}}}
+\label{_gr_render_target_mgr_8cpp_357c2972eac91bba83726064df0b8b6e}
+
+
+\textbf{Initial value:}
+
+\begin{Code}\begin{verbatim}
+{
+        GrTextureBase::EF_RGB16,
+        GrTextureBase::EF_RGB24,
+        GrTextureBase::EF_RGB15_A1,
+        GrTextureBase::EF_RGBA32,
+        GrTextureBase::EF_RGB48F,
+        GrTextureBase::EF_RGBA64F,
+        GrTextureBase::EF_RGBA128F,
+        GrTextureBase::EF_DEPTH,
+        GrTextureBase::EF_DEPTH,
+        GrTextureBase::EF_DEPTH,
+        GrTextureBase::EF_DEPTHSTENCIL,
+        GrTextureBase::EF_DEPTHSTENCIL,
+        GrTextureBase::EF_I8,
+}
+\end{verbatim}
+\end{Code}
+
+
+Definition at line 38 of file GrRenderTargetMgr.cpp.

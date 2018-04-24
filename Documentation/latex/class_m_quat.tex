@@ -1,0 +1,263 @@
+\hypertarget{class_m_quat}{
+\section{MQuat Class Reference}
+\label{class_m_quat}\index{MQuat@{MQuat}}
+}
+{\tt \#include $<$MQuat.h$>$}
+
+Inheritance diagram for MQuat::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_m_quat}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_m_quat_9fd65558912003344340a92e641a3988}{MQuat} ()
+\item 
+\hyperlink{class_m_quat_d5119507f40c8e5891690120e1f29c81}{MQuat} (float \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x}, float \hyperlink{wglext_8h_9298c7ad619074f5285b32c6b72bfdea}{y}, float \hyperlink{glext__bak_8h_5b27107fca91cf19a778530405575b37}{z}, float \hyperlink{glext__bak_8h_d47d000a8e40b26a33682e10ae32a1b6}{w})
+\item 
+\hyperlink{class_m_quat_4072fed107ac31bde4da73c7a15f5e2b}{MQuat} (const \hyperlink{class_m_vec3}{MVec3} \&axis, float \hyperlink{glext_8h_9e06c1f76a20fed54ca742cd25cb02c4}{angle})
+\item 
+\hyperlink{class_m_quat_b6c59f60d6af948d46f8792105cff2f2}{MQuat} (const \hyperlink{class_m_quat}{MQuat} \&quat)
+\item 
+\hyperlink{class_m_quat_5165e0d3a6ac93bc29862d30131212ad}{MQuat} (const \hyperlink{class_m_mat3x3}{MMat3x3} \&rot)
+\item 
+\hyperlink{class_m_quat}{MQuat} \& \hyperlink{class_m_quat_63cecf05b4c066e66091e952e0b2a6cc}{operator=} (const \hyperlink{class_m_quat}{MQuat} \&quat)
+\item 
+\hyperlink{class_m_quat}{MQuat} \& \hyperlink{class_m_quat_6b16ae3c681ab3e7712bd1c3e9d8bb83}{operator=} (const \hyperlink{class_m_mat3x3}{MMat3x3} \&rot)
+\item 
+void \hyperlink{class_m_quat_aa5548b76fe9f7c711792010bf5e6420}{MakeRotFast} (\hyperlink{class_m_mat3x3}{MMat3x3} \&rot) const 
+\item 
+\hyperlink{class_m_mat3x3}{MMat3x3} \hyperlink{class_m_quat_c72f53b8d276a8cfe6b6426e9c01909c}{MakeRot} () const 
+\item 
+void \hyperlink{class_m_quat_09045cf01b60cbd8894da32f1fa04eed}{SetMatrixRot} (\hyperlink{class_m_mat4x4}{MMat4x4} \&mat) const 
+\item 
+\hyperlink{class_m_quat}{MQuat} \hyperlink{class_m_quat_a3d68d57f2163eb7f626b2fffbe0bcb3}{operator$\ast$} (const \hyperlink{class_m_quat}{MQuat} \&rhs) const 
+\item 
+\hyperlink{class_m_quat}{MQuat} \& \hyperlink{class_m_quat_42f61bacf7e7ed17c21a8008e6f32859}{operator$\ast$=} (const \hyperlink{class_m_quat}{MQuat} \&rhs)
+\item 
+void \hyperlink{class_m_quat_fee8bfad4412a9f64fc3a493dcfc1152}{Invert} ()
+\item 
+\hyperlink{class_m_quat}{MQuat} \hyperlink{class_m_quat_e06b631563df1502b73008829e33f278}{Inverted} () const 
+\item 
+void \hyperlink{class_m_quat_cba836d9852fe104543d68f9dab2aaaf}{Normalize} ()
+\item 
+\hyperlink{class_m_quat}{MQuat} \hyperlink{class_m_quat_78397c335aeb118bf6f928c063f6431a}{Normalized} () const 
+\item 
+void \hyperlink{class_m_quat_34b3340801674c4f167e4301fd1e9d5a}{SlerpToFast} (const \hyperlink{class_m_quat}{MQuat} \&to, float \hyperlink{glext__bak_8h_00140d6f5c548b26daf170bf16e86a6d}{t})
+\item 
+\hyperlink{class_m_quat}{MQuat} \hyperlink{class_m_quat_e8ffbbff43cc352a258cf65a0f21e6da}{SlerpTo} (const \hyperlink{class_m_quat}{MQuat} \&to, float \hyperlink{glext__bak_8h_00140d6f5c548b26daf170bf16e86a6d}{t}) const 
+\item 
+void \hyperlink{class_m_quat_11cd2854533b239018aba53fa458cad2}{SlerpFromIdentFast} (float \hyperlink{glext__bak_8h_00140d6f5c548b26daf170bf16e86a6d}{t})
+\item 
+\hyperlink{class_m_quat}{MQuat} \hyperlink{class_m_quat_14142a1d596dd9adbd9fba59b94123d4}{SlerpFromIdent} (float \hyperlink{glext__bak_8h_00140d6f5c548b26daf170bf16e86a6d}{t})
+\item 
+void \hyperlink{class_m_quat_8fda2e1badcf8a38c475b14c7c3cf87b}{BlendFromIdentFast} (float \hyperlink{glext__bak_8h_00140d6f5c548b26daf170bf16e86a6d}{t})
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 23 of file MQuat.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_m_quat_9fd65558912003344340a92e641a3988}{
+\index{MQuat@{MQuat}!MQuat@{MQuat}}
+\index{MQuat@{MQuat}!MQuat@{MQuat}}
+\subsubsection[{MQuat}]{\setlength{\rightskip}{0pt plus 5cm}MQuat::MQuat ()}}
+\label{class_m_quat_9fd65558912003344340a92e641a3988}
+
+
+
+
+Definition at line 21 of file MQuat.cpp.\hypertarget{class_m_quat_d5119507f40c8e5891690120e1f29c81}{
+\index{MQuat@{MQuat}!MQuat@{MQuat}}
+\index{MQuat@{MQuat}!MQuat@{MQuat}}
+\subsubsection[{MQuat}]{\setlength{\rightskip}{0pt plus 5cm}MQuat::MQuat (float {\em x}, \/  float {\em y}, \/  float {\em z}, \/  float {\em w})}}
+\label{class_m_quat_d5119507f40c8e5891690120e1f29c81}
+
+
+
+
+Definition at line 28 of file MQuat.cpp.\hypertarget{class_m_quat_4072fed107ac31bde4da73c7a15f5e2b}{
+\index{MQuat@{MQuat}!MQuat@{MQuat}}
+\index{MQuat@{MQuat}!MQuat@{MQuat}}
+\subsubsection[{MQuat}]{\setlength{\rightskip}{0pt plus 5cm}MQuat::MQuat (const {\bf MVec3} \& {\em axis}, \/  float {\em angle})}}
+\label{class_m_quat_4072fed107ac31bde4da73c7a15f5e2b}
+
+
+
+
+Definition at line 35 of file MQuat.cpp.\hypertarget{class_m_quat_b6c59f60d6af948d46f8792105cff2f2}{
+\index{MQuat@{MQuat}!MQuat@{MQuat}}
+\index{MQuat@{MQuat}!MQuat@{MQuat}}
+\subsubsection[{MQuat}]{\setlength{\rightskip}{0pt plus 5cm}MQuat::MQuat (const {\bf MQuat} \& {\em quat})}}
+\label{class_m_quat_b6c59f60d6af948d46f8792105cff2f2}
+
+
+
+
+Definition at line 42 of file MQuat.cpp.\hypertarget{class_m_quat_5165e0d3a6ac93bc29862d30131212ad}{
+\index{MQuat@{MQuat}!MQuat@{MQuat}}
+\index{MQuat@{MQuat}!MQuat@{MQuat}}
+\subsubsection[{MQuat}]{\setlength{\rightskip}{0pt plus 5cm}MQuat::MQuat (const {\bf MMat3x3} \& {\em rot})\hspace{0.3cm}{\tt  \mbox{[}explicit\mbox{]}}}}
+\label{class_m_quat_5165e0d3a6ac93bc29862d30131212ad}
+
+
+
+
+Definition at line 49 of file MQuat.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_m_quat_8fda2e1badcf8a38c475b14c7c3cf87b}{
+\index{MQuat@{MQuat}!BlendFromIdentFast@{BlendFromIdentFast}}
+\index{BlendFromIdentFast@{BlendFromIdentFast}!MQuat@{MQuat}}
+\subsubsection[{BlendFromIdentFast}]{\setlength{\rightskip}{0pt plus 5cm}void MQuat::BlendFromIdentFast (float {\em t})}}
+\label{class_m_quat_8fda2e1badcf8a38c475b14c7c3cf87b}
+
+
+
+
+Definition at line 457 of file MQuat.cpp.\hypertarget{class_m_quat_fee8bfad4412a9f64fc3a493dcfc1152}{
+\index{MQuat@{MQuat}!Invert@{Invert}}
+\index{Invert@{Invert}!MQuat@{MQuat}}
+\subsubsection[{Invert}]{\setlength{\rightskip}{0pt plus 5cm}void MQuat::Invert ()}}
+\label{class_m_quat_fee8bfad4412a9f64fc3a493dcfc1152}
+
+
+
+
+Definition at line 214 of file MQuat.cpp.\hypertarget{class_m_quat_e06b631563df1502b73008829e33f278}{
+\index{MQuat@{MQuat}!Inverted@{Inverted}}
+\index{Inverted@{Inverted}!MQuat@{MQuat}}
+\subsubsection[{Inverted}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MQuat} MQuat::Inverted () const}}
+\label{class_m_quat_e06b631563df1502b73008829e33f278}
+
+
+
+
+Definition at line 223 of file MQuat.cpp.\hypertarget{class_m_quat_c72f53b8d276a8cfe6b6426e9c01909c}{
+\index{MQuat@{MQuat}!MakeRot@{MakeRot}}
+\index{MakeRot@{MakeRot}!MQuat@{MQuat}}
+\subsubsection[{MakeRot}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MMat3x3} MQuat::MakeRot () const}}
+\label{class_m_quat_c72f53b8d276a8cfe6b6426e9c01909c}
+
+
+
+
+Definition at line 109 of file MQuat.cpp.\hypertarget{class_m_quat_aa5548b76fe9f7c711792010bf5e6420}{
+\index{MQuat@{MQuat}!MakeRotFast@{MakeRotFast}}
+\index{MakeRotFast@{MakeRotFast}!MQuat@{MQuat}}
+\subsubsection[{MakeRotFast}]{\setlength{\rightskip}{0pt plus 5cm}void MQuat::MakeRotFast ({\bf MMat3x3} \& {\em rot}) const}}
+\label{class_m_quat_aa5548b76fe9f7c711792010bf5e6420}
+
+
+
+
+Definition at line 77 of file MQuat.cpp.\hypertarget{class_m_quat_cba836d9852fe104543d68f9dab2aaaf}{
+\index{MQuat@{MQuat}!Normalize@{Normalize}}
+\index{Normalize@{Normalize}!MQuat@{MQuat}}
+\subsubsection[{Normalize}]{\setlength{\rightskip}{0pt plus 5cm}void MQuat::Normalize ()}}
+\label{class_m_quat_cba836d9852fe104543d68f9dab2aaaf}
+
+
+
+
+Definition at line 230 of file MQuat.cpp.\hypertarget{class_m_quat_78397c335aeb118bf6f928c063f6431a}{
+\index{MQuat@{MQuat}!Normalized@{Normalized}}
+\index{Normalized@{Normalized}!MQuat@{MQuat}}
+\subsubsection[{Normalized}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MQuat} MQuat::Normalized () const}}
+\label{class_m_quat_78397c335aeb118bf6f928c063f6431a}
+
+
+
+
+Definition at line 241 of file MQuat.cpp.\hypertarget{class_m_quat_a3d68d57f2163eb7f626b2fffbe0bcb3}{
+\index{MQuat@{MQuat}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!MQuat@{MQuat}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MQuat} MQuat::operator$\ast$ (const {\bf MQuat} \& {\em rhs}) const}}
+\label{class_m_quat_a3d68d57f2163eb7f626b2fffbe0bcb3}
+
+
+
+
+Definition at line 165 of file MQuat.cpp.\hypertarget{class_m_quat_42f61bacf7e7ed17c21a8008e6f32859}{
+\index{MQuat@{MQuat}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!MQuat@{MQuat}}
+\subsubsection[{operator$\ast$=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MQuat} \& MQuat::operator$\ast$= (const {\bf MQuat} \& {\em rhs})}}
+\label{class_m_quat_42f61bacf7e7ed17c21a8008e6f32859}
+
+
+
+
+Definition at line 187 of file MQuat.cpp.\hypertarget{class_m_quat_6b16ae3c681ab3e7712bd1c3e9d8bb83}{
+\index{MQuat@{MQuat}!operator=@{operator=}}
+\index{operator=@{operator=}!MQuat@{MQuat}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MQuat} \& MQuat::operator= (const {\bf MMat3x3} \& {\em rot})}}
+\label{class_m_quat_6b16ae3c681ab3e7712bd1c3e9d8bb83}
+
+
+
+
+Definition at line 69 of file MQuat.cpp.\hypertarget{class_m_quat_63cecf05b4c066e66091e952e0b2a6cc}{
+\index{MQuat@{MQuat}!operator=@{operator=}}
+\index{operator=@{operator=}!MQuat@{MQuat}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MQuat} \& MQuat::operator= (const {\bf MQuat} \& {\em quat})}}
+\label{class_m_quat_63cecf05b4c066e66091e952e0b2a6cc}
+
+
+
+
+Definition at line 61 of file MQuat.cpp.\hypertarget{class_m_quat_09045cf01b60cbd8894da32f1fa04eed}{
+\index{MQuat@{MQuat}!SetMatrixRot@{SetMatrixRot}}
+\index{SetMatrixRot@{SetMatrixRot}!MQuat@{MQuat}}
+\subsubsection[{SetMatrixRot}]{\setlength{\rightskip}{0pt plus 5cm}void MQuat::SetMatrixRot ({\bf MMat4x4} \& {\em mat}) const}}
+\label{class_m_quat_09045cf01b60cbd8894da32f1fa04eed}
+
+
+
+
+Definition at line 133 of file MQuat.cpp.\hypertarget{class_m_quat_14142a1d596dd9adbd9fba59b94123d4}{
+\index{MQuat@{MQuat}!SlerpFromIdent@{SlerpFromIdent}}
+\index{SlerpFromIdent@{SlerpFromIdent}!MQuat@{MQuat}}
+\subsubsection[{SlerpFromIdent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MQuat} MQuat::SlerpFromIdent (float {\em t})}}
+\label{class_m_quat_14142a1d596dd9adbd9fba59b94123d4}
+
+
+
+
+Definition at line 405 of file MQuat.cpp.\hypertarget{class_m_quat_11cd2854533b239018aba53fa458cad2}{
+\index{MQuat@{MQuat}!SlerpFromIdentFast@{SlerpFromIdentFast}}
+\index{SlerpFromIdentFast@{SlerpFromIdentFast}!MQuat@{MQuat}}
+\subsubsection[{SlerpFromIdentFast}]{\setlength{\rightskip}{0pt plus 5cm}void MQuat::SlerpFromIdentFast (float {\em t})}}
+\label{class_m_quat_11cd2854533b239018aba53fa458cad2}
+
+
+
+
+Definition at line 353 of file MQuat.cpp.\hypertarget{class_m_quat_e8ffbbff43cc352a258cf65a0f21e6da}{
+\index{MQuat@{MQuat}!SlerpTo@{SlerpTo}}
+\index{SlerpTo@{SlerpTo}!MQuat@{MQuat}}
+\subsubsection[{SlerpTo}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MQuat} MQuat::SlerpTo (const {\bf MQuat} \& {\em to}, \/  float {\em t}) const}}
+\label{class_m_quat_e8ffbbff43cc352a258cf65a0f21e6da}
+
+
+
+
+Definition at line 301 of file MQuat.cpp.\hypertarget{class_m_quat_34b3340801674c4f167e4301fd1e9d5a}{
+\index{MQuat@{MQuat}!SlerpToFast@{SlerpToFast}}
+\index{SlerpToFast@{SlerpToFast}!MQuat@{MQuat}}
+\subsubsection[{SlerpToFast}]{\setlength{\rightskip}{0pt plus 5cm}void MQuat::SlerpToFast (const {\bf MQuat} \& {\em to}, \/  float {\em t})}}
+\label{class_m_quat_34b3340801674c4f167e4301fd1e9d5a}
+
+
+
+
+Definition at line 249 of file MQuat.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_m_quat_8h}{MQuat.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_m_quat_8cpp}{MQuat.cpp}\end{CompactItemize}

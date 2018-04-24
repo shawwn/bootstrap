@@ -1,0 +1,157 @@
+\hypertarget{filesystem__afx_8h}{
+\section{C:/Bootstrap/ProjectBX/Engine/FileSystem/filesystem\_\-afx.h File Reference}
+\label{filesystem__afx_8h}\index{C:/Bootstrap/ProjectBX/Engine/FileSystem/filesystem\_\-afx.h@{C:/Bootstrap/ProjectBX/Engine/FileSystem/filesystem\_\-afx.h}}
+}
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \hyperlink{filesystem__afx_8h_c50762666aa00bd3a4308158510f1748}{\_\-WIN32\_\-WINNT}~0x0500
+\item 
+\#define \hyperlink{filesystem__afx_8h_f8d2f46bba616ba12725e0f507a30644}{FS\_\-T}(\hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x})~\hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x}
+\item 
+\#define \hyperlink{filesystem__afx_8h_66c04a7d906455a50b3a2d9a0386a6bf}{FSSIZE\_\-LOW}(\hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x})~( ( unsigned int )( ( ( \hyperlink{filesystem__afx_8h_2dfedf2033eee861d23c808f79ed5837}{FSsize} )( \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x} ) ) \& 0xFFFFFFFF ) )
+\item 
+\#define \hyperlink{filesystem__afx_8h_a8c72bd9f8f4638f848d70ef8f973cc1}{FSSIZE\_\-HIGH}(\hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x})~( ( unsigned int )( ( ( \hyperlink{filesystem__afx_8h_2dfedf2033eee861d23c808f79ed5837}{FSsize} )( \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x} ) $>$$>$ 32 ) \& 0xFFFFFFFF ) )
+\item 
+\#define \hyperlink{filesystem__afx_8h_fd795f2042c2f66113f5a2bf2ddadea9}{MAKE\_\-FSIZE}(low, high)~( ( ( ( \hyperlink{filesystem__afx_8h_2dfedf2033eee861d23c808f79ed5837}{FSsize} )( high ) ) $<$$<$ 32 ) $|$ ( ( \hyperlink{filesystem__afx_8h_2dfedf2033eee861d23c808f79ed5837}{FSsize} )( low ) ) )
+\item 
+\#define \hyperlink{filesystem__afx_8h_afdd7c1735c5ecd25802c529a72e0f5b}{\_\-FS\_\-NAME\_\-MANGLE\_\-INTERNAL}(\hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x}, \hyperlink{wglext_8h_9298c7ad619074f5285b32c6b72bfdea}{y})~\hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x}\#\#\hyperlink{wglext_8h_9298c7ad619074f5285b32c6b72bfdea}{y}
+\item 
+\#define \hyperlink{filesystem__afx_8h_9e763a32ab8c2eae00b415b9c773c9f2}{\_\-FS\_\-NAME\_\-MANGLE}(\hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x}, \hyperlink{wglext_8h_9298c7ad619074f5285b32c6b72bfdea}{y})~\_\-FS\_\-NAME\_\-MANGLE\_\-INTERNAL( \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x}, \hyperlink{wglext_8h_9298c7ad619074f5285b32c6b72bfdea}{y} )
+\end{CompactItemize}
+\subsection*{Typedefs}
+\begin{CompactItemize}
+\item 
+typedef char \hyperlink{filesystem__afx_8h_08b81c947811e6def5d8994fd4d76481}{FSchar}
+\item 
+typedef \hyperlink{common__afx_8h_2e015c96ada30f1fdb9322f7af889c10}{\_\-\_\-int64} \hyperlink{filesystem__afx_8h_2dfedf2033eee861d23c808f79ed5837}{FSsize}
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+int \hyperlink{filesystem__afx_8h_942a7d92d20632b09a881e60b3b0da51}{\_\-FS\_\-Swap} (volatile int $\ast$gate, int \hyperlink{glext__bak_8h_6a4f8a1a444e9080b297963b3db29fe0}{value})
+\item 
+int \hyperlink{filesystem__afx_8h_133351a8017be1f705495b697e7116e5}{\_\-FS\_\-CompareAndSwap} (volatile int $\ast$gate, int \hyperlink{glext__bak_8h_6a4f8a1a444e9080b297963b3db29fe0}{value}, int compare)
+\item 
+void $\ast$ \hyperlink{filesystem__afx_8h_d0c6c8d0a75e52a9ebc827fd45e95898}{\_\-FS\_\-AlignedAlloc} (unsigned int \hyperlink{glext__bak_8h_3d1e3edfcf61ca2d831883e1afbad89e}{size}, unsigned int alignmentPow2)
+\item 
+void \hyperlink{filesystem__afx_8h_7ae7b0600f1976c6219bf9c60f5a633d}{\_\-FS\_\-AlignedFree} (void $\ast$ptr)
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{filesystem__afx_8h_9e763a32ab8c2eae00b415b9c773c9f2}{
+\index{filesystem\_\-afx.h@{filesystem\_\-afx.h}!\_\-FS\_\-NAME\_\-MANGLE@{\_\-FS\_\-NAME\_\-MANGLE}}
+\index{\_\-FS\_\-NAME\_\-MANGLE@{\_\-FS\_\-NAME\_\-MANGLE}!filesystem_afx.h@{filesystem\_\-afx.h}}
+\subsubsection[{\_\-FS\_\-NAME\_\-MANGLE}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-FS\_\-NAME\_\-MANGLE({\bf x}, \/  {\bf y})~\_\-FS\_\-NAME\_\-MANGLE\_\-INTERNAL( {\bf x}, {\bf y} )}}
+\label{filesystem__afx_8h_9e763a32ab8c2eae00b415b9c773c9f2}
+
+
+
+
+Definition at line 38 of file filesystem\_\-afx.h.\hypertarget{filesystem__afx_8h_afdd7c1735c5ecd25802c529a72e0f5b}{
+\index{filesystem\_\-afx.h@{filesystem\_\-afx.h}!\_\-FS\_\-NAME\_\-MANGLE\_\-INTERNAL@{\_\-FS\_\-NAME\_\-MANGLE\_\-INTERNAL}}
+\index{\_\-FS\_\-NAME\_\-MANGLE\_\-INTERNAL@{\_\-FS\_\-NAME\_\-MANGLE\_\-INTERNAL}!filesystem_afx.h@{filesystem\_\-afx.h}}
+\subsubsection[{\_\-FS\_\-NAME\_\-MANGLE\_\-INTERNAL}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-FS\_\-NAME\_\-MANGLE\_\-INTERNAL({\bf x}, \/  {\bf y})~{\bf x}\#\#{\bf y}}}
+\label{filesystem__afx_8h_afdd7c1735c5ecd25802c529a72e0f5b}
+
+
+
+
+Definition at line 37 of file filesystem\_\-afx.h.\hypertarget{filesystem__afx_8h_c50762666aa00bd3a4308158510f1748}{
+\index{filesystem\_\-afx.h@{filesystem\_\-afx.h}!\_\-WIN32\_\-WINNT@{\_\-WIN32\_\-WINNT}}
+\index{\_\-WIN32\_\-WINNT@{\_\-WIN32\_\-WINNT}!filesystem_afx.h@{filesystem\_\-afx.h}}
+\subsubsection[{\_\-WIN32\_\-WINNT}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-WIN32\_\-WINNT~0x0500}}
+\label{filesystem__afx_8h_c50762666aa00bd3a4308158510f1748}
+
+
+
+
+Definition at line 3 of file filesystem\_\-afx.h.\hypertarget{filesystem__afx_8h_f8d2f46bba616ba12725e0f507a30644}{
+\index{filesystem\_\-afx.h@{filesystem\_\-afx.h}!FS\_\-T@{FS\_\-T}}
+\index{FS\_\-T@{FS\_\-T}!filesystem_afx.h@{filesystem\_\-afx.h}}
+\subsubsection[{FS\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define FS\_\-T({\bf x})~{\bf x}}}
+\label{filesystem__afx_8h_f8d2f46bba616ba12725e0f507a30644}
+
+
+
+
+Definition at line 23 of file filesystem\_\-afx.h.\hypertarget{filesystem__afx_8h_a8c72bd9f8f4638f848d70ef8f973cc1}{
+\index{filesystem\_\-afx.h@{filesystem\_\-afx.h}!FSSIZE\_\-HIGH@{FSSIZE\_\-HIGH}}
+\index{FSSIZE\_\-HIGH@{FSSIZE\_\-HIGH}!filesystem_afx.h@{filesystem\_\-afx.h}}
+\subsubsection[{FSSIZE\_\-HIGH}]{\setlength{\rightskip}{0pt plus 5cm}\#define FSSIZE\_\-HIGH({\bf x})~( ( unsigned int )( ( ( {\bf FSsize} )( {\bf x} ) $>$$>$ 32 ) \& 0xFFFFFFFF ) )}}
+\label{filesystem__afx_8h_a8c72bd9f8f4638f848d70ef8f973cc1}
+
+
+
+
+Definition at line 30 of file filesystem\_\-afx.h.\hypertarget{filesystem__afx_8h_66c04a7d906455a50b3a2d9a0386a6bf}{
+\index{filesystem\_\-afx.h@{filesystem\_\-afx.h}!FSSIZE\_\-LOW@{FSSIZE\_\-LOW}}
+\index{FSSIZE\_\-LOW@{FSSIZE\_\-LOW}!filesystem_afx.h@{filesystem\_\-afx.h}}
+\subsubsection[{FSSIZE\_\-LOW}]{\setlength{\rightskip}{0pt plus 5cm}\#define FSSIZE\_\-LOW({\bf x})~( ( unsigned int )( ( ( {\bf FSsize} )( {\bf x} ) ) \& 0xFFFFFFFF ) )}}
+\label{filesystem__afx_8h_66c04a7d906455a50b3a2d9a0386a6bf}
+
+
+
+
+Definition at line 29 of file filesystem\_\-afx.h.\hypertarget{filesystem__afx_8h_fd795f2042c2f66113f5a2bf2ddadea9}{
+\index{filesystem\_\-afx.h@{filesystem\_\-afx.h}!MAKE\_\-FSIZE@{MAKE\_\-FSIZE}}
+\index{MAKE\_\-FSIZE@{MAKE\_\-FSIZE}!filesystem_afx.h@{filesystem\_\-afx.h}}
+\subsubsection[{MAKE\_\-FSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAKE\_\-FSIZE(low, \/  high)~( ( ( ( {\bf FSsize} )( high ) ) $<$$<$ 32 ) $|$ ( ( {\bf FSsize} )( low ) ) )}}
+\label{filesystem__afx_8h_fd795f2042c2f66113f5a2bf2ddadea9}
+
+
+
+
+Definition at line 31 of file filesystem\_\-afx.h.
+
+\subsection{Typedef Documentation}
+\hypertarget{filesystem__afx_8h_08b81c947811e6def5d8994fd4d76481}{
+\index{filesystem\_\-afx.h@{filesystem\_\-afx.h}!FSchar@{FSchar}}
+\index{FSchar@{FSchar}!filesystem_afx.h@{filesystem\_\-afx.h}}
+\subsubsection[{FSchar}]{\setlength{\rightskip}{0pt plus 5cm}typedef char {\bf FSchar}}}
+\label{filesystem__afx_8h_08b81c947811e6def5d8994fd4d76481}
+
+
+
+
+Definition at line 22 of file filesystem\_\-afx.h.\hypertarget{filesystem__afx_8h_2dfedf2033eee861d23c808f79ed5837}{
+\index{filesystem\_\-afx.h@{filesystem\_\-afx.h}!FSsize@{FSsize}}
+\index{FSsize@{FSsize}!filesystem_afx.h@{filesystem\_\-afx.h}}
+\subsubsection[{FSsize}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf \_\-\_\-int64} {\bf FSsize}}}
+\label{filesystem__afx_8h_2dfedf2033eee861d23c808f79ed5837}
+
+
+
+
+Definition at line 28 of file filesystem\_\-afx.h.
+
+\subsection{Function Documentation}
+\hypertarget{filesystem__afx_8h_d0c6c8d0a75e52a9ebc827fd45e95898}{
+\index{filesystem\_\-afx.h@{filesystem\_\-afx.h}!\_\-FS\_\-AlignedAlloc@{\_\-FS\_\-AlignedAlloc}}
+\index{\_\-FS\_\-AlignedAlloc@{\_\-FS\_\-AlignedAlloc}!filesystem_afx.h@{filesystem\_\-afx.h}}
+\subsubsection[{\_\-FS\_\-AlignedAlloc}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ \_\-FS\_\-AlignedAlloc (unsigned int {\em size}, \/  unsigned int {\em alignmentPow2})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{filesystem__afx_8h_d0c6c8d0a75e52a9ebc827fd45e95898}
+
+
+\hypertarget{filesystem__afx_8h_7ae7b0600f1976c6219bf9c60f5a633d}{
+\index{filesystem\_\-afx.h@{filesystem\_\-afx.h}!\_\-FS\_\-AlignedFree@{\_\-FS\_\-AlignedFree}}
+\index{\_\-FS\_\-AlignedFree@{\_\-FS\_\-AlignedFree}!filesystem_afx.h@{filesystem\_\-afx.h}}
+\subsubsection[{\_\-FS\_\-AlignedFree}]{\setlength{\rightskip}{0pt plus 5cm}void \_\-FS\_\-AlignedFree (void $\ast$ {\em ptr})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{filesystem__afx_8h_7ae7b0600f1976c6219bf9c60f5a633d}
+
+
+\hypertarget{filesystem__afx_8h_133351a8017be1f705495b697e7116e5}{
+\index{filesystem\_\-afx.h@{filesystem\_\-afx.h}!\_\-FS\_\-CompareAndSwap@{\_\-FS\_\-CompareAndSwap}}
+\index{\_\-FS\_\-CompareAndSwap@{\_\-FS\_\-CompareAndSwap}!filesystem_afx.h@{filesystem\_\-afx.h}}
+\subsubsection[{\_\-FS\_\-CompareAndSwap}]{\setlength{\rightskip}{0pt plus 5cm}int \_\-FS\_\-CompareAndSwap (volatile int $\ast$ {\em gate}, \/  int {\em value}, \/  int {\em compare})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{filesystem__afx_8h_133351a8017be1f705495b697e7116e5}
+
+
+\hypertarget{filesystem__afx_8h_942a7d92d20632b09a881e60b3b0da51}{
+\index{filesystem\_\-afx.h@{filesystem\_\-afx.h}!\_\-FS\_\-Swap@{\_\-FS\_\-Swap}}
+\index{\_\-FS\_\-Swap@{\_\-FS\_\-Swap}!filesystem_afx.h@{filesystem\_\-afx.h}}
+\subsubsection[{\_\-FS\_\-Swap}]{\setlength{\rightskip}{0pt plus 5cm}int \_\-FS\_\-Swap (volatile int $\ast$ {\em gate}, \/  int {\em value})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{filesystem__afx_8h_942a7d92d20632b09a881e60b3b0da51}
+
+

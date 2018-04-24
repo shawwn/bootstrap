@@ -1,0 +1,247 @@
+\hypertarget{class_gr_mesh_i_b}{
+\section{GrMeshIB Class Reference}
+\label{class_gr_mesh_i_b}\index{GrMeshIB@{GrMeshIB}}
+}
+{\tt \#include $<$GrMeshIB.h$>$}
+
+Inheritance diagram for GrMeshIB::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_gr_mesh_i_b}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_mesh_i_b_ccc1bb85f10260956c3adeb2f005ee8a}{GrMeshIB} (unsigned int indexCount, const unsigned short $\ast$\hyperlink{glext__bak_8h_c4293d0f76770fe857be3431df25308d}{indices}, unsigned int \hyperlink{_u_t_message_8h_0a3c0b351ab09281b662a9ff4f900a53}{flags}, unsigned int maxIndexCount=0)
+\item 
+\hyperlink{class_gr_mesh_i_b_567dd8e750f69193e29e62803625c917}{GrMeshIB} (unsigned int indexCount, unsigned int \hyperlink{_u_t_message_8h_0a3c0b351ab09281b662a9ff4f900a53}{flags}, unsigned int maxIndexCount=0)
+\item 
+\hyperlink{class_gr_mesh_i_b_6d29901b0246caa72ff0afa79abfc908}{$\sim$GrMeshIB} ()
+\item 
+unsigned int \hyperlink{class_gr_mesh_i_b_bc4d48c0654e6fef9dd839470e3acb1e}{GetIndexCount} () const 
+\item 
+unsigned int \hyperlink{class_gr_mesh_i_b_d87b87ba3f6eed6bbbf771f6209ffa25}{GetMaxIndexCount} () const 
+\item 
+void \hyperlink{class_gr_mesh_i_b_70b4040ac60faf6d940fb8d8c99742a5}{AdjustIndexCount} (int growSize)
+\item 
+unsigned int \hyperlink{class_gr_mesh_i_b_2742f129215e216397af17d54d7f30e9}{GetFlags} () const 
+\item 
+unsigned short $\ast$ \hyperlink{class_gr_mesh_i_b_b4046ea06d52f723bcbe47f3bf6e144a}{GetIndices} () const 
+\item 
+void \hyperlink{class_gr_mesh_i_b_717553e324aa83599fdbcde6a6a3f0d3}{MarkAsDirty} ()
+\item 
+unsigned short $\ast$ \hyperlink{class_gr_mesh_i_b_120496ea14cb6167d0f18e72fe69287e}{Map} (bool writeOnly)
+\item 
+void \hyperlink{class_gr_mesh_i_b_8151cb6061c284305d8c99c091216bdd}{Unmap} ()
+\item 
+void \hyperlink{class_gr_mesh_i_b_86bca7ecd874edc1a9dff554efbbec28}{Update} (unsigned int \hyperlink{glext__bak_8h_c55adc720a3098c1b454d2a4647f4361}{start}, unsigned short $\ast$\hyperlink{glext__bak_8h_fd3b198d09b41a863127e5e2b29c4e53}{source}, unsigned int \hyperlink{wglext_8h_98d18d6b4e3ba4ed266c6fb54c839d70}{count})
+\item 
+void \hyperlink{class_gr_mesh_i_b_2052ec71d1396ccc8ae46fc24d1ad3d3}{Cache} ()
+\item 
+void \hyperlink{class_gr_mesh_i_b_eb54e94dcc677dc3e11388a9748dca1c}{Evict} ()
+\item 
+void \hyperlink{class_gr_mesh_i_b_511e7b534dbd0745e34ed4957eccd527}{Bind} ()
+\item 
+void \hyperlink{class_gr_mesh_i_b_ba75408bf6d0944191a4369bcfffb40a}{PreContextReset} ()
+\item 
+void \hyperlink{class_gr_mesh_i_b_715a2cf171015c9b2fa8077ed592b4d9}{PostContextReset} ()
+\end{CompactItemize}
+\subsection*{Static Public Attributes}
+\begin{CompactItemize}
+\item 
+static const unsigned int \hyperlink{class_gr_mesh_i_b_5793b340a735f6ef818f74e6727fcf00}{kDynamic} = 1
+\item 
+static const unsigned int \hyperlink{class_gr_mesh_i_b_e4996627a2e477914d1b15e38d118885}{kNoCopy} = 2
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 18 of file GrMeshIB.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_mesh_i_b_ccc1bb85f10260956c3adeb2f005ee8a}{
+\index{GrMeshIB@{GrMeshIB}!GrMeshIB@{GrMeshIB}}
+\index{GrMeshIB@{GrMeshIB}!GrMeshIB@{GrMeshIB}}
+\subsubsection[{GrMeshIB}]{\setlength{\rightskip}{0pt plus 5cm}GrMeshIB::GrMeshIB (unsigned int {\em indexCount}, \/  const unsigned short $\ast$ {\em indices}, \/  unsigned int {\em flags}, \/  unsigned int {\em maxIndexCount} = {\tt 0})}}
+\label{class_gr_mesh_i_b_ccc1bb85f10260956c3adeb2f005ee8a}
+
+
+
+
+Definition at line 26 of file GrMeshIB.cpp.\hypertarget{class_gr_mesh_i_b_567dd8e750f69193e29e62803625c917}{
+\index{GrMeshIB@{GrMeshIB}!GrMeshIB@{GrMeshIB}}
+\index{GrMeshIB@{GrMeshIB}!GrMeshIB@{GrMeshIB}}
+\subsubsection[{GrMeshIB}]{\setlength{\rightskip}{0pt plus 5cm}GrMeshIB::GrMeshIB (unsigned int {\em indexCount}, \/  unsigned int {\em flags}, \/  unsigned int {\em maxIndexCount} = {\tt 0})}}
+\label{class_gr_mesh_i_b_567dd8e750f69193e29e62803625c917}
+
+
+
+
+Definition at line 42 of file GrMeshIB.cpp.\hypertarget{class_gr_mesh_i_b_6d29901b0246caa72ff0afa79abfc908}{
+\index{GrMeshIB@{GrMeshIB}!$\sim$GrMeshIB@{$\sim$GrMeshIB}}
+\index{$\sim$GrMeshIB@{$\sim$GrMeshIB}!GrMeshIB@{GrMeshIB}}
+\subsubsection[{$\sim$GrMeshIB}]{\setlength{\rightskip}{0pt plus 5cm}GrMeshIB::$\sim$GrMeshIB ()}}
+\label{class_gr_mesh_i_b_6d29901b0246caa72ff0afa79abfc908}
+
+
+
+
+Definition at line 54 of file GrMeshIB.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_mesh_i_b_70b4040ac60faf6d940fb8d8c99742a5}{
+\index{GrMeshIB@{GrMeshIB}!AdjustIndexCount@{AdjustIndexCount}}
+\index{AdjustIndexCount@{AdjustIndexCount}!GrMeshIB@{GrMeshIB}}
+\subsubsection[{AdjustIndexCount}]{\setlength{\rightskip}{0pt plus 5cm}void GrMeshIB::AdjustIndexCount (int {\em growSize})}}
+\label{class_gr_mesh_i_b_70b4040ac60faf6d940fb8d8c99742a5}
+
+
+
+
+Definition at line 68 of file GrMeshIB.cpp.\hypertarget{class_gr_mesh_i_b_511e7b534dbd0745e34ed4957eccd527}{
+\index{GrMeshIB@{GrMeshIB}!Bind@{Bind}}
+\index{Bind@{Bind}!GrMeshIB@{GrMeshIB}}
+\subsubsection[{Bind}]{\setlength{\rightskip}{0pt plus 5cm}void GrMeshIB::Bind ()}}
+\label{class_gr_mesh_i_b_511e7b534dbd0745e34ed4957eccd527}
+
+
+
+
+Definition at line 172 of file GrMeshIB.cpp.\hypertarget{class_gr_mesh_i_b_2052ec71d1396ccc8ae46fc24d1ad3d3}{
+\index{GrMeshIB@{GrMeshIB}!Cache@{Cache}}
+\index{Cache@{Cache}!GrMeshIB@{GrMeshIB}}
+\subsubsection[{Cache}]{\setlength{\rightskip}{0pt plus 5cm}void GrMeshIB::Cache ()}}
+\label{class_gr_mesh_i_b_2052ec71d1396ccc8ae46fc24d1ad3d3}
+
+
+
+
+Definition at line 146 of file GrMeshIB.cpp.\hypertarget{class_gr_mesh_i_b_eb54e94dcc677dc3e11388a9748dca1c}{
+\index{GrMeshIB@{GrMeshIB}!Evict@{Evict}}
+\index{Evict@{Evict}!GrMeshIB@{GrMeshIB}}
+\subsubsection[{Evict}]{\setlength{\rightskip}{0pt plus 5cm}void GrMeshIB::Evict ()}}
+\label{class_gr_mesh_i_b_eb54e94dcc677dc3e11388a9748dca1c}
+
+
+
+
+Definition at line 161 of file GrMeshIB.cpp.\hypertarget{class_gr_mesh_i_b_2742f129215e216397af17d54d7f30e9}{
+\index{GrMeshIB@{GrMeshIB}!GetFlags@{GetFlags}}
+\index{GetFlags@{GetFlags}!GrMeshIB@{GrMeshIB}}
+\subsubsection[{GetFlags}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrMeshIB::GetFlags () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_mesh_i_b_2742f129215e216397af17d54d7f30e9}
+
+
+
+
+Definition at line 38 of file GrMeshIB.h.\hypertarget{class_gr_mesh_i_b_bc4d48c0654e6fef9dd839470e3acb1e}{
+\index{GrMeshIB@{GrMeshIB}!GetIndexCount@{GetIndexCount}}
+\index{GetIndexCount@{GetIndexCount}!GrMeshIB@{GrMeshIB}}
+\subsubsection[{GetIndexCount}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrMeshIB::GetIndexCount () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_mesh_i_b_bc4d48c0654e6fef9dd839470e3acb1e}
+
+
+
+
+Definition at line 30 of file GrMeshIB.h.\hypertarget{class_gr_mesh_i_b_b4046ea06d52f723bcbe47f3bf6e144a}{
+\index{GrMeshIB@{GrMeshIB}!GetIndices@{GetIndices}}
+\index{GetIndices@{GetIndices}!GrMeshIB@{GrMeshIB}}
+\subsubsection[{GetIndices}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short$\ast$ GrMeshIB::GetIndices () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_mesh_i_b_b4046ea06d52f723bcbe47f3bf6e144a}
+
+
+
+
+Definition at line 42 of file GrMeshIB.h.\hypertarget{class_gr_mesh_i_b_d87b87ba3f6eed6bbbf771f6209ffa25}{
+\index{GrMeshIB@{GrMeshIB}!GetMaxIndexCount@{GetMaxIndexCount}}
+\index{GetMaxIndexCount@{GetMaxIndexCount}!GrMeshIB@{GrMeshIB}}
+\subsubsection[{GetMaxIndexCount}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrMeshIB::GetMaxIndexCount () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_mesh_i_b_d87b87ba3f6eed6bbbf771f6209ffa25}
+
+
+
+
+Definition at line 32 of file GrMeshIB.h.\hypertarget{class_gr_mesh_i_b_120496ea14cb6167d0f18e72fe69287e}{
+\index{GrMeshIB@{GrMeshIB}!Map@{Map}}
+\index{Map@{Map}!GrMeshIB@{GrMeshIB}}
+\subsubsection[{Map}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short $\ast$ GrMeshIB::Map (bool {\em writeOnly})}}
+\label{class_gr_mesh_i_b_120496ea14cb6167d0f18e72fe69287e}
+
+
+
+
+Definition at line 78 of file GrMeshIB.cpp.\hypertarget{class_gr_mesh_i_b_717553e324aa83599fdbcde6a6a3f0d3}{
+\index{GrMeshIB@{GrMeshIB}!MarkAsDirty@{MarkAsDirty}}
+\index{MarkAsDirty@{MarkAsDirty}!GrMeshIB@{GrMeshIB}}
+\subsubsection[{MarkAsDirty}]{\setlength{\rightskip}{0pt plus 5cm}void GrMeshIB::MarkAsDirty ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_mesh_i_b_717553e324aa83599fdbcde6a6a3f0d3}
+
+
+
+
+Definition at line 43 of file GrMeshIB.h.\hypertarget{class_gr_mesh_i_b_715a2cf171015c9b2fa8077ed592b4d9}{
+\index{GrMeshIB@{GrMeshIB}!PostContextReset@{PostContextReset}}
+\index{PostContextReset@{PostContextReset}!GrMeshIB@{GrMeshIB}}
+\subsubsection[{PostContextReset}]{\setlength{\rightskip}{0pt plus 5cm}void GrMeshIB::PostContextReset ()}}
+\label{class_gr_mesh_i_b_715a2cf171015c9b2fa8077ed592b4d9}
+
+
+
+
+Definition at line 203 of file GrMeshIB.cpp.\hypertarget{class_gr_mesh_i_b_ba75408bf6d0944191a4369bcfffb40a}{
+\index{GrMeshIB@{GrMeshIB}!PreContextReset@{PreContextReset}}
+\index{PreContextReset@{PreContextReset}!GrMeshIB@{GrMeshIB}}
+\subsubsection[{PreContextReset}]{\setlength{\rightskip}{0pt plus 5cm}void GrMeshIB::PreContextReset ()}}
+\label{class_gr_mesh_i_b_ba75408bf6d0944191a4369bcfffb40a}
+
+
+
+
+Definition at line 194 of file GrMeshIB.cpp.\hypertarget{class_gr_mesh_i_b_8151cb6061c284305d8c99c091216bdd}{
+\index{GrMeshIB@{GrMeshIB}!Unmap@{Unmap}}
+\index{Unmap@{Unmap}!GrMeshIB@{GrMeshIB}}
+\subsubsection[{Unmap}]{\setlength{\rightskip}{0pt plus 5cm}void GrMeshIB::Unmap ()}}
+\label{class_gr_mesh_i_b_8151cb6061c284305d8c99c091216bdd}
+
+
+
+
+Definition at line 99 of file GrMeshIB.cpp.\hypertarget{class_gr_mesh_i_b_86bca7ecd874edc1a9dff554efbbec28}{
+\index{GrMeshIB@{GrMeshIB}!Update@{Update}}
+\index{Update@{Update}!GrMeshIB@{GrMeshIB}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void GrMeshIB::Update (unsigned int {\em start}, \/  unsigned short $\ast$ {\em source}, \/  unsigned int {\em count})}}
+\label{class_gr_mesh_i_b_86bca7ecd874edc1a9dff554efbbec28}
+
+
+
+
+Definition at line 114 of file GrMeshIB.cpp.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_gr_mesh_i_b_5793b340a735f6ef818f74e6727fcf00}{
+\index{GrMeshIB@{GrMeshIB}!kDynamic@{kDynamic}}
+\index{kDynamic@{kDynamic}!GrMeshIB@{GrMeshIB}}
+\subsubsection[{kDynamic}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int {\bf GrMeshIB::kDynamic} = 1\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_gr_mesh_i_b_5793b340a735f6ef818f74e6727fcf00}
+
+
+
+
+Definition at line 21 of file GrMeshIB.h.\hypertarget{class_gr_mesh_i_b_e4996627a2e477914d1b15e38d118885}{
+\index{GrMeshIB@{GrMeshIB}!kNoCopy@{kNoCopy}}
+\index{kNoCopy@{kNoCopy}!GrMeshIB@{GrMeshIB}}
+\subsubsection[{kNoCopy}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int {\bf GrMeshIB::kNoCopy} = 2\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_gr_mesh_i_b_e4996627a2e477914d1b15e38d118885}
+
+
+
+
+Definition at line 22 of file GrMeshIB.h.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_mesh_i_b_8h}{GrMeshIB.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_mesh_i_b_8cpp}{GrMeshIB.cpp}\end{CompactItemize}

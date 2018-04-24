@@ -1,0 +1,117 @@
+\hypertarget{class_th_pipe}{
+\section{ThPipe Class Reference}
+\label{class_th_pipe}\index{ThPipe@{ThPipe}}
+}
+{\tt \#include $<$ThPipe.h$>$}
+
+Inheritance diagram for ThPipe::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_th_pipe}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+virtual \hyperlink{class_th_pipe_e1d8c4c4e5a7cf49e7f9ddc2cc2e3d7c}{$\sim$ThPipe} ()=0
+\item 
+virtual unsigned int \hyperlink{class_th_pipe_d2327f51f3cda813c426e9291b706edc}{GetRegionSize} () const =0
+\item 
+virtual void $\ast$ \hyperlink{class_th_pipe_1a4ac6e97ef560473d9a400b744c5ece}{GetWriteRegion} (bool wait=true)=0
+\item 
+virtual const void $\ast$ \hyperlink{class_th_pipe_543d5b9358cb2c06517f78d8a6d8ad17}{GetReadRegion} (bool wait=true)=0
+\item 
+virtual void $\ast$ \hyperlink{class_th_pipe_09ce5149941b4e2aa33c8b1c07ea252b}{NextWriteRegion} (bool wait=true)=0
+\item 
+virtual const void $\ast$ \hyperlink{class_th_pipe_3b31426377c575c926d8c0973213b151}{NextReadRegion} (bool wait=true)=0
+\item 
+virtual const \hyperlink{class_th_signal}{ThSignal} \& \hyperlink{class_th_pipe_32dfa60adbe180b619ee5f99826ef39b}{GetReadSignal} () const =0
+\item 
+virtual const \hyperlink{class_th_signal}{ThSignal} \& \hyperlink{class_th_pipe_ec482a45f880a2c701c13356ffa81f52}{GetWriteSignal} () const =0
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 19 of file ThPipe.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_th_pipe_e1d8c4c4e5a7cf49e7f9ddc2cc2e3d7c}{
+\index{ThPipe@{ThPipe}!$\sim$ThPipe@{$\sim$ThPipe}}
+\index{$\sim$ThPipe@{$\sim$ThPipe}!ThPipe@{ThPipe}}
+\subsubsection[{$\sim$ThPipe}]{\setlength{\rightskip}{0pt plus 5cm}virtual ThPipe::$\sim$ThPipe ()\hspace{0.3cm}{\tt  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_th_pipe_e1d8c4c4e5a7cf49e7f9ddc2cc2e3d7c}
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_th_pipe_543d5b9358cb2c06517f78d8a6d8ad17}{
+\index{ThPipe@{ThPipe}!GetReadRegion@{GetReadRegion}}
+\index{GetReadRegion@{GetReadRegion}!ThPipe@{ThPipe}}
+\subsubsection[{GetReadRegion}]{\setlength{\rightskip}{0pt plus 5cm}virtual const void$\ast$ ThPipe::GetReadRegion (bool {\em wait} = {\tt true})\hspace{0.3cm}{\tt  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_th_pipe_543d5b9358cb2c06517f78d8a6d8ad17}
+
+
+
+
+Implemented in \hyperlink{class_th_ring_buffer_9a183e067d41605a1c376a84f4dbf4b2}{ThRingBuffer}.\hypertarget{class_th_pipe_32dfa60adbe180b619ee5f99826ef39b}{
+\index{ThPipe@{ThPipe}!GetReadSignal@{GetReadSignal}}
+\index{GetReadSignal@{GetReadSignal}!ThPipe@{ThPipe}}
+\subsubsection[{GetReadSignal}]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf ThSignal}\& ThPipe::GetReadSignal () const\hspace{0.3cm}{\tt  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_th_pipe_32dfa60adbe180b619ee5f99826ef39b}
+
+
+
+
+Implemented in \hyperlink{class_th_ring_buffer_97f956255ad5d7b0dad71096e7c79423}{ThRingBuffer}.\hypertarget{class_th_pipe_d2327f51f3cda813c426e9291b706edc}{
+\index{ThPipe@{ThPipe}!GetRegionSize@{GetRegionSize}}
+\index{GetRegionSize@{GetRegionSize}!ThPipe@{ThPipe}}
+\subsubsection[{GetRegionSize}]{\setlength{\rightskip}{0pt plus 5cm}virtual unsigned int ThPipe::GetRegionSize () const\hspace{0.3cm}{\tt  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_th_pipe_d2327f51f3cda813c426e9291b706edc}
+
+
+
+
+Implemented in \hyperlink{class_th_ring_buffer_15dac6f34adbef384a16fa2f184eb372}{ThRingBuffer}.\hypertarget{class_th_pipe_1a4ac6e97ef560473d9a400b744c5ece}{
+\index{ThPipe@{ThPipe}!GetWriteRegion@{GetWriteRegion}}
+\index{GetWriteRegion@{GetWriteRegion}!ThPipe@{ThPipe}}
+\subsubsection[{GetWriteRegion}]{\setlength{\rightskip}{0pt plus 5cm}virtual void$\ast$ ThPipe::GetWriteRegion (bool {\em wait} = {\tt true})\hspace{0.3cm}{\tt  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_th_pipe_1a4ac6e97ef560473d9a400b744c5ece}
+
+
+
+
+Implemented in \hyperlink{class_th_ring_buffer_6a921c362dd2cfe8173f065c884f34ac}{ThRingBuffer}.\hypertarget{class_th_pipe_ec482a45f880a2c701c13356ffa81f52}{
+\index{ThPipe@{ThPipe}!GetWriteSignal@{GetWriteSignal}}
+\index{GetWriteSignal@{GetWriteSignal}!ThPipe@{ThPipe}}
+\subsubsection[{GetWriteSignal}]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf ThSignal}\& ThPipe::GetWriteSignal () const\hspace{0.3cm}{\tt  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_th_pipe_ec482a45f880a2c701c13356ffa81f52}
+
+
+
+
+Implemented in \hyperlink{class_th_ring_buffer_bc8836a944eb477e1f3e7b505d589ac9}{ThRingBuffer}.\hypertarget{class_th_pipe_3b31426377c575c926d8c0973213b151}{
+\index{ThPipe@{ThPipe}!NextReadRegion@{NextReadRegion}}
+\index{NextReadRegion@{NextReadRegion}!ThPipe@{ThPipe}}
+\subsubsection[{NextReadRegion}]{\setlength{\rightskip}{0pt plus 5cm}virtual const void$\ast$ ThPipe::NextReadRegion (bool {\em wait} = {\tt true})\hspace{0.3cm}{\tt  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_th_pipe_3b31426377c575c926d8c0973213b151}
+
+
+
+
+Implemented in \hyperlink{class_th_ring_buffer_fb5a911ce0ebb981ce95557101b84a83}{ThRingBuffer}.\hypertarget{class_th_pipe_09ce5149941b4e2aa33c8b1c07ea252b}{
+\index{ThPipe@{ThPipe}!NextWriteRegion@{NextWriteRegion}}
+\index{NextWriteRegion@{NextWriteRegion}!ThPipe@{ThPipe}}
+\subsubsection[{NextWriteRegion}]{\setlength{\rightskip}{0pt plus 5cm}virtual void$\ast$ ThPipe::NextWriteRegion (bool {\em wait} = {\tt true})\hspace{0.3cm}{\tt  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_th_pipe_09ce5149941b4e2aa33c8b1c07ea252b}
+
+
+
+
+Implemented in \hyperlink{class_th_ring_buffer_9a74853f2ccbc0d1b441efec8bb553d3}{ThRingBuffer}.
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_th_pipe_8h}{ThPipe.h}\end{CompactItemize}

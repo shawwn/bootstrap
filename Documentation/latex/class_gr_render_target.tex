@@ -1,0 +1,357 @@
+\hypertarget{class_gr_render_target}{
+\section{GrRenderTarget Class Reference}
+\label{class_gr_render_target}\index{GrRenderTarget@{GrRenderTarget}}
+}
+{\tt \#include $<$GrRenderTarget.h$>$}
+
+Inheritance diagram for GrRenderTarget::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_gr_render_target}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+enum \hyperlink{class_gr_render_target_c5acf92ad0c41edbb66e9fc4b8a559a2}{ECOLORFORMAT} \{ \par
+\hyperlink{class_gr_render_target_c5acf92ad0c41edbb66e9fc4b8a559a23753cf7ddd3e0fd090366eef6075e39d}{ECF\_\-RGB24}, 
+\hyperlink{class_gr_render_target_c5acf92ad0c41edbb66e9fc4b8a559a2322aaf09acd20c017985b80a0e5b1a55}{ECF\_\-RGBA32}, 
+\hyperlink{class_gr_render_target_c5acf92ad0c41edbb66e9fc4b8a559a2c9e360099b9539bfb56694c501d08cce}{ECF\_\-RGB48F}, 
+\hyperlink{class_gr_render_target_c5acf92ad0c41edbb66e9fc4b8a559a23dad6189c4470b6bb102c2ac04f7ae60}{ECF\_\-RGBA64F}, 
+\par
+\hyperlink{class_gr_render_target_c5acf92ad0c41edbb66e9fc4b8a559a2a4b9e6669bb363a0a41092b21dec7c06}{ECF\_\-NONE}
+ \}
+\item 
+enum \hyperlink{class_gr_render_target_6331f1f98584176a8d0e3c6c4795f07a}{EDEPTHFORMAT} \{ \hyperlink{class_gr_render_target_6331f1f98584176a8d0e3c6c4795f07a4b47d4a30a8ae3ddc30ccbaf9d6d02d5}{EDF\_\-DEPTH}, 
+\hyperlink{class_gr_render_target_6331f1f98584176a8d0e3c6c4795f07a6d338feaeca1aeb33d5baaa5856df237}{EDF\_\-DEPTHSTENCIL}
+ \}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_render_target_619b983e8beea92949165f6c906461d6}{GrRenderTarget} (unsigned int \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, unsigned int \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height})
+\item 
+\hyperlink{class_gr_render_target_a2483dfaba49b2e626ea87fe05d24b38}{GrRenderTarget} (\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_texture_base}{GrTextureBase} $>$ $\ast$colorTargets, \hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_renderbuffer}{GrRenderbuffer} $>$ depthBuffer, unsigned int colorTargetCount)
+\item 
+\hyperlink{class_gr_render_target_7025c93b7eedd75c73ef5956b3a815d0}{GrRenderTarget} (\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_texture_base}{GrTextureBase} $>$ $\ast$colorTargets, \hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_texture_base}{GrTextureBase} $>$ depthTexture, unsigned int colorTargetCount)
+\item 
+\hyperlink{class_gr_render_target_bc4280eaa1d58bed60250fcbfda56557}{GrRenderTarget} (\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_renderbuffer}{GrRenderbuffer} $>$ colorBuffer, \hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_renderbuffer}{GrRenderbuffer} $>$ depthBuffer)
+\item 
+\hyperlink{class_gr_render_target_734fdac5e2128109017b6d3d7abac6b5}{$\sim$GrRenderTarget} ()
+\item 
+unsigned int \hyperlink{class_gr_render_target_fd26d9d80f5311ee65fac1b2625d4fb0}{GetWidth} () const 
+\item 
+unsigned int \hyperlink{class_gr_render_target_e84bb1b12eaed6f272a8baeaf2fa2336}{GetHeight} () const 
+\item 
+bool \hyperlink{class_gr_render_target_1cc14b5ad9acc58a67d462844e8d65bc}{IsValid} () const 
+\item 
+bool \hyperlink{class_gr_render_target_63695c51fb0c525236ec9a749610f181}{IsCubeTarget} () const 
+\item 
+bool \hyperlink{class_gr_render_target_6466a4d09cef08dd33189714e271b53d}{HasColorTex} ()
+\item 
+unsigned int \hyperlink{class_gr_render_target_93fe155f4877c4361c5eb97f54826583}{GetColorTexCount} () const 
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_texture_base}{GrTextureBase} $>$ \hyperlink{class_gr_render_target_880ba8f3d25b4217fcc324a985adc5ce}{GetColorTex} (unsigned int idx) const 
+\item 
+bool \hyperlink{class_gr_render_target_7948316d0f8d2a1712f6e031ef1a4d59}{HasDepthTex} ()
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_texture_base}{GrTextureBase} $>$ \hyperlink{class_gr_render_target_90b86b630acf5808df5402faf13cbcff}{GetDepthTex} () const 
+\item 
+void \hyperlink{class_gr_render_target_f4eee673395d2d5bacf6d54cdbf709fb}{SetViewportRect} (const \hyperlink{class_u_rect}{URect} \&viewportRect)
+\item 
+void \hyperlink{class_gr_render_target_26ee9e8fef318184bbf038f4b718f746}{Bind} (bool setVP=true)
+\item 
+void \hyperlink{class_gr_render_target_fbe2a4a66992e0a5b969b5e464bd120d}{SetActiveFace} (\hyperlink{class_gr_texture_cube_49c6f83c73520edfce04f4eb5dcfe6a0}{GrTextureCube::ECUBEFACE} \hyperlink{glext_8h_676ca580c460c0154eb58200433d2a9e}{face})
+\item 
+void \hyperlink{class_gr_render_target_5eaf686fa2fe311e716c4e3b8e97f5ed}{PreContextReset} ()
+\item 
+void \hyperlink{class_gr_render_target_9f94b394daefa8da7daeb3e089ca61ee}{PostContextReset} ()
+\end{CompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+static \hyperlink{class_gr_render_target}{GrRenderTarget} $\ast$ \hyperlink{class_gr_render_target_0bf3b1509691c2567d9b0f01a29f42d4}{GetCurrentRT} ()
+\item 
+static void \hyperlink{class_gr_render_target_8b9ab6e93c0037d2d594dbd0249e56cf}{ResizePrimaryRT} (unsigned int \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, unsigned int \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height})
+\end{CompactItemize}
+\subsection*{Static Public Attributes}
+\begin{CompactItemize}
+\item 
+static const unsigned int \hyperlink{class_gr_render_target_63e0c545fefc37935cd22a93e6388bda}{kMaxRTs} = 4
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 26 of file GrRenderTarget.h.
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_gr_render_target_c5acf92ad0c41edbb66e9fc4b8a559a2}{
+\index{GrRenderTarget@{GrRenderTarget}!ECOLORFORMAT@{ECOLORFORMAT}}
+\index{ECOLORFORMAT@{ECOLORFORMAT}!GrRenderTarget@{GrRenderTarget}}
+\subsubsection[{ECOLORFORMAT}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GrRenderTarget::ECOLORFORMAT}}}
+\label{class_gr_render_target_c5acf92ad0c41edbb66e9fc4b8a559a2}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{ECF\_\-RGB24@{ECF\_\-RGB24}!GrRenderTarget@{GrRenderTarget}}\index{GrRenderTarget@{GrRenderTarget}!ECF\_\-RGB24@{ECF\_\-RGB24}}\item[{\em 
+\hypertarget{class_gr_render_target_c5acf92ad0c41edbb66e9fc4b8a559a23753cf7ddd3e0fd090366eef6075e39d}{
+ECF\_\-RGB24}
+\label{class_gr_render_target_c5acf92ad0c41edbb66e9fc4b8a559a23753cf7ddd3e0fd090366eef6075e39d}
+}]\index{ECF\_\-RGBA32@{ECF\_\-RGBA32}!GrRenderTarget@{GrRenderTarget}}\index{GrRenderTarget@{GrRenderTarget}!ECF\_\-RGBA32@{ECF\_\-RGBA32}}\item[{\em 
+\hypertarget{class_gr_render_target_c5acf92ad0c41edbb66e9fc4b8a559a2322aaf09acd20c017985b80a0e5b1a55}{
+ECF\_\-RGBA32}
+\label{class_gr_render_target_c5acf92ad0c41edbb66e9fc4b8a559a2322aaf09acd20c017985b80a0e5b1a55}
+}]\index{ECF\_\-RGB48F@{ECF\_\-RGB48F}!GrRenderTarget@{GrRenderTarget}}\index{GrRenderTarget@{GrRenderTarget}!ECF\_\-RGB48F@{ECF\_\-RGB48F}}\item[{\em 
+\hypertarget{class_gr_render_target_c5acf92ad0c41edbb66e9fc4b8a559a2c9e360099b9539bfb56694c501d08cce}{
+ECF\_\-RGB48F}
+\label{class_gr_render_target_c5acf92ad0c41edbb66e9fc4b8a559a2c9e360099b9539bfb56694c501d08cce}
+}]\index{ECF\_\-RGBA64F@{ECF\_\-RGBA64F}!GrRenderTarget@{GrRenderTarget}}\index{GrRenderTarget@{GrRenderTarget}!ECF\_\-RGBA64F@{ECF\_\-RGBA64F}}\item[{\em 
+\hypertarget{class_gr_render_target_c5acf92ad0c41edbb66e9fc4b8a559a23dad6189c4470b6bb102c2ac04f7ae60}{
+ECF\_\-RGBA64F}
+\label{class_gr_render_target_c5acf92ad0c41edbb66e9fc4b8a559a23dad6189c4470b6bb102c2ac04f7ae60}
+}]\index{ECF\_\-NONE@{ECF\_\-NONE}!GrRenderTarget@{GrRenderTarget}}\index{GrRenderTarget@{GrRenderTarget}!ECF\_\-NONE@{ECF\_\-NONE}}\item[{\em 
+\hypertarget{class_gr_render_target_c5acf92ad0c41edbb66e9fc4b8a559a2a4b9e6669bb363a0a41092b21dec7c06}{
+ECF\_\-NONE}
+\label{class_gr_render_target_c5acf92ad0c41edbb66e9fc4b8a559a2a4b9e6669bb363a0a41092b21dec7c06}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 31 of file GrRenderTarget.h.\hypertarget{class_gr_render_target_6331f1f98584176a8d0e3c6c4795f07a}{
+\index{GrRenderTarget@{GrRenderTarget}!EDEPTHFORMAT@{EDEPTHFORMAT}}
+\index{EDEPTHFORMAT@{EDEPTHFORMAT}!GrRenderTarget@{GrRenderTarget}}
+\subsubsection[{EDEPTHFORMAT}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GrRenderTarget::EDEPTHFORMAT}}}
+\label{class_gr_render_target_6331f1f98584176a8d0e3c6c4795f07a}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{EDF\_\-DEPTH@{EDF\_\-DEPTH}!GrRenderTarget@{GrRenderTarget}}\index{GrRenderTarget@{GrRenderTarget}!EDF\_\-DEPTH@{EDF\_\-DEPTH}}\item[{\em 
+\hypertarget{class_gr_render_target_6331f1f98584176a8d0e3c6c4795f07a4b47d4a30a8ae3ddc30ccbaf9d6d02d5}{
+EDF\_\-DEPTH}
+\label{class_gr_render_target_6331f1f98584176a8d0e3c6c4795f07a4b47d4a30a8ae3ddc30ccbaf9d6d02d5}
+}]\index{EDF\_\-DEPTHSTENCIL@{EDF\_\-DEPTHSTENCIL}!GrRenderTarget@{GrRenderTarget}}\index{GrRenderTarget@{GrRenderTarget}!EDF\_\-DEPTHSTENCIL@{EDF\_\-DEPTHSTENCIL}}\item[{\em 
+\hypertarget{class_gr_render_target_6331f1f98584176a8d0e3c6c4795f07a6d338feaeca1aeb33d5baaa5856df237}{
+EDF\_\-DEPTHSTENCIL}
+\label{class_gr_render_target_6331f1f98584176a8d0e3c6c4795f07a6d338feaeca1aeb33d5baaa5856df237}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 40 of file GrRenderTarget.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_render_target_619b983e8beea92949165f6c906461d6}{
+\index{GrRenderTarget@{GrRenderTarget}!GrRenderTarget@{GrRenderTarget}}
+\index{GrRenderTarget@{GrRenderTarget}!GrRenderTarget@{GrRenderTarget}}
+\subsubsection[{GrRenderTarget}]{\setlength{\rightskip}{0pt plus 5cm}GrRenderTarget::GrRenderTarget (unsigned int {\em width}, \/  unsigned int {\em height})}}
+\label{class_gr_render_target_619b983e8beea92949165f6c906461d6}
+
+
+
+
+Definition at line 213 of file grrendertarget.cpp.\hypertarget{class_gr_render_target_a2483dfaba49b2e626ea87fe05d24b38}{
+\index{GrRenderTarget@{GrRenderTarget}!GrRenderTarget@{GrRenderTarget}}
+\index{GrRenderTarget@{GrRenderTarget}!GrRenderTarget@{GrRenderTarget}}
+\subsubsection[{GrRenderTarget}]{\setlength{\rightskip}{0pt plus 5cm}GrRenderTarget::GrRenderTarget ({\bf URef}$<$ {\bf GrTextureBase} $>$ $\ast$ {\em colorTargets}, \/  {\bf URef}$<$ {\bf GrRenderbuffer} $>$ {\em depthBuffer}, \/  unsigned int {\em colorTargetCount})}}
+\label{class_gr_render_target_a2483dfaba49b2e626ea87fe05d24b38}
+
+
+
+
+Definition at line 235 of file grrendertarget.cpp.\hypertarget{class_gr_render_target_7025c93b7eedd75c73ef5956b3a815d0}{
+\index{GrRenderTarget@{GrRenderTarget}!GrRenderTarget@{GrRenderTarget}}
+\index{GrRenderTarget@{GrRenderTarget}!GrRenderTarget@{GrRenderTarget}}
+\subsubsection[{GrRenderTarget}]{\setlength{\rightskip}{0pt plus 5cm}GrRenderTarget::GrRenderTarget ({\bf URef}$<$ {\bf GrTextureBase} $>$ $\ast$ {\em colorTargets}, \/  {\bf URef}$<$ {\bf GrTextureBase} $>$ {\em depthTexture}, \/  unsigned int {\em colorTargetCount})}}
+\label{class_gr_render_target_7025c93b7eedd75c73ef5956b3a815d0}
+
+
+
+
+Definition at line 294 of file grrendertarget.cpp.\hypertarget{class_gr_render_target_bc4280eaa1d58bed60250fcbfda56557}{
+\index{GrRenderTarget@{GrRenderTarget}!GrRenderTarget@{GrRenderTarget}}
+\index{GrRenderTarget@{GrRenderTarget}!GrRenderTarget@{GrRenderTarget}}
+\subsubsection[{GrRenderTarget}]{\setlength{\rightskip}{0pt plus 5cm}GrRenderTarget::GrRenderTarget ({\bf URef}$<$ {\bf GrRenderbuffer} $>$ {\em colorBuffer}, \/  {\bf URef}$<$ {\bf GrRenderbuffer} $>$ {\em depthBuffer})}}
+\label{class_gr_render_target_bc4280eaa1d58bed60250fcbfda56557}
+
+
+
+
+Definition at line 347 of file grrendertarget.cpp.\hypertarget{class_gr_render_target_734fdac5e2128109017b6d3d7abac6b5}{
+\index{GrRenderTarget@{GrRenderTarget}!$\sim$GrRenderTarget@{$\sim$GrRenderTarget}}
+\index{$\sim$GrRenderTarget@{$\sim$GrRenderTarget}!GrRenderTarget@{GrRenderTarget}}
+\subsubsection[{$\sim$GrRenderTarget}]{\setlength{\rightskip}{0pt plus 5cm}GrRenderTarget::$\sim$GrRenderTarget ()}}
+\label{class_gr_render_target_734fdac5e2128109017b6d3d7abac6b5}
+
+
+
+
+Definition at line 403 of file grrendertarget.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_render_target_26ee9e8fef318184bbf038f4b718f746}{
+\index{GrRenderTarget@{GrRenderTarget}!Bind@{Bind}}
+\index{Bind@{Bind}!GrRenderTarget@{GrRenderTarget}}
+\subsubsection[{Bind}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderTarget::Bind (bool {\em setVP} = {\tt true})}}
+\label{class_gr_render_target_26ee9e8fef318184bbf038f4b718f746}
+
+
+
+
+Definition at line 506 of file grrendertarget.cpp.\hypertarget{class_gr_render_target_880ba8f3d25b4217fcc324a985adc5ce}{
+\index{GrRenderTarget@{GrRenderTarget}!GetColorTex@{GetColorTex}}
+\index{GetColorTex@{GetColorTex}!GrRenderTarget@{GrRenderTarget}}
+\subsubsection[{GetColorTex}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrTextureBase} $>$ GrRenderTarget::GetColorTex (unsigned int {\em idx}) const}}
+\label{class_gr_render_target_880ba8f3d25b4217fcc324a985adc5ce}
+
+
+
+
+Definition at line 447 of file grrendertarget.cpp.\hypertarget{class_gr_render_target_93fe155f4877c4361c5eb97f54826583}{
+\index{GrRenderTarget@{GrRenderTarget}!GetColorTexCount@{GetColorTexCount}}
+\index{GetColorTexCount@{GetColorTexCount}!GrRenderTarget@{GrRenderTarget}}
+\subsubsection[{GetColorTexCount}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrRenderTarget::GetColorTexCount () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_render_target_93fe155f4877c4361c5eb97f54826583}
+
+
+
+
+Definition at line 70 of file GrRenderTarget.h.\hypertarget{class_gr_render_target_0bf3b1509691c2567d9b0f01a29f42d4}{
+\index{GrRenderTarget@{GrRenderTarget}!GetCurrentRT@{GetCurrentRT}}
+\index{GetCurrentRT@{GetCurrentRT}!GrRenderTarget@{GrRenderTarget}}
+\subsubsection[{GetCurrentRT}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrRenderTarget} $\ast$ GrRenderTarget::GetCurrentRT ()\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_gr_render_target_0bf3b1509691c2567d9b0f01a29f42d4}
+
+
+
+
+Definition at line 430 of file grrendertarget.cpp.\hypertarget{class_gr_render_target_90b86b630acf5808df5402faf13cbcff}{
+\index{GrRenderTarget@{GrRenderTarget}!GetDepthTex@{GetDepthTex}}
+\index{GetDepthTex@{GetDepthTex}!GrRenderTarget@{GrRenderTarget}}
+\subsubsection[{GetDepthTex}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrTextureBase} $>$ GrRenderTarget::GetDepthTex () const}}
+\label{class_gr_render_target_90b86b630acf5808df5402faf13cbcff}
+
+
+
+
+Definition at line 482 of file grrendertarget.cpp.\hypertarget{class_gr_render_target_e84bb1b12eaed6f272a8baeaf2fa2336}{
+\index{GrRenderTarget@{GrRenderTarget}!GetHeight@{GetHeight}}
+\index{GetHeight@{GetHeight}!GrRenderTarget@{GrRenderTarget}}
+\subsubsection[{GetHeight}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrRenderTarget::GetHeight () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_render_target_e84bb1b12eaed6f272a8baeaf2fa2336}
+
+
+
+
+Definition at line 64 of file GrRenderTarget.h.\hypertarget{class_gr_render_target_fd26d9d80f5311ee65fac1b2625d4fb0}{
+\index{GrRenderTarget@{GrRenderTarget}!GetWidth@{GetWidth}}
+\index{GetWidth@{GetWidth}!GrRenderTarget@{GrRenderTarget}}
+\subsubsection[{GetWidth}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrRenderTarget::GetWidth () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_render_target_fd26d9d80f5311ee65fac1b2625d4fb0}
+
+
+
+
+Definition at line 63 of file GrRenderTarget.h.\hypertarget{class_gr_render_target_6466a4d09cef08dd33189714e271b53d}{
+\index{GrRenderTarget@{GrRenderTarget}!HasColorTex@{HasColorTex}}
+\index{HasColorTex@{HasColorTex}!GrRenderTarget@{GrRenderTarget}}
+\subsubsection[{HasColorTex}]{\setlength{\rightskip}{0pt plus 5cm}bool GrRenderTarget::HasColorTex ()}}
+\label{class_gr_render_target_6466a4d09cef08dd33189714e271b53d}
+
+
+\hypertarget{class_gr_render_target_7948316d0f8d2a1712f6e031ef1a4d59}{
+\index{GrRenderTarget@{GrRenderTarget}!HasDepthTex@{HasDepthTex}}
+\index{HasDepthTex@{HasDepthTex}!GrRenderTarget@{GrRenderTarget}}
+\subsubsection[{HasDepthTex}]{\setlength{\rightskip}{0pt plus 5cm}bool GrRenderTarget::HasDepthTex ()}}
+\label{class_gr_render_target_7948316d0f8d2a1712f6e031ef1a4d59}
+
+
+
+
+Definition at line 475 of file grrendertarget.cpp.\hypertarget{class_gr_render_target_63695c51fb0c525236ec9a749610f181}{
+\index{GrRenderTarget@{GrRenderTarget}!IsCubeTarget@{IsCubeTarget}}
+\index{IsCubeTarget@{IsCubeTarget}!GrRenderTarget@{GrRenderTarget}}
+\subsubsection[{IsCubeTarget}]{\setlength{\rightskip}{0pt plus 5cm}bool GrRenderTarget::IsCubeTarget () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_render_target_63695c51fb0c525236ec9a749610f181}
+
+
+
+
+Definition at line 67 of file GrRenderTarget.h.\hypertarget{class_gr_render_target_1cc14b5ad9acc58a67d462844e8d65bc}{
+\index{GrRenderTarget@{GrRenderTarget}!IsValid@{IsValid}}
+\index{IsValid@{IsValid}!GrRenderTarget@{GrRenderTarget}}
+\subsubsection[{IsValid}]{\setlength{\rightskip}{0pt plus 5cm}bool GrRenderTarget::IsValid () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_render_target_1cc14b5ad9acc58a67d462844e8d65bc}
+
+
+
+
+Definition at line 66 of file GrRenderTarget.h.\hypertarget{class_gr_render_target_9f94b394daefa8da7daeb3e089ca61ee}{
+\index{GrRenderTarget@{GrRenderTarget}!PostContextReset@{PostContextReset}}
+\index{PostContextReset@{PostContextReset}!GrRenderTarget@{GrRenderTarget}}
+\subsubsection[{PostContextReset}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderTarget::PostContextReset ()}}
+\label{class_gr_render_target_9f94b394daefa8da7daeb3e089ca61ee}
+
+
+
+
+Definition at line 543 of file grrendertarget.cpp.\hypertarget{class_gr_render_target_5eaf686fa2fe311e716c4e3b8e97f5ed}{
+\index{GrRenderTarget@{GrRenderTarget}!PreContextReset@{PreContextReset}}
+\index{PreContextReset@{PreContextReset}!GrRenderTarget@{GrRenderTarget}}
+\subsubsection[{PreContextReset}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderTarget::PreContextReset ()}}
+\label{class_gr_render_target_5eaf686fa2fe311e716c4e3b8e97f5ed}
+
+
+
+
+Definition at line 535 of file grrendertarget.cpp.\hypertarget{class_gr_render_target_8b9ab6e93c0037d2d594dbd0249e56cf}{
+\index{GrRenderTarget@{GrRenderTarget}!ResizePrimaryRT@{ResizePrimaryRT}}
+\index{ResizePrimaryRT@{ResizePrimaryRT}!GrRenderTarget@{GrRenderTarget}}
+\subsubsection[{ResizePrimaryRT}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderTarget::ResizePrimaryRT (unsigned int {\em width}, \/  unsigned int {\em height})\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_gr_render_target_8b9ab6e93c0037d2d594dbd0249e56cf}
+
+
+
+
+Definition at line 437 of file grrendertarget.cpp.\hypertarget{class_gr_render_target_fbe2a4a66992e0a5b969b5e464bd120d}{
+\index{GrRenderTarget@{GrRenderTarget}!SetActiveFace@{SetActiveFace}}
+\index{SetActiveFace@{SetActiveFace}!GrRenderTarget@{GrRenderTarget}}
+\subsubsection[{SetActiveFace}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderTarget::SetActiveFace ({\bf GrTextureCube::ECUBEFACE} {\em face})}}
+\label{class_gr_render_target_fbe2a4a66992e0a5b969b5e464bd120d}
+
+
+
+
+Definition at line 515 of file grrendertarget.cpp.\hypertarget{class_gr_render_target_f4eee673395d2d5bacf6d54cdbf709fb}{
+\index{GrRenderTarget@{GrRenderTarget}!SetViewportRect@{SetViewportRect}}
+\index{SetViewportRect@{SetViewportRect}!GrRenderTarget@{GrRenderTarget}}
+\subsubsection[{SetViewportRect}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderTarget::SetViewportRect (const {\bf URect} \& {\em viewportRect})}}
+\label{class_gr_render_target_f4eee673395d2d5bacf6d54cdbf709fb}
+
+
+
+
+Definition at line 495 of file grrendertarget.cpp.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_gr_render_target_63e0c545fefc37935cd22a93e6388bda}{
+\index{GrRenderTarget@{GrRenderTarget}!kMaxRTs@{kMaxRTs}}
+\index{kMaxRTs@{kMaxRTs}!GrRenderTarget@{GrRenderTarget}}
+\subsubsection[{kMaxRTs}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int {\bf GrRenderTarget::kMaxRTs} = 4\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_gr_render_target_63e0c545fefc37935cd22a93e6388bda}
+
+
+
+
+Definition at line 29 of file GrRenderTarget.h.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_render_target_8h}{GrRenderTarget.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{grrendertarget_8cpp}{grrendertarget.cpp}\end{CompactItemize}

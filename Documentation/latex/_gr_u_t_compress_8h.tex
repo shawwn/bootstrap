@@ -1,0 +1,88 @@
+\hypertarget{_gr_u_t_compress_8h}{
+\section{C:/Bootstrap/ProjectBX/Engine/Graphics/GrUTCompress.h File Reference}
+\label{_gr_u_t_compress_8h}\index{C:/Bootstrap/ProjectBX/Engine/Graphics/GrUTCompress.h@{C:/Bootstrap/ProjectBX/Engine/Graphics/GrUTCompress.h}}
+}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+void \hyperlink{_gr_u_t_compress_8h_98ef4e40a287ce4df9b8667da6e358d0}{GrUTInitCompressor} ()
+\item 
+void \hyperlink{_gr_u_t_compress_8h_bee5db5b42213cb69584c47cbf9eeec2}{GrUTCompressBGRX} (\hyperlink{class_u_huffman}{UHuffman} $\ast$encoder, const unsigned char $\ast$bgrx, unsigned char chop)
+\item 
+void \hyperlink{_gr_u_t_compress_8h_2ea5fdafb94e6cac88ddc851b171bc05}{GrUTCompressA} (\hyperlink{class_u_huffman}{UHuffman} $\ast$encoder, const unsigned char $\ast$\hyperlink{glext__bak_8h_3309789fc188587d666cda5ece79cf82}{a}, unsigned int bytesPerPel, unsigned char chop)
+\item 
+void \hyperlink{_gr_u_t_compress_8h_7399a317047a570d67f4339531719e01}{GrUTDecompressBGRX} (unsigned char $\ast$bgrx, \hyperlink{class_u_huffman}{UHuffman} $\ast$decoder)
+\item 
+void \hyperlink{_gr_u_t_compress_8h_3b9ce4279465ebba9c0c804101bb4e57}{GrUTDecompressA} (unsigned char $\ast$\hyperlink{glext__bak_8h_3309789fc188587d666cda5ece79cf82}{a}, unsigned int bytesPerPel, \hyperlink{class_u_huffman}{UHuffman} $\ast$decoder)
+\item 
+void \hyperlink{_gr_u_t_compress_8h_760d2e9a5fe350286da1a9a3684fc393}{GrUTCompressDXT5} (unsigned char $\ast$destSurface, unsigned int destStride, unsigned char $\ast$bgra)
+\item 
+void \hyperlink{_gr_u_t_compress_8h_f077c1543c461128e4bc0c2a212bb3dc}{GrUTCompressDXT5XY} (unsigned char $\ast$destSurface, unsigned int destStride, unsigned char $\ast$xy)
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_gr_u_t_compress_8h_2ea5fdafb94e6cac88ddc851b171bc05}{
+\index{GrUTCompress.h@{GrUTCompress.h}!GrUTCompressA@{GrUTCompressA}}
+\index{GrUTCompressA@{GrUTCompressA}!GrUTCompress.h@{GrUTCompress.h}}
+\subsubsection[{GrUTCompressA}]{\setlength{\rightskip}{0pt plus 5cm}void GrUTCompressA ({\bf UHuffman} $\ast$ {\em encoder}, \/  const unsigned char $\ast$ {\em a}, \/  unsigned int {\em bytesPerPel}, \/  unsigned char {\em chop})}}
+\label{_gr_u_t_compress_8h_2ea5fdafb94e6cac88ddc851b171bc05}
+
+
+
+
+Definition at line 234 of file GrUTCompress.cpp.\hypertarget{_gr_u_t_compress_8h_bee5db5b42213cb69584c47cbf9eeec2}{
+\index{GrUTCompress.h@{GrUTCompress.h}!GrUTCompressBGRX@{GrUTCompressBGRX}}
+\index{GrUTCompressBGRX@{GrUTCompressBGRX}!GrUTCompress.h@{GrUTCompress.h}}
+\subsubsection[{GrUTCompressBGRX}]{\setlength{\rightskip}{0pt plus 5cm}void GrUTCompressBGRX ({\bf UHuffman} $\ast$ {\em encoder}, \/  const unsigned char $\ast$ {\em bgrx}, \/  unsigned char {\em chop})}}
+\label{_gr_u_t_compress_8h_bee5db5b42213cb69584c47cbf9eeec2}
+
+
+
+
+Definition at line 201 of file GrUTCompress.cpp.\hypertarget{_gr_u_t_compress_8h_760d2e9a5fe350286da1a9a3684fc393}{
+\index{GrUTCompress.h@{GrUTCompress.h}!GrUTCompressDXT5@{GrUTCompressDXT5}}
+\index{GrUTCompressDXT5@{GrUTCompressDXT5}!GrUTCompress.h@{GrUTCompress.h}}
+\subsubsection[{GrUTCompressDXT5}]{\setlength{\rightskip}{0pt plus 5cm}void GrUTCompressDXT5 (unsigned char $\ast$ {\em destSurface}, \/  unsigned int {\em destStride}, \/  unsigned char $\ast$ {\em bgra})}}
+\label{_gr_u_t_compress_8h_760d2e9a5fe350286da1a9a3684fc393}
+
+
+
+
+Definition at line 305 of file GrUTCompress.cpp.\hypertarget{_gr_u_t_compress_8h_f077c1543c461128e4bc0c2a212bb3dc}{
+\index{GrUTCompress.h@{GrUTCompress.h}!GrUTCompressDXT5XY@{GrUTCompressDXT5XY}}
+\index{GrUTCompressDXT5XY@{GrUTCompressDXT5XY}!GrUTCompress.h@{GrUTCompress.h}}
+\subsubsection[{GrUTCompressDXT5XY}]{\setlength{\rightskip}{0pt plus 5cm}void GrUTCompressDXT5XY (unsigned char $\ast$ {\em destSurface}, \/  unsigned int {\em destStride}, \/  unsigned char $\ast$ {\em xy})}}
+\label{_gr_u_t_compress_8h_f077c1543c461128e4bc0c2a212bb3dc}
+
+
+
+
+Definition at line 313 of file GrUTCompress.cpp.\hypertarget{_gr_u_t_compress_8h_3b9ce4279465ebba9c0c804101bb4e57}{
+\index{GrUTCompress.h@{GrUTCompress.h}!GrUTDecompressA@{GrUTDecompressA}}
+\index{GrUTDecompressA@{GrUTDecompressA}!GrUTCompress.h@{GrUTCompress.h}}
+\subsubsection[{GrUTDecompressA}]{\setlength{\rightskip}{0pt plus 5cm}void GrUTDecompressA (unsigned char $\ast$ {\em a}, \/  unsigned int {\em bytesPerPel}, \/  {\bf UHuffman} $\ast$ {\em decoder})}}
+\label{_gr_u_t_compress_8h_3b9ce4279465ebba9c0c804101bb4e57}
+
+
+
+
+Definition at line 286 of file GrUTCompress.cpp.\hypertarget{_gr_u_t_compress_8h_7399a317047a570d67f4339531719e01}{
+\index{GrUTCompress.h@{GrUTCompress.h}!GrUTDecompressBGRX@{GrUTDecompressBGRX}}
+\index{GrUTDecompressBGRX@{GrUTDecompressBGRX}!GrUTCompress.h@{GrUTCompress.h}}
+\subsubsection[{GrUTDecompressBGRX}]{\setlength{\rightskip}{0pt plus 5cm}void GrUTDecompressBGRX (unsigned char $\ast$ {\em bgrx}, \/  {\bf UHuffman} $\ast$ {\em decoder})}}
+\label{_gr_u_t_compress_8h_7399a317047a570d67f4339531719e01}
+
+
+
+
+Definition at line 253 of file GrUTCompress.cpp.\hypertarget{_gr_u_t_compress_8h_98ef4e40a287ce4df9b8667da6e358d0}{
+\index{GrUTCompress.h@{GrUTCompress.h}!GrUTInitCompressor@{GrUTInitCompressor}}
+\index{GrUTInitCompressor@{GrUTInitCompressor}!GrUTCompress.h@{GrUTCompress.h}}
+\subsubsection[{GrUTInitCompressor}]{\setlength{\rightskip}{0pt plus 5cm}void GrUTInitCompressor ()}}
+\label{_gr_u_t_compress_8h_98ef4e40a287ce4df9b8667da6e358d0}
+
+
+
+
+Definition at line 194 of file GrUTCompress.cpp.

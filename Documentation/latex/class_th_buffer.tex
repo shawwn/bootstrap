@@ -1,0 +1,125 @@
+\hypertarget{class_th_buffer}{
+\section{ThBuffer Class Reference}
+\label{class_th_buffer}\index{ThBuffer@{ThBuffer}}
+}
+{\tt \#include $<$ThBuffer.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_th_buffer_13e63db8c011ff2ae0b1299d98d24b27}{ThBuffer} (unsigned int \hyperlink{glext__bak_8h_3d1e3edfcf61ca2d831883e1afbad89e}{size}, unsigned int alignment=16)
+\item 
+\hyperlink{class_th_buffer_be72d88fcd65dc1a38f235bf62cc9389}{$\sim$ThBuffer} ()
+\item 
+unsigned int \hyperlink{class_th_buffer_1db647c615af650675ecf0a3a696036b}{GetSize} () const 
+\item 
+void $\ast$ \hyperlink{class_th_buffer_1e98d61991e2ff9dc94dcea0e1381cfd}{Acquire} (bool wait=true)
+\item 
+const void $\ast$ \hyperlink{class_th_buffer_3120cde7f42cb70fe65d91a41692f772}{Acquire} (bool wait=true) const 
+\item 
+void \hyperlink{class_th_buffer_8d1ec8f6cb1060228d414106bb334754}{Release} () const 
+\item 
+\hyperlink{class_th_signal}{ThSignal} \& \hyperlink{class_th_buffer_c2bc5bbc82b316254435801fe9687644}{GetSignal} ()
+\item 
+unsigned int \hyperlink{class_th_buffer_bc6500a64a45ea7510dd490749fa67de}{GetWriteOffset} () const 
+\item 
+void \hyperlink{class_th_buffer_606930e690108540fafbb73857434aad}{AdvanceWriteOffset} (unsigned int amount)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 19 of file ThBuffer.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_th_buffer_13e63db8c011ff2ae0b1299d98d24b27}{
+\index{ThBuffer@{ThBuffer}!ThBuffer@{ThBuffer}}
+\index{ThBuffer@{ThBuffer}!ThBuffer@{ThBuffer}}
+\subsubsection[{ThBuffer}]{\setlength{\rightskip}{0pt plus 5cm}ThBuffer::ThBuffer (unsigned int {\em size}, \/  unsigned int {\em alignment} = {\tt 16})}}
+\label{class_th_buffer_13e63db8c011ff2ae0b1299d98d24b27}
+
+
+
+
+Definition at line 21 of file ThBuffer.cpp.\hypertarget{class_th_buffer_be72d88fcd65dc1a38f235bf62cc9389}{
+\index{ThBuffer@{ThBuffer}!$\sim$ThBuffer@{$\sim$ThBuffer}}
+\index{$\sim$ThBuffer@{$\sim$ThBuffer}!ThBuffer@{ThBuffer}}
+\subsubsection[{$\sim$ThBuffer}]{\setlength{\rightskip}{0pt plus 5cm}ThBuffer::$\sim$ThBuffer ()}}
+\label{class_th_buffer_be72d88fcd65dc1a38f235bf62cc9389}
+
+
+
+
+Definition at line 30 of file ThBuffer.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_th_buffer_3120cde7f42cb70fe65d91a41692f772}{
+\index{ThBuffer@{ThBuffer}!Acquire@{Acquire}}
+\index{Acquire@{Acquire}!ThBuffer@{ThBuffer}}
+\subsubsection[{Acquire}]{\setlength{\rightskip}{0pt plus 5cm}const void $\ast$ ThBuffer::Acquire (bool {\em wait} = {\tt true}) const}}
+\label{class_th_buffer_3120cde7f42cb70fe65d91a41692f772}
+
+
+
+
+Definition at line 62 of file ThBuffer.cpp.\hypertarget{class_th_buffer_1e98d61991e2ff9dc94dcea0e1381cfd}{
+\index{ThBuffer@{ThBuffer}!Acquire@{Acquire}}
+\index{Acquire@{Acquire}!ThBuffer@{ThBuffer}}
+\subsubsection[{Acquire}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ ThBuffer::Acquire (bool {\em wait} = {\tt true})}}
+\label{class_th_buffer_1e98d61991e2ff9dc94dcea0e1381cfd}
+
+
+
+
+Definition at line 42 of file ThBuffer.cpp.\hypertarget{class_th_buffer_606930e690108540fafbb73857434aad}{
+\index{ThBuffer@{ThBuffer}!AdvanceWriteOffset@{AdvanceWriteOffset}}
+\index{AdvanceWriteOffset@{AdvanceWriteOffset}!ThBuffer@{ThBuffer}}
+\subsubsection[{AdvanceWriteOffset}]{\setlength{\rightskip}{0pt plus 5cm}void ThBuffer::AdvanceWriteOffset (unsigned int {\em amount})}}
+\label{class_th_buffer_606930e690108540fafbb73857434aad}
+
+
+
+
+Definition at line 89 of file ThBuffer.cpp.\hypertarget{class_th_buffer_c2bc5bbc82b316254435801fe9687644}{
+\index{ThBuffer@{ThBuffer}!GetSignal@{GetSignal}}
+\index{GetSignal@{GetSignal}!ThBuffer@{ThBuffer}}
+\subsubsection[{GetSignal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ThSignal}\& ThBuffer::GetSignal ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_th_buffer_c2bc5bbc82b316254435801fe9687644}
+
+
+
+
+Definition at line 37 of file ThBuffer.h.\hypertarget{class_th_buffer_1db647c615af650675ecf0a3a696036b}{
+\index{ThBuffer@{ThBuffer}!GetSize@{GetSize}}
+\index{GetSize@{GetSize}!ThBuffer@{ThBuffer}}
+\subsubsection[{GetSize}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int ThBuffer::GetSize () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_th_buffer_1db647c615af650675ecf0a3a696036b}
+
+
+
+
+Definition at line 26 of file ThBuffer.h.\hypertarget{class_th_buffer_bc6500a64a45ea7510dd490749fa67de}{
+\index{ThBuffer@{ThBuffer}!GetWriteOffset@{GetWriteOffset}}
+\index{GetWriteOffset@{GetWriteOffset}!ThBuffer@{ThBuffer}}
+\subsubsection[{GetWriteOffset}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int ThBuffer::GetWriteOffset () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_th_buffer_bc6500a64a45ea7510dd490749fa67de}
+
+
+
+
+Definition at line 40 of file ThBuffer.h.\hypertarget{class_th_buffer_8d1ec8f6cb1060228d414106bb334754}{
+\index{ThBuffer@{ThBuffer}!Release@{Release}}
+\index{Release@{Release}!ThBuffer@{ThBuffer}}
+\subsubsection[{Release}]{\setlength{\rightskip}{0pt plus 5cm}void ThBuffer::Release () const}}
+\label{class_th_buffer_8d1ec8f6cb1060228d414106bb334754}
+
+
+
+
+Definition at line 82 of file ThBuffer.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_th_buffer_8h}{ThBuffer.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_th_buffer_8cpp}{ThBuffer.cpp}\end{CompactItemize}

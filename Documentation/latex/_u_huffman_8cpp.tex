@@ -1,0 +1,45 @@
+\hypertarget{_u_huffman_8cpp}{
+\section{C:/Bootstrap/ProjectBX/Engine/Common/UHuffman.cpp File Reference}
+\label{_u_huffman_8cpp}\index{C:/Bootstrap/ProjectBX/Engine/Common/UHuffman.cpp@{C:/Bootstrap/ProjectBX/Engine/Common/UHuffman.cpp}}
+}
+{\tt \#include \char`\"{}common\_\-afx.h\char`\"{}}\par
+{\tt \#include \char`\"{}UHuffman.h\char`\"{}}\par
+{\tt \#include \char`\"{}UBitReader.h\char`\"{}}\par
+{\tt \#include \char`\"{}UBitWriter.h\char`\"{}}\par
+{\tt \#include $<$algorithm$>$}\par
+{\tt \#include $<$set$>$}\par
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+struct \hyperlink{struct_s_node}{SNode}
+\end{CompactItemize}
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \hyperlink{_u_huffman_8cpp_2fb48dddfe1fdced40782c4e62530673}{REV}(\hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x})
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_u_huffman_8cpp_2fb48dddfe1fdced40782c4e62530673}{
+\index{UHuffman.cpp@{UHuffman.cpp}!REV@{REV}}
+\index{REV@{REV}!UHuffman.cpp@{UHuffman.cpp}}
+\subsubsection[{REV}]{\setlength{\rightskip}{0pt plus 5cm}\#define REV({\bf x})}}
+\label{_u_huffman_8cpp_2fb48dddfe1fdced40782c4e62530673}
+
+
+\textbf{Value:}
+
+\begin{Code}\begin{verbatim}( ( ( x & 0x01 ) << 7 ) | \
+                                                                  ( ( x & 0x02 ) << 5 ) | \
+                                                                  ( ( x & 0x04 ) << 3 ) | \
+                                                                  ( ( x & 0x08 ) << 1 ) | \
+                                                                  ( ( x & 0x10 ) >> 1 ) | \
+                                                                  ( ( x & 0x20 ) >> 3 ) | \
+                                                                  ( ( x & 0x40 ) >> 5 ) | \
+                                                                  ( ( x & 0x80 ) >> 7 ) )
+\end{verbatim}
+\end{Code}
+
+
+Definition at line 31 of file UHuffman.cpp.

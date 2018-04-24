@@ -1,0 +1,125 @@
+\hypertarget{class_r_file_pipe}{
+\section{RFilePipe Class Reference}
+\label{class_r_file_pipe}\index{RFilePipe@{RFilePipe}}
+}
+{\tt \#include $<$RFilePipe.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_r_file_pipe_c2106ca425bc38d089de301e7adb517f}{RFilePipe} (unsigned int pageSize, unsigned int pageCount, unsigned int alignment=1)
+\item 
+\hyperlink{class_r_file_pipe_791787ff76d5b2048d9947683f0e3e28}{$\sim$RFilePipe} ()
+\item 
+unsigned int \hyperlink{class_r_file_pipe_b272c2bbe5bcc7610fe9abad3e9ac556}{GetBufferSize} () const 
+\item 
+unsigned int \hyperlink{class_r_file_pipe_c943bb0bd586208d1f031e020bca5750}{GetPageCount} () const 
+\item 
+unsigned int \hyperlink{class_r_file_pipe_d868c745a9faf08017e716e4e823378e}{GetPageSize} () const 
+\item 
+unsigned int \hyperlink{class_r_file_pipe_97021368b580fc7e8d90646d9a11ea99}{GetAlignment} () const 
+\item 
+const void $\ast$ \hyperlink{class_r_file_pipe_73f40320bff78dd2131dff47118a6b61}{LockPage} (unsigned int \&pageIdx)
+\item 
+void \hyperlink{class_r_file_pipe_a4d2d656640a49f4638891d1db01556d}{UnlockPage} (unsigned int pageIdx)
+\item 
+bool \hyperlink{class_r_file_pipe_4839f26e007142a7cbfabc765226671f}{ReadFile} (\hyperlink{class_r_file}{RFile} $\ast$file, \hyperlink{common__afx_8h_2e015c96ada30f1fdb9322f7af889c10}{\_\-\_\-int64} pageOffset, unsigned int pageCount)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 19 of file RFilePipe.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_r_file_pipe_c2106ca425bc38d089de301e7adb517f}{
+\index{RFilePipe@{RFilePipe}!RFilePipe@{RFilePipe}}
+\index{RFilePipe@{RFilePipe}!RFilePipe@{RFilePipe}}
+\subsubsection[{RFilePipe}]{\setlength{\rightskip}{0pt plus 5cm}RFilePipe::RFilePipe (unsigned int {\em pageSize}, \/  unsigned int {\em pageCount}, \/  unsigned int {\em alignment} = {\tt 1})}}
+\label{class_r_file_pipe_c2106ca425bc38d089de301e7adb517f}
+
+
+
+
+Definition at line 26 of file RFilePipe.cpp.\hypertarget{class_r_file_pipe_791787ff76d5b2048d9947683f0e3e28}{
+\index{RFilePipe@{RFilePipe}!$\sim$RFilePipe@{$\sim$RFilePipe}}
+\index{$\sim$RFilePipe@{$\sim$RFilePipe}!RFilePipe@{RFilePipe}}
+\subsubsection[{$\sim$RFilePipe}]{\setlength{\rightskip}{0pt plus 5cm}RFilePipe::$\sim$RFilePipe ()}}
+\label{class_r_file_pipe_791787ff76d5b2048d9947683f0e3e28}
+
+
+
+
+Definition at line 32 of file RFilePipe.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_r_file_pipe_97021368b580fc7e8d90646d9a11ea99}{
+\index{RFilePipe@{RFilePipe}!GetAlignment@{GetAlignment}}
+\index{GetAlignment@{GetAlignment}!RFilePipe@{RFilePipe}}
+\subsubsection[{GetAlignment}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int RFilePipe::GetAlignment () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_r_file_pipe_97021368b580fc7e8d90646d9a11ea99}
+
+
+
+
+Definition at line 29 of file RFilePipe.h.\hypertarget{class_r_file_pipe_b272c2bbe5bcc7610fe9abad3e9ac556}{
+\index{RFilePipe@{RFilePipe}!GetBufferSize@{GetBufferSize}}
+\index{GetBufferSize@{GetBufferSize}!RFilePipe@{RFilePipe}}
+\subsubsection[{GetBufferSize}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int RFilePipe::GetBufferSize () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_r_file_pipe_b272c2bbe5bcc7610fe9abad3e9ac556}
+
+
+
+
+Definition at line 26 of file RFilePipe.h.\hypertarget{class_r_file_pipe_c943bb0bd586208d1f031e020bca5750}{
+\index{RFilePipe@{RFilePipe}!GetPageCount@{GetPageCount}}
+\index{GetPageCount@{GetPageCount}!RFilePipe@{RFilePipe}}
+\subsubsection[{GetPageCount}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int RFilePipe::GetPageCount () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_r_file_pipe_c943bb0bd586208d1f031e020bca5750}
+
+
+
+
+Definition at line 27 of file RFilePipe.h.\hypertarget{class_r_file_pipe_d868c745a9faf08017e716e4e823378e}{
+\index{RFilePipe@{RFilePipe}!GetPageSize@{GetPageSize}}
+\index{GetPageSize@{GetPageSize}!RFilePipe@{RFilePipe}}
+\subsubsection[{GetPageSize}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int RFilePipe::GetPageSize () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_r_file_pipe_d868c745a9faf08017e716e4e823378e}
+
+
+
+
+Definition at line 28 of file RFilePipe.h.\hypertarget{class_r_file_pipe_73f40320bff78dd2131dff47118a6b61}{
+\index{RFilePipe@{RFilePipe}!LockPage@{LockPage}}
+\index{LockPage@{LockPage}!RFilePipe@{RFilePipe}}
+\subsubsection[{LockPage}]{\setlength{\rightskip}{0pt plus 5cm}const void $\ast$ RFilePipe::LockPage (unsigned int \& {\em pageIdx})}}
+\label{class_r_file_pipe_73f40320bff78dd2131dff47118a6b61}
+
+
+
+
+Definition at line 44 of file RFilePipe.cpp.\hypertarget{class_r_file_pipe_4839f26e007142a7cbfabc765226671f}{
+\index{RFilePipe@{RFilePipe}!ReadFile@{ReadFile}}
+\index{ReadFile@{ReadFile}!RFilePipe@{RFilePipe}}
+\subsubsection[{ReadFile}]{\setlength{\rightskip}{0pt plus 5cm}bool RFilePipe::ReadFile ({\bf RFile} $\ast$ {\em file}, \/  {\bf \_\-\_\-int64} {\em pageOffset}, \/  unsigned int {\em pageCount})}}
+\label{class_r_file_pipe_4839f26e007142a7cbfabc765226671f}
+
+
+
+
+Definition at line 95 of file RFilePipe.cpp.\hypertarget{class_r_file_pipe_a4d2d656640a49f4638891d1db01556d}{
+\index{RFilePipe@{RFilePipe}!UnlockPage@{UnlockPage}}
+\index{UnlockPage@{UnlockPage}!RFilePipe@{RFilePipe}}
+\subsubsection[{UnlockPage}]{\setlength{\rightskip}{0pt plus 5cm}void RFilePipe::UnlockPage (unsigned int {\em pageIdx})}}
+\label{class_r_file_pipe_a4d2d656640a49f4638891d1db01556d}
+
+
+
+
+Definition at line 87 of file RFilePipe.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_r_file_pipe_8h}{RFilePipe.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_r_file_pipe_8cpp}{RFilePipe.cpp}\end{CompactItemize}

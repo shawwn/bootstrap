@@ -1,0 +1,191 @@
+\hypertarget{class_gr_texture_mgr}{
+\section{GrTextureMgr Class Reference}
+\label{class_gr_texture_mgr}\index{GrTextureMgr@{GrTextureMgr}}
+}
+{\tt \#include $<$GrTextureMgr.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_texture_mgr_e876dc2f946618034891e7d0481859c7}{GrTextureMgr} (\hyperlink{enums_8h_697c1ee1354746841860d5bf9f81c033}{EGRQUALITY} texturingQuality)
+\item 
+\hyperlink{class_gr_texture_mgr_f3605c16cc8ce7bcff1d83e199eb1740}{$\sim$GrTextureMgr} ()
+\item 
+void \hyperlink{class_gr_texture_mgr_791f429e9ba38f366812e5258e27ed2d}{Update} ()
+\item 
+void \hyperlink{class_gr_texture_mgr_de4ad2113d60ada7c4e178b0e752a45d}{SetTexturingQuality} (\hyperlink{enums_8h_697c1ee1354746841860d5bf9f81c033}{EGRQUALITY} quality)
+\item 
+\hyperlink{enums_8h_697c1ee1354746841860d5bf9f81c033}{EGRQUALITY} \hyperlink{class_gr_texture_mgr_b9120a416ac73224fe76245e7083db19}{GetTexturingQuality} () const 
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_texture_base}{GrTextureBase} $>$ \hyperlink{class_gr_texture_mgr_42a8622f0332de231fcabe925bf06b21}{GetTextureFile} (const \hyperlink{class_u_path}{UPath} \&imageName, \hyperlink{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c}{GrTextureBase::EFORMAT} \hyperlink{glext__bak_8h_e2d3db041c6004a67047659b42f73a44}{format}, \hyperlink{class_gr_texture_base_bee6ecbc7a70ea5f2acab8341a9696b5}{GrTextureBase::Flags} \hyperlink{_u_t_message_8h_0a3c0b351ab09281b662a9ff4f900a53}{flags}, bool cacheImage=false, bool cache=true)
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_texture_base}{GrTextureBase} $>$ \hyperlink{class_gr_texture_mgr_a488c8b7fc80b98be3f6242b2e7365f4}{GetTextureImage} (\hyperlink{class_gr_image}{GrImage} $\ast$\hyperlink{glext__bak_8h_8943555672bc4b8056204eb92329cafa}{image}, \hyperlink{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c}{GrTextureBase::EFORMAT} \hyperlink{glext__bak_8h_e2d3db041c6004a67047659b42f73a44}{format}, \hyperlink{class_gr_texture_base_bee6ecbc7a70ea5f2acab8341a9696b5}{GrTextureBase::Flags} \hyperlink{_u_t_message_8h_0a3c0b351ab09281b662a9ff4f900a53}{flags}, bool cache=true)
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_texture_base}{GrTextureBase} $>$ \hyperlink{class_gr_texture_mgr_8cc9e107fe42053e462f63db1f48422c}{GetEmptyTexture} (const \hyperlink{class_u_path}{UPath} \&\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, unsigned int \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, unsigned int \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height}, \hyperlink{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c}{GrTextureBase::EFORMAT} \hyperlink{glext__bak_8h_e2d3db041c6004a67047659b42f73a44}{format}, \hyperlink{class_gr_texture_base_bee6ecbc7a70ea5f2acab8341a9696b5}{GrTextureBase::Flags} \hyperlink{_u_t_message_8h_0a3c0b351ab09281b662a9ff4f900a53}{flags}, bool cache=true)
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_texture_base}{GrTextureBase} $>$ \hyperlink{class_gr_texture_mgr_cce335f8def2910986ab5b7b2e4a02c6}{GetTextureCubeFiles} (const \hyperlink{class_u_path}{UPath} $\ast$$\ast$imageNames, \hyperlink{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c}{GrTextureBase::EFORMAT} \hyperlink{glext__bak_8h_e2d3db041c6004a67047659b42f73a44}{format}, \hyperlink{class_gr_texture_base_bee6ecbc7a70ea5f2acab8341a9696b5}{GrTextureBase::Flags} \hyperlink{_u_t_message_8h_0a3c0b351ab09281b662a9ff4f900a53}{flags}, bool cacheImages=false, bool cache=true)
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_texture_base}{GrTextureBase} $>$ \hyperlink{class_gr_texture_mgr_23e061dceb24e232264beef4ad1de42b}{GetTextureCubeImages} (\hyperlink{class_gr_image}{GrImage} $\ast$$\ast$\hyperlink{glext__bak_8h_8943555672bc4b8056204eb92329cafa}{image}, unsigned int dim, \hyperlink{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c}{GrTextureBase::EFORMAT} \hyperlink{glext__bak_8h_e2d3db041c6004a67047659b42f73a44}{format}, \hyperlink{class_gr_texture_base_bee6ecbc7a70ea5f2acab8341a9696b5}{GrTextureBase::Flags} \hyperlink{_u_t_message_8h_0a3c0b351ab09281b662a9ff4f900a53}{flags}, bool cache=true)
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_texture_base}{GrTextureBase} $>$ \hyperlink{class_gr_texture_mgr_801ca4868a8d15dc00e0d37153596f5c}{GetEmptyTextureCube} (const \hyperlink{class_u_path}{UPath} \&\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, unsigned int dim, \hyperlink{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c}{GrTextureBase::EFORMAT} \hyperlink{glext__bak_8h_e2d3db041c6004a67047659b42f73a44}{format}, \hyperlink{class_gr_texture_base_bee6ecbc7a70ea5f2acab8341a9696b5}{GrTextureBase::Flags} \hyperlink{_u_t_message_8h_0a3c0b351ab09281b662a9ff4f900a53}{flags}, bool cache=true)
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_texture_base}{GrTextureBase} $>$ \hyperlink{class_gr_texture_mgr_83321c109ae9862b3e9ad6acabd8819d}{FindTexture} (const \hyperlink{class_u_path}{UPath} \&imageName, \hyperlink{class_gr_texture_base_82c606022e93566ba55fe4cd3beb687c}{GrTextureBase::EFORMAT} \hyperlink{glext__bak_8h_e2d3db041c6004a67047659b42f73a44}{format}, unsigned int \hyperlink{_u_t_message_8h_0a3c0b351ab09281b662a9ff4f900a53}{flags}) const 
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_texture_base}{GrTextureBase} $>$ \hyperlink{class_gr_texture_mgr_a70c68e3de9b73044851ffebb35d4cba}{FindTexture} (const \hyperlink{class_u_path}{UPath} \&imageName) const 
+\item 
+void \hyperlink{class_gr_texture_mgr_c03dca06b6577638a465efba18b89502}{PreContextReset} ()
+\item 
+void \hyperlink{class_gr_texture_mgr_d6946717cc8105c67252c3cbd6dc7c14}{PostContextReset} ()
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 28 of file GrTextureMgr.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_texture_mgr_e876dc2f946618034891e7d0481859c7}{
+\index{GrTextureMgr@{GrTextureMgr}!GrTextureMgr@{GrTextureMgr}}
+\index{GrTextureMgr@{GrTextureMgr}!GrTextureMgr@{GrTextureMgr}}
+\subsubsection[{GrTextureMgr}]{\setlength{\rightskip}{0pt plus 5cm}GrTextureMgr::GrTextureMgr ({\bf EGRQUALITY} {\em texturingQuality})}}
+\label{class_gr_texture_mgr_e876dc2f946618034891e7d0481859c7}
+
+
+
+
+Definition at line 49 of file GrTextureMgr.cpp.\hypertarget{class_gr_texture_mgr_f3605c16cc8ce7bcff1d83e199eb1740}{
+\index{GrTextureMgr@{GrTextureMgr}!$\sim$GrTextureMgr@{$\sim$GrTextureMgr}}
+\index{$\sim$GrTextureMgr@{$\sim$GrTextureMgr}!GrTextureMgr@{GrTextureMgr}}
+\subsubsection[{$\sim$GrTextureMgr}]{\setlength{\rightskip}{0pt plus 5cm}GrTextureMgr::$\sim$GrTextureMgr ()}}
+\label{class_gr_texture_mgr_f3605c16cc8ce7bcff1d83e199eb1740}
+
+
+
+
+Definition at line 60 of file GrTextureMgr.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_texture_mgr_a70c68e3de9b73044851ffebb35d4cba}{
+\index{GrTextureMgr@{GrTextureMgr}!FindTexture@{FindTexture}}
+\index{FindTexture@{FindTexture}!GrTextureMgr@{GrTextureMgr}}
+\subsubsection[{FindTexture}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrTextureBase} $>$ GrTextureMgr::FindTexture (const {\bf UPath} \& {\em imageName}) const}}
+\label{class_gr_texture_mgr_a70c68e3de9b73044851ffebb35d4cba}
+
+
+
+
+Definition at line 274 of file GrTextureMgr.cpp.\hypertarget{class_gr_texture_mgr_83321c109ae9862b3e9ad6acabd8819d}{
+\index{GrTextureMgr@{GrTextureMgr}!FindTexture@{FindTexture}}
+\index{FindTexture@{FindTexture}!GrTextureMgr@{GrTextureMgr}}
+\subsubsection[{FindTexture}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrTextureBase} $>$ GrTextureMgr::FindTexture (const {\bf UPath} \& {\em imageName}, \/  {\bf GrTextureBase::EFORMAT} {\em format}, \/  unsigned int {\em flags}) const}}
+\label{class_gr_texture_mgr_83321c109ae9862b3e9ad6acabd8819d}
+
+
+
+
+Definition at line 258 of file GrTextureMgr.cpp.\hypertarget{class_gr_texture_mgr_8cc9e107fe42053e462f63db1f48422c}{
+\index{GrTextureMgr@{GrTextureMgr}!GetEmptyTexture@{GetEmptyTexture}}
+\index{GetEmptyTexture@{GetEmptyTexture}!GrTextureMgr@{GrTextureMgr}}
+\subsubsection[{GetEmptyTexture}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrTextureBase} $>$ GrTextureMgr::GetEmptyTexture (const {\bf UPath} \& {\em name}, \/  unsigned int {\em width}, \/  unsigned int {\em height}, \/  {\bf GrTextureBase::EFORMAT} {\em format}, \/  {\bf GrTextureBase::Flags} {\em flags}, \/  bool {\em cache} = {\tt true})}}
+\label{class_gr_texture_mgr_8cc9e107fe42053e462f63db1f48422c}
+
+
+
+
+Definition at line 143 of file GrTextureMgr.cpp.\hypertarget{class_gr_texture_mgr_801ca4868a8d15dc00e0d37153596f5c}{
+\index{GrTextureMgr@{GrTextureMgr}!GetEmptyTextureCube@{GetEmptyTextureCube}}
+\index{GetEmptyTextureCube@{GetEmptyTextureCube}!GrTextureMgr@{GrTextureMgr}}
+\subsubsection[{GetEmptyTextureCube}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrTextureBase} $>$ GrTextureMgr::GetEmptyTextureCube (const {\bf UPath} \& {\em name}, \/  unsigned int {\em dim}, \/  {\bf GrTextureBase::EFORMAT} {\em format}, \/  {\bf GrTextureBase::Flags} {\em flags}, \/  bool {\em cache} = {\tt true})}}
+\label{class_gr_texture_mgr_801ca4868a8d15dc00e0d37153596f5c}
+
+
+
+
+Definition at line 234 of file GrTextureMgr.cpp.\hypertarget{class_gr_texture_mgr_cce335f8def2910986ab5b7b2e4a02c6}{
+\index{GrTextureMgr@{GrTextureMgr}!GetTextureCubeFiles@{GetTextureCubeFiles}}
+\index{GetTextureCubeFiles@{GetTextureCubeFiles}!GrTextureMgr@{GrTextureMgr}}
+\subsubsection[{GetTextureCubeFiles}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrTextureBase} $>$ GrTextureMgr::GetTextureCubeFiles (const {\bf UPath} $\ast$$\ast$ {\em imageNames}, \/  {\bf GrTextureBase::EFORMAT} {\em format}, \/  {\bf GrTextureBase::Flags} {\em flags}, \/  bool {\em cacheImages} = {\tt false}, \/  bool {\em cache} = {\tt true})}}
+\label{class_gr_texture_mgr_cce335f8def2910986ab5b7b2e4a02c6}
+
+
+
+
+Definition at line 167 of file GrTextureMgr.cpp.\hypertarget{class_gr_texture_mgr_23e061dceb24e232264beef4ad1de42b}{
+\index{GrTextureMgr@{GrTextureMgr}!GetTextureCubeImages@{GetTextureCubeImages}}
+\index{GetTextureCubeImages@{GetTextureCubeImages}!GrTextureMgr@{GrTextureMgr}}
+\subsubsection[{GetTextureCubeImages}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrTextureBase} $>$ GrTextureMgr::GetTextureCubeImages ({\bf GrImage} $\ast$$\ast$ {\em image}, \/  unsigned int {\em dim}, \/  {\bf GrTextureBase::EFORMAT} {\em format}, \/  {\bf GrTextureBase::Flags} {\em flags}, \/  bool {\em cache} = {\tt true})}}
+\label{class_gr_texture_mgr_23e061dceb24e232264beef4ad1de42b}
+
+
+
+
+Definition at line 199 of file GrTextureMgr.cpp.\hypertarget{class_gr_texture_mgr_42a8622f0332de231fcabe925bf06b21}{
+\index{GrTextureMgr@{GrTextureMgr}!GetTextureFile@{GetTextureFile}}
+\index{GetTextureFile@{GetTextureFile}!GrTextureMgr@{GrTextureMgr}}
+\subsubsection[{GetTextureFile}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrTextureBase} $>$ GrTextureMgr::GetTextureFile (const {\bf UPath} \& {\em imageName}, \/  {\bf GrTextureBase::EFORMAT} {\em format}, \/  {\bf GrTextureBase::Flags} {\em flags}, \/  bool {\em cacheImage} = {\tt false}, \/  bool {\em cache} = {\tt true})}}
+\label{class_gr_texture_mgr_42a8622f0332de231fcabe925bf06b21}
+
+
+
+
+Definition at line 83 of file GrTextureMgr.cpp.\hypertarget{class_gr_texture_mgr_a488c8b7fc80b98be3f6242b2e7365f4}{
+\index{GrTextureMgr@{GrTextureMgr}!GetTextureImage@{GetTextureImage}}
+\index{GetTextureImage@{GetTextureImage}!GrTextureMgr@{GrTextureMgr}}
+\subsubsection[{GetTextureImage}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrTextureBase} $>$ GrTextureMgr::GetTextureImage ({\bf GrImage} $\ast$ {\em image}, \/  {\bf GrTextureBase::EFORMAT} {\em format}, \/  {\bf GrTextureBase::Flags} {\em flags}, \/  bool {\em cache} = {\tt true})}}
+\label{class_gr_texture_mgr_a488c8b7fc80b98be3f6242b2e7365f4}
+
+
+
+
+Definition at line 114 of file GrTextureMgr.cpp.\hypertarget{class_gr_texture_mgr_b9120a416ac73224fe76245e7083db19}{
+\index{GrTextureMgr@{GrTextureMgr}!GetTexturingQuality@{GetTexturingQuality}}
+\index{GetTexturingQuality@{GetTexturingQuality}!GrTextureMgr@{GrTextureMgr}}
+\subsubsection[{GetTexturingQuality}]{\setlength{\rightskip}{0pt plus 5cm}{\bf EGRQUALITY} GrTextureMgr::GetTexturingQuality () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_texture_mgr_b9120a416ac73224fe76245e7083db19}
+
+
+
+
+Definition at line 39 of file GrTextureMgr.h.\hypertarget{class_gr_texture_mgr_d6946717cc8105c67252c3cbd6dc7c14}{
+\index{GrTextureMgr@{GrTextureMgr}!PostContextReset@{PostContextReset}}
+\index{PostContextReset@{PostContextReset}!GrTextureMgr@{GrTextureMgr}}
+\subsubsection[{PostContextReset}]{\setlength{\rightskip}{0pt plus 5cm}void GrTextureMgr::PostContextReset ()}}
+\label{class_gr_texture_mgr_d6946717cc8105c67252c3cbd6dc7c14}
+
+
+
+
+Definition at line 308 of file GrTextureMgr.cpp.\hypertarget{class_gr_texture_mgr_c03dca06b6577638a465efba18b89502}{
+\index{GrTextureMgr@{GrTextureMgr}!PreContextReset@{PreContextReset}}
+\index{PreContextReset@{PreContextReset}!GrTextureMgr@{GrTextureMgr}}
+\subsubsection[{PreContextReset}]{\setlength{\rightskip}{0pt plus 5cm}void GrTextureMgr::PreContextReset ()}}
+\label{class_gr_texture_mgr_c03dca06b6577638a465efba18b89502}
+
+
+
+
+Definition at line 287 of file GrTextureMgr.cpp.\hypertarget{class_gr_texture_mgr_de4ad2113d60ada7c4e178b0e752a45d}{
+\index{GrTextureMgr@{GrTextureMgr}!SetTexturingQuality@{SetTexturingQuality}}
+\index{SetTexturingQuality@{SetTexturingQuality}!GrTextureMgr@{GrTextureMgr}}
+\subsubsection[{SetTexturingQuality}]{\setlength{\rightskip}{0pt plus 5cm}void GrTextureMgr::SetTexturingQuality ({\bf EGRQUALITY} {\em quality})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_texture_mgr_de4ad2113d60ada7c4e178b0e752a45d}
+
+
+
+
+Definition at line 38 of file GrTextureMgr.h.\hypertarget{class_gr_texture_mgr_791f429e9ba38f366812e5258e27ed2d}{
+\index{GrTextureMgr@{GrTextureMgr}!Update@{Update}}
+\index{Update@{Update}!GrTextureMgr@{GrTextureMgr}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void GrTextureMgr::Update ()}}
+\label{class_gr_texture_mgr_791f429e9ba38f366812e5258e27ed2d}
+
+
+
+
+Definition at line 74 of file GrTextureMgr.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_texture_mgr_8h}{GrTextureMgr.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_texture_mgr_8cpp}{GrTextureMgr.cpp}\end{CompactItemize}

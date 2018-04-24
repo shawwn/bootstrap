@@ -1,0 +1,259 @@
+\hypertarget{class_gr_after_effect}{
+\section{GrAfterEffect Class Reference}
+\label{class_gr_after_effect}\index{GrAfterEffect@{GrAfterEffect}}
+}
+{\tt \#include $<$GrAfterEffect.h$>$}
+
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+struct \textbf{SUserParam}
+\item 
+struct \textbf{SUserSampler}
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_after_effect_99b71b5f881a5e958b9cc9f1c9c4e571}{GrAfterEffect} (const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, \hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_shader}{GrShader} $>$ \hyperlink{glext_8h_57b2a96adb1d51204909a82d861e395e}{shader}, const \hyperlink{class_m_vec3}{MVec3} \&position, float \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, float queryWidth)
+\item 
+\hyperlink{class_gr_after_effect_f62d61f3e398d41ef45843d37a4cd6ca}{$\sim$GrAfterEffect} ()
+\item 
+void \hyperlink{class_gr_after_effect_6eef8c6b93d6faa7995b4ff42ea1a3cc}{SetPosition} (const \hyperlink{class_m_vec3}{MVec3} \&position)
+\item 
+void \hyperlink{class_gr_after_effect_e692a8aa9358c8228aed2f0c69dedb8c}{SetWidth} (float \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width})
+\item 
+void \hyperlink{class_gr_after_effect_b4c169cb494a24fd5c867bc7132c860b}{SetQueryWidth} (float queryWidth)
+\item 
+const \hyperlink{class_m_vec3}{MVec3} \& \hyperlink{class_gr_after_effect_d79a8c6ea1f445e34889587d205e5b55}{GetPosition} () const 
+\item 
+float \hyperlink{class_gr_after_effect_9c9c819b5a476c965ad41b76e1b284dc}{GetWidth} () const 
+\item 
+float \hyperlink{class_gr_after_effect_3725e6efbe22dd48c67ca96fdbe33855}{GetQueryWidth} () const 
+\item 
+unsigned int \hyperlink{class_gr_after_effect_28a716f513169ba2179de9b389e2be8e}{InitParam} (const char $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, const \hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_u_expr}{UExpr} $>$ $\ast$\hyperlink{glext__bak_8h_787b90126e660bfa88ef8aa99f74ca41}{values})
+\item 
+unsigned int \hyperlink{class_gr_after_effect_079dd4c9fb631908bf9b2d133c733280}{GetParamHandle} (const char $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}) const 
+\item 
+void \hyperlink{class_gr_after_effect_0d1ed187d78661ae8148296906ef22a4}{SetParamExprs} (unsigned int handle, const \hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_u_expr}{UExpr} $>$ $\ast$\hyperlink{glext__bak_8h_787b90126e660bfa88ef8aa99f74ca41}{values})
+\item 
+void \hyperlink{class_gr_after_effect_ee972346c19d4fbac65ac837bb213ae0}{GetParamExprs} (unsigned int handle, \hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_u_expr}{UExpr} $>$ $\ast$\hyperlink{glext__bak_8h_787b90126e660bfa88ef8aa99f74ca41}{values})
+\item 
+unsigned int \hyperlink{class_gr_after_effect_091017394b0a44d2809aff92ad70aeed}{InitSampler} (const char $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, const \hyperlink{class_gr_texture_stage}{GrTextureStage} \&textureStage)
+\item 
+unsigned int \hyperlink{class_gr_after_effect_0778fe881cb1fe1ebe2126d27bd8f34f}{GetSamplerHandle} (const char $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}) const 
+\item 
+const \hyperlink{class_gr_texture_stage}{GrTextureStage} \& \hyperlink{class_gr_after_effect_13d36149166c9667c6a6994c1f3c1cdc}{GetSamplerStage} (unsigned int handle) const 
+\item 
+void \hyperlink{class_gr_after_effect_7c18aebb106dd993ad091cd64292d528}{SetSamplerStage} (unsigned int handle, const \hyperlink{class_gr_texture_stage}{GrTextureStage} \&stage)
+\item 
+void \hyperlink{class_gr_after_effect_63aea2d5172f926dc628ff07f90edec6}{Update} ()
+\item 
+void \hyperlink{class_gr_after_effect_2fddc6ab0ea8bceb23704adfe6c1449c}{ApplyShaderParams} ()
+\item 
+void \hyperlink{class_gr_after_effect_d05cf40a9229d30ffa9148dc2f977d87}{ApplySamplerStates} ()
+\end{CompactItemize}
+\subsection*{Static Public Attributes}
+\begin{CompactItemize}
+\item 
+static const unsigned int \hyperlink{class_gr_after_effect_ff8b6c747e2b149a857a58f0491a4189}{kMaxSamplerCount} = 8
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 24 of file GrAfterEffect.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_after_effect_99b71b5f881a5e958b9cc9f1c9c4e571}{
+\index{GrAfterEffect@{GrAfterEffect}!GrAfterEffect@{GrAfterEffect}}
+\index{GrAfterEffect@{GrAfterEffect}!GrAfterEffect@{GrAfterEffect}}
+\subsubsection[{GrAfterEffect}]{\setlength{\rightskip}{0pt plus 5cm}GrAfterEffect::GrAfterEffect (const {\bf tstring} \& {\em name}, \/  {\bf URef}$<$ {\bf GrShader} $>$ {\em shader}, \/  const {\bf MVec3} \& {\em position}, \/  float {\em width}, \/  float {\em queryWidth})}}
+\label{class_gr_after_effect_99b71b5f881a5e958b9cc9f1c9c4e571}
+
+
+
+
+Definition at line 27 of file GrAfterEffect.cpp.\hypertarget{class_gr_after_effect_f62d61f3e398d41ef45843d37a4cd6ca}{
+\index{GrAfterEffect@{GrAfterEffect}!$\sim$GrAfterEffect@{$\sim$GrAfterEffect}}
+\index{$\sim$GrAfterEffect@{$\sim$GrAfterEffect}!GrAfterEffect@{GrAfterEffect}}
+\subsubsection[{$\sim$GrAfterEffect}]{\setlength{\rightskip}{0pt plus 5cm}GrAfterEffect::$\sim$GrAfterEffect ()}}
+\label{class_gr_after_effect_f62d61f3e398d41ef45843d37a4cd6ca}
+
+
+
+
+Definition at line 39 of file GrAfterEffect.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_after_effect_d05cf40a9229d30ffa9148dc2f977d87}{
+\index{GrAfterEffect@{GrAfterEffect}!ApplySamplerStates@{ApplySamplerStates}}
+\index{ApplySamplerStates@{ApplySamplerStates}!GrAfterEffect@{GrAfterEffect}}
+\subsubsection[{ApplySamplerStates}]{\setlength{\rightskip}{0pt plus 5cm}void GrAfterEffect::ApplySamplerStates ()}}
+\label{class_gr_after_effect_d05cf40a9229d30ffa9148dc2f977d87}
+
+
+
+
+Definition at line 219 of file GrAfterEffect.cpp.\hypertarget{class_gr_after_effect_2fddc6ab0ea8bceb23704adfe6c1449c}{
+\index{GrAfterEffect@{GrAfterEffect}!ApplyShaderParams@{ApplyShaderParams}}
+\index{ApplyShaderParams@{ApplyShaderParams}!GrAfterEffect@{GrAfterEffect}}
+\subsubsection[{ApplyShaderParams}]{\setlength{\rightskip}{0pt plus 5cm}void GrAfterEffect::ApplyShaderParams ()}}
+\label{class_gr_after_effect_2fddc6ab0ea8bceb23704adfe6c1449c}
+
+
+
+
+Definition at line 210 of file GrAfterEffect.cpp.\hypertarget{class_gr_after_effect_ee972346c19d4fbac65ac837bb213ae0}{
+\index{GrAfterEffect@{GrAfterEffect}!GetParamExprs@{GetParamExprs}}
+\index{GetParamExprs@{GetParamExprs}!GrAfterEffect@{GrAfterEffect}}
+\subsubsection[{GetParamExprs}]{\setlength{\rightskip}{0pt plus 5cm}void GrAfterEffect::GetParamExprs (unsigned int {\em handle}, \/  {\bf URef}$<$ {\bf UExpr} $>$ $\ast$ {\em values})}}
+\label{class_gr_after_effect_ee972346c19d4fbac65ac837bb213ae0}
+
+
+
+
+Definition at line 115 of file GrAfterEffect.cpp.\hypertarget{class_gr_after_effect_079dd4c9fb631908bf9b2d133c733280}{
+\index{GrAfterEffect@{GrAfterEffect}!GetParamHandle@{GetParamHandle}}
+\index{GetParamHandle@{GetParamHandle}!GrAfterEffect@{GrAfterEffect}}
+\subsubsection[{GetParamHandle}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrAfterEffect::GetParamHandle (const char $\ast$ {\em name}) const}}
+\label{class_gr_after_effect_079dd4c9fb631908bf9b2d133c733280}
+
+
+
+
+Definition at line 80 of file GrAfterEffect.cpp.\hypertarget{class_gr_after_effect_d79a8c6ea1f445e34889587d205e5b55}{
+\index{GrAfterEffect@{GrAfterEffect}!GetPosition@{GetPosition}}
+\index{GetPosition@{GetPosition}!GrAfterEffect@{GrAfterEffect}}
+\subsubsection[{GetPosition}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MVec3}\& GrAfterEffect::GetPosition () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_after_effect_d79a8c6ea1f445e34889587d205e5b55}
+
+
+
+
+Definition at line 38 of file GrAfterEffect.h.\hypertarget{class_gr_after_effect_3725e6efbe22dd48c67ca96fdbe33855}{
+\index{GrAfterEffect@{GrAfterEffect}!GetQueryWidth@{GetQueryWidth}}
+\index{GetQueryWidth@{GetQueryWidth}!GrAfterEffect@{GrAfterEffect}}
+\subsubsection[{GetQueryWidth}]{\setlength{\rightskip}{0pt plus 5cm}float GrAfterEffect::GetQueryWidth () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_after_effect_3725e6efbe22dd48c67ca96fdbe33855}
+
+
+
+
+Definition at line 40 of file GrAfterEffect.h.\hypertarget{class_gr_after_effect_0778fe881cb1fe1ebe2126d27bd8f34f}{
+\index{GrAfterEffect@{GrAfterEffect}!GetSamplerHandle@{GetSamplerHandle}}
+\index{GetSamplerHandle@{GetSamplerHandle}!GrAfterEffect@{GrAfterEffect}}
+\subsubsection[{GetSamplerHandle}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrAfterEffect::GetSamplerHandle (const char $\ast$ {\em name}) const}}
+\label{class_gr_after_effect_0778fe881cb1fe1ebe2126d27bd8f34f}
+
+
+
+
+Definition at line 155 of file GrAfterEffect.cpp.\hypertarget{class_gr_after_effect_13d36149166c9667c6a6994c1f3c1cdc}{
+\index{GrAfterEffect@{GrAfterEffect}!GetSamplerStage@{GetSamplerStage}}
+\index{GetSamplerStage@{GetSamplerStage}!GrAfterEffect@{GrAfterEffect}}
+\subsubsection[{GetSamplerStage}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf GrTextureStage} \& GrAfterEffect::GetSamplerStage (unsigned int {\em handle}) const}}
+\label{class_gr_after_effect_13d36149166c9667c6a6994c1f3c1cdc}
+
+
+
+
+Definition at line 174 of file GrAfterEffect.cpp.\hypertarget{class_gr_after_effect_9c9c819b5a476c965ad41b76e1b284dc}{
+\index{GrAfterEffect@{GrAfterEffect}!GetWidth@{GetWidth}}
+\index{GetWidth@{GetWidth}!GrAfterEffect@{GrAfterEffect}}
+\subsubsection[{GetWidth}]{\setlength{\rightskip}{0pt plus 5cm}float GrAfterEffect::GetWidth () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_after_effect_9c9c819b5a476c965ad41b76e1b284dc}
+
+
+
+
+Definition at line 39 of file GrAfterEffect.h.\hypertarget{class_gr_after_effect_28a716f513169ba2179de9b389e2be8e}{
+\index{GrAfterEffect@{GrAfterEffect}!InitParam@{InitParam}}
+\index{InitParam@{InitParam}!GrAfterEffect@{GrAfterEffect}}
+\subsubsection[{InitParam}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrAfterEffect::InitParam (const char $\ast$ {\em name}, \/  const {\bf URef}$<$ {\bf UExpr} $>$ $\ast$ {\em values})}}
+\label{class_gr_after_effect_28a716f513169ba2179de9b389e2be8e}
+
+
+
+
+Definition at line 51 of file GrAfterEffect.cpp.\hypertarget{class_gr_after_effect_091017394b0a44d2809aff92ad70aeed}{
+\index{GrAfterEffect@{GrAfterEffect}!InitSampler@{InitSampler}}
+\index{InitSampler@{InitSampler}!GrAfterEffect@{GrAfterEffect}}
+\subsubsection[{InitSampler}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrAfterEffect::InitSampler (const char $\ast$ {\em name}, \/  const {\bf GrTextureStage} \& {\em textureStage})}}
+\label{class_gr_after_effect_091017394b0a44d2809aff92ad70aeed}
+
+
+
+
+Definition at line 128 of file GrAfterEffect.cpp.\hypertarget{class_gr_after_effect_0d1ed187d78661ae8148296906ef22a4}{
+\index{GrAfterEffect@{GrAfterEffect}!SetParamExprs@{SetParamExprs}}
+\index{SetParamExprs@{SetParamExprs}!GrAfterEffect@{GrAfterEffect}}
+\subsubsection[{SetParamExprs}]{\setlength{\rightskip}{0pt plus 5cm}void GrAfterEffect::SetParamExprs (unsigned int {\em handle}, \/  const {\bf URef}$<$ {\bf UExpr} $>$ $\ast$ {\em values})}}
+\label{class_gr_after_effect_0d1ed187d78661ae8148296906ef22a4}
+
+
+
+
+Definition at line 99 of file GrAfterEffect.cpp.\hypertarget{class_gr_after_effect_6eef8c6b93d6faa7995b4ff42ea1a3cc}{
+\index{GrAfterEffect@{GrAfterEffect}!SetPosition@{SetPosition}}
+\index{SetPosition@{SetPosition}!GrAfterEffect@{GrAfterEffect}}
+\subsubsection[{SetPosition}]{\setlength{\rightskip}{0pt plus 5cm}void GrAfterEffect::SetPosition (const {\bf MVec3} \& {\em position})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_after_effect_6eef8c6b93d6faa7995b4ff42ea1a3cc}
+
+
+
+
+Definition at line 34 of file GrAfterEffect.h.\hypertarget{class_gr_after_effect_b4c169cb494a24fd5c867bc7132c860b}{
+\index{GrAfterEffect@{GrAfterEffect}!SetQueryWidth@{SetQueryWidth}}
+\index{SetQueryWidth@{SetQueryWidth}!GrAfterEffect@{GrAfterEffect}}
+\subsubsection[{SetQueryWidth}]{\setlength{\rightskip}{0pt plus 5cm}void GrAfterEffect::SetQueryWidth (float {\em queryWidth})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_after_effect_b4c169cb494a24fd5c867bc7132c860b}
+
+
+
+
+Definition at line 36 of file GrAfterEffect.h.\hypertarget{class_gr_after_effect_7c18aebb106dd993ad091cd64292d528}{
+\index{GrAfterEffect@{GrAfterEffect}!SetSamplerStage@{SetSamplerStage}}
+\index{SetSamplerStage@{SetSamplerStage}!GrAfterEffect@{GrAfterEffect}}
+\subsubsection[{SetSamplerStage}]{\setlength{\rightskip}{0pt plus 5cm}void GrAfterEffect::SetSamplerStage (unsigned int {\em handle}, \/  const {\bf GrTextureStage} \& {\em stage})}}
+\label{class_gr_after_effect_7c18aebb106dd993ad091cd64292d528}
+
+
+
+
+Definition at line 183 of file GrAfterEffect.cpp.\hypertarget{class_gr_after_effect_e692a8aa9358c8228aed2f0c69dedb8c}{
+\index{GrAfterEffect@{GrAfterEffect}!SetWidth@{SetWidth}}
+\index{SetWidth@{SetWidth}!GrAfterEffect@{GrAfterEffect}}
+\subsubsection[{SetWidth}]{\setlength{\rightskip}{0pt plus 5cm}void GrAfterEffect::SetWidth (float {\em width})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_after_effect_e692a8aa9358c8228aed2f0c69dedb8c}
+
+
+
+
+Definition at line 35 of file GrAfterEffect.h.\hypertarget{class_gr_after_effect_63aea2d5172f926dc628ff07f90edec6}{
+\index{GrAfterEffect@{GrAfterEffect}!Update@{Update}}
+\index{Update@{Update}!GrAfterEffect@{GrAfterEffect}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void GrAfterEffect::Update ()}}
+\label{class_gr_after_effect_63aea2d5172f926dc628ff07f90edec6}
+
+
+
+
+Definition at line 192 of file GrAfterEffect.cpp.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_gr_after_effect_ff8b6c747e2b149a857a58f0491a4189}{
+\index{GrAfterEffect@{GrAfterEffect}!kMaxSamplerCount@{kMaxSamplerCount}}
+\index{kMaxSamplerCount@{kMaxSamplerCount}!GrAfterEffect@{GrAfterEffect}}
+\subsubsection[{kMaxSamplerCount}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int {\bf GrAfterEffect::kMaxSamplerCount} = 8\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_gr_after_effect_ff8b6c747e2b149a857a58f0491a4189}
+
+
+
+
+Definition at line 29 of file GrAfterEffect.h.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_after_effect_8h}{GrAfterEffect.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_after_effect_8cpp}{GrAfterEffect.cpp}\end{CompactItemize}

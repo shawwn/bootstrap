@@ -1,0 +1,490 @@
+\hypertarget{class_gr_frustum}{
+\section{GrFrustum Class Reference}
+\label{class_gr_frustum}\index{GrFrustum@{GrFrustum}}
+}
+{\tt \#include $<$GrFrustum.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+enum \hyperlink{class_gr_frustum_75e33130cc18abc48f5f210454a62184}{ECULLPLANE} \{ \par
+\hyperlink{class_gr_frustum_75e33130cc18abc48f5f210454a6218403ae9beec0a454238994b124cfc0f9a7}{ECP\_\-LEFT}, 
+\hyperlink{class_gr_frustum_75e33130cc18abc48f5f210454a6218437ef60da732d0b34020a8c5a471218f6}{ECP\_\-RIGHT}, 
+\hyperlink{class_gr_frustum_75e33130cc18abc48f5f210454a62184489862a8c803515cb52be640ecdc07e3}{ECP\_\-TOP}, 
+\hyperlink{class_gr_frustum_75e33130cc18abc48f5f210454a62184685302e38b9023048e6acbe92d7d3281}{ECP\_\-BOTTOM}, 
+\par
+\hyperlink{class_gr_frustum_75e33130cc18abc48f5f210454a62184648e81f516e9a48aab7622e69e3df87e}{ECP\_\-NEAR}, 
+\hyperlink{class_gr_frustum_75e33130cc18abc48f5f210454a62184d3d2ae43f8489c8f6e5bb79330aebd0c}{ECP\_\-FAR}
+ \}
+\item 
+typedef \hyperlink{class_u_fast_array}{UFastArray}$<$ \hyperlink{class_m_plane}{MPlane}, 20, 6 $>$ \hyperlink{class_gr_frustum_0329f74100ff09e4eb6e1605ce9dcb35}{PlaneArray}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_frustum_41a338ecbcb9de65c9bce33b89b744bf}{GrFrustum} ()
+\item 
+\hyperlink{class_gr_frustum_4b37b98bc82214e96112a0c058ce8b54}{GrFrustum} (const \hyperlink{class_m_vec3}{MVec3} \&lookPoint, const \hyperlink{class_m_vec3}{MVec3} \&lookDir, const \hyperlink{class_m_vec3}{MVec3} \&nearBottomLeft, const \hyperlink{class_m_vec3}{MVec3} \&nearTopLeft, const \hyperlink{class_m_vec3}{MVec3} \&nearTopRight, const \hyperlink{class_m_vec3}{MVec3} \&nearBottomRight, const \hyperlink{class_m_vec3}{MVec3} \&farBottomLeft, const \hyperlink{class_m_vec3}{MVec3} \&farTopLeft, const \hyperlink{class_m_vec3}{MVec3} \&farTopRight, const \hyperlink{class_m_vec3}{MVec3} \&farBottomRight, float nearDist, float farDist)
+\item 
+\hyperlink{class_gr_frustum_f2db0fbb9b5c715759d5bd2da6dcb601}{GrFrustum} (const \hyperlink{class_m_vec3}{MVec3} \&lookPoint, const \hyperlink{class_m_vec3}{MVec3} \&bottomLeft, const \hyperlink{class_m_vec3}{MVec3} \&topLeft, const \hyperlink{class_m_vec3}{MVec3} \&topRight, const \hyperlink{class_m_vec3}{MVec3} \&bottomRight, const \hyperlink{class_m_vec3}{MVec3} \&lookDir, float nearDist, float farDist)
+\item 
+\hyperlink{class_gr_frustum_7b9113897c06cf6ab0fcdc24d47bcde2}{GrFrustum} (const \hyperlink{class_m_vec3}{MVec3} \&lookPoint, const \hyperlink{struct_s_quad}{SQuad} \&quad, const \hyperlink{class_m_vec3}{MVec3} \&lookDir, float nearDist, float farDist)
+\item 
+\hyperlink{class_gr_frustum_b5fc97ae84eef3b86eab19def346ebfc}{GrFrustum} (const \hyperlink{class_gr_frustum}{GrFrustum} \&frustum, const \hyperlink{struct_s_quad}{SQuad} \&quad, const \hyperlink{class_m_vec3}{MVec3} \&lookDir, float nearDist, float farDist)
+\item 
+\hyperlink{class_gr_frustum_d60e52630e16a9d3353027d2d8d21027}{GrFrustum} (const \hyperlink{class_gr_frustum}{GrFrustum} \&frustum)
+\item 
+\hyperlink{class_gr_frustum_c8740aef3cdcf16db377bc346ec2ac75}{$\sim$GrFrustum} ()
+\item 
+void \hyperlink{class_gr_frustum_c711031f75c591aa9810cff76178e8b1}{AddCullPlane} (const \hyperlink{class_m_plane}{MPlane} \&plane)
+\item 
+const \hyperlink{class_u_fast_array}{PlaneArray} \& \hyperlink{class_gr_frustum_f95c1cb46f5234b2ac7428cb40610564}{GetCullPlanes} () const 
+\item 
+const \hyperlink{class_m_vec3}{MVec3} \& \hyperlink{class_gr_frustum_77885bad884903f7797f0432ca2ca1fb}{GetPos} () const 
+\item 
+const \hyperlink{class_m_plane}{MPlane} \& \hyperlink{class_gr_frustum_5727c08f1f0aba8e892df0bf07f9e4d9}{GetCullPlane} (\hyperlink{class_gr_frustum_75e33130cc18abc48f5f210454a62184}{ECULLPLANE} plane) const 
+\item 
+void \hyperlink{class_gr_frustum_ea6dd0973f8c4f3c5ca802b4344ceb39}{GetCrossSection} (\hyperlink{class_u_fast_array}{UFastArray}$<$ \hyperlink{class_m_vec3}{MVec3} $>$ \&hull, const \hyperlink{class_m_plane}{MPlane} \&plane) const 
+\item 
+void \hyperlink{class_gr_frustum_891ca292f3ba613b83c32636716aa337}{GetPerpCrossSection} (\hyperlink{class_u_fast_array}{UFastArray}$<$ \hyperlink{class_m_vec3}{MVec3} $>$ \&hull, float dist) const 
+\item 
+void \hyperlink{class_gr_frustum_a8381a57041f73df26588232ce5e94a3}{BuildHull} (\hyperlink{struct_s_vec3}{SVec3} $\ast$verts) const 
+\item 
+bool \hyperlink{class_gr_frustum_6bc615f0766acce17756f75c5c026318}{IsHull} () const 
+\item 
+\hyperlink{class_gr_frustum}{GrFrustum} \& \hyperlink{class_gr_frustum_6c27a46f836241026652b564115a8899}{operator=} (const \hyperlink{class_gr_frustum}{GrFrustum} \&frustum)
+\item 
+bool \hyperlink{class_gr_frustum_602085817d3ab40d3aa10dc6e60e5295}{IsSphereInside} (const \hyperlink{class_m_vec3}{MVec3} \&pt, float radius) const 
+\item 
+bool \hyperlink{class_gr_frustum_e5e75590acca54d5e79e27601d75fe12}{IsSphereInside} (const \hyperlink{class_m_sphere}{MSphere} \&sphere) const 
+\item 
+bool \hyperlink{class_gr_frustum_551cfdc1d421a551b99caadc765b6bb4}{IsPointInside} (const \hyperlink{class_m_vec3}{MVec3} \&pt) const 
+\item 
+bool \hyperlink{class_gr_frustum_2d3c8e27667405f7d98bcc8bb6e8ece5}{IsAABoxInside} (const \hyperlink{class_m_a_a_box}{MAABox} \&box) const 
+\item 
+bool \hyperlink{class_gr_frustum_3bb369beaea81bc56884ca295d95f0e7}{IsOBoxInside} (const \hyperlink{class_m_o_box}{MOBox} \&box) const 
+\item 
+int \hyperlink{class_gr_frustum_fa16710ead0525507d2f259836fd1c2c}{FindRelativeLoc} (const \hyperlink{class_m_plane}{MPlane} \&plane) const 
+\item 
+int \hyperlink{class_gr_frustum_c1d108b681015b4c01a7327302a86b6e}{FindRelativeLoc} (const \hyperlink{class_m_vec3}{MVec3} \&pt0, const \hyperlink{class_m_vec3}{MVec3} \&pt1) const 
+\item 
+bool \hyperlink{class_gr_frustum_40a44d1754e21de45629e9eb5b733cbc}{IsFrustumInside} (const \hyperlink{class_gr_frustum}{GrFrustum} \&frustum) const 
+\item 
+bool \hyperlink{class_gr_frustum_b48fd10eabe661c8d28e6ea55f143da5}{IsPolygonInside} (const \hyperlink{class_gr_polygon}{GrPolygon} \&polygon) const 
+\item 
+bool \hyperlink{class_gr_frustum_7bb6796010fb5e76de8f47850e0621da}{IsTriangleInside} (const \hyperlink{struct_s_vec3}{SVec3} \&p0, const \hyperlink{struct_s_vec3}{SVec3} \&p1, const \hyperlink{struct_s_vec3}{SVec3} \&p2) const 
+\item 
+bool \hyperlink{class_gr_frustum_1b77aec57f30ea71c3f583f2724166b8}{IsRayInside} (const \hyperlink{class_m_ray}{MRay} \&ray, float epsilon) const 
+\item 
+void \hyperlink{class_gr_frustum_daebcc27d64029d4749d2f3f08b373ac}{DebugDraw} () const 
+\item 
+const \hyperlink{class_m_vec3}{MVec3} \& \hyperlink{class_gr_frustum_397c8f3652cf399e6fd086fcf4e679fd}{GetFarBottomLeft} () const 
+\item 
+const \hyperlink{class_m_vec3}{MVec3} \& \hyperlink{class_gr_frustum_5cf3f35a1eddcde0f8f5386ed40c641f}{GetFarTopLeft} () const 
+\item 
+const \hyperlink{class_m_vec3}{MVec3} \& \hyperlink{class_gr_frustum_6501233fcb7db5d06b3ec22befa4fbdb}{GetFarTopRight} () const 
+\item 
+const \hyperlink{class_m_vec3}{MVec3} \& \hyperlink{class_gr_frustum_5aab839f4efc785026daf9c7c53284a0}{GetFarBottomRight} () const 
+\item 
+const \hyperlink{class_m_vec3}{MVec3} \& \hyperlink{class_gr_frustum_6c22fff9cd8287371cdf66a087d04ce9}{GetNearBottomLeft} () const 
+\item 
+const \hyperlink{class_m_vec3}{MVec3} \& \hyperlink{class_gr_frustum_5fc3092ebbcba98ef8d5e0c727d529e4}{GetNearTopLeft} () const 
+\item 
+const \hyperlink{class_m_vec3}{MVec3} \& \hyperlink{class_gr_frustum_199f18b22800f33724f6df2c69e489a9}{GetNearTopRight} () const 
+\item 
+const \hyperlink{class_m_vec3}{MVec3} \& \hyperlink{class_gr_frustum_7cfe947d96c2d3fe483ef2b45535e246}{GetNearBottomRight} () const 
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 29 of file GrFrustum.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_gr_frustum_0329f74100ff09e4eb6e1605ce9dcb35}{
+\index{GrFrustum@{GrFrustum}!PlaneArray@{PlaneArray}}
+\index{PlaneArray@{PlaneArray}!GrFrustum@{GrFrustum}}
+\subsubsection[{PlaneArray}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf UFastArray}$<$ {\bf MPlane}, 20, 6 $>$ {\bf GrFrustum::PlaneArray}}}
+\label{class_gr_frustum_0329f74100ff09e4eb6e1605ce9dcb35}
+
+
+
+
+Definition at line 32 of file GrFrustum.h.
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_gr_frustum_75e33130cc18abc48f5f210454a62184}{
+\index{GrFrustum@{GrFrustum}!ECULLPLANE@{ECULLPLANE}}
+\index{ECULLPLANE@{ECULLPLANE}!GrFrustum@{GrFrustum}}
+\subsubsection[{ECULLPLANE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GrFrustum::ECULLPLANE}}}
+\label{class_gr_frustum_75e33130cc18abc48f5f210454a62184}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{ECP\_\-LEFT@{ECP\_\-LEFT}!GrFrustum@{GrFrustum}}\index{GrFrustum@{GrFrustum}!ECP\_\-LEFT@{ECP\_\-LEFT}}\item[{\em 
+\hypertarget{class_gr_frustum_75e33130cc18abc48f5f210454a6218403ae9beec0a454238994b124cfc0f9a7}{
+ECP\_\-LEFT}
+\label{class_gr_frustum_75e33130cc18abc48f5f210454a6218403ae9beec0a454238994b124cfc0f9a7}
+}]\index{ECP\_\-RIGHT@{ECP\_\-RIGHT}!GrFrustum@{GrFrustum}}\index{GrFrustum@{GrFrustum}!ECP\_\-RIGHT@{ECP\_\-RIGHT}}\item[{\em 
+\hypertarget{class_gr_frustum_75e33130cc18abc48f5f210454a6218437ef60da732d0b34020a8c5a471218f6}{
+ECP\_\-RIGHT}
+\label{class_gr_frustum_75e33130cc18abc48f5f210454a6218437ef60da732d0b34020a8c5a471218f6}
+}]\index{ECP\_\-TOP@{ECP\_\-TOP}!GrFrustum@{GrFrustum}}\index{GrFrustum@{GrFrustum}!ECP\_\-TOP@{ECP\_\-TOP}}\item[{\em 
+\hypertarget{class_gr_frustum_75e33130cc18abc48f5f210454a62184489862a8c803515cb52be640ecdc07e3}{
+ECP\_\-TOP}
+\label{class_gr_frustum_75e33130cc18abc48f5f210454a62184489862a8c803515cb52be640ecdc07e3}
+}]\index{ECP\_\-BOTTOM@{ECP\_\-BOTTOM}!GrFrustum@{GrFrustum}}\index{GrFrustum@{GrFrustum}!ECP\_\-BOTTOM@{ECP\_\-BOTTOM}}\item[{\em 
+\hypertarget{class_gr_frustum_75e33130cc18abc48f5f210454a62184685302e38b9023048e6acbe92d7d3281}{
+ECP\_\-BOTTOM}
+\label{class_gr_frustum_75e33130cc18abc48f5f210454a62184685302e38b9023048e6acbe92d7d3281}
+}]\index{ECP\_\-NEAR@{ECP\_\-NEAR}!GrFrustum@{GrFrustum}}\index{GrFrustum@{GrFrustum}!ECP\_\-NEAR@{ECP\_\-NEAR}}\item[{\em 
+\hypertarget{class_gr_frustum_75e33130cc18abc48f5f210454a62184648e81f516e9a48aab7622e69e3df87e}{
+ECP\_\-NEAR}
+\label{class_gr_frustum_75e33130cc18abc48f5f210454a62184648e81f516e9a48aab7622e69e3df87e}
+}]\index{ECP\_\-FAR@{ECP\_\-FAR}!GrFrustum@{GrFrustum}}\index{GrFrustum@{GrFrustum}!ECP\_\-FAR@{ECP\_\-FAR}}\item[{\em 
+\hypertarget{class_gr_frustum_75e33130cc18abc48f5f210454a62184d3d2ae43f8489c8f6e5bb79330aebd0c}{
+ECP\_\-FAR}
+\label{class_gr_frustum_75e33130cc18abc48f5f210454a62184d3d2ae43f8489c8f6e5bb79330aebd0c}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 34 of file GrFrustum.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_frustum_41a338ecbcb9de65c9bce33b89b744bf}{
+\index{GrFrustum@{GrFrustum}!GrFrustum@{GrFrustum}}
+\index{GrFrustum@{GrFrustum}!GrFrustum@{GrFrustum}}
+\subsubsection[{GrFrustum}]{\setlength{\rightskip}{0pt plus 5cm}GrFrustum::GrFrustum ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_frustum_41a338ecbcb9de65c9bce33b89b744bf}
+
+
+
+
+Definition at line 46 of file GrFrustum.h.\hypertarget{class_gr_frustum_4b37b98bc82214e96112a0c058ce8b54}{
+\index{GrFrustum@{GrFrustum}!GrFrustum@{GrFrustum}}
+\index{GrFrustum@{GrFrustum}!GrFrustum@{GrFrustum}}
+\subsubsection[{GrFrustum}]{\setlength{\rightskip}{0pt plus 5cm}GrFrustum::GrFrustum (const {\bf MVec3} \& {\em lookPoint}, \/  const {\bf MVec3} \& {\em lookDir}, \/  const {\bf MVec3} \& {\em nearBottomLeft}, \/  const {\bf MVec3} \& {\em nearTopLeft}, \/  const {\bf MVec3} \& {\em nearTopRight}, \/  const {\bf MVec3} \& {\em nearBottomRight}, \/  const {\bf MVec3} \& {\em farBottomLeft}, \/  const {\bf MVec3} \& {\em farTopLeft}, \/  const {\bf MVec3} \& {\em farTopRight}, \/  const {\bf MVec3} \& {\em farBottomRight}, \/  float {\em nearDist}, \/  float {\em farDist})}}
+\label{class_gr_frustum_4b37b98bc82214e96112a0c058ce8b54}
+
+
+
+
+Definition at line 29 of file GrFrustum.cpp.\hypertarget{class_gr_frustum_f2db0fbb9b5c715759d5bd2da6dcb601}{
+\index{GrFrustum@{GrFrustum}!GrFrustum@{GrFrustum}}
+\index{GrFrustum@{GrFrustum}!GrFrustum@{GrFrustum}}
+\subsubsection[{GrFrustum}]{\setlength{\rightskip}{0pt plus 5cm}GrFrustum::GrFrustum (const {\bf MVec3} \& {\em lookPoint}, \/  const {\bf MVec3} \& {\em bottomLeft}, \/  const {\bf MVec3} \& {\em topLeft}, \/  const {\bf MVec3} \& {\em topRight}, \/  const {\bf MVec3} \& {\em bottomRight}, \/  const {\bf MVec3} \& {\em lookDir}, \/  float {\em nearDist}, \/  float {\em farDist})}}
+\label{class_gr_frustum_f2db0fbb9b5c715759d5bd2da6dcb601}
+
+
+
+
+Definition at line 57 of file GrFrustum.cpp.\hypertarget{class_gr_frustum_7b9113897c06cf6ab0fcdc24d47bcde2}{
+\index{GrFrustum@{GrFrustum}!GrFrustum@{GrFrustum}}
+\index{GrFrustum@{GrFrustum}!GrFrustum@{GrFrustum}}
+\subsubsection[{GrFrustum}]{\setlength{\rightskip}{0pt plus 5cm}GrFrustum::GrFrustum (const {\bf MVec3} \& {\em lookPoint}, \/  const {\bf SQuad} \& {\em quad}, \/  const {\bf MVec3} \& {\em lookDir}, \/  float {\em nearDist}, \/  float {\em farDist})}}
+\label{class_gr_frustum_7b9113897c06cf6ab0fcdc24d47bcde2}
+
+
+
+
+Definition at line 89 of file GrFrustum.cpp.\hypertarget{class_gr_frustum_b5fc97ae84eef3b86eab19def346ebfc}{
+\index{GrFrustum@{GrFrustum}!GrFrustum@{GrFrustum}}
+\index{GrFrustum@{GrFrustum}!GrFrustum@{GrFrustum}}
+\subsubsection[{GrFrustum}]{\setlength{\rightskip}{0pt plus 5cm}GrFrustum::GrFrustum (const {\bf GrFrustum} \& {\em frustum}, \/  const {\bf SQuad} \& {\em quad}, \/  const {\bf MVec3} \& {\em lookDir}, \/  float {\em nearDist}, \/  float {\em farDist})}}
+\label{class_gr_frustum_b5fc97ae84eef3b86eab19def346ebfc}
+
+
+
+
+Definition at line 120 of file GrFrustum.cpp.\hypertarget{class_gr_frustum_d60e52630e16a9d3353027d2d8d21027}{
+\index{GrFrustum@{GrFrustum}!GrFrustum@{GrFrustum}}
+\index{GrFrustum@{GrFrustum}!GrFrustum@{GrFrustum}}
+\subsubsection[{GrFrustum}]{\setlength{\rightskip}{0pt plus 5cm}GrFrustum::GrFrustum (const {\bf GrFrustum} \& {\em frustum})}}
+\label{class_gr_frustum_d60e52630e16a9d3353027d2d8d21027}
+
+
+
+
+Definition at line 152 of file GrFrustum.cpp.\hypertarget{class_gr_frustum_c8740aef3cdcf16db377bc346ec2ac75}{
+\index{GrFrustum@{GrFrustum}!$\sim$GrFrustum@{$\sim$GrFrustum}}
+\index{$\sim$GrFrustum@{$\sim$GrFrustum}!GrFrustum@{GrFrustum}}
+\subsubsection[{$\sim$GrFrustum}]{\setlength{\rightskip}{0pt plus 5cm}GrFrustum::$\sim$GrFrustum ()}}
+\label{class_gr_frustum_c8740aef3cdcf16db377bc346ec2ac75}
+
+
+
+
+Definition at line 169 of file GrFrustum.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_frustum_c711031f75c591aa9810cff76178e8b1}{
+\index{GrFrustum@{GrFrustum}!AddCullPlane@{AddCullPlane}}
+\index{AddCullPlane@{AddCullPlane}!GrFrustum@{GrFrustum}}
+\subsubsection[{AddCullPlane}]{\setlength{\rightskip}{0pt plus 5cm}void GrFrustum::AddCullPlane (const {\bf MPlane} \& {\em plane})}}
+\label{class_gr_frustum_c711031f75c591aa9810cff76178e8b1}
+
+
+
+
+Definition at line 201 of file GrFrustum.cpp.\hypertarget{class_gr_frustum_a8381a57041f73df26588232ce5e94a3}{
+\index{GrFrustum@{GrFrustum}!BuildHull@{BuildHull}}
+\index{BuildHull@{BuildHull}!GrFrustum@{GrFrustum}}
+\subsubsection[{BuildHull}]{\setlength{\rightskip}{0pt plus 5cm}void GrFrustum::BuildHull ({\bf SVec3} $\ast$ {\em verts}) const}}
+\label{class_gr_frustum_a8381a57041f73df26588232ce5e94a3}
+
+
+
+
+Definition at line 276 of file GrFrustum.cpp.\hypertarget{class_gr_frustum_daebcc27d64029d4749d2f3f08b373ac}{
+\index{GrFrustum@{GrFrustum}!DebugDraw@{DebugDraw}}
+\index{DebugDraw@{DebugDraw}!GrFrustum@{GrFrustum}}
+\subsubsection[{DebugDraw}]{\setlength{\rightskip}{0pt plus 5cm}void GrFrustum::DebugDraw () const}}
+\label{class_gr_frustum_daebcc27d64029d4749d2f3f08b373ac}
+
+
+
+
+Definition at line 697 of file GrFrustum.cpp.\hypertarget{class_gr_frustum_c1d108b681015b4c01a7327302a86b6e}{
+\index{GrFrustum@{GrFrustum}!FindRelativeLoc@{FindRelativeLoc}}
+\index{FindRelativeLoc@{FindRelativeLoc}!GrFrustum@{GrFrustum}}
+\subsubsection[{FindRelativeLoc}]{\setlength{\rightskip}{0pt plus 5cm}int GrFrustum::FindRelativeLoc (const {\bf MVec3} \& {\em pt0}, \/  const {\bf MVec3} \& {\em pt1}) const}}
+\label{class_gr_frustum_c1d108b681015b4c01a7327302a86b6e}
+
+
+
+
+Definition at line 510 of file GrFrustum.cpp.\hypertarget{class_gr_frustum_fa16710ead0525507d2f259836fd1c2c}{
+\index{GrFrustum@{GrFrustum}!FindRelativeLoc@{FindRelativeLoc}}
+\index{FindRelativeLoc@{FindRelativeLoc}!GrFrustum@{GrFrustum}}
+\subsubsection[{FindRelativeLoc}]{\setlength{\rightskip}{0pt plus 5cm}int GrFrustum::FindRelativeLoc (const {\bf MPlane} \& {\em plane}) const}}
+\label{class_gr_frustum_fa16710ead0525507d2f259836fd1c2c}
+
+
+
+
+Definition at line 456 of file GrFrustum.cpp.\hypertarget{class_gr_frustum_ea6dd0973f8c4f3c5ca802b4344ceb39}{
+\index{GrFrustum@{GrFrustum}!GetCrossSection@{GetCrossSection}}
+\index{GetCrossSection@{GetCrossSection}!GrFrustum@{GrFrustum}}
+\subsubsection[{GetCrossSection}]{\setlength{\rightskip}{0pt plus 5cm}void GrFrustum::GetCrossSection ({\bf UFastArray}$<$ {\bf MVec3} $>$ \& {\em hull}, \/  const {\bf MPlane} \& {\em plane}) const}}
+\label{class_gr_frustum_ea6dd0973f8c4f3c5ca802b4344ceb39}
+
+
+
+
+Definition at line 218 of file GrFrustum.cpp.\hypertarget{class_gr_frustum_5727c08f1f0aba8e892df0bf07f9e4d9}{
+\index{GrFrustum@{GrFrustum}!GetCullPlane@{GetCullPlane}}
+\index{GetCullPlane@{GetCullPlane}!GrFrustum@{GrFrustum}}
+\subsubsection[{GetCullPlane}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MPlane} \& GrFrustum::GetCullPlane ({\bf ECULLPLANE} {\em plane}) const}}
+\label{class_gr_frustum_5727c08f1f0aba8e892df0bf07f9e4d9}
+
+
+
+
+Definition at line 211 of file GrFrustum.cpp.\hypertarget{class_gr_frustum_f95c1cb46f5234b2ac7428cb40610564}{
+\index{GrFrustum@{GrFrustum}!GetCullPlanes@{GetCullPlanes}}
+\index{GetCullPlanes@{GetCullPlanes}!GrFrustum@{GrFrustum}}
+\subsubsection[{GetCullPlanes}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf PlaneArray}\& GrFrustum::GetCullPlanes () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_frustum_f95c1cb46f5234b2ac7428cb40610564}
+
+
+
+
+Definition at line 61 of file GrFrustum.h.\hypertarget{class_gr_frustum_397c8f3652cf399e6fd086fcf4e679fd}{
+\index{GrFrustum@{GrFrustum}!GetFarBottomLeft@{GetFarBottomLeft}}
+\index{GetFarBottomLeft@{GetFarBottomLeft}!GrFrustum@{GrFrustum}}
+\subsubsection[{GetFarBottomLeft}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MVec3}\& GrFrustum::GetFarBottomLeft () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_frustum_397c8f3652cf399e6fd086fcf4e679fd}
+
+
+
+
+Definition at line 99 of file GrFrustum.h.\hypertarget{class_gr_frustum_5aab839f4efc785026daf9c7c53284a0}{
+\index{GrFrustum@{GrFrustum}!GetFarBottomRight@{GetFarBottomRight}}
+\index{GetFarBottomRight@{GetFarBottomRight}!GrFrustum@{GrFrustum}}
+\subsubsection[{GetFarBottomRight}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MVec3}\& GrFrustum::GetFarBottomRight () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_frustum_5aab839f4efc785026daf9c7c53284a0}
+
+
+
+
+Definition at line 102 of file GrFrustum.h.\hypertarget{class_gr_frustum_5cf3f35a1eddcde0f8f5386ed40c641f}{
+\index{GrFrustum@{GrFrustum}!GetFarTopLeft@{GetFarTopLeft}}
+\index{GetFarTopLeft@{GetFarTopLeft}!GrFrustum@{GrFrustum}}
+\subsubsection[{GetFarTopLeft}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MVec3}\& GrFrustum::GetFarTopLeft () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_frustum_5cf3f35a1eddcde0f8f5386ed40c641f}
+
+
+
+
+Definition at line 100 of file GrFrustum.h.\hypertarget{class_gr_frustum_6501233fcb7db5d06b3ec22befa4fbdb}{
+\index{GrFrustum@{GrFrustum}!GetFarTopRight@{GetFarTopRight}}
+\index{GetFarTopRight@{GetFarTopRight}!GrFrustum@{GrFrustum}}
+\subsubsection[{GetFarTopRight}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MVec3}\& GrFrustum::GetFarTopRight () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_frustum_6501233fcb7db5d06b3ec22befa4fbdb}
+
+
+
+
+Definition at line 101 of file GrFrustum.h.\hypertarget{class_gr_frustum_6c22fff9cd8287371cdf66a087d04ce9}{
+\index{GrFrustum@{GrFrustum}!GetNearBottomLeft@{GetNearBottomLeft}}
+\index{GetNearBottomLeft@{GetNearBottomLeft}!GrFrustum@{GrFrustum}}
+\subsubsection[{GetNearBottomLeft}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MVec3}\& GrFrustum::GetNearBottomLeft () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_frustum_6c22fff9cd8287371cdf66a087d04ce9}
+
+
+
+
+Definition at line 103 of file GrFrustum.h.\hypertarget{class_gr_frustum_7cfe947d96c2d3fe483ef2b45535e246}{
+\index{GrFrustum@{GrFrustum}!GetNearBottomRight@{GetNearBottomRight}}
+\index{GetNearBottomRight@{GetNearBottomRight}!GrFrustum@{GrFrustum}}
+\subsubsection[{GetNearBottomRight}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MVec3}\& GrFrustum::GetNearBottomRight () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_frustum_7cfe947d96c2d3fe483ef2b45535e246}
+
+
+
+
+Definition at line 106 of file GrFrustum.h.\hypertarget{class_gr_frustum_5fc3092ebbcba98ef8d5e0c727d529e4}{
+\index{GrFrustum@{GrFrustum}!GetNearTopLeft@{GetNearTopLeft}}
+\index{GetNearTopLeft@{GetNearTopLeft}!GrFrustum@{GrFrustum}}
+\subsubsection[{GetNearTopLeft}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MVec3}\& GrFrustum::GetNearTopLeft () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_frustum_5fc3092ebbcba98ef8d5e0c727d529e4}
+
+
+
+
+Definition at line 104 of file GrFrustum.h.\hypertarget{class_gr_frustum_199f18b22800f33724f6df2c69e489a9}{
+\index{GrFrustum@{GrFrustum}!GetNearTopRight@{GetNearTopRight}}
+\index{GetNearTopRight@{GetNearTopRight}!GrFrustum@{GrFrustum}}
+\subsubsection[{GetNearTopRight}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MVec3}\& GrFrustum::GetNearTopRight () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_frustum_199f18b22800f33724f6df2c69e489a9}
+
+
+
+
+Definition at line 105 of file GrFrustum.h.\hypertarget{class_gr_frustum_891ca292f3ba613b83c32636716aa337}{
+\index{GrFrustum@{GrFrustum}!GetPerpCrossSection@{GetPerpCrossSection}}
+\index{GetPerpCrossSection@{GetPerpCrossSection}!GrFrustum@{GrFrustum}}
+\subsubsection[{GetPerpCrossSection}]{\setlength{\rightskip}{0pt plus 5cm}void GrFrustum::GetPerpCrossSection ({\bf UFastArray}$<$ {\bf MVec3} $>$ \& {\em hull}, \/  float {\em dist}) const}}
+\label{class_gr_frustum_891ca292f3ba613b83c32636716aa337}
+
+
+
+
+Definition at line 254 of file GrFrustum.cpp.\hypertarget{class_gr_frustum_77885bad884903f7797f0432ca2ca1fb}{
+\index{GrFrustum@{GrFrustum}!GetPos@{GetPos}}
+\index{GetPos@{GetPos}!GrFrustum@{GrFrustum}}
+\subsubsection[{GetPos}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MVec3}\& GrFrustum::GetPos () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_frustum_77885bad884903f7797f0432ca2ca1fb}
+
+
+
+
+Definition at line 62 of file GrFrustum.h.\hypertarget{class_gr_frustum_2d3c8e27667405f7d98bcc8bb6e8ece5}{
+\index{GrFrustum@{GrFrustum}!IsAABoxInside@{IsAABoxInside}}
+\index{IsAABoxInside@{IsAABoxInside}!GrFrustum@{GrFrustum}}
+\subsubsection[{IsAABoxInside}]{\setlength{\rightskip}{0pt plus 5cm}bool GrFrustum::IsAABoxInside (const {\bf MAABox} \& {\em box}) const}}
+\label{class_gr_frustum_2d3c8e27667405f7d98bcc8bb6e8ece5}
+
+
+
+
+Definition at line 365 of file GrFrustum.cpp.\hypertarget{class_gr_frustum_40a44d1754e21de45629e9eb5b733cbc}{
+\index{GrFrustum@{GrFrustum}!IsFrustumInside@{IsFrustumInside}}
+\index{IsFrustumInside@{IsFrustumInside}!GrFrustum@{GrFrustum}}
+\subsubsection[{IsFrustumInside}]{\setlength{\rightskip}{0pt plus 5cm}bool GrFrustum::IsFrustumInside (const {\bf GrFrustum} \& {\em frustum}) const}}
+\label{class_gr_frustum_40a44d1754e21de45629e9eb5b733cbc}
+
+
+
+
+Definition at line 582 of file GrFrustum.cpp.\hypertarget{class_gr_frustum_6bc615f0766acce17756f75c5c026318}{
+\index{GrFrustum@{GrFrustum}!IsHull@{IsHull}}
+\index{IsHull@{IsHull}!GrFrustum@{GrFrustum}}
+\subsubsection[{IsHull}]{\setlength{\rightskip}{0pt plus 5cm}bool GrFrustum::IsHull () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_frustum_6bc615f0766acce17756f75c5c026318}
+
+
+
+
+Definition at line 76 of file GrFrustum.h.\hypertarget{class_gr_frustum_3bb369beaea81bc56884ca295d95f0e7}{
+\index{GrFrustum@{GrFrustum}!IsOBoxInside@{IsOBoxInside}}
+\index{IsOBoxInside@{IsOBoxInside}!GrFrustum@{GrFrustum}}
+\subsubsection[{IsOBoxInside}]{\setlength{\rightskip}{0pt plus 5cm}bool GrFrustum::IsOBoxInside (const {\bf MOBox} \& {\em box}) const}}
+\label{class_gr_frustum_3bb369beaea81bc56884ca295d95f0e7}
+
+
+
+
+Definition at line 395 of file GrFrustum.cpp.\hypertarget{class_gr_frustum_551cfdc1d421a551b99caadc765b6bb4}{
+\index{GrFrustum@{GrFrustum}!IsPointInside@{IsPointInside}}
+\index{IsPointInside@{IsPointInside}!GrFrustum@{GrFrustum}}
+\subsubsection[{IsPointInside}]{\setlength{\rightskip}{0pt plus 5cm}bool GrFrustum::IsPointInside (const {\bf MVec3} \& {\em pt}) const}}
+\label{class_gr_frustum_551cfdc1d421a551b99caadc765b6bb4}
+
+
+
+
+Definition at line 348 of file GrFrustum.cpp.\hypertarget{class_gr_frustum_b48fd10eabe661c8d28e6ea55f143da5}{
+\index{GrFrustum@{GrFrustum}!IsPolygonInside@{IsPolygonInside}}
+\index{IsPolygonInside@{IsPolygonInside}!GrFrustum@{GrFrustum}}
+\subsubsection[{IsPolygonInside}]{\setlength{\rightskip}{0pt plus 5cm}bool GrFrustum::IsPolygonInside (const {\bf GrPolygon} \& {\em polygon}) const}}
+\label{class_gr_frustum_b48fd10eabe661c8d28e6ea55f143da5}
+
+
+
+
+Definition at line 609 of file GrFrustum.cpp.\hypertarget{class_gr_frustum_1b77aec57f30ea71c3f583f2724166b8}{
+\index{GrFrustum@{GrFrustum}!IsRayInside@{IsRayInside}}
+\index{IsRayInside@{IsRayInside}!GrFrustum@{GrFrustum}}
+\subsubsection[{IsRayInside}]{\setlength{\rightskip}{0pt plus 5cm}bool GrFrustum::IsRayInside (const {\bf MRay} \& {\em ray}, \/  float {\em epsilon}) const}}
+\label{class_gr_frustum_1b77aec57f30ea71c3f583f2724166b8}
+
+
+
+
+Definition at line 665 of file GrFrustum.cpp.\hypertarget{class_gr_frustum_e5e75590acca54d5e79e27601d75fe12}{
+\index{GrFrustum@{GrFrustum}!IsSphereInside@{IsSphereInside}}
+\index{IsSphereInside@{IsSphereInside}!GrFrustum@{GrFrustum}}
+\subsubsection[{IsSphereInside}]{\setlength{\rightskip}{0pt plus 5cm}bool GrFrustum::IsSphereInside (const {\bf MSphere} \& {\em sphere}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_frustum_e5e75590acca54d5e79e27601d75fe12}
+
+
+
+
+Definition at line 84 of file GrFrustum.h.\hypertarget{class_gr_frustum_602085817d3ab40d3aa10dc6e60e5295}{
+\index{GrFrustum@{GrFrustum}!IsSphereInside@{IsSphereInside}}
+\index{IsSphereInside@{IsSphereInside}!GrFrustum@{GrFrustum}}
+\subsubsection[{IsSphereInside}]{\setlength{\rightskip}{0pt plus 5cm}bool GrFrustum::IsSphereInside (const {\bf MVec3} \& {\em pt}, \/  float {\em radius}) const}}
+\label{class_gr_frustum_602085817d3ab40d3aa10dc6e60e5295}
+
+
+
+
+Definition at line 330 of file GrFrustum.cpp.\hypertarget{class_gr_frustum_7bb6796010fb5e76de8f47850e0621da}{
+\index{GrFrustum@{GrFrustum}!IsTriangleInside@{IsTriangleInside}}
+\index{IsTriangleInside@{IsTriangleInside}!GrFrustum@{GrFrustum}}
+\subsubsection[{IsTriangleInside}]{\setlength{\rightskip}{0pt plus 5cm}bool GrFrustum::IsTriangleInside (const {\bf SVec3} \& {\em p0}, \/  const {\bf SVec3} \& {\em p1}, \/  const {\bf SVec3} \& {\em p2}) const}}
+\label{class_gr_frustum_7bb6796010fb5e76de8f47850e0621da}
+
+
+
+
+Definition at line 639 of file GrFrustum.cpp.\hypertarget{class_gr_frustum_6c27a46f836241026652b564115a8899}{
+\index{GrFrustum@{GrFrustum}!operator=@{operator=}}
+\index{operator=@{operator=}!GrFrustum@{GrFrustum}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrFrustum} \& GrFrustum::operator= (const {\bf GrFrustum} \& {\em frustum})}}
+\label{class_gr_frustum_6c27a46f836241026652b564115a8899}
+
+
+
+
+Definition at line 181 of file GrFrustum.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_frustum_8h}{GrFrustum.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_frustum_8cpp}{GrFrustum.cpp}\end{CompactItemize}

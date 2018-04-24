@@ -1,0 +1,406 @@
+\hypertarget{namespaceirr_1_1io}{
+\section{irr::io Namespace Reference}
+\label{namespaceirr_1_1io}\index{irr::io@{irr::io}}
+}
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+class \hyperlink{classirr_1_1io_1_1_c_x_m_l_reader_impl}{CXMLReaderImpl}
+\begin{CompactList}\small\item\em implementation of the IrrXMLReader \item\end{CompactList}\item 
+class \hyperlink{classirr_1_1io_1_1_c_file_read_call_back}{CFileReadCallBack}
+\begin{CompactList}\small\item\em Implementation of the file read callback for ordinary files. \item\end{CompactList}\item 
+class \hyperlink{classirr_1_1io_1_1_i_file_read_call_back}{IFileReadCallBack}
+\begin{CompactList}\small\item\em Callback class for file read abstraction. \item\end{CompactList}\item 
+class \hyperlink{classirr_1_1io_1_1_i_x_m_l_base}{IXMLBase}
+\begin{CompactList}\small\item\em Empty class to be used as parent class for IrrXMLReader. \item\end{CompactList}\item 
+class \hyperlink{classirr_1_1io_1_1_i_irr_x_m_l_reader}{IIrrXMLReader}
+\begin{CompactList}\small\item\em Interface providing easy read access to a XML file. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Typedefs}
+\begin{CompactItemize}
+\item 
+typedef unsigned short \hyperlink{namespaceirr_1_1io_5e70682de915fd223e6aa77bb693fc74}{char16}
+\begin{CompactList}\small\item\em defines the utf-16 type. \item\end{CompactList}\item 
+typedef unsigned long \hyperlink{namespaceirr_1_1io_ab102cb4e8212cf98c1561064eb36e9e}{char32}
+\begin{CompactList}\small\item\em defines the utf-32 type. \item\end{CompactList}\item 
+typedef \hyperlink{classirr_1_1io_1_1_i_irr_x_m_l_reader}{IIrrXMLReader}$<$ char, \hyperlink{classirr_1_1io_1_1_i_x_m_l_base}{IXMLBase} $>$ \hyperlink{namespaceirr_1_1io_1628edbb9d5d53f18c82d2a92b0ad27e}{IrrXMLReader}
+\begin{CompactList}\small\item\em A UTF-8 or ASCII character xml parser. \item\end{CompactList}\item 
+typedef \hyperlink{classirr_1_1io_1_1_i_irr_x_m_l_reader}{IIrrXMLReader}$<$ \hyperlink{namespaceirr_1_1io_5e70682de915fd223e6aa77bb693fc74}{char16}, \hyperlink{classirr_1_1io_1_1_i_x_m_l_base}{IXMLBase} $>$ \hyperlink{namespaceirr_1_1io_5eb4094dfd0d509e0cd8a9d1dd30a5b9}{IrrXMLReaderUTF16}
+\begin{CompactList}\small\item\em A UTF-16 xml parser. \item\end{CompactList}\item 
+typedef \hyperlink{classirr_1_1io_1_1_i_irr_x_m_l_reader}{IIrrXMLReader}$<$ \hyperlink{namespaceirr_1_1io_ab102cb4e8212cf98c1561064eb36e9e}{char32}, \hyperlink{classirr_1_1io_1_1_i_x_m_l_base}{IXMLBase} $>$ \hyperlink{namespaceirr_1_1io_70f411ff403636fb5c4e9becb090d5ec}{IrrXMLReaderUTF32}
+\begin{CompactList}\small\item\em A UTF-32 xml parser. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Enumerations}
+\begin{CompactItemize}
+\item 
+enum \hyperlink{namespaceirr_1_1io_c7e51e5a6bd00451dec248f497b16a9d}{ETEXT\_\-FORMAT} \{ \par
+\hyperlink{namespaceirr_1_1io_c7e51e5a6bd00451dec248f497b16a9da83b76584091bdef7401e2e7c27837bf}{ETF\_\-ASCII}, 
+\hyperlink{namespaceirr_1_1io_c7e51e5a6bd00451dec248f497b16a9de9766ce8a50bc70e144a7b0cc96ba8db}{ETF\_\-UTF8}, 
+\hyperlink{namespaceirr_1_1io_c7e51e5a6bd00451dec248f497b16a9d5c0685f21f600ba0acdd84bae458ee5c}{ETF\_\-UTF16\_\-BE}, 
+\hyperlink{namespaceirr_1_1io_c7e51e5a6bd00451dec248f497b16a9d331a03a8d3459ad9a05d31dee38a8a73}{ETF\_\-UTF16\_\-LE}, 
+\par
+\hyperlink{namespaceirr_1_1io_c7e51e5a6bd00451dec248f497b16a9da550dbb5ed61125ff6a12a9a50e4e7b1}{ETF\_\-UTF32\_\-BE}, 
+\hyperlink{namespaceirr_1_1io_c7e51e5a6bd00451dec248f497b16a9d122cd8cec108b4e5a4040f1a9bcc6709}{ETF\_\-UTF32\_\-LE}
+ \}
+\begin{CompactList}\small\item\em Enumeration of all supported source text file formats. \item\end{CompactList}\item 
+enum \hyperlink{namespaceirr_1_1io_86a02676c9cbb822e04d60c81b4f33ed}{EXML\_\-NODE} \{ \par
+\hyperlink{namespaceirr_1_1io_86a02676c9cbb822e04d60c81b4f33eda7f8e643a481d9c8b75a25499f40235c}{EXN\_\-NONE}, 
+\hyperlink{namespaceirr_1_1io_86a02676c9cbb822e04d60c81b4f33ed9df4f5baccc23a0ad1f6fa64d8de2fc0}{EXN\_\-ELEMENT}, 
+\hyperlink{namespaceirr_1_1io_86a02676c9cbb822e04d60c81b4f33ed54ef1997279f08180634f4a897f771b8}{EXN\_\-ELEMENT\_\-END}, 
+\hyperlink{namespaceirr_1_1io_86a02676c9cbb822e04d60c81b4f33ed0edf973f8ca0f6097f69369539d432a4}{EXN\_\-TEXT}, 
+\par
+\hyperlink{namespaceirr_1_1io_86a02676c9cbb822e04d60c81b4f33eddc47ef6b25afabf76ff3acea8fea2680}{EXN\_\-COMMENT}, 
+\hyperlink{namespaceirr_1_1io_86a02676c9cbb822e04d60c81b4f33edabb26cfe097fadf64c45db0f76523ac6}{EXN\_\-CDATA}, 
+\hyperlink{namespaceirr_1_1io_86a02676c9cbb822e04d60c81b4f33edf80bf58165975de0e7a7c28882906865}{EXN\_\-UNKNOWN}
+ \}
+\begin{CompactList}\small\item\em Enumeration for all xml nodes which are parsed by IrrXMLReader. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{classirr_1_1io_1_1_i_irr_x_m_l_reader}{IrrXMLReader} $\ast$ \hyperlink{namespaceirr_1_1io_a79dd5b9dae1b75be3dec4374176a5ce}{createIrrXMLReader} (const char $\ast$filename)
+\begin{CompactList}\small\item\em Creates an instance of an UFT-8 or ASCII character xml parser. \item\end{CompactList}\item 
+\hyperlink{classirr_1_1io_1_1_i_irr_x_m_l_reader}{IrrXMLReader} $\ast$ \hyperlink{namespaceirr_1_1io_64543772bdd123f8be1cdb20dac36353}{createIrrXMLReader} (FILE $\ast$file)
+\begin{CompactList}\small\item\em Creates an instance of an UFT-8 or ASCII character xml parser. \item\end{CompactList}\item 
+\hyperlink{classirr_1_1io_1_1_i_irr_x_m_l_reader}{IrrXMLReader} $\ast$ \hyperlink{namespaceirr_1_1io_70866610843a6fc753681de9a9076f4d}{createIrrXMLReader} (\hyperlink{classirr_1_1io_1_1_i_file_read_call_back}{IFileReadCallBack} $\ast$callback)
+\begin{CompactList}\small\item\em Creates an instance of an UFT-8 or ASCII character xml parser. \item\end{CompactList}\item 
+\hyperlink{classirr_1_1io_1_1_i_irr_x_m_l_reader}{IrrXMLReaderUTF16} $\ast$ \hyperlink{namespaceirr_1_1io_41c9d4c0d94702b3da2dca5799384443}{createIrrXMLReaderUTF16} (const char $\ast$filename)
+\begin{CompactList}\small\item\em Creates an instance of an UTF-16 xml parser. \item\end{CompactList}\item 
+\hyperlink{classirr_1_1io_1_1_i_irr_x_m_l_reader}{IrrXMLReaderUTF16} $\ast$ \hyperlink{namespaceirr_1_1io_4cc6190dd7eab54b7bff7219c550627f}{createIrrXMLReaderUTF16} (FILE $\ast$file)
+\begin{CompactList}\small\item\em Creates an instance of an UTF-16 xml parser. \item\end{CompactList}\item 
+\hyperlink{classirr_1_1io_1_1_i_irr_x_m_l_reader}{IrrXMLReaderUTF16} $\ast$ \hyperlink{namespaceirr_1_1io_22f1e46e541bcdbe778ce89c37ee9743}{createIrrXMLReaderUTF16} (\hyperlink{classirr_1_1io_1_1_i_file_read_call_back}{IFileReadCallBack} $\ast$callback)
+\begin{CompactList}\small\item\em Creates an instance of an UTF-16 xml parser. \item\end{CompactList}\item 
+\hyperlink{classirr_1_1io_1_1_i_irr_x_m_l_reader}{IrrXMLReaderUTF32} $\ast$ \hyperlink{namespaceirr_1_1io_42c53128ecf88af927030b6b9ea5afc2}{createIrrXMLReaderUTF32} (const char $\ast$filename)
+\begin{CompactList}\small\item\em Creates an instance of an UTF-32 xml parser. \item\end{CompactList}\item 
+\hyperlink{classirr_1_1io_1_1_i_irr_x_m_l_reader}{IrrXMLReaderUTF32} $\ast$ \hyperlink{namespaceirr_1_1io_6a0c291795bc8b08dc57bb5c6af9893f}{createIrrXMLReaderUTF32} (FILE $\ast$file)
+\begin{CompactList}\small\item\em Creates an instance of an UTF-32 xml parser. \item\end{CompactList}\item 
+\hyperlink{classirr_1_1io_1_1_i_irr_x_m_l_reader}{IrrXMLReaderUTF32} $\ast$ \hyperlink{namespaceirr_1_1io_751d8f7391b4b0bc09747ad46b119e28}{createIrrXMLReaderUTF32} (\hyperlink{classirr_1_1io_1_1_i_file_read_call_back}{IFileReadCallBack} $\ast$callback)
+\begin{CompactList}\small\item\em Creates an instance of an UTF-32 xml parser. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{namespaceirr_1_1io_5e70682de915fd223e6aa77bb693fc74}{
+\index{irr::io@{irr::io}!char16@{char16}}
+\index{char16@{char16}!irr::io@{irr::io}}
+\subsubsection[{char16}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned short {\bf irr::io::char16}}}
+\label{namespaceirr_1_1io_5e70682de915fd223e6aa77bb693fc74}
+
+
+defines the utf-16 type. 
+
+Not using wchar\_\-t for this because wchar\_\-t has 16 bit on windows and 32 bit on other operating systems. 
+
+Definition at line 371 of file irrXML.h.\hypertarget{namespaceirr_1_1io_ab102cb4e8212cf98c1561064eb36e9e}{
+\index{irr::io@{irr::io}!char32@{char32}}
+\index{char32@{char32}!irr::io@{irr::io}}
+\subsubsection[{char32}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned long {\bf irr::io::char32}}}
+\label{namespaceirr_1_1io_ab102cb4e8212cf98c1561064eb36e9e}
+
+
+defines the utf-32 type. 
+
+Not using wchar\_\-t for this because wchar\_\-t has 16 bit on windows and 32 bit on other operating systems. 
+
+Definition at line 376 of file irrXML.h.\hypertarget{namespaceirr_1_1io_1628edbb9d5d53f18c82d2a92b0ad27e}{
+\index{irr::io@{irr::io}!IrrXMLReader@{IrrXMLReader}}
+\index{IrrXMLReader@{IrrXMLReader}!irr::io@{irr::io}}
+\subsubsection[{IrrXMLReader}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf IIrrXMLReader}$<$char, {\bf IXMLBase}$>$ {\bf irr::io::IrrXMLReader}}}
+\label{namespaceirr_1_1io_1628edbb9d5d53f18c82d2a92b0ad27e}
+
+
+A UTF-8 or ASCII character xml parser. 
+
+This means that all character data will be returned in 8 bit ASCII or UTF-8 by this parser. The file to read can be in any format, it will be converted to UTF-8 if it is not in this format. Create an instance of this with \hyperlink{namespaceirr_1_1io_a79dd5b9dae1b75be3dec4374176a5ce}{createIrrXMLReader()}; See \hyperlink{classirr_1_1io_1_1_i_irr_x_m_l_reader}{IIrrXMLReader} for description on how to use it. \begin{Desc}
+\item[Examples: ]\par
+\hyperlink{_c_1_2_bootstrap_2_project_b_x_2_engine_2_common_2_irr_x_m_l_2irr_x_m_l_8h-example}{C:/Bootstrap/ProjectBX/Engine/Common/IrrXML/irrXML.h}.\end{Desc}
+
+
+Definition at line 384 of file irrXML.h.\hypertarget{namespaceirr_1_1io_5eb4094dfd0d509e0cd8a9d1dd30a5b9}{
+\index{irr::io@{irr::io}!IrrXMLReaderUTF16@{IrrXMLReaderUTF16}}
+\index{IrrXMLReaderUTF16@{IrrXMLReaderUTF16}!irr::io@{irr::io}}
+\subsubsection[{IrrXMLReaderUTF16}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf IIrrXMLReader}$<${\bf char16}, {\bf IXMLBase}$>$ {\bf irr::io::IrrXMLReaderUTF16}}}
+\label{namespaceirr_1_1io_5eb4094dfd0d509e0cd8a9d1dd30a5b9}
+
+
+A UTF-16 xml parser. 
+
+This means that all character data will be returned in UTF-16 by this parser. The file to read can be in any format, it will be converted to UTF-16 if it is not in this format. Create an instance of this with \hyperlink{namespaceirr_1_1io_41c9d4c0d94702b3da2dca5799384443}{createIrrXMLReaderUTF16()}; See \hyperlink{classirr_1_1io_1_1_i_irr_x_m_l_reader}{IIrrXMLReader} for description on how to use it. 
+
+Definition at line 392 of file irrXML.h.\hypertarget{namespaceirr_1_1io_70f411ff403636fb5c4e9becb090d5ec}{
+\index{irr::io@{irr::io}!IrrXMLReaderUTF32@{IrrXMLReaderUTF32}}
+\index{IrrXMLReaderUTF32@{IrrXMLReaderUTF32}!irr::io@{irr::io}}
+\subsubsection[{IrrXMLReaderUTF32}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf IIrrXMLReader}$<${\bf char32}, {\bf IXMLBase}$>$ {\bf irr::io::IrrXMLReaderUTF32}}}
+\label{namespaceirr_1_1io_70f411ff403636fb5c4e9becb090d5ec}
+
+
+A UTF-32 xml parser. 
+
+This means that all character data will be returned in UTF-32 by this parser. The file to read can be in any format, it will be converted to UTF-32 if it is not in this format. Create an instance of this with \hyperlink{namespaceirr_1_1io_42c53128ecf88af927030b6b9ea5afc2}{createIrrXMLReaderUTF32()}; See \hyperlink{classirr_1_1io_1_1_i_irr_x_m_l_reader}{IIrrXMLReader} for description on how to use it. 
+
+Definition at line 400 of file irrXML.h.
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{namespaceirr_1_1io_c7e51e5a6bd00451dec248f497b16a9d}{
+\index{irr::io@{irr::io}!ETEXT\_\-FORMAT@{ETEXT\_\-FORMAT}}
+\index{ETEXT\_\-FORMAT@{ETEXT\_\-FORMAT}!irr::io@{irr::io}}
+\subsubsection[{ETEXT\_\-FORMAT}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf irr::io::ETEXT\_\-FORMAT}}}
+\label{namespaceirr_1_1io_c7e51e5a6bd00451dec248f497b16a9d}
+
+
+Enumeration of all supported source text file formats. 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{ETF\_\-ASCII@{ETF\_\-ASCII}!irr::io@{irr::io}}\index{irr::io@{irr::io}!ETF\_\-ASCII@{ETF\_\-ASCII}}\item[{\em 
+\hypertarget{namespaceirr_1_1io_c7e51e5a6bd00451dec248f497b16a9da83b76584091bdef7401e2e7c27837bf}{
+ETF\_\-ASCII}
+\label{namespaceirr_1_1io_c7e51e5a6bd00451dec248f497b16a9da83b76584091bdef7401e2e7c27837bf}
+}]ASCII, file without byte order mark, or not a text file. \index{ETF\_\-UTF8@{ETF\_\-UTF8}!irr::io@{irr::io}}\index{irr::io@{irr::io}!ETF\_\-UTF8@{ETF\_\-UTF8}}\item[{\em 
+\hypertarget{namespaceirr_1_1io_c7e51e5a6bd00451dec248f497b16a9de9766ce8a50bc70e144a7b0cc96ba8db}{
+ETF\_\-UTF8}
+\label{namespaceirr_1_1io_c7e51e5a6bd00451dec248f497b16a9de9766ce8a50bc70e144a7b0cc96ba8db}
+}]UTF-8 format. \index{ETF\_\-UTF16\_\-BE@{ETF\_\-UTF16\_\-BE}!irr::io@{irr::io}}\index{irr::io@{irr::io}!ETF\_\-UTF16\_\-BE@{ETF\_\-UTF16\_\-BE}}\item[{\em 
+\hypertarget{namespaceirr_1_1io_c7e51e5a6bd00451dec248f497b16a9d5c0685f21f600ba0acdd84bae458ee5c}{
+ETF\_\-UTF16\_\-BE}
+\label{namespaceirr_1_1io_c7e51e5a6bd00451dec248f497b16a9d5c0685f21f600ba0acdd84bae458ee5c}
+}]UTF-16 format, big endian. \index{ETF\_\-UTF16\_\-LE@{ETF\_\-UTF16\_\-LE}!irr::io@{irr::io}}\index{irr::io@{irr::io}!ETF\_\-UTF16\_\-LE@{ETF\_\-UTF16\_\-LE}}\item[{\em 
+\hypertarget{namespaceirr_1_1io_c7e51e5a6bd00451dec248f497b16a9d331a03a8d3459ad9a05d31dee38a8a73}{
+ETF\_\-UTF16\_\-LE}
+\label{namespaceirr_1_1io_c7e51e5a6bd00451dec248f497b16a9d331a03a8d3459ad9a05d31dee38a8a73}
+}]UTF-16 format, little endian. \index{ETF\_\-UTF32\_\-BE@{ETF\_\-UTF32\_\-BE}!irr::io@{irr::io}}\index{irr::io@{irr::io}!ETF\_\-UTF32\_\-BE@{ETF\_\-UTF32\_\-BE}}\item[{\em 
+\hypertarget{namespaceirr_1_1io_c7e51e5a6bd00451dec248f497b16a9da550dbb5ed61125ff6a12a9a50e4e7b1}{
+ETF\_\-UTF32\_\-BE}
+\label{namespaceirr_1_1io_c7e51e5a6bd00451dec248f497b16a9da550dbb5ed61125ff6a12a9a50e4e7b1}
+}]UTF-32 format, big endian. \index{ETF\_\-UTF32\_\-LE@{ETF\_\-UTF32\_\-LE}!irr::io@{irr::io}}\index{irr::io@{irr::io}!ETF\_\-UTF32\_\-LE@{ETF\_\-UTF32\_\-LE}}\item[{\em 
+\hypertarget{namespaceirr_1_1io_c7e51e5a6bd00451dec248f497b16a9d122cd8cec108b4e5a4040f1a9bcc6709}{
+ETF\_\-UTF32\_\-LE}
+\label{namespaceirr_1_1io_c7e51e5a6bd00451dec248f497b16a9d122cd8cec108b4e5a4040f1a9bcc6709}
+}]UTF-32 format, little endian. \end{description}
+\end{Desc}
+
+
+
+Definition at line 157 of file irrXML.h.\hypertarget{namespaceirr_1_1io_86a02676c9cbb822e04d60c81b4f33ed}{
+\index{irr::io@{irr::io}!EXML\_\-NODE@{EXML\_\-NODE}}
+\index{EXML\_\-NODE@{EXML\_\-NODE}!irr::io@{irr::io}}
+\subsubsection[{EXML\_\-NODE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf irr::io::EXML\_\-NODE}}}
+\label{namespaceirr_1_1io_86a02676c9cbb822e04d60c81b4f33ed}
+
+
+Enumeration for all xml nodes which are parsed by IrrXMLReader. 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{EXN\_\-NONE@{EXN\_\-NONE}!irr::io@{irr::io}}\index{irr::io@{irr::io}!EXN\_\-NONE@{EXN\_\-NONE}}\item[{\em 
+\hypertarget{namespaceirr_1_1io_86a02676c9cbb822e04d60c81b4f33eda7f8e643a481d9c8b75a25499f40235c}{
+EXN\_\-NONE}
+\label{namespaceirr_1_1io_86a02676c9cbb822e04d60c81b4f33eda7f8e643a481d9c8b75a25499f40235c}
+}]No xml node. This is usually the node if you did not read anything yet. \index{EXN\_\-ELEMENT@{EXN\_\-ELEMENT}!irr::io@{irr::io}}\index{irr::io@{irr::io}!EXN\_\-ELEMENT@{EXN\_\-ELEMENT}}\item[{\em 
+\hypertarget{namespaceirr_1_1io_86a02676c9cbb822e04d60c81b4f33ed9df4f5baccc23a0ad1f6fa64d8de2fc0}{
+EXN\_\-ELEMENT}
+\label{namespaceirr_1_1io_86a02676c9cbb822e04d60c81b4f33ed9df4f5baccc23a0ad1f6fa64d8de2fc0}
+}]A xml element, like $<$foo$>$. \index{EXN\_\-ELEMENT\_\-END@{EXN\_\-ELEMENT\_\-END}!irr::io@{irr::io}}\index{irr::io@{irr::io}!EXN\_\-ELEMENT\_\-END@{EXN\_\-ELEMENT\_\-END}}\item[{\em 
+\hypertarget{namespaceirr_1_1io_86a02676c9cbb822e04d60c81b4f33ed54ef1997279f08180634f4a897f771b8}{
+EXN\_\-ELEMENT\_\-END}
+\label{namespaceirr_1_1io_86a02676c9cbb822e04d60c81b4f33ed54ef1997279f08180634f4a897f771b8}
+}]End of an xml element, like $<$/foo$>$. \index{EXN\_\-TEXT@{EXN\_\-TEXT}!irr::io@{irr::io}}\index{irr::io@{irr::io}!EXN\_\-TEXT@{EXN\_\-TEXT}}\item[{\em 
+\hypertarget{namespaceirr_1_1io_86a02676c9cbb822e04d60c81b4f33ed0edf973f8ca0f6097f69369539d432a4}{
+EXN\_\-TEXT}
+\label{namespaceirr_1_1io_86a02676c9cbb822e04d60c81b4f33ed0edf973f8ca0f6097f69369539d432a4}
+}]Text within a xml element: $<$foo$>$ this is the text. $<$/foo$>$. \index{EXN\_\-COMMENT@{EXN\_\-COMMENT}!irr::io@{irr::io}}\index{irr::io@{irr::io}!EXN\_\-COMMENT@{EXN\_\-COMMENT}}\item[{\em 
+\hypertarget{namespaceirr_1_1io_86a02676c9cbb822e04d60c81b4f33eddc47ef6b25afabf76ff3acea8fea2680}{
+EXN\_\-COMMENT}
+\label{namespaceirr_1_1io_86a02676c9cbb822e04d60c81b4f33eddc47ef6b25afabf76ff3acea8fea2680}
+}]An xml comment like $<$!-- I am a comment --$>$ or a DTD definition. \index{EXN\_\-CDATA@{EXN\_\-CDATA}!irr::io@{irr::io}}\index{irr::io@{irr::io}!EXN\_\-CDATA@{EXN\_\-CDATA}}\item[{\em 
+\hypertarget{namespaceirr_1_1io_86a02676c9cbb822e04d60c81b4f33edabb26cfe097fadf64c45db0f76523ac6}{
+EXN\_\-CDATA}
+\label{namespaceirr_1_1io_86a02676c9cbb822e04d60c81b4f33edabb26cfe097fadf64c45db0f76523ac6}
+}]An xml cdata section like $<$!\mbox{[}CDATA\mbox{[} this is some CDATA \mbox{]}\mbox{]}$>$. \index{EXN\_\-UNKNOWN@{EXN\_\-UNKNOWN}!irr::io@{irr::io}}\index{irr::io@{irr::io}!EXN\_\-UNKNOWN@{EXN\_\-UNKNOWN}}\item[{\em 
+\hypertarget{namespaceirr_1_1io_86a02676c9cbb822e04d60c81b4f33edf80bf58165975de0e7a7c28882906865}{
+EXN\_\-UNKNOWN}
+\label{namespaceirr_1_1io_86a02676c9cbb822e04d60c81b4f33edf80bf58165975de0e7a7c28882906865}
+}]Unknown element. \end{description}
+\end{Desc}
+
+
+
+Definition at line 180 of file irrXML.h.
+
+\subsection{Function Documentation}
+\hypertarget{namespaceirr_1_1io_70866610843a6fc753681de9a9076f4d}{
+\index{irr::io@{irr::io}!createIrrXMLReader@{createIrrXMLReader}}
+\index{createIrrXMLReader@{createIrrXMLReader}!irr::io@{irr::io}}
+\subsubsection[{createIrrXMLReader}]{\setlength{\rightskip}{0pt plus 5cm}{\bf IrrXMLReader} $\ast$ irr::io::createIrrXMLReader (IFileReadCallBack $\ast$ {\em callback})}}
+\label{namespaceirr_1_1io_70866610843a6fc753681de9a9076f4d}
+
+
+Creates an instance of an UFT-8 or ASCII character xml parser. 
+
+This means that all character data will be returned in 8 bit ASCII or UTF-8. The file to read can be in any format, it will be converted to UTF-8 if it is not in this format. If you are using the Irrlicht Engine, it is better not to use this function but IFileSystem::createXMLReaderUTF8() instead. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em callback,:}]Callback for file read abstraction. Implement your own callback to make the xml parser read in other things than just files. See \hyperlink{classirr_1_1io_1_1_i_file_read_call_back}{IFileReadCallBack} for more information about this. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Returns a pointer to the created xml parser. This pointer should be deleted using 'delete' after no longer needed. Returns 0 if an error occured and the file could not be opened. \end{Desc}
+\begin{Desc}
+\item[Examples: ]\par
+\hyperlink{_c_1_2_bootstrap_2_project_b_x_2_engine_2_common_2_irr_x_m_l_2irr_x_m_l_8h-example}{C:/Bootstrap/ProjectBX/Engine/Common/IrrXML/irrXML.h}.\end{Desc}
+
+
+Definition at line 100 of file irrXML.cpp.\hypertarget{namespaceirr_1_1io_64543772bdd123f8be1cdb20dac36353}{
+\index{irr::io@{irr::io}!createIrrXMLReader@{createIrrXMLReader}}
+\index{createIrrXMLReader@{createIrrXMLReader}!irr::io@{irr::io}}
+\subsubsection[{createIrrXMLReader}]{\setlength{\rightskip}{0pt plus 5cm}{\bf IrrXMLReader} $\ast$ irr::io::createIrrXMLReader (FILE $\ast$ {\em file})}}
+\label{namespaceirr_1_1io_64543772bdd123f8be1cdb20dac36353}
+
+
+Creates an instance of an UFT-8 or ASCII character xml parser. 
+
+This means that all character data will be returned in 8 bit ASCII or UTF-8. The file to read can be in any format, it will be converted to UTF-8 if it is not in this format. If you are using the Irrlicht Engine, it is better not to use this function but IFileSystem::createXMLReaderUTF8() instead. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em file,:}]Pointer to opened file, must have been opened in binary mode, \hyperlink{glext__bak_8h_caceb3a655ff28b75259860bcb868f9f}{e.g}. using fopen(\char`\"{}foo.bar\char`\"{}, \char`\"{}wb\char`\"{}); The file will not be closed after it has been read. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Returns a pointer to the created xml parser. This pointer should be deleted using 'delete' after no longer needed. Returns 0 if an error occured and the file could not be opened. \end{Desc}
+
+
+Definition at line 93 of file irrXML.cpp.\hypertarget{namespaceirr_1_1io_a79dd5b9dae1b75be3dec4374176a5ce}{
+\index{irr::io@{irr::io}!createIrrXMLReader@{createIrrXMLReader}}
+\index{createIrrXMLReader@{createIrrXMLReader}!irr::io@{irr::io}}
+\subsubsection[{createIrrXMLReader}]{\setlength{\rightskip}{0pt plus 5cm}{\bf IrrXMLReader} $\ast$ irr::io::createIrrXMLReader (const char $\ast$ {\em filename})}}
+\label{namespaceirr_1_1io_a79dd5b9dae1b75be3dec4374176a5ce}
+
+
+Creates an instance of an UFT-8 or ASCII character xml parser. 
+
+This means that all character data will be returned in 8 bit ASCII or UTF-8. The file to read can be in any format, it will be converted to UTF-8 if it is not in this format. If you are using the Irrlicht Engine, it is better not to use this function but IFileSystem::createXMLReaderUTF8() instead. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em filename,:}]Name of file to be opened. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Returns a pointer to the created xml parser. This pointer should be deleted using 'delete' after no longer needed. Returns 0 if an error occured and the file could not be opened. \end{Desc}
+
+
+Definition at line 86 of file irrXML.cpp.\hypertarget{namespaceirr_1_1io_22f1e46e541bcdbe778ce89c37ee9743}{
+\index{irr::io@{irr::io}!createIrrXMLReaderUTF16@{createIrrXMLReaderUTF16}}
+\index{createIrrXMLReaderUTF16@{createIrrXMLReaderUTF16}!irr::io@{irr::io}}
+\subsubsection[{createIrrXMLReaderUTF16}]{\setlength{\rightskip}{0pt plus 5cm}{\bf IrrXMLReaderUTF16} $\ast$ irr::io::createIrrXMLReaderUTF16 (IFileReadCallBack $\ast$ {\em callback})}}
+\label{namespaceirr_1_1io_22f1e46e541bcdbe778ce89c37ee9743}
+
+
+Creates an instance of an UTF-16 xml parser. 
+
+Creates an instance of an UFT-16 xml parser.
+
+This means that all character data will be returned in UTF-16. The file to read can be in any format, it will be converted to UTF-16 if it is not in this format. If you are using the Irrlicht Engine, it is better not to use this function but IFileSystem::createXMLReader() instead. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em callback,:}]Callback for file read abstraction. Implement your own callback to make the xml parser read in other things than just files. See \hyperlink{classirr_1_1io_1_1_i_file_read_call_back}{IFileReadCallBack} for more information about this. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Returns a pointer to the created xml parser. This pointer should be deleted using 'delete' after no longer needed. Returns 0 if an error occured and the file could not be opened. \end{Desc}
+
+
+Definition at line 121 of file irrXML.cpp.\hypertarget{namespaceirr_1_1io_4cc6190dd7eab54b7bff7219c550627f}{
+\index{irr::io@{irr::io}!createIrrXMLReaderUTF16@{createIrrXMLReaderUTF16}}
+\index{createIrrXMLReaderUTF16@{createIrrXMLReaderUTF16}!irr::io@{irr::io}}
+\subsubsection[{createIrrXMLReaderUTF16}]{\setlength{\rightskip}{0pt plus 5cm}{\bf IrrXMLReaderUTF16} $\ast$ irr::io::createIrrXMLReaderUTF16 (FILE $\ast$ {\em file})}}
+\label{namespaceirr_1_1io_4cc6190dd7eab54b7bff7219c550627f}
+
+
+Creates an instance of an UTF-16 xml parser. 
+
+Creates an instance of an UFT-16 xml parser.
+
+This means that all character data will be returned in UTF-16. The file to read can be in any format, it will be converted to UTF-16 if it is not in this format. If you are using the Irrlicht Engine, it is better not to use this function but IFileSystem::createXMLReader() instead. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em file,:}]Pointer to opened file, must have been opened in binary mode, \hyperlink{glext__bak_8h_caceb3a655ff28b75259860bcb868f9f}{e.g}. using fopen(\char`\"{}foo.bar\char`\"{}, \char`\"{}wb\char`\"{}); The file will not be closed after it has been read. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Returns a pointer to the created xml parser. This pointer should be deleted using 'delete' after no longer needed. Returns 0 if an error occured and the file could not be opened. \end{Desc}
+
+
+Definition at line 114 of file irrXML.cpp.\hypertarget{namespaceirr_1_1io_41c9d4c0d94702b3da2dca5799384443}{
+\index{irr::io@{irr::io}!createIrrXMLReaderUTF16@{createIrrXMLReaderUTF16}}
+\index{createIrrXMLReaderUTF16@{createIrrXMLReaderUTF16}!irr::io@{irr::io}}
+\subsubsection[{createIrrXMLReaderUTF16}]{\setlength{\rightskip}{0pt plus 5cm}{\bf IrrXMLReaderUTF16} $\ast$ irr::io::createIrrXMLReaderUTF16 (const char $\ast$ {\em filename})}}
+\label{namespaceirr_1_1io_41c9d4c0d94702b3da2dca5799384443}
+
+
+Creates an instance of an UTF-16 xml parser. 
+
+Creates an instance of an UFT-16 xml parser.
+
+This means that all character data will be returned in UTF-16. The file to read can be in any format, it will be converted to UTF-16 if it is not in this format. If you are using the Irrlicht Engine, it is better not to use this function but IFileSystem::createXMLReader() instead. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em filename,:}]Name of file to be opened. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Returns a pointer to the created xml parser. This pointer should be deleted using 'delete' after no longer needed. Returns 0 if an error occured and the file could not be opened. \end{Desc}
+
+
+Definition at line 107 of file irrXML.cpp.\hypertarget{namespaceirr_1_1io_751d8f7391b4b0bc09747ad46b119e28}{
+\index{irr::io@{irr::io}!createIrrXMLReaderUTF32@{createIrrXMLReaderUTF32}}
+\index{createIrrXMLReaderUTF32@{createIrrXMLReaderUTF32}!irr::io@{irr::io}}
+\subsubsection[{createIrrXMLReaderUTF32}]{\setlength{\rightskip}{0pt plus 5cm}{\bf IrrXMLReaderUTF32} $\ast$ irr::io::createIrrXMLReaderUTF32 (IFileReadCallBack $\ast$ {\em callback})}}
+\label{namespaceirr_1_1io_751d8f7391b4b0bc09747ad46b119e28}
+
+
+Creates an instance of an UTF-32 xml parser. 
+
+Creates an instance of an UFT-32 xml parser.
+
+This means that all character data will be returned in UTF-32. The file to read can be in any format, it will be converted to UTF-32 if it is not in this format. If you are using the Irrlicht Engine, it is better not to use this function but IFileSystem::createXMLReader() instead. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em callback,:}]Callback for file read abstraction. Implement your own callback to make the xml parser read in other things than just files. See \hyperlink{classirr_1_1io_1_1_i_file_read_call_back}{IFileReadCallBack} for more information about this. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Returns a pointer to the created xml parser. This pointer should be deleted using 'delete' after no longer needed. Returns 0 if an error occured and the file could not be opened. \end{Desc}
+
+
+Definition at line 142 of file irrXML.cpp.\hypertarget{namespaceirr_1_1io_6a0c291795bc8b08dc57bb5c6af9893f}{
+\index{irr::io@{irr::io}!createIrrXMLReaderUTF32@{createIrrXMLReaderUTF32}}
+\index{createIrrXMLReaderUTF32@{createIrrXMLReaderUTF32}!irr::io@{irr::io}}
+\subsubsection[{createIrrXMLReaderUTF32}]{\setlength{\rightskip}{0pt plus 5cm}{\bf IrrXMLReaderUTF32} $\ast$ irr::io::createIrrXMLReaderUTF32 (FILE $\ast$ {\em file})}}
+\label{namespaceirr_1_1io_6a0c291795bc8b08dc57bb5c6af9893f}
+
+
+Creates an instance of an UTF-32 xml parser. 
+
+Creates an instance of an UFT-32 xml parser.
+
+This means that all character data will be returned in UTF-32. The file to read can be in any format, it will be converted to UTF-32 if it is not in this format. if you are using the Irrlicht Engine, it is better not to use this function but IFileSystem::createXMLReader() instead. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em file,:}]Pointer to opened file, must have been opened in binary mode, \hyperlink{glext__bak_8h_caceb3a655ff28b75259860bcb868f9f}{e.g}. using fopen(\char`\"{}foo.bar\char`\"{}, \char`\"{}wb\char`\"{}); The file will not be closed after it has been read. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Returns a pointer to the created xml parser. This pointer should be deleted using 'delete' after no longer needed. Returns 0 if an error occured and the file could not be opened. \end{Desc}
+
+
+Definition at line 135 of file irrXML.cpp.\hypertarget{namespaceirr_1_1io_42c53128ecf88af927030b6b9ea5afc2}{
+\index{irr::io@{irr::io}!createIrrXMLReaderUTF32@{createIrrXMLReaderUTF32}}
+\index{createIrrXMLReaderUTF32@{createIrrXMLReaderUTF32}!irr::io@{irr::io}}
+\subsubsection[{createIrrXMLReaderUTF32}]{\setlength{\rightskip}{0pt plus 5cm}{\bf IrrXMLReaderUTF32} $\ast$ irr::io::createIrrXMLReaderUTF32 (const char $\ast$ {\em filename})}}
+\label{namespaceirr_1_1io_42c53128ecf88af927030b6b9ea5afc2}
+
+
+Creates an instance of an UTF-32 xml parser. 
+
+Creates an instance of an UFT-32 xml parser.
+
+This means that all character data will be returned in UTF-32. The file to read can be in any format, it will be converted to UTF-32 if it is not in this format. If you are using the Irrlicht Engine, it is better not to use this function but IFileSystem::createXMLReader() instead. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em filename,:}]Name of file to be opened. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Returns a pointer to the created xml parser. This pointer should be deleted using 'delete' after no longer needed. Returns 0 if an error occured and the file could not be opened. \end{Desc}
+
+
+Definition at line 128 of file irrXML.cpp.

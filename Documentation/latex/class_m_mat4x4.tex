@@ -1,0 +1,563 @@
+\hypertarget{class_m_mat4x4}{
+\section{MMat4x4 Class Reference}
+\label{class_m_mat4x4}\index{MMat4x4@{MMat4x4}}
+}
+{\tt \#include $<$MMat4x4.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_m_mat4x4_22ce2003a15d80e2902ffbd11bd40608}{MMat4x4} ()
+\item 
+\hyperlink{class_m_mat4x4_6365cf6fe5861ab8dbbe5505262f3883}{MMat4x4} (float \hyperlink{glext__bak_8h_281421b881aa7a1266842b73a3bc7655}{scale})
+\item 
+\hyperlink{class_m_mat4x4_e9a2a999304bfaffaf1b5fa82866a234}{MMat4x4} (const \hyperlink{class_m_vec3}{MVec3} \&translation)
+\item 
+\hyperlink{class_m_mat4x4_338da41554a385f5d91fbd3e5a8f88e3}{MMat4x4} (const \hyperlink{class_m_mat3x3}{MMat3x3} \&rot)
+\item 
+\hyperlink{class_m_mat4x4_fc1a4ed07e9d2baf9d6f333a00ee76a5}{MMat4x4} (const \hyperlink{class_m_mat3x3}{MMat3x3} \&rot, const \hyperlink{class_m_vec3}{MVec3} \&translation)
+\item 
+\hyperlink{class_m_mat4x4_f0ab4e1ba04f32bac44bc7c8e6d5e037}{MMat4x4} (const \hyperlink{class_m_mat3x3}{MMat3x3} \&rot, const \hyperlink{class_m_vec3}{MVec3} \&translation, const \hyperlink{class_m_vec3}{MVec3} \&\hyperlink{glext__bak_8h_281421b881aa7a1266842b73a3bc7655}{scale})
+\item 
+\hyperlink{class_m_mat4x4_501c2ede3902e23571147ea5273c2904}{MMat4x4} (float \_\-11, float \_\-12, float \_\-13, float \_\-14, float \_\-21, float \_\-22, float \_\-23, float \_\-24, float \_\-31, float \_\-32, float \_\-33, float \_\-34, float \_\-41, float \_\-42, float \_\-43, float \_\-44)
+\item 
+\hyperlink{class_m_mat4x4_9276085ed15c187101647e97b63b7ee8}{MMat4x4} (const float $\ast$mat)
+\item 
+\hyperlink{class_m_mat4x4_7eda878fcc79597fa4a04a54f640e02b}{MMat4x4} (const \hyperlink{class_m_mat4x4}{MMat4x4} \&mat)
+\item 
+\hyperlink{class_m_mat4x4_753165b1650fd6150f9984cd58f9697a}{$\sim$MMat4x4} ()
+\item 
+\hyperlink{class_m_mat4x4}{MMat4x4} \& \hyperlink{class_m_mat4x4_498b45bc7d2108d20db5fe0f7b9f1890}{operator=} (const \hyperlink{class_m_mat4x4}{MMat4x4} \&mat)
+\item 
+bool \hyperlink{class_m_mat4x4_5045e1a3e2dda8f62a8c3cba29b721db}{Inverse} (\hyperlink{class_m_mat4x4}{MMat4x4} \&output) const 
+\item 
+void \hyperlink{class_m_mat4x4_d0f028021424a3132bd7eda119094b94}{Transpose} () const 
+\item 
+\hyperlink{class_m_mat4x4}{MMat4x4} \hyperlink{class_m_mat4x4_6015f2e4f21155e99a953cb768a408b6}{Transposed} () const 
+\item 
+void \hyperlink{class_m_mat4x4_1ce05837ed33fbbfafc051d23c9ab4e1}{TransformCoordFast} (\hyperlink{class_m_vec3}{MVec3} \&\hyperlink{glext__bak_8h_4ad6f000813afde2b5727cbfdddc75be}{coord}) const 
+\item 
+\hyperlink{class_m_vec3}{MVec3} \hyperlink{class_m_mat4x4_385cd0e1af4a803cfb38860de8195572}{TransformCoord} (const \hyperlink{class_m_vec3}{MVec3} \&\hyperlink{glext__bak_8h_4ad6f000813afde2b5727cbfdddc75be}{coord}) const 
+\item 
+void \hyperlink{class_m_mat4x4_9e21fa3a1796f4dc4f393284385222ce}{TransformCoordPrePersp} (\hyperlink{class_m_vec4}{MVec4} \&result, const \hyperlink{class_m_vec3}{MVec3} \&\hyperlink{glext__bak_8h_4ad6f000813afde2b5727cbfdddc75be}{coord}) const 
+\item 
+\hyperlink{class_m_vec3}{MVec3} \hyperlink{class_m_mat4x4_6433902604e11fbc092ba36be233d2a1}{TransformCoordNoPersp} (const \hyperlink{class_m_vec3}{MVec3} \&\hyperlink{glext__bak_8h_4ad6f000813afde2b5727cbfdddc75be}{coord}) const 
+\item 
+void \hyperlink{class_m_mat4x4_ea380b26ff885243bda1f33dd851177b}{TransformCoordNoPerspFast} (\hyperlink{class_m_vec3}{MVec3} \&\hyperlink{glext__bak_8h_4ad6f000813afde2b5727cbfdddc75be}{coord}) const 
+\item 
+void \hyperlink{class_m_mat4x4_37d2e5026e682b64a60ee7343cd814e9}{SetRotate} (const \hyperlink{class_m_mat3x3}{MMat3x3} \&mat)
+\item 
+void \hyperlink{class_m_mat4x4_ac06f72b0de0177bf7a98ccf4ddc5ed2}{SetTranslate} (const \hyperlink{class_m_vec3}{MVec3} \&pos)
+\item 
+void \hyperlink{class_m_mat4x4_8ed6ef9ec48dacf59eda26bb8e3b721d}{SetScale} (const \hyperlink{class_m_vec3}{MVec3} \&\hyperlink{glext__bak_8h_281421b881aa7a1266842b73a3bc7655}{scale})
+\item 
+void \hyperlink{class_m_mat4x4_95954820693d983fc18428eb935e1b01}{SetOrientation} (const \hyperlink{class_m_vec3}{MVec3} \&side, const \hyperlink{class_m_vec3}{MVec3} \&forward)
+\item 
+void \hyperlink{class_m_mat4x4_2c628c08af200deb17e1bad137bafbaa}{SetRow} (unsigned int \hyperlink{glext__bak_8h_08e0b6bb56b39ff71be380b4cdf5ec33}{row}, const \hyperlink{class_m_vec4}{MVec4} \&rowVec)
+\item 
+void \hyperlink{class_m_mat4x4_5b94c2756a481355e14a6e040f0a7025}{SetCol} (unsigned int col, const \hyperlink{class_m_vec4}{MVec4} \&rowVec)
+\item 
+void \hyperlink{class_m_mat4x4_3cc5b3636f8bd790d477e83ad2396007}{GetRotate} (\hyperlink{class_m_mat3x3}{MMat3x3} \&mat) const 
+\item 
+\hyperlink{class_m_mat3x3}{MMat3x3} \hyperlink{class_m_mat4x4_ba9ccf48a89c2d27effd94d16872cc5f}{GetRotate} () const 
+\item 
+void \hyperlink{class_m_mat4x4_cb765b649243077af476897147c75919}{GetTranslate} (\hyperlink{class_m_vec3}{MVec3} \&pos) const 
+\item 
+\hyperlink{class_m_vec3}{MVec3} \hyperlink{class_m_mat4x4_f4ccc5d98e02464db6bb4660851305ad}{GetTranslate} () const 
+\item 
+void \hyperlink{class_m_mat4x4_1052ad082fcdb2973cf72e661f243834}{GetScaleSqr} (\hyperlink{class_m_vec3}{MVec3} \&\hyperlink{glext__bak_8h_281421b881aa7a1266842b73a3bc7655}{scale}) const 
+\item 
+\hyperlink{class_m_vec3}{MVec3} \hyperlink{class_m_mat4x4_a58b7792fc25fc7ca9e0822fc7da759f}{GetScaleSqr} () const 
+\item 
+void \hyperlink{class_m_mat4x4_0315b1a9ce8d06fc297b987a4e7120e4}{GetScale} (\hyperlink{class_m_vec3}{MVec3} \&\hyperlink{glext__bak_8h_281421b881aa7a1266842b73a3bc7655}{scale}) const 
+\item 
+\hyperlink{class_m_vec3}{MVec3} \hyperlink{class_m_mat4x4_55463466396ea91ce4bfe79bc6bcf110}{GetScale} () const 
+\item 
+void \hyperlink{class_m_mat4x4_820fe272baaa1085f2e352511efa8b29}{GetRow} (\hyperlink{class_m_vec4}{MVec4} \&rowVec, unsigned int \hyperlink{glext__bak_8h_08e0b6bb56b39ff71be380b4cdf5ec33}{row}) const 
+\item 
+\hyperlink{class_m_vec4}{MVec4} \hyperlink{class_m_mat4x4_0cc56b3435aedef6d9477249368d4de9}{GetRow} (unsigned int \hyperlink{glext__bak_8h_08e0b6bb56b39ff71be380b4cdf5ec33}{row}) const 
+\item 
+void \hyperlink{class_m_mat4x4_dfeec8261c165fa894048e082702de36}{GetCol} (\hyperlink{class_m_vec4}{MVec4} \&rowVec, unsigned int col) const 
+\item 
+\hyperlink{class_m_vec4}{MVec4} \hyperlink{class_m_mat4x4_6acc4e4a7706b2786b2e0fed62008eff}{GetCol} (unsigned int col) const 
+\item 
+void \hyperlink{class_m_mat4x4_a04d5d581a190e7449aff729d01ae5d4}{GetAxis} (\hyperlink{class_m_vec3}{MVec3} \&axis, unsigned int col) const 
+\item 
+float \& \hyperlink{class_m_mat4x4_c636eaea929506f008eed9bff65c3aca}{operator()} (unsigned int \hyperlink{glext__bak_8h_08e0b6bb56b39ff71be380b4cdf5ec33}{row}, unsigned int col)
+\item 
+float \hyperlink{class_m_mat4x4_e3f4c44e37d6715708f5ee7397d8f9b3}{operator()} (unsigned int \hyperlink{glext__bak_8h_08e0b6bb56b39ff71be380b4cdf5ec33}{row}, unsigned int col) const 
+\item 
+\hyperlink{class_m_mat4x4}{MMat4x4} \hyperlink{class_m_mat4x4_4dc496e3911853ba028cf38e4be38e33}{operator$\ast$} (const \hyperlink{class_m_mat4x4}{MMat4x4} \&mat) const 
+\item 
+const float $\ast$ \hyperlink{class_m_mat4x4_f024602a5e606751374a11f84a4809ce}{GetDataStart} () const 
+\item 
+\hyperlink{class_m_mat4x4_efc2d783f3d6384b87d7b8e3705b8e5f}{operator const float $\ast$} () const 
+\item 
+bool \hyperlink{class_m_mat4x4_4b4855dfac02d865ba6bad9a83f40dd0}{IsIdentity} () const 
+\item 
+void \hyperlink{class_m_mat4x4_51096a071af230f20fe4d5a94db23913}{Save} (\hyperlink{class_u_writer}{UWriter} \&writer) const 
+\item 
+void \hyperlink{class_m_mat4x4_3ca6c5ddab80f8b7eb30ec47f4f908c9}{Load} (\hyperlink{class_u_reader}{UReader} \&reader)
+\end{CompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+static const \hyperlink{class_m_mat4x4}{MMat4x4} \& \hyperlink{class_m_mat4x4_ea61fe6cd5a7fdea9260a96812a95298}{Identity} ()
+\end{CompactItemize}
+\subsection*{Static Public Attributes}
+\begin{CompactItemize}
+\item 
+static const float \hyperlink{class_m_mat4x4_f023d028712e837f5150cfa1cffec3ad}{kInverseDetEpsilon} = 0.00000095367431640625f
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 21 of file MMat4x4.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_m_mat4x4_22ce2003a15d80e2902ffbd11bd40608}{
+\index{MMat4x4@{MMat4x4}!MMat4x4@{MMat4x4}}
+\index{MMat4x4@{MMat4x4}!MMat4x4@{MMat4x4}}
+\subsubsection[{MMat4x4}]{\setlength{\rightskip}{0pt plus 5cm}MMat4x4::MMat4x4 ()}}
+\label{class_m_mat4x4_22ce2003a15d80e2902ffbd11bd40608}
+
+
+
+
+Definition at line 43 of file MMat4x4.cpp.\hypertarget{class_m_mat4x4_6365cf6fe5861ab8dbbe5505262f3883}{
+\index{MMat4x4@{MMat4x4}!MMat4x4@{MMat4x4}}
+\index{MMat4x4@{MMat4x4}!MMat4x4@{MMat4x4}}
+\subsubsection[{MMat4x4}]{\setlength{\rightskip}{0pt plus 5cm}MMat4x4::MMat4x4 (float {\em scale})}}
+\label{class_m_mat4x4_6365cf6fe5861ab8dbbe5505262f3883}
+
+
+
+
+Definition at line 59 of file MMat4x4.cpp.\hypertarget{class_m_mat4x4_e9a2a999304bfaffaf1b5fa82866a234}{
+\index{MMat4x4@{MMat4x4}!MMat4x4@{MMat4x4}}
+\index{MMat4x4@{MMat4x4}!MMat4x4@{MMat4x4}}
+\subsubsection[{MMat4x4}]{\setlength{\rightskip}{0pt plus 5cm}MMat4x4::MMat4x4 (const {\bf MVec3} \& {\em translation})}}
+\label{class_m_mat4x4_e9a2a999304bfaffaf1b5fa82866a234}
+
+
+
+
+Definition at line 90 of file MMat4x4.cpp.\hypertarget{class_m_mat4x4_338da41554a385f5d91fbd3e5a8f88e3}{
+\index{MMat4x4@{MMat4x4}!MMat4x4@{MMat4x4}}
+\index{MMat4x4@{MMat4x4}!MMat4x4@{MMat4x4}}
+\subsubsection[{MMat4x4}]{\setlength{\rightskip}{0pt plus 5cm}MMat4x4::MMat4x4 (const {\bf MMat3x3} \& {\em rot})}}
+\label{class_m_mat4x4_338da41554a385f5d91fbd3e5a8f88e3}
+
+
+
+
+Definition at line 121 of file MMat4x4.cpp.\hypertarget{class_m_mat4x4_fc1a4ed07e9d2baf9d6f333a00ee76a5}{
+\index{MMat4x4@{MMat4x4}!MMat4x4@{MMat4x4}}
+\index{MMat4x4@{MMat4x4}!MMat4x4@{MMat4x4}}
+\subsubsection[{MMat4x4}]{\setlength{\rightskip}{0pt plus 5cm}MMat4x4::MMat4x4 (const {\bf MMat3x3} \& {\em rot}, \/  const {\bf MVec3} \& {\em translation})}}
+\label{class_m_mat4x4_fc1a4ed07e9d2baf9d6f333a00ee76a5}
+
+
+
+
+Definition at line 149 of file MMat4x4.cpp.\hypertarget{class_m_mat4x4_f0ab4e1ba04f32bac44bc7c8e6d5e037}{
+\index{MMat4x4@{MMat4x4}!MMat4x4@{MMat4x4}}
+\index{MMat4x4@{MMat4x4}!MMat4x4@{MMat4x4}}
+\subsubsection[{MMat4x4}]{\setlength{\rightskip}{0pt plus 5cm}MMat4x4::MMat4x4 (const {\bf MMat3x3} \& {\em rot}, \/  const {\bf MVec3} \& {\em translation}, \/  const {\bf MVec3} \& {\em scale})}}
+\label{class_m_mat4x4_f0ab4e1ba04f32bac44bc7c8e6d5e037}
+
+
+
+
+Definition at line 177 of file MMat4x4.cpp.\hypertarget{class_m_mat4x4_501c2ede3902e23571147ea5273c2904}{
+\index{MMat4x4@{MMat4x4}!MMat4x4@{MMat4x4}}
+\index{MMat4x4@{MMat4x4}!MMat4x4@{MMat4x4}}
+\subsubsection[{MMat4x4}]{\setlength{\rightskip}{0pt plus 5cm}MMat4x4::MMat4x4 (float {\em \_\-11}, \/  float {\em \_\-12}, \/  float {\em \_\-13}, \/  float {\em \_\-14}, \/  float {\em \_\-21}, \/  float {\em \_\-22}, \/  float {\em \_\-23}, \/  float {\em \_\-24}, \/  float {\em \_\-31}, \/  float {\em \_\-32}, \/  float {\em \_\-33}, \/  float {\em \_\-34}, \/  float {\em \_\-41}, \/  float {\em \_\-42}, \/  float {\em \_\-43}, \/  float {\em \_\-44})}}
+\label{class_m_mat4x4_501c2ede3902e23571147ea5273c2904}
+
+
+
+
+Definition at line 205 of file MMat4x4.cpp.\hypertarget{class_m_mat4x4_9276085ed15c187101647e97b63b7ee8}{
+\index{MMat4x4@{MMat4x4}!MMat4x4@{MMat4x4}}
+\index{MMat4x4@{MMat4x4}!MMat4x4@{MMat4x4}}
+\subsubsection[{MMat4x4}]{\setlength{\rightskip}{0pt plus 5cm}MMat4x4::MMat4x4 (const float $\ast$ {\em mat})}}
+\label{class_m_mat4x4_9276085ed15c187101647e97b63b7ee8}
+
+
+
+
+Definition at line 239 of file MMat4x4.cpp.\hypertarget{class_m_mat4x4_7eda878fcc79597fa4a04a54f640e02b}{
+\index{MMat4x4@{MMat4x4}!MMat4x4@{MMat4x4}}
+\index{MMat4x4@{MMat4x4}!MMat4x4@{MMat4x4}}
+\subsubsection[{MMat4x4}]{\setlength{\rightskip}{0pt plus 5cm}MMat4x4::MMat4x4 (const {\bf MMat4x4} \& {\em mat})}}
+\label{class_m_mat4x4_7eda878fcc79597fa4a04a54f640e02b}
+
+
+
+
+Definition at line 253 of file MMat4x4.cpp.\hypertarget{class_m_mat4x4_753165b1650fd6150f9984cd58f9697a}{
+\index{MMat4x4@{MMat4x4}!$\sim$MMat4x4@{$\sim$MMat4x4}}
+\index{$\sim$MMat4x4@{$\sim$MMat4x4}!MMat4x4@{MMat4x4}}
+\subsubsection[{$\sim$MMat4x4}]{\setlength{\rightskip}{0pt plus 5cm}MMat4x4::$\sim$MMat4x4 ()}}
+\label{class_m_mat4x4_753165b1650fd6150f9984cd58f9697a}
+
+
+
+
+Definition at line 261 of file MMat4x4.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_m_mat4x4_a04d5d581a190e7449aff729d01ae5d4}{
+\index{MMat4x4@{MMat4x4}!GetAxis@{GetAxis}}
+\index{GetAxis@{GetAxis}!MMat4x4@{MMat4x4}}
+\subsubsection[{GetAxis}]{\setlength{\rightskip}{0pt plus 5cm}void MMat4x4::GetAxis ({\bf MVec3} \& {\em axis}, \/  unsigned int {\em col}) const}}
+\label{class_m_mat4x4_a04d5d581a190e7449aff729d01ae5d4}
+
+
+
+
+Definition at line 707 of file MMat4x4.cpp.\hypertarget{class_m_mat4x4_6acc4e4a7706b2786b2e0fed62008eff}{
+\index{MMat4x4@{MMat4x4}!GetCol@{GetCol}}
+\index{GetCol@{GetCol}!MMat4x4@{MMat4x4}}
+\subsubsection[{GetCol}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MVec4} MMat4x4::GetCol (unsigned int {\em col}) const}}
+\label{class_m_mat4x4_6acc4e4a7706b2786b2e0fed62008eff}
+
+
+
+
+Definition at line 698 of file MMat4x4.cpp.\hypertarget{class_m_mat4x4_dfeec8261c165fa894048e082702de36}{
+\index{MMat4x4@{MMat4x4}!GetCol@{GetCol}}
+\index{GetCol@{GetCol}!MMat4x4@{MMat4x4}}
+\subsubsection[{GetCol}]{\setlength{\rightskip}{0pt plus 5cm}void MMat4x4::GetCol ({\bf MVec4} \& {\em rowVec}, \/  unsigned int {\em col}) const}}
+\label{class_m_mat4x4_dfeec8261c165fa894048e082702de36}
+
+
+
+
+Definition at line 686 of file MMat4x4.cpp.\hypertarget{class_m_mat4x4_f024602a5e606751374a11f84a4809ce}{
+\index{MMat4x4@{MMat4x4}!GetDataStart@{GetDataStart}}
+\index{GetDataStart@{GetDataStart}!MMat4x4@{MMat4x4}}
+\subsubsection[{GetDataStart}]{\setlength{\rightskip}{0pt plus 5cm}const float$\ast$ MMat4x4::GetDataStart () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_mat4x4_f024602a5e606751374a11f84a4809ce}
+
+
+
+
+Definition at line 82 of file MMat4x4.h.\hypertarget{class_m_mat4x4_ba9ccf48a89c2d27effd94d16872cc5f}{
+\index{MMat4x4@{MMat4x4}!GetRotate@{GetRotate}}
+\index{GetRotate@{GetRotate}!MMat4x4@{MMat4x4}}
+\subsubsection[{GetRotate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MMat3x3} MMat4x4::GetRotate () const}}
+\label{class_m_mat4x4_ba9ccf48a89c2d27effd94d16872cc5f}
+
+
+
+
+Definition at line 505 of file MMat4x4.cpp.\hypertarget{class_m_mat4x4_3cc5b3636f8bd790d477e83ad2396007}{
+\index{MMat4x4@{MMat4x4}!GetRotate@{GetRotate}}
+\index{GetRotate@{GetRotate}!MMat4x4@{MMat4x4}}
+\subsubsection[{GetRotate}]{\setlength{\rightskip}{0pt plus 5cm}void MMat4x4::GetRotate ({\bf MMat3x3} \& {\em mat}) const}}
+\label{class_m_mat4x4_3cc5b3636f8bd790d477e83ad2396007}
+
+
+
+
+Definition at line 484 of file MMat4x4.cpp.\hypertarget{class_m_mat4x4_0cc56b3435aedef6d9477249368d4de9}{
+\index{MMat4x4@{MMat4x4}!GetRow@{GetRow}}
+\index{GetRow@{GetRow}!MMat4x4@{MMat4x4}}
+\subsubsection[{GetRow}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MVec4} MMat4x4::GetRow (unsigned int {\em row}) const}}
+\label{class_m_mat4x4_0cc56b3435aedef6d9477249368d4de9}
+
+
+
+
+Definition at line 677 of file MMat4x4.cpp.\hypertarget{class_m_mat4x4_820fe272baaa1085f2e352511efa8b29}{
+\index{MMat4x4@{MMat4x4}!GetRow@{GetRow}}
+\index{GetRow@{GetRow}!MMat4x4@{MMat4x4}}
+\subsubsection[{GetRow}]{\setlength{\rightskip}{0pt plus 5cm}void MMat4x4::GetRow ({\bf MVec4} \& {\em rowVec}, \/  unsigned int {\em row}) const}}
+\label{class_m_mat4x4_820fe272baaa1085f2e352511efa8b29}
+
+
+
+
+Definition at line 665 of file MMat4x4.cpp.\hypertarget{class_m_mat4x4_55463466396ea91ce4bfe79bc6bcf110}{
+\index{MMat4x4@{MMat4x4}!GetScale@{GetScale}}
+\index{GetScale@{GetScale}!MMat4x4@{MMat4x4}}
+\subsubsection[{GetScale}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MVec3} MMat4x4::GetScale () const}}
+\label{class_m_mat4x4_55463466396ea91ce4bfe79bc6bcf110}
+
+
+
+
+Definition at line 576 of file MMat4x4.cpp.\hypertarget{class_m_mat4x4_0315b1a9ce8d06fc297b987a4e7120e4}{
+\index{MMat4x4@{MMat4x4}!GetScale@{GetScale}}
+\index{GetScale@{GetScale}!MMat4x4@{MMat4x4}}
+\subsubsection[{GetScale}]{\setlength{\rightskip}{0pt plus 5cm}void MMat4x4::GetScale ({\bf MVec3} \& {\em scale}) const}}
+\label{class_m_mat4x4_0315b1a9ce8d06fc297b987a4e7120e4}
+
+
+
+
+Definition at line 561 of file MMat4x4.cpp.\hypertarget{class_m_mat4x4_a58b7792fc25fc7ca9e0822fc7da759f}{
+\index{MMat4x4@{MMat4x4}!GetScaleSqr@{GetScaleSqr}}
+\index{GetScaleSqr@{GetScaleSqr}!MMat4x4@{MMat4x4}}
+\subsubsection[{GetScaleSqr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MVec3} MMat4x4::GetScaleSqr () const}}
+\label{class_m_mat4x4_a58b7792fc25fc7ca9e0822fc7da759f}
+
+
+
+
+Definition at line 548 of file MMat4x4.cpp.\hypertarget{class_m_mat4x4_1052ad082fcdb2973cf72e661f243834}{
+\index{MMat4x4@{MMat4x4}!GetScaleSqr@{GetScaleSqr}}
+\index{GetScaleSqr@{GetScaleSqr}!MMat4x4@{MMat4x4}}
+\subsubsection[{GetScaleSqr}]{\setlength{\rightskip}{0pt plus 5cm}void MMat4x4::GetScaleSqr ({\bf MVec3} \& {\em scale}) const}}
+\label{class_m_mat4x4_1052ad082fcdb2973cf72e661f243834}
+
+
+
+
+Definition at line 533 of file MMat4x4.cpp.\hypertarget{class_m_mat4x4_f4ccc5d98e02464db6bb4660851305ad}{
+\index{MMat4x4@{MMat4x4}!GetTranslate@{GetTranslate}}
+\index{GetTranslate@{GetTranslate}!MMat4x4@{MMat4x4}}
+\subsubsection[{GetTranslate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MVec3} MMat4x4::GetTranslate () const}}
+\label{class_m_mat4x4_f4ccc5d98e02464db6bb4660851305ad}
+
+
+
+
+Definition at line 526 of file MMat4x4.cpp.\hypertarget{class_m_mat4x4_cb765b649243077af476897147c75919}{
+\index{MMat4x4@{MMat4x4}!GetTranslate@{GetTranslate}}
+\index{GetTranslate@{GetTranslate}!MMat4x4@{MMat4x4}}
+\subsubsection[{GetTranslate}]{\setlength{\rightskip}{0pt plus 5cm}void MMat4x4::GetTranslate ({\bf MVec3} \& {\em pos}) const}}
+\label{class_m_mat4x4_cb765b649243077af476897147c75919}
+
+
+
+
+Definition at line 517 of file MMat4x4.cpp.\hypertarget{class_m_mat4x4_ea61fe6cd5a7fdea9260a96812a95298}{
+\index{MMat4x4@{MMat4x4}!Identity@{Identity}}
+\index{Identity@{Identity}!MMat4x4@{MMat4x4}}
+\subsubsection[{Identity}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MMat4x4} \& MMat4x4::Identity ()\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_m_mat4x4_ea61fe6cd5a7fdea9260a96812a95298}
+
+
+
+
+Definition at line 29 of file MMat4x4.cpp.\hypertarget{class_m_mat4x4_5045e1a3e2dda8f62a8c3cba29b721db}{
+\index{MMat4x4@{MMat4x4}!Inverse@{Inverse}}
+\index{Inverse@{Inverse}!MMat4x4@{MMat4x4}}
+\subsubsection[{Inverse}]{\setlength{\rightskip}{0pt plus 5cm}bool MMat4x4::Inverse ({\bf MMat4x4} \& {\em output}) const}}
+\label{class_m_mat4x4_5045e1a3e2dda8f62a8c3cba29b721db}
+
+
+
+
+Definition at line 281 of file MMat4x4.cpp.\hypertarget{class_m_mat4x4_4b4855dfac02d865ba6bad9a83f40dd0}{
+\index{MMat4x4@{MMat4x4}!IsIdentity@{IsIdentity}}
+\index{IsIdentity@{IsIdentity}!MMat4x4@{MMat4x4}}
+\subsubsection[{IsIdentity}]{\setlength{\rightskip}{0pt plus 5cm}bool MMat4x4::IsIdentity () const}}
+\label{class_m_mat4x4_4b4855dfac02d865ba6bad9a83f40dd0}
+
+
+
+
+Definition at line 885 of file MMat4x4.cpp.\hypertarget{class_m_mat4x4_3ca6c5ddab80f8b7eb30ec47f4f908c9}{
+\index{MMat4x4@{MMat4x4}!Load@{Load}}
+\index{Load@{Load}!MMat4x4@{MMat4x4}}
+\subsubsection[{Load}]{\setlength{\rightskip}{0pt plus 5cm}void MMat4x4::Load ({\bf UReader} \& {\em reader})}}
+\label{class_m_mat4x4_3ca6c5ddab80f8b7eb30ec47f4f908c9}
+
+
+
+
+Definition at line 932 of file MMat4x4.cpp.\hypertarget{class_m_mat4x4_efc2d783f3d6384b87d7b8e3705b8e5f}{
+\index{MMat4x4@{MMat4x4}!operator const float $\ast$@{operator const float $\ast$}}
+\index{operator const float $\ast$@{operator const float $\ast$}!MMat4x4@{MMat4x4}}
+\subsubsection[{operator const float $\ast$}]{\setlength{\rightskip}{0pt plus 5cm}MMat4x4::operator const float $\ast$ () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_mat4x4_efc2d783f3d6384b87d7b8e3705b8e5f}
+
+
+
+
+Definition at line 83 of file MMat4x4.h.\hypertarget{class_m_mat4x4_e3f4c44e37d6715708f5ee7397d8f9b3}{
+\index{MMat4x4@{MMat4x4}!operator()@{operator()}}
+\index{operator()@{operator()}!MMat4x4@{MMat4x4}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}float MMat4x4::operator() (unsigned int {\em row}, \/  unsigned int {\em col}) const}}
+\label{class_m_mat4x4_e3f4c44e37d6715708f5ee7397d8f9b3}
+
+
+
+
+Definition at line 727 of file MMat4x4.cpp.\hypertarget{class_m_mat4x4_c636eaea929506f008eed9bff65c3aca}{
+\index{MMat4x4@{MMat4x4}!operator()@{operator()}}
+\index{operator()@{operator()}!MMat4x4@{MMat4x4}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}float \& MMat4x4::operator() (unsigned int {\em row}, \/  unsigned int {\em col})}}
+\label{class_m_mat4x4_c636eaea929506f008eed9bff65c3aca}
+
+
+
+
+Definition at line 718 of file MMat4x4.cpp.\hypertarget{class_m_mat4x4_4dc496e3911853ba028cf38e4be38e33}{
+\index{MMat4x4@{MMat4x4}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!MMat4x4@{MMat4x4}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MMat4x4} MMat4x4::operator$\ast$ (const {\bf MMat4x4} \& {\em mat}) const}}
+\label{class_m_mat4x4_4dc496e3911853ba028cf38e4be38e33}
+
+
+
+
+Definition at line 737 of file MMat4x4.cpp.\hypertarget{class_m_mat4x4_498b45bc7d2108d20db5fe0f7b9f1890}{
+\index{MMat4x4@{MMat4x4}!operator=@{operator=}}
+\index{operator=@{operator=}!MMat4x4@{MMat4x4}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MMat4x4} \& MMat4x4::operator= (const {\bf MMat4x4} \& {\em mat})}}
+\label{class_m_mat4x4_498b45bc7d2108d20db5fe0f7b9f1890}
+
+
+
+
+Definition at line 273 of file MMat4x4.cpp.\hypertarget{class_m_mat4x4_51096a071af230f20fe4d5a94db23913}{
+\index{MMat4x4@{MMat4x4}!Save@{Save}}
+\index{Save@{Save}!MMat4x4@{MMat4x4}}
+\subsubsection[{Save}]{\setlength{\rightskip}{0pt plus 5cm}void MMat4x4::Save ({\bf UWriter} \& {\em writer}) const}}
+\label{class_m_mat4x4_51096a071af230f20fe4d5a94db23913}
+
+
+
+
+Definition at line 910 of file MMat4x4.cpp.\hypertarget{class_m_mat4x4_5b94c2756a481355e14a6e040f0a7025}{
+\index{MMat4x4@{MMat4x4}!SetCol@{SetCol}}
+\index{SetCol@{SetCol}!MMat4x4@{MMat4x4}}
+\subsubsection[{SetCol}]{\setlength{\rightskip}{0pt plus 5cm}void MMat4x4::SetCol (unsigned int {\em col}, \/  const {\bf MVec4} \& {\em rowVec})}}
+\label{class_m_mat4x4_5b94c2756a481355e14a6e040f0a7025}
+
+
+
+
+Definition at line 653 of file MMat4x4.cpp.\hypertarget{class_m_mat4x4_95954820693d983fc18428eb935e1b01}{
+\index{MMat4x4@{MMat4x4}!SetOrientation@{SetOrientation}}
+\index{SetOrientation@{SetOrientation}!MMat4x4@{MMat4x4}}
+\subsubsection[{SetOrientation}]{\setlength{\rightskip}{0pt plus 5cm}void MMat4x4::SetOrientation (const {\bf MVec3} \& {\em side}, \/  const {\bf MVec3} \& {\em forward})}}
+\label{class_m_mat4x4_95954820693d983fc18428eb935e1b01}
+
+
+
+
+Definition at line 621 of file MMat4x4.cpp.\hypertarget{class_m_mat4x4_37d2e5026e682b64a60ee7343cd814e9}{
+\index{MMat4x4@{MMat4x4}!SetRotate@{SetRotate}}
+\index{SetRotate@{SetRotate}!MMat4x4@{MMat4x4}}
+\subsubsection[{SetRotate}]{\setlength{\rightskip}{0pt plus 5cm}void MMat4x4::SetRotate (const {\bf MMat3x3} \& {\em mat})}}
+\label{class_m_mat4x4_37d2e5026e682b64a60ee7343cd814e9}
+
+
+
+
+Definition at line 459 of file MMat4x4.cpp.\hypertarget{class_m_mat4x4_2c628c08af200deb17e1bad137bafbaa}{
+\index{MMat4x4@{MMat4x4}!SetRow@{SetRow}}
+\index{SetRow@{SetRow}!MMat4x4@{MMat4x4}}
+\subsubsection[{SetRow}]{\setlength{\rightskip}{0pt plus 5cm}void MMat4x4::SetRow (unsigned int {\em row}, \/  const {\bf MVec4} \& {\em rowVec})}}
+\label{class_m_mat4x4_2c628c08af200deb17e1bad137bafbaa}
+
+
+
+
+Definition at line 641 of file MMat4x4.cpp.\hypertarget{class_m_mat4x4_8ed6ef9ec48dacf59eda26bb8e3b721d}{
+\index{MMat4x4@{MMat4x4}!SetScale@{SetScale}}
+\index{SetScale@{SetScale}!MMat4x4@{MMat4x4}}
+\subsubsection[{SetScale}]{\setlength{\rightskip}{0pt plus 5cm}void MMat4x4::SetScale (const {\bf MVec3} \& {\em scale})}}
+\label{class_m_mat4x4_8ed6ef9ec48dacf59eda26bb8e3b721d}
+
+
+
+
+Definition at line 604 of file MMat4x4.cpp.\hypertarget{class_m_mat4x4_ac06f72b0de0177bf7a98ccf4ddc5ed2}{
+\index{MMat4x4@{MMat4x4}!SetTranslate@{SetTranslate}}
+\index{SetTranslate@{SetTranslate}!MMat4x4@{MMat4x4}}
+\subsubsection[{SetTranslate}]{\setlength{\rightskip}{0pt plus 5cm}void MMat4x4::SetTranslate (const {\bf MVec3} \& {\em pos})}}
+\label{class_m_mat4x4_ac06f72b0de0177bf7a98ccf4ddc5ed2}
+
+
+
+
+Definition at line 475 of file MMat4x4.cpp.\hypertarget{class_m_mat4x4_385cd0e1af4a803cfb38860de8195572}{
+\index{MMat4x4@{MMat4x4}!TransformCoord@{TransformCoord}}
+\index{TransformCoord@{TransformCoord}!MMat4x4@{MMat4x4}}
+\subsubsection[{TransformCoord}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MVec3} MMat4x4::TransformCoord (const {\bf MVec3} \& {\em coord}) const}}
+\label{class_m_mat4x4_385cd0e1af4a803cfb38860de8195572}
+
+
+
+
+Definition at line 416 of file MMat4x4.cpp.\hypertarget{class_m_mat4x4_1ce05837ed33fbbfafc051d23c9ab4e1}{
+\index{MMat4x4@{MMat4x4}!TransformCoordFast@{TransformCoordFast}}
+\index{TransformCoordFast@{TransformCoordFast}!MMat4x4@{MMat4x4}}
+\subsubsection[{TransformCoordFast}]{\setlength{\rightskip}{0pt plus 5cm}void MMat4x4::TransformCoordFast ({\bf MVec3} \& {\em coord}) const}}
+\label{class_m_mat4x4_1ce05837ed33fbbfafc051d23c9ab4e1}
+
+
+
+
+Definition at line 403 of file MMat4x4.cpp.\hypertarget{class_m_mat4x4_6433902604e11fbc092ba36be233d2a1}{
+\index{MMat4x4@{MMat4x4}!TransformCoordNoPersp@{TransformCoordNoPersp}}
+\index{TransformCoordNoPersp@{TransformCoordNoPersp}!MMat4x4@{MMat4x4}}
+\subsubsection[{TransformCoordNoPersp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MVec3} MMat4x4::TransformCoordNoPersp (const {\bf MVec3} \& {\em coord}) const}}
+\label{class_m_mat4x4_6433902604e11fbc092ba36be233d2a1}
+
+
+
+
+Definition at line 437 of file MMat4x4.cpp.\hypertarget{class_m_mat4x4_ea380b26ff885243bda1f33dd851177b}{
+\index{MMat4x4@{MMat4x4}!TransformCoordNoPerspFast@{TransformCoordNoPerspFast}}
+\index{TransformCoordNoPerspFast@{TransformCoordNoPerspFast}!MMat4x4@{MMat4x4}}
+\subsubsection[{TransformCoordNoPerspFast}]{\setlength{\rightskip}{0pt plus 5cm}void MMat4x4::TransformCoordNoPerspFast ({\bf MVec3} \& {\em coord}) const}}
+\label{class_m_mat4x4_ea380b26ff885243bda1f33dd851177b}
+
+
+
+
+Definition at line 447 of file MMat4x4.cpp.\hypertarget{class_m_mat4x4_9e21fa3a1796f4dc4f393284385222ce}{
+\index{MMat4x4@{MMat4x4}!TransformCoordPrePersp@{TransformCoordPrePersp}}
+\index{TransformCoordPrePersp@{TransformCoordPrePersp}!MMat4x4@{MMat4x4}}
+\subsubsection[{TransformCoordPrePersp}]{\setlength{\rightskip}{0pt plus 5cm}void MMat4x4::TransformCoordPrePersp ({\bf MVec4} \& {\em result}, \/  const {\bf MVec3} \& {\em coord}) const}}
+\label{class_m_mat4x4_9e21fa3a1796f4dc4f393284385222ce}
+
+
+
+
+Definition at line 427 of file MMat4x4.cpp.\hypertarget{class_m_mat4x4_d0f028021424a3132bd7eda119094b94}{
+\index{MMat4x4@{MMat4x4}!Transpose@{Transpose}}
+\index{Transpose@{Transpose}!MMat4x4@{MMat4x4}}
+\subsubsection[{Transpose}]{\setlength{\rightskip}{0pt plus 5cm}void MMat4x4::Transpose () const}}
+\label{class_m_mat4x4_d0f028021424a3132bd7eda119094b94}
+
+
+
+
+Definition at line 381 of file MMat4x4.cpp.\hypertarget{class_m_mat4x4_6015f2e4f21155e99a953cb768a408b6}{
+\index{MMat4x4@{MMat4x4}!Transposed@{Transposed}}
+\index{Transposed@{Transposed}!MMat4x4@{MMat4x4}}
+\subsubsection[{Transposed}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MMat4x4} MMat4x4::Transposed () const}}
+\label{class_m_mat4x4_6015f2e4f21155e99a953cb768a408b6}
+
+
+
+
+Definition at line 393 of file MMat4x4.cpp.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_m_mat4x4_f023d028712e837f5150cfa1cffec3ad}{
+\index{MMat4x4@{MMat4x4}!kInverseDetEpsilon@{kInverseDetEpsilon}}
+\index{kInverseDetEpsilon@{kInverseDetEpsilon}!MMat4x4@{MMat4x4}}
+\subsubsection[{kInverseDetEpsilon}]{\setlength{\rightskip}{0pt plus 5cm}const float {\bf MMat4x4::kInverseDetEpsilon} = 0.00000095367431640625f\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_m_mat4x4_f023d028712e837f5150cfa1cffec3ad}
+
+
+
+
+Definition at line 24 of file MMat4x4.h.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_m_mat4x4_8h}{MMat4x4.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_m_mat4x4_8cpp}{MMat4x4.cpp}\end{CompactItemize}

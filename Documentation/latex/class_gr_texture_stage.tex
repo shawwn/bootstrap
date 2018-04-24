@@ -1,0 +1,441 @@
+\hypertarget{class_gr_texture_stage}{
+\section{GrTextureStage Class Reference}
+\label{class_gr_texture_stage}\index{GrTextureStage@{GrTextureStage}}
+}
+{\tt \#include $<$GrTextureStage.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+enum \hyperlink{class_gr_texture_stage_b86144a2e97311bb975db7c2c361f048}{EFILTERMODE} \{ \par
+\hyperlink{class_gr_texture_stage_b86144a2e97311bb975db7c2c361f048097400c6cb008ee2154a0b369d6d8fe0}{EFM\_\-ANISOTROPIC}, 
+\hyperlink{class_gr_texture_stage_b86144a2e97311bb975db7c2c361f0482208e78123e0ffc8170576e9dbf9ceb1}{EFM\_\-TRILINEAR}, 
+\hyperlink{class_gr_texture_stage_b86144a2e97311bb975db7c2c361f048501ac6f236392708f83174094dfa9f7b}{EFM\_\-BILINEAR}, 
+\hyperlink{class_gr_texture_stage_b86144a2e97311bb975db7c2c361f048582052f16383ad9a61b663a0b8782208}{EFM\_\-NEAREST}, 
+\par
+\hyperlink{class_gr_texture_stage_b86144a2e97311bb975db7c2c361f04870914660843541078f1353358799457e}{EFM\_\-COUNT}
+ \}
+\item 
+enum \hyperlink{class_gr_texture_stage_dea63364bc3369d0cf5ef74b76268d0e}{EADDRESSMODE} \{ \hyperlink{class_gr_texture_stage_dea63364bc3369d0cf5ef74b76268d0e74df555bc49f7e73a5892485ae1e8cc7}{EAM\_\-REPEAT}, 
+\hyperlink{class_gr_texture_stage_dea63364bc3369d0cf5ef74b76268d0e59142b13ea84cd62f7609132ada3b380}{EAM\_\-CLAMP}
+ \}
+\item 
+typedef unsigned int \hyperlink{class_gr_texture_stage_60f59a039bf1c95b76659752ff1bf7d6}{GenTextureFlag}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_texture_stage_eac3752fc6e0acac79696710b9eb0598}{GrTextureStage} ()
+\item 
+\hyperlink{class_gr_texture_stage_6378461758f772d3668fecbb8b9f133a}{GrTextureStage} (const \hyperlink{class_gr_texture_stage}{GrTextureStage} \&stage)
+\item 
+\hyperlink{class_gr_texture_stage_ed8757fd8de2d75111b96aba86c1b195}{$\sim$GrTextureStage} ()
+\item 
+void \hyperlink{class_gr_texture_stage_d1c9b29aa390259ccc36d6f518502801}{SetTexture} (\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_texture_base}{GrTextureBase} $>$ \hyperlink{glext__bak_8h_8f486379aef534669f4f06f515e7ce6c}{texture})
+\item 
+void \hyperlink{class_gr_texture_stage_bd3af2826c14f1e0bb6b93e9031f4294}{SetAddressMode} (\hyperlink{class_gr_texture_stage_dea63364bc3369d0cf5ef74b76268d0e}{EADDRESSMODE} \hyperlink{glext__bak_8h_d585a1393cfa368fa9dc3d8ebff640d5}{s}, \hyperlink{class_gr_texture_stage_dea63364bc3369d0cf5ef74b76268d0e}{EADDRESSMODE} \hyperlink{glext__bak_8h_00140d6f5c548b26daf170bf16e86a6d}{t})
+\item 
+void \hyperlink{class_gr_texture_stage_f2d25544ef1026d7f705074db5c88902}{SetFilterMode} (\hyperlink{class_gr_texture_stage_b86144a2e97311bb975db7c2c361f048}{EFILTERMODE} filterMode)
+\item 
+void \hyperlink{class_gr_texture_stage_fc6ffe941788ef5073fa2c7c80c4644a}{SetMaxAnisotropy} (float maxAnisotropy)
+\item 
+void \hyperlink{class_gr_texture_stage_ed9af9744e9097a1745e1c9efda29141}{SetMipMapEnable} (bool mipMapEnable)
+\item 
+void \hyperlink{class_gr_texture_stage_4656b7b3dca1699a7ed25f89c57c190e}{SetGenTextureFlag} (\hyperlink{class_gr_texture_stage_60f59a039bf1c95b76659752ff1bf7d6}{GenTextureFlag} \hyperlink{_u_t_message_8h_0a3c0b351ab09281b662a9ff4f900a53}{flags})
+\item 
+\hyperlink{class_gr_texture_stage_dea63364bc3369d0cf5ef74b76268d0e}{EADDRESSMODE} \hyperlink{class_gr_texture_stage_483ace52427b80106f568437c00c64ea}{GetAddressModeS} () const 
+\item 
+\hyperlink{class_gr_texture_stage_dea63364bc3369d0cf5ef74b76268d0e}{EADDRESSMODE} \hyperlink{class_gr_texture_stage_9abd7581b1a3526d6842ecf8b79baf58}{GetAddressModeT} () const 
+\item 
+float \hyperlink{class_gr_texture_stage_426da5e8a0ae8225728c287a4d2abdd8}{GetMaxAnisotropy} () const 
+\item 
+bool \hyperlink{class_gr_texture_stage_216e2a31963f9e4f10096c0c42795279}{GetMipMapEnable} () const 
+\item 
+\hyperlink{class_gr_texture_stage_60f59a039bf1c95b76659752ff1bf7d6}{GenTextureFlag} \hyperlink{class_gr_texture_stage_b402fe22422a4bd70bb8ae1350a7eb14}{GetGenTextureFlag} () const 
+\item 
+void \hyperlink{class_gr_texture_stage_1803888bbf5d820f060465bd63bf88bd}{SetTexColorMod} (const \hyperlink{class_gr_color}{GrColor} \&\hyperlink{glext_8h_3ea846f998d64f079b86052b6c4193a8}{color})
+\item 
+void \hyperlink{class_gr_texture_stage_6dc007a985aac8227b9e445829d42756}{SetTexColorAdd} (const \hyperlink{class_gr_color}{GrColor} \&\hyperlink{glext_8h_3ea846f998d64f079b86052b6c4193a8}{color})
+\item 
+const \hyperlink{class_gr_color}{GrColor} \& \hyperlink{class_gr_texture_stage_593eb3d965cd99ca91b4e09127a892e6}{GetTexColorMod} () const 
+\item 
+const \hyperlink{class_gr_color}{GrColor} \& \hyperlink{class_gr_texture_stage_be60ecb1b07e9e3765c5c5119eaa114f}{GetTexColorAdd} () const 
+\item 
+\hyperlink{class_gr_texture_stage_b86144a2e97311bb975db7c2c361f048}{EFILTERMODE} \hyperlink{class_gr_texture_stage_e2e876d39b788ceb501e17c0ea51eae0}{GetFilterMode} () const 
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_texture_base}{GrTextureBase} $>$ \hyperlink{class_gr_texture_stage_89083b0faeed97261a4ae0feb512fc8b}{GetTexture} () const 
+\item 
+void \hyperlink{class_gr_texture_stage_72dad18b9bc9adbad72138920b6e7fdf}{Update} () const 
+\item 
+void \hyperlink{class_gr_texture_stage_f8e83134d46afc43e868f5069b065e29}{ApplyShaderState} (\hyperlink{class_gr_shader}{GrShader} $\ast$\hyperlink{glext_8h_57b2a96adb1d51204909a82d861e395e}{shader}, \hyperlink{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba}{GrShader::EPARAM} colorReg0, \hyperlink{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba}{GrShader::EPARAM} colorReg1) const 
+\item 
+void \hyperlink{class_gr_texture_stage_485314fd955bae3e4b6c2c228381b8f6}{BindTexture} (unsigned int glTextureUnit) const 
+\item 
+\hyperlink{class_gr_texture_stage}{GrTextureStage} \& \hyperlink{class_gr_texture_stage_078a1d7c0fa18ab8a73bcad6ee5037ae}{operator=} (const \hyperlink{class_gr_texture_stage}{GrTextureStage} \&stage)
+\end{CompactItemize}
+\subsection*{Static Public Attributes}
+\begin{CompactItemize}
+\item 
+static const \hyperlink{class_gr_texture_stage_60f59a039bf1c95b76659752ff1bf7d6}{GenTextureFlag} \hyperlink{class_gr_texture_stage_c8c9e946cb577f989ca9fc7a922858c8}{kGenEnvCube} = 0x01
+\item 
+static const \hyperlink{class_gr_texture_stage_60f59a039bf1c95b76659752ff1bf7d6}{GenTextureFlag} \hyperlink{class_gr_texture_stage_ba5017eeaf633d3301825798bc63ac88}{kGenEnvDepthCube} = 0x02
+\item 
+static const \hyperlink{class_gr_texture_stage_60f59a039bf1c95b76659752ff1bf7d6}{GenTextureFlag} \hyperlink{class_gr_texture_stage_2e5a1af71fd34ff5f174493b3da79496}{kGenCurRender} = 0x04
+\item 
+static const \hyperlink{class_gr_texture_stage_60f59a039bf1c95b76659752ff1bf7d6}{GenTextureFlag} \hyperlink{class_gr_texture_stage_9aaa704c6b85414a990ba3327e83ccf2}{kGenCurDepth} = 0x08
+\item 
+static const \hyperlink{class_gr_texture_stage_60f59a039bf1c95b76659752ff1bf7d6}{GenTextureFlag} \hyperlink{class_gr_texture_stage_1af32ceaadafc4e51e34f1e143476176}{kGenReflection} = 0x10
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 24 of file GrTextureStage.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_gr_texture_stage_60f59a039bf1c95b76659752ff1bf7d6}{
+\index{GrTextureStage@{GrTextureStage}!GenTextureFlag@{GenTextureFlag}}
+\index{GenTextureFlag@{GenTextureFlag}!GrTextureStage@{GrTextureStage}}
+\subsubsection[{GenTextureFlag}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int {\bf GrTextureStage::GenTextureFlag}}}
+\label{class_gr_texture_stage_60f59a039bf1c95b76659752ff1bf7d6}
+
+
+
+
+Definition at line 29 of file GrTextureStage.h.
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_gr_texture_stage_dea63364bc3369d0cf5ef74b76268d0e}{
+\index{GrTextureStage@{GrTextureStage}!EADDRESSMODE@{EADDRESSMODE}}
+\index{EADDRESSMODE@{EADDRESSMODE}!GrTextureStage@{GrTextureStage}}
+\subsubsection[{EADDRESSMODE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GrTextureStage::EADDRESSMODE}}}
+\label{class_gr_texture_stage_dea63364bc3369d0cf5ef74b76268d0e}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{EAM\_\-REPEAT@{EAM\_\-REPEAT}!GrTextureStage@{GrTextureStage}}\index{GrTextureStage@{GrTextureStage}!EAM\_\-REPEAT@{EAM\_\-REPEAT}}\item[{\em 
+\hypertarget{class_gr_texture_stage_dea63364bc3369d0cf5ef74b76268d0e74df555bc49f7e73a5892485ae1e8cc7}{
+EAM\_\-REPEAT}
+\label{class_gr_texture_stage_dea63364bc3369d0cf5ef74b76268d0e74df555bc49f7e73a5892485ae1e8cc7}
+}]\index{EAM\_\-CLAMP@{EAM\_\-CLAMP}!GrTextureStage@{GrTextureStage}}\index{GrTextureStage@{GrTextureStage}!EAM\_\-CLAMP@{EAM\_\-CLAMP}}\item[{\em 
+\hypertarget{class_gr_texture_stage_dea63364bc3369d0cf5ef74b76268d0e59142b13ea84cd62f7609132ada3b380}{
+EAM\_\-CLAMP}
+\label{class_gr_texture_stage_dea63364bc3369d0cf5ef74b76268d0e59142b13ea84cd62f7609132ada3b380}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 45 of file GrTextureStage.h.\hypertarget{class_gr_texture_stage_b86144a2e97311bb975db7c2c361f048}{
+\index{GrTextureStage@{GrTextureStage}!EFILTERMODE@{EFILTERMODE}}
+\index{EFILTERMODE@{EFILTERMODE}!GrTextureStage@{GrTextureStage}}
+\subsubsection[{EFILTERMODE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GrTextureStage::EFILTERMODE}}}
+\label{class_gr_texture_stage_b86144a2e97311bb975db7c2c361f048}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{EFM\_\-ANISOTROPIC@{EFM\_\-ANISOTROPIC}!GrTextureStage@{GrTextureStage}}\index{GrTextureStage@{GrTextureStage}!EFM\_\-ANISOTROPIC@{EFM\_\-ANISOTROPIC}}\item[{\em 
+\hypertarget{class_gr_texture_stage_b86144a2e97311bb975db7c2c361f048097400c6cb008ee2154a0b369d6d8fe0}{
+EFM\_\-ANISOTROPIC}
+\label{class_gr_texture_stage_b86144a2e97311bb975db7c2c361f048097400c6cb008ee2154a0b369d6d8fe0}
+}]\index{EFM\_\-TRILINEAR@{EFM\_\-TRILINEAR}!GrTextureStage@{GrTextureStage}}\index{GrTextureStage@{GrTextureStage}!EFM\_\-TRILINEAR@{EFM\_\-TRILINEAR}}\item[{\em 
+\hypertarget{class_gr_texture_stage_b86144a2e97311bb975db7c2c361f0482208e78123e0ffc8170576e9dbf9ceb1}{
+EFM\_\-TRILINEAR}
+\label{class_gr_texture_stage_b86144a2e97311bb975db7c2c361f0482208e78123e0ffc8170576e9dbf9ceb1}
+}]\index{EFM\_\-BILINEAR@{EFM\_\-BILINEAR}!GrTextureStage@{GrTextureStage}}\index{GrTextureStage@{GrTextureStage}!EFM\_\-BILINEAR@{EFM\_\-BILINEAR}}\item[{\em 
+\hypertarget{class_gr_texture_stage_b86144a2e97311bb975db7c2c361f048501ac6f236392708f83174094dfa9f7b}{
+EFM\_\-BILINEAR}
+\label{class_gr_texture_stage_b86144a2e97311bb975db7c2c361f048501ac6f236392708f83174094dfa9f7b}
+}]\index{EFM\_\-NEAREST@{EFM\_\-NEAREST}!GrTextureStage@{GrTextureStage}}\index{GrTextureStage@{GrTextureStage}!EFM\_\-NEAREST@{EFM\_\-NEAREST}}\item[{\em 
+\hypertarget{class_gr_texture_stage_b86144a2e97311bb975db7c2c361f048582052f16383ad9a61b663a0b8782208}{
+EFM\_\-NEAREST}
+\label{class_gr_texture_stage_b86144a2e97311bb975db7c2c361f048582052f16383ad9a61b663a0b8782208}
+}]\index{EFM\_\-COUNT@{EFM\_\-COUNT}!GrTextureStage@{GrTextureStage}}\index{GrTextureStage@{GrTextureStage}!EFM\_\-COUNT@{EFM\_\-COUNT}}\item[{\em 
+\hypertarget{class_gr_texture_stage_b86144a2e97311bb975db7c2c361f04870914660843541078f1353358799457e}{
+EFM\_\-COUNT}
+\label{class_gr_texture_stage_b86144a2e97311bb975db7c2c361f04870914660843541078f1353358799457e}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 36 of file GrTextureStage.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_texture_stage_eac3752fc6e0acac79696710b9eb0598}{
+\index{GrTextureStage@{GrTextureStage}!GrTextureStage@{GrTextureStage}}
+\index{GrTextureStage@{GrTextureStage}!GrTextureStage@{GrTextureStage}}
+\subsubsection[{GrTextureStage}]{\setlength{\rightskip}{0pt plus 5cm}GrTextureStage::GrTextureStage ()}}
+\label{class_gr_texture_stage_eac3752fc6e0acac79696710b9eb0598}
+
+
+
+
+Definition at line 86 of file GrTextureStage.cpp.\hypertarget{class_gr_texture_stage_6378461758f772d3668fecbb8b9f133a}{
+\index{GrTextureStage@{GrTextureStage}!GrTextureStage@{GrTextureStage}}
+\index{GrTextureStage@{GrTextureStage}!GrTextureStage@{GrTextureStage}}
+\subsubsection[{GrTextureStage}]{\setlength{\rightskip}{0pt plus 5cm}GrTextureStage::GrTextureStage (const {\bf GrTextureStage} \& {\em stage})}}
+\label{class_gr_texture_stage_6378461758f772d3668fecbb8b9f133a}
+
+
+
+
+Definition at line 105 of file GrTextureStage.cpp.\hypertarget{class_gr_texture_stage_ed8757fd8de2d75111b96aba86c1b195}{
+\index{GrTextureStage@{GrTextureStage}!$\sim$GrTextureStage@{$\sim$GrTextureStage}}
+\index{$\sim$GrTextureStage@{$\sim$GrTextureStage}!GrTextureStage@{GrTextureStage}}
+\subsubsection[{$\sim$GrTextureStage}]{\setlength{\rightskip}{0pt plus 5cm}GrTextureStage::$\sim$GrTextureStage ()}}
+\label{class_gr_texture_stage_ed8757fd8de2d75111b96aba86c1b195}
+
+
+
+
+Definition at line 111 of file GrTextureStage.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_texture_stage_f8e83134d46afc43e868f5069b065e29}{
+\index{GrTextureStage@{GrTextureStage}!ApplyShaderState@{ApplyShaderState}}
+\index{ApplyShaderState@{ApplyShaderState}!GrTextureStage@{GrTextureStage}}
+\subsubsection[{ApplyShaderState}]{\setlength{\rightskip}{0pt plus 5cm}void GrTextureStage::ApplyShaderState ({\bf GrShader} $\ast$ {\em shader}, \/  {\bf GrShader::EPARAM} {\em colorReg0}, \/  {\bf GrShader::EPARAM} {\em colorReg1}) const}}
+\label{class_gr_texture_stage_f8e83134d46afc43e868f5069b065e29}
+
+
+
+
+Definition at line 202 of file GrTextureStage.cpp.\hypertarget{class_gr_texture_stage_485314fd955bae3e4b6c2c228381b8f6}{
+\index{GrTextureStage@{GrTextureStage}!BindTexture@{BindTexture}}
+\index{BindTexture@{BindTexture}!GrTextureStage@{GrTextureStage}}
+\subsubsection[{BindTexture}]{\setlength{\rightskip}{0pt plus 5cm}void GrTextureStage::BindTexture (unsigned int {\em glTextureUnit}) const}}
+\label{class_gr_texture_stage_485314fd955bae3e4b6c2c228381b8f6}
+
+
+
+
+Definition at line 214 of file GrTextureStage.cpp.\hypertarget{class_gr_texture_stage_483ace52427b80106f568437c00c64ea}{
+\index{GrTextureStage@{GrTextureStage}!GetAddressModeS@{GetAddressModeS}}
+\index{GetAddressModeS@{GetAddressModeS}!GrTextureStage@{GrTextureStage}}
+\subsubsection[{GetAddressModeS}]{\setlength{\rightskip}{0pt plus 5cm}{\bf EADDRESSMODE} GrTextureStage::GetAddressModeS () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_texture_stage_483ace52427b80106f568437c00c64ea}
+
+
+
+
+Definition at line 63 of file GrTextureStage.h.\hypertarget{class_gr_texture_stage_9abd7581b1a3526d6842ecf8b79baf58}{
+\index{GrTextureStage@{GrTextureStage}!GetAddressModeT@{GetAddressModeT}}
+\index{GetAddressModeT@{GetAddressModeT}!GrTextureStage@{GrTextureStage}}
+\subsubsection[{GetAddressModeT}]{\setlength{\rightskip}{0pt plus 5cm}{\bf EADDRESSMODE} GrTextureStage::GetAddressModeT () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_texture_stage_9abd7581b1a3526d6842ecf8b79baf58}
+
+
+
+
+Definition at line 64 of file GrTextureStage.h.\hypertarget{class_gr_texture_stage_e2e876d39b788ceb501e17c0ea51eae0}{
+\index{GrTextureStage@{GrTextureStage}!GetFilterMode@{GetFilterMode}}
+\index{GetFilterMode@{GetFilterMode}!GrTextureStage@{GrTextureStage}}
+\subsubsection[{GetFilterMode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf EFILTERMODE} GrTextureStage::GetFilterMode () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_texture_stage_e2e876d39b788ceb501e17c0ea51eae0}
+
+
+
+
+Definition at line 75 of file GrTextureStage.h.\hypertarget{class_gr_texture_stage_b402fe22422a4bd70bb8ae1350a7eb14}{
+\index{GrTextureStage@{GrTextureStage}!GetGenTextureFlag@{GetGenTextureFlag}}
+\index{GetGenTextureFlag@{GetGenTextureFlag}!GrTextureStage@{GrTextureStage}}
+\subsubsection[{GetGenTextureFlag}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GenTextureFlag} GrTextureStage::GetGenTextureFlag () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_texture_stage_b402fe22422a4bd70bb8ae1350a7eb14}
+
+
+
+
+Definition at line 67 of file GrTextureStage.h.\hypertarget{class_gr_texture_stage_426da5e8a0ae8225728c287a4d2abdd8}{
+\index{GrTextureStage@{GrTextureStage}!GetMaxAnisotropy@{GetMaxAnisotropy}}
+\index{GetMaxAnisotropy@{GetMaxAnisotropy}!GrTextureStage@{GrTextureStage}}
+\subsubsection[{GetMaxAnisotropy}]{\setlength{\rightskip}{0pt plus 5cm}float GrTextureStage::GetMaxAnisotropy () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_texture_stage_426da5e8a0ae8225728c287a4d2abdd8}
+
+
+
+
+Definition at line 65 of file GrTextureStage.h.\hypertarget{class_gr_texture_stage_216e2a31963f9e4f10096c0c42795279}{
+\index{GrTextureStage@{GrTextureStage}!GetMipMapEnable@{GetMipMapEnable}}
+\index{GetMipMapEnable@{GetMipMapEnable}!GrTextureStage@{GrTextureStage}}
+\subsubsection[{GetMipMapEnable}]{\setlength{\rightskip}{0pt plus 5cm}bool GrTextureStage::GetMipMapEnable () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_texture_stage_216e2a31963f9e4f10096c0c42795279}
+
+
+
+
+Definition at line 66 of file GrTextureStage.h.\hypertarget{class_gr_texture_stage_be60ecb1b07e9e3765c5c5119eaa114f}{
+\index{GrTextureStage@{GrTextureStage}!GetTexColorAdd@{GetTexColorAdd}}
+\index{GetTexColorAdd@{GetTexColorAdd}!GrTextureStage@{GrTextureStage}}
+\subsubsection[{GetTexColorAdd}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf GrColor}\& GrTextureStage::GetTexColorAdd () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_texture_stage_be60ecb1b07e9e3765c5c5119eaa114f}
+
+
+
+
+Definition at line 73 of file GrTextureStage.h.\hypertarget{class_gr_texture_stage_593eb3d965cd99ca91b4e09127a892e6}{
+\index{GrTextureStage@{GrTextureStage}!GetTexColorMod@{GetTexColorMod}}
+\index{GetTexColorMod@{GetTexColorMod}!GrTextureStage@{GrTextureStage}}
+\subsubsection[{GetTexColorMod}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf GrColor}\& GrTextureStage::GetTexColorMod () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_texture_stage_593eb3d965cd99ca91b4e09127a892e6}
+
+
+
+
+Definition at line 72 of file GrTextureStage.h.\hypertarget{class_gr_texture_stage_89083b0faeed97261a4ae0feb512fc8b}{
+\index{GrTextureStage@{GrTextureStage}!GetTexture@{GetTexture}}
+\index{GetTexture@{GetTexture}!GrTextureStage@{GrTextureStage}}
+\subsubsection[{GetTexture}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrTextureBase} $>$ GrTextureStage::GetTexture () const}}
+\label{class_gr_texture_stage_89083b0faeed97261a4ae0feb512fc8b}
+
+
+
+
+Definition at line 188 of file GrTextureStage.cpp.\hypertarget{class_gr_texture_stage_078a1d7c0fa18ab8a73bcad6ee5037ae}{
+\index{GrTextureStage@{GrTextureStage}!operator=@{operator=}}
+\index{operator=@{operator=}!GrTextureStage@{GrTextureStage}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrTextureStage} \& GrTextureStage::operator= (const {\bf GrTextureStage} \& {\em stage})}}
+\label{class_gr_texture_stage_078a1d7c0fa18ab8a73bcad6ee5037ae}
+
+
+
+
+Definition at line 241 of file GrTextureStage.cpp.\hypertarget{class_gr_texture_stage_bd3af2826c14f1e0bb6b93e9031f4294}{
+\index{GrTextureStage@{GrTextureStage}!SetAddressMode@{SetAddressMode}}
+\index{SetAddressMode@{SetAddressMode}!GrTextureStage@{GrTextureStage}}
+\subsubsection[{SetAddressMode}]{\setlength{\rightskip}{0pt plus 5cm}void GrTextureStage::SetAddressMode ({\bf EADDRESSMODE} {\em s}, \/  {\bf EADDRESSMODE} {\em t})}}
+\label{class_gr_texture_stage_bd3af2826c14f1e0bb6b93e9031f4294}
+
+
+
+
+Definition at line 132 of file GrTextureStage.cpp.\hypertarget{class_gr_texture_stage_f2d25544ef1026d7f705074db5c88902}{
+\index{GrTextureStage@{GrTextureStage}!SetFilterMode@{SetFilterMode}}
+\index{SetFilterMode@{SetFilterMode}!GrTextureStage@{GrTextureStage}}
+\subsubsection[{SetFilterMode}]{\setlength{\rightskip}{0pt plus 5cm}void GrTextureStage::SetFilterMode ({\bf EFILTERMODE} {\em filterMode})}}
+\label{class_gr_texture_stage_f2d25544ef1026d7f705074db5c88902}
+
+
+
+
+Definition at line 143 of file GrTextureStage.cpp.\hypertarget{class_gr_texture_stage_4656b7b3dca1699a7ed25f89c57c190e}{
+\index{GrTextureStage@{GrTextureStage}!SetGenTextureFlag@{SetGenTextureFlag}}
+\index{SetGenTextureFlag@{SetGenTextureFlag}!GrTextureStage@{GrTextureStage}}
+\subsubsection[{SetGenTextureFlag}]{\setlength{\rightskip}{0pt plus 5cm}void GrTextureStage::SetGenTextureFlag ({\bf GenTextureFlag} {\em flags})}}
+\label{class_gr_texture_stage_4656b7b3dca1699a7ed25f89c57c190e}
+
+
+
+
+Definition at line 166 of file GrTextureStage.cpp.\hypertarget{class_gr_texture_stage_fc6ffe941788ef5073fa2c7c80c4644a}{
+\index{GrTextureStage@{GrTextureStage}!SetMaxAnisotropy@{SetMaxAnisotropy}}
+\index{SetMaxAnisotropy@{SetMaxAnisotropy}!GrTextureStage@{GrTextureStage}}
+\subsubsection[{SetMaxAnisotropy}]{\setlength{\rightskip}{0pt plus 5cm}void GrTextureStage::SetMaxAnisotropy (float {\em maxAnisotropy})}}
+\label{class_gr_texture_stage_fc6ffe941788ef5073fa2c7c80c4644a}
+
+
+
+
+Definition at line 151 of file GrTextureStage.cpp.\hypertarget{class_gr_texture_stage_ed9af9744e9097a1745e1c9efda29141}{
+\index{GrTextureStage@{GrTextureStage}!SetMipMapEnable@{SetMipMapEnable}}
+\index{SetMipMapEnable@{SetMipMapEnable}!GrTextureStage@{GrTextureStage}}
+\subsubsection[{SetMipMapEnable}]{\setlength{\rightskip}{0pt plus 5cm}void GrTextureStage::SetMipMapEnable (bool {\em mipMapEnable})}}
+\label{class_gr_texture_stage_ed9af9744e9097a1745e1c9efda29141}
+
+
+
+
+Definition at line 158 of file GrTextureStage.cpp.\hypertarget{class_gr_texture_stage_6dc007a985aac8227b9e445829d42756}{
+\index{GrTextureStage@{GrTextureStage}!SetTexColorAdd@{SetTexColorAdd}}
+\index{SetTexColorAdd@{SetTexColorAdd}!GrTextureStage@{GrTextureStage}}
+\subsubsection[{SetTexColorAdd}]{\setlength{\rightskip}{0pt plus 5cm}void GrTextureStage::SetTexColorAdd (const {\bf GrColor} \& {\em color})}}
+\label{class_gr_texture_stage_6dc007a985aac8227b9e445829d42756}
+
+
+
+
+Definition at line 181 of file GrTextureStage.cpp.\hypertarget{class_gr_texture_stage_1803888bbf5d820f060465bd63bf88bd}{
+\index{GrTextureStage@{GrTextureStage}!SetTexColorMod@{SetTexColorMod}}
+\index{SetTexColorMod@{SetTexColorMod}!GrTextureStage@{GrTextureStage}}
+\subsubsection[{SetTexColorMod}]{\setlength{\rightskip}{0pt plus 5cm}void GrTextureStage::SetTexColorMod (const {\bf GrColor} \& {\em color})}}
+\label{class_gr_texture_stage_1803888bbf5d820f060465bd63bf88bd}
+
+
+
+
+Definition at line 174 of file GrTextureStage.cpp.\hypertarget{class_gr_texture_stage_d1c9b29aa390259ccc36d6f518502801}{
+\index{GrTextureStage@{GrTextureStage}!SetTexture@{SetTexture}}
+\index{SetTexture@{SetTexture}!GrTextureStage@{GrTextureStage}}
+\subsubsection[{SetTexture}]{\setlength{\rightskip}{0pt plus 5cm}void GrTextureStage::SetTexture ({\bf URef}$<$ {\bf GrTextureBase} $>$ {\em texture})}}
+\label{class_gr_texture_stage_d1c9b29aa390259ccc36d6f518502801}
+
+
+
+
+Definition at line 123 of file GrTextureStage.cpp.\hypertarget{class_gr_texture_stage_72dad18b9bc9adbad72138920b6e7fdf}{
+\index{GrTextureStage@{GrTextureStage}!Update@{Update}}
+\index{Update@{Update}!GrTextureStage@{GrTextureStage}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void GrTextureStage::Update () const}}
+\label{class_gr_texture_stage_72dad18b9bc9adbad72138920b6e7fdf}
+
+
+
+
+Definition at line 195 of file GrTextureStage.cpp.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_gr_texture_stage_9aaa704c6b85414a990ba3327e83ccf2}{
+\index{GrTextureStage@{GrTextureStage}!kGenCurDepth@{kGenCurDepth}}
+\index{kGenCurDepth@{kGenCurDepth}!GrTextureStage@{GrTextureStage}}
+\subsubsection[{kGenCurDepth}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf GenTextureFlag} {\bf GrTextureStage::kGenCurDepth} = 0x08\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_gr_texture_stage_9aaa704c6b85414a990ba3327e83ccf2}
+
+
+
+
+Definition at line 33 of file GrTextureStage.h.\hypertarget{class_gr_texture_stage_2e5a1af71fd34ff5f174493b3da79496}{
+\index{GrTextureStage@{GrTextureStage}!kGenCurRender@{kGenCurRender}}
+\index{kGenCurRender@{kGenCurRender}!GrTextureStage@{GrTextureStage}}
+\subsubsection[{kGenCurRender}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf GenTextureFlag} {\bf GrTextureStage::kGenCurRender} = 0x04\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_gr_texture_stage_2e5a1af71fd34ff5f174493b3da79496}
+
+
+
+
+Definition at line 32 of file GrTextureStage.h.\hypertarget{class_gr_texture_stage_c8c9e946cb577f989ca9fc7a922858c8}{
+\index{GrTextureStage@{GrTextureStage}!kGenEnvCube@{kGenEnvCube}}
+\index{kGenEnvCube@{kGenEnvCube}!GrTextureStage@{GrTextureStage}}
+\subsubsection[{kGenEnvCube}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf GenTextureFlag} {\bf GrTextureStage::kGenEnvCube} = 0x01\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_gr_texture_stage_c8c9e946cb577f989ca9fc7a922858c8}
+
+
+
+
+Definition at line 30 of file GrTextureStage.h.\hypertarget{class_gr_texture_stage_ba5017eeaf633d3301825798bc63ac88}{
+\index{GrTextureStage@{GrTextureStage}!kGenEnvDepthCube@{kGenEnvDepthCube}}
+\index{kGenEnvDepthCube@{kGenEnvDepthCube}!GrTextureStage@{GrTextureStage}}
+\subsubsection[{kGenEnvDepthCube}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf GenTextureFlag} {\bf GrTextureStage::kGenEnvDepthCube} = 0x02\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_gr_texture_stage_ba5017eeaf633d3301825798bc63ac88}
+
+
+
+
+Definition at line 31 of file GrTextureStage.h.\hypertarget{class_gr_texture_stage_1af32ceaadafc4e51e34f1e143476176}{
+\index{GrTextureStage@{GrTextureStage}!kGenReflection@{kGenReflection}}
+\index{kGenReflection@{kGenReflection}!GrTextureStage@{GrTextureStage}}
+\subsubsection[{kGenReflection}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf GenTextureFlag} {\bf GrTextureStage::kGenReflection} = 0x10\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_gr_texture_stage_1af32ceaadafc4e51e34f1e143476176}
+
+
+
+
+Definition at line 34 of file GrTextureStage.h.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_texture_stage_8h}{GrTextureStage.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_texture_stage_8cpp}{GrTextureStage.cpp}\end{CompactItemize}

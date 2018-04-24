@@ -1,0 +1,86 @@
+\hypertarget{_gr_software_rasterizer_8cpp}{
+\section{C:/Bootstrap/ProjectBX/Engine/Graphics/GrSoftwareRasterizer.cpp File Reference}
+\label{_gr_software_rasterizer_8cpp}\index{C:/Bootstrap/ProjectBX/Engine/Graphics/GrSoftwareRasterizer.cpp@{C:/Bootstrap/ProjectBX/Engine/Graphics/GrSoftwareRasterizer.cpp}}
+}
+{\tt \#include \char`\"{}graphics\_\-afx.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrSoftwareRasterizer.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrSoftwareRTBase.h\char`\"{}}\par
+{\tt \#include \char`\"{}xmmintrin.h\char`\"{}}\par
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+class \hyperlink{class_i_x_null_r_t}{IXNullRT}
+\end{CompactItemize}
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \hyperlink{_gr_software_rasterizer_8cpp_43785b70d747253c77f51739fbd15fdd}{SCRATCH\_\-BUFFER\_\-SIZE}~32767
+\item 
+\#define \hyperlink{_gr_software_rasterizer_8cpp_f6ab1bab68b3962020e8c886d8f5309f}{RENDER\_\-TILE\_\-SIZE}~8
+\item 
+\#define \hyperlink{_gr_software_rasterizer_8cpp_edd8d226259979680145a211af51dec7}{RENDER\_\-TILE\_\-MASK}~0x7
+\item 
+\#define \hyperlink{_gr_software_rasterizer_8cpp_d4802acc0c49842e9055316b8d4be94e}{RENDER\_\-TILE\_\-INV\_\-MASK}~0xFFFFFFF8
+\item 
+\#define \hyperlink{_gr_software_rasterizer_8cpp_745107fd2465239fb860135251089bad}{iround}(\hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x})~( int )( ( \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x} ) + 0.5 )
+\item 
+\#define \hyperlink{_gr_software_rasterizer_8cpp_8a04000fbe8b675059fe8c7abb0d7837}{VARYING\_\-COUNT}~4
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_gr_software_rasterizer_8cpp_745107fd2465239fb860135251089bad}{
+\index{GrSoftwareRasterizer.cpp@{GrSoftwareRasterizer.cpp}!iround@{iround}}
+\index{iround@{iround}!GrSoftwareRasterizer.cpp@{GrSoftwareRasterizer.cpp}}
+\subsubsection[{iround}]{\setlength{\rightskip}{0pt plus 5cm}\#define iround({\bf x})~( int )( ( {\bf x} ) + 0.5 )}}
+\label{_gr_software_rasterizer_8cpp_745107fd2465239fb860135251089bad}
+
+
+
+
+Definition at line 429 of file GrSoftwareRasterizer.cpp.\hypertarget{_gr_software_rasterizer_8cpp_d4802acc0c49842e9055316b8d4be94e}{
+\index{GrSoftwareRasterizer.cpp@{GrSoftwareRasterizer.cpp}!RENDER\_\-TILE\_\-INV\_\-MASK@{RENDER\_\-TILE\_\-INV\_\-MASK}}
+\index{RENDER\_\-TILE\_\-INV\_\-MASK@{RENDER\_\-TILE\_\-INV\_\-MASK}!GrSoftwareRasterizer.cpp@{GrSoftwareRasterizer.cpp}}
+\subsubsection[{RENDER\_\-TILE\_\-INV\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define RENDER\_\-TILE\_\-INV\_\-MASK~0xFFFFFFF8}}
+\label{_gr_software_rasterizer_8cpp_d4802acc0c49842e9055316b8d4be94e}
+
+
+
+
+Definition at line 18 of file GrSoftwareRasterizer.cpp.\hypertarget{_gr_software_rasterizer_8cpp_edd8d226259979680145a211af51dec7}{
+\index{GrSoftwareRasterizer.cpp@{GrSoftwareRasterizer.cpp}!RENDER\_\-TILE\_\-MASK@{RENDER\_\-TILE\_\-MASK}}
+\index{RENDER\_\-TILE\_\-MASK@{RENDER\_\-TILE\_\-MASK}!GrSoftwareRasterizer.cpp@{GrSoftwareRasterizer.cpp}}
+\subsubsection[{RENDER\_\-TILE\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define RENDER\_\-TILE\_\-MASK~0x7}}
+\label{_gr_software_rasterizer_8cpp_edd8d226259979680145a211af51dec7}
+
+
+
+
+Definition at line 17 of file GrSoftwareRasterizer.cpp.\hypertarget{_gr_software_rasterizer_8cpp_f6ab1bab68b3962020e8c886d8f5309f}{
+\index{GrSoftwareRasterizer.cpp@{GrSoftwareRasterizer.cpp}!RENDER\_\-TILE\_\-SIZE@{RENDER\_\-TILE\_\-SIZE}}
+\index{RENDER\_\-TILE\_\-SIZE@{RENDER\_\-TILE\_\-SIZE}!GrSoftwareRasterizer.cpp@{GrSoftwareRasterizer.cpp}}
+\subsubsection[{RENDER\_\-TILE\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define RENDER\_\-TILE\_\-SIZE~8}}
+\label{_gr_software_rasterizer_8cpp_f6ab1bab68b3962020e8c886d8f5309f}
+
+
+
+
+Definition at line 16 of file GrSoftwareRasterizer.cpp.\hypertarget{_gr_software_rasterizer_8cpp_43785b70d747253c77f51739fbd15fdd}{
+\index{GrSoftwareRasterizer.cpp@{GrSoftwareRasterizer.cpp}!SCRATCH\_\-BUFFER\_\-SIZE@{SCRATCH\_\-BUFFER\_\-SIZE}}
+\index{SCRATCH\_\-BUFFER\_\-SIZE@{SCRATCH\_\-BUFFER\_\-SIZE}!GrSoftwareRasterizer.cpp@{GrSoftwareRasterizer.cpp}}
+\subsubsection[{SCRATCH\_\-BUFFER\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define SCRATCH\_\-BUFFER\_\-SIZE~32767}}
+\label{_gr_software_rasterizer_8cpp_43785b70d747253c77f51739fbd15fdd}
+
+
+
+
+Definition at line 15 of file GrSoftwareRasterizer.cpp.\hypertarget{_gr_software_rasterizer_8cpp_8a04000fbe8b675059fe8c7abb0d7837}{
+\index{GrSoftwareRasterizer.cpp@{GrSoftwareRasterizer.cpp}!VARYING\_\-COUNT@{VARYING\_\-COUNT}}
+\index{VARYING\_\-COUNT@{VARYING\_\-COUNT}!GrSoftwareRasterizer.cpp@{GrSoftwareRasterizer.cpp}}
+\subsubsection[{VARYING\_\-COUNT}]{\setlength{\rightskip}{0pt plus 5cm}\#define VARYING\_\-COUNT~4}}
+\label{_gr_software_rasterizer_8cpp_8a04000fbe8b675059fe8c7abb0d7837}
+
+
+
+
+Definition at line 434 of file GrSoftwareRasterizer.cpp.

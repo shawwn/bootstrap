@@ -1,0 +1,628 @@
+\hypertarget{_gr_u_t_compress_8cpp}{
+\section{C:/Bootstrap/ProjectBX/Engine/Graphics/GrUTCompress.cpp File Reference}
+\label{_gr_u_t_compress_8cpp}\index{C:/Bootstrap/ProjectBX/Engine/Graphics/GrUTCompress.cpp@{C:/Bootstrap/ProjectBX/Engine/Graphics/GrUTCompress.cpp}}
+}
+{\tt \#include \char`\"{}graphics\_\-afx.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrUTCompress.h\char`\"{}}\par
+{\tt \#include \char`\"{}UHuffman.h\char`\"{}}\par
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \hyperlink{_gr_u_t_compress_8cpp_466e4454cf0772abf8d497baf429893c}{UT\_\-CMP\_\-INIT}()
+\item 
+\#define \hyperlink{_gr_u_t_compress_8cpp_52d1f964d3f11bf401a489f03020f99a}{UT\_\-CMP\_\-CHECK\_\-INIT}()
+\item 
+\#define \hyperlink{_gr_u_t_compress_8cpp_17d37bb8964328e65d471478cd2d4224}{ONE\_\-OVER\_\-SQRT2}~( 0.5f / Sqrt( 2.0f ) )
+\item 
+\#define \hyperlink{_gr_u_t_compress_8cpp_70d85b9c454836f5647a7fe2257589ba}{DCT\_\-COS}(i)~( 0.5f $\ast$ Cos( i $\ast$ PI / 16.0f ) )
+\item 
+\#define \hyperlink{_gr_u_t_compress_8cpp_1d914c2fdddd58e3d068fba73c8d7ac8}{SV}(\hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x})~( ( ( 256 - ( ( \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x} ) \& 0x7F ) ) $\ast$ ( 256 - ( ( x ) \& 0x7F ) ) ) $>$$>$ 6 )
+\item 
+\#define \hyperlink{_gr_u_t_compress_8cpp_55d45deaffb4536108ce0e9a931722e7}{BITS\_\-INV\_\-ACC}~5
+\item 
+\#define \hyperlink{_gr_u_t_compress_8cpp_dab1bc04c22ab14f639cc47f65355f32}{SHIFT\_\-INV\_\-ROW}~16 - BITS\_\-INV\_\-ACC
+\item 
+\#define \hyperlink{_gr_u_t_compress_8cpp_13e4914822a9b694e0f77b082c3387ce}{SHIFT\_\-INV\_\-COL}~1 + BITS\_\-INV\_\-ACC
+\item 
+\#define \hyperlink{_gr_u_t_compress_8cpp_9f954d166e02e3be310e9fbddff2beb7}{RND\_\-INV\_\-ROW}~1024 $\ast$ (6 - BITS\_\-INV\_\-ACC)
+\item 
+\#define \hyperlink{_gr_u_t_compress_8cpp_d312bc9d2942bd0162604301ec5b3bae}{RND\_\-INV\_\-COL}~16 $\ast$ (BITS\_\-INV\_\-ACC - 3)
+\item 
+\#define \hyperlink{_gr_u_t_compress_8cpp_76e3edf135d6a72e2100f1175e9bfe06}{DUP4}(X)~(X),(X),(X),(X)
+\item 
+\#define \hyperlink{_gr_u_t_compress_8cpp_23cd3c9eb45228b61227fe943b1240cc}{DUP8}(X)~(X),(X),(X),(X),(X),(X),(X),(X)
+\item 
+\#define \hyperlink{_gr_u_t_compress_8cpp_046f18357278285b28ef208f10f97354}{BIAS\_\-SCALE}(X)~( X / ( BITS\_\-INV\_\-ACC - 3 ) )
+\item 
+\#define \hyperlink{_gr_u_t_compress_8cpp_fa464218f6d14c859d90cfe972a4c969}{DCT\_\-8\_\-INV\_\-ROW}(table1, table2, rounder1, rounder2)
+\item 
+\#define \hyperlink{_gr_u_t_compress_8cpp_449ccb1ff4abb77866ed8e15434ad2bb}{DCT\_\-8\_\-INV\_\-COL\_\-8}
+\item 
+\#define \hyperlink{_gr_u_t_compress_8cpp_9de86a55b9b544b78d2b4d6a340f9b1f}{DEQUANTIZE}(reg, mem)~\_\-\_\-asm pmullw reg, mem
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+void \hyperlink{_gr_u_t_compress_8cpp_527584032acb0f2a0d0ae198c4ef58ce}{ExtractBlockBGRA} (unsigned char $\ast$bgra, const unsigned char $\ast$bgraSource, unsigned int srcWidth, unsigned int srcX, unsigned int srcY)
+\item 
+void \hyperlink{_gr_u_t_compress_8cpp_1d2b3641ab2b6bdf2fb0bb5f7e78d6e8}{ExtractBlockA} (short $\ast$\hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v}, const unsigned char $\ast$vSource, unsigned int bytesPerPel, unsigned int srcWidth, unsigned int srcX, unsigned int srcY)
+\item 
+void \hyperlink{_gr_u_t_compress_8cpp_f6bd29e2978bfdf9df84d955ae9ce678}{InsertBlockBGRA} (unsigned char $\ast$bgraDest, unsigned int dstWidth, unsigned int dstX, unsigned int dstY, unsigned char $\ast$bgra)
+\item 
+void \hyperlink{_gr_u_t_compress_8cpp_3d42c340a5ca2b3daf501257c076065f}{InsertBlockA} (unsigned char $\ast$vDest, unsigned int bytesPerPel, unsigned int dstWidth, unsigned int dstX, unsigned int dstY, short $\ast$\hyperlink{glext__bak_8h_5cf89b94f7478c0ebc4429b60e7ef93b}{v})
+\item 
+void \hyperlink{_gr_u_t_compress_8cpp_a2dc6af8d8de355af5a29f54662ee89a}{EncodeBlock} (\hyperlink{class_u_huffman}{UHuffman} $\ast$encoder, const short $\ast$\hyperlink{glext__bak_8h_72e0fdf0f845ded60b1fada9e9195cd7}{src}, const unsigned short $\ast$quant, unsigned char chop)
+\item 
+void \hyperlink{_gr_u_t_compress_8cpp_28ae6c6b1c96f54c4aa404da48daa0d8}{DecodeBlock} (short $\ast$dest, \hyperlink{class_u_huffman}{UHuffman} $\ast$decoder, const unsigned short $\ast$quant)
+\item 
+void \hyperlink{_gr_u_t_compress_8cpp_0bb3bd6d7081978578686fd177fa740b}{UnpackYCoCg} (unsigned char $\ast$bgra, const short $\ast$Y, const short $\ast$Co, const short $\ast$Cg)
+\item 
+void \hyperlink{_gr_u_t_compress_8cpp_837db1acd9af4e8656f2de61bfc4934b}{PackYCoCg} (short $\ast$Y, short $\ast$Co, short $\ast$Cg, const unsigned char $\ast$bgra)
+\item 
+void \hyperlink{_gr_u_t_compress_8cpp_ee123328c140f1a57796a668be28ff1e}{ForwardDCT} (short $\ast$dest, const short $\ast$coeff, const unsigned short $\ast$quant)
+\item 
+void \hyperlink{_gr_u_t_compress_8cpp_089363eb19388a1ce485148b84c34cbd}{InverseDCT} (short $\ast$dest, const short $\ast$coeff, const unsigned short $\ast$quant)
+\item 
+void \hyperlink{_gr_u_t_compress_8cpp_cbb5618c701bf01a089e502ecc4bd643}{BuildDXTTables} ()
+\item 
+void \hyperlink{_gr_u_t_compress_8cpp_fbddaf1d42a5d10ec8335e52aa6c34ec}{CompressImageDXT1} (const unsigned char $\ast$argb, unsigned char $\ast$dxt1, int \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, int \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height})
+\item 
+void \hyperlink{_gr_u_t_compress_8cpp_f7843b58f26331389be7cf05a2f02368}{CompressImageDXT5} (const unsigned char $\ast$argb, BYTE $\ast$dxt5, int \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, int \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height})
+\item 
+void \hyperlink{_gr_u_t_compress_8cpp_98ef4e40a287ce4df9b8667da6e358d0}{GrUTInitCompressor} ()
+\item 
+void \hyperlink{_gr_u_t_compress_8cpp_bee5db5b42213cb69584c47cbf9eeec2}{GrUTCompressBGRX} (\hyperlink{class_u_huffman}{UHuffman} $\ast$encoder, const unsigned char $\ast$bgrx, unsigned char chop)
+\item 
+void \hyperlink{_gr_u_t_compress_8cpp_2ea5fdafb94e6cac88ddc851b171bc05}{GrUTCompressA} (\hyperlink{class_u_huffman}{UHuffman} $\ast$encoder, const unsigned char $\ast$\hyperlink{glext__bak_8h_3309789fc188587d666cda5ece79cf82}{a}, unsigned int bytesPerPel, unsigned char chop)
+\item 
+void \hyperlink{_gr_u_t_compress_8cpp_7399a317047a570d67f4339531719e01}{GrUTDecompressBGRX} (unsigned char $\ast$bgrx, \hyperlink{class_u_huffman}{UHuffman} $\ast$decoder)
+\item 
+void \hyperlink{_gr_u_t_compress_8cpp_3b9ce4279465ebba9c0c804101bb4e57}{GrUTDecompressA} (unsigned char $\ast$\hyperlink{glext__bak_8h_3309789fc188587d666cda5ece79cf82}{a}, unsigned int bytesPerPel, \hyperlink{class_u_huffman}{UHuffman} $\ast$decoder)
+\item 
+void \hyperlink{_gr_u_t_compress_8cpp_760d2e9a5fe350286da1a9a3684fc393}{GrUTCompressDXT5} (unsigned char $\ast$destSurface, unsigned int destStride, unsigned char $\ast$bgra)
+\item 
+void \hyperlink{_gr_u_t_compress_8cpp_f077c1543c461128e4bc0c2a212bb3dc}{GrUTCompressDXT5XY} (unsigned char $\ast$destSurface, unsigned int destStride, unsigned char $\ast$xy)
+\item 
+\hyperlink{_gr_u_t_compress_8cpp_4a51270747932b42e98784d0382b5a01}{DECLARE\_\-ALIGNED\_\-16} (const unsigned char, kSSEByte0\mbox{[}16\mbox{]})
+\item 
+\hyperlink{_gr_u_t_compress_8cpp_62d0e89b071159d64e7505792cc84b6e}{DECLARE\_\-ALIGNED\_\-16} (const unsigned char, kSSEWord1\mbox{[}16\mbox{]})
+\item 
+\hyperlink{_gr_u_t_compress_8cpp_cb17ab7f3345970849e040cedb0b760b}{DECLARE\_\-ALIGNED\_\-16} (const unsigned char, kSSEWord8\mbox{[}16\mbox{]})
+\item 
+\hyperlink{_gr_u_t_compress_8cpp_74ac742a02a4d59b57a49840c8a9683d}{DECLARE\_\-ALIGNED\_\-16} (const unsigned char, kSSEBoundsMask\mbox{[}16\mbox{]})
+\item 
+\hyperlink{_gr_u_t_compress_8cpp_40db6bf60c5c5f1763e64eaa46e32852}{DECLARE\_\-ALIGNED\_\-16} (const unsigned char, kSSEBoundScale\mbox{[}16\mbox{]})
+\item 
+\hyperlink{_gr_u_t_compress_8cpp_ca8e5fc45319e79b9759282ee7e2dad8}{DECLARE\_\-ALIGNED\_\-16} (const unsigned char, kSSEIndicesMask0\mbox{[}16\mbox{]})
+\item 
+\hyperlink{_gr_u_t_compress_8cpp_ca13d1b26ac68cf3d0dfbee0fd48e139}{DECLARE\_\-ALIGNED\_\-16} (const unsigned char, kSSEIndicesMask1\mbox{[}16\mbox{]})
+\item 
+\hyperlink{_gr_u_t_compress_8cpp_38ad5254557dd64bed63adc7fab96bd7}{DECLARE\_\-ALIGNED\_\-16} (const unsigned char, kSSEIndicesMask2\mbox{[}16\mbox{]})
+\item 
+\hyperlink{_gr_u_t_compress_8cpp_8053bccd3de4b32a990eaef5b744d214}{DECLARE\_\-ALIGNED\_\-16} (const unsigned char, kSSEIndicesScale0\mbox{[}16\mbox{]})
+\item 
+\hyperlink{_gr_u_t_compress_8cpp_7b43ca5e8d0d9521f1848c1c567045e0}{DECLARE\_\-ALIGNED\_\-16} (const unsigned char, kSSEIndicesScale1\mbox{[}16\mbox{]})
+\item 
+\hyperlink{_gr_u_t_compress_8cpp_78f6b174d1ca111598ef8c3ae7e969af}{DECLARE\_\-ALIGNED\_\-16} (const unsigned char, kSSEIndicesScale2\mbox{[}16\mbox{]})
+\item 
+\hyperlink{_gr_u_t_compress_8cpp_37e898399f387a4e7a6e60f8512e95ed}{DECLARE\_\-ALIGNED\_\-16} (const unsigned char, kSSEIndicesScale3\mbox{[}16\mbox{]})
+\item 
+\hyperlink{_gr_u_t_compress_8cpp_cf7f84ed836c63718e95514d227d7d22}{DECLARE\_\-ALIGNED\_\-16} (const unsigned char, kSSEIndicesScale4\mbox{[}16\mbox{]})
+\item 
+\hyperlink{_gr_u_t_compress_8cpp_7c2ff2e740f2745f5c8b79f0f3087699}{DECLARE\_\-ALIGNED\_\-16} (const unsigned char, kSSEIndicesScale\mbox{[}16\mbox{]})
+\item 
+\hyperlink{_gr_u_t_compress_8cpp_955ddb2b9b4c667a0ad7f74d39c07249}{DECLARE\_\-ALIGNED\_\-16} (unsigned char, gDXTMin\mbox{[}32\mbox{]})
+\item 
+\hyperlink{_gr_u_t_compress_8cpp_f055af6114823719d19e4c085afca344}{DECLARE\_\-ALIGNED\_\-16} (unsigned char, gDXTRange\mbox{[}32\mbox{]})
+\item 
+\hyperlink{_gr_u_t_compress_8cpp_196ac8111621bd82068ee52ce781d6ff}{DECLARE\_\-ALIGNED\_\-16} (unsigned char, gDXTBounds\mbox{[}32\mbox{]})
+\item 
+\hyperlink{_gr_u_t_compress_8cpp_87c4715ca4dd84691beeff2d1d6e8b71}{DECLARE\_\-ALIGNED\_\-16} (unsigned char, gDXTIndices\mbox{[}64\mbox{]})
+\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+unsigned int \hyperlink{_gr_u_t_compress_8cpp_c56252b8f9ec135c5c675c4914169659}{kColorDividerTable} \mbox{[}768\mbox{]}
+\item 
+unsigned int \hyperlink{_gr_u_t_compress_8cpp_c3df1fd637e11a4a33098d1a4aae13d9}{kAlphaDividerTable} \mbox{[}256\mbox{]}
+\item 
+unsigned int \hyperlink{_gr_u_t_compress_8cpp_175b56095929b3d5bba0a07816d28283}{kColorIndicesTable} \mbox{[}256\mbox{]}
+\item 
+unsigned int \hyperlink{_gr_u_t_compress_8cpp_a6b31bf32db3d776ff3748eba97552b7}{kAlphaIndicesTable} \mbox{[}640\mbox{]}
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_gr_u_t_compress_8cpp_046f18357278285b28ef208f10f97354}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!BIAS\_\-SCALE@{BIAS\_\-SCALE}}
+\index{BIAS\_\-SCALE@{BIAS\_\-SCALE}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{BIAS\_\-SCALE}]{\setlength{\rightskip}{0pt plus 5cm}\#define BIAS\_\-SCALE(X)~( X / ( BITS\_\-INV\_\-ACC - 3 ) )}}
+\label{_gr_u_t_compress_8cpp_046f18357278285b28ef208f10f97354}
+
+
+
+
+Definition at line 733 of file GrUTCompress.cpp.\hypertarget{_gr_u_t_compress_8cpp_55d45deaffb4536108ce0e9a931722e7}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!BITS\_\-INV\_\-ACC@{BITS\_\-INV\_\-ACC}}
+\index{BITS\_\-INV\_\-ACC@{BITS\_\-INV\_\-ACC}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{BITS\_\-INV\_\-ACC}]{\setlength{\rightskip}{0pt plus 5cm}\#define BITS\_\-INV\_\-ACC~5}}
+\label{_gr_u_t_compress_8cpp_55d45deaffb4536108ce0e9a931722e7}
+
+
+
+
+Definition at line 726 of file GrUTCompress.cpp.\hypertarget{_gr_u_t_compress_8cpp_449ccb1ff4abb77866ed8e15434ad2bb}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!DCT\_\-8\_\-INV\_\-COL\_\-8@{DCT\_\-8\_\-INV\_\-COL\_\-8}}
+\index{DCT\_\-8\_\-INV\_\-COL\_\-8@{DCT\_\-8\_\-INV\_\-COL\_\-8}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{DCT\_\-8\_\-INV\_\-COL\_\-8}]{\setlength{\rightskip}{0pt plus 5cm}\#define DCT\_\-8\_\-INV\_\-COL\_\-8}}
+\label{_gr_u_t_compress_8cpp_449ccb1ff4abb77866ed8e15434ad2bb}
+
+
+
+
+Definition at line 842 of file GrUTCompress.cpp.\hypertarget{_gr_u_t_compress_8cpp_fa464218f6d14c859d90cfe972a4c969}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!DCT\_\-8\_\-INV\_\-ROW@{DCT\_\-8\_\-INV\_\-ROW}}
+\index{DCT\_\-8\_\-INV\_\-ROW@{DCT\_\-8\_\-INV\_\-ROW}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{DCT\_\-8\_\-INV\_\-ROW}]{\setlength{\rightskip}{0pt plus 5cm}\#define DCT\_\-8\_\-INV\_\-ROW(table1, \/  table2, \/  rounder1, \/  rounder2)}}
+\label{_gr_u_t_compress_8cpp_fa464218f6d14c859d90cfe972a4c969}
+
+
+
+
+Definition at line 800 of file GrUTCompress.cpp.\hypertarget{_gr_u_t_compress_8cpp_70d85b9c454836f5647a7fe2257589ba}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!DCT\_\-COS@{DCT\_\-COS}}
+\index{DCT\_\-COS@{DCT\_\-COS}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{DCT\_\-COS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DCT\_\-COS(i)~( 0.5f $\ast$ Cos( i $\ast$ PI / 16.0f ) )}}
+\label{_gr_u_t_compress_8cpp_70d85b9c454836f5647a7fe2257589ba}
+
+
+
+
+Definition at line 137 of file GrUTCompress.cpp.\hypertarget{_gr_u_t_compress_8cpp_9de86a55b9b544b78d2b4d6a340f9b1f}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!DEQUANTIZE@{DEQUANTIZE}}
+\index{DEQUANTIZE@{DEQUANTIZE}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{DEQUANTIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DEQUANTIZE(reg, \/  mem)~\_\-\_\-asm pmullw reg, mem}}
+\label{_gr_u_t_compress_8cpp_9de86a55b9b544b78d2b4d6a340f9b1f}
+
+
+
+
+Definition at line 921 of file GrUTCompress.cpp.\hypertarget{_gr_u_t_compress_8cpp_76e3edf135d6a72e2100f1175e9bfe06}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!DUP4@{DUP4}}
+\index{DUP4@{DUP4}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{DUP4}]{\setlength{\rightskip}{0pt plus 5cm}\#define DUP4(X)~(X),(X),(X),(X)}}
+\label{_gr_u_t_compress_8cpp_76e3edf135d6a72e2100f1175e9bfe06}
+
+
+
+
+Definition at line 731 of file GrUTCompress.cpp.\hypertarget{_gr_u_t_compress_8cpp_23cd3c9eb45228b61227fe943b1240cc}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!DUP8@{DUP8}}
+\index{DUP8@{DUP8}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{DUP8}]{\setlength{\rightskip}{0pt plus 5cm}\#define DUP8(X)~(X),(X),(X),(X),(X),(X),(X),(X)}}
+\label{_gr_u_t_compress_8cpp_23cd3c9eb45228b61227fe943b1240cc}
+
+
+
+
+Definition at line 732 of file GrUTCompress.cpp.\hypertarget{_gr_u_t_compress_8cpp_17d37bb8964328e65d471478cd2d4224}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!ONE\_\-OVER\_\-SQRT2@{ONE\_\-OVER\_\-SQRT2}}
+\index{ONE\_\-OVER\_\-SQRT2@{ONE\_\-OVER\_\-SQRT2}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{ONE\_\-OVER\_\-SQRT2}]{\setlength{\rightskip}{0pt plus 5cm}\#define ONE\_\-OVER\_\-SQRT2~( 0.5f / Sqrt( 2.0f ) )}}
+\label{_gr_u_t_compress_8cpp_17d37bb8964328e65d471478cd2d4224}
+
+
+
+
+Definition at line 136 of file GrUTCompress.cpp.\hypertarget{_gr_u_t_compress_8cpp_d312bc9d2942bd0162604301ec5b3bae}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!RND\_\-INV\_\-COL@{RND\_\-INV\_\-COL}}
+\index{RND\_\-INV\_\-COL@{RND\_\-INV\_\-COL}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{RND\_\-INV\_\-COL}]{\setlength{\rightskip}{0pt plus 5cm}\#define RND\_\-INV\_\-COL~16 $\ast$ (BITS\_\-INV\_\-ACC - 3)}}
+\label{_gr_u_t_compress_8cpp_d312bc9d2942bd0162604301ec5b3bae}
+
+
+
+
+Definition at line 730 of file GrUTCompress.cpp.\hypertarget{_gr_u_t_compress_8cpp_9f954d166e02e3be310e9fbddff2beb7}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!RND\_\-INV\_\-ROW@{RND\_\-INV\_\-ROW}}
+\index{RND\_\-INV\_\-ROW@{RND\_\-INV\_\-ROW}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{RND\_\-INV\_\-ROW}]{\setlength{\rightskip}{0pt plus 5cm}\#define RND\_\-INV\_\-ROW~1024 $\ast$ (6 - BITS\_\-INV\_\-ACC)}}
+\label{_gr_u_t_compress_8cpp_9f954d166e02e3be310e9fbddff2beb7}
+
+
+
+
+Definition at line 729 of file GrUTCompress.cpp.\hypertarget{_gr_u_t_compress_8cpp_13e4914822a9b694e0f77b082c3387ce}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!SHIFT\_\-INV\_\-COL@{SHIFT\_\-INV\_\-COL}}
+\index{SHIFT\_\-INV\_\-COL@{SHIFT\_\-INV\_\-COL}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{SHIFT\_\-INV\_\-COL}]{\setlength{\rightskip}{0pt plus 5cm}\#define SHIFT\_\-INV\_\-COL~1 + BITS\_\-INV\_\-ACC}}
+\label{_gr_u_t_compress_8cpp_13e4914822a9b694e0f77b082c3387ce}
+
+
+
+
+Definition at line 728 of file GrUTCompress.cpp.\hypertarget{_gr_u_t_compress_8cpp_dab1bc04c22ab14f639cc47f65355f32}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!SHIFT\_\-INV\_\-ROW@{SHIFT\_\-INV\_\-ROW}}
+\index{SHIFT\_\-INV\_\-ROW@{SHIFT\_\-INV\_\-ROW}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{SHIFT\_\-INV\_\-ROW}]{\setlength{\rightskip}{0pt plus 5cm}\#define SHIFT\_\-INV\_\-ROW~16 - BITS\_\-INV\_\-ACC}}
+\label{_gr_u_t_compress_8cpp_dab1bc04c22ab14f639cc47f65355f32}
+
+
+
+
+Definition at line 727 of file GrUTCompress.cpp.\hypertarget{_gr_u_t_compress_8cpp_1d914c2fdddd58e3d068fba73c8d7ac8}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!SV@{SV}}
+\index{SV@{SV}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{SV}]{\setlength{\rightskip}{0pt plus 5cm}\#define SV({\bf x})~( ( ( 256 - ( ( {\bf x} ) \& 0x7F ) ) $\ast$ ( 256 - ( ( x ) \& 0x7F ) ) ) $>$$>$ 6 )}}
+\label{_gr_u_t_compress_8cpp_1d914c2fdddd58e3d068fba73c8d7ac8}
+
+
+
+
+Definition at line 168 of file GrUTCompress.cpp.\hypertarget{_gr_u_t_compress_8cpp_52d1f964d3f11bf401a489f03020f99a}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!UT\_\-CMP\_\-CHECK\_\-INIT@{UT\_\-CMP\_\-CHECK\_\-INIT}}
+\index{UT\_\-CMP\_\-CHECK\_\-INIT@{UT\_\-CMP\_\-CHECK\_\-INIT}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{UT\_\-CMP\_\-CHECK\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define UT\_\-CMP\_\-CHECK\_\-INIT()}}
+\label{_gr_u_t_compress_8cpp_52d1f964d3f11bf401a489f03020f99a}
+
+
+
+
+Definition at line 25 of file GrUTCompress.cpp.\hypertarget{_gr_u_t_compress_8cpp_466e4454cf0772abf8d497baf429893c}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!UT\_\-CMP\_\-INIT@{UT\_\-CMP\_\-INIT}}
+\index{UT\_\-CMP\_\-INIT@{UT\_\-CMP\_\-INIT}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{UT\_\-CMP\_\-INIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define UT\_\-CMP\_\-INIT()}}
+\label{_gr_u_t_compress_8cpp_466e4454cf0772abf8d497baf429893c}
+
+
+
+
+Definition at line 24 of file GrUTCompress.cpp.
+
+\subsection{Function Documentation}
+\hypertarget{_gr_u_t_compress_8cpp_cbb5618c701bf01a089e502ecc4bd643}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!BuildDXTTables@{BuildDXTTables}}
+\index{BuildDXTTables@{BuildDXTTables}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{BuildDXTTables}]{\setlength{\rightskip}{0pt plus 5cm}void BuildDXTTables ()}}
+\label{_gr_u_t_compress_8cpp_cbb5618c701bf01a089e502ecc4bd643}
+
+
+
+
+Definition at line 994 of file GrUTCompress.cpp.\hypertarget{_gr_u_t_compress_8cpp_fbddaf1d42a5d10ec8335e52aa6c34ec}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!CompressImageDXT1@{CompressImageDXT1}}
+\index{CompressImageDXT1@{CompressImageDXT1}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{CompressImageDXT1}]{\setlength{\rightskip}{0pt plus 5cm}void CompressImageDXT1 (const unsigned char $\ast$ {\em argb}, \/  unsigned char $\ast$ {\em dxt1}, \/  int {\em width}, \/  int {\em height})}}
+\label{_gr_u_t_compress_8cpp_fbddaf1d42a5d10ec8335e52aa6c34ec}
+
+
+
+
+Definition at line 1036 of file GrUTCompress.cpp.\hypertarget{_gr_u_t_compress_8cpp_f7843b58f26331389be7cf05a2f02368}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!CompressImageDXT5@{CompressImageDXT5}}
+\index{CompressImageDXT5@{CompressImageDXT5}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{CompressImageDXT5}]{\setlength{\rightskip}{0pt plus 5cm}void CompressImageDXT5 (const unsigned char $\ast$ {\em argb}, \/  BYTE $\ast$ {\em dxt5}, \/  int {\em width}, \/  int {\em height})}}
+\label{_gr_u_t_compress_8cpp_f7843b58f26331389be7cf05a2f02368}
+
+
+
+
+Definition at line 1268 of file GrUTCompress.cpp.\hypertarget{_gr_u_t_compress_8cpp_87c4715ca4dd84691beeff2d1d6e8b71}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!DECLARE\_\-ALIGNED\_\-16@{DECLARE\_\-ALIGNED\_\-16}}
+\index{DECLARE\_\-ALIGNED\_\-16@{DECLARE\_\-ALIGNED\_\-16}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{DECLARE\_\-ALIGNED\_\-16}]{\setlength{\rightskip}{0pt plus 5cm}DECLARE\_\-ALIGNED\_\-16 (unsigned {\em char}, \/  gDXTIndices\mbox{[}64\mbox{]})}}
+\label{_gr_u_t_compress_8cpp_87c4715ca4dd84691beeff2d1d6e8b71}
+
+
+\hypertarget{_gr_u_t_compress_8cpp_196ac8111621bd82068ee52ce781d6ff}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!DECLARE\_\-ALIGNED\_\-16@{DECLARE\_\-ALIGNED\_\-16}}
+\index{DECLARE\_\-ALIGNED\_\-16@{DECLARE\_\-ALIGNED\_\-16}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{DECLARE\_\-ALIGNED\_\-16}]{\setlength{\rightskip}{0pt plus 5cm}DECLARE\_\-ALIGNED\_\-16 (unsigned {\em char}, \/  gDXTBounds\mbox{[}32\mbox{]})}}
+\label{_gr_u_t_compress_8cpp_196ac8111621bd82068ee52ce781d6ff}
+
+
+\hypertarget{_gr_u_t_compress_8cpp_f055af6114823719d19e4c085afca344}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!DECLARE\_\-ALIGNED\_\-16@{DECLARE\_\-ALIGNED\_\-16}}
+\index{DECLARE\_\-ALIGNED\_\-16@{DECLARE\_\-ALIGNED\_\-16}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{DECLARE\_\-ALIGNED\_\-16}]{\setlength{\rightskip}{0pt plus 5cm}DECLARE\_\-ALIGNED\_\-16 (unsigned {\em char}, \/  gDXTRange\mbox{[}32\mbox{]})}}
+\label{_gr_u_t_compress_8cpp_f055af6114823719d19e4c085afca344}
+
+
+\hypertarget{_gr_u_t_compress_8cpp_955ddb2b9b4c667a0ad7f74d39c07249}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!DECLARE\_\-ALIGNED\_\-16@{DECLARE\_\-ALIGNED\_\-16}}
+\index{DECLARE\_\-ALIGNED\_\-16@{DECLARE\_\-ALIGNED\_\-16}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{DECLARE\_\-ALIGNED\_\-16}]{\setlength{\rightskip}{0pt plus 5cm}DECLARE\_\-ALIGNED\_\-16 (unsigned {\em char}, \/  gDXTMin\mbox{[}32\mbox{]})}}
+\label{_gr_u_t_compress_8cpp_955ddb2b9b4c667a0ad7f74d39c07249}
+
+
+\hypertarget{_gr_u_t_compress_8cpp_7c2ff2e740f2745f5c8b79f0f3087699}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!DECLARE\_\-ALIGNED\_\-16@{DECLARE\_\-ALIGNED\_\-16}}
+\index{DECLARE\_\-ALIGNED\_\-16@{DECLARE\_\-ALIGNED\_\-16}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{DECLARE\_\-ALIGNED\_\-16}]{\setlength{\rightskip}{0pt plus 5cm}DECLARE\_\-ALIGNED\_\-16 (const unsigned {\em char}, \/  kSSEIndicesScale\mbox{[}16\mbox{]})}}
+\label{_gr_u_t_compress_8cpp_7c2ff2e740f2745f5c8b79f0f3087699}
+
+
+\hypertarget{_gr_u_t_compress_8cpp_cf7f84ed836c63718e95514d227d7d22}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!DECLARE\_\-ALIGNED\_\-16@{DECLARE\_\-ALIGNED\_\-16}}
+\index{DECLARE\_\-ALIGNED\_\-16@{DECLARE\_\-ALIGNED\_\-16}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{DECLARE\_\-ALIGNED\_\-16}]{\setlength{\rightskip}{0pt plus 5cm}DECLARE\_\-ALIGNED\_\-16 (const unsigned {\em char}, \/  kSSEIndicesScale4\mbox{[}16\mbox{]})}}
+\label{_gr_u_t_compress_8cpp_cf7f84ed836c63718e95514d227d7d22}
+
+
+\hypertarget{_gr_u_t_compress_8cpp_37e898399f387a4e7a6e60f8512e95ed}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!DECLARE\_\-ALIGNED\_\-16@{DECLARE\_\-ALIGNED\_\-16}}
+\index{DECLARE\_\-ALIGNED\_\-16@{DECLARE\_\-ALIGNED\_\-16}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{DECLARE\_\-ALIGNED\_\-16}]{\setlength{\rightskip}{0pt plus 5cm}DECLARE\_\-ALIGNED\_\-16 (const unsigned {\em char}, \/  kSSEIndicesScale3\mbox{[}16\mbox{]})}}
+\label{_gr_u_t_compress_8cpp_37e898399f387a4e7a6e60f8512e95ed}
+
+
+\hypertarget{_gr_u_t_compress_8cpp_78f6b174d1ca111598ef8c3ae7e969af}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!DECLARE\_\-ALIGNED\_\-16@{DECLARE\_\-ALIGNED\_\-16}}
+\index{DECLARE\_\-ALIGNED\_\-16@{DECLARE\_\-ALIGNED\_\-16}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{DECLARE\_\-ALIGNED\_\-16}]{\setlength{\rightskip}{0pt plus 5cm}DECLARE\_\-ALIGNED\_\-16 (const unsigned {\em char}, \/  kSSEIndicesScale2\mbox{[}16\mbox{]})}}
+\label{_gr_u_t_compress_8cpp_78f6b174d1ca111598ef8c3ae7e969af}
+
+
+\hypertarget{_gr_u_t_compress_8cpp_7b43ca5e8d0d9521f1848c1c567045e0}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!DECLARE\_\-ALIGNED\_\-16@{DECLARE\_\-ALIGNED\_\-16}}
+\index{DECLARE\_\-ALIGNED\_\-16@{DECLARE\_\-ALIGNED\_\-16}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{DECLARE\_\-ALIGNED\_\-16}]{\setlength{\rightskip}{0pt plus 5cm}DECLARE\_\-ALIGNED\_\-16 (const unsigned {\em char}, \/  kSSEIndicesScale1\mbox{[}16\mbox{]})}}
+\label{_gr_u_t_compress_8cpp_7b43ca5e8d0d9521f1848c1c567045e0}
+
+
+\hypertarget{_gr_u_t_compress_8cpp_8053bccd3de4b32a990eaef5b744d214}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!DECLARE\_\-ALIGNED\_\-16@{DECLARE\_\-ALIGNED\_\-16}}
+\index{DECLARE\_\-ALIGNED\_\-16@{DECLARE\_\-ALIGNED\_\-16}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{DECLARE\_\-ALIGNED\_\-16}]{\setlength{\rightskip}{0pt plus 5cm}DECLARE\_\-ALIGNED\_\-16 (const unsigned {\em char}, \/  kSSEIndicesScale0\mbox{[}16\mbox{]})}}
+\label{_gr_u_t_compress_8cpp_8053bccd3de4b32a990eaef5b744d214}
+
+
+\hypertarget{_gr_u_t_compress_8cpp_38ad5254557dd64bed63adc7fab96bd7}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!DECLARE\_\-ALIGNED\_\-16@{DECLARE\_\-ALIGNED\_\-16}}
+\index{DECLARE\_\-ALIGNED\_\-16@{DECLARE\_\-ALIGNED\_\-16}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{DECLARE\_\-ALIGNED\_\-16}]{\setlength{\rightskip}{0pt plus 5cm}DECLARE\_\-ALIGNED\_\-16 (const unsigned {\em char}, \/  kSSEIndicesMask2\mbox{[}16\mbox{]})}}
+\label{_gr_u_t_compress_8cpp_38ad5254557dd64bed63adc7fab96bd7}
+
+
+\hypertarget{_gr_u_t_compress_8cpp_ca13d1b26ac68cf3d0dfbee0fd48e139}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!DECLARE\_\-ALIGNED\_\-16@{DECLARE\_\-ALIGNED\_\-16}}
+\index{DECLARE\_\-ALIGNED\_\-16@{DECLARE\_\-ALIGNED\_\-16}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{DECLARE\_\-ALIGNED\_\-16}]{\setlength{\rightskip}{0pt plus 5cm}DECLARE\_\-ALIGNED\_\-16 (const unsigned {\em char}, \/  kSSEIndicesMask1\mbox{[}16\mbox{]})}}
+\label{_gr_u_t_compress_8cpp_ca13d1b26ac68cf3d0dfbee0fd48e139}
+
+
+\hypertarget{_gr_u_t_compress_8cpp_ca8e5fc45319e79b9759282ee7e2dad8}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!DECLARE\_\-ALIGNED\_\-16@{DECLARE\_\-ALIGNED\_\-16}}
+\index{DECLARE\_\-ALIGNED\_\-16@{DECLARE\_\-ALIGNED\_\-16}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{DECLARE\_\-ALIGNED\_\-16}]{\setlength{\rightskip}{0pt plus 5cm}DECLARE\_\-ALIGNED\_\-16 (const unsigned {\em char}, \/  kSSEIndicesMask0\mbox{[}16\mbox{]})}}
+\label{_gr_u_t_compress_8cpp_ca8e5fc45319e79b9759282ee7e2dad8}
+
+
+\hypertarget{_gr_u_t_compress_8cpp_40db6bf60c5c5f1763e64eaa46e32852}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!DECLARE\_\-ALIGNED\_\-16@{DECLARE\_\-ALIGNED\_\-16}}
+\index{DECLARE\_\-ALIGNED\_\-16@{DECLARE\_\-ALIGNED\_\-16}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{DECLARE\_\-ALIGNED\_\-16}]{\setlength{\rightskip}{0pt plus 5cm}DECLARE\_\-ALIGNED\_\-16 (const unsigned {\em char}, \/  kSSEBoundScale\mbox{[}16\mbox{]})}}
+\label{_gr_u_t_compress_8cpp_40db6bf60c5c5f1763e64eaa46e32852}
+
+
+\hypertarget{_gr_u_t_compress_8cpp_74ac742a02a4d59b57a49840c8a9683d}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!DECLARE\_\-ALIGNED\_\-16@{DECLARE\_\-ALIGNED\_\-16}}
+\index{DECLARE\_\-ALIGNED\_\-16@{DECLARE\_\-ALIGNED\_\-16}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{DECLARE\_\-ALIGNED\_\-16}]{\setlength{\rightskip}{0pt plus 5cm}DECLARE\_\-ALIGNED\_\-16 (const unsigned {\em char}, \/  kSSEBoundsMask\mbox{[}16\mbox{]})}}
+\label{_gr_u_t_compress_8cpp_74ac742a02a4d59b57a49840c8a9683d}
+
+
+\hypertarget{_gr_u_t_compress_8cpp_cb17ab7f3345970849e040cedb0b760b}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!DECLARE\_\-ALIGNED\_\-16@{DECLARE\_\-ALIGNED\_\-16}}
+\index{DECLARE\_\-ALIGNED\_\-16@{DECLARE\_\-ALIGNED\_\-16}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{DECLARE\_\-ALIGNED\_\-16}]{\setlength{\rightskip}{0pt plus 5cm}DECLARE\_\-ALIGNED\_\-16 (const unsigned {\em char}, \/  kSSEWord8\mbox{[}16\mbox{]})}}
+\label{_gr_u_t_compress_8cpp_cb17ab7f3345970849e040cedb0b760b}
+
+
+\hypertarget{_gr_u_t_compress_8cpp_62d0e89b071159d64e7505792cc84b6e}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!DECLARE\_\-ALIGNED\_\-16@{DECLARE\_\-ALIGNED\_\-16}}
+\index{DECLARE\_\-ALIGNED\_\-16@{DECLARE\_\-ALIGNED\_\-16}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{DECLARE\_\-ALIGNED\_\-16}]{\setlength{\rightskip}{0pt plus 5cm}DECLARE\_\-ALIGNED\_\-16 (const unsigned {\em char}, \/  kSSEWord1\mbox{[}16\mbox{]})}}
+\label{_gr_u_t_compress_8cpp_62d0e89b071159d64e7505792cc84b6e}
+
+
+\hypertarget{_gr_u_t_compress_8cpp_4a51270747932b42e98784d0382b5a01}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!DECLARE\_\-ALIGNED\_\-16@{DECLARE\_\-ALIGNED\_\-16}}
+\index{DECLARE\_\-ALIGNED\_\-16@{DECLARE\_\-ALIGNED\_\-16}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{DECLARE\_\-ALIGNED\_\-16}]{\setlength{\rightskip}{0pt plus 5cm}DECLARE\_\-ALIGNED\_\-16 (const unsigned {\em char}, \/  kSSEByte0\mbox{[}16\mbox{]})}}
+\label{_gr_u_t_compress_8cpp_4a51270747932b42e98784d0382b5a01}
+
+
+\hypertarget{_gr_u_t_compress_8cpp_28ae6c6b1c96f54c4aa404da48daa0d8}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!DecodeBlock@{DecodeBlock}}
+\index{DecodeBlock@{DecodeBlock}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{DecodeBlock}]{\setlength{\rightskip}{0pt plus 5cm}void DecodeBlock (short $\ast$ {\em dest}, \/  {\bf UHuffman} $\ast$ {\em decoder}, \/  const unsigned short $\ast$ {\em quant})}}
+\label{_gr_u_t_compress_8cpp_28ae6c6b1c96f54c4aa404da48daa0d8}
+
+
+
+
+Definition at line 460 of file GrUTCompress.cpp.\hypertarget{_gr_u_t_compress_8cpp_a2dc6af8d8de355af5a29f54662ee89a}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!EncodeBlock@{EncodeBlock}}
+\index{EncodeBlock@{EncodeBlock}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{EncodeBlock}]{\setlength{\rightskip}{0pt plus 5cm}void EncodeBlock ({\bf UHuffman} $\ast$ {\em encoder}, \/  const short $\ast$ {\em src}, \/  const unsigned short $\ast$ {\em quant}, \/  unsigned char {\em chop})}}
+\label{_gr_u_t_compress_8cpp_a2dc6af8d8de355af5a29f54662ee89a}
+
+
+
+
+Definition at line 397 of file GrUTCompress.cpp.\hypertarget{_gr_u_t_compress_8cpp_1d2b3641ab2b6bdf2fb0bb5f7e78d6e8}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!ExtractBlockA@{ExtractBlockA}}
+\index{ExtractBlockA@{ExtractBlockA}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{ExtractBlockA}]{\setlength{\rightskip}{0pt plus 5cm}void ExtractBlockA (short $\ast$ {\em v}, \/  const unsigned char $\ast$ {\em vSource}, \/  unsigned int {\em bytesPerPel}, \/  unsigned int {\em srcWidth}, \/  unsigned int {\em srcX}, \/  unsigned int {\em srcY})}}
+\label{_gr_u_t_compress_8cpp_1d2b3641ab2b6bdf2fb0bb5f7e78d6e8}
+
+
+
+
+Definition at line 345 of file GrUTCompress.cpp.\hypertarget{_gr_u_t_compress_8cpp_527584032acb0f2a0d0ae198c4ef58ce}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!ExtractBlockBGRA@{ExtractBlockBGRA}}
+\index{ExtractBlockBGRA@{ExtractBlockBGRA}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{ExtractBlockBGRA}]{\setlength{\rightskip}{0pt plus 5cm}void ExtractBlockBGRA (unsigned char $\ast$ {\em bgra}, \/  const unsigned char $\ast$ {\em bgraSource}, \/  unsigned int {\em srcWidth}, \/  unsigned int {\em srcX}, \/  unsigned int {\em srcY})}}
+\label{_gr_u_t_compress_8cpp_527584032acb0f2a0d0ae198c4ef58ce}
+
+
+
+
+Definition at line 326 of file GrUTCompress.cpp.\hypertarget{_gr_u_t_compress_8cpp_ee123328c140f1a57796a668be28ff1e}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!ForwardDCT@{ForwardDCT}}
+\index{ForwardDCT@{ForwardDCT}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{ForwardDCT}]{\setlength{\rightskip}{0pt plus 5cm}void ForwardDCT (short $\ast$ {\em dest}, \/  const short $\ast$ {\em coeff}, \/  const unsigned short $\ast$ {\em quant})}}
+\label{_gr_u_t_compress_8cpp_ee123328c140f1a57796a668be28ff1e}
+
+
+
+
+Definition at line 687 of file GrUTCompress.cpp.\hypertarget{_gr_u_t_compress_8cpp_2ea5fdafb94e6cac88ddc851b171bc05}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!GrUTCompressA@{GrUTCompressA}}
+\index{GrUTCompressA@{GrUTCompressA}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{GrUTCompressA}]{\setlength{\rightskip}{0pt plus 5cm}void GrUTCompressA ({\bf UHuffman} $\ast$ {\em encoder}, \/  const unsigned char $\ast$ {\em a}, \/  unsigned int {\em bytesPerPel}, \/  unsigned char {\em chop})}}
+\label{_gr_u_t_compress_8cpp_2ea5fdafb94e6cac88ddc851b171bc05}
+
+
+
+
+Definition at line 234 of file GrUTCompress.cpp.\hypertarget{_gr_u_t_compress_8cpp_bee5db5b42213cb69584c47cbf9eeec2}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!GrUTCompressBGRX@{GrUTCompressBGRX}}
+\index{GrUTCompressBGRX@{GrUTCompressBGRX}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{GrUTCompressBGRX}]{\setlength{\rightskip}{0pt plus 5cm}void GrUTCompressBGRX ({\bf UHuffman} $\ast$ {\em encoder}, \/  const unsigned char $\ast$ {\em bgrx}, \/  unsigned char {\em chop})}}
+\label{_gr_u_t_compress_8cpp_bee5db5b42213cb69584c47cbf9eeec2}
+
+
+
+
+Definition at line 201 of file GrUTCompress.cpp.\hypertarget{_gr_u_t_compress_8cpp_760d2e9a5fe350286da1a9a3684fc393}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!GrUTCompressDXT5@{GrUTCompressDXT5}}
+\index{GrUTCompressDXT5@{GrUTCompressDXT5}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{GrUTCompressDXT5}]{\setlength{\rightskip}{0pt plus 5cm}void GrUTCompressDXT5 (unsigned char $\ast$ {\em destSurface}, \/  unsigned int {\em destStride}, \/  unsigned char $\ast$ {\em bgra})}}
+\label{_gr_u_t_compress_8cpp_760d2e9a5fe350286da1a9a3684fc393}
+
+
+
+
+Definition at line 305 of file GrUTCompress.cpp.\hypertarget{_gr_u_t_compress_8cpp_f077c1543c461128e4bc0c2a212bb3dc}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!GrUTCompressDXT5XY@{GrUTCompressDXT5XY}}
+\index{GrUTCompressDXT5XY@{GrUTCompressDXT5XY}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{GrUTCompressDXT5XY}]{\setlength{\rightskip}{0pt plus 5cm}void GrUTCompressDXT5XY (unsigned char $\ast$ {\em destSurface}, \/  unsigned int {\em destStride}, \/  unsigned char $\ast$ {\em xy})}}
+\label{_gr_u_t_compress_8cpp_f077c1543c461128e4bc0c2a212bb3dc}
+
+
+
+
+Definition at line 313 of file GrUTCompress.cpp.\hypertarget{_gr_u_t_compress_8cpp_3b9ce4279465ebba9c0c804101bb4e57}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!GrUTDecompressA@{GrUTDecompressA}}
+\index{GrUTDecompressA@{GrUTDecompressA}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{GrUTDecompressA}]{\setlength{\rightskip}{0pt plus 5cm}void GrUTDecompressA (unsigned char $\ast$ {\em a}, \/  unsigned int {\em bytesPerPel}, \/  {\bf UHuffman} $\ast$ {\em decoder})}}
+\label{_gr_u_t_compress_8cpp_3b9ce4279465ebba9c0c804101bb4e57}
+
+
+
+
+Definition at line 286 of file GrUTCompress.cpp.\hypertarget{_gr_u_t_compress_8cpp_7399a317047a570d67f4339531719e01}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!GrUTDecompressBGRX@{GrUTDecompressBGRX}}
+\index{GrUTDecompressBGRX@{GrUTDecompressBGRX}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{GrUTDecompressBGRX}]{\setlength{\rightskip}{0pt plus 5cm}void GrUTDecompressBGRX (unsigned char $\ast$ {\em bgrx}, \/  {\bf UHuffman} $\ast$ {\em decoder})}}
+\label{_gr_u_t_compress_8cpp_7399a317047a570d67f4339531719e01}
+
+
+
+
+Definition at line 253 of file GrUTCompress.cpp.\hypertarget{_gr_u_t_compress_8cpp_98ef4e40a287ce4df9b8667da6e358d0}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!GrUTInitCompressor@{GrUTInitCompressor}}
+\index{GrUTInitCompressor@{GrUTInitCompressor}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{GrUTInitCompressor}]{\setlength{\rightskip}{0pt plus 5cm}void GrUTInitCompressor ()}}
+\label{_gr_u_t_compress_8cpp_98ef4e40a287ce4df9b8667da6e358d0}
+
+
+
+
+Definition at line 194 of file GrUTCompress.cpp.\hypertarget{_gr_u_t_compress_8cpp_3d42c340a5ca2b3daf501257c076065f}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!InsertBlockA@{InsertBlockA}}
+\index{InsertBlockA@{InsertBlockA}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{InsertBlockA}]{\setlength{\rightskip}{0pt plus 5cm}void InsertBlockA (unsigned char $\ast$ {\em vDest}, \/  unsigned int {\em bytesPerPel}, \/  unsigned int {\em dstWidth}, \/  unsigned int {\em dstX}, \/  unsigned int {\em dstY}, \/  short $\ast$ {\em v})}}
+\label{_gr_u_t_compress_8cpp_3d42c340a5ca2b3daf501257c076065f}
+
+
+
+
+Definition at line 378 of file GrUTCompress.cpp.\hypertarget{_gr_u_t_compress_8cpp_f6bd29e2978bfdf9df84d955ae9ce678}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!InsertBlockBGRA@{InsertBlockBGRA}}
+\index{InsertBlockBGRA@{InsertBlockBGRA}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{InsertBlockBGRA}]{\setlength{\rightskip}{0pt plus 5cm}void InsertBlockBGRA (unsigned char $\ast$ {\em bgraDest}, \/  unsigned int {\em dstWidth}, \/  unsigned int {\em dstX}, \/  unsigned int {\em dstY}, \/  unsigned char $\ast$ {\em bgra})}}
+\label{_gr_u_t_compress_8cpp_f6bd29e2978bfdf9df84d955ae9ce678}
+
+
+
+
+Definition at line 359 of file GrUTCompress.cpp.\hypertarget{_gr_u_t_compress_8cpp_089363eb19388a1ce485148b84c34cbd}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!InverseDCT@{InverseDCT}}
+\index{InverseDCT@{InverseDCT}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{InverseDCT}]{\setlength{\rightskip}{0pt plus 5cm}void InverseDCT (short $\ast$ {\em dest}, \/  const short $\ast$ {\em coeff}, \/  const unsigned short $\ast$ {\em quant})}}
+\label{_gr_u_t_compress_8cpp_089363eb19388a1ce485148b84c34cbd}
+
+
+
+
+Definition at line 923 of file GrUTCompress.cpp.\hypertarget{_gr_u_t_compress_8cpp_837db1acd9af4e8656f2de61bfc4934b}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!PackYCoCg@{PackYCoCg}}
+\index{PackYCoCg@{PackYCoCg}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{PackYCoCg}]{\setlength{\rightskip}{0pt plus 5cm}void PackYCoCg (short $\ast$ {\em Y}, \/  short $\ast$ {\em Co}, \/  short $\ast$ {\em Cg}, \/  const unsigned char $\ast$ {\em bgra})}}
+\label{_gr_u_t_compress_8cpp_837db1acd9af4e8656f2de61bfc4934b}
+
+
+
+
+Definition at line 642 of file GrUTCompress.cpp.\hypertarget{_gr_u_t_compress_8cpp_0bb3bd6d7081978578686fd177fa740b}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!UnpackYCoCg@{UnpackYCoCg}}
+\index{UnpackYCoCg@{UnpackYCoCg}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{UnpackYCoCg}]{\setlength{\rightskip}{0pt plus 5cm}void UnpackYCoCg (unsigned char $\ast$ {\em bgra}, \/  const short $\ast$ {\em Y}, \/  const short $\ast$ {\em Co}, \/  const short $\ast$ {\em Cg})}}
+\label{_gr_u_t_compress_8cpp_0bb3bd6d7081978578686fd177fa740b}
+
+
+
+
+Definition at line 498 of file GrUTCompress.cpp.
+
+\subsection{Variable Documentation}
+\hypertarget{_gr_u_t_compress_8cpp_c3df1fd637e11a4a33098d1a4aae13d9}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!kAlphaDividerTable@{kAlphaDividerTable}}
+\index{kAlphaDividerTable@{kAlphaDividerTable}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{kAlphaDividerTable}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf kAlphaDividerTable}\mbox{[}256\mbox{]}}}
+\label{_gr_u_t_compress_8cpp_c3df1fd637e11a4a33098d1a4aae13d9}
+
+
+
+
+Definition at line 967 of file GrUTCompress.cpp.\hypertarget{_gr_u_t_compress_8cpp_a6b31bf32db3d776ff3748eba97552b7}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!kAlphaIndicesTable@{kAlphaIndicesTable}}
+\index{kAlphaIndicesTable@{kAlphaIndicesTable}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{kAlphaIndicesTable}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf kAlphaIndicesTable}\mbox{[}640\mbox{]}}}
+\label{_gr_u_t_compress_8cpp_a6b31bf32db3d776ff3748eba97552b7}
+
+
+
+
+Definition at line 969 of file GrUTCompress.cpp.\hypertarget{_gr_u_t_compress_8cpp_c56252b8f9ec135c5c675c4914169659}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!kColorDividerTable@{kColorDividerTable}}
+\index{kColorDividerTable@{kColorDividerTable}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{kColorDividerTable}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf kColorDividerTable}\mbox{[}768\mbox{]}}}
+\label{_gr_u_t_compress_8cpp_c56252b8f9ec135c5c675c4914169659}
+
+
+
+
+Definition at line 966 of file GrUTCompress.cpp.\hypertarget{_gr_u_t_compress_8cpp_175b56095929b3d5bba0a07816d28283}{
+\index{GrUTCompress.cpp@{GrUTCompress.cpp}!kColorIndicesTable@{kColorIndicesTable}}
+\index{kColorIndicesTable@{kColorIndicesTable}!GrUTCompress.cpp@{GrUTCompress.cpp}}
+\subsubsection[{kColorIndicesTable}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf kColorIndicesTable}\mbox{[}256\mbox{]}}}
+\label{_gr_u_t_compress_8cpp_175b56095929b3d5bba0a07816d28283}
+
+
+
+
+Definition at line 968 of file GrUTCompress.cpp.

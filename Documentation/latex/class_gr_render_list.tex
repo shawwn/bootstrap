@@ -1,0 +1,266 @@
+\hypertarget{class_gr_render_list}{
+\section{GrRenderList Class Reference}
+\label{class_gr_render_list}\index{GrRenderList@{GrRenderList}}
+}
+{\tt \#include $<$GrRenderList.h$>$}
+
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+struct \hyperlink{struct_gr_render_list_1_1_s_item}{SItem}
+\end{CompactItemize}
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef \hyperlink{class_u_fast_array}{UFastArray}$<$ \hyperlink{struct_gr_render_list_1_1_s_item}{SItem}, 128, 128 $>$ \hyperlink{class_gr_render_list_6726a5c2e28aa9e3834b122747353158}{ItemArray}
+\item 
+typedef \hyperlink{class_u_fast_array}{UFastArray}$<$ \hyperlink{class_gr_uber_patch_set}{GrUberPatchSet} $\ast$, 128, 128 $>$ \hyperlink{class_gr_render_list_aeb4dd236de429afcff762bc2ab7aecf}{UberPatchSetArray}
+\item 
+typedef bool($\ast$ \hyperlink{class_gr_render_list_8456ff8c0733596672fc7181c7838996}{ItemCompare} )(const \hyperlink{struct_gr_render_list_1_1_s_item}{SItem} \&\hyperlink{glext_8h_85b8f6c07fbc1fb5d77c2ae090f21995}{left}, const \hyperlink{struct_gr_render_list_1_1_s_item}{SItem} \&\hyperlink{glext_8h_5ffadbbacc6b89cf6218bc43b384d3fe}{right})
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_render_list_23445a325c6f38273706c3240eaa380c}{GrRenderList} ()
+\item 
+\hyperlink{class_gr_render_list_1c34dff29f644328255decc5059f4b17}{$\sim$GrRenderList} ()
+\item 
+void \hyperlink{class_gr_render_list_7f49dae7c01019fc472c1a6eb4c0c7f2}{AddMeshInstRange} (\hyperlink{class_gr_mesh_inst}{GrMeshInst} $\ast$meshInst, unsigned int \hyperlink{glext__bak_8h_7b8ad0b27a927682837f95528fa454f5}{range}, bool preTransformed)
+\item 
+void \hyperlink{class_gr_render_list_be7569ef61ce1cc020a454da4bcf3c41}{AddMeshInstRanges} (\hyperlink{class_gr_mesh_inst}{GrMeshInst} $\ast$meshInst, unsigned int startRange, unsigned int rangeCount, bool preTransformed)
+\item 
+void \hyperlink{class_gr_render_list_2092d2e20fd57bb03c5090684201530c}{AddMeshInst} (\hyperlink{class_gr_mesh_inst}{GrMeshInst} $\ast$meshInst, bool preTransformed)
+\item 
+void \hyperlink{class_gr_render_list_28b4f24b9d4225c66460c7d6bfe0ed1c}{Add} (const \hyperlink{struct_gr_render_list_1_1_s_item}{SItem} \&item)
+\item 
+void \hyperlink{class_gr_render_list_43ea9830b9dfd7e1d71f94145016ccd8}{AddUberPatchSet} (\hyperlink{class_gr_uber_patch_set}{GrUberPatchSet} $\ast$patchSet)
+\item 
+void \hyperlink{class_gr_render_list_6f56335d85f1e66ffcef3c202156ec0b}{Sort} (\hyperlink{class_gr_render_list_8456ff8c0733596672fc7181c7838996}{ItemCompare} compare) const 
+\item 
+void \hyperlink{class_gr_render_list_33be395e2030cfadc8cee57f55e53b90}{SortByState} () const 
+\item 
+void \hyperlink{class_gr_render_list_a76c47e8612241e67759640fae1cadca}{SortByStateAndFrontToBack} (const \hyperlink{class_gr_camera}{GrCamera} \&camera) const 
+\item 
+unsigned int \hyperlink{class_gr_render_list_eb7629d3dfeedc0b4506fe89805626ca}{GetItemCount} () const 
+\item 
+const \hyperlink{struct_gr_render_list_1_1_s_item}{SItem} \& \hyperlink{class_gr_render_list_804dda30bc32373cf54e59cb6442bc53}{GetItem} (unsigned int idx) const 
+\item 
+const \hyperlink{class_u_fast_array}{ItemArray} \& \hyperlink{class_gr_render_list_784632f8e1b0b09ae34f2ccb06c3fac3}{GetItemArray} () const 
+\item 
+const \hyperlink{struct_gr_render_list_1_1_s_item}{SItem} \& \hyperlink{class_gr_render_list_c5c2ce6c9a0dffefad11be6a66560d1f}{operator\mbox{[}$\,$\mbox{]}} (unsigned int idx) const 
+\item 
+unsigned int \hyperlink{class_gr_render_list_4ec857347bb48be6ad445b60a96c230c}{GetUberPatchSetCount} () const 
+\item 
+\hyperlink{class_gr_uber_patch_set}{GrUberPatchSet} $\ast$ \hyperlink{class_gr_render_list_7c282cfed443280511a80ccd88f8304b}{GetUberPatchSet} (unsigned int idx) const 
+\item 
+void \hyperlink{class_gr_render_list_5715a8ea1fbcc22a26c0fe2bea0cd852}{GetVisibleItems} (\hyperlink{class_gr_render_list}{GrRenderList} \&visible, const \hyperlink{class_gr_frustum}{GrFrustum} \&frustum) const 
+\item 
+void \hyperlink{class_gr_render_list_a7f961a2ec3cfc7bebf4ee7157569081}{Clear} ()
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 25 of file GrRenderList.h.
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_gr_render_list_6726a5c2e28aa9e3834b122747353158}{
+\index{GrRenderList@{GrRenderList}!ItemArray@{ItemArray}}
+\index{ItemArray@{ItemArray}!GrRenderList@{GrRenderList}}
+\subsubsection[{ItemArray}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf UFastArray}$<${\bf SItem}, 128, 128$>$ {\bf GrRenderList::ItemArray}}}
+\label{class_gr_render_list_6726a5c2e28aa9e3834b122747353158}
+
+
+
+
+Definition at line 38 of file GrRenderList.h.\hypertarget{class_gr_render_list_8456ff8c0733596672fc7181c7838996}{
+\index{GrRenderList@{GrRenderList}!ItemCompare@{ItemCompare}}
+\index{ItemCompare@{ItemCompare}!GrRenderList@{GrRenderList}}
+\subsubsection[{ItemCompare}]{\setlength{\rightskip}{0pt plus 5cm}typedef bool( $\ast$ {\bf GrRenderList::ItemCompare})(const {\bf SItem} \&{\bf left}, const {\bf SItem} \&{\bf right})}}
+\label{class_gr_render_list_8456ff8c0733596672fc7181c7838996}
+
+
+\hypertarget{class_gr_render_list_aeb4dd236de429afcff762bc2ab7aecf}{
+\index{GrRenderList@{GrRenderList}!UberPatchSetArray@{UberPatchSetArray}}
+\index{UberPatchSetArray@{UberPatchSetArray}!GrRenderList@{GrRenderList}}
+\subsubsection[{UberPatchSetArray}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf UFastArray}$<${\bf GrUberPatchSet}$\ast$, 128, 128$>$ {\bf GrRenderList::UberPatchSetArray}}}
+\label{class_gr_render_list_aeb4dd236de429afcff762bc2ab7aecf}
+
+
+
+
+Definition at line 39 of file GrRenderList.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_render_list_23445a325c6f38273706c3240eaa380c}{
+\index{GrRenderList@{GrRenderList}!GrRenderList@{GrRenderList}}
+\index{GrRenderList@{GrRenderList}!GrRenderList@{GrRenderList}}
+\subsubsection[{GrRenderList}]{\setlength{\rightskip}{0pt plus 5cm}GrRenderList::GrRenderList ()}}
+\label{class_gr_render_list_23445a325c6f38273706c3240eaa380c}
+
+
+
+
+Definition at line 30 of file GrRenderList.cpp.\hypertarget{class_gr_render_list_1c34dff29f644328255decc5059f4b17}{
+\index{GrRenderList@{GrRenderList}!$\sim$GrRenderList@{$\sim$GrRenderList}}
+\index{$\sim$GrRenderList@{$\sim$GrRenderList}!GrRenderList@{GrRenderList}}
+\subsubsection[{$\sim$GrRenderList}]{\setlength{\rightskip}{0pt plus 5cm}GrRenderList::$\sim$GrRenderList ()}}
+\label{class_gr_render_list_1c34dff29f644328255decc5059f4b17}
+
+
+
+
+Definition at line 36 of file GrRenderList.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_render_list_28b4f24b9d4225c66460c7d6bfe0ed1c}{
+\index{GrRenderList@{GrRenderList}!Add@{Add}}
+\index{Add@{Add}!GrRenderList@{GrRenderList}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderList::Add (const {\bf SItem} \& {\em item})}}
+\label{class_gr_render_list_28b4f24b9d4225c66460c7d6bfe0ed1c}
+
+
+
+
+Definition at line 80 of file GrRenderList.cpp.\hypertarget{class_gr_render_list_2092d2e20fd57bb03c5090684201530c}{
+\index{GrRenderList@{GrRenderList}!AddMeshInst@{AddMeshInst}}
+\index{AddMeshInst@{AddMeshInst}!GrRenderList@{GrRenderList}}
+\subsubsection[{AddMeshInst}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderList::AddMeshInst ({\bf GrMeshInst} $\ast$ {\em meshInst}, \/  bool {\em preTransformed})}}
+\label{class_gr_render_list_2092d2e20fd57bb03c5090684201530c}
+
+
+
+
+Definition at line 70 of file GrRenderList.cpp.\hypertarget{class_gr_render_list_7f49dae7c01019fc472c1a6eb4c0c7f2}{
+\index{GrRenderList@{GrRenderList}!AddMeshInstRange@{AddMeshInstRange}}
+\index{AddMeshInstRange@{AddMeshInstRange}!GrRenderList@{GrRenderList}}
+\subsubsection[{AddMeshInstRange}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderList::AddMeshInstRange ({\bf GrMeshInst} $\ast$ {\em meshInst}, \/  unsigned int {\em range}, \/  bool {\em preTransformed})}}
+\label{class_gr_render_list_7f49dae7c01019fc472c1a6eb4c0c7f2}
+
+
+
+
+Definition at line 48 of file GrRenderList.cpp.\hypertarget{class_gr_render_list_be7569ef61ce1cc020a454da4bcf3c41}{
+\index{GrRenderList@{GrRenderList}!AddMeshInstRanges@{AddMeshInstRanges}}
+\index{AddMeshInstRanges@{AddMeshInstRanges}!GrRenderList@{GrRenderList}}
+\subsubsection[{AddMeshInstRanges}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderList::AddMeshInstRanges ({\bf GrMeshInst} $\ast$ {\em meshInst}, \/  unsigned int {\em startRange}, \/  unsigned int {\em rangeCount}, \/  bool {\em preTransformed})}}
+\label{class_gr_render_list_be7569ef61ce1cc020a454da4bcf3c41}
+
+
+
+
+Definition at line 60 of file GrRenderList.cpp.\hypertarget{class_gr_render_list_43ea9830b9dfd7e1d71f94145016ccd8}{
+\index{GrRenderList@{GrRenderList}!AddUberPatchSet@{AddUberPatchSet}}
+\index{AddUberPatchSet@{AddUberPatchSet}!GrRenderList@{GrRenderList}}
+\subsubsection[{AddUberPatchSet}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderList::AddUberPatchSet ({\bf GrUberPatchSet} $\ast$ {\em patchSet})}}
+\label{class_gr_render_list_43ea9830b9dfd7e1d71f94145016ccd8}
+
+
+
+
+Definition at line 87 of file GrRenderList.cpp.\hypertarget{class_gr_render_list_a7f961a2ec3cfc7bebf4ee7157569081}{
+\index{GrRenderList@{GrRenderList}!Clear@{Clear}}
+\index{Clear@{Clear}!GrRenderList@{GrRenderList}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderList::Clear ()}}
+\label{class_gr_render_list_a7f961a2ec3cfc7bebf4ee7157569081}
+
+
+
+
+Definition at line 139 of file GrRenderList.cpp.\hypertarget{class_gr_render_list_804dda30bc32373cf54e59cb6442bc53}{
+\index{GrRenderList@{GrRenderList}!GetItem@{GetItem}}
+\index{GetItem@{GetItem}!GrRenderList@{GrRenderList}}
+\subsubsection[{GetItem}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf SItem}\& GrRenderList::GetItem (unsigned int {\em idx}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_render_list_804dda30bc32373cf54e59cb6442bc53}
+
+
+
+
+Definition at line 61 of file GrRenderList.h.\hypertarget{class_gr_render_list_784632f8e1b0b09ae34f2ccb06c3fac3}{
+\index{GrRenderList@{GrRenderList}!GetItemArray@{GetItemArray}}
+\index{GetItemArray@{GetItemArray}!GrRenderList@{GrRenderList}}
+\subsubsection[{GetItemArray}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf ItemArray}\& GrRenderList::GetItemArray () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_render_list_784632f8e1b0b09ae34f2ccb06c3fac3}
+
+
+
+
+Definition at line 62 of file GrRenderList.h.\hypertarget{class_gr_render_list_eb7629d3dfeedc0b4506fe89805626ca}{
+\index{GrRenderList@{GrRenderList}!GetItemCount@{GetItemCount}}
+\index{GetItemCount@{GetItemCount}!GrRenderList@{GrRenderList}}
+\subsubsection[{GetItemCount}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrRenderList::GetItemCount () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_render_list_eb7629d3dfeedc0b4506fe89805626ca}
+
+
+
+
+Definition at line 60 of file GrRenderList.h.\hypertarget{class_gr_render_list_7c282cfed443280511a80ccd88f8304b}{
+\index{GrRenderList@{GrRenderList}!GetUberPatchSet@{GetUberPatchSet}}
+\index{GetUberPatchSet@{GetUberPatchSet}!GrRenderList@{GrRenderList}}
+\subsubsection[{GetUberPatchSet}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrUberPatchSet}$\ast$ GrRenderList::GetUberPatchSet (unsigned int {\em idx}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_render_list_7c282cfed443280511a80ccd88f8304b}
+
+
+
+
+Definition at line 67 of file GrRenderList.h.\hypertarget{class_gr_render_list_4ec857347bb48be6ad445b60a96c230c}{
+\index{GrRenderList@{GrRenderList}!GetUberPatchSetCount@{GetUberPatchSetCount}}
+\index{GetUberPatchSetCount@{GetUberPatchSetCount}!GrRenderList@{GrRenderList}}
+\subsubsection[{GetUberPatchSetCount}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrRenderList::GetUberPatchSetCount () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_render_list_4ec857347bb48be6ad445b60a96c230c}
+
+
+
+
+Definition at line 66 of file GrRenderList.h.\hypertarget{class_gr_render_list_5715a8ea1fbcc22a26c0fe2bea0cd852}{
+\index{GrRenderList@{GrRenderList}!GetVisibleItems@{GetVisibleItems}}
+\index{GetVisibleItems@{GetVisibleItems}!GrRenderList@{GrRenderList}}
+\subsubsection[{GetVisibleItems}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderList::GetVisibleItems ({\bf GrRenderList} \& {\em visible}, \/  const {\bf GrFrustum} \& {\em frustum}) const}}
+\label{class_gr_render_list_5715a8ea1fbcc22a26c0fe2bea0cd852}
+
+
+
+
+Definition at line 117 of file GrRenderList.cpp.\hypertarget{class_gr_render_list_c5c2ce6c9a0dffefad11be6a66560d1f}{
+\index{GrRenderList@{GrRenderList}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!GrRenderList@{GrRenderList}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf SItem}\& GrRenderList::operator\mbox{[}$\,$\mbox{]} (unsigned int {\em idx}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_render_list_c5c2ce6c9a0dffefad11be6a66560d1f}
+
+
+
+
+Definition at line 63 of file GrRenderList.h.\hypertarget{class_gr_render_list_6f56335d85f1e66ffcef3c202156ec0b}{
+\index{GrRenderList@{GrRenderList}!Sort@{Sort}}
+\index{Sort@{Sort}!GrRenderList@{GrRenderList}}
+\subsubsection[{Sort}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderList::Sort ({\bf ItemCompare} {\em compare}) const}}
+\label{class_gr_render_list_6f56335d85f1e66ffcef3c202156ec0b}
+
+
+
+
+Definition at line 94 of file GrRenderList.cpp.\hypertarget{class_gr_render_list_33be395e2030cfadc8cee57f55e53b90}{
+\index{GrRenderList@{GrRenderList}!SortByState@{SortByState}}
+\index{SortByState@{SortByState}!GrRenderList@{GrRenderList}}
+\subsubsection[{SortByState}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderList::SortByState () const}}
+\label{class_gr_render_list_33be395e2030cfadc8cee57f55e53b90}
+
+
+
+
+Definition at line 101 of file GrRenderList.cpp.\hypertarget{class_gr_render_list_a76c47e8612241e67759640fae1cadca}{
+\index{GrRenderList@{GrRenderList}!SortByStateAndFrontToBack@{SortByStateAndFrontToBack}}
+\index{SortByStateAndFrontToBack@{SortByStateAndFrontToBack}!GrRenderList@{GrRenderList}}
+\subsubsection[{SortByStateAndFrontToBack}]{\setlength{\rightskip}{0pt plus 5cm}void GrRenderList::SortByStateAndFrontToBack (const {\bf GrCamera} \& {\em camera}) const}}
+\label{class_gr_render_list_a76c47e8612241e67759640fae1cadca}
+
+
+
+
+Definition at line 108 of file GrRenderList.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_render_list_8h}{GrRenderList.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_render_list_8cpp}{GrRenderList.cpp}\end{CompactItemize}

@@ -1,0 +1,807 @@
+\hypertarget{class_gr_material_pass}{
+\section{GrMaterialPass Class Reference}
+\label{class_gr_material_pass}\index{GrMaterialPass@{GrMaterialPass}}
+}
+{\tt \#include $<$GrMaterialPass.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_material_pass_d51b379c745b2f20189f9d2f141ccc2b}{GrMaterialPass} (unsigned int passNumber, const \hyperlink{struct_s_material_pass_info}{SMaterialPassInfo} \&passInfo)
+\item 
+\hyperlink{class_gr_material_pass_892c0b01e532282399b758197ae866f7}{$\sim$GrMaterialPass} ()
+\item 
+void \hyperlink{class_gr_material_pass_9ca0165a2f76e561040f97a821652a98}{Init} (unsigned int passNumber, const \hyperlink{struct_s_material_pass_info}{SMaterialPassInfo} \&passInfo)
+\item 
+const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \& \hyperlink{class_gr_material_pass_dc8d850ec17437ac3000c63a00205476}{GetName} () const 
+\item 
+\hyperlink{class_gr_material_pass}{GrMaterialPass} $\ast$ \hyperlink{class_gr_material_pass_98a5f91d9690f1e6cba0fc5355f96529}{Clone} () const 
+\item 
+void \hyperlink{class_gr_material_pass_5931c31c1ffda6b191f09f49000f2d11}{SetShader} (\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_shader}{GrShader} $>$ \hyperlink{glext_8h_57b2a96adb1d51204909a82d861e395e}{shader})
+\item 
+void \hyperlink{class_gr_material_pass_5b1a5c20c0299b3e7eda73d377021509}{SetAmbientShader} (\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_shader}{GrShader} $>$ \hyperlink{glext_8h_57b2a96adb1d51204909a82d861e395e}{shader})
+\item 
+bool \hyperlink{class_gr_material_pass_854289ca69d0efcfe29047c80c25fd3d}{AlphaTest} () const 
+\item 
+bool \hyperlink{class_gr_material_pass_c968cf3eafd243fa2de5ffaf3e3d2981}{CastShadow} () const 
+\item 
+bool \hyperlink{class_gr_material_pass_ca6fb93ef3404e9aad9396cd7aecb083}{ReceiveShadow} () const 
+\item 
+void \hyperlink{class_gr_material_pass_148e7583791d48dfad8a19bcbadcd8c2}{SetCastShadow} (bool castShadow)
+\item 
+void \hyperlink{class_gr_material_pass_c4c6bb30dab587d51b255c91f428edaa}{SetReceiveShadow} (bool receiveShadow)
+\item 
+bool \hyperlink{class_gr_material_pass_ad6cbb60949c8176c9e7248f3208ee75}{IsEnabled} () const 
+\item 
+bool \hyperlink{class_gr_material_pass_e8a92f3084a45fcd9337e2488719400d}{IsFirstPass} () const 
+\item 
+unsigned int \hyperlink{class_gr_material_pass_241ea5e30cab7f74997a32b9479180e3}{GetStates} () const 
+\item 
+unsigned int \hyperlink{class_gr_material_pass_ce9bd1f84b590d9916f84b123d89dbeb}{GetWriteMask} () const 
+\item 
+\hyperlink{_gr_util_8h_ea790ef067767354691d0d60c51542fe}{EGRCULLMODE} \hyperlink{class_gr_material_pass_365c60391a1ecf5468034f27db810c87}{GetCullMode} () const 
+\item 
+\hyperlink{_gr_util_8h_abff98128b1f220d1ceff538f4abdef3}{EGRALPHATESTMODE} \hyperlink{class_gr_material_pass_bcc04a3190ab557eebf814382b055dd7}{GetAlphaTestMode} () const 
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_u_expr_term}{UExprTerm} $>$ \hyperlink{class_gr_material_pass_a4a289c7731127effe76a46eaf255fc6}{GetAlphaTestRef} () const 
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_u_expr_term}{UExprTerm} $>$ \hyperlink{class_gr_material_pass_a23b06c046521ef6912665969576500c}{GetPassEnable} () const 
+\item 
+float \hyperlink{class_gr_material_pass_5d7fb2c310bd6996474166d2b04f6e61}{GetSlopeDepthBias} () const 
+\item 
+float \hyperlink{class_gr_material_pass_f36302b1ba423ef54654847d5e881c4b}{GetConstDepthBias} () const 
+\item 
+const \hyperlink{class_gr_color}{GrColor} \& \hyperlink{class_gr_material_pass_d806a37ef0afb86d3e5856f4cefa89d9}{GetVertexColorMod} () const 
+\item 
+const \hyperlink{class_gr_color}{GrColor} \& \hyperlink{class_gr_material_pass_9bf48a9c92c48fe9edea9ee9c5f23550}{GetVertexColorAdd} () const 
+\item 
+const \hyperlink{struct_s_material_pass_blend_states}{SMaterialPassBlendStates} \& \hyperlink{class_gr_material_pass_931b56341af762712eec766d2be3caab}{GetAmbientBlendStates} () const 
+\item 
+const \hyperlink{struct_s_material_pass_blend_states}{SMaterialPassBlendStates} \& \hyperlink{class_gr_material_pass_cdf7d0d1244d270f8c68e7b8cf20bb14}{GetLightBlendStates} () const 
+\item 
+void \hyperlink{class_gr_material_pass_c0406c4ebc750d788d1d0c13f10e9203}{SetStates} (unsigned int states)
+\item 
+void \hyperlink{class_gr_material_pass_d4b4e6721ac85e8e66526390f0c08142}{SetWriteMask} (unsigned int \hyperlink{glext__bak_8h_5612bf87afe1aa200ad412866de45c1f}{mask})
+\item 
+void \hyperlink{class_gr_material_pass_8c69d8f73a4a4742661c28d33c62d5c5}{SetCullMode} (\hyperlink{_gr_util_8h_ea790ef067767354691d0d60c51542fe}{EGRCULLMODE} \hyperlink{glext__bak_8h_1e71d9c196e4683cc06c4b54d53f7ef5}{mode})
+\item 
+void \hyperlink{class_gr_material_pass_e274892d545d45e5b1814f3752cc9b63}{SetAlphaTestMode} (\hyperlink{_gr_util_8h_abff98128b1f220d1ceff538f4abdef3}{EGRALPHATESTMODE} \hyperlink{glext__bak_8h_1e71d9c196e4683cc06c4b54d53f7ef5}{mode})
+\item 
+void \hyperlink{class_gr_material_pass_a1d660422bfd38ecb23256ca4abf1239}{SetAlphaTestRef} (\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_u_expr_term}{UExprTerm} $>$ expr)
+\item 
+void \hyperlink{class_gr_material_pass_ffa472b516c906654ce2b807fa757ba4}{SetSlopeDepthBias} (float \hyperlink{glext__bak_8h_39c3ffa18f420251c5d132dd8c1c6137}{bias})
+\item 
+void \hyperlink{class_gr_material_pass_9803fdd3bec657d410491f8b43a3a21e}{SetConstDepthBias} (float \hyperlink{glext__bak_8h_39c3ffa18f420251c5d132dd8c1c6137}{bias})
+\item 
+void \hyperlink{class_gr_material_pass_ed26f0584038d1f297755fbfebd6e078}{SetPassEnable} (\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_u_expr_term}{UExprTerm} $>$ expr)
+\item 
+void \hyperlink{class_gr_material_pass_3d22971b4cf68d16b982992fcb0a646a}{SetVertexColorMod} (const \hyperlink{class_gr_color}{GrColor} \&\hyperlink{glext_8h_3ea846f998d64f079b86052b6c4193a8}{color})
+\item 
+void \hyperlink{class_gr_material_pass_e06601541c21e3d6669d5df0e82c57a1}{SetVertexColorAdd} (const \hyperlink{class_gr_color}{GrColor} \&\hyperlink{glext_8h_3ea846f998d64f079b86052b6c4193a8}{color})
+\item 
+void \hyperlink{class_gr_material_pass_d52b02b6e3e016f47b15fe62d834531c}{SetAmbientBlendStates} (const \hyperlink{struct_s_material_pass_blend_states}{SMaterialPassBlendStates} \&states)
+\item 
+void \hyperlink{class_gr_material_pass_f2cca95d15241405447e463f271c5e50}{SetLightBlendStates} (const \hyperlink{struct_s_material_pass_blend_states}{SMaterialPassBlendStates} \&states)
+\item 
+\hyperlink{class_gr_material_user_params}{GrMaterialUserParams} \& \hyperlink{class_gr_material_pass_7961e2a4d2fbd45128fa21cac4f32f30}{GetUserParams} ()
+\item 
+const \hyperlink{class_gr_material_user_params}{GrMaterialUserParams} \& \hyperlink{class_gr_material_pass_2b6f9429348c2dcf6732174f60185b3c}{GetUserParams} () const 
+\item 
+const \hyperlink{class_gr_texture_stage}{GrTextureStage} \& \hyperlink{class_gr_material_pass_40d16be22eb6d06342530acfdf487d87}{GetStage} (\hyperlink{_gr_config_8h_6df36e6af6bdeed00ff250f968160688}{ESTAGE} stage) const 
+\item 
+void \hyperlink{class_gr_material_pass_cd2c6bf8aa2bf5e5e9cb8852d1546c04}{SetStage} (\hyperlink{_gr_config_8h_6df36e6af6bdeed00ff250f968160688}{ESTAGE} stage, \hyperlink{class_gr_texture_stage}{GrTextureStage} \&\hyperlink{glext__bak_8h_d585a1393cfa368fa9dc3d8ebff640d5}{s})
+\item 
+const \hyperlink{class_gr_texture_set}{GrTextureSet} \& \hyperlink{class_gr_material_pass_d4fe8b412fb170dcf48688ba424c7d18}{GetTextureSet} () const 
+\item 
+void \hyperlink{class_gr_material_pass_ae8284d3de34bd6668950b6b1fdeabdb}{SetTextureSet} (const \hyperlink{class_gr_texture_set}{GrTextureSet} \&\hyperlink{glext__bak_8h_76454c03d9d5c83988eddfce6abb7059}{textures})
+\item 
+void \hyperlink{class_gr_material_pass_a1a69dfaf67a8d54d6874e345398fda4}{SetTextureScaleS} (\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_u_expr_term}{UExprTerm} $>$ \hyperlink{glext__bak_8h_281421b881aa7a1266842b73a3bc7655}{scale})
+\item 
+void \hyperlink{class_gr_material_pass_d3e27ebf2fdecfcb84127dc777b41f71}{SetTextureScaleT} (\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_u_expr_term}{UExprTerm} $>$ \hyperlink{glext__bak_8h_281421b881aa7a1266842b73a3bc7655}{scale})
+\item 
+void \hyperlink{class_gr_material_pass_a9ad26db402f4f8e52caf3feb36b4749}{SetTextureRotate} (\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_u_expr_term}{UExprTerm} $>$ rotate)
+\item 
+void \hyperlink{class_gr_material_pass_6132f67504d434010d20fefee1a1a512}{SetTextureRotateCenterS} (\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_u_expr_term}{UExprTerm} $>$ rotate)
+\item 
+void \hyperlink{class_gr_material_pass_8f15d8d892cf78090d9a214d13f4ba83}{SetTextureRotateCenterT} (\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_u_expr_term}{UExprTerm} $>$ rotate)
+\item 
+void \hyperlink{class_gr_material_pass_3cc6f6c62fe2f2e23a24069c20e5941c}{SetTextureTranslateS} (\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_u_expr_term}{UExprTerm} $>$ translate)
+\item 
+void \hyperlink{class_gr_material_pass_b53e9d97ea01a7b4de5cd8c47d14235e}{SetTextureTranslateT} (\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_u_expr_term}{UExprTerm} $>$ translate)
+\item 
+void \hyperlink{class_gr_material_pass_4bb9f88d516c2798a43b068400212ded}{SetStageTexture} (\hyperlink{_gr_config_8h_6df36e6af6bdeed00ff250f968160688}{ESTAGE} stage, \hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_texture_base}{GrTextureBase} $>$ \hyperlink{glext__bak_8h_8f486379aef534669f4f06f515e7ce6c}{texture})
+\item 
+void \hyperlink{class_gr_material_pass_1aea66b8b06f6c0c5de9ec7a3e1e5f01}{SetStageAddressMode} (\hyperlink{_gr_config_8h_6df36e6af6bdeed00ff250f968160688}{ESTAGE} stage, \hyperlink{class_gr_texture_stage_dea63364bc3369d0cf5ef74b76268d0e}{GrTextureStage::EADDRESSMODE} \hyperlink{glext__bak_8h_d585a1393cfa368fa9dc3d8ebff640d5}{s}, \hyperlink{class_gr_texture_stage_dea63364bc3369d0cf5ef74b76268d0e}{GrTextureStage::EADDRESSMODE} \hyperlink{glext__bak_8h_00140d6f5c548b26daf170bf16e86a6d}{t})
+\item 
+void \hyperlink{class_gr_material_pass_e448ff2937e697a33893312e608efcaa}{SetStageFilterMode} (\hyperlink{_gr_config_8h_6df36e6af6bdeed00ff250f968160688}{ESTAGE} stage, \hyperlink{class_gr_texture_stage_b86144a2e97311bb975db7c2c361f048}{GrTextureStage::EFILTERMODE} filterMode)
+\item 
+void \hyperlink{class_gr_material_pass_af2bead7532c7701623f28c1522ec354}{SetStageMaxAnisotropy} (\hyperlink{_gr_config_8h_6df36e6af6bdeed00ff250f968160688}{ESTAGE} stage, float maxAnisotropy)
+\item 
+void \hyperlink{class_gr_material_pass_911ebc1580fe6a279045dd4274d491e3}{SetStageMipMapEnable} (\hyperlink{_gr_config_8h_6df36e6af6bdeed00ff250f968160688}{ESTAGE} stage, bool mipMapEnable)
+\item 
+void \hyperlink{class_gr_material_pass_1817af9cfe2b22d4f2bd2f28d9b946e5}{SetStageGenTextureFlag} (\hyperlink{_gr_config_8h_6df36e6af6bdeed00ff250f968160688}{ESTAGE} stage, \hyperlink{class_gr_texture_stage_60f59a039bf1c95b76659752ff1bf7d6}{GrTextureStage::GenTextureFlag} \hyperlink{_u_t_message_8h_0a3c0b351ab09281b662a9ff4f900a53}{flags})
+\item 
+void \hyperlink{class_gr_material_pass_92554ebb8bec4354879389bd7d225d10}{SetStageTexColorMod} (\hyperlink{_gr_config_8h_6df36e6af6bdeed00ff250f968160688}{ESTAGE} stage, const \hyperlink{class_gr_color}{GrColor} \&\hyperlink{glext_8h_3ea846f998d64f079b86052b6c4193a8}{color})
+\item 
+void \hyperlink{class_gr_material_pass_ce347100ba76c2cbaadee8ee02baa4db}{SetStageTexColorAdd} (\hyperlink{_gr_config_8h_6df36e6af6bdeed00ff250f968160688}{ESTAGE} stage, const \hyperlink{class_gr_color}{GrColor} \&\hyperlink{glext_8h_3ea846f998d64f079b86052b6c4193a8}{color})
+\item 
+void \hyperlink{class_gr_material_pass_461a5f3b7e2ffc51491914ed6bd9654c}{Update} ()
+\item 
+void \hyperlink{class_gr_material_pass_645501d055a4d4cffb0482a8f91448be}{ApplyAmbientBlendStates} (unsigned int stateMask) const 
+\item 
+void \hyperlink{class_gr_material_pass_dfdd256fcb0d7bfac731b6db4d9eb575}{ApplyLightBlendStates} (unsigned int stateMask) const 
+\item 
+void \hyperlink{class_gr_material_pass_272b822ee696efb7e967a9565cd79a97}{ApplyStates} (unsigned int stateMask, unsigned int writeMask) const 
+\item 
+void \hyperlink{class_gr_material_pass_7ef513dc8a50374348a402c10a3f3cd0}{ApplyVertexParams} (\hyperlink{class_gr_shader}{GrShader} $\ast$shaderOverride=0) const 
+\item 
+void \hyperlink{class_gr_material_pass_e7fce70c080ca855afb28e2cd0e729bc}{ApplyShader} (\hyperlink{enums_8h_697c1ee1354746841860d5bf9f81c033}{EGRQUALITY} quality) const 
+\item 
+\hyperlink{class_gr_shader}{GrShader} $\ast$ \hyperlink{class_gr_material_pass_c03a1be09b50c814be01d535c64c4da3}{GetShader} () const 
+\item 
+\hyperlink{class_gr_shader}{GrShader} $\ast$ \hyperlink{class_gr_material_pass_4581e9b370422f95a8a7e9c8556d0e78}{GetAmbientShader} () const 
+\item 
+const \hyperlink{class_gr_color}{GrColor} \& \hyperlink{class_gr_material_pass_9609353bb1089baeba6a0a176501cf9f}{GetMinLightResponse} () const 
+\item 
+const \hyperlink{class_gr_color}{GrColor} \& \hyperlink{class_gr_material_pass_404104b92d23577c62da193eaeacc6cf}{GetMaxLightResponse} () const 
+\item 
+void \hyperlink{class_gr_material_pass_ddf56d1ef2931a1cded781325ddd8738}{SetMinLightResponse} (const \hyperlink{class_gr_color}{GrColor} \&\hyperlink{glext_8h_3ea846f998d64f079b86052b6c4193a8}{color})
+\item 
+void \hyperlink{class_gr_material_pass_f66502995683becd9fd606d48da3a384}{SetMaxLightResponse} (const \hyperlink{class_gr_color}{GrColor} \&\hyperlink{glext_8h_3ea846f998d64f079b86052b6c4193a8}{color})
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 111 of file GrMaterialPass.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_material_pass_d51b379c745b2f20189f9d2f141ccc2b}{
+\index{GrMaterialPass@{GrMaterialPass}!GrMaterialPass@{GrMaterialPass}}
+\index{GrMaterialPass@{GrMaterialPass}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{GrMaterialPass}]{\setlength{\rightskip}{0pt plus 5cm}GrMaterialPass::GrMaterialPass (unsigned int {\em passNumber}, \/  const {\bf SMaterialPassInfo} \& {\em passInfo})}}
+\label{class_gr_material_pass_d51b379c745b2f20189f9d2f141ccc2b}
+
+
+
+
+Definition at line 80 of file GrMaterialPass.cpp.\hypertarget{class_gr_material_pass_892c0b01e532282399b758197ae866f7}{
+\index{GrMaterialPass@{GrMaterialPass}!$\sim$GrMaterialPass@{$\sim$GrMaterialPass}}
+\index{$\sim$GrMaterialPass@{$\sim$GrMaterialPass}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{$\sim$GrMaterialPass}]{\setlength{\rightskip}{0pt plus 5cm}GrMaterialPass::$\sim$GrMaterialPass ()}}
+\label{class_gr_material_pass_892c0b01e532282399b758197ae866f7}
+
+
+
+
+Definition at line 100 of file GrMaterialPass.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_material_pass_854289ca69d0efcfe29047c80c25fd3d}{
+\index{GrMaterialPass@{GrMaterialPass}!AlphaTest@{AlphaTest}}
+\index{AlphaTest@{AlphaTest}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{AlphaTest}]{\setlength{\rightskip}{0pt plus 5cm}bool GrMaterialPass::AlphaTest () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_854289ca69d0efcfe29047c80c25fd3d}
+
+
+
+
+Definition at line 136 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_645501d055a4d4cffb0482a8f91448be}{
+\index{GrMaterialPass@{GrMaterialPass}!ApplyAmbientBlendStates@{ApplyAmbientBlendStates}}
+\index{ApplyAmbientBlendStates@{ApplyAmbientBlendStates}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{ApplyAmbientBlendStates}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialPass::ApplyAmbientBlendStates (unsigned int {\em stateMask}) const}}
+\label{class_gr_material_pass_645501d055a4d4cffb0482a8f91448be}
+
+
+
+
+Definition at line 254 of file GrMaterialPass.cpp.\hypertarget{class_gr_material_pass_dfdd256fcb0d7bfac731b6db4d9eb575}{
+\index{GrMaterialPass@{GrMaterialPass}!ApplyLightBlendStates@{ApplyLightBlendStates}}
+\index{ApplyLightBlendStates@{ApplyLightBlendStates}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{ApplyLightBlendStates}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialPass::ApplyLightBlendStates (unsigned int {\em stateMask}) const}}
+\label{class_gr_material_pass_dfdd256fcb0d7bfac731b6db4d9eb575}
+
+
+
+
+Definition at line 261 of file GrMaterialPass.cpp.\hypertarget{class_gr_material_pass_e7fce70c080ca855afb28e2cd0e729bc}{
+\index{GrMaterialPass@{GrMaterialPass}!ApplyShader@{ApplyShader}}
+\index{ApplyShader@{ApplyShader}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{ApplyShader}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialPass::ApplyShader ({\bf EGRQUALITY} {\em quality}) const}}
+\label{class_gr_material_pass_e7fce70c080ca855afb28e2cd0e729bc}
+
+
+
+
+Definition at line 312 of file GrMaterialPass.cpp.\hypertarget{class_gr_material_pass_272b822ee696efb7e967a9565cd79a97}{
+\index{GrMaterialPass@{GrMaterialPass}!ApplyStates@{ApplyStates}}
+\index{ApplyStates@{ApplyStates}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{ApplyStates}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialPass::ApplyStates (unsigned int {\em stateMask}, \/  unsigned int {\em writeMask}) const}}
+\label{class_gr_material_pass_272b822ee696efb7e967a9565cd79a97}
+
+
+
+
+Definition at line 268 of file GrMaterialPass.cpp.\hypertarget{class_gr_material_pass_7ef513dc8a50374348a402c10a3f3cd0}{
+\index{GrMaterialPass@{GrMaterialPass}!ApplyVertexParams@{ApplyVertexParams}}
+\index{ApplyVertexParams@{ApplyVertexParams}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{ApplyVertexParams}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialPass::ApplyVertexParams ({\bf GrShader} $\ast$ {\em shaderOverride} = {\tt 0}) const}}
+\label{class_gr_material_pass_7ef513dc8a50374348a402c10a3f3cd0}
+
+
+
+
+Definition at line 301 of file GrMaterialPass.cpp.\hypertarget{class_gr_material_pass_c968cf3eafd243fa2de5ffaf3e3d2981}{
+\index{GrMaterialPass@{GrMaterialPass}!CastShadow@{CastShadow}}
+\index{CastShadow@{CastShadow}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{CastShadow}]{\setlength{\rightskip}{0pt plus 5cm}bool GrMaterialPass::CastShadow () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_c968cf3eafd243fa2de5ffaf3e3d2981}
+
+
+
+
+Definition at line 137 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_98a5f91d9690f1e6cba0fc5355f96529}{
+\index{GrMaterialPass@{GrMaterialPass}!Clone@{Clone}}
+\index{Clone@{Clone}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{Clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrMaterialPass} $\ast$ GrMaterialPass::Clone () const}}
+\label{class_gr_material_pass_98a5f91d9690f1e6cba0fc5355f96529}
+
+
+
+
+Definition at line 160 of file GrMaterialPass.cpp.\hypertarget{class_gr_material_pass_bcc04a3190ab557eebf814382b055dd7}{
+\index{GrMaterialPass@{GrMaterialPass}!GetAlphaTestMode@{GetAlphaTestMode}}
+\index{GetAlphaTestMode@{GetAlphaTestMode}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{GetAlphaTestMode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf EGRALPHATESTMODE} GrMaterialPass::GetAlphaTestMode () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_bcc04a3190ab557eebf814382b055dd7}
+
+
+
+
+Definition at line 150 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_a4a289c7731127effe76a46eaf255fc6}{
+\index{GrMaterialPass@{GrMaterialPass}!GetAlphaTestRef@{GetAlphaTestRef}}
+\index{GetAlphaTestRef@{GetAlphaTestRef}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{GetAlphaTestRef}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf UExprTerm} $>$ GrMaterialPass::GetAlphaTestRef () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_a4a289c7731127effe76a46eaf255fc6}
+
+
+
+
+Definition at line 151 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_931b56341af762712eec766d2be3caab}{
+\index{GrMaterialPass@{GrMaterialPass}!GetAmbientBlendStates@{GetAmbientBlendStates}}
+\index{GetAmbientBlendStates@{GetAmbientBlendStates}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{GetAmbientBlendStates}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf SMaterialPassBlendStates}\& GrMaterialPass::GetAmbientBlendStates () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_931b56341af762712eec766d2be3caab}
+
+
+
+
+Definition at line 158 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_4581e9b370422f95a8a7e9c8556d0e78}{
+\index{GrMaterialPass@{GrMaterialPass}!GetAmbientShader@{GetAmbientShader}}
+\index{GetAmbientShader@{GetAmbientShader}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{GetAmbientShader}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrShader}$\ast$ GrMaterialPass::GetAmbientShader () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_4581e9b370422f95a8a7e9c8556d0e78}
+
+
+
+
+Definition at line 229 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_f36302b1ba423ef54654847d5e881c4b}{
+\index{GrMaterialPass@{GrMaterialPass}!GetConstDepthBias@{GetConstDepthBias}}
+\index{GetConstDepthBias@{GetConstDepthBias}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{GetConstDepthBias}]{\setlength{\rightskip}{0pt plus 5cm}float GrMaterialPass::GetConstDepthBias () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_f36302b1ba423ef54654847d5e881c4b}
+
+
+
+
+Definition at line 154 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_365c60391a1ecf5468034f27db810c87}{
+\index{GrMaterialPass@{GrMaterialPass}!GetCullMode@{GetCullMode}}
+\index{GetCullMode@{GetCullMode}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{GetCullMode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf EGRCULLMODE} GrMaterialPass::GetCullMode () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_365c60391a1ecf5468034f27db810c87}
+
+
+
+
+Definition at line 149 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_cdf7d0d1244d270f8c68e7b8cf20bb14}{
+\index{GrMaterialPass@{GrMaterialPass}!GetLightBlendStates@{GetLightBlendStates}}
+\index{GetLightBlendStates@{GetLightBlendStates}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{GetLightBlendStates}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf SMaterialPassBlendStates}\& GrMaterialPass::GetLightBlendStates () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_cdf7d0d1244d270f8c68e7b8cf20bb14}
+
+
+
+
+Definition at line 159 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_404104b92d23577c62da193eaeacc6cf}{
+\index{GrMaterialPass@{GrMaterialPass}!GetMaxLightResponse@{GetMaxLightResponse}}
+\index{GetMaxLightResponse@{GetMaxLightResponse}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{GetMaxLightResponse}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf GrColor}\& GrMaterialPass::GetMaxLightResponse () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_404104b92d23577c62da193eaeacc6cf}
+
+
+
+
+Definition at line 235 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_9609353bb1089baeba6a0a176501cf9f}{
+\index{GrMaterialPass@{GrMaterialPass}!GetMinLightResponse@{GetMinLightResponse}}
+\index{GetMinLightResponse@{GetMinLightResponse}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{GetMinLightResponse}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf GrColor}\& GrMaterialPass::GetMinLightResponse () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_9609353bb1089baeba6a0a176501cf9f}
+
+
+
+
+Definition at line 234 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_dc8d850ec17437ac3000c63a00205476}{
+\index{GrMaterialPass@{GrMaterialPass}!GetName@{GetName}}
+\index{GetName@{GetName}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{GetName}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf tstring}\& GrMaterialPass::GetName () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_dc8d850ec17437ac3000c63a00205476}
+
+
+
+
+Definition at line 123 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_a23b06c046521ef6912665969576500c}{
+\index{GrMaterialPass@{GrMaterialPass}!GetPassEnable@{GetPassEnable}}
+\index{GetPassEnable@{GetPassEnable}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{GetPassEnable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf UExprTerm} $>$ GrMaterialPass::GetPassEnable () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_a23b06c046521ef6912665969576500c}
+
+
+
+
+Definition at line 152 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_c03a1be09b50c814be01d535c64c4da3}{
+\index{GrMaterialPass@{GrMaterialPass}!GetShader@{GetShader}}
+\index{GetShader@{GetShader}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{GetShader}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrShader}$\ast$ GrMaterialPass::GetShader () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_c03a1be09b50c814be01d535c64c4da3}
+
+
+
+
+Definition at line 228 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_5d7fb2c310bd6996474166d2b04f6e61}{
+\index{GrMaterialPass@{GrMaterialPass}!GetSlopeDepthBias@{GetSlopeDepthBias}}
+\index{GetSlopeDepthBias@{GetSlopeDepthBias}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{GetSlopeDepthBias}]{\setlength{\rightskip}{0pt plus 5cm}float GrMaterialPass::GetSlopeDepthBias () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_5d7fb2c310bd6996474166d2b04f6e61}
+
+
+
+
+Definition at line 153 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_40d16be22eb6d06342530acfdf487d87}{
+\index{GrMaterialPass@{GrMaterialPass}!GetStage@{GetStage}}
+\index{GetStage@{GetStage}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{GetStage}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf GrTextureStage}\& GrMaterialPass::GetStage ({\bf ESTAGE} {\em stage}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_40d16be22eb6d06342530acfdf487d87}
+
+
+
+
+Definition at line 185 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_241ea5e30cab7f74997a32b9479180e3}{
+\index{GrMaterialPass@{GrMaterialPass}!GetStates@{GetStates}}
+\index{GetStates@{GetStates}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{GetStates}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrMaterialPass::GetStates () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_241ea5e30cab7f74997a32b9479180e3}
+
+
+
+
+Definition at line 147 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_d4fe8b412fb170dcf48688ba424c7d18}{
+\index{GrMaterialPass@{GrMaterialPass}!GetTextureSet@{GetTextureSet}}
+\index{GetTextureSet@{GetTextureSet}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{GetTextureSet}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf GrTextureSet}\& GrMaterialPass::GetTextureSet () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_d4fe8b412fb170dcf48688ba424c7d18}
+
+
+
+
+Definition at line 188 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_2b6f9429348c2dcf6732174f60185b3c}{
+\index{GrMaterialPass@{GrMaterialPass}!GetUserParams@{GetUserParams}}
+\index{GetUserParams@{GetUserParams}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{GetUserParams}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf GrMaterialUserParams}\& GrMaterialPass::GetUserParams () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_2b6f9429348c2dcf6732174f60185b3c}
+
+
+
+
+Definition at line 180 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_7961e2a4d2fbd45128fa21cac4f32f30}{
+\index{GrMaterialPass@{GrMaterialPass}!GetUserParams@{GetUserParams}}
+\index{GetUserParams@{GetUserParams}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{GetUserParams}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrMaterialUserParams}\& GrMaterialPass::GetUserParams ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_7961e2a4d2fbd45128fa21cac4f32f30}
+
+
+
+
+Definition at line 179 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_9bf48a9c92c48fe9edea9ee9c5f23550}{
+\index{GrMaterialPass@{GrMaterialPass}!GetVertexColorAdd@{GetVertexColorAdd}}
+\index{GetVertexColorAdd@{GetVertexColorAdd}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{GetVertexColorAdd}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf GrColor}\& GrMaterialPass::GetVertexColorAdd () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_9bf48a9c92c48fe9edea9ee9c5f23550}
+
+
+
+
+Definition at line 156 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_d806a37ef0afb86d3e5856f4cefa89d9}{
+\index{GrMaterialPass@{GrMaterialPass}!GetVertexColorMod@{GetVertexColorMod}}
+\index{GetVertexColorMod@{GetVertexColorMod}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{GetVertexColorMod}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf GrColor}\& GrMaterialPass::GetVertexColorMod () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_d806a37ef0afb86d3e5856f4cefa89d9}
+
+
+
+
+Definition at line 155 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_ce9bd1f84b590d9916f84b123d89dbeb}{
+\index{GrMaterialPass@{GrMaterialPass}!GetWriteMask@{GetWriteMask}}
+\index{GetWriteMask@{GetWriteMask}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{GetWriteMask}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrMaterialPass::GetWriteMask () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_ce9bd1f84b590d9916f84b123d89dbeb}
+
+
+
+
+Definition at line 148 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_9ca0165a2f76e561040f97a821652a98}{
+\index{GrMaterialPass@{GrMaterialPass}!Init@{Init}}
+\index{Init@{Init}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{Init}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialPass::Init (unsigned int {\em passNumber}, \/  const {\bf SMaterialPassInfo} \& {\em passInfo})}}
+\label{class_gr_material_pass_9ca0165a2f76e561040f97a821652a98}
+
+
+
+
+Definition at line 112 of file GrMaterialPass.cpp.\hypertarget{class_gr_material_pass_ad6cbb60949c8176c9e7248f3208ee75}{
+\index{GrMaterialPass@{GrMaterialPass}!IsEnabled@{IsEnabled}}
+\index{IsEnabled@{IsEnabled}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{IsEnabled}]{\setlength{\rightskip}{0pt plus 5cm}bool GrMaterialPass::IsEnabled () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_ad6cbb60949c8176c9e7248f3208ee75}
+
+
+
+
+Definition at line 143 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_e8a92f3084a45fcd9337e2488719400d}{
+\index{GrMaterialPass@{GrMaterialPass}!IsFirstPass@{IsFirstPass}}
+\index{IsFirstPass@{IsFirstPass}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{IsFirstPass}]{\setlength{\rightskip}{0pt plus 5cm}bool GrMaterialPass::IsFirstPass () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_e8a92f3084a45fcd9337e2488719400d}
+
+
+
+
+Definition at line 144 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_ca6fb93ef3404e9aad9396cd7aecb083}{
+\index{GrMaterialPass@{GrMaterialPass}!ReceiveShadow@{ReceiveShadow}}
+\index{ReceiveShadow@{ReceiveShadow}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{ReceiveShadow}]{\setlength{\rightskip}{0pt plus 5cm}bool GrMaterialPass::ReceiveShadow () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_ca6fb93ef3404e9aad9396cd7aecb083}
+
+
+
+
+Definition at line 138 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_e274892d545d45e5b1814f3752cc9b63}{
+\index{GrMaterialPass@{GrMaterialPass}!SetAlphaTestMode@{SetAlphaTestMode}}
+\index{SetAlphaTestMode@{SetAlphaTestMode}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{SetAlphaTestMode}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialPass::SetAlphaTestMode ({\bf EGRALPHATESTMODE} {\em mode})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_e274892d545d45e5b1814f3752cc9b63}
+
+
+
+
+Definition at line 165 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_a1d660422bfd38ecb23256ca4abf1239}{
+\index{GrMaterialPass@{GrMaterialPass}!SetAlphaTestRef@{SetAlphaTestRef}}
+\index{SetAlphaTestRef@{SetAlphaTestRef}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{SetAlphaTestRef}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialPass::SetAlphaTestRef ({\bf URef}$<$ {\bf UExprTerm} $>$ {\em expr})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_a1d660422bfd38ecb23256ca4abf1239}
+
+
+
+
+Definition at line 166 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_d52b02b6e3e016f47b15fe62d834531c}{
+\index{GrMaterialPass@{GrMaterialPass}!SetAmbientBlendStates@{SetAmbientBlendStates}}
+\index{SetAmbientBlendStates@{SetAmbientBlendStates}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{SetAmbientBlendStates}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialPass::SetAmbientBlendStates (const {\bf SMaterialPassBlendStates} \& {\em states})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_d52b02b6e3e016f47b15fe62d834531c}
+
+
+
+
+Definition at line 173 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_5b1a5c20c0299b3e7eda73d377021509}{
+\index{GrMaterialPass@{GrMaterialPass}!SetAmbientShader@{SetAmbientShader}}
+\index{SetAmbientShader@{SetAmbientShader}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{SetAmbientShader}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialPass::SetAmbientShader ({\bf URef}$<$ {\bf GrShader} $>$ {\em shader})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_5b1a5c20c0299b3e7eda73d377021509}
+
+
+
+
+Definition at line 129 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_148e7583791d48dfad8a19bcbadcd8c2}{
+\index{GrMaterialPass@{GrMaterialPass}!SetCastShadow@{SetCastShadow}}
+\index{SetCastShadow@{SetCastShadow}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{SetCastShadow}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialPass::SetCastShadow (bool {\em castShadow})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_148e7583791d48dfad8a19bcbadcd8c2}
+
+
+
+
+Definition at line 140 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_9803fdd3bec657d410491f8b43a3a21e}{
+\index{GrMaterialPass@{GrMaterialPass}!SetConstDepthBias@{SetConstDepthBias}}
+\index{SetConstDepthBias@{SetConstDepthBias}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{SetConstDepthBias}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialPass::SetConstDepthBias (float {\em bias})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_9803fdd3bec657d410491f8b43a3a21e}
+
+
+
+
+Definition at line 168 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_8c69d8f73a4a4742661c28d33c62d5c5}{
+\index{GrMaterialPass@{GrMaterialPass}!SetCullMode@{SetCullMode}}
+\index{SetCullMode@{SetCullMode}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{SetCullMode}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialPass::SetCullMode ({\bf EGRCULLMODE} {\em mode})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_8c69d8f73a4a4742661c28d33c62d5c5}
+
+
+
+
+Definition at line 164 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_f2cca95d15241405447e463f271c5e50}{
+\index{GrMaterialPass@{GrMaterialPass}!SetLightBlendStates@{SetLightBlendStates}}
+\index{SetLightBlendStates@{SetLightBlendStates}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{SetLightBlendStates}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialPass::SetLightBlendStates (const {\bf SMaterialPassBlendStates} \& {\em states})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_f2cca95d15241405447e463f271c5e50}
+
+
+
+
+Definition at line 174 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_f66502995683becd9fd606d48da3a384}{
+\index{GrMaterialPass@{GrMaterialPass}!SetMaxLightResponse@{SetMaxLightResponse}}
+\index{SetMaxLightResponse@{SetMaxLightResponse}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{SetMaxLightResponse}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialPass::SetMaxLightResponse (const {\bf GrColor} \& {\em color})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_f66502995683becd9fd606d48da3a384}
+
+
+
+
+Definition at line 237 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_ddf56d1ef2931a1cded781325ddd8738}{
+\index{GrMaterialPass@{GrMaterialPass}!SetMinLightResponse@{SetMinLightResponse}}
+\index{SetMinLightResponse@{SetMinLightResponse}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{SetMinLightResponse}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialPass::SetMinLightResponse (const {\bf GrColor} \& {\em color})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_ddf56d1ef2931a1cded781325ddd8738}
+
+
+
+
+Definition at line 236 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_ed26f0584038d1f297755fbfebd6e078}{
+\index{GrMaterialPass@{GrMaterialPass}!SetPassEnable@{SetPassEnable}}
+\index{SetPassEnable@{SetPassEnable}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{SetPassEnable}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialPass::SetPassEnable ({\bf URef}$<$ {\bf UExprTerm} $>$ {\em expr})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_ed26f0584038d1f297755fbfebd6e078}
+
+
+
+
+Definition at line 169 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_c4c6bb30dab587d51b255c91f428edaa}{
+\index{GrMaterialPass@{GrMaterialPass}!SetReceiveShadow@{SetReceiveShadow}}
+\index{SetReceiveShadow@{SetReceiveShadow}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{SetReceiveShadow}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialPass::SetReceiveShadow (bool {\em receiveShadow})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_c4c6bb30dab587d51b255c91f428edaa}
+
+
+
+
+Definition at line 141 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_5931c31c1ffda6b191f09f49000f2d11}{
+\index{GrMaterialPass@{GrMaterialPass}!SetShader@{SetShader}}
+\index{SetShader@{SetShader}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{SetShader}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialPass::SetShader ({\bf URef}$<$ {\bf GrShader} $>$ {\em shader})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_5931c31c1ffda6b191f09f49000f2d11}
+
+
+
+
+Definition at line 128 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_ffa472b516c906654ce2b807fa757ba4}{
+\index{GrMaterialPass@{GrMaterialPass}!SetSlopeDepthBias@{SetSlopeDepthBias}}
+\index{SetSlopeDepthBias@{SetSlopeDepthBias}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{SetSlopeDepthBias}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialPass::SetSlopeDepthBias (float {\em bias})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_ffa472b516c906654ce2b807fa757ba4}
+
+
+
+
+Definition at line 167 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_cd2c6bf8aa2bf5e5e9cb8852d1546c04}{
+\index{GrMaterialPass@{GrMaterialPass}!SetStage@{SetStage}}
+\index{SetStage@{SetStage}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{SetStage}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialPass::SetStage ({\bf ESTAGE} {\em stage}, \/  {\bf GrTextureStage} \& {\em s})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_cd2c6bf8aa2bf5e5e9cb8852d1546c04}
+
+
+
+
+Definition at line 186 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_1aea66b8b06f6c0c5de9ec7a3e1e5f01}{
+\index{GrMaterialPass@{GrMaterialPass}!SetStageAddressMode@{SetStageAddressMode}}
+\index{SetStageAddressMode@{SetStageAddressMode}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{SetStageAddressMode}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialPass::SetStageAddressMode ({\bf ESTAGE} {\em stage}, \/  {\bf GrTextureStage::EADDRESSMODE} {\em s}, \/  {\bf GrTextureStage::EADDRESSMODE} {\em t})}}
+\label{class_gr_material_pass_1aea66b8b06f6c0c5de9ec7a3e1e5f01}
+
+
+
+
+Definition at line 180 of file GrMaterialPass.cpp.\hypertarget{class_gr_material_pass_e448ff2937e697a33893312e608efcaa}{
+\index{GrMaterialPass@{GrMaterialPass}!SetStageFilterMode@{SetStageFilterMode}}
+\index{SetStageFilterMode@{SetStageFilterMode}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{SetStageFilterMode}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialPass::SetStageFilterMode ({\bf ESTAGE} {\em stage}, \/  {\bf GrTextureStage::EFILTERMODE} {\em filterMode})}}
+\label{class_gr_material_pass_e448ff2937e697a33893312e608efcaa}
+
+
+
+
+Definition at line 187 of file GrMaterialPass.cpp.\hypertarget{class_gr_material_pass_1817af9cfe2b22d4f2bd2f28d9b946e5}{
+\index{GrMaterialPass@{GrMaterialPass}!SetStageGenTextureFlag@{SetStageGenTextureFlag}}
+\index{SetStageGenTextureFlag@{SetStageGenTextureFlag}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{SetStageGenTextureFlag}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialPass::SetStageGenTextureFlag ({\bf ESTAGE} {\em stage}, \/  {\bf GrTextureStage::GenTextureFlag} {\em flags})}}
+\label{class_gr_material_pass_1817af9cfe2b22d4f2bd2f28d9b946e5}
+
+
+
+
+Definition at line 208 of file GrMaterialPass.cpp.\hypertarget{class_gr_material_pass_af2bead7532c7701623f28c1522ec354}{
+\index{GrMaterialPass@{GrMaterialPass}!SetStageMaxAnisotropy@{SetStageMaxAnisotropy}}
+\index{SetStageMaxAnisotropy@{SetStageMaxAnisotropy}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{SetStageMaxAnisotropy}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialPass::SetStageMaxAnisotropy ({\bf ESTAGE} {\em stage}, \/  float {\em maxAnisotropy})}}
+\label{class_gr_material_pass_af2bead7532c7701623f28c1522ec354}
+
+
+
+
+Definition at line 194 of file GrMaterialPass.cpp.\hypertarget{class_gr_material_pass_911ebc1580fe6a279045dd4274d491e3}{
+\index{GrMaterialPass@{GrMaterialPass}!SetStageMipMapEnable@{SetStageMipMapEnable}}
+\index{SetStageMipMapEnable@{SetStageMipMapEnable}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{SetStageMipMapEnable}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialPass::SetStageMipMapEnable ({\bf ESTAGE} {\em stage}, \/  bool {\em mipMapEnable})}}
+\label{class_gr_material_pass_911ebc1580fe6a279045dd4274d491e3}
+
+
+
+
+Definition at line 201 of file GrMaterialPass.cpp.\hypertarget{class_gr_material_pass_ce347100ba76c2cbaadee8ee02baa4db}{
+\index{GrMaterialPass@{GrMaterialPass}!SetStageTexColorAdd@{SetStageTexColorAdd}}
+\index{SetStageTexColorAdd@{SetStageTexColorAdd}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{SetStageTexColorAdd}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialPass::SetStageTexColorAdd ({\bf ESTAGE} {\em stage}, \/  const {\bf GrColor} \& {\em color})}}
+\label{class_gr_material_pass_ce347100ba76c2cbaadee8ee02baa4db}
+
+
+
+
+Definition at line 222 of file GrMaterialPass.cpp.\hypertarget{class_gr_material_pass_92554ebb8bec4354879389bd7d225d10}{
+\index{GrMaterialPass@{GrMaterialPass}!SetStageTexColorMod@{SetStageTexColorMod}}
+\index{SetStageTexColorMod@{SetStageTexColorMod}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{SetStageTexColorMod}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialPass::SetStageTexColorMod ({\bf ESTAGE} {\em stage}, \/  const {\bf GrColor} \& {\em color})}}
+\label{class_gr_material_pass_92554ebb8bec4354879389bd7d225d10}
+
+
+
+
+Definition at line 215 of file GrMaterialPass.cpp.\hypertarget{class_gr_material_pass_4bb9f88d516c2798a43b068400212ded}{
+\index{GrMaterialPass@{GrMaterialPass}!SetStageTexture@{SetStageTexture}}
+\index{SetStageTexture@{SetStageTexture}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{SetStageTexture}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialPass::SetStageTexture ({\bf ESTAGE} {\em stage}, \/  {\bf URef}$<$ {\bf GrTextureBase} $>$ {\em texture})}}
+\label{class_gr_material_pass_4bb9f88d516c2798a43b068400212ded}
+
+
+
+
+Definition at line 173 of file GrMaterialPass.cpp.\hypertarget{class_gr_material_pass_c0406c4ebc750d788d1d0c13f10e9203}{
+\index{GrMaterialPass@{GrMaterialPass}!SetStates@{SetStates}}
+\index{SetStates@{SetStates}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{SetStates}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialPass::SetStates (unsigned int {\em states})}}
+\label{class_gr_material_pass_c0406c4ebc750d788d1d0c13f10e9203}
+
+
+
+
+Definition at line 229 of file GrMaterialPass.cpp.\hypertarget{class_gr_material_pass_a9ad26db402f4f8e52caf3feb36b4749}{
+\index{GrMaterialPass@{GrMaterialPass}!SetTextureRotate@{SetTextureRotate}}
+\index{SetTextureRotate@{SetTextureRotate}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{SetTextureRotate}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialPass::SetTextureRotate ({\bf URef}$<$ {\bf UExprTerm} $>$ {\em rotate})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_a9ad26db402f4f8e52caf3feb36b4749}
+
+
+
+
+Definition at line 193 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_6132f67504d434010d20fefee1a1a512}{
+\index{GrMaterialPass@{GrMaterialPass}!SetTextureRotateCenterS@{SetTextureRotateCenterS}}
+\index{SetTextureRotateCenterS@{SetTextureRotateCenterS}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{SetTextureRotateCenterS}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialPass::SetTextureRotateCenterS ({\bf URef}$<$ {\bf UExprTerm} $>$ {\em rotate})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_6132f67504d434010d20fefee1a1a512}
+
+
+
+
+Definition at line 194 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_8f15d8d892cf78090d9a214d13f4ba83}{
+\index{GrMaterialPass@{GrMaterialPass}!SetTextureRotateCenterT@{SetTextureRotateCenterT}}
+\index{SetTextureRotateCenterT@{SetTextureRotateCenterT}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{SetTextureRotateCenterT}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialPass::SetTextureRotateCenterT ({\bf URef}$<$ {\bf UExprTerm} $>$ {\em rotate})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_8f15d8d892cf78090d9a214d13f4ba83}
+
+
+
+
+Definition at line 195 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_a1a69dfaf67a8d54d6874e345398fda4}{
+\index{GrMaterialPass@{GrMaterialPass}!SetTextureScaleS@{SetTextureScaleS}}
+\index{SetTextureScaleS@{SetTextureScaleS}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{SetTextureScaleS}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialPass::SetTextureScaleS ({\bf URef}$<$ {\bf UExprTerm} $>$ {\em scale})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_a1a69dfaf67a8d54d6874e345398fda4}
+
+
+
+
+Definition at line 191 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_d3e27ebf2fdecfcb84127dc777b41f71}{
+\index{GrMaterialPass@{GrMaterialPass}!SetTextureScaleT@{SetTextureScaleT}}
+\index{SetTextureScaleT@{SetTextureScaleT}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{SetTextureScaleT}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialPass::SetTextureScaleT ({\bf URef}$<$ {\bf UExprTerm} $>$ {\em scale})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_d3e27ebf2fdecfcb84127dc777b41f71}
+
+
+
+
+Definition at line 192 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_ae8284d3de34bd6668950b6b1fdeabdb}{
+\index{GrMaterialPass@{GrMaterialPass}!SetTextureSet@{SetTextureSet}}
+\index{SetTextureSet@{SetTextureSet}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{SetTextureSet}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialPass::SetTextureSet (const {\bf GrTextureSet} \& {\em textures})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_ae8284d3de34bd6668950b6b1fdeabdb}
+
+
+
+
+Definition at line 189 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_3cc6f6c62fe2f2e23a24069c20e5941c}{
+\index{GrMaterialPass@{GrMaterialPass}!SetTextureTranslateS@{SetTextureTranslateS}}
+\index{SetTextureTranslateS@{SetTextureTranslateS}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{SetTextureTranslateS}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialPass::SetTextureTranslateS ({\bf URef}$<$ {\bf UExprTerm} $>$ {\em translate})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_3cc6f6c62fe2f2e23a24069c20e5941c}
+
+
+
+
+Definition at line 196 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_b53e9d97ea01a7b4de5cd8c47d14235e}{
+\index{GrMaterialPass@{GrMaterialPass}!SetTextureTranslateT@{SetTextureTranslateT}}
+\index{SetTextureTranslateT@{SetTextureTranslateT}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{SetTextureTranslateT}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialPass::SetTextureTranslateT ({\bf URef}$<$ {\bf UExprTerm} $>$ {\em translate})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_b53e9d97ea01a7b4de5cd8c47d14235e}
+
+
+
+
+Definition at line 197 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_e06601541c21e3d6669d5df0e82c57a1}{
+\index{GrMaterialPass@{GrMaterialPass}!SetVertexColorAdd@{SetVertexColorAdd}}
+\index{SetVertexColorAdd@{SetVertexColorAdd}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{SetVertexColorAdd}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialPass::SetVertexColorAdd (const {\bf GrColor} \& {\em color})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_e06601541c21e3d6669d5df0e82c57a1}
+
+
+
+
+Definition at line 171 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_3d22971b4cf68d16b982992fcb0a646a}{
+\index{GrMaterialPass@{GrMaterialPass}!SetVertexColorMod@{SetVertexColorMod}}
+\index{SetVertexColorMod@{SetVertexColorMod}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{SetVertexColorMod}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialPass::SetVertexColorMod (const {\bf GrColor} \& {\em color})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_3d22971b4cf68d16b982992fcb0a646a}
+
+
+
+
+Definition at line 170 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_d4b4e6721ac85e8e66526390f0c08142}{
+\index{GrMaterialPass@{GrMaterialPass}!SetWriteMask@{SetWriteMask}}
+\index{SetWriteMask@{SetWriteMask}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{SetWriteMask}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialPass::SetWriteMask (unsigned int {\em mask})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_material_pass_d4b4e6721ac85e8e66526390f0c08142}
+
+
+
+
+Definition at line 163 of file GrMaterialPass.h.\hypertarget{class_gr_material_pass_461a5f3b7e2ffc51491914ed6bd9654c}{
+\index{GrMaterialPass@{GrMaterialPass}!Update@{Update}}
+\index{Update@{Update}!GrMaterialPass@{GrMaterialPass}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void GrMaterialPass::Update ()}}
+\label{class_gr_material_pass_461a5f3b7e2ffc51491914ed6bd9654c}
+
+
+
+
+Definition at line 239 of file GrMaterialPass.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_material_pass_8h}{GrMaterialPass.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_material_pass_8cpp}{GrMaterialPass.cpp}\end{CompactItemize}

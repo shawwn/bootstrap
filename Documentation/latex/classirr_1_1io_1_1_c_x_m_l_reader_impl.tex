@@ -1,0 +1,307 @@
+\hypertarget{classirr_1_1io_1_1_c_x_m_l_reader_impl}{
+\section{irr::io::CXMLReaderImpl$<$ char\_\-type, superclass $>$ Class Template Reference}
+\label{classirr_1_1io_1_1_c_x_m_l_reader_impl}\index{irr::io::CXMLReaderImpl@{irr::io::CXMLReaderImpl}}
+}
+implementation of the IrrXMLReader  
+
+
+{\tt \#include $<$CXMLReaderImpl.h$>$}
+
+Inheritance diagram for irr::io::CXMLReaderImpl$<$ char\_\-type, superclass $>$::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classirr_1_1io_1_1_c_x_m_l_reader_impl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+struct \textbf{SAttribute}
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{classirr_1_1io_1_1_c_x_m_l_reader_impl_0566f930b8accdcdd4714f4b850f8a76}{CXMLReaderImpl} (\hyperlink{classirr_1_1io_1_1_i_file_read_call_back}{IFileReadCallBack} $\ast$callback, bool deleteCallBack=true)
+\begin{CompactList}\small\item\em Constructor. \item\end{CompactList}\item 
+virtual \hyperlink{classirr_1_1io_1_1_c_x_m_l_reader_impl_5306b209d836775bc2c5c286314c7e20}{$\sim$CXMLReaderImpl} ()
+\begin{CompactList}\small\item\em Destructor. \item\end{CompactList}\item 
+virtual bool \hyperlink{classirr_1_1io_1_1_c_x_m_l_reader_impl_bc3c451a40c816ce74c846ebc2e71417}{read} ()
+\item 
+virtual \hyperlink{namespaceirr_1_1io_86a02676c9cbb822e04d60c81b4f33ed}{EXML\_\-NODE} \hyperlink{classirr_1_1io_1_1_c_x_m_l_reader_impl_307110843c6946fa862da1f46244aecd}{getNodeType} () const 
+\begin{CompactList}\small\item\em Returns the type of the current XML node. \item\end{CompactList}\item 
+virtual int \hyperlink{classirr_1_1io_1_1_c_x_m_l_reader_impl_0e8003aa93f362dd118c735d8a98e8d5}{getAttributeCount} () const 
+\begin{CompactList}\small\item\em Returns attribute count of the current XML node. \item\end{CompactList}\item 
+virtual const char\_\-type $\ast$ \hyperlink{classirr_1_1io_1_1_c_x_m_l_reader_impl_fc1f65d70219634fc005a6048f898fb3}{getAttributeName} (int idx) const 
+\begin{CompactList}\small\item\em Returns name of an attribute. \item\end{CompactList}\item 
+virtual const char\_\-type $\ast$ \hyperlink{classirr_1_1io_1_1_c_x_m_l_reader_impl_55bc001ac65fa308a04b65bc1529aa4b}{getAttributeValue} (int idx) const 
+\begin{CompactList}\small\item\em Returns the value of an attribute. \item\end{CompactList}\item 
+virtual const char\_\-type $\ast$ \hyperlink{classirr_1_1io_1_1_c_x_m_l_reader_impl_7252bf5d02f9cc05ade31e658502116a}{getAttributeValue} (const char\_\-type $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}) const 
+\begin{CompactList}\small\item\em Returns the value of an attribute. \item\end{CompactList}\item 
+virtual const char\_\-type $\ast$ \hyperlink{classirr_1_1io_1_1_c_x_m_l_reader_impl_f8ff476656b98b9f491b453c8093b77b}{getAttributeValueSafe} (const char\_\-type $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}) const 
+\begin{CompactList}\small\item\em Returns the value of an attribute. \item\end{CompactList}\item 
+int \hyperlink{classirr_1_1io_1_1_c_x_m_l_reader_impl_5d532267e6e4ac8fcb402671842c32c9}{getAttributeValueAsInt} (const char\_\-type $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}) const 
+\begin{CompactList}\small\item\em Returns the value of an attribute as integer. \item\end{CompactList}\item 
+int \hyperlink{classirr_1_1io_1_1_c_x_m_l_reader_impl_8c8cf8e6560299e3315cd1a75477bd53}{getAttributeValueAsInt} (int idx) const 
+\begin{CompactList}\small\item\em Returns the value of an attribute as integer. \item\end{CompactList}\item 
+float \hyperlink{classirr_1_1io_1_1_c_x_m_l_reader_impl_89fb9f69bba65c76e23d6519bcb5df7d}{getAttributeValueAsFloat} (const char\_\-type $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}) const 
+\begin{CompactList}\small\item\em Returns the value of an attribute as float. \item\end{CompactList}\item 
+float \hyperlink{classirr_1_1io_1_1_c_x_m_l_reader_impl_14d3f55dd2260b970525336713b8270e}{getAttributeValueAsFloat} (int idx) const 
+\begin{CompactList}\small\item\em Returns the value of an attribute as float. \item\end{CompactList}\item 
+virtual const char\_\-type $\ast$ \hyperlink{classirr_1_1io_1_1_c_x_m_l_reader_impl_30ddc03ee634ed0dbeef25547677f2da}{getNodeName} () const 
+\begin{CompactList}\small\item\em Returns the name of the current node. \item\end{CompactList}\item 
+virtual const char\_\-type $\ast$ \hyperlink{classirr_1_1io_1_1_c_x_m_l_reader_impl_c661ef32418a004c1ec3b6e02c9615df}{getNodeData} () const 
+\begin{CompactList}\small\item\em Returns data of the current node. \item\end{CompactList}\item 
+virtual bool \hyperlink{classirr_1_1io_1_1_c_x_m_l_reader_impl_17154683d277084155fe6c5556cc0672}{isEmptyElement} () const 
+\begin{CompactList}\small\item\em Returns if an element is an empty element, like $<$foo$>$. \item\end{CompactList}\item 
+virtual \hyperlink{namespaceirr_1_1io_c7e51e5a6bd00451dec248f497b16a9d}{ETEXT\_\-FORMAT} \hyperlink{classirr_1_1io_1_1_c_x_m_l_reader_impl_0947ce3e44eb7c324ff1bdb430dedfa8}{getSourceFormat} () const 
+\begin{CompactList}\small\item\em Returns format of the source xml file. \item\end{CompactList}\item 
+virtual \hyperlink{namespaceirr_1_1io_c7e51e5a6bd00451dec248f497b16a9d}{ETEXT\_\-FORMAT} \hyperlink{classirr_1_1io_1_1_c_x_m_l_reader_impl_dc53297eecc7760721a6bd4d3875c12b}{getParserFormat} () const 
+\begin{CompactList}\small\item\em Returns format of the strings returned by the parser. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class char\_\-type, class superclass$>$ class irr::io::CXMLReaderImpl$<$ char\_\-type, superclass $>$}
+
+implementation of the IrrXMLReader 
+
+Definition at line 28 of file CXMLReaderImpl.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classirr_1_1io_1_1_c_x_m_l_reader_impl_0566f930b8accdcdd4714f4b850f8a76}{
+\index{irr::io::CXMLReaderImpl@{irr::io::CXMLReaderImpl}!CXMLReaderImpl@{CXMLReaderImpl}}
+\index{CXMLReaderImpl@{CXMLReaderImpl}!irr::io::CXMLReaderImpl@{irr::io::CXMLReaderImpl}}
+\subsubsection[{CXMLReaderImpl}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class char\_\-type, class superclass$>$ {\bf irr::io::CXMLReaderImpl}$<$ char\_\-type, {\bf superclass} $>$::{\bf CXMLReaderImpl} ({\bf IFileReadCallBack} $\ast$ {\em callback}, \/  bool {\em deleteCallBack} = {\tt true})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1io_1_1_c_x_m_l_reader_impl_0566f930b8accdcdd4714f4b850f8a76}
+
+
+Constructor. 
+
+
+
+Definition at line 33 of file CXMLReaderImpl.h.\hypertarget{classirr_1_1io_1_1_c_x_m_l_reader_impl_5306b209d836775bc2c5c286314c7e20}{
+\index{irr::io::CXMLReaderImpl@{irr::io::CXMLReaderImpl}!$\sim$CXMLReaderImpl@{$\sim$CXMLReaderImpl}}
+\index{$\sim$CXMLReaderImpl@{$\sim$CXMLReaderImpl}!irr::io::CXMLReaderImpl@{irr::io::CXMLReaderImpl}}
+\subsubsection[{$\sim$CXMLReaderImpl}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class char\_\-type, class superclass$>$ virtual {\bf irr::io::CXMLReaderImpl}$<$ char\_\-type, {\bf superclass} $>$::$\sim${\bf CXMLReaderImpl} ()\hspace{0.3cm}{\tt  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classirr_1_1io_1_1_c_x_m_l_reader_impl_5306b209d836775bc2c5c286314c7e20}
+
+
+Destructor. 
+
+
+
+Definition at line 61 of file CXMLReaderImpl.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{classirr_1_1io_1_1_c_x_m_l_reader_impl_0e8003aa93f362dd118c735d8a98e8d5}{
+\index{irr::io::CXMLReaderImpl@{irr::io::CXMLReaderImpl}!getAttributeCount@{getAttributeCount}}
+\index{getAttributeCount@{getAttributeCount}!irr::io::CXMLReaderImpl@{irr::io::CXMLReaderImpl}}
+\subsubsection[{getAttributeCount}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class char\_\-type, class superclass$>$ virtual int {\bf irr::io::CXMLReaderImpl}$<$ char\_\-type, {\bf superclass} $>$::getAttributeCount () const\hspace{0.3cm}{\tt  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classirr_1_1io_1_1_c_x_m_l_reader_impl_0e8003aa93f362dd118c735d8a98e8d5}
+
+
+Returns attribute count of the current XML node. 
+
+
+
+Implements \hyperlink{classirr_1_1io_1_1_i_irr_x_m_l_reader_eaa1cfc860be7b788f78edec403cc2a2}{irr::io::IIrrXMLReader$<$ char\_\-type, superclass $>$}.
+
+Definition at line 91 of file CXMLReaderImpl.h.\hypertarget{classirr_1_1io_1_1_c_x_m_l_reader_impl_fc1f65d70219634fc005a6048f898fb3}{
+\index{irr::io::CXMLReaderImpl@{irr::io::CXMLReaderImpl}!getAttributeName@{getAttributeName}}
+\index{getAttributeName@{getAttributeName}!irr::io::CXMLReaderImpl@{irr::io::CXMLReaderImpl}}
+\subsubsection[{getAttributeName}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class char\_\-type, class superclass$>$ virtual const char\_\-type$\ast$ {\bf irr::io::CXMLReaderImpl}$<$ char\_\-type, {\bf superclass} $>$::getAttributeName (int {\em idx}) const\hspace{0.3cm}{\tt  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classirr_1_1io_1_1_c_x_m_l_reader_impl_fc1f65d70219634fc005a6048f898fb3}
+
+
+Returns name of an attribute. 
+
+
+
+Implements \hyperlink{classirr_1_1io_1_1_i_irr_x_m_l_reader_a0807dc565c67fcf355e656df1a326ef}{irr::io::IIrrXMLReader$<$ char\_\-type, superclass $>$}.
+
+Definition at line 98 of file CXMLReaderImpl.h.\hypertarget{classirr_1_1io_1_1_c_x_m_l_reader_impl_7252bf5d02f9cc05ade31e658502116a}{
+\index{irr::io::CXMLReaderImpl@{irr::io::CXMLReaderImpl}!getAttributeValue@{getAttributeValue}}
+\index{getAttributeValue@{getAttributeValue}!irr::io::CXMLReaderImpl@{irr::io::CXMLReaderImpl}}
+\subsubsection[{getAttributeValue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class char\_\-type, class superclass$>$ virtual const char\_\-type$\ast$ {\bf irr::io::CXMLReaderImpl}$<$ char\_\-type, {\bf superclass} $>$::getAttributeValue (const char\_\-type $\ast$ {\em name}) const\hspace{0.3cm}{\tt  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classirr_1_1io_1_1_c_x_m_l_reader_impl_7252bf5d02f9cc05ade31e658502116a}
+
+
+Returns the value of an attribute. 
+
+
+
+Implements \hyperlink{classirr_1_1io_1_1_i_irr_x_m_l_reader_daac9a49b396e7fc2d335335f36391a9}{irr::io::IIrrXMLReader$<$ char\_\-type, superclass $>$}.
+
+Definition at line 118 of file CXMLReaderImpl.h.\hypertarget{classirr_1_1io_1_1_c_x_m_l_reader_impl_55bc001ac65fa308a04b65bc1529aa4b}{
+\index{irr::io::CXMLReaderImpl@{irr::io::CXMLReaderImpl}!getAttributeValue@{getAttributeValue}}
+\index{getAttributeValue@{getAttributeValue}!irr::io::CXMLReaderImpl@{irr::io::CXMLReaderImpl}}
+\subsubsection[{getAttributeValue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class char\_\-type, class superclass$>$ virtual const char\_\-type$\ast$ {\bf irr::io::CXMLReaderImpl}$<$ char\_\-type, {\bf superclass} $>$::getAttributeValue (int {\em idx}) const\hspace{0.3cm}{\tt  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classirr_1_1io_1_1_c_x_m_l_reader_impl_55bc001ac65fa308a04b65bc1529aa4b}
+
+
+Returns the value of an attribute. 
+
+
+
+Implements \hyperlink{classirr_1_1io_1_1_i_irr_x_m_l_reader_41bd71a1b9d4a80cd1d0257dedb35325}{irr::io::IIrrXMLReader$<$ char\_\-type, superclass $>$}.
+
+Definition at line 108 of file CXMLReaderImpl.h.\hypertarget{classirr_1_1io_1_1_c_x_m_l_reader_impl_14d3f55dd2260b970525336713b8270e}{
+\index{irr::io::CXMLReaderImpl@{irr::io::CXMLReaderImpl}!getAttributeValueAsFloat@{getAttributeValueAsFloat}}
+\index{getAttributeValueAsFloat@{getAttributeValueAsFloat}!irr::io::CXMLReaderImpl@{irr::io::CXMLReaderImpl}}
+\subsubsection[{getAttributeValueAsFloat}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class char\_\-type, class superclass$>$ float {\bf irr::io::CXMLReaderImpl}$<$ char\_\-type, {\bf superclass} $>$::getAttributeValueAsFloat (int {\em idx}) const\hspace{0.3cm}{\tt  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classirr_1_1io_1_1_c_x_m_l_reader_impl_14d3f55dd2260b970525336713b8270e}
+
+
+Returns the value of an attribute as float. 
+
+
+
+Implements \hyperlink{classirr_1_1io_1_1_i_irr_x_m_l_reader_3a01b3cec9db01d00928074846d39add}{irr::io::IIrrXMLReader$<$ char\_\-type, superclass $>$}.
+
+Definition at line 167 of file CXMLReaderImpl.h.\hypertarget{classirr_1_1io_1_1_c_x_m_l_reader_impl_89fb9f69bba65c76e23d6519bcb5df7d}{
+\index{irr::io::CXMLReaderImpl@{irr::io::CXMLReaderImpl}!getAttributeValueAsFloat@{getAttributeValueAsFloat}}
+\index{getAttributeValueAsFloat@{getAttributeValueAsFloat}!irr::io::CXMLReaderImpl@{irr::io::CXMLReaderImpl}}
+\subsubsection[{getAttributeValueAsFloat}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class char\_\-type, class superclass$>$ float {\bf irr::io::CXMLReaderImpl}$<$ char\_\-type, {\bf superclass} $>$::getAttributeValueAsFloat (const char\_\-type $\ast$ {\em name}) const\hspace{0.3cm}{\tt  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classirr_1_1io_1_1_c_x_m_l_reader_impl_89fb9f69bba65c76e23d6519bcb5df7d}
+
+
+Returns the value of an attribute as float. 
+
+
+
+Implements \hyperlink{classirr_1_1io_1_1_i_irr_x_m_l_reader_2b1032f213e9910827842f6057269235}{irr::io::IIrrXMLReader$<$ char\_\-type, superclass $>$}.
+
+Definition at line 155 of file CXMLReaderImpl.h.\hypertarget{classirr_1_1io_1_1_c_x_m_l_reader_impl_8c8cf8e6560299e3315cd1a75477bd53}{
+\index{irr::io::CXMLReaderImpl@{irr::io::CXMLReaderImpl}!getAttributeValueAsInt@{getAttributeValueAsInt}}
+\index{getAttributeValueAsInt@{getAttributeValueAsInt}!irr::io::CXMLReaderImpl@{irr::io::CXMLReaderImpl}}
+\subsubsection[{getAttributeValueAsInt}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class char\_\-type, class superclass$>$ int {\bf irr::io::CXMLReaderImpl}$<$ char\_\-type, {\bf superclass} $>$::getAttributeValueAsInt (int {\em idx}) const\hspace{0.3cm}{\tt  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classirr_1_1io_1_1_c_x_m_l_reader_impl_8c8cf8e6560299e3315cd1a75477bd53}
+
+
+Returns the value of an attribute as integer. 
+
+
+
+Implements \hyperlink{classirr_1_1io_1_1_i_irr_x_m_l_reader_8f2d57c9f358b9683fb177f440661426}{irr::io::IIrrXMLReader$<$ char\_\-type, superclass $>$}.
+
+Definition at line 148 of file CXMLReaderImpl.h.\hypertarget{classirr_1_1io_1_1_c_x_m_l_reader_impl_5d532267e6e4ac8fcb402671842c32c9}{
+\index{irr::io::CXMLReaderImpl@{irr::io::CXMLReaderImpl}!getAttributeValueAsInt@{getAttributeValueAsInt}}
+\index{getAttributeValueAsInt@{getAttributeValueAsInt}!irr::io::CXMLReaderImpl@{irr::io::CXMLReaderImpl}}
+\subsubsection[{getAttributeValueAsInt}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class char\_\-type, class superclass$>$ int {\bf irr::io::CXMLReaderImpl}$<$ char\_\-type, {\bf superclass} $>$::getAttributeValueAsInt (const char\_\-type $\ast$ {\em name}) const\hspace{0.3cm}{\tt  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classirr_1_1io_1_1_c_x_m_l_reader_impl_5d532267e6e4ac8fcb402671842c32c9}
+
+
+Returns the value of an attribute as integer. 
+
+
+
+Implements \hyperlink{classirr_1_1io_1_1_i_irr_x_m_l_reader_b37bef58865355a7dba0011a38e6c8e7}{irr::io::IIrrXMLReader$<$ char\_\-type, superclass $>$}.
+
+Definition at line 141 of file CXMLReaderImpl.h.\hypertarget{classirr_1_1io_1_1_c_x_m_l_reader_impl_f8ff476656b98b9f491b453c8093b77b}{
+\index{irr::io::CXMLReaderImpl@{irr::io::CXMLReaderImpl}!getAttributeValueSafe@{getAttributeValueSafe}}
+\index{getAttributeValueSafe@{getAttributeValueSafe}!irr::io::CXMLReaderImpl@{irr::io::CXMLReaderImpl}}
+\subsubsection[{getAttributeValueSafe}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class char\_\-type, class superclass$>$ virtual const char\_\-type$\ast$ {\bf irr::io::CXMLReaderImpl}$<$ char\_\-type, {\bf superclass} $>$::getAttributeValueSafe (const char\_\-type $\ast$ {\em name}) const\hspace{0.3cm}{\tt  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classirr_1_1io_1_1_c_x_m_l_reader_impl_f8ff476656b98b9f491b453c8093b77b}
+
+
+Returns the value of an attribute. 
+
+
+
+Implements \hyperlink{classirr_1_1io_1_1_i_irr_x_m_l_reader_7674852b2e24b2710b90aab10ef1fc22}{irr::io::IIrrXMLReader$<$ char\_\-type, superclass $>$}.
+
+Definition at line 129 of file CXMLReaderImpl.h.\hypertarget{classirr_1_1io_1_1_c_x_m_l_reader_impl_c661ef32418a004c1ec3b6e02c9615df}{
+\index{irr::io::CXMLReaderImpl@{irr::io::CXMLReaderImpl}!getNodeData@{getNodeData}}
+\index{getNodeData@{getNodeData}!irr::io::CXMLReaderImpl@{irr::io::CXMLReaderImpl}}
+\subsubsection[{getNodeData}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class char\_\-type, class superclass$>$ virtual const char\_\-type$\ast$ {\bf irr::io::CXMLReaderImpl}$<$ char\_\-type, {\bf superclass} $>$::getNodeData () const\hspace{0.3cm}{\tt  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classirr_1_1io_1_1_c_x_m_l_reader_impl_c661ef32418a004c1ec3b6e02c9615df}
+
+
+Returns data of the current node. 
+
+
+
+Implements \hyperlink{classirr_1_1io_1_1_i_irr_x_m_l_reader_ecbe0698e8f9acf88e27dd53da984210}{irr::io::IIrrXMLReader$<$ char\_\-type, superclass $>$}.
+
+Definition at line 186 of file CXMLReaderImpl.h.\hypertarget{classirr_1_1io_1_1_c_x_m_l_reader_impl_30ddc03ee634ed0dbeef25547677f2da}{
+\index{irr::io::CXMLReaderImpl@{irr::io::CXMLReaderImpl}!getNodeName@{getNodeName}}
+\index{getNodeName@{getNodeName}!irr::io::CXMLReaderImpl@{irr::io::CXMLReaderImpl}}
+\subsubsection[{getNodeName}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class char\_\-type, class superclass$>$ virtual const char\_\-type$\ast$ {\bf irr::io::CXMLReaderImpl}$<$ char\_\-type, {\bf superclass} $>$::getNodeName () const\hspace{0.3cm}{\tt  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classirr_1_1io_1_1_c_x_m_l_reader_impl_30ddc03ee634ed0dbeef25547677f2da}
+
+
+Returns the name of the current node. 
+
+
+
+Implements \hyperlink{classirr_1_1io_1_1_i_irr_x_m_l_reader_7d745b130c895d0f910f191d04e20e87}{irr::io::IIrrXMLReader$<$ char\_\-type, superclass $>$}.
+
+Definition at line 179 of file CXMLReaderImpl.h.\hypertarget{classirr_1_1io_1_1_c_x_m_l_reader_impl_307110843c6946fa862da1f46244aecd}{
+\index{irr::io::CXMLReaderImpl@{irr::io::CXMLReaderImpl}!getNodeType@{getNodeType}}
+\index{getNodeType@{getNodeType}!irr::io::CXMLReaderImpl@{irr::io::CXMLReaderImpl}}
+\subsubsection[{getNodeType}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class char\_\-type, class superclass$>$ virtual {\bf EXML\_\-NODE} {\bf irr::io::CXMLReaderImpl}$<$ char\_\-type, {\bf superclass} $>$::getNodeType () const\hspace{0.3cm}{\tt  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classirr_1_1io_1_1_c_x_m_l_reader_impl_307110843c6946fa862da1f46244aecd}
+
+
+Returns the type of the current XML node. 
+
+
+
+Implements \hyperlink{classirr_1_1io_1_1_i_irr_x_m_l_reader_3482e8e6bdc15965fc6a0bcef6e9a8e0}{irr::io::IIrrXMLReader$<$ char\_\-type, superclass $>$}.
+
+Definition at line 84 of file CXMLReaderImpl.h.\hypertarget{classirr_1_1io_1_1_c_x_m_l_reader_impl_dc53297eecc7760721a6bd4d3875c12b}{
+\index{irr::io::CXMLReaderImpl@{irr::io::CXMLReaderImpl}!getParserFormat@{getParserFormat}}
+\index{getParserFormat@{getParserFormat}!irr::io::CXMLReaderImpl@{irr::io::CXMLReaderImpl}}
+\subsubsection[{getParserFormat}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class char\_\-type, class superclass$>$ virtual {\bf ETEXT\_\-FORMAT} {\bf irr::io::CXMLReaderImpl}$<$ char\_\-type, {\bf superclass} $>$::getParserFormat () const\hspace{0.3cm}{\tt  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classirr_1_1io_1_1_c_x_m_l_reader_impl_dc53297eecc7760721a6bd4d3875c12b}
+
+
+Returns format of the strings returned by the parser. 
+
+
+
+Implements \hyperlink{classirr_1_1io_1_1_i_irr_x_m_l_reader_9af7e323c292a4836bf4a7c093b4d85a}{irr::io::IIrrXMLReader$<$ char\_\-type, superclass $>$}.
+
+Definition at line 205 of file CXMLReaderImpl.h.\hypertarget{classirr_1_1io_1_1_c_x_m_l_reader_impl_0947ce3e44eb7c324ff1bdb430dedfa8}{
+\index{irr::io::CXMLReaderImpl@{irr::io::CXMLReaderImpl}!getSourceFormat@{getSourceFormat}}
+\index{getSourceFormat@{getSourceFormat}!irr::io::CXMLReaderImpl@{irr::io::CXMLReaderImpl}}
+\subsubsection[{getSourceFormat}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class char\_\-type, class superclass$>$ virtual {\bf ETEXT\_\-FORMAT} {\bf irr::io::CXMLReaderImpl}$<$ char\_\-type, {\bf superclass} $>$::getSourceFormat () const\hspace{0.3cm}{\tt  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classirr_1_1io_1_1_c_x_m_l_reader_impl_0947ce3e44eb7c324ff1bdb430dedfa8}
+
+
+Returns format of the source xml file. 
+
+
+
+Implements \hyperlink{classirr_1_1io_1_1_i_irr_x_m_l_reader_00998ef2d3a562d6b2b8302c3430322d}{irr::io::IIrrXMLReader$<$ char\_\-type, superclass $>$}.
+
+Definition at line 199 of file CXMLReaderImpl.h.\hypertarget{classirr_1_1io_1_1_c_x_m_l_reader_impl_17154683d277084155fe6c5556cc0672}{
+\index{irr::io::CXMLReaderImpl@{irr::io::CXMLReaderImpl}!isEmptyElement@{isEmptyElement}}
+\index{isEmptyElement@{isEmptyElement}!irr::io::CXMLReaderImpl@{irr::io::CXMLReaderImpl}}
+\subsubsection[{isEmptyElement}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class char\_\-type, class superclass$>$ virtual bool {\bf irr::io::CXMLReaderImpl}$<$ char\_\-type, {\bf superclass} $>$::isEmptyElement () const\hspace{0.3cm}{\tt  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classirr_1_1io_1_1_c_x_m_l_reader_impl_17154683d277084155fe6c5556cc0672}
+
+
+Returns if an element is an empty element, like $<$foo$>$. 
+
+
+
+Implements \hyperlink{classirr_1_1io_1_1_i_irr_x_m_l_reader_3c85b144e0376c9ff90bce1bbbc338a9}{irr::io::IIrrXMLReader$<$ char\_\-type, superclass $>$}.
+
+Definition at line 193 of file CXMLReaderImpl.h.\hypertarget{classirr_1_1io_1_1_c_x_m_l_reader_impl_bc3c451a40c816ce74c846ebc2e71417}{
+\index{irr::io::CXMLReaderImpl@{irr::io::CXMLReaderImpl}!read@{read}}
+\index{read@{read}!irr::io::CXMLReaderImpl@{irr::io::CXMLReaderImpl}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class char\_\-type, class superclass$>$ virtual bool {\bf irr::io::CXMLReaderImpl}$<$ char\_\-type, {\bf superclass} $>$::read ()\hspace{0.3cm}{\tt  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classirr_1_1io_1_1_c_x_m_l_reader_impl_bc3c451a40c816ce74c846ebc2e71417}
+
+
+Reads forward to the next xml node. \begin{Desc}
+\item[Returns:]Returns false, if there was no further node. \end{Desc}
+
+
+Implements \hyperlink{classirr_1_1io_1_1_i_irr_x_m_l_reader_157f458f7dabeeff173f72a0fb443a8e}{irr::io::IIrrXMLReader$<$ char\_\-type, superclass $>$}.
+
+Definition at line 69 of file CXMLReaderImpl.h.
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Common/IrrXML/\hyperlink{_c_x_m_l_reader_impl_8h}{CXMLReaderImpl.h}\end{CompactItemize}

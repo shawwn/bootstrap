@@ -1,0 +1,101 @@
+\hypertarget{class_gr_virtual_shadow_page}{
+\section{GrVirtualShadowPage Class Reference}
+\label{class_gr_virtual_shadow_page}\index{GrVirtualShadowPage@{GrVirtualShadowPage}}
+}
+{\tt \#include $<$GrVirtualShadowPage.h$>$}
+
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+struct \textbf{SAABox2D}
+\item 
+struct \hyperlink{struct_gr_virtual_shadow_page_1_1_s_render_data}{SRenderData}
+\item 
+struct \hyperlink{struct_gr_virtual_shadow_page_1_1_s_shadow_info}{SShadowInfo}
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_virtual_shadow_page_10dc766d8a8b6c912b39e60893bdfae8}{GrVirtualShadowPage} (unsigned int shadowPageSize, unsigned int shadowMapSize, unsigned int indirTexSize)
+\item 
+\hyperlink{class_gr_virtual_shadow_page_6b13a721bc654d712d0159332f668166}{$\sim$GrVirtualShadowPage} ()
+\item 
+void \hyperlink{class_gr_virtual_shadow_page_47d88b2d5752b7a1e2f38d14d5df538d}{GenShadowInfo} (std::vector$<$ \hyperlink{struct_gr_virtual_shadow_page_1_1_s_shadow_info}{SShadowInfo} $>$ \&shadows, const \hyperlink{class_gr_camera}{GrCamera} \&viewerCamera, \hyperlink{class_gr_virtual_shadow_segment_set}{GrVirtualShadowSegmentSet} \&segments, const \hyperlink{class_gr_light}{GrLight} \&light)
+\item 
+void \hyperlink{class_gr_virtual_shadow_page_e438a2c1b4140e1c7a12b1c1628d2040}{SetActiveShadowMap} (const \hyperlink{struct_gr_virtual_shadow_page_1_1_s_shadow_info}{SShadowInfo} \&shadowMapInfo)
+\item 
+const \hyperlink{struct_gr_virtual_shadow_page_1_1_s_render_data}{SRenderData} \& \hyperlink{class_gr_virtual_shadow_page_6fe56d04431ca8c88be756ff92d98e09}{Finish} ()
+\item 
+const \hyperlink{struct_gr_virtual_shadow_page_1_1_s_render_data}{SRenderData} \& \hyperlink{class_gr_virtual_shadow_page_23f6fa9b0a66272dcc951413faafaf09}{GetNoShadowData} () const 
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 31 of file GrVirtualShadowPage.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_virtual_shadow_page_10dc766d8a8b6c912b39e60893bdfae8}{
+\index{GrVirtualShadowPage@{GrVirtualShadowPage}!GrVirtualShadowPage@{GrVirtualShadowPage}}
+\index{GrVirtualShadowPage@{GrVirtualShadowPage}!GrVirtualShadowPage@{GrVirtualShadowPage}}
+\subsubsection[{GrVirtualShadowPage}]{\setlength{\rightskip}{0pt plus 5cm}GrVirtualShadowPage::GrVirtualShadowPage (unsigned int {\em shadowPageSize}, \/  unsigned int {\em shadowMapSize}, \/  unsigned int {\em indirTexSize})}}
+\label{class_gr_virtual_shadow_page_10dc766d8a8b6c912b39e60893bdfae8}
+
+
+
+
+Definition at line 42 of file GrVirtualShadowPage.cpp.\hypertarget{class_gr_virtual_shadow_page_6b13a721bc654d712d0159332f668166}{
+\index{GrVirtualShadowPage@{GrVirtualShadowPage}!$\sim$GrVirtualShadowPage@{$\sim$GrVirtualShadowPage}}
+\index{$\sim$GrVirtualShadowPage@{$\sim$GrVirtualShadowPage}!GrVirtualShadowPage@{GrVirtualShadowPage}}
+\subsubsection[{$\sim$GrVirtualShadowPage}]{\setlength{\rightskip}{0pt plus 5cm}GrVirtualShadowPage::$\sim$GrVirtualShadowPage ()}}
+\label{class_gr_virtual_shadow_page_6b13a721bc654d712d0159332f668166}
+
+
+
+
+Definition at line 92 of file GrVirtualShadowPage.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_virtual_shadow_page_6fe56d04431ca8c88be756ff92d98e09}{
+\index{GrVirtualShadowPage@{GrVirtualShadowPage}!Finish@{Finish}}
+\index{Finish@{Finish}!GrVirtualShadowPage@{GrVirtualShadowPage}}
+\subsubsection[{Finish}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf GrVirtualShadowPage::SRenderData} \& GrVirtualShadowPage::Finish ()}}
+\label{class_gr_virtual_shadow_page_6fe56d04431ca8c88be756ff92d98e09}
+
+
+
+
+Definition at line 326 of file GrVirtualShadowPage.cpp.\hypertarget{class_gr_virtual_shadow_page_47d88b2d5752b7a1e2f38d14d5df538d}{
+\index{GrVirtualShadowPage@{GrVirtualShadowPage}!GenShadowInfo@{GenShadowInfo}}
+\index{GenShadowInfo@{GenShadowInfo}!GrVirtualShadowPage@{GrVirtualShadowPage}}
+\subsubsection[{GenShadowInfo}]{\setlength{\rightskip}{0pt plus 5cm}void GrVirtualShadowPage::GenShadowInfo (std::vector$<$ {\bf SShadowInfo} $>$ \& {\em shadows}, \/  const {\bf GrCamera} \& {\em viewerCamera}, \/  {\bf GrVirtualShadowSegmentSet} \& {\em segments}, \/  const {\bf GrLight} \& {\em light})}}
+\label{class_gr_virtual_shadow_page_47d88b2d5752b7a1e2f38d14d5df538d}
+
+
+
+
+Definition at line 104 of file GrVirtualShadowPage.cpp.\hypertarget{class_gr_virtual_shadow_page_23f6fa9b0a66272dcc951413faafaf09}{
+\index{GrVirtualShadowPage@{GrVirtualShadowPage}!GetNoShadowData@{GetNoShadowData}}
+\index{GetNoShadowData@{GetNoShadowData}!GrVirtualShadowPage@{GrVirtualShadowPage}}
+\subsubsection[{GetNoShadowData}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf SRenderData}\& GrVirtualShadowPage::GetNoShadowData () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_virtual_shadow_page_23f6fa9b0a66272dcc951413faafaf09}
+
+
+
+
+Definition at line 58 of file GrVirtualShadowPage.h.\hypertarget{class_gr_virtual_shadow_page_e438a2c1b4140e1c7a12b1c1628d2040}{
+\index{GrVirtualShadowPage@{GrVirtualShadowPage}!SetActiveShadowMap@{SetActiveShadowMap}}
+\index{SetActiveShadowMap@{SetActiveShadowMap}!GrVirtualShadowPage@{GrVirtualShadowPage}}
+\subsubsection[{SetActiveShadowMap}]{\setlength{\rightskip}{0pt plus 5cm}void GrVirtualShadowPage::SetActiveShadowMap (const {\bf SShadowInfo} \& {\em shadowMapInfo})}}
+\label{class_gr_virtual_shadow_page_e438a2c1b4140e1c7a12b1c1628d2040}
+
+
+
+
+Definition at line 314 of file GrVirtualShadowPage.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_virtual_shadow_page_8h}{GrVirtualShadowPage.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_virtual_shadow_page_8cpp}{GrVirtualShadowPage.cpp}\end{CompactItemize}

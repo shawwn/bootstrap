@@ -1,0 +1,191 @@
+\hypertarget{class_gr_light_mgr}{
+\section{GrLightMgr Class Reference}
+\label{class_gr_light_mgr}\index{GrLightMgr@{GrLightMgr}}
+}
+{\tt \#include $<$GrLightMgr.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_light_mgr_ea373f5ff2835f15c63767346023affa}{GrLightMgr} ()
+\item 
+\hyperlink{class_gr_light_mgr_61c1067fe1f0e57314c28363fb6a4d8b}{$\sim$GrLightMgr} ()
+\item 
+void \hyperlink{class_gr_light_mgr_aa93ff46c80e5fdbc8cecdfce13d5a99}{SetLight} (const \hyperlink{class_u_path}{UPath} \&\hyperlink{glext__bak_8h_58c2a664503e14ffb8f21012aabff3e9}{id}, const \hyperlink{struct_s_light_info}{SLightInfo} \&lightInfo)
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_light}{GrLight} $>$ \hyperlink{class_gr_light_mgr_6e2d2113c8d6092935f4f39ad9e1388d}{GetLight} (const \hyperlink{class_u_path}{UPath} \&\hyperlink{glext__bak_8h_58c2a664503e14ffb8f21012aabff3e9}{id}, \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&error)
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_light}{GrLight} $>$ \hyperlink{class_gr_light_mgr_8d8c949784428299e9046f856f48cda4}{FindLight} (const \hyperlink{class_u_path}{UPath} \&\hyperlink{glext__bak_8h_58c2a664503e14ffb8f21012aabff3e9}{id})
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_light}{GrLight} $>$ \hyperlink{class_gr_light_mgr_c0253a53f0d8c23131ac54a68217231a}{CreateLight} (const \hyperlink{class_u_path}{UPath} \&\hyperlink{glext__bak_8h_58c2a664503e14ffb8f21012aabff3e9}{id}, const \hyperlink{struct_s_light_info}{SLightInfo} \&lightInfo)
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_light}{GrLight} $>$ \hyperlink{class_gr_light_mgr_5ea84c63918a70154432b723c9b8cf15}{GetOrCloneLight} (const \hyperlink{class_u_path}{UPath} \&newLightId, const \hyperlink{class_u_path}{UPath} \&fromLight, \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&error)
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_light}{GrLight} $>$ \hyperlink{class_gr_light_mgr_24933a06e2f523461e064a3931c9f49f}{GetOrCloneLight} (const \hyperlink{class_u_path}{UPath} \&newLightId, const \hyperlink{class_gr_light}{GrLight} $\ast$fromLight)
+\item 
+unsigned int \hyperlink{class_gr_light_mgr_550cba35490e5bc82c59cbd314867b34}{GetLightCount} ()
+\item 
+\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_light}{GrLight} $>$ \hyperlink{class_gr_light_mgr_202866b0eedfe24b2b89a74559d32e9d}{GetLightByIdx} (unsigned int idx)
+\item 
+bool \hyperlink{class_gr_light_mgr_b3e17843ed610744b41e0687fd69e39e}{ReloadLight} (const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&error)
+\item 
+void \hyperlink{class_gr_light_mgr_13f7ffc5a5cd10224fc254559d67e9c9}{ReloadAll} ()
+\item 
+void \hyperlink{class_gr_light_mgr_8e7e04849ad7d91f6e5a330b6d9fe996}{Update} ()
+\item 
+void \hyperlink{class_gr_light_mgr_c2b28fc11940063d19cd95284d373ed3}{CollectGarbage} ()
+\item 
+void \hyperlink{class_gr_light_mgr_0562b96df126321d6d85efffcda2d054}{GetScriptName} (\hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&scriptName, const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&lightName)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 25 of file GrLightMgr.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_light_mgr_ea373f5ff2835f15c63767346023affa}{
+\index{GrLightMgr@{GrLightMgr}!GrLightMgr@{GrLightMgr}}
+\index{GrLightMgr@{GrLightMgr}!GrLightMgr@{GrLightMgr}}
+\subsubsection[{GrLightMgr}]{\setlength{\rightskip}{0pt plus 5cm}GrLightMgr::GrLightMgr ()}}
+\label{class_gr_light_mgr_ea373f5ff2835f15c63767346023affa}
+
+
+
+
+Definition at line 32 of file GrLightMgr.cpp.\hypertarget{class_gr_light_mgr_61c1067fe1f0e57314c28363fb6a4d8b}{
+\index{GrLightMgr@{GrLightMgr}!$\sim$GrLightMgr@{$\sim$GrLightMgr}}
+\index{$\sim$GrLightMgr@{$\sim$GrLightMgr}!GrLightMgr@{GrLightMgr}}
+\subsubsection[{$\sim$GrLightMgr}]{\setlength{\rightskip}{0pt plus 5cm}GrLightMgr::$\sim$GrLightMgr ()}}
+\label{class_gr_light_mgr_61c1067fe1f0e57314c28363fb6a4d8b}
+
+
+
+
+Definition at line 43 of file GrLightMgr.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_light_mgr_c2b28fc11940063d19cd95284d373ed3}{
+\index{GrLightMgr@{GrLightMgr}!CollectGarbage@{CollectGarbage}}
+\index{CollectGarbage@{CollectGarbage}!GrLightMgr@{GrLightMgr}}
+\subsubsection[{CollectGarbage}]{\setlength{\rightskip}{0pt plus 5cm}void GrLightMgr::CollectGarbage ()}}
+\label{class_gr_light_mgr_c2b28fc11940063d19cd95284d373ed3}
+
+
+
+
+Definition at line 229 of file GrLightMgr.cpp.\hypertarget{class_gr_light_mgr_c0253a53f0d8c23131ac54a68217231a}{
+\index{GrLightMgr@{GrLightMgr}!CreateLight@{CreateLight}}
+\index{CreateLight@{CreateLight}!GrLightMgr@{GrLightMgr}}
+\subsubsection[{CreateLight}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrLight} $>$ GrLightMgr::CreateLight (const {\bf UPath} \& {\em id}, \/  const {\bf SLightInfo} \& {\em lightInfo})}}
+\label{class_gr_light_mgr_c0253a53f0d8c23131ac54a68217231a}
+
+
+
+
+Definition at line 112 of file GrLightMgr.cpp.\hypertarget{class_gr_light_mgr_8d8c949784428299e9046f856f48cda4}{
+\index{GrLightMgr@{GrLightMgr}!FindLight@{FindLight}}
+\index{FindLight@{FindLight}!GrLightMgr@{GrLightMgr}}
+\subsubsection[{FindLight}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrLight} $>$ GrLightMgr::FindLight (const {\bf UPath} \& {\em id})}}
+\label{class_gr_light_mgr_8d8c949784428299e9046f856f48cda4}
+
+
+
+
+Definition at line 99 of file GrLightMgr.cpp.\hypertarget{class_gr_light_mgr_6e2d2113c8d6092935f4f39ad9e1388d}{
+\index{GrLightMgr@{GrLightMgr}!GetLight@{GetLight}}
+\index{GetLight@{GetLight}!GrLightMgr@{GrLightMgr}}
+\subsubsection[{GetLight}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrLight} $>$ GrLightMgr::GetLight (const {\bf UPath} \& {\em id}, \/  {\bf tstring} \& {\em error})}}
+\label{class_gr_light_mgr_6e2d2113c8d6092935f4f39ad9e1388d}
+
+
+
+
+Definition at line 72 of file GrLightMgr.cpp.\hypertarget{class_gr_light_mgr_202866b0eedfe24b2b89a74559d32e9d}{
+\index{GrLightMgr@{GrLightMgr}!GetLightByIdx@{GetLightByIdx}}
+\index{GetLightByIdx@{GetLightByIdx}!GrLightMgr@{GrLightMgr}}
+\subsubsection[{GetLightByIdx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrLight} $>$ GrLightMgr::GetLightByIdx (unsigned int {\em idx})}}
+\label{class_gr_light_mgr_202866b0eedfe24b2b89a74559d32e9d}
+
+
+
+
+Definition at line 174 of file GrLightMgr.cpp.\hypertarget{class_gr_light_mgr_550cba35490e5bc82c59cbd314867b34}{
+\index{GrLightMgr@{GrLightMgr}!GetLightCount@{GetLightCount}}
+\index{GetLightCount@{GetLightCount}!GrLightMgr@{GrLightMgr}}
+\subsubsection[{GetLightCount}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrLightMgr::GetLightCount ()}}
+\label{class_gr_light_mgr_550cba35490e5bc82c59cbd314867b34}
+
+
+
+
+Definition at line 167 of file GrLightMgr.cpp.\hypertarget{class_gr_light_mgr_24933a06e2f523461e064a3931c9f49f}{
+\index{GrLightMgr@{GrLightMgr}!GetOrCloneLight@{GetOrCloneLight}}
+\index{GetOrCloneLight@{GetOrCloneLight}!GrLightMgr@{GrLightMgr}}
+\subsubsection[{GetOrCloneLight}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrLight} $>$ GrLightMgr::GetOrCloneLight (const {\bf UPath} \& {\em newLightId}, \/  const {\bf GrLight} $\ast$ {\em fromLight})}}
+\label{class_gr_light_mgr_24933a06e2f523461e064a3931c9f49f}
+
+
+
+
+Definition at line 147 of file GrLightMgr.cpp.\hypertarget{class_gr_light_mgr_5ea84c63918a70154432b723c9b8cf15}{
+\index{GrLightMgr@{GrLightMgr}!GetOrCloneLight@{GetOrCloneLight}}
+\index{GetOrCloneLight@{GetOrCloneLight}!GrLightMgr@{GrLightMgr}}
+\subsubsection[{GetOrCloneLight}]{\setlength{\rightskip}{0pt plus 5cm}{\bf URef}$<$ {\bf GrLight} $>$ GrLightMgr::GetOrCloneLight (const {\bf UPath} \& {\em newLightId}, \/  const {\bf UPath} \& {\em fromLight}, \/  {\bf tstring} \& {\em error})}}
+\label{class_gr_light_mgr_5ea84c63918a70154432b723c9b8cf15}
+
+
+
+
+Definition at line 125 of file GrLightMgr.cpp.\hypertarget{class_gr_light_mgr_0562b96df126321d6d85efffcda2d054}{
+\index{GrLightMgr@{GrLightMgr}!GetScriptName@{GetScriptName}}
+\index{GetScriptName@{GetScriptName}!GrLightMgr@{GrLightMgr}}
+\subsubsection[{GetScriptName}]{\setlength{\rightskip}{0pt plus 5cm}void GrLightMgr::GetScriptName ({\bf tstring} \& {\em scriptName}, \/  const {\bf tstring} \& {\em lightName})}}
+\label{class_gr_light_mgr_0562b96df126321d6d85efffcda2d054}
+
+
+
+
+Definition at line 255 of file GrLightMgr.cpp.\hypertarget{class_gr_light_mgr_13f7ffc5a5cd10224fc254559d67e9c9}{
+\index{GrLightMgr@{GrLightMgr}!ReloadAll@{ReloadAll}}
+\index{ReloadAll@{ReloadAll}!GrLightMgr@{GrLightMgr}}
+\subsubsection[{ReloadAll}]{\setlength{\rightskip}{0pt plus 5cm}void GrLightMgr::ReloadAll ()}}
+\label{class_gr_light_mgr_13f7ffc5a5cd10224fc254559d67e9c9}
+
+
+
+
+Definition at line 191 of file GrLightMgr.cpp.\hypertarget{class_gr_light_mgr_b3e17843ed610744b41e0687fd69e39e}{
+\index{GrLightMgr@{GrLightMgr}!ReloadLight@{ReloadLight}}
+\index{ReloadLight@{ReloadLight}!GrLightMgr@{GrLightMgr}}
+\subsubsection[{ReloadLight}]{\setlength{\rightskip}{0pt plus 5cm}bool GrLightMgr::ReloadLight (const {\bf tstring} \& {\em name}, \/  {\bf tstring} \& {\em error})}}
+\label{class_gr_light_mgr_b3e17843ed610744b41e0687fd69e39e}
+
+
+
+
+Definition at line 182 of file GrLightMgr.cpp.\hypertarget{class_gr_light_mgr_aa93ff46c80e5fdbc8cecdfce13d5a99}{
+\index{GrLightMgr@{GrLightMgr}!SetLight@{SetLight}}
+\index{SetLight@{SetLight}!GrLightMgr@{GrLightMgr}}
+\subsubsection[{SetLight}]{\setlength{\rightskip}{0pt plus 5cm}void GrLightMgr::SetLight (const {\bf UPath} \& {\em id}, \/  const {\bf SLightInfo} \& {\em lightInfo})}}
+\label{class_gr_light_mgr_aa93ff46c80e5fdbc8cecdfce13d5a99}
+
+
+
+
+Definition at line 58 of file GrLightMgr.cpp.\hypertarget{class_gr_light_mgr_8e7e04849ad7d91f6e5a330b6d9fe996}{
+\index{GrLightMgr@{GrLightMgr}!Update@{Update}}
+\index{Update@{Update}!GrLightMgr@{GrLightMgr}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void GrLightMgr::Update ()}}
+\label{class_gr_light_mgr_8e7e04849ad7d91f6e5a330b6d9fe996}
+
+
+
+
+Definition at line 216 of file GrLightMgr.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_light_mgr_8h}{GrLightMgr.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_light_mgr_8cpp}{GrLightMgr.cpp}\end{CompactItemize}

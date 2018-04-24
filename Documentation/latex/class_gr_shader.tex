@@ -1,0 +1,494 @@
+\hypertarget{class_gr_shader}{
+\section{GrShader Class Reference}
+\label{class_gr_shader}\index{GrShader@{GrShader}}
+}
+{\tt \#include $<$GrShader.h$>$}
+
+Inheritance diagram for GrShader::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_gr_shader}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+struct \textbf{SUserParam}
+\item 
+struct \textbf{SUserSampler}
+\end{CompactItemize}
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+enum \hyperlink{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba}{EPARAM} \{ \par
+\hyperlink{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba30e37abd2fd8b590c15664405e826b85}{EP\_\-MODEL\_\-VIEW\_\-PROJECTION\_\-MATRIX}, 
+\hyperlink{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba771c68fe14e6f3d88ceab8faa6b409e0}{EP\_\-MODEL\_\-VIEW\_\-MATRIX}, 
+\hyperlink{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba5fb8b055e849e72981bbccd2019bdcd8}{EP\_\-LOCAL\_\-VIEW\_\-POSITION}, 
+\hyperlink{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba5e5bd686b1a544fca8ccd8172614ac52}{EP\_\-LOCAL\_\-LIGHT\_\-POSITION}, 
+\par
+\hyperlink{class_gr_shader_2f004c603bb97711d05eb68381a5a7baf6e9d758af54b6143f365279e578b26a}{EP\_\-LOCAL\_\-LIGHT\_\-DIR\_\-OVERRIDE}, 
+\hyperlink{class_gr_shader_2f004c603bb97711d05eb68381a5a7baf849900dac3995949e0c3b9b78d3fd53}{EP\_\-LIGHT\_\-PROJECTION\_\-MATRIX}, 
+\hyperlink{class_gr_shader_2f004c603bb97711d05eb68381a5a7babfde6f4b246ad7c4925577065f67841e}{EP\_\-SHADOW\_\-PROJECTION\_\-MATRIX}, 
+\hyperlink{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba044e51cf06ee7b28315c5162ecac92df}{EP\_\-TEXTURE\_\-MATRIX}, 
+\par
+\hyperlink{class_gr_shader_2f004c603bb97711d05eb68381a5a7baabc9a760b45ea9435385731ca546ac12}{EP\_\-CUR\_\-RENDER\_\-TEXTURE\_\-MATRIX}, 
+\hyperlink{class_gr_shader_2f004c603bb97711d05eb68381a5a7baaebe8f389fe4e9c1cf88232822ed6db6}{EP\_\-ENV\_\-TEXGEN\_\-TEXTURE\_\-MATRIX}, 
+\hyperlink{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba53e6fa76e5acfea0ca6ed613667346b2}{EP\_\-VERTEX\_\-COLOR\_\-MOD}, 
+\hyperlink{class_gr_shader_2f004c603bb97711d05eb68381a5a7babca9fc6c0444334899a6d1c2b6da7a4b}{EP\_\-VERTEX\_\-COLOR\_\-ADD}, 
+\par
+\hyperlink{class_gr_shader_2f004c603bb97711d05eb68381a5a7bad3821a583087b6f09500c427bb2c9136}{EP\_\-SHADOW\_\-NEAR\_\-CLIP}, 
+\hyperlink{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba7018c4410472cd890a2e12990994dc96}{EP\_\-LIGHT\_\-COLOR}, 
+\hyperlink{class_gr_shader_2f004c603bb97711d05eb68381a5a7bab4efd66311bfcdd650de1fbc296c315f}{EP\_\-LIGHT\_\-RANGE}, 
+\hyperlink{class_gr_shader_2f004c603bb97711d05eb68381a5a7bad6e079e2952c61ea73b33b0be55ae1bb}{EP\_\-LIGHT\_\-ATTEN}, 
+\par
+\hyperlink{class_gr_shader_2f004c603bb97711d05eb68381a5a7baad8d46e4d63c30652cfe863781d31eef}{EP\_\-AMBIENT\_\-COLOR}, 
+\hyperlink{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba3f52eed666dad2ab377a721dec7d48c2}{EP\_\-BUMP\_\-MOD}, 
+\hyperlink{class_gr_shader_2f004c603bb97711d05eb68381a5a7baca21fbc32f19ff7f96d197e91fa8241f}{EP\_\-BUMP\_\-ADD}, 
+\hyperlink{class_gr_shader_2f004c603bb97711d05eb68381a5a7babd45973b924f00252c2b0119fe5b3fe5}{EP\_\-DIFFUSE\_\-MOD}, 
+\par
+\hyperlink{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba2a9f47816bdefe2925a532af749de481}{EP\_\-DIFFUSE\_\-ADD}, 
+\hyperlink{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba34e4a46829351d19558379ff1494375d}{EP\_\-SPECULAR\_\-MOD}, 
+\hyperlink{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba92003f10db0b04b9d2230108be48e2e0}{EP\_\-SPECULAR\_\-ADD}, 
+\hyperlink{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba86a132318fcf5a928f1666362820d223}{EP\_\-AMBIENT\_\-MOD}, 
+\par
+\hyperlink{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba651d45a736222bdf3a1901ba4784418f}{EP\_\-AMBIENT\_\-ADD}, 
+\hyperlink{class_gr_shader_2f004c603bb97711d05eb68381a5a7baae7cb3eac81d8f1030bc823f55ebebc2}{EP\_\-EMISSIVE\_\-MOD}, 
+\hyperlink{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba8c8aaf9c9578270a5014a329d810bebd}{EP\_\-EMISSIVE\_\-ADD}, 
+\hyperlink{class_gr_shader_2f004c603bb97711d05eb68381a5a7baec11ff622b6f49a33251e0a9626fb106}{EP\_\-LIGHT\_\-WIDTH}, 
+\par
+\hyperlink{class_gr_shader_2f004c603bb97711d05eb68381a5a7bae24509787b39e7258a4e25ecf2663e5d}{EP\_\-LIGHT\_\-HAZE}, 
+\hyperlink{class_gr_shader_2f004c603bb97711d05eb68381a5a7bac116d1d297985a8983047e69c8f8c1d6}{EP\_\-FOG\_\-START}, 
+\hyperlink{class_gr_shader_2f004c603bb97711d05eb68381a5a7bad96706cfb5f9b798c98f8c12bb6b0862}{EP\_\-FOG\_\-RANGE}, 
+\hyperlink{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba74327915bc548e45e31bbe4ffc1f6336}{EP\_\-FOG\_\-COLOR}, 
+\par
+\hyperlink{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba5824c13eb2e93df0317ef2af40eabace}{EP\_\-COUNT}
+ \}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_shader_bdf1c0db4547dc0f83a672954a110ee3}{GrShader} (const \hyperlink{class_u_path}{UPath} \&\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, const char $\ast$vSource, const char $\ast$fSource)
+\item 
+\hyperlink{class_gr_shader_aa73966b218a209656f7e2c594d290ce}{$\sim$GrShader} ()
+\item 
+const \hyperlink{class_u_path}{UPath} \& \hyperlink{class_gr_shader_adfcd8e36a3b4d3b12fc77b009c6f1c6}{GetName} () const 
+\item 
+bool \hyperlink{class_gr_shader_f9ce91e69a32ecd1ec6aa457c5fff942}{Rebuild} (const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&vSource, const \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&fSource)
+\item 
+bool \hyperlink{class_gr_shader_e40cd62323e0186bd30977b00617516e}{IsGLSamplerUsed} (unsigned int texUnit)
+\item 
+bool \hyperlink{class_gr_shader_64b1416ca1fd91ff9da4a37bbbf5bb0e}{IsGLSamplerUsed} (\hyperlink{enums_8h_697c1ee1354746841860d5bf9f81c033}{EGRQUALITY} quality, unsigned int texUnit)
+\item 
+bool \hyperlink{class_gr_shader_a482dc096d94ac3e751bce76dcae167b}{BindUserSampler} (const char $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, unsigned int texUnit)
+\item 
+void \hyperlink{class_gr_shader_420e8f1956844878d2a8aeb09f0ab888}{Validate} ()
+\item 
+unsigned int \hyperlink{class_gr_shader_94d6c2ccfc6e5b98ed4fee018308b5cb}{GetAttribIndex} (const char $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name})
+\item 
+unsigned int \hyperlink{class_gr_shader_6aaf2b4a333467d7c254dd2f4d862a83}{GetAttribIndex} (\hyperlink{enums_8h_697c1ee1354746841860d5bf9f81c033}{EGRQUALITY} quality, const char $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name})
+\item 
+unsigned int \hyperlink{class_gr_shader_c7df07b490ebee35fc316ccdccaf0a91}{GenUserParamHandle} ()
+\item 
+bool \hyperlink{class_gr_shader_e95cb134961fe00f4c4cd59e52d2d136}{InitUserParam} (const char $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, unsigned int handle)
+\item 
+unsigned int \hyperlink{class_gr_shader_43d8fd833e55e423dc8ac3d49ccc36ba}{GetUserParamHandle} (const char $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name})
+\item 
+void \hyperlink{class_gr_shader_8521f7e58ccb0116d07e2c501ae06f87}{SetUserParam4fv} (unsigned int handle, const float $\ast$\hyperlink{glext__bak_8h_69926c009f2d52c6b6d2c76784af8c64}{data})
+\item 
+void \hyperlink{class_gr_shader_151b6e0ff7c3e9fa37c5bc2498e752fe}{SetEngineParam4fv} (\hyperlink{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba}{EPARAM} \hyperlink{glext__bak_8h_c7c896d55e93a6cf7ff8524005b4e7b4}{param}, const float $\ast$\hyperlink{glext__bak_8h_69926c009f2d52c6b6d2c76784af8c64}{data})
+\item 
+void \hyperlink{class_gr_shader_ba8fee7b0196c1585178d3248e7cc7ca}{SetEngineParam4x2fv} (\hyperlink{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba}{EPARAM} paramStart, const float $\ast$\hyperlink{glext__bak_8h_69926c009f2d52c6b6d2c76784af8c64}{data})
+\item 
+void \hyperlink{class_gr_shader_8566055ca06bc953e0b58f6856b07a2b}{SetEngineParam4x3fv} (\hyperlink{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba}{EPARAM} paramStart, const float $\ast$\hyperlink{glext__bak_8h_69926c009f2d52c6b6d2c76784af8c64}{data})
+\item 
+void \hyperlink{class_gr_shader_c054492b117be764f4fd2440b7bd1020}{SetEngineParam4x4fv} (\hyperlink{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba}{EPARAM} paramStart, const float $\ast$\hyperlink{glext__bak_8h_69926c009f2d52c6b6d2c76784af8c64}{data})
+\item 
+void \hyperlink{class_gr_shader_f32a4e5288174733e6460afac22c21c3}{Bind} (\hyperlink{enums_8h_697c1ee1354746841860d5bf9f81c033}{EGRQUALITY} quality)
+\item 
+void \hyperlink{class_gr_shader_2e574044a7d47d0a07d49a8a6f82fe06}{PreContextReset} ()
+\item 
+void \hyperlink{class_gr_shader_5a508bd00cf8c3536028294bc8f6badc}{PostContextReset} ()
+\end{CompactItemize}
+\subsection*{Static Public Attributes}
+\begin{CompactItemize}
+\item 
+static const unsigned int \hyperlink{class_gr_shader_32d823afd380bcdf283ed2e667cf66cb}{kMaxUserParams} = 128
+\item 
+static const unsigned int \hyperlink{class_gr_shader_cbaa822de5def45617ccfb833996864e}{kMaxUserSamplers} = 32
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 22 of file GrShader.h.
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba}{
+\index{GrShader@{GrShader}!EPARAM@{EPARAM}}
+\index{EPARAM@{EPARAM}!GrShader@{GrShader}}
+\subsubsection[{EPARAM}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GrShader::EPARAM}}}
+\label{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{EP\_\-MODEL\_\-VIEW\_\-PROJECTION\_\-MATRIX@{EP\_\-MODEL\_\-VIEW\_\-PROJECTION\_\-MATRIX}!GrShader@{GrShader}}\index{GrShader@{GrShader}!EP\_\-MODEL\_\-VIEW\_\-PROJECTION\_\-MATRIX@{EP\_\-MODEL\_\-VIEW\_\-PROJECTION\_\-MATRIX}}\item[{\em 
+\hypertarget{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba30e37abd2fd8b590c15664405e826b85}{
+EP\_\-MODEL\_\-VIEW\_\-PROJECTION\_\-MATRIX}
+\label{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba30e37abd2fd8b590c15664405e826b85}
+}]\index{EP\_\-MODEL\_\-VIEW\_\-MATRIX@{EP\_\-MODEL\_\-VIEW\_\-MATRIX}!GrShader@{GrShader}}\index{GrShader@{GrShader}!EP\_\-MODEL\_\-VIEW\_\-MATRIX@{EP\_\-MODEL\_\-VIEW\_\-MATRIX}}\item[{\em 
+\hypertarget{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba771c68fe14e6f3d88ceab8faa6b409e0}{
+EP\_\-MODEL\_\-VIEW\_\-MATRIX}
+\label{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba771c68fe14e6f3d88ceab8faa6b409e0}
+}]\index{EP\_\-LOCAL\_\-VIEW\_\-POSITION@{EP\_\-LOCAL\_\-VIEW\_\-POSITION}!GrShader@{GrShader}}\index{GrShader@{GrShader}!EP\_\-LOCAL\_\-VIEW\_\-POSITION@{EP\_\-LOCAL\_\-VIEW\_\-POSITION}}\item[{\em 
+\hypertarget{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba5fb8b055e849e72981bbccd2019bdcd8}{
+EP\_\-LOCAL\_\-VIEW\_\-POSITION}
+\label{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba5fb8b055e849e72981bbccd2019bdcd8}
+}]\index{EP\_\-LOCAL\_\-LIGHT\_\-POSITION@{EP\_\-LOCAL\_\-LIGHT\_\-POSITION}!GrShader@{GrShader}}\index{GrShader@{GrShader}!EP\_\-LOCAL\_\-LIGHT\_\-POSITION@{EP\_\-LOCAL\_\-LIGHT\_\-POSITION}}\item[{\em 
+\hypertarget{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba5e5bd686b1a544fca8ccd8172614ac52}{
+EP\_\-LOCAL\_\-LIGHT\_\-POSITION}
+\label{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba5e5bd686b1a544fca8ccd8172614ac52}
+}]\index{EP\_\-LOCAL\_\-LIGHT\_\-DIR\_\-OVERRIDE@{EP\_\-LOCAL\_\-LIGHT\_\-DIR\_\-OVERRIDE}!GrShader@{GrShader}}\index{GrShader@{GrShader}!EP\_\-LOCAL\_\-LIGHT\_\-DIR\_\-OVERRIDE@{EP\_\-LOCAL\_\-LIGHT\_\-DIR\_\-OVERRIDE}}\item[{\em 
+\hypertarget{class_gr_shader_2f004c603bb97711d05eb68381a5a7baf6e9d758af54b6143f365279e578b26a}{
+EP\_\-LOCAL\_\-LIGHT\_\-DIR\_\-OVERRIDE}
+\label{class_gr_shader_2f004c603bb97711d05eb68381a5a7baf6e9d758af54b6143f365279e578b26a}
+}]\index{EP\_\-LIGHT\_\-PROJECTION\_\-MATRIX@{EP\_\-LIGHT\_\-PROJECTION\_\-MATRIX}!GrShader@{GrShader}}\index{GrShader@{GrShader}!EP\_\-LIGHT\_\-PROJECTION\_\-MATRIX@{EP\_\-LIGHT\_\-PROJECTION\_\-MATRIX}}\item[{\em 
+\hypertarget{class_gr_shader_2f004c603bb97711d05eb68381a5a7baf849900dac3995949e0c3b9b78d3fd53}{
+EP\_\-LIGHT\_\-PROJECTION\_\-MATRIX}
+\label{class_gr_shader_2f004c603bb97711d05eb68381a5a7baf849900dac3995949e0c3b9b78d3fd53}
+}]\index{EP\_\-SHADOW\_\-PROJECTION\_\-MATRIX@{EP\_\-SHADOW\_\-PROJECTION\_\-MATRIX}!GrShader@{GrShader}}\index{GrShader@{GrShader}!EP\_\-SHADOW\_\-PROJECTION\_\-MATRIX@{EP\_\-SHADOW\_\-PROJECTION\_\-MATRIX}}\item[{\em 
+\hypertarget{class_gr_shader_2f004c603bb97711d05eb68381a5a7babfde6f4b246ad7c4925577065f67841e}{
+EP\_\-SHADOW\_\-PROJECTION\_\-MATRIX}
+\label{class_gr_shader_2f004c603bb97711d05eb68381a5a7babfde6f4b246ad7c4925577065f67841e}
+}]\index{EP\_\-TEXTURE\_\-MATRIX@{EP\_\-TEXTURE\_\-MATRIX}!GrShader@{GrShader}}\index{GrShader@{GrShader}!EP\_\-TEXTURE\_\-MATRIX@{EP\_\-TEXTURE\_\-MATRIX}}\item[{\em 
+\hypertarget{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba044e51cf06ee7b28315c5162ecac92df}{
+EP\_\-TEXTURE\_\-MATRIX}
+\label{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba044e51cf06ee7b28315c5162ecac92df}
+}]\index{EP\_\-CUR\_\-RENDER\_\-TEXTURE\_\-MATRIX@{EP\_\-CUR\_\-RENDER\_\-TEXTURE\_\-MATRIX}!GrShader@{GrShader}}\index{GrShader@{GrShader}!EP\_\-CUR\_\-RENDER\_\-TEXTURE\_\-MATRIX@{EP\_\-CUR\_\-RENDER\_\-TEXTURE\_\-MATRIX}}\item[{\em 
+\hypertarget{class_gr_shader_2f004c603bb97711d05eb68381a5a7baabc9a760b45ea9435385731ca546ac12}{
+EP\_\-CUR\_\-RENDER\_\-TEXTURE\_\-MATRIX}
+\label{class_gr_shader_2f004c603bb97711d05eb68381a5a7baabc9a760b45ea9435385731ca546ac12}
+}]\index{EP\_\-ENV\_\-TEXGEN\_\-TEXTURE\_\-MATRIX@{EP\_\-ENV\_\-TEXGEN\_\-TEXTURE\_\-MATRIX}!GrShader@{GrShader}}\index{GrShader@{GrShader}!EP\_\-ENV\_\-TEXGEN\_\-TEXTURE\_\-MATRIX@{EP\_\-ENV\_\-TEXGEN\_\-TEXTURE\_\-MATRIX}}\item[{\em 
+\hypertarget{class_gr_shader_2f004c603bb97711d05eb68381a5a7baaebe8f389fe4e9c1cf88232822ed6db6}{
+EP\_\-ENV\_\-TEXGEN\_\-TEXTURE\_\-MATRIX}
+\label{class_gr_shader_2f004c603bb97711d05eb68381a5a7baaebe8f389fe4e9c1cf88232822ed6db6}
+}]\index{EP\_\-VERTEX\_\-COLOR\_\-MOD@{EP\_\-VERTEX\_\-COLOR\_\-MOD}!GrShader@{GrShader}}\index{GrShader@{GrShader}!EP\_\-VERTEX\_\-COLOR\_\-MOD@{EP\_\-VERTEX\_\-COLOR\_\-MOD}}\item[{\em 
+\hypertarget{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba53e6fa76e5acfea0ca6ed613667346b2}{
+EP\_\-VERTEX\_\-COLOR\_\-MOD}
+\label{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba53e6fa76e5acfea0ca6ed613667346b2}
+}]\index{EP\_\-VERTEX\_\-COLOR\_\-ADD@{EP\_\-VERTEX\_\-COLOR\_\-ADD}!GrShader@{GrShader}}\index{GrShader@{GrShader}!EP\_\-VERTEX\_\-COLOR\_\-ADD@{EP\_\-VERTEX\_\-COLOR\_\-ADD}}\item[{\em 
+\hypertarget{class_gr_shader_2f004c603bb97711d05eb68381a5a7babca9fc6c0444334899a6d1c2b6da7a4b}{
+EP\_\-VERTEX\_\-COLOR\_\-ADD}
+\label{class_gr_shader_2f004c603bb97711d05eb68381a5a7babca9fc6c0444334899a6d1c2b6da7a4b}
+}]\index{EP\_\-SHADOW\_\-NEAR\_\-CLIP@{EP\_\-SHADOW\_\-NEAR\_\-CLIP}!GrShader@{GrShader}}\index{GrShader@{GrShader}!EP\_\-SHADOW\_\-NEAR\_\-CLIP@{EP\_\-SHADOW\_\-NEAR\_\-CLIP}}\item[{\em 
+\hypertarget{class_gr_shader_2f004c603bb97711d05eb68381a5a7bad3821a583087b6f09500c427bb2c9136}{
+EP\_\-SHADOW\_\-NEAR\_\-CLIP}
+\label{class_gr_shader_2f004c603bb97711d05eb68381a5a7bad3821a583087b6f09500c427bb2c9136}
+}]\index{EP\_\-LIGHT\_\-COLOR@{EP\_\-LIGHT\_\-COLOR}!GrShader@{GrShader}}\index{GrShader@{GrShader}!EP\_\-LIGHT\_\-COLOR@{EP\_\-LIGHT\_\-COLOR}}\item[{\em 
+\hypertarget{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba7018c4410472cd890a2e12990994dc96}{
+EP\_\-LIGHT\_\-COLOR}
+\label{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba7018c4410472cd890a2e12990994dc96}
+}]\index{EP\_\-LIGHT\_\-RANGE@{EP\_\-LIGHT\_\-RANGE}!GrShader@{GrShader}}\index{GrShader@{GrShader}!EP\_\-LIGHT\_\-RANGE@{EP\_\-LIGHT\_\-RANGE}}\item[{\em 
+\hypertarget{class_gr_shader_2f004c603bb97711d05eb68381a5a7bab4efd66311bfcdd650de1fbc296c315f}{
+EP\_\-LIGHT\_\-RANGE}
+\label{class_gr_shader_2f004c603bb97711d05eb68381a5a7bab4efd66311bfcdd650de1fbc296c315f}
+}]\index{EP\_\-LIGHT\_\-ATTEN@{EP\_\-LIGHT\_\-ATTEN}!GrShader@{GrShader}}\index{GrShader@{GrShader}!EP\_\-LIGHT\_\-ATTEN@{EP\_\-LIGHT\_\-ATTEN}}\item[{\em 
+\hypertarget{class_gr_shader_2f004c603bb97711d05eb68381a5a7bad6e079e2952c61ea73b33b0be55ae1bb}{
+EP\_\-LIGHT\_\-ATTEN}
+\label{class_gr_shader_2f004c603bb97711d05eb68381a5a7bad6e079e2952c61ea73b33b0be55ae1bb}
+}]\index{EP\_\-AMBIENT\_\-COLOR@{EP\_\-AMBIENT\_\-COLOR}!GrShader@{GrShader}}\index{GrShader@{GrShader}!EP\_\-AMBIENT\_\-COLOR@{EP\_\-AMBIENT\_\-COLOR}}\item[{\em 
+\hypertarget{class_gr_shader_2f004c603bb97711d05eb68381a5a7baad8d46e4d63c30652cfe863781d31eef}{
+EP\_\-AMBIENT\_\-COLOR}
+\label{class_gr_shader_2f004c603bb97711d05eb68381a5a7baad8d46e4d63c30652cfe863781d31eef}
+}]\index{EP\_\-BUMP\_\-MOD@{EP\_\-BUMP\_\-MOD}!GrShader@{GrShader}}\index{GrShader@{GrShader}!EP\_\-BUMP\_\-MOD@{EP\_\-BUMP\_\-MOD}}\item[{\em 
+\hypertarget{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba3f52eed666dad2ab377a721dec7d48c2}{
+EP\_\-BUMP\_\-MOD}
+\label{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba3f52eed666dad2ab377a721dec7d48c2}
+}]\index{EP\_\-BUMP\_\-ADD@{EP\_\-BUMP\_\-ADD}!GrShader@{GrShader}}\index{GrShader@{GrShader}!EP\_\-BUMP\_\-ADD@{EP\_\-BUMP\_\-ADD}}\item[{\em 
+\hypertarget{class_gr_shader_2f004c603bb97711d05eb68381a5a7baca21fbc32f19ff7f96d197e91fa8241f}{
+EP\_\-BUMP\_\-ADD}
+\label{class_gr_shader_2f004c603bb97711d05eb68381a5a7baca21fbc32f19ff7f96d197e91fa8241f}
+}]\index{EP\_\-DIFFUSE\_\-MOD@{EP\_\-DIFFUSE\_\-MOD}!GrShader@{GrShader}}\index{GrShader@{GrShader}!EP\_\-DIFFUSE\_\-MOD@{EP\_\-DIFFUSE\_\-MOD}}\item[{\em 
+\hypertarget{class_gr_shader_2f004c603bb97711d05eb68381a5a7babd45973b924f00252c2b0119fe5b3fe5}{
+EP\_\-DIFFUSE\_\-MOD}
+\label{class_gr_shader_2f004c603bb97711d05eb68381a5a7babd45973b924f00252c2b0119fe5b3fe5}
+}]\index{EP\_\-DIFFUSE\_\-ADD@{EP\_\-DIFFUSE\_\-ADD}!GrShader@{GrShader}}\index{GrShader@{GrShader}!EP\_\-DIFFUSE\_\-ADD@{EP\_\-DIFFUSE\_\-ADD}}\item[{\em 
+\hypertarget{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba2a9f47816bdefe2925a532af749de481}{
+EP\_\-DIFFUSE\_\-ADD}
+\label{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba2a9f47816bdefe2925a532af749de481}
+}]\index{EP\_\-SPECULAR\_\-MOD@{EP\_\-SPECULAR\_\-MOD}!GrShader@{GrShader}}\index{GrShader@{GrShader}!EP\_\-SPECULAR\_\-MOD@{EP\_\-SPECULAR\_\-MOD}}\item[{\em 
+\hypertarget{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba34e4a46829351d19558379ff1494375d}{
+EP\_\-SPECULAR\_\-MOD}
+\label{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba34e4a46829351d19558379ff1494375d}
+}]\index{EP\_\-SPECULAR\_\-ADD@{EP\_\-SPECULAR\_\-ADD}!GrShader@{GrShader}}\index{GrShader@{GrShader}!EP\_\-SPECULAR\_\-ADD@{EP\_\-SPECULAR\_\-ADD}}\item[{\em 
+\hypertarget{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba92003f10db0b04b9d2230108be48e2e0}{
+EP\_\-SPECULAR\_\-ADD}
+\label{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba92003f10db0b04b9d2230108be48e2e0}
+}]\index{EP\_\-AMBIENT\_\-MOD@{EP\_\-AMBIENT\_\-MOD}!GrShader@{GrShader}}\index{GrShader@{GrShader}!EP\_\-AMBIENT\_\-MOD@{EP\_\-AMBIENT\_\-MOD}}\item[{\em 
+\hypertarget{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba86a132318fcf5a928f1666362820d223}{
+EP\_\-AMBIENT\_\-MOD}
+\label{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba86a132318fcf5a928f1666362820d223}
+}]\index{EP\_\-AMBIENT\_\-ADD@{EP\_\-AMBIENT\_\-ADD}!GrShader@{GrShader}}\index{GrShader@{GrShader}!EP\_\-AMBIENT\_\-ADD@{EP\_\-AMBIENT\_\-ADD}}\item[{\em 
+\hypertarget{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba651d45a736222bdf3a1901ba4784418f}{
+EP\_\-AMBIENT\_\-ADD}
+\label{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba651d45a736222bdf3a1901ba4784418f}
+}]\index{EP\_\-EMISSIVE\_\-MOD@{EP\_\-EMISSIVE\_\-MOD}!GrShader@{GrShader}}\index{GrShader@{GrShader}!EP\_\-EMISSIVE\_\-MOD@{EP\_\-EMISSIVE\_\-MOD}}\item[{\em 
+\hypertarget{class_gr_shader_2f004c603bb97711d05eb68381a5a7baae7cb3eac81d8f1030bc823f55ebebc2}{
+EP\_\-EMISSIVE\_\-MOD}
+\label{class_gr_shader_2f004c603bb97711d05eb68381a5a7baae7cb3eac81d8f1030bc823f55ebebc2}
+}]\index{EP\_\-EMISSIVE\_\-ADD@{EP\_\-EMISSIVE\_\-ADD}!GrShader@{GrShader}}\index{GrShader@{GrShader}!EP\_\-EMISSIVE\_\-ADD@{EP\_\-EMISSIVE\_\-ADD}}\item[{\em 
+\hypertarget{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba8c8aaf9c9578270a5014a329d810bebd}{
+EP\_\-EMISSIVE\_\-ADD}
+\label{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba8c8aaf9c9578270a5014a329d810bebd}
+}]\index{EP\_\-LIGHT\_\-WIDTH@{EP\_\-LIGHT\_\-WIDTH}!GrShader@{GrShader}}\index{GrShader@{GrShader}!EP\_\-LIGHT\_\-WIDTH@{EP\_\-LIGHT\_\-WIDTH}}\item[{\em 
+\hypertarget{class_gr_shader_2f004c603bb97711d05eb68381a5a7baec11ff622b6f49a33251e0a9626fb106}{
+EP\_\-LIGHT\_\-WIDTH}
+\label{class_gr_shader_2f004c603bb97711d05eb68381a5a7baec11ff622b6f49a33251e0a9626fb106}
+}]\index{EP\_\-LIGHT\_\-HAZE@{EP\_\-LIGHT\_\-HAZE}!GrShader@{GrShader}}\index{GrShader@{GrShader}!EP\_\-LIGHT\_\-HAZE@{EP\_\-LIGHT\_\-HAZE}}\item[{\em 
+\hypertarget{class_gr_shader_2f004c603bb97711d05eb68381a5a7bae24509787b39e7258a4e25ecf2663e5d}{
+EP\_\-LIGHT\_\-HAZE}
+\label{class_gr_shader_2f004c603bb97711d05eb68381a5a7bae24509787b39e7258a4e25ecf2663e5d}
+}]\index{EP\_\-FOG\_\-START@{EP\_\-FOG\_\-START}!GrShader@{GrShader}}\index{GrShader@{GrShader}!EP\_\-FOG\_\-START@{EP\_\-FOG\_\-START}}\item[{\em 
+\hypertarget{class_gr_shader_2f004c603bb97711d05eb68381a5a7bac116d1d297985a8983047e69c8f8c1d6}{
+EP\_\-FOG\_\-START}
+\label{class_gr_shader_2f004c603bb97711d05eb68381a5a7bac116d1d297985a8983047e69c8f8c1d6}
+}]\index{EP\_\-FOG\_\-RANGE@{EP\_\-FOG\_\-RANGE}!GrShader@{GrShader}}\index{GrShader@{GrShader}!EP\_\-FOG\_\-RANGE@{EP\_\-FOG\_\-RANGE}}\item[{\em 
+\hypertarget{class_gr_shader_2f004c603bb97711d05eb68381a5a7bad96706cfb5f9b798c98f8c12bb6b0862}{
+EP\_\-FOG\_\-RANGE}
+\label{class_gr_shader_2f004c603bb97711d05eb68381a5a7bad96706cfb5f9b798c98f8c12bb6b0862}
+}]\index{EP\_\-FOG\_\-COLOR@{EP\_\-FOG\_\-COLOR}!GrShader@{GrShader}}\index{GrShader@{GrShader}!EP\_\-FOG\_\-COLOR@{EP\_\-FOG\_\-COLOR}}\item[{\em 
+\hypertarget{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba74327915bc548e45e31bbe4ffc1f6336}{
+EP\_\-FOG\_\-COLOR}
+\label{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba74327915bc548e45e31bbe4ffc1f6336}
+}]\index{EP\_\-COUNT@{EP\_\-COUNT}!GrShader@{GrShader}}\index{GrShader@{GrShader}!EP\_\-COUNT@{EP\_\-COUNT}}\item[{\em 
+\hypertarget{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba5824c13eb2e93df0317ef2af40eabace}{
+EP\_\-COUNT}
+\label{class_gr_shader_2f004c603bb97711d05eb68381a5a7ba5824c13eb2e93df0317ef2af40eabace}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 29 of file GrShader.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_shader_bdf1c0db4547dc0f83a672954a110ee3}{
+\index{GrShader@{GrShader}!GrShader@{GrShader}}
+\index{GrShader@{GrShader}!GrShader@{GrShader}}
+\subsubsection[{GrShader}]{\setlength{\rightskip}{0pt plus 5cm}GrShader::GrShader (const {\bf UPath} \& {\em name}, \/  const char $\ast$ {\em vSource}, \/  const char $\ast$ {\em fSource})}}
+\label{class_gr_shader_bdf1c0db4547dc0f83a672954a110ee3}
+
+
+
+
+Definition at line 50 of file GrShader.cpp.\hypertarget{class_gr_shader_aa73966b218a209656f7e2c594d290ce}{
+\index{GrShader@{GrShader}!$\sim$GrShader@{$\sim$GrShader}}
+\index{$\sim$GrShader@{$\sim$GrShader}!GrShader@{GrShader}}
+\subsubsection[{$\sim$GrShader}]{\setlength{\rightskip}{0pt plus 5cm}GrShader::$\sim$GrShader ()}}
+\label{class_gr_shader_aa73966b218a209656f7e2c594d290ce}
+
+
+
+
+Definition at line 66 of file GrShader.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_shader_f32a4e5288174733e6460afac22c21c3}{
+\index{GrShader@{GrShader}!Bind@{Bind}}
+\index{Bind@{Bind}!GrShader@{GrShader}}
+\subsubsection[{Bind}]{\setlength{\rightskip}{0pt plus 5cm}void GrShader::Bind ({\bf EGRQUALITY} {\em quality})}}
+\label{class_gr_shader_f32a4e5288174733e6460afac22c21c3}
+
+
+
+
+Definition at line 378 of file GrShader.cpp.\hypertarget{class_gr_shader_a482dc096d94ac3e751bce76dcae167b}{
+\index{GrShader@{GrShader}!BindUserSampler@{BindUserSampler}}
+\index{BindUserSampler@{BindUserSampler}!GrShader@{GrShader}}
+\subsubsection[{BindUserSampler}]{\setlength{\rightskip}{0pt plus 5cm}bool GrShader::BindUserSampler (const char $\ast$ {\em name}, \/  unsigned int {\em texUnit})}}
+\label{class_gr_shader_a482dc096d94ac3e751bce76dcae167b}
+
+
+
+
+Definition at line 127 of file GrShader.cpp.\hypertarget{class_gr_shader_c7df07b490ebee35fc316ccdccaf0a91}{
+\index{GrShader@{GrShader}!GenUserParamHandle@{GenUserParamHandle}}
+\index{GenUserParamHandle@{GenUserParamHandle}!GrShader@{GrShader}}
+\subsubsection[{GenUserParamHandle}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrShader::GenUserParamHandle ()}}
+\label{class_gr_shader_c7df07b490ebee35fc316ccdccaf0a91}
+
+
+
+
+Definition at line 199 of file GrShader.cpp.\hypertarget{class_gr_shader_6aaf2b4a333467d7c254dd2f4d862a83}{
+\index{GrShader@{GrShader}!GetAttribIndex@{GetAttribIndex}}
+\index{GetAttribIndex@{GetAttribIndex}!GrShader@{GrShader}}
+\subsubsection[{GetAttribIndex}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrShader::GetAttribIndex ({\bf EGRQUALITY} {\em quality}, \/  const char $\ast$ {\em name})}}
+\label{class_gr_shader_6aaf2b4a333467d7c254dd2f4d862a83}
+
+
+
+
+Definition at line 192 of file GrShader.cpp.\hypertarget{class_gr_shader_94d6c2ccfc6e5b98ed4fee018308b5cb}{
+\index{GrShader@{GrShader}!GetAttribIndex@{GetAttribIndex}}
+\index{GetAttribIndex@{GetAttribIndex}!GrShader@{GrShader}}
+\subsubsection[{GetAttribIndex}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrShader::GetAttribIndex (const char $\ast$ {\em name})}}
+\label{class_gr_shader_94d6c2ccfc6e5b98ed4fee018308b5cb}
+
+
+
+
+Definition at line 185 of file GrShader.cpp.\hypertarget{class_gr_shader_adfcd8e36a3b4d3b12fc77b009c6f1c6}{
+\index{GrShader@{GrShader}!GetName@{GetName}}
+\index{GetName@{GetName}!GrShader@{GrShader}}
+\subsubsection[{GetName}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf UPath}\& GrShader::GetName () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_shader_adfcd8e36a3b4d3b12fc77b009c6f1c6}
+
+
+
+
+Definition at line 72 of file GrShader.h.\hypertarget{class_gr_shader_43d8fd833e55e423dc8ac3d49ccc36ba}{
+\index{GrShader@{GrShader}!GetUserParamHandle@{GetUserParamHandle}}
+\index{GetUserParamHandle@{GetUserParamHandle}!GrShader@{GrShader}}
+\subsubsection[{GetUserParamHandle}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrShader::GetUserParamHandle (const char $\ast$ {\em name})}}
+\label{class_gr_shader_43d8fd833e55e423dc8ac3d49ccc36ba}
+
+
+
+
+Definition at line 252 of file GrShader.cpp.\hypertarget{class_gr_shader_e95cb134961fe00f4c4cd59e52d2d136}{
+\index{GrShader@{GrShader}!InitUserParam@{InitUserParam}}
+\index{InitUserParam@{InitUserParam}!GrShader@{GrShader}}
+\subsubsection[{InitUserParam}]{\setlength{\rightskip}{0pt plus 5cm}bool GrShader::InitUserParam (const char $\ast$ {\em name}, \/  unsigned int {\em handle})}}
+\label{class_gr_shader_e95cb134961fe00f4c4cd59e52d2d136}
+
+
+
+
+Definition at line 214 of file GrShader.cpp.\hypertarget{class_gr_shader_64b1416ca1fd91ff9da4a37bbbf5bb0e}{
+\index{GrShader@{GrShader}!IsGLSamplerUsed@{IsGLSamplerUsed}}
+\index{IsGLSamplerUsed@{IsGLSamplerUsed}!GrShader@{GrShader}}
+\subsubsection[{IsGLSamplerUsed}]{\setlength{\rightskip}{0pt plus 5cm}bool GrShader::IsGLSamplerUsed ({\bf EGRQUALITY} {\em quality}, \/  unsigned int {\em texUnit})}}
+\label{class_gr_shader_64b1416ca1fd91ff9da4a37bbbf5bb0e}
+
+
+
+
+Definition at line 115 of file GrShader.cpp.\hypertarget{class_gr_shader_e40cd62323e0186bd30977b00617516e}{
+\index{GrShader@{GrShader}!IsGLSamplerUsed@{IsGLSamplerUsed}}
+\index{IsGLSamplerUsed@{IsGLSamplerUsed}!GrShader@{GrShader}}
+\subsubsection[{IsGLSamplerUsed}]{\setlength{\rightskip}{0pt plus 5cm}bool GrShader::IsGLSamplerUsed (unsigned int {\em texUnit})}}
+\label{class_gr_shader_e40cd62323e0186bd30977b00617516e}
+
+
+
+
+Definition at line 99 of file GrShader.cpp.\hypertarget{class_gr_shader_5a508bd00cf8c3536028294bc8f6badc}{
+\index{GrShader@{GrShader}!PostContextReset@{PostContextReset}}
+\index{PostContextReset@{PostContextReset}!GrShader@{GrShader}}
+\subsubsection[{PostContextReset}]{\setlength{\rightskip}{0pt plus 5cm}void GrShader::PostContextReset ()}}
+\label{class_gr_shader_5a508bd00cf8c3536028294bc8f6badc}
+
+
+
+
+Definition at line 403 of file GrShader.cpp.\hypertarget{class_gr_shader_2e574044a7d47d0a07d49a8a6f82fe06}{
+\index{GrShader@{GrShader}!PreContextReset@{PreContextReset}}
+\index{PreContextReset@{PreContextReset}!GrShader@{GrShader}}
+\subsubsection[{PreContextReset}]{\setlength{\rightskip}{0pt plus 5cm}void GrShader::PreContextReset ()}}
+\label{class_gr_shader_2e574044a7d47d0a07d49a8a6f82fe06}
+
+
+
+
+Definition at line 390 of file GrShader.cpp.\hypertarget{class_gr_shader_f9ce91e69a32ecd1ec6aa457c5fff942}{
+\index{GrShader@{GrShader}!Rebuild@{Rebuild}}
+\index{Rebuild@{Rebuild}!GrShader@{GrShader}}
+\subsubsection[{Rebuild}]{\setlength{\rightskip}{0pt plus 5cm}bool GrShader::Rebuild (const {\bf tstring} \& {\em vSource}, \/  const {\bf tstring} \& {\em fSource})}}
+\label{class_gr_shader_f9ce91e69a32ecd1ec6aa457c5fff942}
+
+
+
+
+Definition at line 78 of file GrShader.cpp.\hypertarget{class_gr_shader_151b6e0ff7c3e9fa37c5bc2498e752fe}{
+\index{GrShader@{GrShader}!SetEngineParam4fv@{SetEngineParam4fv}}
+\index{SetEngineParam4fv@{SetEngineParam4fv}!GrShader@{GrShader}}
+\subsubsection[{SetEngineParam4fv}]{\setlength{\rightskip}{0pt plus 5cm}void GrShader::SetEngineParam4fv ({\bf EPARAM} {\em param}, \/  const float $\ast$ {\em data})}}
+\label{class_gr_shader_151b6e0ff7c3e9fa37c5bc2498e752fe}
+
+
+
+
+Definition at line 292 of file GrShader.cpp.\hypertarget{class_gr_shader_ba8fee7b0196c1585178d3248e7cc7ca}{
+\index{GrShader@{GrShader}!SetEngineParam4x2fv@{SetEngineParam4x2fv}}
+\index{SetEngineParam4x2fv@{SetEngineParam4x2fv}!GrShader@{GrShader}}
+\subsubsection[{SetEngineParam4x2fv}]{\setlength{\rightskip}{0pt plus 5cm}void GrShader::SetEngineParam4x2fv ({\bf EPARAM} {\em paramStart}, \/  const float $\ast$ {\em data})}}
+\label{class_gr_shader_ba8fee7b0196c1585178d3248e7cc7ca}
+
+
+
+
+Definition at line 314 of file GrShader.cpp.\hypertarget{class_gr_shader_8566055ca06bc953e0b58f6856b07a2b}{
+\index{GrShader@{GrShader}!SetEngineParam4x3fv@{SetEngineParam4x3fv}}
+\index{SetEngineParam4x3fv@{SetEngineParam4x3fv}!GrShader@{GrShader}}
+\subsubsection[{SetEngineParam4x3fv}]{\setlength{\rightskip}{0pt plus 5cm}void GrShader::SetEngineParam4x3fv ({\bf EPARAM} {\em paramStart}, \/  const float $\ast$ {\em data})}}
+\label{class_gr_shader_8566055ca06bc953e0b58f6856b07a2b}
+
+
+
+
+Definition at line 336 of file GrShader.cpp.\hypertarget{class_gr_shader_c054492b117be764f4fd2440b7bd1020}{
+\index{GrShader@{GrShader}!SetEngineParam4x4fv@{SetEngineParam4x4fv}}
+\index{SetEngineParam4x4fv@{SetEngineParam4x4fv}!GrShader@{GrShader}}
+\subsubsection[{SetEngineParam4x4fv}]{\setlength{\rightskip}{0pt plus 5cm}void GrShader::SetEngineParam4x4fv ({\bf EPARAM} {\em paramStart}, \/  const float $\ast$ {\em data})}}
+\label{class_gr_shader_c054492b117be764f4fd2440b7bd1020}
+
+
+
+
+Definition at line 357 of file GrShader.cpp.\hypertarget{class_gr_shader_8521f7e58ccb0116d07e2c501ae06f87}{
+\index{GrShader@{GrShader}!SetUserParam4fv@{SetUserParam4fv}}
+\index{SetUserParam4fv@{SetUserParam4fv}!GrShader@{GrShader}}
+\subsubsection[{SetUserParam4fv}]{\setlength{\rightskip}{0pt plus 5cm}void GrShader::SetUserParam4fv (unsigned int {\em handle}, \/  const float $\ast$ {\em data})}}
+\label{class_gr_shader_8521f7e58ccb0116d07e2c501ae06f87}
+
+
+
+
+Definition at line 268 of file GrShader.cpp.\hypertarget{class_gr_shader_420e8f1956844878d2a8aeb09f0ab888}{
+\index{GrShader@{GrShader}!Validate@{Validate}}
+\index{Validate@{Validate}!GrShader@{GrShader}}
+\subsubsection[{Validate}]{\setlength{\rightskip}{0pt plus 5cm}void GrShader::Validate ()}}
+\label{class_gr_shader_420e8f1956844878d2a8aeb09f0ab888}
+
+
+
+
+Definition at line 177 of file GrShader.cpp.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_gr_shader_32d823afd380bcdf283ed2e667cf66cb}{
+\index{GrShader@{GrShader}!kMaxUserParams@{kMaxUserParams}}
+\index{kMaxUserParams@{kMaxUserParams}!GrShader@{GrShader}}
+\subsubsection[{kMaxUserParams}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int {\bf GrShader::kMaxUserParams} = 128\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_gr_shader_32d823afd380bcdf283ed2e667cf66cb}
+
+
+
+
+Definition at line 25 of file GrShader.h.\hypertarget{class_gr_shader_cbaa822de5def45617ccfb833996864e}{
+\index{GrShader@{GrShader}!kMaxUserSamplers@{kMaxUserSamplers}}
+\index{kMaxUserSamplers@{kMaxUserSamplers}!GrShader@{GrShader}}
+\subsubsection[{kMaxUserSamplers}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int {\bf GrShader::kMaxUserSamplers} = 32\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{class_gr_shader_cbaa822de5def45617ccfb833996864e}
+
+
+
+
+Definition at line 26 of file GrShader.h.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_shader_8h}{GrShader.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_shader_8cpp}{GrShader.cpp}\end{CompactItemize}

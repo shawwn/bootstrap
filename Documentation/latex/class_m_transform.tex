@@ -1,0 +1,135 @@
+\hypertarget{class_m_transform}{
+\section{MTransform Class Reference}
+\label{class_m_transform}\index{MTransform@{MTransform}}
+}
+{\tt \#include $<$MTransform.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_m_transform_bd1c3dd3a80e286f0e6ffd17def8a557}{MTransform} ()
+\item 
+\hyperlink{class_m_transform_c9aa57f7524bcb418dcad3b4d79c34b8}{$\sim$MTransform} ()
+\item 
+void \hyperlink{class_m_transform_4f347dd6c167f29787ddc340d4a96473}{SetRotatePivot} (const \hyperlink{class_m_vec3}{MVec3} \&pivot)
+\item 
+void \hyperlink{class_m_transform_135a0c870171bbab7fe4279da97b7ac5}{SetScalePivot} (const \hyperlink{class_m_vec3}{MVec3} \&pivot)
+\item 
+void \hyperlink{class_m_transform_a56f36653e8601d3a42a03b661ec161d}{SetRotate} (const \hyperlink{class_m_mat3x3}{MMat3x3} \&rotate)
+\item 
+void \hyperlink{class_m_transform_cb73de272c406f5aede802ff4eea8e9b}{SetScale} (float \hyperlink{glext__bak_8h_281421b881aa7a1266842b73a3bc7655}{scale})
+\item 
+void \hyperlink{class_m_transform_f102cc4b732847ed592765b10f779234}{SetTranslate} (const \hyperlink{class_m_vec3}{MVec3} \&translate)
+\item 
+const \hyperlink{class_m_mat3x3}{MMat3x3} \& \hyperlink{class_m_transform_53ce8dc029fa701a72791d21d8ed33a9}{GetRotate} () const 
+\item 
+float \hyperlink{class_m_transform_89bb1d5f72e0173f89592f635faf4f3a}{GetScale} () const 
+\item 
+const \hyperlink{class_m_vec3}{MVec3} \& \hyperlink{class_m_transform_21c3104d078729bfb76802128112c0d5}{GetTranslate} () const 
+\item 
+const \hyperlink{class_m_mat4x4}{MMat4x4} \& \hyperlink{class_m_transform_15ca5661a8c5eebcc52eaedf0e656363}{GetMatrix} () const 
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 20 of file MTransform.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_m_transform_bd1c3dd3a80e286f0e6ffd17def8a557}{
+\index{MTransform@{MTransform}!MTransform@{MTransform}}
+\index{MTransform@{MTransform}!MTransform@{MTransform}}
+\subsubsection[{MTransform}]{\setlength{\rightskip}{0pt plus 5cm}MTransform::MTransform ()}}
+\label{class_m_transform_bd1c3dd3a80e286f0e6ffd17def8a557}
+
+
+
+
+Definition at line 24 of file MTransform.cpp.\hypertarget{class_m_transform_c9aa57f7524bcb418dcad3b4d79c34b8}{
+\index{MTransform@{MTransform}!$\sim$MTransform@{$\sim$MTransform}}
+\index{$\sim$MTransform@{$\sim$MTransform}!MTransform@{MTransform}}
+\subsubsection[{$\sim$MTransform}]{\setlength{\rightskip}{0pt plus 5cm}MTransform::$\sim$MTransform ()}}
+\label{class_m_transform_c9aa57f7524bcb418dcad3b4d79c34b8}
+
+
+
+
+Definition at line 30 of file MTransform.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_m_transform_15ca5661a8c5eebcc52eaedf0e656363}{
+\index{MTransform@{MTransform}!GetMatrix@{GetMatrix}}
+\index{GetMatrix@{GetMatrix}!MTransform@{MTransform}}
+\subsubsection[{GetMatrix}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MMat4x4}\& MTransform::GetMatrix () const}}
+\label{class_m_transform_15ca5661a8c5eebcc52eaedf0e656363}
+
+
+\hypertarget{class_m_transform_53ce8dc029fa701a72791d21d8ed33a9}{
+\index{MTransform@{MTransform}!GetRotate@{GetRotate}}
+\index{GetRotate@{GetRotate}!MTransform@{MTransform}}
+\subsubsection[{GetRotate}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MMat3x3}\& MTransform::GetRotate () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_transform_53ce8dc029fa701a72791d21d8ed33a9}
+
+
+
+
+Definition at line 37 of file MTransform.h.\hypertarget{class_m_transform_89bb1d5f72e0173f89592f635faf4f3a}{
+\index{MTransform@{MTransform}!GetScale@{GetScale}}
+\index{GetScale@{GetScale}!MTransform@{MTransform}}
+\subsubsection[{GetScale}]{\setlength{\rightskip}{0pt plus 5cm}float MTransform::GetScale () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_transform_89bb1d5f72e0173f89592f635faf4f3a}
+
+
+
+
+Definition at line 38 of file MTransform.h.\hypertarget{class_m_transform_21c3104d078729bfb76802128112c0d5}{
+\index{MTransform@{MTransform}!GetTranslate@{GetTranslate}}
+\index{GetTranslate@{GetTranslate}!MTransform@{MTransform}}
+\subsubsection[{GetTranslate}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MVec3}\& MTransform::GetTranslate () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_m_transform_21c3104d078729bfb76802128112c0d5}
+
+
+
+
+Definition at line 39 of file MTransform.h.\hypertarget{class_m_transform_a56f36653e8601d3a42a03b661ec161d}{
+\index{MTransform@{MTransform}!SetRotate@{SetRotate}}
+\index{SetRotate@{SetRotate}!MTransform@{MTransform}}
+\subsubsection[{SetRotate}]{\setlength{\rightskip}{0pt plus 5cm}void MTransform::SetRotate (const {\bf MMat3x3} \& {\em rotate})}}
+\label{class_m_transform_a56f36653e8601d3a42a03b661ec161d}
+
+
+\hypertarget{class_m_transform_4f347dd6c167f29787ddc340d4a96473}{
+\index{MTransform@{MTransform}!SetRotatePivot@{SetRotatePivot}}
+\index{SetRotatePivot@{SetRotatePivot}!MTransform@{MTransform}}
+\subsubsection[{SetRotatePivot}]{\setlength{\rightskip}{0pt plus 5cm}void MTransform::SetRotatePivot (const {\bf MVec3} \& {\em pivot})}}
+\label{class_m_transform_4f347dd6c167f29787ddc340d4a96473}
+
+
+\hypertarget{class_m_transform_cb73de272c406f5aede802ff4eea8e9b}{
+\index{MTransform@{MTransform}!SetScale@{SetScale}}
+\index{SetScale@{SetScale}!MTransform@{MTransform}}
+\subsubsection[{SetScale}]{\setlength{\rightskip}{0pt plus 5cm}void MTransform::SetScale (float {\em scale})}}
+\label{class_m_transform_cb73de272c406f5aede802ff4eea8e9b}
+
+
+\hypertarget{class_m_transform_135a0c870171bbab7fe4279da97b7ac5}{
+\index{MTransform@{MTransform}!SetScalePivot@{SetScalePivot}}
+\index{SetScalePivot@{SetScalePivot}!MTransform@{MTransform}}
+\subsubsection[{SetScalePivot}]{\setlength{\rightskip}{0pt plus 5cm}void MTransform::SetScalePivot (const {\bf MVec3} \& {\em pivot})}}
+\label{class_m_transform_135a0c870171bbab7fe4279da97b7ac5}
+
+
+\hypertarget{class_m_transform_f102cc4b732847ed592765b10f779234}{
+\index{MTransform@{MTransform}!SetTranslate@{SetTranslate}}
+\index{SetTranslate@{SetTranslate}!MTransform@{MTransform}}
+\subsubsection[{SetTranslate}]{\setlength{\rightskip}{0pt plus 5cm}void MTransform::SetTranslate (const {\bf MVec3} \& {\em translate})}}
+\label{class_m_transform_f102cc4b732847ed592765b10f779234}
+
+
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_m_transform_8h}{MTransform.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Common/\hyperlink{_m_transform_8cpp}{MTransform.cpp}\end{CompactItemize}

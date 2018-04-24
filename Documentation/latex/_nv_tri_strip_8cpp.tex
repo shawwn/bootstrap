@@ -1,0 +1,135 @@
+\hypertarget{_nv_tri_strip_8cpp}{
+\section{C:/Bootstrap/ProjectBX/Engine/Graphics/NVTriStrip/NvTriStrip.cpp File Reference}
+\label{_nv_tri_strip_8cpp}\index{C:/Bootstrap/ProjectBX/Engine/Graphics/NVTriStrip/NvTriStrip.cpp@{C:/Bootstrap/ProjectBX/Engine/Graphics/NVTriStrip/NvTriStrip.cpp}}
+}
+{\tt \#include \char`\"{}graphics\_\-afx.h\char`\"{}}\par
+{\tt \#include \char`\"{}NvTriStripObjects.h\char`\"{}}\par
+{\tt \#include \char`\"{}NvTriStrip.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+void \hyperlink{_nv_tri_strip_8cpp_ea250778f4264c843e6efd52dde1ddaa}{EnableRestart} (const unsigned int \_\-restartVal)
+\item 
+void \hyperlink{_nv_tri_strip_8cpp_f8a1a940146f638ceec15b48d2ea3fc9}{DisableRestart} ()
+\item 
+void \hyperlink{_nv_tri_strip_8cpp_679d6c4e3029fad419a18d72b27cec50}{SetListsOnly} (const bool \_\-bListsOnly)
+\item 
+void \hyperlink{_nv_tri_strip_8cpp_f3bac380a50c3109d03239d4f654ad0d}{SetCacheSize} (const unsigned int \_\-cacheSize)
+\item 
+void \hyperlink{_nv_tri_strip_8cpp_3e0a869b6244aeb4f3dd654e6b207eaa}{SetStitchStrips} (const bool \_\-bStitchStrips)
+\item 
+void \hyperlink{_nv_tri_strip_8cpp_51bc14d6af7002b420d51a95fdc8d6cb}{SetMinStripSize} (const unsigned int \_\-minStripSize)
+\item 
+void \hyperlink{_nv_tri_strip_8cpp_a5971bb0c00818ec6babc6a5b7eac2f7}{Cleanup} (\hyperlink{_nv_tri_strip_objects_8h_83f9ba7bd0288dc93c5eed20e7f61170}{NvStripInfoVec} \&tempStrips, \hyperlink{_nv_tri_strip_objects_8h_93d0a2f26991e801145908bc4d3d9156}{NvFaceInfoVec} \&tempFaces)
+\item 
+bool \hyperlink{_nv_tri_strip_8cpp_49159a65e4d6601870200eecec3e048b}{SameTriangle} (unsigned short firstTri0, unsigned short firstTri1, unsigned short firstTri2, unsigned short secondTri0, unsigned short secondTri1, unsigned short secondTri2)
+\item 
+bool \hyperlink{_nv_tri_strip_8cpp_8546643407bb6fe9eb2be88709be90b4}{TestTriangle} (const unsigned short \hyperlink{glext__bak_8h_8f5597b6002609ead33af221dcf29790}{v0}, const unsigned short \hyperlink{glext__bak_8h_435c176a02c061b43e19bdf7c86cceae}{v1}, const unsigned short \hyperlink{glext__bak_8h_0928f6d0f0f794ba000a21dfae422136}{v2}, const std::vector$<$ \hyperlink{class_nv_face_info}{NvFaceInfo} $>$ $\ast$in\_\-bins, const int NUMBINS)
+\item 
+bool \hyperlink{_nv_tri_strip_8cpp_dcc882bdf980a6e4657fb45fd30b6a56}{GenerateStrips} (const unsigned short $\ast$in\_\-indices, const unsigned int in\_\-numIndices, \hyperlink{struct_primitive_group}{PrimitiveGroup} $\ast$$\ast$primGroups, unsigned short $\ast$numGroups, bool validateEnabled)
+\item 
+void \hyperlink{_nv_tri_strip_8cpp_3cd0c2d04497eadd87e892a467e48bb2}{RemapIndices} (const \hyperlink{struct_primitive_group}{PrimitiveGroup} $\ast$in\_\-primGroups, const unsigned short numGroups, const unsigned short numVerts, \hyperlink{struct_primitive_group}{PrimitiveGroup} $\ast$$\ast$remappedGroups)
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_nv_tri_strip_8cpp_a5971bb0c00818ec6babc6a5b7eac2f7}{
+\index{NvTriStrip.cpp@{NvTriStrip.cpp}!Cleanup@{Cleanup}}
+\index{Cleanup@{Cleanup}!NvTriStrip.cpp@{NvTriStrip.cpp}}
+\subsubsection[{Cleanup}]{\setlength{\rightskip}{0pt plus 5cm}void Cleanup ({\bf NvStripInfoVec} \& {\em tempStrips}, \/  {\bf NvFaceInfoVec} \& {\em tempFaces})}}
+\label{_nv_tri_strip_8cpp_a5971bb0c00818ec6babc6a5b7eac2f7}
+
+
+
+
+Definition at line 89 of file NvTriStrip.cpp.\hypertarget{_nv_tri_strip_8cpp_f8a1a940146f638ceec15b48d2ea3fc9}{
+\index{NvTriStrip.cpp@{NvTriStrip.cpp}!DisableRestart@{DisableRestart}}
+\index{DisableRestart@{DisableRestart}!NvTriStrip.cpp@{NvTriStrip.cpp}}
+\subsubsection[{DisableRestart}]{\setlength{\rightskip}{0pt plus 5cm}void DisableRestart ()}}
+\label{_nv_tri_strip_8cpp_f8a1a940146f638ceec15b48d2ea3fc9}
+
+
+
+
+Definition at line 24 of file NvTriStrip.cpp.\hypertarget{_nv_tri_strip_8cpp_ea250778f4264c843e6efd52dde1ddaa}{
+\index{NvTriStrip.cpp@{NvTriStrip.cpp}!EnableRestart@{EnableRestart}}
+\index{EnableRestart@{EnableRestart}!NvTriStrip.cpp@{NvTriStrip.cpp}}
+\subsubsection[{EnableRestart}]{\setlength{\rightskip}{0pt plus 5cm}void EnableRestart (const unsigned int {\em \_\-restartVal})}}
+\label{_nv_tri_strip_8cpp_ea250778f4264c843e6efd52dde1ddaa}
+
+
+
+
+Definition at line 18 of file NvTriStrip.cpp.\hypertarget{_nv_tri_strip_8cpp_dcc882bdf980a6e4657fb45fd30b6a56}{
+\index{NvTriStrip.cpp@{NvTriStrip.cpp}!GenerateStrips@{GenerateStrips}}
+\index{GenerateStrips@{GenerateStrips}!NvTriStrip.cpp@{NvTriStrip.cpp}}
+\subsubsection[{GenerateStrips}]{\setlength{\rightskip}{0pt plus 5cm}bool GenerateStrips (const unsigned short $\ast$ {\em in\_\-indices}, \/  const unsigned int {\em in\_\-numIndices}, \/  {\bf PrimitiveGroup} $\ast$$\ast$ {\em primGroups}, \/  unsigned short $\ast$ {\em numGroups}, \/  bool {\em validateEnabled})}}
+\label{_nv_tri_strip_8cpp_dcc882bdf980a6e4657fb45fd30b6a56}
+
+
+
+
+Definition at line 214 of file NvTriStrip.cpp.\hypertarget{_nv_tri_strip_8cpp_3cd0c2d04497eadd87e892a467e48bb2}{
+\index{NvTriStrip.cpp@{NvTriStrip.cpp}!RemapIndices@{RemapIndices}}
+\index{RemapIndices@{RemapIndices}!NvTriStrip.cpp@{NvTriStrip.cpp}}
+\subsubsection[{RemapIndices}]{\setlength{\rightskip}{0pt plus 5cm}void RemapIndices (const {\bf PrimitiveGroup} $\ast$ {\em in\_\-primGroups}, \/  const unsigned short {\em numGroups}, \/  const unsigned short {\em numVerts}, \/  {\bf PrimitiveGroup} $\ast$$\ast$ {\em remappedGroups})}}
+\label{_nv_tri_strip_8cpp_3cd0c2d04497eadd87e892a467e48bb2}
+
+
+
+
+Definition at line 464 of file NvTriStrip.cpp.\hypertarget{_nv_tri_strip_8cpp_49159a65e4d6601870200eecec3e048b}{
+\index{NvTriStrip.cpp@{NvTriStrip.cpp}!SameTriangle@{SameTriangle}}
+\index{SameTriangle@{SameTriangle}!NvTriStrip.cpp@{NvTriStrip.cpp}}
+\subsubsection[{SameTriangle}]{\setlength{\rightskip}{0pt plus 5cm}bool SameTriangle (unsigned short {\em firstTri0}, \/  unsigned short {\em firstTri1}, \/  unsigned short {\em firstTri2}, \/  unsigned short {\em secondTri0}, \/  unsigned short {\em secondTri1}, \/  unsigned short {\em secondTri2})}}
+\label{_nv_tri_strip_8cpp_49159a65e4d6601870200eecec3e048b}
+
+
+
+
+Definition at line 120 of file NvTriStrip.cpp.\hypertarget{_nv_tri_strip_8cpp_f3bac380a50c3109d03239d4f654ad0d}{
+\index{NvTriStrip.cpp@{NvTriStrip.cpp}!SetCacheSize@{SetCacheSize}}
+\index{SetCacheSize@{SetCacheSize}!NvTriStrip.cpp@{NvTriStrip.cpp}}
+\subsubsection[{SetCacheSize}]{\setlength{\rightskip}{0pt plus 5cm}void SetCacheSize (const unsigned int {\em \_\-cacheSize})}}
+\label{_nv_tri_strip_8cpp_f3bac380a50c3109d03239d4f654ad0d}
+
+
+
+
+Definition at line 51 of file NvTriStrip.cpp.\hypertarget{_nv_tri_strip_8cpp_679d6c4e3029fad419a18d72b27cec50}{
+\index{NvTriStrip.cpp@{NvTriStrip.cpp}!SetListsOnly@{SetListsOnly}}
+\index{SetListsOnly@{SetListsOnly}!NvTriStrip.cpp@{NvTriStrip.cpp}}
+\subsubsection[{SetListsOnly}]{\setlength{\rightskip}{0pt plus 5cm}void SetListsOnly (const bool {\em \_\-bListsOnly})}}
+\label{_nv_tri_strip_8cpp_679d6c4e3029fad419a18d72b27cec50}
+
+
+
+
+Definition at line 36 of file NvTriStrip.cpp.\hypertarget{_nv_tri_strip_8cpp_51bc14d6af7002b420d51a95fdc8d6cb}{
+\index{NvTriStrip.cpp@{NvTriStrip.cpp}!SetMinStripSize@{SetMinStripSize}}
+\index{SetMinStripSize@{SetMinStripSize}!NvTriStrip.cpp@{NvTriStrip.cpp}}
+\subsubsection[{SetMinStripSize}]{\setlength{\rightskip}{0pt plus 5cm}void SetMinStripSize (const unsigned int {\em \_\-minStripSize})}}
+\label{_nv_tri_strip_8cpp_51bc14d6af7002b420d51a95fdc8d6cb}
+
+
+
+
+Definition at line 81 of file NvTriStrip.cpp.\hypertarget{_nv_tri_strip_8cpp_3e0a869b6244aeb4f3dd654e6b207eaa}{
+\index{NvTriStrip.cpp@{NvTriStrip.cpp}!SetStitchStrips@{SetStitchStrips}}
+\index{SetStitchStrips@{SetStitchStrips}!NvTriStrip.cpp@{NvTriStrip.cpp}}
+\subsubsection[{SetStitchStrips}]{\setlength{\rightskip}{0pt plus 5cm}void SetStitchStrips (const bool {\em \_\-bStitchStrips})}}
+\label{_nv_tri_strip_8cpp_3e0a869b6244aeb4f3dd654e6b207eaa}
+
+
+
+
+Definition at line 67 of file NvTriStrip.cpp.\hypertarget{_nv_tri_strip_8cpp_8546643407bb6fe9eb2be88709be90b4}{
+\index{NvTriStrip.cpp@{NvTriStrip.cpp}!TestTriangle@{TestTriangle}}
+\index{TestTriangle@{TestTriangle}!NvTriStrip.cpp@{NvTriStrip.cpp}}
+\subsubsection[{TestTriangle}]{\setlength{\rightskip}{0pt plus 5cm}bool TestTriangle (const unsigned short {\em v0}, \/  const unsigned short {\em v1}, \/  const unsigned short {\em v2}, \/  const std::vector$<$ {\bf NvFaceInfo} $>$ $\ast$ {\em in\_\-bins}, \/  const int {\em NUMBINS})}}
+\label{_nv_tri_strip_8cpp_8546643407bb6fe9eb2be88709be90b4}
+
+
+
+
+Definition at line 154 of file NvTriStrip.cpp.

@@ -1,0 +1,119 @@
+\hypertarget{_gr_polygon_group_8cpp}{
+\section{C:/Bootstrap/ProjectBX/Engine/Graphics/GrPolygonGroup.cpp File Reference}
+\label{_gr_polygon_group_8cpp}\index{C:/Bootstrap/ProjectBX/Engine/Graphics/GrPolygonGroup.cpp@{C:/Bootstrap/ProjectBX/Engine/Graphics/GrPolygonGroup.cpp}}
+}
+{\tt \#include \char`\"{}graphics\_\-afx.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrPolygonGroup.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrPolygon.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrMeshInst.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrMesh.h\char`\"{}}\par
+{\tt \#include \char`\"{}MPlane.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrMaterial.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrTextureBase.h\char`\"{}}\par
+{\tt \#include \char`\"{}MSphere.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrSkin.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrTexture.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrPolygonBITree.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrCalcTangents.h\char`\"{}}\par
+{\tt \#include \char`\"{}GrUberTexture.h\char`\"{}}\par
+{\tt \#include $<$vector$>$}\par
+{\tt \#include $<$algorithm$>$}\par
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+class \hyperlink{class_poly_mat_cmp}{PolyMatCmp}
+\item 
+struct \hyperlink{struct_s_simple_polygon}{SSimplePolygon}
+\item 
+struct \hyperlink{struct_s_line_height_range}{SLineHeightRange}
+\end{CompactItemize}
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \hyperlink{_gr_polygon_group_8cpp_b09ee0b40519668a6e27d7b07921a9db}{USE\_\-APPROX\_\-COMPARE}~1
+\item 
+\#define \hyperlink{_gr_polygon_group_8cpp_e0f46c846cc714bc91c2d64d736c4791}{INDEXIFY\_\-RANGES\_\-SEPARATE}~1
+\item 
+\#define \hyperlink{_gr_polygon_group_8cpp_e680c9539eb76f05dd8330b6e65897eb}{TO\_\-FIXED\_\-18}(\hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x})~( ( int )( ( double )( \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x} ) $\ast$ 262144.0 + 0.5 $\ast$ Sign( \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x} ) ) )
+\item 
+\#define \hyperlink{_gr_polygon_group_8cpp_fbad844d782d7a357d2c20a479892e88}{TO\_\-FIXED\_\-10}(\hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x})~( ( int )( ( double )( \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x} ) $\ast$ 1024.0 + 0.5 $\ast$ Sign( \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x} ) ) )
+\item 
+\#define \hyperlink{_gr_polygon_group_8cpp_4ddf448d15b8e574ccc0229822b8469a}{TO\_\-FIXED\_\-8}(\hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x})~( ( int )( ( double )( \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x} ) $\ast$ 256.0 + 0.5 $\ast$ Sign( \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x} ) ) )
+\item 
+\#define \hyperlink{_gr_polygon_group_8cpp_2e25aab783a65f7d0c9e8000311324c3}{TO\_\-FIXED\_\-0}(\hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x})~( ( int )( ( double )( \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x} ) $\ast$ 0.0 + 0.5 $\ast$ Sign( \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x} ) ) )
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+{\footnotesize template$<$typename \_\-T , typename iterator $>$ }\\\_\-T $\ast$ \hyperlink{_gr_polygon_group_8cpp_121886848e5ea9e2a8cae30364d4ced6}{CopyVector} (iterator begin, iterator \hyperlink{glext__bak_8h_432111147038972f06e049e18a837002}{end}, size\_\-t \hyperlink{wglext_8h_98d18d6b4e3ba4ed266c6fb54c839d70}{count})
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_gr_polygon_group_8cpp_e0f46c846cc714bc91c2d64d736c4791}{
+\index{GrPolygonGroup.cpp@{GrPolygonGroup.cpp}!INDEXIFY\_\-RANGES\_\-SEPARATE@{INDEXIFY\_\-RANGES\_\-SEPARATE}}
+\index{INDEXIFY\_\-RANGES\_\-SEPARATE@{INDEXIFY\_\-RANGES\_\-SEPARATE}!GrPolygonGroup.cpp@{GrPolygonGroup.cpp}}
+\subsubsection[{INDEXIFY\_\-RANGES\_\-SEPARATE}]{\setlength{\rightskip}{0pt plus 5cm}\#define INDEXIFY\_\-RANGES\_\-SEPARATE~1}}
+\label{_gr_polygon_group_8cpp_e0f46c846cc714bc91c2d64d736c4791}
+
+
+
+
+Definition at line 35 of file GrPolygonGroup.cpp.\hypertarget{_gr_polygon_group_8cpp_2e25aab783a65f7d0c9e8000311324c3}{
+\index{GrPolygonGroup.cpp@{GrPolygonGroup.cpp}!TO\_\-FIXED\_\-0@{TO\_\-FIXED\_\-0}}
+\index{TO\_\-FIXED\_\-0@{TO\_\-FIXED\_\-0}!GrPolygonGroup.cpp@{GrPolygonGroup.cpp}}
+\subsubsection[{TO\_\-FIXED\_\-0}]{\setlength{\rightskip}{0pt plus 5cm}\#define TO\_\-FIXED\_\-0({\bf x})~( ( int )( ( double )( {\bf x} ) $\ast$ 0.0 + 0.5 $\ast$ Sign( {\bf x} ) ) )}}
+\label{_gr_polygon_group_8cpp_2e25aab783a65f7d0c9e8000311324c3}
+
+
+
+
+Definition at line 40 of file GrPolygonGroup.cpp.\hypertarget{_gr_polygon_group_8cpp_fbad844d782d7a357d2c20a479892e88}{
+\index{GrPolygonGroup.cpp@{GrPolygonGroup.cpp}!TO\_\-FIXED\_\-10@{TO\_\-FIXED\_\-10}}
+\index{TO\_\-FIXED\_\-10@{TO\_\-FIXED\_\-10}!GrPolygonGroup.cpp@{GrPolygonGroup.cpp}}
+\subsubsection[{TO\_\-FIXED\_\-10}]{\setlength{\rightskip}{0pt plus 5cm}\#define TO\_\-FIXED\_\-10({\bf x})~( ( int )( ( double )( {\bf x} ) $\ast$ 1024.0 + 0.5 $\ast$ Sign( {\bf x} ) ) )}}
+\label{_gr_polygon_group_8cpp_fbad844d782d7a357d2c20a479892e88}
+
+
+
+
+Definition at line 38 of file GrPolygonGroup.cpp.\hypertarget{_gr_polygon_group_8cpp_e680c9539eb76f05dd8330b6e65897eb}{
+\index{GrPolygonGroup.cpp@{GrPolygonGroup.cpp}!TO\_\-FIXED\_\-18@{TO\_\-FIXED\_\-18}}
+\index{TO\_\-FIXED\_\-18@{TO\_\-FIXED\_\-18}!GrPolygonGroup.cpp@{GrPolygonGroup.cpp}}
+\subsubsection[{TO\_\-FIXED\_\-18}]{\setlength{\rightskip}{0pt plus 5cm}\#define TO\_\-FIXED\_\-18({\bf x})~( ( int )( ( double )( {\bf x} ) $\ast$ 262144.0 + 0.5 $\ast$ Sign( {\bf x} ) ) )}}
+\label{_gr_polygon_group_8cpp_e680c9539eb76f05dd8330b6e65897eb}
+
+
+
+
+Definition at line 37 of file GrPolygonGroup.cpp.\hypertarget{_gr_polygon_group_8cpp_4ddf448d15b8e574ccc0229822b8469a}{
+\index{GrPolygonGroup.cpp@{GrPolygonGroup.cpp}!TO\_\-FIXED\_\-8@{TO\_\-FIXED\_\-8}}
+\index{TO\_\-FIXED\_\-8@{TO\_\-FIXED\_\-8}!GrPolygonGroup.cpp@{GrPolygonGroup.cpp}}
+\subsubsection[{TO\_\-FIXED\_\-8}]{\setlength{\rightskip}{0pt plus 5cm}\#define TO\_\-FIXED\_\-8({\bf x})~( ( int )( ( double )( {\bf x} ) $\ast$ 256.0 + 0.5 $\ast$ Sign( {\bf x} ) ) )}}
+\label{_gr_polygon_group_8cpp_4ddf448d15b8e574ccc0229822b8469a}
+
+
+
+
+Definition at line 39 of file GrPolygonGroup.cpp.\hypertarget{_gr_polygon_group_8cpp_b09ee0b40519668a6e27d7b07921a9db}{
+\index{GrPolygonGroup.cpp@{GrPolygonGroup.cpp}!USE\_\-APPROX\_\-COMPARE@{USE\_\-APPROX\_\-COMPARE}}
+\index{USE\_\-APPROX\_\-COMPARE@{USE\_\-APPROX\_\-COMPARE}!GrPolygonGroup.cpp@{GrPolygonGroup.cpp}}
+\subsubsection[{USE\_\-APPROX\_\-COMPARE}]{\setlength{\rightskip}{0pt plus 5cm}\#define USE\_\-APPROX\_\-COMPARE~1}}
+\label{_gr_polygon_group_8cpp_b09ee0b40519668a6e27d7b07921a9db}
+
+
+
+
+Definition at line 34 of file GrPolygonGroup.cpp.
+
+\subsection{Function Documentation}
+\hypertarget{_gr_polygon_group_8cpp_121886848e5ea9e2a8cae30364d4ced6}{
+\index{GrPolygonGroup.cpp@{GrPolygonGroup.cpp}!CopyVector@{CopyVector}}
+\index{CopyVector@{CopyVector}!GrPolygonGroup.cpp@{GrPolygonGroup.cpp}}
+\subsubsection[{CopyVector}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \_\-T , typename iterator $>$ \_\-T$\ast$ CopyVector (iterator {\em begin}, \/  iterator {\em end}, \/  size\_\-t {\em count})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{_gr_polygon_group_8cpp_121886848e5ea9e2a8cae30364d4ced6}
+
+
+
+
+Definition at line 70 of file GrPolygonGroup.cpp.

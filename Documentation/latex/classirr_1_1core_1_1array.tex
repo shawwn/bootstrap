@@ -1,0 +1,466 @@
+\hypertarget{classirr_1_1core_1_1array}{
+\section{irr::core::array$<$ T $>$ Class Template Reference}
+\label{classirr_1_1core_1_1array}\index{irr::core::array@{irr::core::array}}
+}
+Self reallocating template \hyperlink{classirr_1_1core_1_1array}{array} (like stl vector) with additional features.  
+
+
+{\tt \#include $<$irrArray.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{classirr_1_1core_1_1array_d078049b519999658db99cd7838dc034}{array} ()
+\item 
+\hyperlink{classirr_1_1core_1_1array_cdf3e210bef431b4b789d616c6048b56}{array} (\hyperlink{namespaceirr_0416a53257075833e7002efd0a18e804}{u32} start\_\-count)
+\item 
+\hyperlink{classirr_1_1core_1_1array_ddc7b26c37e43024be3240344ef7ae4b}{array} (const \hyperlink{classirr_1_1core_1_1array}{array}$<$ T $>$ \&other)
+\begin{CompactList}\small\item\em Copy constructor. \item\end{CompactList}\item 
+\hyperlink{classirr_1_1core_1_1array_66774d7073dfe9794c1190b4a9fee73c}{$\sim$array} ()
+\item 
+void \hyperlink{classirr_1_1core_1_1array_1fa222a8692a1e2da94bc7e86b75cdae}{reallocate} (\hyperlink{namespaceirr_0416a53257075833e7002efd0a18e804}{u32} new\_\-size)
+\item 
+void \hyperlink{classirr_1_1core_1_1array_95afc36513d08abb51bd399755730877}{push\_\-back} (const T \&element)
+\item 
+void \hyperlink{classirr_1_1core_1_1array_27ce37ef9e34e55d4f9987c62deda9d6}{push\_\-front} (const T \&element)
+\item 
+void \hyperlink{classirr_1_1core_1_1array_7dd91405226e52db0c5a26add9f8e106}{insert} (const T \&element, \hyperlink{namespaceirr_0416a53257075833e7002efd0a18e804}{u32} \hyperlink{glext__bak_8h_57f14e05b1900f16a2da82ade47d0c6d}{index}=0)
+\item 
+void \hyperlink{classirr_1_1core_1_1array_611c70809111b608a103f86e004d6eb7}{clear} ()
+\begin{CompactList}\small\item\em Clears the \hyperlink{classirr_1_1core_1_1array}{array} and deletes all allocated memory. \item\end{CompactList}\item 
+void \hyperlink{classirr_1_1core_1_1array_d0efa8d2ea5078580e5cea1848992a88}{set\_\-pointer} (T $\ast$newPointer, \hyperlink{namespaceirr_0416a53257075833e7002efd0a18e804}{u32} size)
+\item 
+void \hyperlink{classirr_1_1core_1_1array_0b66cac31609933337fb81bb4a518c8c}{set\_\-free\_\-when\_\-destroyed} (bool f)
+\item 
+void \hyperlink{classirr_1_1core_1_1array_0767f2095c59d44a73abf4a9fa9480ba}{set\_\-used} (\hyperlink{namespaceirr_0416a53257075833e7002efd0a18e804}{u32} usedNow)
+\item 
+void \hyperlink{classirr_1_1core_1_1array_a0f0ea56d18bb90eb5c8f286c7273a88}{operator=} (const \hyperlink{classirr_1_1core_1_1array}{array}$<$ T $>$ \&other)
+\begin{CompactList}\small\item\em Assignement operator. \item\end{CompactList}\item 
+T \& \hyperlink{classirr_1_1core_1_1array_67098e889f4e1f72e442f17dd50cff5f}{operator\mbox{[}$\,$\mbox{]}} (\hyperlink{namespaceirr_0416a53257075833e7002efd0a18e804}{u32} \hyperlink{glext__bak_8h_57f14e05b1900f16a2da82ade47d0c6d}{index})
+\begin{CompactList}\small\item\em Direct access operator. \item\end{CompactList}\item 
+const T \& \hyperlink{classirr_1_1core_1_1array_db02c1c24954863613a6f2ab0f316bf2}{operator\mbox{[}$\,$\mbox{]}} (\hyperlink{namespaceirr_0416a53257075833e7002efd0a18e804}{u32} \hyperlink{glext__bak_8h_57f14e05b1900f16a2da82ade47d0c6d}{index}) const 
+\begin{CompactList}\small\item\em Direct access operator. \item\end{CompactList}\item 
+const T \& \hyperlink{classirr_1_1core_1_1array_5424fdabc6ad12f503a15b2c4d7f6b0e}{getLast} () const 
+\begin{CompactList}\small\item\em Gets last frame. \item\end{CompactList}\item 
+T \& \hyperlink{classirr_1_1core_1_1array_142e1833faabec2b7578557fd12e72c2}{getLast} ()
+\begin{CompactList}\small\item\em Gets last frame. \item\end{CompactList}\item 
+T $\ast$ \hyperlink{classirr_1_1core_1_1array_fe5fd668b288ea14a585144c62d99c03}{pointer} ()
+\item 
+const T $\ast$ \hyperlink{classirr_1_1core_1_1array_bf62c8ec9581f618a4412721568b349e}{const\_\-pointer} () const 
+\item 
+\hyperlink{namespaceirr_0416a53257075833e7002efd0a18e804}{u32} \hyperlink{classirr_1_1core_1_1array_d63ccc83da39943532c7af164c7b7bcf}{size} () const 
+\item 
+\hyperlink{namespaceirr_0416a53257075833e7002efd0a18e804}{u32} \hyperlink{classirr_1_1core_1_1array_3291d7ce05c97ce6acf794f53718df63}{allocated\_\-size} () const 
+\item 
+bool \hyperlink{classirr_1_1core_1_1array_80b1c057a23ab3d3ca84db8737659943}{empty} () const 
+\item 
+void \hyperlink{classirr_1_1core_1_1array_d25908968e87d8c6a43f36a7143bc10b}{sort} ()
+\item 
+\hyperlink{namespaceirr_c66849b7a6ed16e30ebede579f9b47c6}{s32} \hyperlink{classirr_1_1core_1_1array_225b3bcb55293f18b90e069a979e44c6}{binary\_\-search} (const T \&element)
+\item 
+\hyperlink{namespaceirr_c66849b7a6ed16e30ebede579f9b47c6}{s32} \hyperlink{classirr_1_1core_1_1array_995506f4a479910947ebbf74a939aed4}{binary\_\-search} (const T \&element, \hyperlink{namespaceirr_c66849b7a6ed16e30ebede579f9b47c6}{s32} \hyperlink{glext_8h_85b8f6c07fbc1fb5d77c2ae090f21995}{left}, \hyperlink{namespaceirr_c66849b7a6ed16e30ebede579f9b47c6}{s32} \hyperlink{glext_8h_5ffadbbacc6b89cf6218bc43b384d3fe}{right})
+\item 
+\hyperlink{namespaceirr_c66849b7a6ed16e30ebede579f9b47c6}{s32} \hyperlink{classirr_1_1core_1_1array_917e0d2690b9871d2d13d9ec0a3626f5}{linear\_\-search} (T \&element)
+\item 
+\hyperlink{namespaceirr_c66849b7a6ed16e30ebede579f9b47c6}{s32} \hyperlink{classirr_1_1core_1_1array_4efb7d86fc42e6b29e932f983d6ffae0}{linear\_\-reverse\_\-search} (T \&element)
+\item 
+void \hyperlink{classirr_1_1core_1_1array_a28ffba81d9af68bdc76fb2df1e10428}{erase} (\hyperlink{namespaceirr_0416a53257075833e7002efd0a18e804}{u32} \hyperlink{glext__bak_8h_57f14e05b1900f16a2da82ade47d0c6d}{index})
+\item 
+void \hyperlink{classirr_1_1core_1_1array_2b749c99e727919254f1f0593fbd30ed}{erase} (\hyperlink{namespaceirr_0416a53257075833e7002efd0a18e804}{u32} \hyperlink{glext__bak_8h_57f14e05b1900f16a2da82ade47d0c6d}{index}, \hyperlink{namespaceirr_c66849b7a6ed16e30ebede579f9b47c6}{s32} \hyperlink{wglext_8h_98d18d6b4e3ba4ed266c6fb54c839d70}{count})
+\item 
+void \hyperlink{classirr_1_1core_1_1array_5322149d943e3a5b23dff3000f825a01}{set\_\-sorted} (bool \_\-is\_\-sorted)
+\begin{CompactList}\small\item\em Sets if the \hyperlink{classirr_1_1core_1_1array}{array} is sorted. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$ class irr::core::array$<$ T $>$}
+
+Self reallocating template \hyperlink{classirr_1_1core_1_1array}{array} (like stl vector) with additional features. 
+
+Some features are: Heap sorting, binary search methods, easier debugging. 
+
+Definition at line 20 of file irrArray.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classirr_1_1core_1_1array_d078049b519999658db99cd7838dc034}{
+\index{irr::core::array@{irr::core::array}!array@{array}}
+\index{array@{array}!irr::core::array@{irr::core::array}}
+\subsubsection[{array}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf irr::core::array}$<$ T $>$::{\bf array} ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1array_d078049b519999658db99cd7838dc034}
+
+
+
+
+Definition at line 25 of file irrArray.h.\hypertarget{classirr_1_1core_1_1array_cdf3e210bef431b4b789d616c6048b56}{
+\index{irr::core::array@{irr::core::array}!array@{array}}
+\index{array@{array}!irr::core::array@{irr::core::array}}
+\subsubsection[{array}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf irr::core::array}$<$ T $>$::{\bf array} ({\bf u32} {\em start\_\-count})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1array_cdf3e210bef431b4b789d616c6048b56}
+
+
+Constructs a \hyperlink{classirr_1_1core_1_1array}{array} and allocates an initial chunk of memory. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em start\_\-count,:}]Amount of elements to allocate. \end{description}
+\end{Desc}
+
+
+Definition at line 33 of file irrArray.h.\hypertarget{classirr_1_1core_1_1array_ddc7b26c37e43024be3240344ef7ae4b}{
+\index{irr::core::array@{irr::core::array}!array@{array}}
+\index{array@{array}!irr::core::array@{irr::core::array}}
+\subsubsection[{array}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf irr::core::array}$<$ T $>$::{\bf array} (const {\bf array}$<$ T $>$ \& {\em other})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1array_ddc7b26c37e43024be3240344ef7ae4b}
+
+
+Copy constructor. 
+
+
+
+Definition at line 42 of file irrArray.h.\hypertarget{classirr_1_1core_1_1array_66774d7073dfe9794c1190b4a9fee73c}{
+\index{irr::core::array@{irr::core::array}!$\sim$array@{$\sim$array}}
+\index{$\sim$array@{$\sim$array}!irr::core::array@{irr::core::array}}
+\subsubsection[{$\sim$array}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf irr::core::array}$<$ T $>$::$\sim${\bf array} ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1array_66774d7073dfe9794c1190b4a9fee73c}
+
+
+Destructor. Frees allocated memory, if set\_\-free\_\-when\_\-destroyed was not set to false by the user before. 
+
+Definition at line 52 of file irrArray.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{classirr_1_1core_1_1array_3291d7ce05c97ce6acf794f53718df63}{
+\index{irr::core::array@{irr::core::array}!allocated\_\-size@{allocated\_\-size}}
+\index{allocated\_\-size@{allocated\_\-size}!irr::core::array@{irr::core::array}}
+\subsubsection[{allocated\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf u32} {\bf irr::core::array}$<$ T $>$::allocated\_\-size () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1array_3291d7ce05c97ce6acf794f53718df63}
+
+
+Returns amount memory allocated. \begin{Desc}
+\item[Returns:]Returns amount of memory allocated. The amount of bytes allocated would be \hyperlink{classirr_1_1core_1_1array_3291d7ce05c97ce6acf794f53718df63}{allocated\_\-size()} $\ast$ sizeof(ElementsUsed); \end{Desc}
+
+
+Definition at line 279 of file irrArray.h.\hypertarget{classirr_1_1core_1_1array_995506f4a479910947ebbf74a939aed4}{
+\index{irr::core::array@{irr::core::array}!binary\_\-search@{binary\_\-search}}
+\index{binary\_\-search@{binary\_\-search}!irr::core::array@{irr::core::array}}
+\subsubsection[{binary\_\-search}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf s32} {\bf irr::core::array}$<$ T $>$::binary\_\-search (const T \& {\em element}, \/  {\bf s32} {\em left}, \/  {\bf s32} {\em right})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1array_995506f4a479910947ebbf74a939aed4}
+
+
+Performs a binary search for an element, returns -1 if not found. The \hyperlink{classirr_1_1core_1_1array}{array} will be sorted before the binary search if it is not already sorted. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em element,:}]Element to search for. \item[{\em left,:}]First left index \item[{\em right,:}]Last right index. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Returns position of the searched element if it was found, otherwise -1 is returned. \end{Desc}
+
+
+Definition at line 329 of file irrArray.h.\hypertarget{classirr_1_1core_1_1array_225b3bcb55293f18b90e069a979e44c6}{
+\index{irr::core::array@{irr::core::array}!binary\_\-search@{binary\_\-search}}
+\index{binary\_\-search@{binary\_\-search}!irr::core::array@{irr::core::array}}
+\subsubsection[{binary\_\-search}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf s32} {\bf irr::core::array}$<$ T $>$::binary\_\-search (const T \& {\em element})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1array_225b3bcb55293f18b90e069a979e44c6}
+
+
+Performs a binary search for an element, returns -1 if not found. The \hyperlink{classirr_1_1core_1_1array}{array} will be sorted before the binary search if it is not already sorted. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em element,:}]Element to search for. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Returns position of the searched element if it was found, otherwise -1 is returned. \end{Desc}
+
+
+Definition at line 314 of file irrArray.h.\hypertarget{classirr_1_1core_1_1array_611c70809111b608a103f86e004d6eb7}{
+\index{irr::core::array@{irr::core::array}!clear@{clear}}
+\index{clear@{clear}!irr::core::array@{irr::core::array}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf irr::core::array}$<$ T $>$::clear ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1array_611c70809111b608a103f86e004d6eb7}
+
+
+Clears the \hyperlink{classirr_1_1core_1_1array}{array} and deletes all allocated memory. 
+
+
+
+Definition at line 145 of file irrArray.h.\hypertarget{classirr_1_1core_1_1array_bf62c8ec9581f618a4412721568b349e}{
+\index{irr::core::array@{irr::core::array}!const\_\-pointer@{const\_\-pointer}}
+\index{const\_\-pointer@{const\_\-pointer}!irr::core::array@{irr::core::array}}
+\subsubsection[{const\_\-pointer}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ const T$\ast$ {\bf irr::core::array}$<$ T $>$::const\_\-pointer () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1array_bf62c8ec9581f618a4412721568b349e}
+
+
+Returns a const pointer to the \hyperlink{classirr_1_1core_1_1array}{array}. \begin{Desc}
+\item[Returns:]Pointer to the \hyperlink{classirr_1_1core_1_1array}{array}. \end{Desc}
+
+
+Definition at line 260 of file irrArray.h.\hypertarget{classirr_1_1core_1_1array_80b1c057a23ab3d3ca84db8737659943}{
+\index{irr::core::array@{irr::core::array}!empty@{empty}}
+\index{empty@{empty}!irr::core::array@{irr::core::array}}
+\subsubsection[{empty}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ bool {\bf irr::core::array}$<$ T $>$::empty () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1array_80b1c057a23ab3d3ca84db8737659943}
+
+
+Returns true if \hyperlink{classirr_1_1core_1_1array}{array} is empty \begin{Desc}
+\item[Returns:]True if the \hyperlink{classirr_1_1core_1_1array}{array} is empty, false if not. \end{Desc}
+
+
+Definition at line 288 of file irrArray.h.\hypertarget{classirr_1_1core_1_1array_2b749c99e727919254f1f0593fbd30ed}{
+\index{irr::core::array@{irr::core::array}!erase@{erase}}
+\index{erase@{erase}!irr::core::array@{irr::core::array}}
+\subsubsection[{erase}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf irr::core::array}$<$ T $>$::erase ({\bf u32} {\em index}, \/  {\bf s32} {\em count})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1array_2b749c99e727919254f1f0593fbd30ed}
+
+
+Erases some elements from the \hyperlink{classirr_1_1core_1_1array}{array}. may be slow, because all elements following after the erased element have to be copied. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em index,:}]Index of the first element to be erased. \item[{\em count,:}]Amount of elements to be erased. \end{description}
+\end{Desc}
+
+
+Definition at line 410 of file irrArray.h.\hypertarget{classirr_1_1core_1_1array_a28ffba81d9af68bdc76fb2df1e10428}{
+\index{irr::core::array@{irr::core::array}!erase@{erase}}
+\index{erase@{erase}!irr::core::array@{irr::core::array}}
+\subsubsection[{erase}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf irr::core::array}$<$ T $>$::erase ({\bf u32} {\em index})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1array_a28ffba81d9af68bdc76fb2df1e10428}
+
+
+Erases an element from the \hyperlink{classirr_1_1core_1_1array}{array}. May be slow, because all elements following after the erased element have to be copied. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em index,:}]Index of element to be erased. \end{description}
+\end{Desc}
+
+
+Definition at line 395 of file irrArray.h.\hypertarget{classirr_1_1core_1_1array_142e1833faabec2b7578557fd12e72c2}{
+\index{irr::core::array@{irr::core::array}!getLast@{getLast}}
+\index{getLast@{getLast}!irr::core::array@{irr::core::array}}
+\subsubsection[{getLast}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T\& {\bf irr::core::array}$<$ T $>$::getLast ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1array_142e1833faabec2b7578557fd12e72c2}
+
+
+Gets last frame. 
+
+
+
+Definition at line 241 of file irrArray.h.\hypertarget{classirr_1_1core_1_1array_5424fdabc6ad12f503a15b2c4d7f6b0e}{
+\index{irr::core::array@{irr::core::array}!getLast@{getLast}}
+\index{getLast@{getLast}!irr::core::array@{irr::core::array}}
+\subsubsection[{getLast}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ const T\& {\bf irr::core::array}$<$ T $>$::getLast () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1array_5424fdabc6ad12f503a15b2c4d7f6b0e}
+
+
+Gets last frame. 
+
+
+
+Definition at line 233 of file irrArray.h.\hypertarget{classirr_1_1core_1_1array_7dd91405226e52db0c5a26add9f8e106}{
+\index{irr::core::array@{irr::core::array}!insert@{insert}}
+\index{insert@{insert}!irr::core::array@{irr::core::array}}
+\subsubsection[{insert}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf irr::core::array}$<$ T $>$::insert (const T \& {\em element}, \/  {\bf u32} {\em index} = {\tt 0})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1array_7dd91405226e52db0c5a26add9f8e106}
+
+
+Insert item into \hyperlink{classirr_1_1core_1_1array}{array} at specified position. Please use this only if you know what you are doing (possible performance loss). The preferred method of adding elements should be \hyperlink{classirr_1_1core_1_1array_95afc36513d08abb51bd399755730877}{push\_\-back()}. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em element,:}]Element to be inserted \item[{\em index,:}]Where position to insert the new element. \end{description}
+\end{Desc}
+
+
+Definition at line 127 of file irrArray.h.\hypertarget{classirr_1_1core_1_1array_4efb7d86fc42e6b29e932f983d6ffae0}{
+\index{irr::core::array@{irr::core::array}!linear\_\-reverse\_\-search@{linear\_\-reverse\_\-search}}
+\index{linear\_\-reverse\_\-search@{linear\_\-reverse\_\-search}!irr::core::array@{irr::core::array}}
+\subsubsection[{linear\_\-reverse\_\-search}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf s32} {\bf irr::core::array}$<$ T $>$::linear\_\-reverse\_\-search (T \& {\em element})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1array_4efb7d86fc42e6b29e932f983d6ffae0}
+
+
+Finds an element in linear time, which is very slow. Use binary\_\-search for faster finding. Only works if =operator is implemented. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em element,:}]Element to search for. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Returns position of the searched element if it was found, otherwise -1 is returned. \end{Desc}
+
+
+Definition at line 381 of file irrArray.h.\hypertarget{classirr_1_1core_1_1array_917e0d2690b9871d2d13d9ec0a3626f5}{
+\index{irr::core::array@{irr::core::array}!linear\_\-search@{linear\_\-search}}
+\index{linear\_\-search@{linear\_\-search}!irr::core::array@{irr::core::array}}
+\subsubsection[{linear\_\-search}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf s32} {\bf irr::core::array}$<$ T $>$::linear\_\-search (T \& {\em element})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1array_917e0d2690b9871d2d13d9ec0a3626f5}
+
+
+Finds an element in linear time, which is very slow. Use binary\_\-search for faster finding. Only works if =operator is implemented. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em element,:}]Element to search for. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Returns position of the searched element if it was found, otherwise -1 is returned. \end{Desc}
+
+
+Definition at line 366 of file irrArray.h.\hypertarget{classirr_1_1core_1_1array_a0f0ea56d18bb90eb5c8f286c7273a88}{
+\index{irr::core::array@{irr::core::array}!operator=@{operator=}}
+\index{operator=@{operator=}!irr::core::array@{irr::core::array}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf irr::core::array}$<$ T $>$::operator= (const {\bf array}$<$ T $>$ \& {\em other})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1array_a0f0ea56d18bb90eb5c8f286c7273a88}
+
+
+Assignement operator. 
+
+
+
+Definition at line 193 of file irrArray.h.\hypertarget{classirr_1_1core_1_1array_db02c1c24954863613a6f2ab0f316bf2}{
+\index{irr::core::array@{irr::core::array}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!irr::core::array@{irr::core::array}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ const T\& {\bf irr::core::array}$<$ T $>$::operator\mbox{[}$\,$\mbox{]} ({\bf u32} {\em index}) const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1array_db02c1c24954863613a6f2ab0f316bf2}
+
+
+Direct access operator. 
+
+
+
+Definition at line 225 of file irrArray.h.\hypertarget{classirr_1_1core_1_1array_67098e889f4e1f72e442f17dd50cff5f}{
+\index{irr::core::array@{irr::core::array}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!irr::core::array@{irr::core::array}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T\& {\bf irr::core::array}$<$ T $>$::operator\mbox{[}$\,$\mbox{]} ({\bf u32} {\em index})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1array_67098e889f4e1f72e442f17dd50cff5f}
+
+
+Direct access operator. 
+
+
+
+Definition at line 215 of file irrArray.h.\hypertarget{classirr_1_1core_1_1array_fe5fd668b288ea14a585144c62d99c03}{
+\index{irr::core::array@{irr::core::array}!pointer@{pointer}}
+\index{pointer@{pointer}!irr::core::array@{irr::core::array}}
+\subsubsection[{pointer}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T$\ast$ {\bf irr::core::array}$<$ T $>$::pointer ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1array_fe5fd668b288ea14a585144c62d99c03}
+
+
+Returns a pointer to the \hyperlink{classirr_1_1core_1_1array}{array}. \begin{Desc}
+\item[Returns:]Pointer to the \hyperlink{classirr_1_1core_1_1array}{array}. \end{Desc}
+
+
+Definition at line 251 of file irrArray.h.\hypertarget{classirr_1_1core_1_1array_95afc36513d08abb51bd399755730877}{
+\index{irr::core::array@{irr::core::array}!push\_\-back@{push\_\-back}}
+\index{push\_\-back@{push\_\-back}!irr::core::array@{irr::core::array}}
+\subsubsection[{push\_\-back}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf irr::core::array}$<$ T $>$::push\_\-back (const T \& {\em element})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1array_95afc36513d08abb51bd399755730877}
+
+
+Adds an element at back of \hyperlink{classirr_1_1core_1_1array}{array}. If the \hyperlink{classirr_1_1core_1_1array}{array} is to small to add this new element, the \hyperlink{classirr_1_1core_1_1array}{array} is made bigger. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em element,:}]Element to add at the back of the \hyperlink{classirr_1_1core_1_1array}{array}. \end{description}
+\end{Desc}
+
+
+Definition at line 82 of file irrArray.h.\hypertarget{classirr_1_1core_1_1array_27ce37ef9e34e55d4f9987c62deda9d6}{
+\index{irr::core::array@{irr::core::array}!push\_\-front@{push\_\-front}}
+\index{push\_\-front@{push\_\-front}!irr::core::array@{irr::core::array}}
+\subsubsection[{push\_\-front}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf irr::core::array}$<$ T $>$::push\_\-front (const T \& {\em element})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1array_27ce37ef9e34e55d4f9987c62deda9d6}
+
+
+Adds an element at the front of the \hyperlink{classirr_1_1core_1_1array}{array}. If the \hyperlink{classirr_1_1core_1_1array}{array} is to small to add this new element, the \hyperlink{classirr_1_1core_1_1array}{array} is made bigger. Please note that this is slow, because the whole \hyperlink{classirr_1_1core_1_1array}{array} needs to be copied for this. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em element,:}]Element to add at the back of the \hyperlink{classirr_1_1core_1_1array}{array}. \end{description}
+\end{Desc}
+
+
+Definition at line 108 of file irrArray.h.\hypertarget{classirr_1_1core_1_1array_1fa222a8692a1e2da94bc7e86b75cdae}{
+\index{irr::core::array@{irr::core::array}!reallocate@{reallocate}}
+\index{reallocate@{reallocate}!irr::core::array@{irr::core::array}}
+\subsubsection[{reallocate}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf irr::core::array}$<$ T $>$::reallocate ({\bf u32} {\em new\_\-size})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1array_1fa222a8692a1e2da94bc7e86b75cdae}
+
+
+Reallocates the \hyperlink{classirr_1_1core_1_1array}{array}, make it bigger or smaller. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em new\_\-size,:}]New size of \hyperlink{classirr_1_1core_1_1array}{array}. \end{description}
+\end{Desc}
+
+
+Definition at line 62 of file irrArray.h.\hypertarget{classirr_1_1core_1_1array_0b66cac31609933337fb81bb4a518c8c}{
+\index{irr::core::array@{irr::core::array}!set\_\-free\_\-when\_\-destroyed@{set\_\-free\_\-when\_\-destroyed}}
+\index{set\_\-free\_\-when\_\-destroyed@{set\_\-free\_\-when\_\-destroyed}!irr::core::array@{irr::core::array}}
+\subsubsection[{set\_\-free\_\-when\_\-destroyed}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf irr::core::array}$<$ T $>$::set\_\-free\_\-when\_\-destroyed (bool {\em f})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1array_0b66cac31609933337fb81bb4a518c8c}
+
+
+Sets if the \hyperlink{classirr_1_1core_1_1array}{array} should delete the memory it used. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em f,:}]If true, the \hyperlink{classirr_1_1core_1_1array}{array} frees the allocated memory in its destructor, otherwise not. The default is true. \end{description}
+\end{Desc}
+
+
+Definition at line 173 of file irrArray.h.\hypertarget{classirr_1_1core_1_1array_d0efa8d2ea5078580e5cea1848992a88}{
+\index{irr::core::array@{irr::core::array}!set\_\-pointer@{set\_\-pointer}}
+\index{set\_\-pointer@{set\_\-pointer}!irr::core::array@{irr::core::array}}
+\subsubsection[{set\_\-pointer}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf irr::core::array}$<$ T $>$::set\_\-pointer (T $\ast$ {\em newPointer}, \/  {\bf u32} {\em size})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1array_d0efa8d2ea5078580e5cea1848992a88}
+
+
+Sets pointer to new \hyperlink{classirr_1_1core_1_1array}{array}, using this as new workspace. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em newPointer,:}]Pointer to new \hyperlink{classirr_1_1core_1_1array}{array} of elements. \item[{\em size,:}]Size of the new \hyperlink{classirr_1_1core_1_1array}{array}. \end{description}
+\end{Desc}
+
+
+Definition at line 159 of file irrArray.h.\hypertarget{classirr_1_1core_1_1array_5322149d943e3a5b23dff3000f825a01}{
+\index{irr::core::array@{irr::core::array}!set\_\-sorted@{set\_\-sorted}}
+\index{set\_\-sorted@{set\_\-sorted}!irr::core::array@{irr::core::array}}
+\subsubsection[{set\_\-sorted}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf irr::core::array}$<$ T $>$::set\_\-sorted (bool {\em \_\-is\_\-sorted})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1array_5322149d943e3a5b23dff3000f825a01}
+
+
+Sets if the \hyperlink{classirr_1_1core_1_1array}{array} is sorted. 
+
+
+
+Definition at line 422 of file irrArray.h.\hypertarget{classirr_1_1core_1_1array_0767f2095c59d44a73abf4a9fa9480ba}{
+\index{irr::core::array@{irr::core::array}!set\_\-used@{set\_\-used}}
+\index{set\_\-used@{set\_\-used}!irr::core::array@{irr::core::array}}
+\subsubsection[{set\_\-used}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf irr::core::array}$<$ T $>$::set\_\-used ({\bf u32} {\em usedNow})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1array_0767f2095c59d44a73abf4a9fa9480ba}
+
+
+Sets the size of the \hyperlink{classirr_1_1core_1_1array}{array}. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em usedNow,:}]Amount of elements now used. \end{description}
+\end{Desc}
+
+
+Definition at line 182 of file irrArray.h.\hypertarget{classirr_1_1core_1_1array_d63ccc83da39943532c7af164c7b7bcf}{
+\index{irr::core::array@{irr::core::array}!size@{size}}
+\index{size@{size}!irr::core::array@{irr::core::array}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf u32} {\bf irr::core::array}$<$ T $>$::size () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1array_d63ccc83da39943532c7af164c7b7bcf}
+
+
+Returns size of used \hyperlink{classirr_1_1core_1_1array}{array}. \begin{Desc}
+\item[Returns:]Size of elements in the \hyperlink{classirr_1_1core_1_1array}{array}. \end{Desc}
+
+
+Definition at line 269 of file irrArray.h.\hypertarget{classirr_1_1core_1_1array_d25908968e87d8c6a43f36a7143bc10b}{
+\index{irr::core::array@{irr::core::array}!sort@{sort}}
+\index{sort@{sort}!irr::core::array@{irr::core::array}}
+\subsubsection[{sort}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf irr::core::array}$<$ T $>$::sort ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classirr_1_1core_1_1array_d25908968e87d8c6a43f36a7143bc10b}
+
+
+Sorts the \hyperlink{classirr_1_1core_1_1array}{array} using heapsort. There is no additional memory waste and the algorithm performs (O) n log n in worst case. 
+
+Definition at line 297 of file irrArray.h.
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Common/IrrXML/\hyperlink{irr_array_8h}{irrArray.h}\end{CompactItemize}

@@ -1,0 +1,213 @@
+\hypertarget{class_gr_polygon_b_s_p_portal_set}{
+\section{GrPolygonBSPPortalSet Class Reference}
+\label{class_gr_polygon_b_s_p_portal_set}\index{GrPolygonBSPPortalSet@{GrPolygonBSPPortalSet}}
+}
+{\tt \#include $<$GrPolygonBSPPortalSet.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_gr_polygon_b_s_p_portal_set_8c999dbeada3a6fd085881a5cd9a6fac}{GrPolygonBSPPortalSet} ()
+\item 
+\hyperlink{class_gr_polygon_b_s_p_portal_set_e3a1f400a459229a3e8c77d6480cea86}{GrPolygonBSPPortalSet} (\hyperlink{class_gr_polygon_b_s_p_split}{GrPolygonBSPSplit} $\ast$split, float \hyperlink{glext__bak_8h_281421b881aa7a1266842b73a3bc7655}{scale})
+\item 
+\hyperlink{class_gr_polygon_b_s_p_portal_set_cf0bf0c229585ce6f1ffd51991c4f2a1}{$\sim$GrPolygonBSPPortalSet} ()
+\item 
+bool \hyperlink{class_gr_polygon_b_s_p_portal_set_c5d3b95b76f34209537fcbe66e47aa9f}{Subtract} (const \hyperlink{class_gr_polygon}{GrPolygon} \&polygon, float epsilon)
+\item 
+int \hyperlink{class_gr_polygon_b_s_p_portal_set_9215f97cca8ae51fc89dd82487fc14f2}{Split} (\hyperlink{class_gr_polygon_b_s_p_portal_set}{GrPolygonBSPPortalSet} \&front, \hyperlink{class_gr_polygon_b_s_p_portal_set}{GrPolygonBSPPortalSet} \&back, const \hyperlink{class_m_plane}{MPlane} \&plane, float epsilon) const 
+\item 
+void \hyperlink{class_gr_polygon_b_s_p_portal_set_c5ed27275dfb126e94fbf1da5a5e787f}{ReverseWinding} ()
+\item 
+unsigned int \hyperlink{class_gr_polygon_b_s_p_portal_set_d159b8572928f77a50b23264da9a95ac}{GetPortalCount} () const 
+\item 
+const \hyperlink{class_gr_portal}{GrPortal} \& \hyperlink{class_gr_polygon_b_s_p_portal_set_e771e0ac35b02fd0f7c229121e50e561}{GetPortal} (unsigned int idx) const 
+\item 
+void \hyperlink{class_gr_polygon_b_s_p_portal_set_d91efd1c01bb37833352a012336cca60}{GenCullPlaneSet} (std::vector$<$ \hyperlink{class_m_plane}{MPlane} $>$ \&planes, const \hyperlink{class_gr_portal}{GrPortal} \&fromPortal, unsigned int portalIdx, bool best, bool cache=true) const 
+\item 
+const \hyperlink{class_gr_portal}{GrPortal} \& \hyperlink{class_gr_polygon_b_s_p_portal_set_b93adfe1f6c1cd860044c8531a933d99}{GetHullPortal} () const 
+\item 
+void \hyperlink{class_gr_polygon_b_s_p_portal_set_bf746cf2cfeaf5b44a803625986ba073}{SetOwner} (\hyperlink{class_gr_polygon_b_s_p_area}{GrPolygonBSPArea} $\ast$owner)
+\item 
+void \hyperlink{class_gr_polygon_b_s_p_portal_set_d095e8a7483db5cbe0fc518b234bf964}{SetNeighbor} (\hyperlink{class_gr_polygon_b_s_p_area}{GrPolygonBSPArea} $\ast$neighbor)
+\item 
+const \hyperlink{class_m_plane}{MPlane} \& \hyperlink{class_gr_polygon_b_s_p_portal_set_c58d0feb66fa4c5d875df0d25e7ad352}{GetPlane} () const 
+\item 
+\hyperlink{class_gr_polygon_b_s_p_split}{GrPolygonBSPSplit} $\ast$ \hyperlink{class_gr_polygon_b_s_p_portal_set_c4ae6e28d3a43e9dea180ba4c1b05f47}{GetCreator} () const 
+\item 
+\hyperlink{class_gr_polygon_b_s_p_area}{GrPolygonBSPArea} $\ast$ \hyperlink{class_gr_polygon_b_s_p_portal_set_84098f84d7dbf0ec066aaa6ad30aa1e1}{GetOwner} () const 
+\item 
+\hyperlink{class_gr_polygon_b_s_p_area}{GrPolygonBSPArea} $\ast$ \hyperlink{class_gr_polygon_b_s_p_portal_set_1828ab2d1236459003e49503672f4b6c}{GetNeighbor} () const 
+\item 
+\hyperlink{class_gr_mesh_inst}{GrMeshInst} $\ast$ \hyperlink{class_gr_polygon_b_s_p_portal_set_bb6f1689a2f57169d9e5a41d2e664bc1}{GenMesh} (\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_gr_material}{GrMaterial} $>$ material)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 35 of file GrPolygonBSPPortalSet.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gr_polygon_b_s_p_portal_set_8c999dbeada3a6fd085881a5cd9a6fac}{
+\index{GrPolygonBSPPortalSet@{GrPolygonBSPPortalSet}!GrPolygonBSPPortalSet@{GrPolygonBSPPortalSet}}
+\index{GrPolygonBSPPortalSet@{GrPolygonBSPPortalSet}!GrPolygonBSPPortalSet@{GrPolygonBSPPortalSet}}
+\subsubsection[{GrPolygonBSPPortalSet}]{\setlength{\rightskip}{0pt plus 5cm}GrPolygonBSPPortalSet::GrPolygonBSPPortalSet ()}}
+\label{class_gr_polygon_b_s_p_portal_set_8c999dbeada3a6fd085881a5cd9a6fac}
+
+
+
+
+Definition at line 28 of file GrPolygonBSPPortalSet.cpp.\hypertarget{class_gr_polygon_b_s_p_portal_set_e3a1f400a459229a3e8c77d6480cea86}{
+\index{GrPolygonBSPPortalSet@{GrPolygonBSPPortalSet}!GrPolygonBSPPortalSet@{GrPolygonBSPPortalSet}}
+\index{GrPolygonBSPPortalSet@{GrPolygonBSPPortalSet}!GrPolygonBSPPortalSet@{GrPolygonBSPPortalSet}}
+\subsubsection[{GrPolygonBSPPortalSet}]{\setlength{\rightskip}{0pt plus 5cm}GrPolygonBSPPortalSet::GrPolygonBSPPortalSet ({\bf GrPolygonBSPSplit} $\ast$ {\em split}, \/  float {\em scale})}}
+\label{class_gr_polygon_b_s_p_portal_set_e3a1f400a459229a3e8c77d6480cea86}
+
+
+
+
+Definition at line 42 of file GrPolygonBSPPortalSet.cpp.\hypertarget{class_gr_polygon_b_s_p_portal_set_cf0bf0c229585ce6f1ffd51991c4f2a1}{
+\index{GrPolygonBSPPortalSet@{GrPolygonBSPPortalSet}!$\sim$GrPolygonBSPPortalSet@{$\sim$GrPolygonBSPPortalSet}}
+\index{$\sim$GrPolygonBSPPortalSet@{$\sim$GrPolygonBSPPortalSet}!GrPolygonBSPPortalSet@{GrPolygonBSPPortalSet}}
+\subsubsection[{$\sim$GrPolygonBSPPortalSet}]{\setlength{\rightskip}{0pt plus 5cm}GrPolygonBSPPortalSet::$\sim$GrPolygonBSPPortalSet ()}}
+\label{class_gr_polygon_b_s_p_portal_set_cf0bf0c229585ce6f1ffd51991c4f2a1}
+
+
+
+
+Definition at line 60 of file GrPolygonBSPPortalSet.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gr_polygon_b_s_p_portal_set_d91efd1c01bb37833352a012336cca60}{
+\index{GrPolygonBSPPortalSet@{GrPolygonBSPPortalSet}!GenCullPlaneSet@{GenCullPlaneSet}}
+\index{GenCullPlaneSet@{GenCullPlaneSet}!GrPolygonBSPPortalSet@{GrPolygonBSPPortalSet}}
+\subsubsection[{GenCullPlaneSet}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonBSPPortalSet::GenCullPlaneSet (std::vector$<$ {\bf MPlane} $>$ \& {\em planes}, \/  const {\bf GrPortal} \& {\em fromPortal}, \/  unsigned int {\em portalIdx}, \/  bool {\em best}, \/  bool {\em cache} = {\tt true}) const}}
+\label{class_gr_polygon_b_s_p_portal_set_d91efd1c01bb37833352a012336cca60}
+
+
+
+
+Definition at line 283 of file GrPolygonBSPPortalSet.cpp.\hypertarget{class_gr_polygon_b_s_p_portal_set_bb6f1689a2f57169d9e5a41d2e664bc1}{
+\index{GrPolygonBSPPortalSet@{GrPolygonBSPPortalSet}!GenMesh@{GenMesh}}
+\index{GenMesh@{GenMesh}!GrPolygonBSPPortalSet@{GrPolygonBSPPortalSet}}
+\subsubsection[{GenMesh}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrMeshInst} $\ast$ GrPolygonBSPPortalSet::GenMesh ({\bf URef}$<$ {\bf GrMaterial} $>$ {\em material})}}
+\label{class_gr_polygon_b_s_p_portal_set_bb6f1689a2f57169d9e5a41d2e664bc1}
+
+
+
+
+Definition at line 464 of file GrPolygonBSPPortalSet.cpp.\hypertarget{class_gr_polygon_b_s_p_portal_set_c4ae6e28d3a43e9dea180ba4c1b05f47}{
+\index{GrPolygonBSPPortalSet@{GrPolygonBSPPortalSet}!GetCreator@{GetCreator}}
+\index{GetCreator@{GetCreator}!GrPolygonBSPPortalSet@{GrPolygonBSPPortalSet}}
+\subsubsection[{GetCreator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrPolygonBSPSplit}$\ast$ GrPolygonBSPPortalSet::GetCreator () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_polygon_b_s_p_portal_set_c4ae6e28d3a43e9dea180ba4c1b05f47}
+
+
+
+
+Definition at line 66 of file GrPolygonBSPPortalSet.h.\hypertarget{class_gr_polygon_b_s_p_portal_set_b93adfe1f6c1cd860044c8531a933d99}{
+\index{GrPolygonBSPPortalSet@{GrPolygonBSPPortalSet}!GetHullPortal@{GetHullPortal}}
+\index{GetHullPortal@{GetHullPortal}!GrPolygonBSPPortalSet@{GrPolygonBSPPortalSet}}
+\subsubsection[{GetHullPortal}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf GrPortal} \& GrPolygonBSPPortalSet::GetHullPortal () const}}
+\label{class_gr_polygon_b_s_p_portal_set_b93adfe1f6c1cd860044c8531a933d99}
+
+
+
+
+Definition at line 411 of file GrPolygonBSPPortalSet.cpp.\hypertarget{class_gr_polygon_b_s_p_portal_set_1828ab2d1236459003e49503672f4b6c}{
+\index{GrPolygonBSPPortalSet@{GrPolygonBSPPortalSet}!GetNeighbor@{GetNeighbor}}
+\index{GetNeighbor@{GetNeighbor}!GrPolygonBSPPortalSet@{GrPolygonBSPPortalSet}}
+\subsubsection[{GetNeighbor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrPolygonBSPArea}$\ast$ GrPolygonBSPPortalSet::GetNeighbor () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_polygon_b_s_p_portal_set_1828ab2d1236459003e49503672f4b6c}
+
+
+
+
+Definition at line 68 of file GrPolygonBSPPortalSet.h.\hypertarget{class_gr_polygon_b_s_p_portal_set_84098f84d7dbf0ec066aaa6ad30aa1e1}{
+\index{GrPolygonBSPPortalSet@{GrPolygonBSPPortalSet}!GetOwner@{GetOwner}}
+\index{GetOwner@{GetOwner}!GrPolygonBSPPortalSet@{GrPolygonBSPPortalSet}}
+\subsubsection[{GetOwner}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GrPolygonBSPArea}$\ast$ GrPolygonBSPPortalSet::GetOwner () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_polygon_b_s_p_portal_set_84098f84d7dbf0ec066aaa6ad30aa1e1}
+
+
+
+
+Definition at line 67 of file GrPolygonBSPPortalSet.h.\hypertarget{class_gr_polygon_b_s_p_portal_set_c58d0feb66fa4c5d875df0d25e7ad352}{
+\index{GrPolygonBSPPortalSet@{GrPolygonBSPPortalSet}!GetPlane@{GetPlane}}
+\index{GetPlane@{GetPlane}!GrPolygonBSPPortalSet@{GrPolygonBSPPortalSet}}
+\subsubsection[{GetPlane}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf MPlane}\& GrPolygonBSPPortalSet::GetPlane () const\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{class_gr_polygon_b_s_p_portal_set_c58d0feb66fa4c5d875df0d25e7ad352}
+
+
+
+
+Definition at line 64 of file GrPolygonBSPPortalSet.h.\hypertarget{class_gr_polygon_b_s_p_portal_set_e771e0ac35b02fd0f7c229121e50e561}{
+\index{GrPolygonBSPPortalSet@{GrPolygonBSPPortalSet}!GetPortal@{GetPortal}}
+\index{GetPortal@{GetPortal}!GrPolygonBSPPortalSet@{GrPolygonBSPPortalSet}}
+\subsubsection[{GetPortal}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf GrPortal} \& GrPolygonBSPPortalSet::GetPortal (unsigned int {\em idx}) const}}
+\label{class_gr_polygon_b_s_p_portal_set_e771e0ac35b02fd0f7c229121e50e561}
+
+
+
+
+Definition at line 275 of file GrPolygonBSPPortalSet.cpp.\hypertarget{class_gr_polygon_b_s_p_portal_set_d159b8572928f77a50b23264da9a95ac}{
+\index{GrPolygonBSPPortalSet@{GrPolygonBSPPortalSet}!GetPortalCount@{GetPortalCount}}
+\index{GetPortalCount@{GetPortalCount}!GrPolygonBSPPortalSet@{GrPolygonBSPPortalSet}}
+\subsubsection[{GetPortalCount}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrPolygonBSPPortalSet::GetPortalCount () const}}
+\label{class_gr_polygon_b_s_p_portal_set_d159b8572928f77a50b23264da9a95ac}
+
+
+
+
+Definition at line 268 of file GrPolygonBSPPortalSet.cpp.\hypertarget{class_gr_polygon_b_s_p_portal_set_c5ed27275dfb126e94fbf1da5a5e787f}{
+\index{GrPolygonBSPPortalSet@{GrPolygonBSPPortalSet}!ReverseWinding@{ReverseWinding}}
+\index{ReverseWinding@{ReverseWinding}!GrPolygonBSPPortalSet@{GrPolygonBSPPortalSet}}
+\subsubsection[{ReverseWinding}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonBSPPortalSet::ReverseWinding ()}}
+\label{class_gr_polygon_b_s_p_portal_set_c5ed27275dfb126e94fbf1da5a5e787f}
+
+
+
+
+Definition at line 252 of file GrPolygonBSPPortalSet.cpp.\hypertarget{class_gr_polygon_b_s_p_portal_set_d095e8a7483db5cbe0fc518b234bf964}{
+\index{GrPolygonBSPPortalSet@{GrPolygonBSPPortalSet}!SetNeighbor@{SetNeighbor}}
+\index{SetNeighbor@{SetNeighbor}!GrPolygonBSPPortalSet@{GrPolygonBSPPortalSet}}
+\subsubsection[{SetNeighbor}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonBSPPortalSet::SetNeighbor ({\bf GrPolygonBSPArea} $\ast$ {\em neighbor})}}
+\label{class_gr_polygon_b_s_p_portal_set_d095e8a7483db5cbe0fc518b234bf964}
+
+
+
+
+Definition at line 436 of file GrPolygonBSPPortalSet.cpp.\hypertarget{class_gr_polygon_b_s_p_portal_set_bf746cf2cfeaf5b44a803625986ba073}{
+\index{GrPolygonBSPPortalSet@{GrPolygonBSPPortalSet}!SetOwner@{SetOwner}}
+\index{SetOwner@{SetOwner}!GrPolygonBSPPortalSet@{GrPolygonBSPPortalSet}}
+\subsubsection[{SetOwner}]{\setlength{\rightskip}{0pt plus 5cm}void GrPolygonBSPPortalSet::SetOwner ({\bf GrPolygonBSPArea} $\ast$ {\em owner})}}
+\label{class_gr_polygon_b_s_p_portal_set_bf746cf2cfeaf5b44a803625986ba073}
+
+
+
+
+Definition at line 429 of file GrPolygonBSPPortalSet.cpp.\hypertarget{class_gr_polygon_b_s_p_portal_set_9215f97cca8ae51fc89dd82487fc14f2}{
+\index{GrPolygonBSPPortalSet@{GrPolygonBSPPortalSet}!Split@{Split}}
+\index{Split@{Split}!GrPolygonBSPPortalSet@{GrPolygonBSPPortalSet}}
+\subsubsection[{Split}]{\setlength{\rightskip}{0pt plus 5cm}int GrPolygonBSPPortalSet::Split ({\bf GrPolygonBSPPortalSet} \& {\em front}, \/  {\bf GrPolygonBSPPortalSet} \& {\em back}, \/  const {\bf MPlane} \& {\em plane}, \/  float {\em epsilon}) const}}
+\label{class_gr_polygon_b_s_p_portal_set_9215f97cca8ae51fc89dd82487fc14f2}
+
+
+
+
+Definition at line 203 of file GrPolygonBSPPortalSet.cpp.\hypertarget{class_gr_polygon_b_s_p_portal_set_c5d3b95b76f34209537fcbe66e47aa9f}{
+\index{GrPolygonBSPPortalSet@{GrPolygonBSPPortalSet}!Subtract@{Subtract}}
+\index{Subtract@{Subtract}!GrPolygonBSPPortalSet@{GrPolygonBSPPortalSet}}
+\subsubsection[{Subtract}]{\setlength{\rightskip}{0pt plus 5cm}bool GrPolygonBSPPortalSet::Subtract (const {\bf GrPolygon} \& {\em polygon}, \/  float {\em epsilon})}}
+\label{class_gr_polygon_b_s_p_portal_set_c5d3b95b76f34209537fcbe66e47aa9f}
+
+
+
+
+Definition at line 72 of file GrPolygonBSPPortalSet.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_polygon_b_s_p_portal_set_8h}{GrPolygonBSPPortalSet.h}\item 
+C:/Bootstrap/ProjectBX/Engine/Graphics/\hyperlink{_gr_polygon_b_s_p_portal_set_8cpp}{GrPolygonBSPPortalSet.cpp}\end{CompactItemize}

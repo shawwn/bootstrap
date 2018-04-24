@@ -1,0 +1,509 @@
+\hypertarget{_bsc_parse_lib_8h}{
+\section{C:/Bootstrap/ProjectBX/Engine/Common/BscParseLib.h File Reference}
+\label{_bsc_parse_lib_8h}\index{C:/Bootstrap/ProjectBX/Engine/Common/BscParseLib.h@{C:/Bootstrap/ProjectBX/Engine/Common/BscParseLib.h}}
+}
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+struct \hyperlink{struct_s_flag_value}{SFlagValue}
+\item 
+struct \hyperlink{struct_s_bsc_item}{SBscItem}
+\item 
+struct \hyperlink{struct_s_bsc_item_info}{SBscItemInfo}
+\item 
+struct \hyperlink{struct_s_bsc_item_value}{SBscItemValue}
+\end{CompactItemize}
+\subsection*{Enumerations}
+\begin{CompactItemize}
+\item 
+enum \hyperlink{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a53}{EBSCITEMTYPE} \{ \par
+\hyperlink{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a53dd6f3e445fc4fee479efea93046d6311}{EIT\_\-IDENT}, 
+\hyperlink{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a530ca7b0cf5a5779e7c858018647af8f1c}{EIT\_\-PATH}, 
+\hyperlink{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a5355e2d6331b96bf9f675c2a98e59e14f4}{EIT\_\-NAMEDEXPR}, 
+\hyperlink{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a532d0071e580663f766384463c5b080926}{EIT\_\-NAMEDEXPRLIST}, 
+\par
+\hyperlink{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a5343242f50733df8fb1f82bcde4d5a7f82}{EIT\_\-NAMEDFLAG}, 
+\hyperlink{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a53c112fd779749953c8bf88f2b4f29302b}{EIT\_\-NAMEDFLAGLIST}, 
+\hyperlink{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a53ffceadb4c35a1bf62e641da194c3a6c7}{EIT\_\-NAMEDIDENTEXPR}, 
+\hyperlink{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a53aa2d821b4d44f059f1906f7578bd89bc}{EIT\_\-NAMEDIDENTEXPRLIST}, 
+\par
+\hyperlink{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a53114082bc39f00f104df92d9525838e19}{EIT\_\-NAMEDPATH}, 
+\hyperlink{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a5308a55e8e8b01a493327a5a90b9686c24}{EIT\_\-NAMEDPATHLIST}, 
+\hyperlink{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a539ca7aaaaab47a491051f0142abd5ec02}{EIT\_\-NAMEDIDENTPATH}, 
+\hyperlink{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a530123afa45751aea93e0b9758c21acc9e}{EIT\_\-NAMEDIDENTPATHFLAGLIST}, 
+\par
+\hyperlink{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a536ad2e5c26af30029545861bb58fc97e5}{EIT\_\-NAMEDIDENTPATHLIST}, 
+\hyperlink{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a53207d19856a622ef59d4d54eb56d90cd3}{EIT\_\-NAMEDIDENTPATHLISTFLAGLIST}, 
+\hyperlink{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a53158fd1ce347ce2ec8d118c77b9eee6fc}{EIT\_\-NAMEDIDENTPAIR}, 
+\hyperlink{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a5346a18de4fdd965fd04fe38187ac4fd87}{EIT\_\-NAMEDSTRING}, 
+\par
+\hyperlink{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a53440db54f369e51c6967ac91c4115b76f}{EIT\_\-COUNT}
+ \}
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+bool \hyperlink{_bsc_parse_lib_8h_4e44aefcf27c400fcb708485b7c11ffa}{BscIsItem} (\hyperlink{struct_s_bsc_item_info}{SBscItemInfo} $\ast$itemInfo, const \hyperlink{struct_s_bsc_item}{SBscItem} $\ast$items, unsigned int itemCount, const \hyperlink{class_bsc_array_table}{BscArrayTable} $\ast$arrayTable, const \hyperlink{class_bsc_var_table}{BscVarTable} $\ast$varTable, const \hyperlink{struct_s_bsc_token}{SBscToken} $\ast$tokens, unsigned int $\ast$tokensRead=0)
+\item 
+unsigned int \hyperlink{_bsc_parse_lib_8h_9dc3192fb444caa1616e7d32d97ff705}{BscParseItem} (\hyperlink{struct_s_bsc_item_value}{SBscItemValue} $\ast$\hyperlink{glext__bak_8h_6a4f8a1a444e9080b297963b3db29fe0}{value}, const \hyperlink{struct_s_bsc_item_info}{SBscItemInfo} $\ast$itemInfo, const \hyperlink{struct_s_bsc_item}{SBscItem} $\ast$items, unsigned int itemCount, const \hyperlink{class_bsc_array_table}{BscArrayTable} $\ast$arrayTable, const \hyperlink{class_bsc_var_table}{BscVarTable} $\ast$varTable, const \hyperlink{struct_s_bsc_token}{SBscToken} $\ast$tokens)
+\item 
+bool \hyperlink{_bsc_parse_lib_8h_d0eb39600b9826c426fc00834076b5ad}{BscIsIdent} (const \hyperlink{struct_s_bsc_token}{SBscToken} $\ast$tokens, unsigned int $\ast$tokensRead=0)
+\item 
+unsigned int \hyperlink{_bsc_parse_lib_8h_d9f37fe721647e17380ad867a73589e4}{BscParseIdent} (\hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&ident, const \hyperlink{struct_s_bsc_token}{SBscToken} $\ast$tokens)
+\item 
+bool \hyperlink{_bsc_parse_lib_8h_d388500e39ea9192cbc7ac1f36fafe11}{BscIsPath} (const \hyperlink{struct_s_bsc_token}{SBscToken} $\ast$tokens, unsigned int $\ast$tokensRead=0)
+\item 
+unsigned int \hyperlink{_bsc_parse_lib_8h_cd050c0a7f67e101ca8e6d6dbb57c471}{BscParsePath} (\hyperlink{class_u_path}{UPath} \&path, const \hyperlink{struct_s_bsc_token}{SBscToken} $\ast$tokens)
+\item 
+bool \hyperlink{_bsc_parse_lib_8h_83fecb532b6c61bb42c04c094fbb4b4f}{BscIsNamedExpr} (const char $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, const \hyperlink{struct_s_bsc_token}{SBscToken} $\ast$tokens, const \hyperlink{class_bsc_array_table}{BscArrayTable} \&arrayTable, const \hyperlink{class_bsc_var_table}{BscVarTable} \&varTable, unsigned int $\ast$tokensRead=0)
+\item 
+unsigned int \hyperlink{_bsc_parse_lib_8h_33ded7757fb203ea56f8f8c21fbc1c57}{BscParseNamedExpr} (\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_u_expr_term}{UExprTerm} $>$ $\ast$expr, const char $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, const \hyperlink{struct_s_bsc_token}{SBscToken} $\ast$tokens, const \hyperlink{class_bsc_array_table}{BscArrayTable} \&arrayTable, const \hyperlink{class_bsc_var_table}{BscVarTable} \&varTable)
+\item 
+unsigned int \hyperlink{_bsc_parse_lib_8h_0b9ba37a804d3cd45a567382a05c9b38}{BscIsNamedExprList} (const char $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, const \hyperlink{struct_s_bsc_token}{SBscToken} $\ast$tokens, const \hyperlink{class_bsc_array_table}{BscArrayTable} \&arrayTable, const \hyperlink{class_bsc_var_table}{BscVarTable} \&varTable, unsigned int $\ast$tokensRead=0)
+\item 
+unsigned int \hyperlink{_bsc_parse_lib_8h_06309b512bc8e07a8e0b15b899197e78}{BscParseNamedExprList} (\hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_u_expr_term}{UExprTerm} $>$ $\ast$exprs, unsigned int maxExprCount, const char $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, const \hyperlink{struct_s_bsc_token}{SBscToken} $\ast$tokens, const \hyperlink{class_bsc_array_table}{BscArrayTable} \&arrayTable, const \hyperlink{class_bsc_var_table}{BscVarTable} \&varTable)
+\item 
+bool \hyperlink{_bsc_parse_lib_8h_5f6a7ad89b5a6ef74327102ca5830628}{BscIsNamedFlag} (const char $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, const \hyperlink{struct_s_bsc_token}{SBscToken} $\ast$tokens, const \hyperlink{struct_s_flag_value}{SFlagValue} $\ast$flagValues, unsigned int flagValueCount, unsigned int $\ast$tokensRead=0)
+\item 
+unsigned int \hyperlink{_bsc_parse_lib_8h_5ad53bc8b0999d747b1b28d7dfce4212}{BscParseNamedFlag} (unsigned int \&\hyperlink{glext__bak_8h_6a4f8a1a444e9080b297963b3db29fe0}{value}, const char $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, const \hyperlink{struct_s_bsc_token}{SBscToken} $\ast$tokens, const \hyperlink{struct_s_flag_value}{SFlagValue} $\ast$flagValues, unsigned int flagValueCount)
+\item 
+bool \hyperlink{_bsc_parse_lib_8h_0277f14932f6e4acf700ff04965317ea}{BscIsNamedFlagList} (const char $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, const \hyperlink{struct_s_bsc_token}{SBscToken} $\ast$tokens, const \hyperlink{struct_s_flag_value}{SFlagValue} $\ast$flagValues, unsigned int flagValueCount, unsigned int $\ast$tokensRead=0)
+\item 
+unsigned int \hyperlink{_bsc_parse_lib_8h_7b3e78ae39cd93ae59afc03192fab428}{BscParseNamedFlagList} (unsigned int \&\hyperlink{glext__bak_8h_6a4f8a1a444e9080b297963b3db29fe0}{value}, const char $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, const \hyperlink{struct_s_bsc_token}{SBscToken} $\ast$tokens, const \hyperlink{struct_s_flag_value}{SFlagValue} $\ast$flagValues, unsigned int flagValueCount)
+\item 
+bool \hyperlink{_bsc_parse_lib_8h_c5d933c8e9da2cb2f50ffd9e50189ace}{BscIsNamedIdentExpr} (const char $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, const \hyperlink{struct_s_bsc_token}{SBscToken} $\ast$tokens, const \hyperlink{class_bsc_array_table}{BscArrayTable} \&arrayTable, const \hyperlink{class_bsc_var_table}{BscVarTable} \&varTable, unsigned int $\ast$tokensRead=0)
+\item 
+unsigned int \hyperlink{_bsc_parse_lib_8h_95a9bb67de4847cb456ec4cf362e3061}{BscParseNamedIdentExpr} (\hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&ident, \hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_u_expr_term}{UExprTerm} $>$ $\ast$expr, const char $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, const \hyperlink{struct_s_bsc_token}{SBscToken} $\ast$tokens, const \hyperlink{class_bsc_array_table}{BscArrayTable} \&arrayTable, const \hyperlink{class_bsc_var_table}{BscVarTable} \&varTable)
+\item 
+unsigned int \hyperlink{_bsc_parse_lib_8h_72853b2f86892cbcc3d17200068397a6}{BscIsNamedIdentExprList} (const char $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, const \hyperlink{struct_s_bsc_token}{SBscToken} $\ast$tokens, const \hyperlink{class_bsc_array_table}{BscArrayTable} \&arrayTable, const \hyperlink{class_bsc_var_table}{BscVarTable} \&varTable, unsigned int $\ast$tokensRead=0)
+\item 
+unsigned int \hyperlink{_bsc_parse_lib_8h_df8c135873321783619cad5a9462c667}{BscParseNamedIdentExprList} (\hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&ident, \hyperlink{class_u_ref}{URef}$<$ \hyperlink{class_u_expr_term}{UExprTerm} $>$ $\ast$exprs, unsigned int maxExprCount, const char $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, const \hyperlink{struct_s_bsc_token}{SBscToken} $\ast$tokens, const \hyperlink{class_bsc_array_table}{BscArrayTable} \&arrayTable, const \hyperlink{class_bsc_var_table}{BscVarTable} \&varTable)
+\item 
+bool \hyperlink{_bsc_parse_lib_8h_1a3b762032600e0cfdc42a94f1635112}{BscIsNamedPath} (const char $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, const \hyperlink{struct_s_bsc_token}{SBscToken} $\ast$tokens, unsigned int $\ast$tokensRead=0)
+\item 
+unsigned int \hyperlink{_bsc_parse_lib_8h_2725c8f8408dc43bd80cb55e71b8f54a}{BscParseNamedPath} (\hyperlink{class_u_path}{UPath} \&path, const char $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, const \hyperlink{struct_s_bsc_token}{SBscToken} $\ast$tokens)
+\item 
+bool \hyperlink{_bsc_parse_lib_8h_ca99d2868823f02562033146785e3f94}{BscIsNamedIdentPath} (const char $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, const \hyperlink{struct_s_bsc_token}{SBscToken} $\ast$tokens, unsigned int $\ast$tokensRead=0)
+\item 
+unsigned int \hyperlink{_bsc_parse_lib_8h_30a2a426ca9e44b5f165cf8becc6b401}{BscParseNamedIdentPath} (\hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&ident, \hyperlink{class_u_path}{UPath} \&path, const char $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, const \hyperlink{struct_s_bsc_token}{SBscToken} $\ast$tokens)
+\item 
+unsigned int \hyperlink{_bsc_parse_lib_8h_d3cff5531378c24ba6ba4b39036ad5e9}{BscIsNamedIdentPathList} (const char $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, const \hyperlink{struct_s_bsc_token}{SBscToken} $\ast$tokens, unsigned int $\ast$tokensRead=0)
+\item 
+unsigned int \hyperlink{_bsc_parse_lib_8h_d85d5ec4c8ac11ca23c421beaee13950}{BscParseNamedIdentPathList} (\hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&ident, \hyperlink{class_u_path}{UPath} $\ast$paths, unsigned int maxPathCount, const char $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, const \hyperlink{struct_s_bsc_token}{SBscToken} $\ast$tokens)
+\item 
+bool \hyperlink{_bsc_parse_lib_8h_2d194fc8449898222af6dbb38b5b793e}{BscIsNamedIdentPathFlagList} (const char $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, const \hyperlink{struct_s_bsc_token}{SBscToken} $\ast$tokens, const \hyperlink{struct_s_flag_value}{SFlagValue} $\ast$flagValues, unsigned int flagValueCount, unsigned int $\ast$tokensRead=0)
+\item 
+unsigned int \hyperlink{_bsc_parse_lib_8h_efa9d534043cab087e05aa80f81c203a}{BscParseNamedIdentPathFlagList} (\hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&ident, \hyperlink{class_u_path}{UPath} \&path, unsigned int \&flagValue, const char $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, const \hyperlink{struct_s_bsc_token}{SBscToken} $\ast$tokens, const \hyperlink{struct_s_flag_value}{SFlagValue} $\ast$flagValues, unsigned int flagValueCount)
+\item 
+unsigned int \hyperlink{_bsc_parse_lib_8h_9f0ce13583407e14e030f1b6605e14a2}{BscIsNamedIdentPathListFlagList} (const char $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, const \hyperlink{struct_s_bsc_token}{SBscToken} $\ast$tokens, const \hyperlink{struct_s_flag_value}{SFlagValue} $\ast$flagValues, unsigned int flagValueCount, unsigned int $\ast$tokensRead=0)
+\item 
+unsigned int \hyperlink{_bsc_parse_lib_8h_f2a51bef03092a0f21ca1179c4434d68}{BscParseNamedIdentPathListFlagList} (\hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&ident, \hyperlink{class_u_path}{UPath} $\ast$paths, unsigned int maxPathCount, unsigned int \&flagValue, const char $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, const \hyperlink{struct_s_bsc_token}{SBscToken} $\ast$tokens, const \hyperlink{struct_s_flag_value}{SFlagValue} $\ast$flagValues, unsigned int flagValueCount)
+\item 
+bool \hyperlink{_bsc_parse_lib_8h_c3845053bee380633205f7e17dc6704f}{BscIsNamedIdentPair} (const char $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, const \hyperlink{struct_s_bsc_token}{SBscToken} $\ast$tokens, unsigned int $\ast$tokensRead=0)
+\item 
+unsigned int \hyperlink{_bsc_parse_lib_8h_9a83b5316ab0d98211e25f60576f3781}{BscParseNamedIdentPair} (\hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&ident1, \hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&ident2, const char $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, const \hyperlink{struct_s_bsc_token}{SBscToken} $\ast$tokens)
+\item 
+unsigned int \hyperlink{_bsc_parse_lib_8h_e47965867cd9fcaad8bb728d2633f558}{BscIsNamedPathList} (const char $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, const \hyperlink{struct_s_bsc_token}{SBscToken} $\ast$tokens, unsigned int $\ast$tokensRead=0)
+\item 
+unsigned int \hyperlink{_bsc_parse_lib_8h_e0953c43135c793240c612f1bad11a7b}{BscParseNamedPathList} (\hyperlink{class_u_path}{UPath} $\ast$paths, unsigned int maxPathCount, const char $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, const \hyperlink{struct_s_bsc_token}{SBscToken} $\ast$tokens)
+\item 
+bool \hyperlink{_bsc_parse_lib_8h_5f68f38e9caaec15e322e2803866829d}{BscIsNamedString} (const char $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, const \hyperlink{struct_s_bsc_token}{SBscToken} $\ast$tokens, unsigned int $\ast$tokensRead=0)
+\item 
+unsigned int \hyperlink{_bsc_parse_lib_8h_cd1a2cbf64873aec797d82a492a1f1ff}{BscParseNamedString} (\hyperlink{common__afx_8h_816fa58fd77499b0edb2c69ebe803d5c}{tstring} \&str, const char $\ast$\hyperlink{glext__bak_8h_bb62efe59ccdd153ce42e1a418352209}{name}, const \hyperlink{struct_s_bsc_token}{SBscToken} $\ast$tokens)
+\end{CompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a53}{
+\index{BscParseLib.h@{BscParseLib.h}!EBSCITEMTYPE@{EBSCITEMTYPE}}
+\index{EBSCITEMTYPE@{EBSCITEMTYPE}!BscParseLib.h@{BscParseLib.h}}
+\subsubsection[{EBSCITEMTYPE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf EBSCITEMTYPE}}}
+\label{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a53}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{EIT\_\-IDENT@{EIT\_\-IDENT}!BscParseLib.h@{BscParseLib.h}}\index{BscParseLib.h@{BscParseLib.h}!EIT\_\-IDENT@{EIT\_\-IDENT}}\item[{\em 
+\hypertarget{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a53dd6f3e445fc4fee479efea93046d6311}{
+EIT\_\-IDENT}
+\label{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a53dd6f3e445fc4fee479efea93046d6311}
+}]\index{EIT\_\-PATH@{EIT\_\-PATH}!BscParseLib.h@{BscParseLib.h}}\index{BscParseLib.h@{BscParseLib.h}!EIT\_\-PATH@{EIT\_\-PATH}}\item[{\em 
+\hypertarget{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a530ca7b0cf5a5779e7c858018647af8f1c}{
+EIT\_\-PATH}
+\label{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a530ca7b0cf5a5779e7c858018647af8f1c}
+}]\index{EIT\_\-NAMEDEXPR@{EIT\_\-NAMEDEXPR}!BscParseLib.h@{BscParseLib.h}}\index{BscParseLib.h@{BscParseLib.h}!EIT\_\-NAMEDEXPR@{EIT\_\-NAMEDEXPR}}\item[{\em 
+\hypertarget{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a5355e2d6331b96bf9f675c2a98e59e14f4}{
+EIT\_\-NAMEDEXPR}
+\label{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a5355e2d6331b96bf9f675c2a98e59e14f4}
+}]\index{EIT\_\-NAMEDEXPRLIST@{EIT\_\-NAMEDEXPRLIST}!BscParseLib.h@{BscParseLib.h}}\index{BscParseLib.h@{BscParseLib.h}!EIT\_\-NAMEDEXPRLIST@{EIT\_\-NAMEDEXPRLIST}}\item[{\em 
+\hypertarget{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a532d0071e580663f766384463c5b080926}{
+EIT\_\-NAMEDEXPRLIST}
+\label{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a532d0071e580663f766384463c5b080926}
+}]\index{EIT\_\-NAMEDFLAG@{EIT\_\-NAMEDFLAG}!BscParseLib.h@{BscParseLib.h}}\index{BscParseLib.h@{BscParseLib.h}!EIT\_\-NAMEDFLAG@{EIT\_\-NAMEDFLAG}}\item[{\em 
+\hypertarget{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a5343242f50733df8fb1f82bcde4d5a7f82}{
+EIT\_\-NAMEDFLAG}
+\label{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a5343242f50733df8fb1f82bcde4d5a7f82}
+}]\index{EIT\_\-NAMEDFLAGLIST@{EIT\_\-NAMEDFLAGLIST}!BscParseLib.h@{BscParseLib.h}}\index{BscParseLib.h@{BscParseLib.h}!EIT\_\-NAMEDFLAGLIST@{EIT\_\-NAMEDFLAGLIST}}\item[{\em 
+\hypertarget{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a53c112fd779749953c8bf88f2b4f29302b}{
+EIT\_\-NAMEDFLAGLIST}
+\label{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a53c112fd779749953c8bf88f2b4f29302b}
+}]\index{EIT\_\-NAMEDIDENTEXPR@{EIT\_\-NAMEDIDENTEXPR}!BscParseLib.h@{BscParseLib.h}}\index{BscParseLib.h@{BscParseLib.h}!EIT\_\-NAMEDIDENTEXPR@{EIT\_\-NAMEDIDENTEXPR}}\item[{\em 
+\hypertarget{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a53ffceadb4c35a1bf62e641da194c3a6c7}{
+EIT\_\-NAMEDIDENTEXPR}
+\label{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a53ffceadb4c35a1bf62e641da194c3a6c7}
+}]\index{EIT\_\-NAMEDIDENTEXPRLIST@{EIT\_\-NAMEDIDENTEXPRLIST}!BscParseLib.h@{BscParseLib.h}}\index{BscParseLib.h@{BscParseLib.h}!EIT\_\-NAMEDIDENTEXPRLIST@{EIT\_\-NAMEDIDENTEXPRLIST}}\item[{\em 
+\hypertarget{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a53aa2d821b4d44f059f1906f7578bd89bc}{
+EIT\_\-NAMEDIDENTEXPRLIST}
+\label{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a53aa2d821b4d44f059f1906f7578bd89bc}
+}]\index{EIT\_\-NAMEDPATH@{EIT\_\-NAMEDPATH}!BscParseLib.h@{BscParseLib.h}}\index{BscParseLib.h@{BscParseLib.h}!EIT\_\-NAMEDPATH@{EIT\_\-NAMEDPATH}}\item[{\em 
+\hypertarget{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a53114082bc39f00f104df92d9525838e19}{
+EIT\_\-NAMEDPATH}
+\label{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a53114082bc39f00f104df92d9525838e19}
+}]\index{EIT\_\-NAMEDPATHLIST@{EIT\_\-NAMEDPATHLIST}!BscParseLib.h@{BscParseLib.h}}\index{BscParseLib.h@{BscParseLib.h}!EIT\_\-NAMEDPATHLIST@{EIT\_\-NAMEDPATHLIST}}\item[{\em 
+\hypertarget{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a5308a55e8e8b01a493327a5a90b9686c24}{
+EIT\_\-NAMEDPATHLIST}
+\label{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a5308a55e8e8b01a493327a5a90b9686c24}
+}]\index{EIT\_\-NAMEDIDENTPATH@{EIT\_\-NAMEDIDENTPATH}!BscParseLib.h@{BscParseLib.h}}\index{BscParseLib.h@{BscParseLib.h}!EIT\_\-NAMEDIDENTPATH@{EIT\_\-NAMEDIDENTPATH}}\item[{\em 
+\hypertarget{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a539ca7aaaaab47a491051f0142abd5ec02}{
+EIT\_\-NAMEDIDENTPATH}
+\label{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a539ca7aaaaab47a491051f0142abd5ec02}
+}]\index{EIT\_\-NAMEDIDENTPATHFLAGLIST@{EIT\_\-NAMEDIDENTPATHFLAGLIST}!BscParseLib.h@{BscParseLib.h}}\index{BscParseLib.h@{BscParseLib.h}!EIT\_\-NAMEDIDENTPATHFLAGLIST@{EIT\_\-NAMEDIDENTPATHFLAGLIST}}\item[{\em 
+\hypertarget{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a530123afa45751aea93e0b9758c21acc9e}{
+EIT\_\-NAMEDIDENTPATHFLAGLIST}
+\label{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a530123afa45751aea93e0b9758c21acc9e}
+}]\index{EIT\_\-NAMEDIDENTPATHLIST@{EIT\_\-NAMEDIDENTPATHLIST}!BscParseLib.h@{BscParseLib.h}}\index{BscParseLib.h@{BscParseLib.h}!EIT\_\-NAMEDIDENTPATHLIST@{EIT\_\-NAMEDIDENTPATHLIST}}\item[{\em 
+\hypertarget{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a536ad2e5c26af30029545861bb58fc97e5}{
+EIT\_\-NAMEDIDENTPATHLIST}
+\label{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a536ad2e5c26af30029545861bb58fc97e5}
+}]\index{EIT\_\-NAMEDIDENTPATHLISTFLAGLIST@{EIT\_\-NAMEDIDENTPATHLISTFLAGLIST}!BscParseLib.h@{BscParseLib.h}}\index{BscParseLib.h@{BscParseLib.h}!EIT\_\-NAMEDIDENTPATHLISTFLAGLIST@{EIT\_\-NAMEDIDENTPATHLISTFLAGLIST}}\item[{\em 
+\hypertarget{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a53207d19856a622ef59d4d54eb56d90cd3}{
+EIT\_\-NAMEDIDENTPATHLISTFLAGLIST}
+\label{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a53207d19856a622ef59d4d54eb56d90cd3}
+}]\index{EIT\_\-NAMEDIDENTPAIR@{EIT\_\-NAMEDIDENTPAIR}!BscParseLib.h@{BscParseLib.h}}\index{BscParseLib.h@{BscParseLib.h}!EIT\_\-NAMEDIDENTPAIR@{EIT\_\-NAMEDIDENTPAIR}}\item[{\em 
+\hypertarget{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a53158fd1ce347ce2ec8d118c77b9eee6fc}{
+EIT\_\-NAMEDIDENTPAIR}
+\label{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a53158fd1ce347ce2ec8d118c77b9eee6fc}
+}]\index{EIT\_\-NAMEDSTRING@{EIT\_\-NAMEDSTRING}!BscParseLib.h@{BscParseLib.h}}\index{BscParseLib.h@{BscParseLib.h}!EIT\_\-NAMEDSTRING@{EIT\_\-NAMEDSTRING}}\item[{\em 
+\hypertarget{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a5346a18de4fdd965fd04fe38187ac4fd87}{
+EIT\_\-NAMEDSTRING}
+\label{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a5346a18de4fdd965fd04fe38187ac4fd87}
+}]\index{EIT\_\-COUNT@{EIT\_\-COUNT}!BscParseLib.h@{BscParseLib.h}}\index{BscParseLib.h@{BscParseLib.h}!EIT\_\-COUNT@{EIT\_\-COUNT}}\item[{\em 
+\hypertarget{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a53440db54f369e51c6967ac91c4115b76f}{
+EIT\_\-COUNT}
+\label{_bsc_parse_lib_8h_7321d18d9bef2ff4ce8a9b26574f4a53440db54f369e51c6967ac91c4115b76f}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 26 of file BscParseLib.h.
+
+\subsection{Function Documentation}
+\hypertarget{_bsc_parse_lib_8h_d0eb39600b9826c426fc00834076b5ad}{
+\index{BscParseLib.h@{BscParseLib.h}!BscIsIdent@{BscIsIdent}}
+\index{BscIsIdent@{BscIsIdent}!BscParseLib.h@{BscParseLib.h}}
+\subsubsection[{BscIsIdent}]{\setlength{\rightskip}{0pt plus 5cm}bool BscIsIdent (const {\bf SBscToken} $\ast$ {\em tokens}, \/  unsigned int $\ast$ {\em tokensRead} = {\tt 0})}}
+\label{_bsc_parse_lib_8h_d0eb39600b9826c426fc00834076b5ad}
+
+
+
+
+Definition at line 467 of file BscParseLib.cpp.\hypertarget{_bsc_parse_lib_8h_4e44aefcf27c400fcb708485b7c11ffa}{
+\index{BscParseLib.h@{BscParseLib.h}!BscIsItem@{BscIsItem}}
+\index{BscIsItem@{BscIsItem}!BscParseLib.h@{BscParseLib.h}}
+\subsubsection[{BscIsItem}]{\setlength{\rightskip}{0pt plus 5cm}bool BscIsItem ({\bf SBscItemInfo} $\ast$ {\em itemInfo}, \/  const {\bf SBscItem} $\ast$ {\em items}, \/  unsigned int {\em itemCount}, \/  const {\bf BscArrayTable} $\ast$ {\em arrayTable}, \/  const {\bf BscVarTable} $\ast$ {\em varTable}, \/  const {\bf SBscToken} $\ast$ {\em tokens}, \/  unsigned int $\ast$ {\em tokensRead} = {\tt 0})}}
+\label{_bsc_parse_lib_8h_4e44aefcf27c400fcb708485b7c11ffa}
+
+
+
+
+Definition at line 58 of file BscParseLib.cpp.\hypertarget{_bsc_parse_lib_8h_83fecb532b6c61bb42c04c094fbb4b4f}{
+\index{BscParseLib.h@{BscParseLib.h}!BscIsNamedExpr@{BscIsNamedExpr}}
+\index{BscIsNamedExpr@{BscIsNamedExpr}!BscParseLib.h@{BscParseLib.h}}
+\subsubsection[{BscIsNamedExpr}]{\setlength{\rightskip}{0pt plus 5cm}bool BscIsNamedExpr (const char $\ast$ {\em name}, \/  const {\bf SBscToken} $\ast$ {\em tokens}, \/  const {\bf BscArrayTable} \& {\em arrayTable}, \/  const {\bf BscVarTable} \& {\em varTable}, \/  unsigned int $\ast$ {\em tokensRead} = {\tt 0})}}
+\label{_bsc_parse_lib_8h_83fecb532b6c61bb42c04c094fbb4b4f}
+
+
+
+
+Definition at line 536 of file BscParseLib.cpp.\hypertarget{_bsc_parse_lib_8h_0b9ba37a804d3cd45a567382a05c9b38}{
+\index{BscParseLib.h@{BscParseLib.h}!BscIsNamedExprList@{BscIsNamedExprList}}
+\index{BscIsNamedExprList@{BscIsNamedExprList}!BscParseLib.h@{BscParseLib.h}}
+\subsubsection[{BscIsNamedExprList}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int BscIsNamedExprList (const char $\ast$ {\em name}, \/  const {\bf SBscToken} $\ast$ {\em tokens}, \/  const {\bf BscArrayTable} \& {\em arrayTable}, \/  const {\bf BscVarTable} \& {\em varTable}, \/  unsigned int $\ast$ {\em tokensRead} = {\tt 0})}}
+\label{_bsc_parse_lib_8h_0b9ba37a804d3cd45a567382a05c9b38}
+
+
+
+
+Definition at line 581 of file BscParseLib.cpp.\hypertarget{_bsc_parse_lib_8h_5f6a7ad89b5a6ef74327102ca5830628}{
+\index{BscParseLib.h@{BscParseLib.h}!BscIsNamedFlag@{BscIsNamedFlag}}
+\index{BscIsNamedFlag@{BscIsNamedFlag}!BscParseLib.h@{BscParseLib.h}}
+\subsubsection[{BscIsNamedFlag}]{\setlength{\rightskip}{0pt plus 5cm}bool BscIsNamedFlag (const char $\ast$ {\em name}, \/  const {\bf SBscToken} $\ast$ {\em tokens}, \/  const {\bf SFlagValue} $\ast$ {\em flagValues}, \/  unsigned int {\em flagValueCount}, \/  unsigned int $\ast$ {\em tokensRead} = {\tt 0})}}
+\label{_bsc_parse_lib_8h_5f6a7ad89b5a6ef74327102ca5830628}
+
+
+
+
+Definition at line 670 of file BscParseLib.cpp.\hypertarget{_bsc_parse_lib_8h_0277f14932f6e4acf700ff04965317ea}{
+\index{BscParseLib.h@{BscParseLib.h}!BscIsNamedFlagList@{BscIsNamedFlagList}}
+\index{BscIsNamedFlagList@{BscIsNamedFlagList}!BscParseLib.h@{BscParseLib.h}}
+\subsubsection[{BscIsNamedFlagList}]{\setlength{\rightskip}{0pt plus 5cm}bool BscIsNamedFlagList (const char $\ast$ {\em name}, \/  const {\bf SBscToken} $\ast$ {\em tokens}, \/  const {\bf SFlagValue} $\ast$ {\em flagValues}, \/  unsigned int {\em flagValueCount}, \/  unsigned int $\ast$ {\em tokensRead} = {\tt 0})}}
+\label{_bsc_parse_lib_8h_0277f14932f6e4acf700ff04965317ea}
+
+
+
+
+Definition at line 731 of file BscParseLib.cpp.\hypertarget{_bsc_parse_lib_8h_c5d933c8e9da2cb2f50ffd9e50189ace}{
+\index{BscParseLib.h@{BscParseLib.h}!BscIsNamedIdentExpr@{BscIsNamedIdentExpr}}
+\index{BscIsNamedIdentExpr@{BscIsNamedIdentExpr}!BscParseLib.h@{BscParseLib.h}}
+\subsubsection[{BscIsNamedIdentExpr}]{\setlength{\rightskip}{0pt plus 5cm}bool BscIsNamedIdentExpr (const char $\ast$ {\em name}, \/  const {\bf SBscToken} $\ast$ {\em tokens}, \/  const {\bf BscArrayTable} \& {\em arrayTable}, \/  const {\bf BscVarTable} \& {\em varTable}, \/  unsigned int $\ast$ {\em tokensRead} = {\tt 0})}}
+\label{_bsc_parse_lib_8h_c5d933c8e9da2cb2f50ffd9e50189ace}
+
+
+
+
+Definition at line 817 of file BscParseLib.cpp.\hypertarget{_bsc_parse_lib_8h_72853b2f86892cbcc3d17200068397a6}{
+\index{BscParseLib.h@{BscParseLib.h}!BscIsNamedIdentExprList@{BscIsNamedIdentExprList}}
+\index{BscIsNamedIdentExprList@{BscIsNamedIdentExprList}!BscParseLib.h@{BscParseLib.h}}
+\subsubsection[{BscIsNamedIdentExprList}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int BscIsNamedIdentExprList (const char $\ast$ {\em name}, \/  const {\bf SBscToken} $\ast$ {\em tokens}, \/  const {\bf BscArrayTable} \& {\em arrayTable}, \/  const {\bf BscVarTable} \& {\em varTable}, \/  unsigned int $\ast$ {\em tokensRead} = {\tt 0})}}
+\label{_bsc_parse_lib_8h_72853b2f86892cbcc3d17200068397a6}
+
+
+
+
+Definition at line 867 of file BscParseLib.cpp.\hypertarget{_bsc_parse_lib_8h_c3845053bee380633205f7e17dc6704f}{
+\index{BscParseLib.h@{BscParseLib.h}!BscIsNamedIdentPair@{BscIsNamedIdentPair}}
+\index{BscIsNamedIdentPair@{BscIsNamedIdentPair}!BscParseLib.h@{BscParseLib.h}}
+\subsubsection[{BscIsNamedIdentPair}]{\setlength{\rightskip}{0pt plus 5cm}bool BscIsNamedIdentPair (const char $\ast$ {\em name}, \/  const {\bf SBscToken} $\ast$ {\em tokens}, \/  unsigned int $\ast$ {\em tokensRead} = {\tt 0})}}
+\label{_bsc_parse_lib_8h_c3845053bee380633205f7e17dc6704f}
+
+
+
+
+Definition at line 1279 of file BscParseLib.cpp.\hypertarget{_bsc_parse_lib_8h_ca99d2868823f02562033146785e3f94}{
+\index{BscParseLib.h@{BscParseLib.h}!BscIsNamedIdentPath@{BscIsNamedIdentPath}}
+\index{BscIsNamedIdentPath@{BscIsNamedIdentPath}!BscParseLib.h@{BscParseLib.h}}
+\subsubsection[{BscIsNamedIdentPath}]{\setlength{\rightskip}{0pt plus 5cm}bool BscIsNamedIdentPath (const char $\ast$ {\em name}, \/  const {\bf SBscToken} $\ast$ {\em tokens}, \/  unsigned int $\ast$ {\em tokensRead} = {\tt 0})}}
+\label{_bsc_parse_lib_8h_ca99d2868823f02562033146785e3f94}
+
+
+
+
+Definition at line 964 of file BscParseLib.cpp.\hypertarget{_bsc_parse_lib_8h_2d194fc8449898222af6dbb38b5b793e}{
+\index{BscParseLib.h@{BscParseLib.h}!BscIsNamedIdentPathFlagList@{BscIsNamedIdentPathFlagList}}
+\index{BscIsNamedIdentPathFlagList@{BscIsNamedIdentPathFlagList}!BscParseLib.h@{BscParseLib.h}}
+\subsubsection[{BscIsNamedIdentPathFlagList}]{\setlength{\rightskip}{0pt plus 5cm}bool BscIsNamedIdentPathFlagList (const char $\ast$ {\em name}, \/  const {\bf SBscToken} $\ast$ {\em tokens}, \/  const {\bf SFlagValue} $\ast$ {\em flagValues}, \/  unsigned int {\em flagValueCount}, \/  unsigned int $\ast$ {\em tokensRead} = {\tt 0})}}
+\label{_bsc_parse_lib_8h_2d194fc8449898222af6dbb38b5b793e}
+
+
+
+
+Definition at line 1056 of file BscParseLib.cpp.\hypertarget{_bsc_parse_lib_8h_d3cff5531378c24ba6ba4b39036ad5e9}{
+\index{BscParseLib.h@{BscParseLib.h}!BscIsNamedIdentPathList@{BscIsNamedIdentPathList}}
+\index{BscIsNamedIdentPathList@{BscIsNamedIdentPathList}!BscParseLib.h@{BscParseLib.h}}
+\subsubsection[{BscIsNamedIdentPathList}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int BscIsNamedIdentPathList (const char $\ast$ {\em name}, \/  const {\bf SBscToken} $\ast$ {\em tokens}, \/  unsigned int $\ast$ {\em tokensRead} = {\tt 0})}}
+\label{_bsc_parse_lib_8h_d3cff5531378c24ba6ba4b39036ad5e9}
+
+
+
+
+Definition at line 1010 of file BscParseLib.cpp.\hypertarget{_bsc_parse_lib_8h_9f0ce13583407e14e030f1b6605e14a2}{
+\index{BscParseLib.h@{BscParseLib.h}!BscIsNamedIdentPathListFlagList@{BscIsNamedIdentPathListFlagList}}
+\index{BscIsNamedIdentPathListFlagList@{BscIsNamedIdentPathListFlagList}!BscParseLib.h@{BscParseLib.h}}
+\subsubsection[{BscIsNamedIdentPathListFlagList}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int BscIsNamedIdentPathListFlagList (const char $\ast$ {\em name}, \/  const {\bf SBscToken} $\ast$ {\em tokens}, \/  const {\bf SFlagValue} $\ast$ {\em flagValues}, \/  unsigned int {\em flagValueCount}, \/  unsigned int $\ast$ {\em tokensRead} = {\tt 0})}}
+\label{_bsc_parse_lib_8h_9f0ce13583407e14e030f1b6605e14a2}
+
+
+
+
+Definition at line 1168 of file BscParseLib.cpp.\hypertarget{_bsc_parse_lib_8h_1a3b762032600e0cfdc42a94f1635112}{
+\index{BscParseLib.h@{BscParseLib.h}!BscIsNamedPath@{BscIsNamedPath}}
+\index{BscIsNamedPath@{BscIsNamedPath}!BscParseLib.h@{BscParseLib.h}}
+\subsubsection[{BscIsNamedPath}]{\setlength{\rightskip}{0pt plus 5cm}bool BscIsNamedPath (const char $\ast$ {\em name}, \/  const {\bf SBscToken} $\ast$ {\em tokens}, \/  unsigned int $\ast$ {\em tokensRead} = {\tt 0})}}
+\label{_bsc_parse_lib_8h_1a3b762032600e0cfdc42a94f1635112}
+
+
+
+
+Definition at line 917 of file BscParseLib.cpp.\hypertarget{_bsc_parse_lib_8h_e47965867cd9fcaad8bb728d2633f558}{
+\index{BscParseLib.h@{BscParseLib.h}!BscIsNamedPathList@{BscIsNamedPathList}}
+\index{BscIsNamedPathList@{BscIsNamedPathList}!BscParseLib.h@{BscParseLib.h}}
+\subsubsection[{BscIsNamedPathList}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int BscIsNamedPathList (const char $\ast$ {\em name}, \/  const {\bf SBscToken} $\ast$ {\em tokens}, \/  unsigned int $\ast$ {\em tokensRead} = {\tt 0})}}
+\label{_bsc_parse_lib_8h_e47965867cd9fcaad8bb728d2633f558}
+
+
+
+
+Definition at line 1322 of file BscParseLib.cpp.\hypertarget{_bsc_parse_lib_8h_5f68f38e9caaec15e322e2803866829d}{
+\index{BscParseLib.h@{BscParseLib.h}!BscIsNamedString@{BscIsNamedString}}
+\index{BscIsNamedString@{BscIsNamedString}!BscParseLib.h@{BscParseLib.h}}
+\subsubsection[{BscIsNamedString}]{\setlength{\rightskip}{0pt plus 5cm}bool BscIsNamedString (const char $\ast$ {\em name}, \/  const {\bf SBscToken} $\ast$ {\em tokens}, \/  unsigned int $\ast$ {\em tokensRead} = {\tt 0})}}
+\label{_bsc_parse_lib_8h_5f68f38e9caaec15e322e2803866829d}
+
+
+
+
+Definition at line 1395 of file BscParseLib.cpp.\hypertarget{_bsc_parse_lib_8h_d388500e39ea9192cbc7ac1f36fafe11}{
+\index{BscParseLib.h@{BscParseLib.h}!BscIsPath@{BscIsPath}}
+\index{BscIsPath@{BscIsPath}!BscParseLib.h@{BscParseLib.h}}
+\subsubsection[{BscIsPath}]{\setlength{\rightskip}{0pt plus 5cm}bool BscIsPath (const {\bf SBscToken} $\ast$ {\em tokens}, \/  unsigned int $\ast$ {\em tokensRead} = {\tt 0})}}
+\label{_bsc_parse_lib_8h_d388500e39ea9192cbc7ac1f36fafe11}
+
+
+
+
+Definition at line 501 of file BscParseLib.cpp.\hypertarget{_bsc_parse_lib_8h_d9f37fe721647e17380ad867a73589e4}{
+\index{BscParseLib.h@{BscParseLib.h}!BscParseIdent@{BscParseIdent}}
+\index{BscParseIdent@{BscParseIdent}!BscParseLib.h@{BscParseLib.h}}
+\subsubsection[{BscParseIdent}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int BscParseIdent ({\bf tstring} \& {\em ident}, \/  const {\bf SBscToken} $\ast$ {\em tokens})}}
+\label{_bsc_parse_lib_8h_d9f37fe721647e17380ad867a73589e4}
+
+
+
+
+Definition at line 482 of file BscParseLib.cpp.\hypertarget{_bsc_parse_lib_8h_9dc3192fb444caa1616e7d32d97ff705}{
+\index{BscParseLib.h@{BscParseLib.h}!BscParseItem@{BscParseItem}}
+\index{BscParseItem@{BscParseItem}!BscParseLib.h@{BscParseLib.h}}
+\subsubsection[{BscParseItem}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int BscParseItem ({\bf SBscItemValue} $\ast$ {\em value}, \/  const {\bf SBscItemInfo} $\ast$ {\em itemInfo}, \/  const {\bf SBscItem} $\ast$ {\em items}, \/  unsigned int {\em itemCount}, \/  const {\bf BscArrayTable} $\ast$ {\em arrayTable}, \/  const {\bf BscVarTable} $\ast$ {\em varTable}, \/  const {\bf SBscToken} $\ast$ {\em tokens})}}
+\label{_bsc_parse_lib_8h_9dc3192fb444caa1616e7d32d97ff705}
+
+
+
+
+Definition at line 278 of file BscParseLib.cpp.\hypertarget{_bsc_parse_lib_8h_33ded7757fb203ea56f8f8c21fbc1c57}{
+\index{BscParseLib.h@{BscParseLib.h}!BscParseNamedExpr@{BscParseNamedExpr}}
+\index{BscParseNamedExpr@{BscParseNamedExpr}!BscParseLib.h@{BscParseLib.h}}
+\subsubsection[{BscParseNamedExpr}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int BscParseNamedExpr ({\bf URef}$<$ {\bf UExprTerm} $>$ $\ast$ {\em expr}, \/  const char $\ast$ {\em name}, \/  const {\bf SBscToken} $\ast$ {\em tokens}, \/  const {\bf BscArrayTable} \& {\em arrayTable}, \/  const {\bf BscVarTable} \& {\em varTable})}}
+\label{_bsc_parse_lib_8h_33ded7757fb203ea56f8f8c21fbc1c57}
+
+
+
+
+Definition at line 561 of file BscParseLib.cpp.\hypertarget{_bsc_parse_lib_8h_06309b512bc8e07a8e0b15b899197e78}{
+\index{BscParseLib.h@{BscParseLib.h}!BscParseNamedExprList@{BscParseNamedExprList}}
+\index{BscParseNamedExprList@{BscParseNamedExprList}!BscParseLib.h@{BscParseLib.h}}
+\subsubsection[{BscParseNamedExprList}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int BscParseNamedExprList ({\bf URef}$<$ {\bf UExprTerm} $>$ $\ast$ {\em exprs}, \/  unsigned int {\em maxExprCount}, \/  const char $\ast$ {\em name}, \/  const {\bf SBscToken} $\ast$ {\em tokens}, \/  const {\bf BscArrayTable} \& {\em arrayTable}, \/  const {\bf BscVarTable} \& {\em varTable})}}
+\label{_bsc_parse_lib_8h_06309b512bc8e07a8e0b15b899197e78}
+
+
+
+
+Definition at line 632 of file BscParseLib.cpp.\hypertarget{_bsc_parse_lib_8h_5ad53bc8b0999d747b1b28d7dfce4212}{
+\index{BscParseLib.h@{BscParseLib.h}!BscParseNamedFlag@{BscParseNamedFlag}}
+\index{BscParseNamedFlag@{BscParseNamedFlag}!BscParseLib.h@{BscParseLib.h}}
+\subsubsection[{BscParseNamedFlag}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int BscParseNamedFlag (unsigned int \& {\em value}, \/  const char $\ast$ {\em name}, \/  const {\bf SBscToken} $\ast$ {\em tokens}, \/  const {\bf SFlagValue} $\ast$ {\em flagValues}, \/  unsigned int {\em flagValueCount})}}
+\label{_bsc_parse_lib_8h_5ad53bc8b0999d747b1b28d7dfce4212}
+
+
+
+
+Definition at line 698 of file BscParseLib.cpp.\hypertarget{_bsc_parse_lib_8h_7b3e78ae39cd93ae59afc03192fab428}{
+\index{BscParseLib.h@{BscParseLib.h}!BscParseNamedFlagList@{BscParseNamedFlagList}}
+\index{BscParseNamedFlagList@{BscParseNamedFlagList}!BscParseLib.h@{BscParseLib.h}}
+\subsubsection[{BscParseNamedFlagList}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int BscParseNamedFlagList (unsigned int \& {\em value}, \/  const char $\ast$ {\em name}, \/  const {\bf SBscToken} $\ast$ {\em tokens}, \/  const {\bf SFlagValue} $\ast$ {\em flagValues}, \/  unsigned int {\em flagValueCount})}}
+\label{_bsc_parse_lib_8h_7b3e78ae39cd93ae59afc03192fab428}
+
+
+
+
+Definition at line 772 of file BscParseLib.cpp.\hypertarget{_bsc_parse_lib_8h_95a9bb67de4847cb456ec4cf362e3061}{
+\index{BscParseLib.h@{BscParseLib.h}!BscParseNamedIdentExpr@{BscParseNamedIdentExpr}}
+\index{BscParseNamedIdentExpr@{BscParseNamedIdentExpr}!BscParseLib.h@{BscParseLib.h}}
+\subsubsection[{BscParseNamedIdentExpr}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int BscParseNamedIdentExpr ({\bf tstring} \& {\em ident}, \/  {\bf URef}$<$ {\bf UExprTerm} $>$ $\ast$ {\em expr}, \/  const char $\ast$ {\em name}, \/  const {\bf SBscToken} $\ast$ {\em tokens}, \/  const {\bf BscArrayTable} \& {\em arrayTable}, \/  const {\bf BscVarTable} \& {\em varTable})}}
+\label{_bsc_parse_lib_8h_95a9bb67de4847cb456ec4cf362e3061}
+
+
+
+
+Definition at line 841 of file BscParseLib.cpp.\hypertarget{_bsc_parse_lib_8h_df8c135873321783619cad5a9462c667}{
+\index{BscParseLib.h@{BscParseLib.h}!BscParseNamedIdentExprList@{BscParseNamedIdentExprList}}
+\index{BscParseNamedIdentExprList@{BscParseNamedIdentExprList}!BscParseLib.h@{BscParseLib.h}}
+\subsubsection[{BscParseNamedIdentExprList}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int BscParseNamedIdentExprList ({\bf tstring} \& {\em ident}, \/  {\bf URef}$<$ {\bf UExprTerm} $>$ $\ast$ {\em exprs}, \/  unsigned int {\em maxExprCount}, \/  const char $\ast$ {\em name}, \/  const {\bf SBscToken} $\ast$ {\em tokens}, \/  const {\bf BscArrayTable} \& {\em arrayTable}, \/  const {\bf BscVarTable} \& {\em varTable})}}
+\label{_bsc_parse_lib_8h_df8c135873321783619cad5a9462c667}
+
+
+
+
+Definition at line 892 of file BscParseLib.cpp.\hypertarget{_bsc_parse_lib_8h_9a83b5316ab0d98211e25f60576f3781}{
+\index{BscParseLib.h@{BscParseLib.h}!BscParseNamedIdentPair@{BscParseNamedIdentPair}}
+\index{BscParseNamedIdentPair@{BscParseNamedIdentPair}!BscParseLib.h@{BscParseLib.h}}
+\subsubsection[{BscParseNamedIdentPair}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int BscParseNamedIdentPair ({\bf tstring} \& {\em ident1}, \/  {\bf tstring} \& {\em ident2}, \/  const char $\ast$ {\em name}, \/  const {\bf SBscToken} $\ast$ {\em tokens})}}
+\label{_bsc_parse_lib_8h_9a83b5316ab0d98211e25f60576f3781}
+
+
+
+
+Definition at line 1301 of file BscParseLib.cpp.\hypertarget{_bsc_parse_lib_8h_30a2a426ca9e44b5f165cf8becc6b401}{
+\index{BscParseLib.h@{BscParseLib.h}!BscParseNamedIdentPath@{BscParseNamedIdentPath}}
+\index{BscParseNamedIdentPath@{BscParseNamedIdentPath}!BscParseLib.h@{BscParseLib.h}}
+\subsubsection[{BscParseNamedIdentPath}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int BscParseNamedIdentPath ({\bf tstring} \& {\em ident}, \/  {\bf UPath} \& {\em path}, \/  const char $\ast$ {\em name}, \/  const {\bf SBscToken} $\ast$ {\em tokens})}}
+\label{_bsc_parse_lib_8h_30a2a426ca9e44b5f165cf8becc6b401}
+
+
+
+
+Definition at line 987 of file BscParseLib.cpp.\hypertarget{_bsc_parse_lib_8h_efa9d534043cab087e05aa80f81c203a}{
+\index{BscParseLib.h@{BscParseLib.h}!BscParseNamedIdentPathFlagList@{BscParseNamedIdentPathFlagList}}
+\index{BscParseNamedIdentPathFlagList@{BscParseNamedIdentPathFlagList}!BscParseLib.h@{BscParseLib.h}}
+\subsubsection[{BscParseNamedIdentPathFlagList}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int BscParseNamedIdentPathFlagList ({\bf tstring} \& {\em ident}, \/  {\bf UPath} \& {\em path}, \/  unsigned int \& {\em flagValue}, \/  const char $\ast$ {\em name}, \/  const {\bf SBscToken} $\ast$ {\em tokens}, \/  const {\bf SFlagValue} $\ast$ {\em flagValues}, \/  unsigned int {\em flagValueCount})}}
+\label{_bsc_parse_lib_8h_efa9d534043cab087e05aa80f81c203a}
+
+
+
+
+Definition at line 1113 of file BscParseLib.cpp.\hypertarget{_bsc_parse_lib_8h_d85d5ec4c8ac11ca23c421beaee13950}{
+\index{BscParseLib.h@{BscParseLib.h}!BscParseNamedIdentPathList@{BscParseNamedIdentPathList}}
+\index{BscParseNamedIdentPathList@{BscParseNamedIdentPathList}!BscParseLib.h@{BscParseLib.h}}
+\subsubsection[{BscParseNamedIdentPathList}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int BscParseNamedIdentPathList ({\bf tstring} \& {\em ident}, \/  {\bf UPath} $\ast$ {\em paths}, \/  unsigned int {\em maxPathCount}, \/  const char $\ast$ {\em name}, \/  const {\bf SBscToken} $\ast$ {\em tokens})}}
+\label{_bsc_parse_lib_8h_d85d5ec4c8ac11ca23c421beaee13950}
+
+
+
+
+Definition at line 1033 of file BscParseLib.cpp.\hypertarget{_bsc_parse_lib_8h_f2a51bef03092a0f21ca1179c4434d68}{
+\index{BscParseLib.h@{BscParseLib.h}!BscParseNamedIdentPathListFlagList@{BscParseNamedIdentPathListFlagList}}
+\index{BscParseNamedIdentPathListFlagList@{BscParseNamedIdentPathListFlagList}!BscParseLib.h@{BscParseLib.h}}
+\subsubsection[{BscParseNamedIdentPathListFlagList}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int BscParseNamedIdentPathListFlagList ({\bf tstring} \& {\em ident}, \/  {\bf UPath} $\ast$ {\em paths}, \/  unsigned int {\em maxPathCount}, \/  unsigned int \& {\em flagValue}, \/  const char $\ast$ {\em name}, \/  const {\bf SBscToken} $\ast$ {\em tokens}, \/  const {\bf SFlagValue} $\ast$ {\em flagValues}, \/  unsigned int {\em flagValueCount})}}
+\label{_bsc_parse_lib_8h_f2a51bef03092a0f21ca1179c4434d68}
+
+
+
+
+Definition at line 1223 of file BscParseLib.cpp.\hypertarget{_bsc_parse_lib_8h_2725c8f8408dc43bd80cb55e71b8f54a}{
+\index{BscParseLib.h@{BscParseLib.h}!BscParseNamedPath@{BscParseNamedPath}}
+\index{BscParseNamedPath@{BscParseNamedPath}!BscParseLib.h@{BscParseLib.h}}
+\subsubsection[{BscParseNamedPath}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int BscParseNamedPath ({\bf UPath} \& {\em path}, \/  const char $\ast$ {\em name}, \/  const {\bf SBscToken} $\ast$ {\em tokens})}}
+\label{_bsc_parse_lib_8h_2725c8f8408dc43bd80cb55e71b8f54a}
+
+
+
+
+Definition at line 944 of file BscParseLib.cpp.\hypertarget{_bsc_parse_lib_8h_e0953c43135c793240c612f1bad11a7b}{
+\index{BscParseLib.h@{BscParseLib.h}!BscParseNamedPathList@{BscParseNamedPathList}}
+\index{BscParseNamedPathList@{BscParseNamedPathList}!BscParseLib.h@{BscParseLib.h}}
+\subsubsection[{BscParseNamedPathList}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int BscParseNamedPathList ({\bf UPath} $\ast$ {\em paths}, \/  unsigned int {\em maxPathCount}, \/  const char $\ast$ {\em name}, \/  const {\bf SBscToken} $\ast$ {\em tokens})}}
+\label{_bsc_parse_lib_8h_e0953c43135c793240c612f1bad11a7b}
+
+
+
+
+Definition at line 1368 of file BscParseLib.cpp.\hypertarget{_bsc_parse_lib_8h_cd1a2cbf64873aec797d82a492a1f1ff}{
+\index{BscParseLib.h@{BscParseLib.h}!BscParseNamedString@{BscParseNamedString}}
+\index{BscParseNamedString@{BscParseNamedString}!BscParseLib.h@{BscParseLib.h}}
+\subsubsection[{BscParseNamedString}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int BscParseNamedString ({\bf tstring} \& {\em str}, \/  const char $\ast$ {\em name}, \/  const {\bf SBscToken} $\ast$ {\em tokens})}}
+\label{_bsc_parse_lib_8h_cd1a2cbf64873aec797d82a492a1f1ff}
+
+
+
+
+Definition at line 1420 of file BscParseLib.cpp.\hypertarget{_bsc_parse_lib_8h_cd050c0a7f67e101ca8e6d6dbb57c471}{
+\index{BscParseLib.h@{BscParseLib.h}!BscParsePath@{BscParsePath}}
+\index{BscParsePath@{BscParsePath}!BscParseLib.h@{BscParseLib.h}}
+\subsubsection[{BscParsePath}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int BscParsePath ({\bf UPath} \& {\em path}, \/  const {\bf SBscToken} $\ast$ {\em tokens})}}
+\label{_bsc_parse_lib_8h_cd050c0a7f67e101ca8e6d6dbb57c471}
+
+
+
+
+Definition at line 517 of file BscParseLib.cpp.

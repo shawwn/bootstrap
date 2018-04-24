@@ -1,0 +1,1577 @@
+\hypertarget{_gr_util_8h}{
+\section{C:/Bootstrap/ProjectBX/Engine/Graphics/GrUtil.h File Reference}
+\label{_gr_util_8h}\index{C:/Bootstrap/ProjectBX/Engine/Graphics/GrUtil.h@{C:/Bootstrap/ProjectBX/Engine/Graphics/GrUtil.h}}
+}
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \hyperlink{_gr_util_8h_df38fed29d4a8214bf4a51a0df0a7512}{GR\_\-DEPTHTEST}~0x0001
+\item 
+\#define \hyperlink{_gr_util_8h_43f8fbc0073e1858f6bba0a73acfe8a6}{GR\_\-CULLFACE}~0x0002
+\item 
+\#define \hyperlink{_gr_util_8h_ce93b9dc4bae65a0e96164bc2dcb2688}{GR\_\-BLEND}~0x0004
+\item 
+\#define \hyperlink{_gr_util_8h_20b24dfbb3798202873d51b43f75082d}{GR\_\-ALPHATEST}~0x0008
+\item 
+\#define \hyperlink{_gr_util_8h_47199898343345437f15b87b709a20e6}{GR\_\-SCISSORTEST}~0x0010
+\item 
+\#define \hyperlink{_gr_util_8h_a8b6a3ea82c6849cbd16ebeba0aca2b2}{GR\_\-STENCILTEST}~0x0020
+\item 
+\#define \hyperlink{_gr_util_8h_54096622979773e2eb626dbf956e7145}{GR\_\-DEPTHBIAS}~0x0040
+\item 
+\#define \hyperlink{_gr_util_8h_3d7aa459899278ffdc2f5d3229b6ec65}{GR\_\-WIREFRAME}~0x8000
+\item 
+\#define \hyperlink{_gr_util_8h_5d9b61a9f967ef9cd64bffd282b79e1e}{GR\_\-RED}~0x01
+\item 
+\#define \hyperlink{_gr_util_8h_b13df2d8cbeeea607083962641ab21e8}{GR\_\-BLUE}~0x02
+\item 
+\#define \hyperlink{_gr_util_8h_1e29dbb3cb7c9fc44f446e6fc49ddfee}{GR\_\-GREEN}~0x04
+\item 
+\#define \hyperlink{_gr_util_8h_c47dcda0ac9622dee9ee5013742195a8}{GR\_\-ALPHA}~0x08
+\item 
+\#define \hyperlink{_gr_util_8h_1476e1e11814b5a42a9aaa0ba1d36df4}{GR\_\-RGB}~0x07
+\item 
+\#define \hyperlink{_gr_util_8h_d091dcc5dafb6944427eb6d9895b25d3}{GR\_\-RGBA}~0x0F
+\item 
+\#define \hyperlink{_gr_util_8h_263ecb0b6dc90d2aca7b9291d81a7024}{GR\_\-DEPTH}~0x10
+\item 
+\#define \hyperlink{_gr_util_8h_c424076583734a6d018ce63bf44e054d}{GR\_\-STENCIL}~0x20
+\item 
+\#define \hyperlink{_gr_util_8h_a073c31ad6a86b58868a1bb0b104847a}{GR\_\-FRONT}~0x0001
+\item 
+\#define \hyperlink{_gr_util_8h_91064edabbd1894828fcc812fd47eb98}{GR\_\-BACK}~0x0002
+\item 
+\#define \hyperlink{_gr_util_8h_78d49af22f87f93b2a04b5c3976cc443}{GR\_\-AUX0}~0x0010
+\item 
+\#define \hyperlink{_gr_util_8h_841f66f5b23a43c9be78854f9de92e7c}{GR\_\-AUX1}~0x0020
+\item 
+\#define \hyperlink{_gr_util_8h_a22689f3c43811e890187a140e503fc8}{GR\_\-AUX2}~0x0040
+\item 
+\#define \hyperlink{_gr_util_8h_762f1fd63793de54c0051d97523f7318}{GR\_\-COLOR\_\-ATTACH0}~0x0100
+\item 
+\#define \hyperlink{_gr_util_8h_929342d89e4983bbdebb872f81c29421}{GR\_\-COLOR\_\-ATTACH1}~0x0200
+\item 
+\#define \hyperlink{_gr_util_8h_1ae66cda5f1748c7834c188fc5286a1c}{GR\_\-COLOR\_\-ATTACH2}~0x0400
+\item 
+\#define \hyperlink{_gr_util_8h_8b41f70d347e6bc53882c3aa63a34f5c}{GR\_\-COLOR\_\-ATTACH3}~0x0800
+\item 
+\#define \hyperlink{_gr_util_8h_c66e086038f969166694787a82c8fa3f}{GR\_\-TRUE}~1
+\item 
+\#define \hyperlink{_gr_util_8h_3c13799be36662933532e23203090d01}{GR\_\-FALSE}~0
+\end{CompactItemize}
+\subsection*{Enumerations}
+\begin{CompactItemize}
+\item 
+enum \hyperlink{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ec}{EGRBLENDMODE} \{ \par
+\hyperlink{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ecc9c0a06efec84a35b4d9586676fa3815}{EBM\_\-ZERO}, 
+\hyperlink{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ec942b36475feda6ffc68e80e67fb1b79d}{EBM\_\-ONE}, 
+\hyperlink{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961eca950776b9b46bd7912aa0276e2050e83}{EBM\_\-SRC\_\-COLOR}, 
+\hyperlink{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ec3ee6bf228d2d9a172c899f4c8dba78f5}{EBM\_\-DST\_\-COLOR}, 
+\par
+\hyperlink{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961eccd1efcb33fbd56aac98b8dd6c53ce442}{EBM\_\-ONE\_\-MINUS\_\-SRC\_\-COLOR}, 
+\hyperlink{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ecc70227a3b0b6e1f9361d25ed7e698cb3}{EBM\_\-ONE\_\-MINUS\_\-DST\_\-COLOR}, 
+\hyperlink{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ec7579af57e6c60e197bc9032372290ecd}{EBM\_\-SRC\_\-ALPHA}, 
+\hyperlink{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ec999ca5c92185b5ab96ae5b470f9f0f31}{EBM\_\-DST\_\-ALPHA}, 
+\par
+\hyperlink{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ece3b33f0049d970c9ed05c9e86c1a4417}{EBM\_\-ONE\_\-MINUS\_\-SRC\_\-ALPHA}, 
+\hyperlink{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ec822e58567993c569e0b515e92e3defbb}{EBM\_\-ONE\_\-MINUS\_\-DST\_\-ALPHA}, 
+\hyperlink{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ec8fb37df4552f4c66e4eb1d1d75e6d1a8}{EBM\_\-SRC\_\-ALPHA\_\-SAT}, 
+\hyperlink{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ec688ca3b237ca5bd479a1cfcfbf8b2e4f}{EGRBLENDMODE\_\-DWORD} =  0xFFFFFFFF
+ \}
+\item 
+enum \hyperlink{_gr_util_8h_1b0363d090000f9cf8d7b949574fa046}{EGRSTENCILMODE} \{ \par
+\hyperlink{_gr_util_8h_1b0363d090000f9cf8d7b949574fa046bceb71ec671eaf3e8f230e4b49054b45}{ESM\_\-ZFAILINCR}, 
+\hyperlink{_gr_util_8h_1b0363d090000f9cf8d7b949574fa046824ae7793ca9a886c704233e008ba419}{ESM\_\-ZFAILDECR}, 
+\hyperlink{_gr_util_8h_1b0363d090000f9cf8d7b949574fa0460891f4531657020f6f7a939bef332105}{ESM\_\-ZPASSINCR}, 
+\hyperlink{_gr_util_8h_1b0363d090000f9cf8d7b949574fa04669d13bfa6d8fca3dbdbfa272dbba4343}{ESM\_\-USESTENCIL}, 
+\par
+\hyperlink{_gr_util_8h_1b0363d090000f9cf8d7b949574fa0466077d8bd33914011fa43c9456c1ac2a5}{EGRSTENCILMODE\_\-DWORD} =  0xFFFFFFFF
+ \}
+\item 
+enum \hyperlink{_gr_util_8h_abff98128b1f220d1ceff538f4abdef3}{EGRALPHATESTMODE} \{ \par
+\hyperlink{_gr_util_8h_abff98128b1f220d1ceff538f4abdef38fbf8ca06d3a05ea827807a8459751bc}{EAM\_\-LESS}, 
+\hyperlink{_gr_util_8h_abff98128b1f220d1ceff538f4abdef3fe705b2d83e29a130a97914af12ef178}{EAM\_\-LESSEQUAL}, 
+\hyperlink{_gr_util_8h_abff98128b1f220d1ceff538f4abdef3889efe17f48153356052fbf167ce24b7}{EAM\_\-GREATER}, 
+\hyperlink{_gr_util_8h_abff98128b1f220d1ceff538f4abdef304de8fbc0cdeb20e1404c85765c8356d}{EAM\_\-GREATEREQUAL}, 
+\par
+\hyperlink{_gr_util_8h_abff98128b1f220d1ceff538f4abdef3adf98125971542df220fb48ee33127a4}{EAM\_\-EQUAL}, 
+\hyperlink{_gr_util_8h_abff98128b1f220d1ceff538f4abdef3d84cadbcb6baeff81d12b2941f050d15}{EAM\_\-NOTEQUAL}, 
+\hyperlink{_gr_util_8h_abff98128b1f220d1ceff538f4abdef376e4f40f129cb3b85e88f0cb20dad417}{EGRALPHATESTMODE\_\-DWORD} =  0xFFFFFFFF
+ \}
+\item 
+enum \hyperlink{_gr_util_8h_ea790ef067767354691d0d60c51542fe}{EGRCULLMODE} \{ \hyperlink{_gr_util_8h_ea790ef067767354691d0d60c51542fe13bc00176eb32b77f64dcdf85484a663}{ECM\_\-FRONT}, 
+\hyperlink{_gr_util_8h_ea790ef067767354691d0d60c51542fe5fb45ade8a2def0e22899c5f34497da4}{ECM\_\-BACK}, 
+\hyperlink{_gr_util_8h_ea790ef067767354691d0d60c51542fe7e766cb1c7c3ee17d8820f2ea728c35c}{EGRCULLMODE\_\-DWORD} =  0xFFFFFFFF
+ \}
+\item 
+enum \hyperlink{_gr_util_8h_987cbe08cd23c0d7a12ae576e9ce0984}{EGRDEPTHMODE} \{ \hyperlink{_gr_util_8h_987cbe08cd23c0d7a12ae576e9ce098411cf9194e24cc66a0779bd0d6619ce9d}{EDM\_\-LESSEQUAL}, 
+\hyperlink{_gr_util_8h_987cbe08cd23c0d7a12ae576e9ce09840f811c51d82912702d0d646e80403d39}{EDM\_\-EQUAL}, 
+\hyperlink{_gr_util_8h_987cbe08cd23c0d7a12ae576e9ce09845b5e26e846a6edfdbb028ff8d1bc5779}{EDM\_\-ALWAYS}, 
+\hyperlink{_gr_util_8h_987cbe08cd23c0d7a12ae576e9ce0984a497ffbfaa4b8e37434ab2276e333813}{EGRDEPTHMODE\_\-DWORD} =  0xFFFFFFFF
+ \}
+\item 
+enum \hyperlink{_gr_util_8h_44688cfc75f55fcd8f79435674faf92a}{EGRTEXTUREFORMAT} \{ \par
+\hyperlink{_gr_util_8h_44688cfc75f55fcd8f79435674faf92a063d38a65adec74db3babe9d4ce43765}{ETF\_\-DXT1}, 
+\hyperlink{_gr_util_8h_44688cfc75f55fcd8f79435674faf92ac056e2f51eba7177260a9555492f7f41}{ETF\_\-DXT5}, 
+\hyperlink{_gr_util_8h_44688cfc75f55fcd8f79435674faf92a3c25a238a8c4bae7f967e925dacb49ff}{ETF\_\-RGB16}, 
+\hyperlink{_gr_util_8h_44688cfc75f55fcd8f79435674faf92a8f2936ae0b9e446a07eeecee3461a6ab}{ETF\_\-RGB24}, 
+\par
+\hyperlink{_gr_util_8h_44688cfc75f55fcd8f79435674faf92a60619064b2fbd5687adfe0936f64758c}{ETF\_\-RGB15\_\-A1}, 
+\hyperlink{_gr_util_8h_44688cfc75f55fcd8f79435674faf92ab1ce90afd6ba4563195e09f42fc3547f}{ETF\_\-RGBA32}, 
+\hyperlink{_gr_util_8h_44688cfc75f55fcd8f79435674faf92a3db3f074664311ebce4e7ecb50cad021}{ETF\_\-RGB48F}, 
+\hyperlink{_gr_util_8h_44688cfc75f55fcd8f79435674faf92aeaf3df859c96e3aae409d92f69b8aa9d}{ETF\_\-RGBA64F}, 
+\par
+\hyperlink{_gr_util_8h_44688cfc75f55fcd8f79435674faf92aa29c8d93e8f9a340d4f3333610d2168e}{ETF\_\-RGBA128F}, 
+\hyperlink{_gr_util_8h_44688cfc75f55fcd8f79435674faf92a8e55558bfc07a09627a90a334646fcf4}{ETF\_\-R\_\-RGTC1}, 
+\hyperlink{_gr_util_8h_44688cfc75f55fcd8f79435674faf92a1b847b763c816f39a8577cdfe351290b}{ETF\_\-R\_\-RGTC1\_\-SIGNED}, 
+\hyperlink{_gr_util_8h_44688cfc75f55fcd8f79435674faf92a4238a64a155ae5f73e5d9b40d6fc7674}{ETF\_\-RG\_\-RGTC2}, 
+\par
+\hyperlink{_gr_util_8h_44688cfc75f55fcd8f79435674faf92ad61441958f4bec36848f126eccca8e5e}{ETF\_\-RG\_\-RGTC2\_\-SIGNED}, 
+\hyperlink{_gr_util_8h_44688cfc75f55fcd8f79435674faf92a716a8d925fbb6e1b7fc5e2cf486dca0b}{ETF\_\-DEPTH}, 
+\hyperlink{_gr_util_8h_44688cfc75f55fcd8f79435674faf92a42d292beb68ed30d3d1a613add107301}{ETF\_\-DEPTHSTENCIL}, 
+\hyperlink{_gr_util_8h_44688cfc75f55fcd8f79435674faf92a7482b30f21862f76e0ac80fc99bceb26}{ETF\_\-COUNT}
+ \}
+\item 
+enum \hyperlink{_gr_util_8h_02f438f7c3b1769e8bf1359926d05502}{EGRIMAGEFORMAT} \{ \par
+\hyperlink{_gr_util_8h_02f438f7c3b1769e8bf1359926d0550264db12b24d7732b59f02909a6cebe049}{EIF\_\-R}, 
+\hyperlink{_gr_util_8h_02f438f7c3b1769e8bf1359926d05502d9b6b20e28a3f6ecba6628f32dad7a47}{EIF\_\-RGB}, 
+\hyperlink{_gr_util_8h_02f438f7c3b1769e8bf1359926d05502424143d284ec53b9004038f909edfa61}{EIF\_\-RGBA}, 
+\hyperlink{_gr_util_8h_02f438f7c3b1769e8bf1359926d055026b71585b29e1b0990d05d651a900d04f}{EIF\_\-BGR}, 
+\par
+\hyperlink{_gr_util_8h_02f438f7c3b1769e8bf1359926d05502a7855cfc119f5b8b4c55a4b7586b6e20}{EIF\_\-BGRA}, 
+\hyperlink{_gr_util_8h_02f438f7c3b1769e8bf1359926d0550250e40f9d1a58b4708f7a0232fec3cf7b}{EIF\_\-DXT1}, 
+\hyperlink{_gr_util_8h_02f438f7c3b1769e8bf1359926d055021d64ec60aafb09b9c72ac326db39560a}{EIF\_\-DXT5}, 
+\hyperlink{_gr_util_8h_02f438f7c3b1769e8bf1359926d05502eaab3acd8cf9fe108393f9986a3be2e6}{EIF\_\-R\_\-RGTC1}, 
+\par
+\hyperlink{_gr_util_8h_02f438f7c3b1769e8bf1359926d0550285456cc1ef83efbe1c6e8931e2c59519}{EIF\_\-R\_\-RGTC1\_\-SIGNED}, 
+\hyperlink{_gr_util_8h_02f438f7c3b1769e8bf1359926d055024cef43f0413f69959820c270819ad9fb}{EIF\_\-RG\_\-RGTC2}, 
+\hyperlink{_gr_util_8h_02f438f7c3b1769e8bf1359926d055024c5f6546e69282b28088628db857de06}{EIF\_\-RG\_\-RGTC2\_\-SIGNED}, 
+\hyperlink{_gr_util_8h_02f438f7c3b1769e8bf1359926d0550293ee4953c49400f9f21684b5d4dfac16}{EIF\_\-COUNT}
+ \}
+\item 
+enum \hyperlink{_gr_util_8h_ac7250b216f548e740b6d2e0d5d972f8}{EGRTYPE} \{ \par
+\hyperlink{_gr_util_8h_ac7250b216f548e740b6d2e0d5d972f82419116904a2e3e28faae99ff67c1361}{ET\_\-UNSIGNED\_\-BYTE}, 
+\hyperlink{_gr_util_8h_ac7250b216f548e740b6d2e0d5d972f821d541a93d1316e2e39c4b254f54192e}{ET\_\-SIGNED\_\-BYTE}, 
+\hyperlink{_gr_util_8h_ac7250b216f548e740b6d2e0d5d972f8347172aeb63260c9148babbc8d02ecf2}{ET\_\-UNSIGNED\_\-SHORT}, 
+\hyperlink{_gr_util_8h_ac7250b216f548e740b6d2e0d5d972f88f16835567323e101c073782616f62c6}{ET\_\-SIGNED\_\-SHORT}, 
+\par
+\hyperlink{_gr_util_8h_ac7250b216f548e740b6d2e0d5d972f854380a87f57c72c3d457b14197f2f828}{ET\_\-UNSIGNED\_\-INT}, 
+\hyperlink{_gr_util_8h_ac7250b216f548e740b6d2e0d5d972f8b5919ca3cca13bd8fec758e475ebd2a2}{ET\_\-SIGNED\_\-INT}, 
+\hyperlink{_gr_util_8h_ac7250b216f548e740b6d2e0d5d972f8a544e4b9811c0b73931c9fed60c40502}{ET\_\-FLOAT}, 
+\hyperlink{_gr_util_8h_ac7250b216f548e740b6d2e0d5d972f83fdbf697334129b747e62ff784d0cbfc}{ET\_\-HALF\_\-FLOAT}, 
+\par
+\hyperlink{_gr_util_8h_ac7250b216f548e740b6d2e0d5d972f83130ed515731df93c5ed5e547f45da01}{ET\_\-COUNT}
+ \}
+\item 
+enum \hyperlink{_gr_util_8h_b3e9826637cd9ac6566bdd76e9fce145}{EGRPRIMTYPE} \{ \par
+\hyperlink{_gr_util_8h_b3e9826637cd9ac6566bdd76e9fce145a9fe6ff1c0350bd3ba9fdaf6818343ec}{EPT\_\-TRIANGLES}, 
+\hyperlink{_gr_util_8h_b3e9826637cd9ac6566bdd76e9fce1452a8780504f21b4faa98bcd7951ce64c8}{EPT\_\-TRIANGLE\_\-STRIP}, 
+\hyperlink{_gr_util_8h_b3e9826637cd9ac6566bdd76e9fce145f3102cc2feb794a2f7582b0b076076ac}{EPT\_\-LINES}, 
+\hyperlink{_gr_util_8h_b3e9826637cd9ac6566bdd76e9fce1452b630b6983e21c7ee84bdf2f40454046}{EPT\_\-LINE\_\-STRIP}, 
+\par
+\hyperlink{_gr_util_8h_b3e9826637cd9ac6566bdd76e9fce14500373ffe678f25c35c1503d614ca8e53}{EPT\_\-QUADS}, 
+\hyperlink{_gr_util_8h_b3e9826637cd9ac6566bdd76e9fce14580977168c4e8e33a541e56156c8383f7}{EPT\_\-COUNT}
+ \}
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+void \hyperlink{_gr_util_8h_d1feed1ad65ec4d2473b921369c8365b}{GrStateStart} (unsigned int initScreenWidth, unsigned int initScreenHeight)
+\item 
+bool \hyperlink{_gr_util_8h_50fd4ddbaab4ffd72f30a7bb3b55e1dd}{GrStateStarted} ()
+\item 
+void \hyperlink{_gr_util_8h_ee9e0ba47c9981a63cda19342461130c}{GrStateStop} ()
+\item 
+void \hyperlink{_gr_util_8h_fc9a40b5acc4a1c85af33feff7bcb7ba}{GrEnable} (unsigned int state)
+\item 
+void \hyperlink{_gr_util_8h_e565137ab98d58cf8f3062c3a1fe0584}{GrDisable} (unsigned int state)
+\item 
+void \hyperlink{_gr_util_8h_73fdce3597a65b39238ee810531f71e6}{GrPushState} ()
+\item 
+void \hyperlink{_gr_util_8h_cee9c3df883692d1843a0921829323b3}{GrPopState} ()
+\item 
+unsigned int \hyperlink{_gr_util_8h_574795c3dac21a7865338c4c1c556168}{GrGetState} ()
+\item 
+void \hyperlink{_gr_util_8h_da7ea629bb413c26919562c8846d6139}{GrSetState} (unsigned int state)
+\item 
+void \hyperlink{_gr_util_8h_03557aad43b9308f0df604e3ee7b73db}{GrStreamEnableArrays} (unsigned int arrayFlags)
+\item 
+void \hyperlink{_gr_util_8h_506af8fd03563f360bdd3cacb4481047}{GrStreamDisableArrays} (unsigned int arrayFlags)
+\item 
+unsigned int \hyperlink{_gr_util_8h_2422e456282e8cd08d5c0db6ef511245}{GrStreamGetArrayState} ()
+\item 
+void \hyperlink{_gr_util_8h_3cca7d6ef9177f203bc05fbc0d323027}{GrStreamSetArrayState} (unsigned int arrayFlags)
+\item 
+void \hyperlink{_gr_util_8h_6c4fa990878132e93007e8afacccc2d5}{GrStreamArrayPointer} (unsigned int arrayIndex, unsigned int elemCount, \hyperlink{_gr_util_8h_ac7250b216f548e740b6d2e0d5d972f8}{EGRTYPE} elemType, bool \hyperlink{glext__bak_8h_991495bc19f64c176dd83a350b8b1c88}{normalized}, unsigned int \hyperlink{glext__bak_8h_dec60f1216ca1b900f8d776c5b6190e0}{stride}, const void $\ast$\hyperlink{glext__bak_8h_6f3ad441c8a119d2058cfdee077333e7}{pointer})
+\item 
+void \hyperlink{_gr_util_8h_9a291034b97656318368e8e94d7ee766}{GrGetBlendMode} (\hyperlink{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ec}{EGRBLENDMODE} \&srcFactorRGB, \hyperlink{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ec}{EGRBLENDMODE} \&dstFactorRGB, \hyperlink{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ec}{EGRBLENDMODE} \&srcFactorAlpha, \hyperlink{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ec}{EGRBLENDMODE} \&dstFactorAlpha)
+\item 
+void \hyperlink{_gr_util_8h_c1e533fa9d8433287f1bbe7d2a31080d}{GrSetBlendMode} (\hyperlink{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ec}{EGRBLENDMODE} srcFactorRGB, \hyperlink{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ec}{EGRBLENDMODE} dstFactorRGB)
+\item 
+void \hyperlink{_gr_util_8h_8113d47ba246af0755119898841eee57}{GrSetBlendMode} (\hyperlink{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ec}{EGRBLENDMODE} srcFactorRGB, \hyperlink{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ec}{EGRBLENDMODE} dstFactorRGB, \hyperlink{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ec}{EGRBLENDMODE} srcFactorAlpha, \hyperlink{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ec}{EGRBLENDMODE} dstFactorAlpha)
+\item 
+\hyperlink{_gr_util_8h_1b0363d090000f9cf8d7b949574fa046}{EGRSTENCILMODE} \hyperlink{_gr_util_8h_00adee6c248946476cf782365a2cd0c5}{GrGetStencilMode} ()
+\item 
+void \hyperlink{_gr_util_8h_53d65df4590c2b3a3eaf54ca65784f6e}{GrSetStencilMode} (\hyperlink{_gr_util_8h_1b0363d090000f9cf8d7b949574fa046}{EGRSTENCILMODE} \hyperlink{glext__bak_8h_1e71d9c196e4683cc06c4b54d53f7ef5}{mode}, unsigned int \hyperlink{glext__bak_8h_5612bf87afe1aa200ad412866de45c1f}{mask})
+\item 
+\hyperlink{_gr_util_8h_abff98128b1f220d1ceff538f4abdef3}{EGRALPHATESTMODE} \hyperlink{_gr_util_8h_0f52c4c5e92f45dfd50b6cdf00cd6400}{GrGetAlphaTestMode} ()
+\item 
+void \hyperlink{_gr_util_8h_d50055638c7736c9e411fa2f6b86c93c}{GrSetAlphaTestMode} (\hyperlink{_gr_util_8h_abff98128b1f220d1ceff538f4abdef3}{EGRALPHATESTMODE} \hyperlink{glext__bak_8h_1e71d9c196e4683cc06c4b54d53f7ef5}{mode}, float \hyperlink{glext__bak_8h_083de4c8e32ad3d9059245f26be721de}{ref})
+\item 
+\hyperlink{_gr_util_8h_ea790ef067767354691d0d60c51542fe}{EGRCULLMODE} \hyperlink{_gr_util_8h_dc3723ac695dbc9bc00736470631030a}{GrGetCullMode} ()
+\item 
+void \hyperlink{_gr_util_8h_ecb580f9d96395afa050b6d81c31421c}{GrSetCullMode} (\hyperlink{_gr_util_8h_ea790ef067767354691d0d60c51542fe}{EGRCULLMODE} \hyperlink{glext__bak_8h_1e71d9c196e4683cc06c4b54d53f7ef5}{mode})
+\item 
+\hyperlink{_gr_util_8h_987cbe08cd23c0d7a12ae576e9ce0984}{EGRDEPTHMODE} \hyperlink{_gr_util_8h_b0b6dbcd54d4e8d99cba297c5fb4d186}{GrGetDepthMode} ()
+\item 
+void \hyperlink{_gr_util_8h_60d9ac55af862efb36a5e95f19c14407}{GrSetDepthMode} (\hyperlink{_gr_util_8h_987cbe08cd23c0d7a12ae576e9ce0984}{EGRDEPTHMODE} \hyperlink{glext__bak_8h_1e71d9c196e4683cc06c4b54d53f7ef5}{mode})
+\item 
+void \hyperlink{_gr_util_8h_d6c899820503336631afde3d9b8c481c}{GrGetDepthBias} (float \&slopeBias, float \&constBias)
+\item 
+void \hyperlink{_gr_util_8h_8c05179e9971c39d5398742cffd8592b}{GrSetDepthBias} (float slopeBias, float constBias)
+\item 
+void \hyperlink{_gr_util_8h_547285e99c507990bed34ef0ec1c7b7d}{GrViewport} (int \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x}, int \hyperlink{wglext_8h_9298c7ad619074f5285b32c6b72bfdea}{y}, int \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, int \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height})
+\item 
+void \hyperlink{_gr_util_8h_790778867fdcac797860c02a4bd6b1fa}{GrGetViewport} (int \&\hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x}, int \&\hyperlink{wglext_8h_9298c7ad619074f5285b32c6b72bfdea}{y}, int \&\hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, int \&\hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height})
+\item 
+void \hyperlink{_gr_util_8h_9091fe53a16798ff5eea3dab70dd81ff}{GrScissor} (int \hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x}, int \hyperlink{wglext_8h_9298c7ad619074f5285b32c6b72bfdea}{y}, int \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, int \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height})
+\item 
+void \hyperlink{_gr_util_8h_09e5c6ded78f38ea5cdcd157df777c20}{GrGetScissor} (int \&\hyperlink{wglext_8h_d77deca22f617d3f0e0eb786445689fc}{x}, int \&\hyperlink{wglext_8h_9298c7ad619074f5285b32c6b72bfdea}{y}, int \&\hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, int \&\hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height})
+\item 
+unsigned int \hyperlink{_gr_util_8h_1175157b98b63f050c8ba2a09b8bf38b}{GrGetWriteEnable} ()
+\item 
+void \hyperlink{_gr_util_8h_7b33558bb79e3c6936f26553c282d081}{GrSetWriteEnable} (unsigned int \hyperlink{glext__bak_8h_5612bf87afe1aa200ad412866de45c1f}{mask})
+\item 
+unsigned int \hyperlink{_gr_util_8h_2617b728d05892c75cd8099a3f4f8ad2}{GrGenTexture} ()
+\item 
+void \hyperlink{_gr_util_8h_3a27b94e557d396f120d7f68a463948f}{GrDeleteTexture} (unsigned int handle)
+\item 
+unsigned int \hyperlink{_gr_util_8h_00da5f5a32fc33b453eabf005a4890cc}{GrGenVB} ()
+\item 
+void \hyperlink{_gr_util_8h_d04bcc81af6bce0f1f39edf465cf3eff}{GrDeleteVB} (unsigned int handle)
+\item 
+unsigned int \hyperlink{_gr_util_8h_9ef3f8b46b61cfdc3881a5d99985d6a3}{GrGenIB} ()
+\item 
+void \hyperlink{_gr_util_8h_6ca83b60e3149265e907a05f903c7168}{GrDeleteIB} (unsigned int handle)
+\item 
+unsigned int \hyperlink{_gr_util_8h_1ab5639fb6cdd4295513ca9e7604f69d}{GrGenPB} ()
+\item 
+void \hyperlink{_gr_util_8h_5b8b0e421e702153a0109911b5c3e0a8}{GrDeletePB} (unsigned int handle)
+\item 
+void \hyperlink{_gr_util_8h_20a5c03b0b2a8baab3813655f7925bde}{GrTexImage2D} (unsigned int handle, unsigned int miplevel, \hyperlink{_gr_util_8h_44688cfc75f55fcd8f79435674faf92a}{EGRTEXTUREFORMAT} \hyperlink{glext__bak_8h_dfa3e9c3e9fe1bf0a67a9e77a0bac5d8}{internalFormat}, unsigned int \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, unsigned int \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height}, \hyperlink{_gr_util_8h_02f438f7c3b1769e8bf1359926d05502}{EGRIMAGEFORMAT} \hyperlink{glext__bak_8h_e2d3db041c6004a67047659b42f73a44}{format}, \hyperlink{_gr_util_8h_ac7250b216f548e740b6d2e0d5d972f8}{EGRTYPE} \hyperlink{glext__bak_8h_7d05960f4f1c1b11f3177dc963a45d86}{type}, const void $\ast$\hyperlink{glext__bak_8h_69926c009f2d52c6b6d2c76784af8c64}{data})
+\item 
+void \hyperlink{_gr_util_8h_e17cf4475c6ed5bdcee691ad010418bc}{GrTexImage3D} (unsigned int handle, unsigned int miplevel, \hyperlink{_gr_util_8h_44688cfc75f55fcd8f79435674faf92a}{EGRTEXTUREFORMAT} \hyperlink{glext__bak_8h_dfa3e9c3e9fe1bf0a67a9e77a0bac5d8}{internalFormat}, unsigned int \hyperlink{wglext_8h_e6531b1788ca42a9ae8155b0c52e7630}{width}, unsigned int \hyperlink{wglext_8h_b2e63df950c3789599e1e43f477bc9e3}{height}, unsigned int \hyperlink{glext__bak_8h_1c814629538debe12a7bfe2509a3671e}{depth}, \hyperlink{_gr_util_8h_02f438f7c3b1769e8bf1359926d05502}{EGRIMAGEFORMAT} \hyperlink{glext__bak_8h_e2d3db041c6004a67047659b42f73a44}{format}, \hyperlink{_gr_util_8h_ac7250b216f548e740b6d2e0d5d972f8}{EGRTYPE} \hyperlink{glext__bak_8h_7d05960f4f1c1b11f3177dc963a45d86}{type}, const void $\ast$\hyperlink{glext__bak_8h_69926c009f2d52c6b6d2c76784af8c64}{data})
+\item 
+void \hyperlink{_gr_util_8h_78aa2573e237c1ac3e315784d8261adc}{GrTexImageCube} (unsigned int handle, unsigned int miplevel, \hyperlink{_gr_util_8h_44688cfc75f55fcd8f79435674faf92a}{EGRTEXTUREFORMAT} \hyperlink{glext__bak_8h_dfa3e9c3e9fe1bf0a67a9e77a0bac5d8}{internalFormat}, unsigned int dim, \hyperlink{_gr_util_8h_02f438f7c3b1769e8bf1359926d05502}{EGRIMAGEFORMAT} \hyperlink{glext__bak_8h_e2d3db041c6004a67047659b42f73a44}{format}, \hyperlink{_gr_util_8h_ac7250b216f548e740b6d2e0d5d972f8}{EGRTYPE} \hyperlink{glext__bak_8h_7d05960f4f1c1b11f3177dc963a45d86}{type}, const void $\ast$dataPX, const void $\ast$dataNX, const void $\ast$dataPY, const void $\ast$dataNY, const void $\ast$dataPZ, const void $\ast$dataNZ)
+\item 
+void \hyperlink{_gr_util_8h_0d997236daa4e0e2f0dc98dd96e17386}{GrBindTexture} (unsigned int texUnit, unsigned int \hyperlink{glext_8h_f9d0cbbbeb7414e786c41899e5a856d7}{target}, unsigned int handle)
+\item 
+unsigned int \hyperlink{_gr_util_8h_81061ecb30353228dfeddad8b328135e}{GrGetTexture} (unsigned int texUnit)
+\item 
+unsigned int \hyperlink{_gr_util_8h_ed5706cf53afcefddc50f00549200440}{GrGetTextureTarget} (unsigned int texUnit)
+\item 
+void \hyperlink{_gr_util_8h_b380583a085e70e5db988eb1573be067}{GrBindVB} (unsigned int handle)
+\item 
+unsigned int \hyperlink{_gr_util_8h_81f8a976041fe3910639d2ee7054c90a}{GrGetVB} ()
+\item 
+void \hyperlink{_gr_util_8h_0f573923ce54d669ceb19234cc2f8d36}{GrBindIB} (unsigned int handle)
+\item 
+unsigned int \hyperlink{_gr_util_8h_cd8d7c5efdbc9e097f1285e32bae23ee}{GrGetIB} ()
+\item 
+void \hyperlink{_gr_util_8h_1f0d5c47a0f03caa1ebf26e600844a93}{GrBindPackPB} (unsigned int handle)
+\item 
+unsigned int \hyperlink{_gr_util_8h_368ba0f00324e71c46a376ce4a0c9c4f}{GrGetPackPB} ()
+\item 
+void \hyperlink{_gr_util_8h_681f56fdfb1ea8225c03f9a14b41be2c}{GrBindUnpackPB} (unsigned int handle)
+\item 
+unsigned int \hyperlink{_gr_util_8h_25a5b32dfc45cb4385ac12eceed64981}{GrGetUnpackPB} ()
+\item 
+void \hyperlink{_gr_util_8h_a40f94ecd4645027260b3217ce172cbe}{GrBindShader} (unsigned int handle)
+\item 
+unsigned int \hyperlink{_gr_util_8h_cf8fae2ee0807b48ac9c5bdb8ae47583}{GrGetShader} ()
+\item 
+void \hyperlink{_gr_util_8h_7846b6c52cbb48bb05538b9d53ce3ede}{GrDrawBuffers} (unsigned int \hyperlink{glext__bak_8h_996c1796ca5fd986476937580146f931}{buffers})
+\item 
+void \hyperlink{_gr_util_8h_31be90e1387c34e7e279e74e661f654e}{GrReadBuffer} (unsigned int \hyperlink{glext__bak_8h_c4fdb15bdbcd63430bab668b5419ed9f}{buffer})
+\item 
+void \hyperlink{_gr_util_8h_032fc1db381d700a752a7cd27dd5be72}{GrClear} (float red=0.0f, float green=0.0f, float blue=0.0f, float alpha=0.0f, float depth=1.0f, unsigned int stencil=0)
+\item 
+void \hyperlink{_gr_util_8h_0bd2ddc1103b94e3ba713e4b5a994cc9}{GrDrawArrays} (\hyperlink{_gr_util_8h_b3e9826637cd9ac6566bdd76e9fce145}{EGRPRIMTYPE} primType, unsigned int \hyperlink{glext__bak_8h_c55adc720a3098c1b454d2a4647f4361}{start}, unsigned int vertexCount)
+\item 
+void \hyperlink{_gr_util_8h_2d253d8206d0dd3465b2a051791c674b}{GrDrawRangeArrays} (\hyperlink{_gr_util_8h_b3e9826637cd9ac6566bdd76e9fce145}{EGRPRIMTYPE} primType, unsigned int minIndex, unsigned int maxIndex, unsigned int indexCount, \hyperlink{_gr_util_8h_ac7250b216f548e740b6d2e0d5d972f8}{EGRTYPE} indexType, void $\ast$\hyperlink{glext__bak_8h_c4293d0f76770fe857be3431df25308d}{indices})
+\item 
+int \hyperlink{_gr_util_8h_57ce65addf88b13e2ef46292a30fb539}{GrGetMaxTextureSize} ()
+\item 
+int \hyperlink{_gr_util_8h_314fa8e5a4bc247c611bdffaa7c357be}{GrGetMaxFramebufferSize} ()
+\item 
+int \hyperlink{_gr_util_8h_69298fe2442ba2ee240106ec63d5b6b3}{GrGetMaxAttribCount} ()
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_gr_util_8h_c47dcda0ac9622dee9ee5013742195a8}{
+\index{GrUtil.h@{GrUtil.h}!GR\_\-ALPHA@{GR\_\-ALPHA}}
+\index{GR\_\-ALPHA@{GR\_\-ALPHA}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GR\_\-ALPHA}]{\setlength{\rightskip}{0pt plus 5cm}\#define GR\_\-ALPHA~0x08}}
+\label{_gr_util_8h_c47dcda0ac9622dee9ee5013742195a8}
+
+
+
+
+Definition at line 35 of file GrUtil.h.\hypertarget{_gr_util_8h_20b24dfbb3798202873d51b43f75082d}{
+\index{GrUtil.h@{GrUtil.h}!GR\_\-ALPHATEST@{GR\_\-ALPHATEST}}
+\index{GR\_\-ALPHATEST@{GR\_\-ALPHATEST}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GR\_\-ALPHATEST}]{\setlength{\rightskip}{0pt plus 5cm}\#define GR\_\-ALPHATEST~0x0008}}
+\label{_gr_util_8h_20b24dfbb3798202873d51b43f75082d}
+
+
+
+
+Definition at line 24 of file GrUtil.h.\hypertarget{_gr_util_8h_78d49af22f87f93b2a04b5c3976cc443}{
+\index{GrUtil.h@{GrUtil.h}!GR\_\-AUX0@{GR\_\-AUX0}}
+\index{GR\_\-AUX0@{GR\_\-AUX0}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GR\_\-AUX0}]{\setlength{\rightskip}{0pt plus 5cm}\#define GR\_\-AUX0~0x0010}}
+\label{_gr_util_8h_78d49af22f87f93b2a04b5c3976cc443}
+
+
+
+
+Definition at line 45 of file GrUtil.h.\hypertarget{_gr_util_8h_841f66f5b23a43c9be78854f9de92e7c}{
+\index{GrUtil.h@{GrUtil.h}!GR\_\-AUX1@{GR\_\-AUX1}}
+\index{GR\_\-AUX1@{GR\_\-AUX1}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GR\_\-AUX1}]{\setlength{\rightskip}{0pt plus 5cm}\#define GR\_\-AUX1~0x0020}}
+\label{_gr_util_8h_841f66f5b23a43c9be78854f9de92e7c}
+
+
+
+
+Definition at line 46 of file GrUtil.h.\hypertarget{_gr_util_8h_a22689f3c43811e890187a140e503fc8}{
+\index{GrUtil.h@{GrUtil.h}!GR\_\-AUX2@{GR\_\-AUX2}}
+\index{GR\_\-AUX2@{GR\_\-AUX2}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GR\_\-AUX2}]{\setlength{\rightskip}{0pt plus 5cm}\#define GR\_\-AUX2~0x0040}}
+\label{_gr_util_8h_a22689f3c43811e890187a140e503fc8}
+
+
+
+
+Definition at line 47 of file GrUtil.h.\hypertarget{_gr_util_8h_91064edabbd1894828fcc812fd47eb98}{
+\index{GrUtil.h@{GrUtil.h}!GR\_\-BACK@{GR\_\-BACK}}
+\index{GR\_\-BACK@{GR\_\-BACK}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GR\_\-BACK}]{\setlength{\rightskip}{0pt plus 5cm}\#define GR\_\-BACK~0x0002}}
+\label{_gr_util_8h_91064edabbd1894828fcc812fd47eb98}
+
+
+
+
+Definition at line 44 of file GrUtil.h.\hypertarget{_gr_util_8h_ce93b9dc4bae65a0e96164bc2dcb2688}{
+\index{GrUtil.h@{GrUtil.h}!GR\_\-BLEND@{GR\_\-BLEND}}
+\index{GR\_\-BLEND@{GR\_\-BLEND}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GR\_\-BLEND}]{\setlength{\rightskip}{0pt plus 5cm}\#define GR\_\-BLEND~0x0004}}
+\label{_gr_util_8h_ce93b9dc4bae65a0e96164bc2dcb2688}
+
+
+
+
+Definition at line 23 of file GrUtil.h.\hypertarget{_gr_util_8h_b13df2d8cbeeea607083962641ab21e8}{
+\index{GrUtil.h@{GrUtil.h}!GR\_\-BLUE@{GR\_\-BLUE}}
+\index{GR\_\-BLUE@{GR\_\-BLUE}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GR\_\-BLUE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GR\_\-BLUE~0x02}}
+\label{_gr_util_8h_b13df2d8cbeeea607083962641ab21e8}
+
+
+
+
+Definition at line 33 of file GrUtil.h.\hypertarget{_gr_util_8h_762f1fd63793de54c0051d97523f7318}{
+\index{GrUtil.h@{GrUtil.h}!GR\_\-COLOR\_\-ATTACH0@{GR\_\-COLOR\_\-ATTACH0}}
+\index{GR\_\-COLOR\_\-ATTACH0@{GR\_\-COLOR\_\-ATTACH0}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GR\_\-COLOR\_\-ATTACH0}]{\setlength{\rightskip}{0pt plus 5cm}\#define GR\_\-COLOR\_\-ATTACH0~0x0100}}
+\label{_gr_util_8h_762f1fd63793de54c0051d97523f7318}
+
+
+
+
+Definition at line 48 of file GrUtil.h.\hypertarget{_gr_util_8h_929342d89e4983bbdebb872f81c29421}{
+\index{GrUtil.h@{GrUtil.h}!GR\_\-COLOR\_\-ATTACH1@{GR\_\-COLOR\_\-ATTACH1}}
+\index{GR\_\-COLOR\_\-ATTACH1@{GR\_\-COLOR\_\-ATTACH1}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GR\_\-COLOR\_\-ATTACH1}]{\setlength{\rightskip}{0pt plus 5cm}\#define GR\_\-COLOR\_\-ATTACH1~0x0200}}
+\label{_gr_util_8h_929342d89e4983bbdebb872f81c29421}
+
+
+
+
+Definition at line 49 of file GrUtil.h.\hypertarget{_gr_util_8h_1ae66cda5f1748c7834c188fc5286a1c}{
+\index{GrUtil.h@{GrUtil.h}!GR\_\-COLOR\_\-ATTACH2@{GR\_\-COLOR\_\-ATTACH2}}
+\index{GR\_\-COLOR\_\-ATTACH2@{GR\_\-COLOR\_\-ATTACH2}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GR\_\-COLOR\_\-ATTACH2}]{\setlength{\rightskip}{0pt plus 5cm}\#define GR\_\-COLOR\_\-ATTACH2~0x0400}}
+\label{_gr_util_8h_1ae66cda5f1748c7834c188fc5286a1c}
+
+
+
+
+Definition at line 50 of file GrUtil.h.\hypertarget{_gr_util_8h_8b41f70d347e6bc53882c3aa63a34f5c}{
+\index{GrUtil.h@{GrUtil.h}!GR\_\-COLOR\_\-ATTACH3@{GR\_\-COLOR\_\-ATTACH3}}
+\index{GR\_\-COLOR\_\-ATTACH3@{GR\_\-COLOR\_\-ATTACH3}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GR\_\-COLOR\_\-ATTACH3}]{\setlength{\rightskip}{0pt plus 5cm}\#define GR\_\-COLOR\_\-ATTACH3~0x0800}}
+\label{_gr_util_8h_8b41f70d347e6bc53882c3aa63a34f5c}
+
+
+
+
+Definition at line 51 of file GrUtil.h.\hypertarget{_gr_util_8h_43f8fbc0073e1858f6bba0a73acfe8a6}{
+\index{GrUtil.h@{GrUtil.h}!GR\_\-CULLFACE@{GR\_\-CULLFACE}}
+\index{GR\_\-CULLFACE@{GR\_\-CULLFACE}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GR\_\-CULLFACE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GR\_\-CULLFACE~0x0002}}
+\label{_gr_util_8h_43f8fbc0073e1858f6bba0a73acfe8a6}
+
+
+
+
+Definition at line 22 of file GrUtil.h.\hypertarget{_gr_util_8h_263ecb0b6dc90d2aca7b9291d81a7024}{
+\index{GrUtil.h@{GrUtil.h}!GR\_\-DEPTH@{GR\_\-DEPTH}}
+\index{GR\_\-DEPTH@{GR\_\-DEPTH}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GR\_\-DEPTH}]{\setlength{\rightskip}{0pt plus 5cm}\#define GR\_\-DEPTH~0x10}}
+\label{_gr_util_8h_263ecb0b6dc90d2aca7b9291d81a7024}
+
+
+
+
+Definition at line 38 of file GrUtil.h.\hypertarget{_gr_util_8h_54096622979773e2eb626dbf956e7145}{
+\index{GrUtil.h@{GrUtil.h}!GR\_\-DEPTHBIAS@{GR\_\-DEPTHBIAS}}
+\index{GR\_\-DEPTHBIAS@{GR\_\-DEPTHBIAS}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GR\_\-DEPTHBIAS}]{\setlength{\rightskip}{0pt plus 5cm}\#define GR\_\-DEPTHBIAS~0x0040}}
+\label{_gr_util_8h_54096622979773e2eb626dbf956e7145}
+
+
+
+
+Definition at line 27 of file GrUtil.h.\hypertarget{_gr_util_8h_df38fed29d4a8214bf4a51a0df0a7512}{
+\index{GrUtil.h@{GrUtil.h}!GR\_\-DEPTHTEST@{GR\_\-DEPTHTEST}}
+\index{GR\_\-DEPTHTEST@{GR\_\-DEPTHTEST}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GR\_\-DEPTHTEST}]{\setlength{\rightskip}{0pt plus 5cm}\#define GR\_\-DEPTHTEST~0x0001}}
+\label{_gr_util_8h_df38fed29d4a8214bf4a51a0df0a7512}
+
+
+
+
+Definition at line 21 of file GrUtil.h.\hypertarget{_gr_util_8h_3c13799be36662933532e23203090d01}{
+\index{GrUtil.h@{GrUtil.h}!GR\_\-FALSE@{GR\_\-FALSE}}
+\index{GR\_\-FALSE@{GR\_\-FALSE}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GR\_\-FALSE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GR\_\-FALSE~0}}
+\label{_gr_util_8h_3c13799be36662933532e23203090d01}
+
+
+
+
+Definition at line 56 of file GrUtil.h.\hypertarget{_gr_util_8h_a073c31ad6a86b58868a1bb0b104847a}{
+\index{GrUtil.h@{GrUtil.h}!GR\_\-FRONT@{GR\_\-FRONT}}
+\index{GR\_\-FRONT@{GR\_\-FRONT}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GR\_\-FRONT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GR\_\-FRONT~0x0001}}
+\label{_gr_util_8h_a073c31ad6a86b58868a1bb0b104847a}
+
+
+
+
+Definition at line 43 of file GrUtil.h.\hypertarget{_gr_util_8h_1e29dbb3cb7c9fc44f446e6fc49ddfee}{
+\index{GrUtil.h@{GrUtil.h}!GR\_\-GREEN@{GR\_\-GREEN}}
+\index{GR\_\-GREEN@{GR\_\-GREEN}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GR\_\-GREEN}]{\setlength{\rightskip}{0pt plus 5cm}\#define GR\_\-GREEN~0x04}}
+\label{_gr_util_8h_1e29dbb3cb7c9fc44f446e6fc49ddfee}
+
+
+
+
+Definition at line 34 of file GrUtil.h.\hypertarget{_gr_util_8h_5d9b61a9f967ef9cd64bffd282b79e1e}{
+\index{GrUtil.h@{GrUtil.h}!GR\_\-RED@{GR\_\-RED}}
+\index{GR\_\-RED@{GR\_\-RED}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GR\_\-RED}]{\setlength{\rightskip}{0pt plus 5cm}\#define GR\_\-RED~0x01}}
+\label{_gr_util_8h_5d9b61a9f967ef9cd64bffd282b79e1e}
+
+
+
+
+Definition at line 32 of file GrUtil.h.\hypertarget{_gr_util_8h_1476e1e11814b5a42a9aaa0ba1d36df4}{
+\index{GrUtil.h@{GrUtil.h}!GR\_\-RGB@{GR\_\-RGB}}
+\index{GR\_\-RGB@{GR\_\-RGB}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GR\_\-RGB}]{\setlength{\rightskip}{0pt plus 5cm}\#define GR\_\-RGB~0x07}}
+\label{_gr_util_8h_1476e1e11814b5a42a9aaa0ba1d36df4}
+
+
+
+
+Definition at line 36 of file GrUtil.h.\hypertarget{_gr_util_8h_d091dcc5dafb6944427eb6d9895b25d3}{
+\index{GrUtil.h@{GrUtil.h}!GR\_\-RGBA@{GR\_\-RGBA}}
+\index{GR\_\-RGBA@{GR\_\-RGBA}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GR\_\-RGBA}]{\setlength{\rightskip}{0pt plus 5cm}\#define GR\_\-RGBA~0x0F}}
+\label{_gr_util_8h_d091dcc5dafb6944427eb6d9895b25d3}
+
+
+
+
+Definition at line 37 of file GrUtil.h.\hypertarget{_gr_util_8h_47199898343345437f15b87b709a20e6}{
+\index{GrUtil.h@{GrUtil.h}!GR\_\-SCISSORTEST@{GR\_\-SCISSORTEST}}
+\index{GR\_\-SCISSORTEST@{GR\_\-SCISSORTEST}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GR\_\-SCISSORTEST}]{\setlength{\rightskip}{0pt plus 5cm}\#define GR\_\-SCISSORTEST~0x0010}}
+\label{_gr_util_8h_47199898343345437f15b87b709a20e6}
+
+
+
+
+Definition at line 25 of file GrUtil.h.\hypertarget{_gr_util_8h_c424076583734a6d018ce63bf44e054d}{
+\index{GrUtil.h@{GrUtil.h}!GR\_\-STENCIL@{GR\_\-STENCIL}}
+\index{GR\_\-STENCIL@{GR\_\-STENCIL}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GR\_\-STENCIL}]{\setlength{\rightskip}{0pt plus 5cm}\#define GR\_\-STENCIL~0x20}}
+\label{_gr_util_8h_c424076583734a6d018ce63bf44e054d}
+
+
+
+
+Definition at line 39 of file GrUtil.h.\hypertarget{_gr_util_8h_a8b6a3ea82c6849cbd16ebeba0aca2b2}{
+\index{GrUtil.h@{GrUtil.h}!GR\_\-STENCILTEST@{GR\_\-STENCILTEST}}
+\index{GR\_\-STENCILTEST@{GR\_\-STENCILTEST}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GR\_\-STENCILTEST}]{\setlength{\rightskip}{0pt plus 5cm}\#define GR\_\-STENCILTEST~0x0020}}
+\label{_gr_util_8h_a8b6a3ea82c6849cbd16ebeba0aca2b2}
+
+
+
+
+Definition at line 26 of file GrUtil.h.\hypertarget{_gr_util_8h_c66e086038f969166694787a82c8fa3f}{
+\index{GrUtil.h@{GrUtil.h}!GR\_\-TRUE@{GR\_\-TRUE}}
+\index{GR\_\-TRUE@{GR\_\-TRUE}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GR\_\-TRUE}]{\setlength{\rightskip}{0pt plus 5cm}\#define GR\_\-TRUE~1}}
+\label{_gr_util_8h_c66e086038f969166694787a82c8fa3f}
+
+
+
+
+Definition at line 55 of file GrUtil.h.\hypertarget{_gr_util_8h_3d7aa459899278ffdc2f5d3229b6ec65}{
+\index{GrUtil.h@{GrUtil.h}!GR\_\-WIREFRAME@{GR\_\-WIREFRAME}}
+\index{GR\_\-WIREFRAME@{GR\_\-WIREFRAME}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GR\_\-WIREFRAME}]{\setlength{\rightskip}{0pt plus 5cm}\#define GR\_\-WIREFRAME~0x8000}}
+\label{_gr_util_8h_3d7aa459899278ffdc2f5d3229b6ec65}
+
+
+
+
+Definition at line 28 of file GrUtil.h.
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{_gr_util_8h_abff98128b1f220d1ceff538f4abdef3}{
+\index{GrUtil.h@{GrUtil.h}!EGRALPHATESTMODE@{EGRALPHATESTMODE}}
+\index{EGRALPHATESTMODE@{EGRALPHATESTMODE}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{EGRALPHATESTMODE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf EGRALPHATESTMODE}}}
+\label{_gr_util_8h_abff98128b1f220d1ceff538f4abdef3}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{EAM\_\-LESS@{EAM\_\-LESS}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!EAM\_\-LESS@{EAM\_\-LESS}}\item[{\em 
+\hypertarget{_gr_util_8h_abff98128b1f220d1ceff538f4abdef38fbf8ca06d3a05ea827807a8459751bc}{
+EAM\_\-LESS}
+\label{_gr_util_8h_abff98128b1f220d1ceff538f4abdef38fbf8ca06d3a05ea827807a8459751bc}
+}]\index{EAM\_\-LESSEQUAL@{EAM\_\-LESSEQUAL}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!EAM\_\-LESSEQUAL@{EAM\_\-LESSEQUAL}}\item[{\em 
+\hypertarget{_gr_util_8h_abff98128b1f220d1ceff538f4abdef3fe705b2d83e29a130a97914af12ef178}{
+EAM\_\-LESSEQUAL}
+\label{_gr_util_8h_abff98128b1f220d1ceff538f4abdef3fe705b2d83e29a130a97914af12ef178}
+}]\index{EAM\_\-GREATER@{EAM\_\-GREATER}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!EAM\_\-GREATER@{EAM\_\-GREATER}}\item[{\em 
+\hypertarget{_gr_util_8h_abff98128b1f220d1ceff538f4abdef3889efe17f48153356052fbf167ce24b7}{
+EAM\_\-GREATER}
+\label{_gr_util_8h_abff98128b1f220d1ceff538f4abdef3889efe17f48153356052fbf167ce24b7}
+}]\index{EAM\_\-GREATEREQUAL@{EAM\_\-GREATEREQUAL}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!EAM\_\-GREATEREQUAL@{EAM\_\-GREATEREQUAL}}\item[{\em 
+\hypertarget{_gr_util_8h_abff98128b1f220d1ceff538f4abdef304de8fbc0cdeb20e1404c85765c8356d}{
+EAM\_\-GREATEREQUAL}
+\label{_gr_util_8h_abff98128b1f220d1ceff538f4abdef304de8fbc0cdeb20e1404c85765c8356d}
+}]\index{EAM\_\-EQUAL@{EAM\_\-EQUAL}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!EAM\_\-EQUAL@{EAM\_\-EQUAL}}\item[{\em 
+\hypertarget{_gr_util_8h_abff98128b1f220d1ceff538f4abdef3adf98125971542df220fb48ee33127a4}{
+EAM\_\-EQUAL}
+\label{_gr_util_8h_abff98128b1f220d1ceff538f4abdef3adf98125971542df220fb48ee33127a4}
+}]\index{EAM\_\-NOTEQUAL@{EAM\_\-NOTEQUAL}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!EAM\_\-NOTEQUAL@{EAM\_\-NOTEQUAL}}\item[{\em 
+\hypertarget{_gr_util_8h_abff98128b1f220d1ceff538f4abdef3d84cadbcb6baeff81d12b2941f050d15}{
+EAM\_\-NOTEQUAL}
+\label{_gr_util_8h_abff98128b1f220d1ceff538f4abdef3d84cadbcb6baeff81d12b2941f050d15}
+}]\index{EGRALPHATESTMODE\_\-DWORD@{EGRALPHATESTMODE\_\-DWORD}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!EGRALPHATESTMODE\_\-DWORD@{EGRALPHATESTMODE\_\-DWORD}}\item[{\em 
+\hypertarget{_gr_util_8h_abff98128b1f220d1ceff538f4abdef376e4f40f129cb3b85e88f0cb20dad417}{
+EGRALPHATESTMODE\_\-DWORD}
+\label{_gr_util_8h_abff98128b1f220d1ceff538f4abdef376e4f40f129cb3b85e88f0cb20dad417}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 85 of file GrUtil.h.\hypertarget{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ec}{
+\index{GrUtil.h@{GrUtil.h}!EGRBLENDMODE@{EGRBLENDMODE}}
+\index{EGRBLENDMODE@{EGRBLENDMODE}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{EGRBLENDMODE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf EGRBLENDMODE}}}
+\label{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ec}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{EBM\_\-ZERO@{EBM\_\-ZERO}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!EBM\_\-ZERO@{EBM\_\-ZERO}}\item[{\em 
+\hypertarget{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ecc9c0a06efec84a35b4d9586676fa3815}{
+EBM\_\-ZERO}
+\label{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ecc9c0a06efec84a35b4d9586676fa3815}
+}]\index{EBM\_\-ONE@{EBM\_\-ONE}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!EBM\_\-ONE@{EBM\_\-ONE}}\item[{\em 
+\hypertarget{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ec942b36475feda6ffc68e80e67fb1b79d}{
+EBM\_\-ONE}
+\label{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ec942b36475feda6ffc68e80e67fb1b79d}
+}]\index{EBM\_\-SRC\_\-COLOR@{EBM\_\-SRC\_\-COLOR}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!EBM\_\-SRC\_\-COLOR@{EBM\_\-SRC\_\-COLOR}}\item[{\em 
+\hypertarget{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961eca950776b9b46bd7912aa0276e2050e83}{
+EBM\_\-SRC\_\-COLOR}
+\label{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961eca950776b9b46bd7912aa0276e2050e83}
+}]\index{EBM\_\-DST\_\-COLOR@{EBM\_\-DST\_\-COLOR}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!EBM\_\-DST\_\-COLOR@{EBM\_\-DST\_\-COLOR}}\item[{\em 
+\hypertarget{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ec3ee6bf228d2d9a172c899f4c8dba78f5}{
+EBM\_\-DST\_\-COLOR}
+\label{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ec3ee6bf228d2d9a172c899f4c8dba78f5}
+}]\index{EBM\_\-ONE\_\-MINUS\_\-SRC\_\-COLOR@{EBM\_\-ONE\_\-MINUS\_\-SRC\_\-COLOR}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!EBM\_\-ONE\_\-MINUS\_\-SRC\_\-COLOR@{EBM\_\-ONE\_\-MINUS\_\-SRC\_\-COLOR}}\item[{\em 
+\hypertarget{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961eccd1efcb33fbd56aac98b8dd6c53ce442}{
+EBM\_\-ONE\_\-MINUS\_\-SRC\_\-COLOR}
+\label{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961eccd1efcb33fbd56aac98b8dd6c53ce442}
+}]\index{EBM\_\-ONE\_\-MINUS\_\-DST\_\-COLOR@{EBM\_\-ONE\_\-MINUS\_\-DST\_\-COLOR}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!EBM\_\-ONE\_\-MINUS\_\-DST\_\-COLOR@{EBM\_\-ONE\_\-MINUS\_\-DST\_\-COLOR}}\item[{\em 
+\hypertarget{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ecc70227a3b0b6e1f9361d25ed7e698cb3}{
+EBM\_\-ONE\_\-MINUS\_\-DST\_\-COLOR}
+\label{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ecc70227a3b0b6e1f9361d25ed7e698cb3}
+}]\index{EBM\_\-SRC\_\-ALPHA@{EBM\_\-SRC\_\-ALPHA}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!EBM\_\-SRC\_\-ALPHA@{EBM\_\-SRC\_\-ALPHA}}\item[{\em 
+\hypertarget{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ec7579af57e6c60e197bc9032372290ecd}{
+EBM\_\-SRC\_\-ALPHA}
+\label{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ec7579af57e6c60e197bc9032372290ecd}
+}]\index{EBM\_\-DST\_\-ALPHA@{EBM\_\-DST\_\-ALPHA}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!EBM\_\-DST\_\-ALPHA@{EBM\_\-DST\_\-ALPHA}}\item[{\em 
+\hypertarget{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ec999ca5c92185b5ab96ae5b470f9f0f31}{
+EBM\_\-DST\_\-ALPHA}
+\label{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ec999ca5c92185b5ab96ae5b470f9f0f31}
+}]\index{EBM\_\-ONE\_\-MINUS\_\-SRC\_\-ALPHA@{EBM\_\-ONE\_\-MINUS\_\-SRC\_\-ALPHA}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!EBM\_\-ONE\_\-MINUS\_\-SRC\_\-ALPHA@{EBM\_\-ONE\_\-MINUS\_\-SRC\_\-ALPHA}}\item[{\em 
+\hypertarget{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ece3b33f0049d970c9ed05c9e86c1a4417}{
+EBM\_\-ONE\_\-MINUS\_\-SRC\_\-ALPHA}
+\label{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ece3b33f0049d970c9ed05c9e86c1a4417}
+}]\index{EBM\_\-ONE\_\-MINUS\_\-DST\_\-ALPHA@{EBM\_\-ONE\_\-MINUS\_\-DST\_\-ALPHA}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!EBM\_\-ONE\_\-MINUS\_\-DST\_\-ALPHA@{EBM\_\-ONE\_\-MINUS\_\-DST\_\-ALPHA}}\item[{\em 
+\hypertarget{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ec822e58567993c569e0b515e92e3defbb}{
+EBM\_\-ONE\_\-MINUS\_\-DST\_\-ALPHA}
+\label{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ec822e58567993c569e0b515e92e3defbb}
+}]\index{EBM\_\-SRC\_\-ALPHA\_\-SAT@{EBM\_\-SRC\_\-ALPHA\_\-SAT}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!EBM\_\-SRC\_\-ALPHA\_\-SAT@{EBM\_\-SRC\_\-ALPHA\_\-SAT}}\item[{\em 
+\hypertarget{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ec8fb37df4552f4c66e4eb1d1d75e6d1a8}{
+EBM\_\-SRC\_\-ALPHA\_\-SAT}
+\label{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ec8fb37df4552f4c66e4eb1d1d75e6d1a8}
+}]\index{EGRBLENDMODE\_\-DWORD@{EGRBLENDMODE\_\-DWORD}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!EGRBLENDMODE\_\-DWORD@{EGRBLENDMODE\_\-DWORD}}\item[{\em 
+\hypertarget{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ec688ca3b237ca5bd479a1cfcfbf8b2e4f}{
+EGRBLENDMODE\_\-DWORD}
+\label{_gr_util_8h_48d90fb7bec7d5ebb8c2bf20318961ec688ca3b237ca5bd479a1cfcfbf8b2e4f}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 60 of file GrUtil.h.\hypertarget{_gr_util_8h_ea790ef067767354691d0d60c51542fe}{
+\index{GrUtil.h@{GrUtil.h}!EGRCULLMODE@{EGRCULLMODE}}
+\index{EGRCULLMODE@{EGRCULLMODE}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{EGRCULLMODE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf EGRCULLMODE}}}
+\label{_gr_util_8h_ea790ef067767354691d0d60c51542fe}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{ECM\_\-FRONT@{ECM\_\-FRONT}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!ECM\_\-FRONT@{ECM\_\-FRONT}}\item[{\em 
+\hypertarget{_gr_util_8h_ea790ef067767354691d0d60c51542fe13bc00176eb32b77f64dcdf85484a663}{
+ECM\_\-FRONT}
+\label{_gr_util_8h_ea790ef067767354691d0d60c51542fe13bc00176eb32b77f64dcdf85484a663}
+}]\index{ECM\_\-BACK@{ECM\_\-BACK}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!ECM\_\-BACK@{ECM\_\-BACK}}\item[{\em 
+\hypertarget{_gr_util_8h_ea790ef067767354691d0d60c51542fe5fb45ade8a2def0e22899c5f34497da4}{
+ECM\_\-BACK}
+\label{_gr_util_8h_ea790ef067767354691d0d60c51542fe5fb45ade8a2def0e22899c5f34497da4}
+}]\index{EGRCULLMODE\_\-DWORD@{EGRCULLMODE\_\-DWORD}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!EGRCULLMODE\_\-DWORD@{EGRCULLMODE\_\-DWORD}}\item[{\em 
+\hypertarget{_gr_util_8h_ea790ef067767354691d0d60c51542fe7e766cb1c7c3ee17d8820f2ea728c35c}{
+EGRCULLMODE\_\-DWORD}
+\label{_gr_util_8h_ea790ef067767354691d0d60c51542fe7e766cb1c7c3ee17d8820f2ea728c35c}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 96 of file GrUtil.h.\hypertarget{_gr_util_8h_987cbe08cd23c0d7a12ae576e9ce0984}{
+\index{GrUtil.h@{GrUtil.h}!EGRDEPTHMODE@{EGRDEPTHMODE}}
+\index{EGRDEPTHMODE@{EGRDEPTHMODE}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{EGRDEPTHMODE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf EGRDEPTHMODE}}}
+\label{_gr_util_8h_987cbe08cd23c0d7a12ae576e9ce0984}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{EDM\_\-LESSEQUAL@{EDM\_\-LESSEQUAL}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!EDM\_\-LESSEQUAL@{EDM\_\-LESSEQUAL}}\item[{\em 
+\hypertarget{_gr_util_8h_987cbe08cd23c0d7a12ae576e9ce098411cf9194e24cc66a0779bd0d6619ce9d}{
+EDM\_\-LESSEQUAL}
+\label{_gr_util_8h_987cbe08cd23c0d7a12ae576e9ce098411cf9194e24cc66a0779bd0d6619ce9d}
+}]\index{EDM\_\-EQUAL@{EDM\_\-EQUAL}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!EDM\_\-EQUAL@{EDM\_\-EQUAL}}\item[{\em 
+\hypertarget{_gr_util_8h_987cbe08cd23c0d7a12ae576e9ce09840f811c51d82912702d0d646e80403d39}{
+EDM\_\-EQUAL}
+\label{_gr_util_8h_987cbe08cd23c0d7a12ae576e9ce09840f811c51d82912702d0d646e80403d39}
+}]\index{EDM\_\-ALWAYS@{EDM\_\-ALWAYS}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!EDM\_\-ALWAYS@{EDM\_\-ALWAYS}}\item[{\em 
+\hypertarget{_gr_util_8h_987cbe08cd23c0d7a12ae576e9ce09845b5e26e846a6edfdbb028ff8d1bc5779}{
+EDM\_\-ALWAYS}
+\label{_gr_util_8h_987cbe08cd23c0d7a12ae576e9ce09845b5e26e846a6edfdbb028ff8d1bc5779}
+}]\index{EGRDEPTHMODE\_\-DWORD@{EGRDEPTHMODE\_\-DWORD}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!EGRDEPTHMODE\_\-DWORD@{EGRDEPTHMODE\_\-DWORD}}\item[{\em 
+\hypertarget{_gr_util_8h_987cbe08cd23c0d7a12ae576e9ce0984a497ffbfaa4b8e37434ab2276e333813}{
+EGRDEPTHMODE\_\-DWORD}
+\label{_gr_util_8h_987cbe08cd23c0d7a12ae576e9ce0984a497ffbfaa4b8e37434ab2276e333813}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 103 of file GrUtil.h.\hypertarget{_gr_util_8h_02f438f7c3b1769e8bf1359926d05502}{
+\index{GrUtil.h@{GrUtil.h}!EGRIMAGEFORMAT@{EGRIMAGEFORMAT}}
+\index{EGRIMAGEFORMAT@{EGRIMAGEFORMAT}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{EGRIMAGEFORMAT}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf EGRIMAGEFORMAT}}}
+\label{_gr_util_8h_02f438f7c3b1769e8bf1359926d05502}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{EIF\_\-R@{EIF\_\-R}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!EIF\_\-R@{EIF\_\-R}}\item[{\em 
+\hypertarget{_gr_util_8h_02f438f7c3b1769e8bf1359926d0550264db12b24d7732b59f02909a6cebe049}{
+EIF\_\-R}
+\label{_gr_util_8h_02f438f7c3b1769e8bf1359926d0550264db12b24d7732b59f02909a6cebe049}
+}]\index{EIF\_\-RGB@{EIF\_\-RGB}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!EIF\_\-RGB@{EIF\_\-RGB}}\item[{\em 
+\hypertarget{_gr_util_8h_02f438f7c3b1769e8bf1359926d05502d9b6b20e28a3f6ecba6628f32dad7a47}{
+EIF\_\-RGB}
+\label{_gr_util_8h_02f438f7c3b1769e8bf1359926d05502d9b6b20e28a3f6ecba6628f32dad7a47}
+}]\index{EIF\_\-RGBA@{EIF\_\-RGBA}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!EIF\_\-RGBA@{EIF\_\-RGBA}}\item[{\em 
+\hypertarget{_gr_util_8h_02f438f7c3b1769e8bf1359926d05502424143d284ec53b9004038f909edfa61}{
+EIF\_\-RGBA}
+\label{_gr_util_8h_02f438f7c3b1769e8bf1359926d05502424143d284ec53b9004038f909edfa61}
+}]\index{EIF\_\-BGR@{EIF\_\-BGR}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!EIF\_\-BGR@{EIF\_\-BGR}}\item[{\em 
+\hypertarget{_gr_util_8h_02f438f7c3b1769e8bf1359926d055026b71585b29e1b0990d05d651a900d04f}{
+EIF\_\-BGR}
+\label{_gr_util_8h_02f438f7c3b1769e8bf1359926d055026b71585b29e1b0990d05d651a900d04f}
+}]\index{EIF\_\-BGRA@{EIF\_\-BGRA}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!EIF\_\-BGRA@{EIF\_\-BGRA}}\item[{\em 
+\hypertarget{_gr_util_8h_02f438f7c3b1769e8bf1359926d05502a7855cfc119f5b8b4c55a4b7586b6e20}{
+EIF\_\-BGRA}
+\label{_gr_util_8h_02f438f7c3b1769e8bf1359926d05502a7855cfc119f5b8b4c55a4b7586b6e20}
+}]\index{EIF\_\-DXT1@{EIF\_\-DXT1}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!EIF\_\-DXT1@{EIF\_\-DXT1}}\item[{\em 
+\hypertarget{_gr_util_8h_02f438f7c3b1769e8bf1359926d0550250e40f9d1a58b4708f7a0232fec3cf7b}{
+EIF\_\-DXT1}
+\label{_gr_util_8h_02f438f7c3b1769e8bf1359926d0550250e40f9d1a58b4708f7a0232fec3cf7b}
+}]\index{EIF\_\-DXT5@{EIF\_\-DXT5}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!EIF\_\-DXT5@{EIF\_\-DXT5}}\item[{\em 
+\hypertarget{_gr_util_8h_02f438f7c3b1769e8bf1359926d055021d64ec60aafb09b9c72ac326db39560a}{
+EIF\_\-DXT5}
+\label{_gr_util_8h_02f438f7c3b1769e8bf1359926d055021d64ec60aafb09b9c72ac326db39560a}
+}]\index{EIF\_\-R\_\-RGTC1@{EIF\_\-R\_\-RGTC1}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!EIF\_\-R\_\-RGTC1@{EIF\_\-R\_\-RGTC1}}\item[{\em 
+\hypertarget{_gr_util_8h_02f438f7c3b1769e8bf1359926d05502eaab3acd8cf9fe108393f9986a3be2e6}{
+EIF\_\-R\_\-RGTC1}
+\label{_gr_util_8h_02f438f7c3b1769e8bf1359926d05502eaab3acd8cf9fe108393f9986a3be2e6}
+}]\index{EIF\_\-R\_\-RGTC1\_\-SIGNED@{EIF\_\-R\_\-RGTC1\_\-SIGNED}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!EIF\_\-R\_\-RGTC1\_\-SIGNED@{EIF\_\-R\_\-RGTC1\_\-SIGNED}}\item[{\em 
+\hypertarget{_gr_util_8h_02f438f7c3b1769e8bf1359926d0550285456cc1ef83efbe1c6e8931e2c59519}{
+EIF\_\-R\_\-RGTC1\_\-SIGNED}
+\label{_gr_util_8h_02f438f7c3b1769e8bf1359926d0550285456cc1ef83efbe1c6e8931e2c59519}
+}]\index{EIF\_\-RG\_\-RGTC2@{EIF\_\-RG\_\-RGTC2}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!EIF\_\-RG\_\-RGTC2@{EIF\_\-RG\_\-RGTC2}}\item[{\em 
+\hypertarget{_gr_util_8h_02f438f7c3b1769e8bf1359926d055024cef43f0413f69959820c270819ad9fb}{
+EIF\_\-RG\_\-RGTC2}
+\label{_gr_util_8h_02f438f7c3b1769e8bf1359926d055024cef43f0413f69959820c270819ad9fb}
+}]\index{EIF\_\-RG\_\-RGTC2\_\-SIGNED@{EIF\_\-RG\_\-RGTC2\_\-SIGNED}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!EIF\_\-RG\_\-RGTC2\_\-SIGNED@{EIF\_\-RG\_\-RGTC2\_\-SIGNED}}\item[{\em 
+\hypertarget{_gr_util_8h_02f438f7c3b1769e8bf1359926d055024c5f6546e69282b28088628db857de06}{
+EIF\_\-RG\_\-RGTC2\_\-SIGNED}
+\label{_gr_util_8h_02f438f7c3b1769e8bf1359926d055024c5f6546e69282b28088628db857de06}
+}]\index{EIF\_\-COUNT@{EIF\_\-COUNT}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!EIF\_\-COUNT@{EIF\_\-COUNT}}\item[{\em 
+\hypertarget{_gr_util_8h_02f438f7c3b1769e8bf1359926d0550293ee4953c49400f9f21684b5d4dfac16}{
+EIF\_\-COUNT}
+\label{_gr_util_8h_02f438f7c3b1769e8bf1359926d0550293ee4953c49400f9f21684b5d4dfac16}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 133 of file GrUtil.h.\hypertarget{_gr_util_8h_b3e9826637cd9ac6566bdd76e9fce145}{
+\index{GrUtil.h@{GrUtil.h}!EGRPRIMTYPE@{EGRPRIMTYPE}}
+\index{EGRPRIMTYPE@{EGRPRIMTYPE}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{EGRPRIMTYPE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf EGRPRIMTYPE}}}
+\label{_gr_util_8h_b3e9826637cd9ac6566bdd76e9fce145}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{EPT\_\-TRIANGLES@{EPT\_\-TRIANGLES}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!EPT\_\-TRIANGLES@{EPT\_\-TRIANGLES}}\item[{\em 
+\hypertarget{_gr_util_8h_b3e9826637cd9ac6566bdd76e9fce145a9fe6ff1c0350bd3ba9fdaf6818343ec}{
+EPT\_\-TRIANGLES}
+\label{_gr_util_8h_b3e9826637cd9ac6566bdd76e9fce145a9fe6ff1c0350bd3ba9fdaf6818343ec}
+}]\index{EPT\_\-TRIANGLE\_\-STRIP@{EPT\_\-TRIANGLE\_\-STRIP}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!EPT\_\-TRIANGLE\_\-STRIP@{EPT\_\-TRIANGLE\_\-STRIP}}\item[{\em 
+\hypertarget{_gr_util_8h_b3e9826637cd9ac6566bdd76e9fce1452a8780504f21b4faa98bcd7951ce64c8}{
+EPT\_\-TRIANGLE\_\-STRIP}
+\label{_gr_util_8h_b3e9826637cd9ac6566bdd76e9fce1452a8780504f21b4faa98bcd7951ce64c8}
+}]\index{EPT\_\-LINES@{EPT\_\-LINES}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!EPT\_\-LINES@{EPT\_\-LINES}}\item[{\em 
+\hypertarget{_gr_util_8h_b3e9826637cd9ac6566bdd76e9fce145f3102cc2feb794a2f7582b0b076076ac}{
+EPT\_\-LINES}
+\label{_gr_util_8h_b3e9826637cd9ac6566bdd76e9fce145f3102cc2feb794a2f7582b0b076076ac}
+}]\index{EPT\_\-LINE\_\-STRIP@{EPT\_\-LINE\_\-STRIP}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!EPT\_\-LINE\_\-STRIP@{EPT\_\-LINE\_\-STRIP}}\item[{\em 
+\hypertarget{_gr_util_8h_b3e9826637cd9ac6566bdd76e9fce1452b630b6983e21c7ee84bdf2f40454046}{
+EPT\_\-LINE\_\-STRIP}
+\label{_gr_util_8h_b3e9826637cd9ac6566bdd76e9fce1452b630b6983e21c7ee84bdf2f40454046}
+}]\index{EPT\_\-QUADS@{EPT\_\-QUADS}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!EPT\_\-QUADS@{EPT\_\-QUADS}}\item[{\em 
+\hypertarget{_gr_util_8h_b3e9826637cd9ac6566bdd76e9fce14500373ffe678f25c35c1503d614ca8e53}{
+EPT\_\-QUADS}
+\label{_gr_util_8h_b3e9826637cd9ac6566bdd76e9fce14500373ffe678f25c35c1503d614ca8e53}
+}]\index{EPT\_\-COUNT@{EPT\_\-COUNT}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!EPT\_\-COUNT@{EPT\_\-COUNT}}\item[{\em 
+\hypertarget{_gr_util_8h_b3e9826637cd9ac6566bdd76e9fce14580977168c4e8e33a541e56156c8383f7}{
+EPT\_\-COUNT}
+\label{_gr_util_8h_b3e9826637cd9ac6566bdd76e9fce14580977168c4e8e33a541e56156c8383f7}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 166 of file GrUtil.h.\hypertarget{_gr_util_8h_1b0363d090000f9cf8d7b949574fa046}{
+\index{GrUtil.h@{GrUtil.h}!EGRSTENCILMODE@{EGRSTENCILMODE}}
+\index{EGRSTENCILMODE@{EGRSTENCILMODE}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{EGRSTENCILMODE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf EGRSTENCILMODE}}}
+\label{_gr_util_8h_1b0363d090000f9cf8d7b949574fa046}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{ESM\_\-ZFAILINCR@{ESM\_\-ZFAILINCR}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!ESM\_\-ZFAILINCR@{ESM\_\-ZFAILINCR}}\item[{\em 
+\hypertarget{_gr_util_8h_1b0363d090000f9cf8d7b949574fa046bceb71ec671eaf3e8f230e4b49054b45}{
+ESM\_\-ZFAILINCR}
+\label{_gr_util_8h_1b0363d090000f9cf8d7b949574fa046bceb71ec671eaf3e8f230e4b49054b45}
+}]\index{ESM\_\-ZFAILDECR@{ESM\_\-ZFAILDECR}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!ESM\_\-ZFAILDECR@{ESM\_\-ZFAILDECR}}\item[{\em 
+\hypertarget{_gr_util_8h_1b0363d090000f9cf8d7b949574fa046824ae7793ca9a886c704233e008ba419}{
+ESM\_\-ZFAILDECR}
+\label{_gr_util_8h_1b0363d090000f9cf8d7b949574fa046824ae7793ca9a886c704233e008ba419}
+}]\index{ESM\_\-ZPASSINCR@{ESM\_\-ZPASSINCR}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!ESM\_\-ZPASSINCR@{ESM\_\-ZPASSINCR}}\item[{\em 
+\hypertarget{_gr_util_8h_1b0363d090000f9cf8d7b949574fa0460891f4531657020f6f7a939bef332105}{
+ESM\_\-ZPASSINCR}
+\label{_gr_util_8h_1b0363d090000f9cf8d7b949574fa0460891f4531657020f6f7a939bef332105}
+}]\index{ESM\_\-USESTENCIL@{ESM\_\-USESTENCIL}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!ESM\_\-USESTENCIL@{ESM\_\-USESTENCIL}}\item[{\em 
+\hypertarget{_gr_util_8h_1b0363d090000f9cf8d7b949574fa04669d13bfa6d8fca3dbdbfa272dbba4343}{
+ESM\_\-USESTENCIL}
+\label{_gr_util_8h_1b0363d090000f9cf8d7b949574fa04669d13bfa6d8fca3dbdbfa272dbba4343}
+}]\index{EGRSTENCILMODE\_\-DWORD@{EGRSTENCILMODE\_\-DWORD}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!EGRSTENCILMODE\_\-DWORD@{EGRSTENCILMODE\_\-DWORD}}\item[{\em 
+\hypertarget{_gr_util_8h_1b0363d090000f9cf8d7b949574fa0466077d8bd33914011fa43c9456c1ac2a5}{
+EGRSTENCILMODE\_\-DWORD}
+\label{_gr_util_8h_1b0363d090000f9cf8d7b949574fa0466077d8bd33914011fa43c9456c1ac2a5}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 76 of file GrUtil.h.\hypertarget{_gr_util_8h_44688cfc75f55fcd8f79435674faf92a}{
+\index{GrUtil.h@{GrUtil.h}!EGRTEXTUREFORMAT@{EGRTEXTUREFORMAT}}
+\index{EGRTEXTUREFORMAT@{EGRTEXTUREFORMAT}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{EGRTEXTUREFORMAT}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf EGRTEXTUREFORMAT}}}
+\label{_gr_util_8h_44688cfc75f55fcd8f79435674faf92a}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{ETF\_\-DXT1@{ETF\_\-DXT1}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!ETF\_\-DXT1@{ETF\_\-DXT1}}\item[{\em 
+\hypertarget{_gr_util_8h_44688cfc75f55fcd8f79435674faf92a063d38a65adec74db3babe9d4ce43765}{
+ETF\_\-DXT1}
+\label{_gr_util_8h_44688cfc75f55fcd8f79435674faf92a063d38a65adec74db3babe9d4ce43765}
+}]\index{ETF\_\-DXT5@{ETF\_\-DXT5}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!ETF\_\-DXT5@{ETF\_\-DXT5}}\item[{\em 
+\hypertarget{_gr_util_8h_44688cfc75f55fcd8f79435674faf92ac056e2f51eba7177260a9555492f7f41}{
+ETF\_\-DXT5}
+\label{_gr_util_8h_44688cfc75f55fcd8f79435674faf92ac056e2f51eba7177260a9555492f7f41}
+}]\index{ETF\_\-RGB16@{ETF\_\-RGB16}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!ETF\_\-RGB16@{ETF\_\-RGB16}}\item[{\em 
+\hypertarget{_gr_util_8h_44688cfc75f55fcd8f79435674faf92a3c25a238a8c4bae7f967e925dacb49ff}{
+ETF\_\-RGB16}
+\label{_gr_util_8h_44688cfc75f55fcd8f79435674faf92a3c25a238a8c4bae7f967e925dacb49ff}
+}]\index{ETF\_\-RGB24@{ETF\_\-RGB24}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!ETF\_\-RGB24@{ETF\_\-RGB24}}\item[{\em 
+\hypertarget{_gr_util_8h_44688cfc75f55fcd8f79435674faf92a8f2936ae0b9e446a07eeecee3461a6ab}{
+ETF\_\-RGB24}
+\label{_gr_util_8h_44688cfc75f55fcd8f79435674faf92a8f2936ae0b9e446a07eeecee3461a6ab}
+}]\index{ETF\_\-RGB15\_\-A1@{ETF\_\-RGB15\_\-A1}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!ETF\_\-RGB15\_\-A1@{ETF\_\-RGB15\_\-A1}}\item[{\em 
+\hypertarget{_gr_util_8h_44688cfc75f55fcd8f79435674faf92a60619064b2fbd5687adfe0936f64758c}{
+ETF\_\-RGB15\_\-A1}
+\label{_gr_util_8h_44688cfc75f55fcd8f79435674faf92a60619064b2fbd5687adfe0936f64758c}
+}]\index{ETF\_\-RGBA32@{ETF\_\-RGBA32}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!ETF\_\-RGBA32@{ETF\_\-RGBA32}}\item[{\em 
+\hypertarget{_gr_util_8h_44688cfc75f55fcd8f79435674faf92ab1ce90afd6ba4563195e09f42fc3547f}{
+ETF\_\-RGBA32}
+\label{_gr_util_8h_44688cfc75f55fcd8f79435674faf92ab1ce90afd6ba4563195e09f42fc3547f}
+}]\index{ETF\_\-RGB48F@{ETF\_\-RGB48F}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!ETF\_\-RGB48F@{ETF\_\-RGB48F}}\item[{\em 
+\hypertarget{_gr_util_8h_44688cfc75f55fcd8f79435674faf92a3db3f074664311ebce4e7ecb50cad021}{
+ETF\_\-RGB48F}
+\label{_gr_util_8h_44688cfc75f55fcd8f79435674faf92a3db3f074664311ebce4e7ecb50cad021}
+}]\index{ETF\_\-RGBA64F@{ETF\_\-RGBA64F}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!ETF\_\-RGBA64F@{ETF\_\-RGBA64F}}\item[{\em 
+\hypertarget{_gr_util_8h_44688cfc75f55fcd8f79435674faf92aeaf3df859c96e3aae409d92f69b8aa9d}{
+ETF\_\-RGBA64F}
+\label{_gr_util_8h_44688cfc75f55fcd8f79435674faf92aeaf3df859c96e3aae409d92f69b8aa9d}
+}]\index{ETF\_\-RGBA128F@{ETF\_\-RGBA128F}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!ETF\_\-RGBA128F@{ETF\_\-RGBA128F}}\item[{\em 
+\hypertarget{_gr_util_8h_44688cfc75f55fcd8f79435674faf92aa29c8d93e8f9a340d4f3333610d2168e}{
+ETF\_\-RGBA128F}
+\label{_gr_util_8h_44688cfc75f55fcd8f79435674faf92aa29c8d93e8f9a340d4f3333610d2168e}
+}]\index{ETF\_\-R\_\-RGTC1@{ETF\_\-R\_\-RGTC1}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!ETF\_\-R\_\-RGTC1@{ETF\_\-R\_\-RGTC1}}\item[{\em 
+\hypertarget{_gr_util_8h_44688cfc75f55fcd8f79435674faf92a8e55558bfc07a09627a90a334646fcf4}{
+ETF\_\-R\_\-RGTC1}
+\label{_gr_util_8h_44688cfc75f55fcd8f79435674faf92a8e55558bfc07a09627a90a334646fcf4}
+}]\index{ETF\_\-R\_\-RGTC1\_\-SIGNED@{ETF\_\-R\_\-RGTC1\_\-SIGNED}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!ETF\_\-R\_\-RGTC1\_\-SIGNED@{ETF\_\-R\_\-RGTC1\_\-SIGNED}}\item[{\em 
+\hypertarget{_gr_util_8h_44688cfc75f55fcd8f79435674faf92a1b847b763c816f39a8577cdfe351290b}{
+ETF\_\-R\_\-RGTC1\_\-SIGNED}
+\label{_gr_util_8h_44688cfc75f55fcd8f79435674faf92a1b847b763c816f39a8577cdfe351290b}
+}]\index{ETF\_\-RG\_\-RGTC2@{ETF\_\-RG\_\-RGTC2}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!ETF\_\-RG\_\-RGTC2@{ETF\_\-RG\_\-RGTC2}}\item[{\em 
+\hypertarget{_gr_util_8h_44688cfc75f55fcd8f79435674faf92a4238a64a155ae5f73e5d9b40d6fc7674}{
+ETF\_\-RG\_\-RGTC2}
+\label{_gr_util_8h_44688cfc75f55fcd8f79435674faf92a4238a64a155ae5f73e5d9b40d6fc7674}
+}]\index{ETF\_\-RG\_\-RGTC2\_\-SIGNED@{ETF\_\-RG\_\-RGTC2\_\-SIGNED}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!ETF\_\-RG\_\-RGTC2\_\-SIGNED@{ETF\_\-RG\_\-RGTC2\_\-SIGNED}}\item[{\em 
+\hypertarget{_gr_util_8h_44688cfc75f55fcd8f79435674faf92ad61441958f4bec36848f126eccca8e5e}{
+ETF\_\-RG\_\-RGTC2\_\-SIGNED}
+\label{_gr_util_8h_44688cfc75f55fcd8f79435674faf92ad61441958f4bec36848f126eccca8e5e}
+}]\index{ETF\_\-DEPTH@{ETF\_\-DEPTH}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!ETF\_\-DEPTH@{ETF\_\-DEPTH}}\item[{\em 
+\hypertarget{_gr_util_8h_44688cfc75f55fcd8f79435674faf92a716a8d925fbb6e1b7fc5e2cf486dca0b}{
+ETF\_\-DEPTH}
+\label{_gr_util_8h_44688cfc75f55fcd8f79435674faf92a716a8d925fbb6e1b7fc5e2cf486dca0b}
+}]\index{ETF\_\-DEPTHSTENCIL@{ETF\_\-DEPTHSTENCIL}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!ETF\_\-DEPTHSTENCIL@{ETF\_\-DEPTHSTENCIL}}\item[{\em 
+\hypertarget{_gr_util_8h_44688cfc75f55fcd8f79435674faf92a42d292beb68ed30d3d1a613add107301}{
+ETF\_\-DEPTHSTENCIL}
+\label{_gr_util_8h_44688cfc75f55fcd8f79435674faf92a42d292beb68ed30d3d1a613add107301}
+}]\index{ETF\_\-COUNT@{ETF\_\-COUNT}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!ETF\_\-COUNT@{ETF\_\-COUNT}}\item[{\em 
+\hypertarget{_gr_util_8h_44688cfc75f55fcd8f79435674faf92a7482b30f21862f76e0ac80fc99bceb26}{
+ETF\_\-COUNT}
+\label{_gr_util_8h_44688cfc75f55fcd8f79435674faf92a7482b30f21862f76e0ac80fc99bceb26}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 111 of file GrUtil.h.\hypertarget{_gr_util_8h_ac7250b216f548e740b6d2e0d5d972f8}{
+\index{GrUtil.h@{GrUtil.h}!EGRTYPE@{EGRTYPE}}
+\index{EGRTYPE@{EGRTYPE}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{EGRTYPE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf EGRTYPE}}}
+\label{_gr_util_8h_ac7250b216f548e740b6d2e0d5d972f8}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{ET\_\-UNSIGNED\_\-BYTE@{ET\_\-UNSIGNED\_\-BYTE}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!ET\_\-UNSIGNED\_\-BYTE@{ET\_\-UNSIGNED\_\-BYTE}}\item[{\em 
+\hypertarget{_gr_util_8h_ac7250b216f548e740b6d2e0d5d972f82419116904a2e3e28faae99ff67c1361}{
+ET\_\-UNSIGNED\_\-BYTE}
+\label{_gr_util_8h_ac7250b216f548e740b6d2e0d5d972f82419116904a2e3e28faae99ff67c1361}
+}]\index{ET\_\-SIGNED\_\-BYTE@{ET\_\-SIGNED\_\-BYTE}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!ET\_\-SIGNED\_\-BYTE@{ET\_\-SIGNED\_\-BYTE}}\item[{\em 
+\hypertarget{_gr_util_8h_ac7250b216f548e740b6d2e0d5d972f821d541a93d1316e2e39c4b254f54192e}{
+ET\_\-SIGNED\_\-BYTE}
+\label{_gr_util_8h_ac7250b216f548e740b6d2e0d5d972f821d541a93d1316e2e39c4b254f54192e}
+}]\index{ET\_\-UNSIGNED\_\-SHORT@{ET\_\-UNSIGNED\_\-SHORT}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!ET\_\-UNSIGNED\_\-SHORT@{ET\_\-UNSIGNED\_\-SHORT}}\item[{\em 
+\hypertarget{_gr_util_8h_ac7250b216f548e740b6d2e0d5d972f8347172aeb63260c9148babbc8d02ecf2}{
+ET\_\-UNSIGNED\_\-SHORT}
+\label{_gr_util_8h_ac7250b216f548e740b6d2e0d5d972f8347172aeb63260c9148babbc8d02ecf2}
+}]\index{ET\_\-SIGNED\_\-SHORT@{ET\_\-SIGNED\_\-SHORT}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!ET\_\-SIGNED\_\-SHORT@{ET\_\-SIGNED\_\-SHORT}}\item[{\em 
+\hypertarget{_gr_util_8h_ac7250b216f548e740b6d2e0d5d972f88f16835567323e101c073782616f62c6}{
+ET\_\-SIGNED\_\-SHORT}
+\label{_gr_util_8h_ac7250b216f548e740b6d2e0d5d972f88f16835567323e101c073782616f62c6}
+}]\index{ET\_\-UNSIGNED\_\-INT@{ET\_\-UNSIGNED\_\-INT}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!ET\_\-UNSIGNED\_\-INT@{ET\_\-UNSIGNED\_\-INT}}\item[{\em 
+\hypertarget{_gr_util_8h_ac7250b216f548e740b6d2e0d5d972f854380a87f57c72c3d457b14197f2f828}{
+ET\_\-UNSIGNED\_\-INT}
+\label{_gr_util_8h_ac7250b216f548e740b6d2e0d5d972f854380a87f57c72c3d457b14197f2f828}
+}]\index{ET\_\-SIGNED\_\-INT@{ET\_\-SIGNED\_\-INT}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!ET\_\-SIGNED\_\-INT@{ET\_\-SIGNED\_\-INT}}\item[{\em 
+\hypertarget{_gr_util_8h_ac7250b216f548e740b6d2e0d5d972f8b5919ca3cca13bd8fec758e475ebd2a2}{
+ET\_\-SIGNED\_\-INT}
+\label{_gr_util_8h_ac7250b216f548e740b6d2e0d5d972f8b5919ca3cca13bd8fec758e475ebd2a2}
+}]\index{ET\_\-FLOAT@{ET\_\-FLOAT}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!ET\_\-FLOAT@{ET\_\-FLOAT}}\item[{\em 
+\hypertarget{_gr_util_8h_ac7250b216f548e740b6d2e0d5d972f8a544e4b9811c0b73931c9fed60c40502}{
+ET\_\-FLOAT}
+\label{_gr_util_8h_ac7250b216f548e740b6d2e0d5d972f8a544e4b9811c0b73931c9fed60c40502}
+}]\index{ET\_\-HALF\_\-FLOAT@{ET\_\-HALF\_\-FLOAT}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!ET\_\-HALF\_\-FLOAT@{ET\_\-HALF\_\-FLOAT}}\item[{\em 
+\hypertarget{_gr_util_8h_ac7250b216f548e740b6d2e0d5d972f83fdbf697334129b747e62ff784d0cbfc}{
+ET\_\-HALF\_\-FLOAT}
+\label{_gr_util_8h_ac7250b216f548e740b6d2e0d5d972f83fdbf697334129b747e62ff784d0cbfc}
+}]\index{ET\_\-COUNT@{ET\_\-COUNT}!GrUtil.h@{GrUtil.h}}\index{GrUtil.h@{GrUtil.h}!ET\_\-COUNT@{ET\_\-COUNT}}\item[{\em 
+\hypertarget{_gr_util_8h_ac7250b216f548e740b6d2e0d5d972f83130ed515731df93c5ed5e547f45da01}{
+ET\_\-COUNT}
+\label{_gr_util_8h_ac7250b216f548e740b6d2e0d5d972f83130ed515731df93c5ed5e547f45da01}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 151 of file GrUtil.h.
+
+\subsection{Function Documentation}
+\hypertarget{_gr_util_8h_0f573923ce54d669ceb19234cc2f8d36}{
+\index{GrUtil.h@{GrUtil.h}!GrBindIB@{GrBindIB}}
+\index{GrBindIB@{GrBindIB}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrBindIB}]{\setlength{\rightskip}{0pt plus 5cm}void GrBindIB (unsigned int {\em handle})}}
+\label{_gr_util_8h_0f573923ce54d669ceb19234cc2f8d36}
+
+
+
+
+Definition at line 698 of file GrUtil.cpp.\hypertarget{_gr_util_8h_1f0d5c47a0f03caa1ebf26e600844a93}{
+\index{GrUtil.h@{GrUtil.h}!GrBindPackPB@{GrBindPackPB}}
+\index{GrBindPackPB@{GrBindPackPB}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrBindPackPB}]{\setlength{\rightskip}{0pt plus 5cm}void GrBindPackPB (unsigned int {\em handle})}}
+\label{_gr_util_8h_1f0d5c47a0f03caa1ebf26e600844a93}
+
+
+
+
+Definition at line 718 of file GrUtil.cpp.\hypertarget{_gr_util_8h_a40f94ecd4645027260b3217ce172cbe}{
+\index{GrUtil.h@{GrUtil.h}!GrBindShader@{GrBindShader}}
+\index{GrBindShader@{GrBindShader}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrBindShader}]{\setlength{\rightskip}{0pt plus 5cm}void GrBindShader (unsigned int {\em handle})}}
+\label{_gr_util_8h_a40f94ecd4645027260b3217ce172cbe}
+
+
+
+
+Definition at line 748 of file GrUtil.cpp.\hypertarget{_gr_util_8h_0d997236daa4e0e2f0dc98dd96e17386}{
+\index{GrUtil.h@{GrUtil.h}!GrBindTexture@{GrBindTexture}}
+\index{GrBindTexture@{GrBindTexture}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrBindTexture}]{\setlength{\rightskip}{0pt plus 5cm}void GrBindTexture (unsigned int {\em texUnit}, \/  unsigned int {\em target}, \/  unsigned int {\em handle})}}
+\label{_gr_util_8h_0d997236daa4e0e2f0dc98dd96e17386}
+
+
+
+
+Definition at line 630 of file GrUtil.cpp.\hypertarget{_gr_util_8h_681f56fdfb1ea8225c03f9a14b41be2c}{
+\index{GrUtil.h@{GrUtil.h}!GrBindUnpackPB@{GrBindUnpackPB}}
+\index{GrBindUnpackPB@{GrBindUnpackPB}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrBindUnpackPB}]{\setlength{\rightskip}{0pt plus 5cm}void GrBindUnpackPB (unsigned int {\em handle})}}
+\label{_gr_util_8h_681f56fdfb1ea8225c03f9a14b41be2c}
+
+
+
+
+Definition at line 733 of file GrUtil.cpp.\hypertarget{_gr_util_8h_b380583a085e70e5db988eb1573be067}{
+\index{GrUtil.h@{GrUtil.h}!GrBindVB@{GrBindVB}}
+\index{GrBindVB@{GrBindVB}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrBindVB}]{\setlength{\rightskip}{0pt plus 5cm}void GrBindVB (unsigned int {\em handle})}}
+\label{_gr_util_8h_b380583a085e70e5db988eb1573be067}
+
+
+
+
+Definition at line 677 of file GrUtil.cpp.\hypertarget{_gr_util_8h_032fc1db381d700a752a7cd27dd5be72}{
+\index{GrUtil.h@{GrUtil.h}!GrClear@{GrClear}}
+\index{GrClear@{GrClear}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrClear}]{\setlength{\rightskip}{0pt plus 5cm}void GrClear (float {\em red} = {\tt 0.0f}, \/  float {\em green} = {\tt 0.0f}, \/  float {\em blue} = {\tt 0.0f}, \/  float {\em alpha} = {\tt 0.0f}, \/  float {\em depth} = {\tt 1.0f}, \/  unsigned int {\em stencil} = {\tt 0})}}
+\label{_gr_util_8h_032fc1db381d700a752a7cd27dd5be72}
+
+
+
+
+Definition at line 1196 of file GrUtil.cpp.\hypertarget{_gr_util_8h_6ca83b60e3149265e907a05f903c7168}{
+\index{GrUtil.h@{GrUtil.h}!GrDeleteIB@{GrDeleteIB}}
+\index{GrDeleteIB@{GrDeleteIB}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrDeleteIB}]{\setlength{\rightskip}{0pt plus 5cm}void GrDeleteIB (unsigned int {\em handle})}}
+\label{_gr_util_8h_6ca83b60e3149265e907a05f903c7168}
+
+
+
+
+Definition at line 546 of file GrUtil.cpp.\hypertarget{_gr_util_8h_5b8b0e421e702153a0109911b5c3e0a8}{
+\index{GrUtil.h@{GrUtil.h}!GrDeletePB@{GrDeletePB}}
+\index{GrDeletePB@{GrDeletePB}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrDeletePB}]{\setlength{\rightskip}{0pt plus 5cm}void GrDeletePB (unsigned int {\em handle})}}
+\label{_gr_util_8h_5b8b0e421e702153a0109911b5c3e0a8}
+
+
+
+
+Definition at line 562 of file GrUtil.cpp.\hypertarget{_gr_util_8h_3a27b94e557d396f120d7f68a463948f}{
+\index{GrUtil.h@{GrUtil.h}!GrDeleteTexture@{GrDeleteTexture}}
+\index{GrDeleteTexture@{GrDeleteTexture}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrDeleteTexture}]{\setlength{\rightskip}{0pt plus 5cm}void GrDeleteTexture (unsigned int {\em handle})}}
+\label{_gr_util_8h_3a27b94e557d396f120d7f68a463948f}
+
+
+
+
+Definition at line 509 of file GrUtil.cpp.\hypertarget{_gr_util_8h_d04bcc81af6bce0f1f39edf465cf3eff}{
+\index{GrUtil.h@{GrUtil.h}!GrDeleteVB@{GrDeleteVB}}
+\index{GrDeleteVB@{GrDeleteVB}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrDeleteVB}]{\setlength{\rightskip}{0pt plus 5cm}void GrDeleteVB (unsigned int {\em handle})}}
+\label{_gr_util_8h_d04bcc81af6bce0f1f39edf465cf3eff}
+
+
+
+
+Definition at line 529 of file GrUtil.cpp.\hypertarget{_gr_util_8h_e565137ab98d58cf8f3062c3a1fe0584}{
+\index{GrUtil.h@{GrUtil.h}!GrDisable@{GrDisable}}
+\index{GrDisable@{GrDisable}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrDisable}]{\setlength{\rightskip}{0pt plus 5cm}void GrDisable (unsigned int {\em state})}}
+\label{_gr_util_8h_e565137ab98d58cf8f3062c3a1fe0584}
+
+
+
+
+Definition at line 335 of file GrUtil.cpp.\hypertarget{_gr_util_8h_0bd2ddc1103b94e3ba713e4b5a994cc9}{
+\index{GrUtil.h@{GrUtil.h}!GrDrawArrays@{GrDrawArrays}}
+\index{GrDrawArrays@{GrDrawArrays}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrDrawArrays}]{\setlength{\rightskip}{0pt plus 5cm}void GrDrawArrays ({\bf EGRPRIMTYPE} {\em primType}, \/  unsigned int {\em start}, \/  unsigned int {\em vertexCount})}}
+\label{_gr_util_8h_0bd2ddc1103b94e3ba713e4b5a994cc9}
+
+
+
+
+Definition at line 1225 of file GrUtil.cpp.\hypertarget{_gr_util_8h_7846b6c52cbb48bb05538b9d53ce3ede}{
+\index{GrUtil.h@{GrUtil.h}!GrDrawBuffers@{GrDrawBuffers}}
+\index{GrDrawBuffers@{GrDrawBuffers}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrDrawBuffers}]{\setlength{\rightskip}{0pt plus 5cm}void GrDrawBuffers (unsigned int {\em buffers})}}
+\label{_gr_util_8h_7846b6c52cbb48bb05538b9d53ce3ede}
+
+
+
+
+Definition at line 1120 of file GrUtil.cpp.\hypertarget{_gr_util_8h_2d253d8206d0dd3465b2a051791c674b}{
+\index{GrUtil.h@{GrUtil.h}!GrDrawRangeArrays@{GrDrawRangeArrays}}
+\index{GrDrawRangeArrays@{GrDrawRangeArrays}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrDrawRangeArrays}]{\setlength{\rightskip}{0pt plus 5cm}void GrDrawRangeArrays ({\bf EGRPRIMTYPE} {\em primType}, \/  unsigned int {\em minIndex}, \/  unsigned int {\em maxIndex}, \/  unsigned int {\em indexCount}, \/  {\bf EGRTYPE} {\em indexType}, \/  void $\ast$ {\em indices})}}
+\label{_gr_util_8h_2d253d8206d0dd3465b2a051791c674b}
+
+
+
+
+Definition at line 1232 of file GrUtil.cpp.\hypertarget{_gr_util_8h_fc9a40b5acc4a1c85af33feff7bcb7ba}{
+\index{GrUtil.h@{GrUtil.h}!GrEnable@{GrEnable}}
+\index{GrEnable@{GrEnable}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrEnable}]{\setlength{\rightskip}{0pt plus 5cm}void GrEnable (unsigned int {\em state})}}
+\label{_gr_util_8h_fc9a40b5acc4a1c85af33feff7bcb7ba}
+
+
+
+
+Definition at line 294 of file GrUtil.cpp.\hypertarget{_gr_util_8h_9ef3f8b46b61cfdc3881a5d99985d6a3}{
+\index{GrUtil.h@{GrUtil.h}!GrGenIB@{GrGenIB}}
+\index{GrGenIB@{GrGenIB}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrGenIB}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrGenIB ()}}
+\label{_gr_util_8h_9ef3f8b46b61cfdc3881a5d99985d6a3}
+
+
+
+
+Definition at line 538 of file GrUtil.cpp.\hypertarget{_gr_util_8h_1ab5639fb6cdd4295513ca9e7604f69d}{
+\index{GrUtil.h@{GrUtil.h}!GrGenPB@{GrGenPB}}
+\index{GrGenPB@{GrGenPB}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrGenPB}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrGenPB ()}}
+\label{_gr_util_8h_1ab5639fb6cdd4295513ca9e7604f69d}
+
+
+
+
+Definition at line 554 of file GrUtil.cpp.\hypertarget{_gr_util_8h_2617b728d05892c75cd8099a3f4f8ad2}{
+\index{GrUtil.h@{GrUtil.h}!GrGenTexture@{GrGenTexture}}
+\index{GrGenTexture@{GrGenTexture}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrGenTexture}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrGenTexture ()}}
+\label{_gr_util_8h_2617b728d05892c75cd8099a3f4f8ad2}
+
+
+
+
+Definition at line 498 of file GrUtil.cpp.\hypertarget{_gr_util_8h_00da5f5a32fc33b453eabf005a4890cc}{
+\index{GrUtil.h@{GrUtil.h}!GrGenVB@{GrGenVB}}
+\index{GrGenVB@{GrGenVB}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrGenVB}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrGenVB ()}}
+\label{_gr_util_8h_00da5f5a32fc33b453eabf005a4890cc}
+
+
+
+
+Definition at line 518 of file GrUtil.cpp.\hypertarget{_gr_util_8h_0f52c4c5e92f45dfd50b6cdf00cd6400}{
+\index{GrUtil.h@{GrUtil.h}!GrGetAlphaTestMode@{GrGetAlphaTestMode}}
+\index{GrGetAlphaTestMode@{GrGetAlphaTestMode}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrGetAlphaTestMode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf EGRALPHATESTMODE} GrGetAlphaTestMode ()}}
+\label{_gr_util_8h_0f52c4c5e92f45dfd50b6cdf00cd6400}
+
+
+
+
+Definition at line 870 of file GrUtil.cpp.\hypertarget{_gr_util_8h_9a291034b97656318368e8e94d7ee766}{
+\index{GrUtil.h@{GrUtil.h}!GrGetBlendMode@{GrGetBlendMode}}
+\index{GrGetBlendMode@{GrGetBlendMode}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrGetBlendMode}]{\setlength{\rightskip}{0pt plus 5cm}void GrGetBlendMode ({\bf EGRBLENDMODE} \& {\em srcFactorRGB}, \/  {\bf EGRBLENDMODE} \& {\em dstFactorRGB}, \/  {\bf EGRBLENDMODE} \& {\em srcFactorAlpha}, \/  {\bf EGRBLENDMODE} \& {\em dstFactorAlpha})}}
+\label{_gr_util_8h_9a291034b97656318368e8e94d7ee766}
+
+
+
+
+Definition at line 770 of file GrUtil.cpp.\hypertarget{_gr_util_8h_dc3723ac695dbc9bc00736470631030a}{
+\index{GrUtil.h@{GrUtil.h}!GrGetCullMode@{GrGetCullMode}}
+\index{GrGetCullMode@{GrGetCullMode}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrGetCullMode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf EGRCULLMODE} GrGetCullMode ()}}
+\label{_gr_util_8h_dc3723ac695dbc9bc00736470631030a}
+
+
+
+
+Definition at line 904 of file GrUtil.cpp.\hypertarget{_gr_util_8h_d6c899820503336631afde3d9b8c481c}{
+\index{GrUtil.h@{GrUtil.h}!GrGetDepthBias@{GrGetDepthBias}}
+\index{GrGetDepthBias@{GrGetDepthBias}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrGetDepthBias}]{\setlength{\rightskip}{0pt plus 5cm}void GrGetDepthBias (float \& {\em slopeBias}, \/  float \& {\em constBias})}}
+\label{_gr_util_8h_d6c899820503336631afde3d9b8c481c}
+
+
+
+
+Definition at line 958 of file GrUtil.cpp.\hypertarget{_gr_util_8h_b0b6dbcd54d4e8d99cba297c5fb4d186}{
+\index{GrUtil.h@{GrUtil.h}!GrGetDepthMode@{GrGetDepthMode}}
+\index{GrGetDepthMode@{GrGetDepthMode}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrGetDepthMode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf EGRDEPTHMODE} GrGetDepthMode ()}}
+\label{_gr_util_8h_b0b6dbcd54d4e8d99cba297c5fb4d186}
+
+
+
+
+Definition at line 930 of file GrUtil.cpp.\hypertarget{_gr_util_8h_cd8d7c5efdbc9e097f1285e32bae23ee}{
+\index{GrUtil.h@{GrUtil.h}!GrGetIB@{GrGetIB}}
+\index{GrGetIB@{GrGetIB}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrGetIB}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrGetIB ()}}
+\label{_gr_util_8h_cd8d7c5efdbc9e097f1285e32bae23ee}
+
+
+
+
+Definition at line 710 of file GrUtil.cpp.\hypertarget{_gr_util_8h_69298fe2442ba2ee240106ec63d5b6b3}{
+\index{GrUtil.h@{GrUtil.h}!GrGetMaxAttribCount@{GrGetMaxAttribCount}}
+\index{GrGetMaxAttribCount@{GrGetMaxAttribCount}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrGetMaxAttribCount}]{\setlength{\rightskip}{0pt plus 5cm}int GrGetMaxAttribCount ()}}
+\label{_gr_util_8h_69298fe2442ba2ee240106ec63d5b6b3}
+
+
+
+
+Definition at line 1264 of file GrUtil.cpp.\hypertarget{_gr_util_8h_314fa8e5a4bc247c611bdffaa7c357be}{
+\index{GrUtil.h@{GrUtil.h}!GrGetMaxFramebufferSize@{GrGetMaxFramebufferSize}}
+\index{GrGetMaxFramebufferSize@{GrGetMaxFramebufferSize}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrGetMaxFramebufferSize}]{\setlength{\rightskip}{0pt plus 5cm}int GrGetMaxFramebufferSize ()}}
+\label{_gr_util_8h_314fa8e5a4bc247c611bdffaa7c357be}
+
+
+
+
+Definition at line 1255 of file GrUtil.cpp.\hypertarget{_gr_util_8h_57ce65addf88b13e2ef46292a30fb539}{
+\index{GrUtil.h@{GrUtil.h}!GrGetMaxTextureSize@{GrGetMaxTextureSize}}
+\index{GrGetMaxTextureSize@{GrGetMaxTextureSize}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrGetMaxTextureSize}]{\setlength{\rightskip}{0pt plus 5cm}int GrGetMaxTextureSize ()}}
+\label{_gr_util_8h_57ce65addf88b13e2ef46292a30fb539}
+
+
+
+
+Definition at line 1246 of file GrUtil.cpp.\hypertarget{_gr_util_8h_368ba0f00324e71c46a376ce4a0c9c4f}{
+\index{GrUtil.h@{GrUtil.h}!GrGetPackPB@{GrGetPackPB}}
+\index{GrGetPackPB@{GrGetPackPB}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrGetPackPB}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrGetPackPB ()}}
+\label{_gr_util_8h_368ba0f00324e71c46a376ce4a0c9c4f}
+
+
+
+
+Definition at line 726 of file GrUtil.cpp.\hypertarget{_gr_util_8h_09e5c6ded78f38ea5cdcd157df777c20}{
+\index{GrUtil.h@{GrUtil.h}!GrGetScissor@{GrGetScissor}}
+\index{GrGetScissor@{GrGetScissor}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrGetScissor}]{\setlength{\rightskip}{0pt plus 5cm}void GrGetScissor (int \& {\em x}, \/  int \& {\em y}, \/  int \& {\em width}, \/  int \& {\em height})}}
+\label{_gr_util_8h_09e5c6ded78f38ea5cdcd157df777c20}
+
+
+
+
+Definition at line 1027 of file GrUtil.cpp.\hypertarget{_gr_util_8h_cf8fae2ee0807b48ac9c5bdb8ae47583}{
+\index{GrUtil.h@{GrUtil.h}!GrGetShader@{GrGetShader}}
+\index{GrGetShader@{GrGetShader}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrGetShader}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrGetShader ()}}
+\label{_gr_util_8h_cf8fae2ee0807b48ac9c5bdb8ae47583}
+
+
+
+
+Definition at line 758 of file GrUtil.cpp.\hypertarget{_gr_util_8h_574795c3dac21a7865338c4c1c556168}{
+\index{GrUtil.h@{GrUtil.h}!GrGetState@{GrGetState}}
+\index{GrGetState@{GrGetState}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrGetState}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrGetState ()}}
+\label{_gr_util_8h_574795c3dac21a7865338c4c1c556168}
+
+
+
+
+Definition at line 398 of file GrUtil.cpp.\hypertarget{_gr_util_8h_00adee6c248946476cf782365a2cd0c5}{
+\index{GrUtil.h@{GrUtil.h}!GrGetStencilMode@{GrGetStencilMode}}
+\index{GrGetStencilMode@{GrGetStencilMode}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrGetStencilMode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf EGRSTENCILMODE} GrGetStencilMode ()}}
+\label{_gr_util_8h_00adee6c248946476cf782365a2cd0c5}
+
+
+
+
+Definition at line 824 of file GrUtil.cpp.\hypertarget{_gr_util_8h_81061ecb30353228dfeddad8b328135e}{
+\index{GrUtil.h@{GrUtil.h}!GrGetTexture@{GrGetTexture}}
+\index{GrGetTexture@{GrGetTexture}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrGetTexture}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrGetTexture (unsigned int {\em texUnit})}}
+\label{_gr_util_8h_81061ecb30353228dfeddad8b328135e}
+
+
+
+
+Definition at line 657 of file GrUtil.cpp.\hypertarget{_gr_util_8h_ed5706cf53afcefddc50f00549200440}{
+\index{GrUtil.h@{GrUtil.h}!GrGetTextureTarget@{GrGetTextureTarget}}
+\index{GrGetTextureTarget@{GrGetTextureTarget}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrGetTextureTarget}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrGetTextureTarget (unsigned int {\em texUnit})}}
+\label{_gr_util_8h_ed5706cf53afcefddc50f00549200440}
+
+
+
+
+Definition at line 667 of file GrUtil.cpp.\hypertarget{_gr_util_8h_25a5b32dfc45cb4385ac12eceed64981}{
+\index{GrUtil.h@{GrUtil.h}!GrGetUnpackPB@{GrGetUnpackPB}}
+\index{GrGetUnpackPB@{GrGetUnpackPB}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrGetUnpackPB}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrGetUnpackPB ()}}
+\label{_gr_util_8h_25a5b32dfc45cb4385ac12eceed64981}
+
+
+
+
+Definition at line 741 of file GrUtil.cpp.\hypertarget{_gr_util_8h_81f8a976041fe3910639d2ee7054c90a}{
+\index{GrUtil.h@{GrUtil.h}!GrGetVB@{GrGetVB}}
+\index{GrGetVB@{GrGetVB}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrGetVB}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrGetVB ()}}
+\label{_gr_util_8h_81f8a976041fe3910639d2ee7054c90a}
+
+
+
+
+Definition at line 689 of file GrUtil.cpp.\hypertarget{_gr_util_8h_790778867fdcac797860c02a4bd6b1fa}{
+\index{GrUtil.h@{GrUtil.h}!GrGetViewport@{GrGetViewport}}
+\index{GrGetViewport@{GrGetViewport}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrGetViewport}]{\setlength{\rightskip}{0pt plus 5cm}void GrGetViewport (int \& {\em x}, \/  int \& {\em y}, \/  int \& {\em width}, \/  int \& {\em height})}}
+\label{_gr_util_8h_790778867fdcac797860c02a4bd6b1fa}
+
+
+
+
+Definition at line 997 of file GrUtil.cpp.\hypertarget{_gr_util_8h_1175157b98b63f050c8ba2a09b8bf38b}{
+\index{GrUtil.h@{GrUtil.h}!GrGetWriteEnable@{GrGetWriteEnable}}
+\index{GrGetWriteEnable@{GrGetWriteEnable}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrGetWriteEnable}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrGetWriteEnable ()}}
+\label{_gr_util_8h_1175157b98b63f050c8ba2a09b8bf38b}
+
+
+
+
+Definition at line 1087 of file GrUtil.cpp.\hypertarget{_gr_util_8h_cee9c3df883692d1843a0921829323b3}{
+\index{GrUtil.h@{GrUtil.h}!GrPopState@{GrPopState}}
+\index{GrPopState@{GrPopState}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrPopState}]{\setlength{\rightskip}{0pt plus 5cm}void GrPopState ()}}
+\label{_gr_util_8h_cee9c3df883692d1843a0921829323b3}
+
+
+
+
+Definition at line 388 of file GrUtil.cpp.\hypertarget{_gr_util_8h_73fdce3597a65b39238ee810531f71e6}{
+\index{GrUtil.h@{GrUtil.h}!GrPushState@{GrPushState}}
+\index{GrPushState@{GrPushState}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrPushState}]{\setlength{\rightskip}{0pt plus 5cm}void GrPushState ()}}
+\label{_gr_util_8h_73fdce3597a65b39238ee810531f71e6}
+
+
+
+
+Definition at line 376 of file GrUtil.cpp.\hypertarget{_gr_util_8h_31be90e1387c34e7e279e74e661f654e}{
+\index{GrUtil.h@{GrUtil.h}!GrReadBuffer@{GrReadBuffer}}
+\index{GrReadBuffer@{GrReadBuffer}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrReadBuffer}]{\setlength{\rightskip}{0pt plus 5cm}void GrReadBuffer (unsigned int {\em buffer})}}
+\label{_gr_util_8h_31be90e1387c34e7e279e74e661f654e}
+
+
+
+
+Definition at line 1160 of file GrUtil.cpp.\hypertarget{_gr_util_8h_9091fe53a16798ff5eea3dab70dd81ff}{
+\index{GrUtil.h@{GrUtil.h}!GrScissor@{GrScissor}}
+\index{GrScissor@{GrScissor}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrScissor}]{\setlength{\rightskip}{0pt plus 5cm}void GrScissor (int {\em x}, \/  int {\em y}, \/  int {\em width}, \/  int {\em height})}}
+\label{_gr_util_8h_9091fe53a16798ff5eea3dab70dd81ff}
+
+
+
+
+Definition at line 1014 of file GrUtil.cpp.\hypertarget{_gr_util_8h_d50055638c7736c9e411fa2f6b86c93c}{
+\index{GrUtil.h@{GrUtil.h}!GrSetAlphaTestMode@{GrSetAlphaTestMode}}
+\index{GrSetAlphaTestMode@{GrSetAlphaTestMode}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrSetAlphaTestMode}]{\setlength{\rightskip}{0pt plus 5cm}void GrSetAlphaTestMode ({\bf EGRALPHATESTMODE} {\em mode}, \/  float {\em ref})}}
+\label{_gr_util_8h_d50055638c7736c9e411fa2f6b86c93c}
+
+
+
+
+Definition at line 879 of file GrUtil.cpp.\hypertarget{_gr_util_8h_8113d47ba246af0755119898841eee57}{
+\index{GrUtil.h@{GrUtil.h}!GrSetBlendMode@{GrSetBlendMode}}
+\index{GrSetBlendMode@{GrSetBlendMode}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrSetBlendMode}]{\setlength{\rightskip}{0pt plus 5cm}void GrSetBlendMode ({\bf EGRBLENDMODE} {\em srcFactorRGB}, \/  {\bf EGRBLENDMODE} {\em dstFactorRGB}, \/  {\bf EGRBLENDMODE} {\em srcFactorAlpha}, \/  {\bf EGRBLENDMODE} {\em dstFactorAlpha})}}
+\label{_gr_util_8h_8113d47ba246af0755119898841eee57}
+
+
+
+
+Definition at line 789 of file GrUtil.cpp.\hypertarget{_gr_util_8h_c1e533fa9d8433287f1bbe7d2a31080d}{
+\index{GrUtil.h@{GrUtil.h}!GrSetBlendMode@{GrSetBlendMode}}
+\index{GrSetBlendMode@{GrSetBlendMode}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrSetBlendMode}]{\setlength{\rightskip}{0pt plus 5cm}void GrSetBlendMode ({\bf EGRBLENDMODE} {\em srcFactorRGB}, \/  {\bf EGRBLENDMODE} {\em dstFactorRGB})}}
+\label{_gr_util_8h_c1e533fa9d8433287f1bbe7d2a31080d}
+
+
+
+
+Definition at line 782 of file GrUtil.cpp.\hypertarget{_gr_util_8h_ecb580f9d96395afa050b6d81c31421c}{
+\index{GrUtil.h@{GrUtil.h}!GrSetCullMode@{GrSetCullMode}}
+\index{GrSetCullMode@{GrSetCullMode}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrSetCullMode}]{\setlength{\rightskip}{0pt plus 5cm}void GrSetCullMode ({\bf EGRCULLMODE} {\em mode})}}
+\label{_gr_util_8h_ecb580f9d96395afa050b6d81c31421c}
+
+
+
+
+Definition at line 911 of file GrUtil.cpp.\hypertarget{_gr_util_8h_8c05179e9971c39d5398742cffd8592b}{
+\index{GrUtil.h@{GrUtil.h}!GrSetDepthBias@{GrSetDepthBias}}
+\index{GrSetDepthBias@{GrSetDepthBias}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrSetDepthBias}]{\setlength{\rightskip}{0pt plus 5cm}void GrSetDepthBias (float {\em slopeBias}, \/  float {\em constBias})}}
+\label{_gr_util_8h_8c05179e9971c39d5398742cffd8592b}
+
+
+
+
+Definition at line 968 of file GrUtil.cpp.\hypertarget{_gr_util_8h_60d9ac55af862efb36a5e95f19c14407}{
+\index{GrUtil.h@{GrUtil.h}!GrSetDepthMode@{GrSetDepthMode}}
+\index{GrSetDepthMode@{GrSetDepthMode}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrSetDepthMode}]{\setlength{\rightskip}{0pt plus 5cm}void GrSetDepthMode ({\bf EGRDEPTHMODE} {\em mode})}}
+\label{_gr_util_8h_60d9ac55af862efb36a5e95f19c14407}
+
+
+
+
+Definition at line 939 of file GrUtil.cpp.\hypertarget{_gr_util_8h_da7ea629bb413c26919562c8846d6139}{
+\index{GrUtil.h@{GrUtil.h}!GrSetState@{GrSetState}}
+\index{GrSetState@{GrSetState}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrSetState}]{\setlength{\rightskip}{0pt plus 5cm}void GrSetState (unsigned int {\em state})}}
+\label{_gr_util_8h_da7ea629bb413c26919562c8846d6139}
+
+
+
+
+Definition at line 407 of file GrUtil.cpp.\hypertarget{_gr_util_8h_53d65df4590c2b3a3eaf54ca65784f6e}{
+\index{GrUtil.h@{GrUtil.h}!GrSetStencilMode@{GrSetStencilMode}}
+\index{GrSetStencilMode@{GrSetStencilMode}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrSetStencilMode}]{\setlength{\rightskip}{0pt plus 5cm}void GrSetStencilMode ({\bf EGRSTENCILMODE} {\em mode}, \/  unsigned int {\em mask})}}
+\label{_gr_util_8h_53d65df4590c2b3a3eaf54ca65784f6e}
+
+
+
+
+Definition at line 833 of file GrUtil.cpp.\hypertarget{_gr_util_8h_7b33558bb79e3c6936f26553c282d081}{
+\index{GrUtil.h@{GrUtil.h}!GrSetWriteEnable@{GrSetWriteEnable}}
+\index{GrSetWriteEnable@{GrSetWriteEnable}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrSetWriteEnable}]{\setlength{\rightskip}{0pt plus 5cm}void GrSetWriteEnable (unsigned int {\em mask})}}
+\label{_gr_util_8h_7b33558bb79e3c6936f26553c282d081}
+
+
+
+
+Definition at line 1096 of file GrUtil.cpp.\hypertarget{_gr_util_8h_d1feed1ad65ec4d2473b921369c8365b}{
+\index{GrUtil.h@{GrUtil.h}!GrStateStart@{GrStateStart}}
+\index{GrStateStart@{GrStateStart}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrStateStart}]{\setlength{\rightskip}{0pt plus 5cm}void GrStateStart (unsigned int {\em initScreenWidth}, \/  unsigned int {\em initScreenHeight})}}
+\label{_gr_util_8h_d1feed1ad65ec4d2473b921369c8365b}
+
+
+
+
+Definition at line 173 of file GrUtil.cpp.\hypertarget{_gr_util_8h_50fd4ddbaab4ffd72f30a7bb3b55e1dd}{
+\index{GrUtil.h@{GrUtil.h}!GrStateStarted@{GrStateStarted}}
+\index{GrStateStarted@{GrStateStarted}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrStateStarted}]{\setlength{\rightskip}{0pt plus 5cm}bool GrStateStarted ()}}
+\label{_gr_util_8h_50fd4ddbaab4ffd72f30a7bb3b55e1dd}
+
+
+
+
+Definition at line 280 of file GrUtil.cpp.\hypertarget{_gr_util_8h_ee9e0ba47c9981a63cda19342461130c}{
+\index{GrUtil.h@{GrUtil.h}!GrStateStop@{GrStateStop}}
+\index{GrStateStop@{GrStateStop}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrStateStop}]{\setlength{\rightskip}{0pt plus 5cm}void GrStateStop ()}}
+\label{_gr_util_8h_ee9e0ba47c9981a63cda19342461130c}
+
+
+
+
+Definition at line 287 of file GrUtil.cpp.\hypertarget{_gr_util_8h_6c4fa990878132e93007e8afacccc2d5}{
+\index{GrUtil.h@{GrUtil.h}!GrStreamArrayPointer@{GrStreamArrayPointer}}
+\index{GrStreamArrayPointer@{GrStreamArrayPointer}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrStreamArrayPointer}]{\setlength{\rightskip}{0pt plus 5cm}void GrStreamArrayPointer (unsigned int {\em arrayIndex}, \/  unsigned int {\em elemCount}, \/  {\bf EGRTYPE} {\em elemType}, \/  bool {\em normalized}, \/  unsigned int {\em stride}, \/  const void $\ast$ {\em pointer})}}
+\label{_gr_util_8h_6c4fa990878132e93007e8afacccc2d5}
+
+
+
+
+Definition at line 484 of file GrUtil.cpp.\hypertarget{_gr_util_8h_506af8fd03563f360bdd3cacb4481047}{
+\index{GrUtil.h@{GrUtil.h}!GrStreamDisableArrays@{GrStreamDisableArrays}}
+\index{GrStreamDisableArrays@{GrStreamDisableArrays}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrStreamDisableArrays}]{\setlength{\rightskip}{0pt plus 5cm}void GrStreamDisableArrays (unsigned int {\em arrayFlags})}}
+\label{_gr_util_8h_506af8fd03563f360bdd3cacb4481047}
+
+
+
+
+Definition at line 442 of file GrUtil.cpp.\hypertarget{_gr_util_8h_03557aad43b9308f0df604e3ee7b73db}{
+\index{GrUtil.h@{GrUtil.h}!GrStreamEnableArrays@{GrStreamEnableArrays}}
+\index{GrStreamEnableArrays@{GrStreamEnableArrays}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrStreamEnableArrays}]{\setlength{\rightskip}{0pt plus 5cm}void GrStreamEnableArrays (unsigned int {\em arrayFlags})}}
+\label{_gr_util_8h_03557aad43b9308f0df604e3ee7b73db}
+
+
+
+
+Definition at line 417 of file GrUtil.cpp.\hypertarget{_gr_util_8h_2422e456282e8cd08d5c0db6ef511245}{
+\index{GrUtil.h@{GrUtil.h}!GrStreamGetArrayState@{GrStreamGetArrayState}}
+\index{GrStreamGetArrayState@{GrStreamGetArrayState}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrStreamGetArrayState}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int GrStreamGetArrayState ()}}
+\label{_gr_util_8h_2422e456282e8cd08d5c0db6ef511245}
+
+
+
+
+Definition at line 467 of file GrUtil.cpp.\hypertarget{_gr_util_8h_3cca7d6ef9177f203bc05fbc0d323027}{
+\index{GrUtil.h@{GrUtil.h}!GrStreamSetArrayState@{GrStreamSetArrayState}}
+\index{GrStreamSetArrayState@{GrStreamSetArrayState}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrStreamSetArrayState}]{\setlength{\rightskip}{0pt plus 5cm}void GrStreamSetArrayState (unsigned int {\em arrayFlags})}}
+\label{_gr_util_8h_3cca7d6ef9177f203bc05fbc0d323027}
+
+
+
+
+Definition at line 475 of file GrUtil.cpp.\hypertarget{_gr_util_8h_20a5c03b0b2a8baab3813655f7925bde}{
+\index{GrUtil.h@{GrUtil.h}!GrTexImage2D@{GrTexImage2D}}
+\index{GrTexImage2D@{GrTexImage2D}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrTexImage2D}]{\setlength{\rightskip}{0pt plus 5cm}void GrTexImage2D (unsigned int {\em handle}, \/  unsigned int {\em miplevel}, \/  {\bf EGRTEXTUREFORMAT} {\em internalFormat}, \/  unsigned int {\em width}, \/  unsigned int {\em height}, \/  {\bf EGRIMAGEFORMAT} {\em format}, \/  {\bf EGRTYPE} {\em type}, \/  const void $\ast$ {\em data})}}
+\label{_gr_util_8h_20a5c03b0b2a8baab3813655f7925bde}
+
+
+
+
+Definition at line 575 of file GrUtil.cpp.\hypertarget{_gr_util_8h_e17cf4475c6ed5bdcee691ad010418bc}{
+\index{GrUtil.h@{GrUtil.h}!GrTexImage3D@{GrTexImage3D}}
+\index{GrTexImage3D@{GrTexImage3D}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrTexImage3D}]{\setlength{\rightskip}{0pt plus 5cm}void GrTexImage3D (unsigned int {\em handle}, \/  unsigned int {\em miplevel}, \/  {\bf EGRTEXTUREFORMAT} {\em internalFormat}, \/  unsigned int {\em width}, \/  unsigned int {\em height}, \/  unsigned int {\em depth}, \/  {\bf EGRIMAGEFORMAT} {\em format}, \/  {\bf EGRTYPE} {\em type}, \/  const void $\ast$ {\em data})}}
+\label{_gr_util_8h_e17cf4475c6ed5bdcee691ad010418bc}
+
+
+
+
+Definition at line 588 of file GrUtil.cpp.\hypertarget{_gr_util_8h_78aa2573e237c1ac3e315784d8261adc}{
+\index{GrUtil.h@{GrUtil.h}!GrTexImageCube@{GrTexImageCube}}
+\index{GrTexImageCube@{GrTexImageCube}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrTexImageCube}]{\setlength{\rightskip}{0pt plus 5cm}void GrTexImageCube (unsigned int {\em handle}, \/  unsigned int {\em miplevel}, \/  {\bf EGRTEXTUREFORMAT} {\em internalFormat}, \/  unsigned int {\em dim}, \/  {\bf EGRIMAGEFORMAT} {\em format}, \/  {\bf EGRTYPE} {\em type}, \/  const void $\ast$ {\em dataPX}, \/  const void $\ast$ {\em dataNX}, \/  const void $\ast$ {\em dataPY}, \/  const void $\ast$ {\em dataNY}, \/  const void $\ast$ {\em dataPZ}, \/  const void $\ast$ {\em dataNZ})}}
+\label{_gr_util_8h_78aa2573e237c1ac3e315784d8261adc}
+
+
+
+
+Definition at line 601 of file GrUtil.cpp.\hypertarget{_gr_util_8h_547285e99c507990bed34ef0ec1c7b7d}{
+\index{GrUtil.h@{GrUtil.h}!GrViewport@{GrViewport}}
+\index{GrViewport@{GrViewport}!GrUtil.h@{GrUtil.h}}
+\subsubsection[{GrViewport}]{\setlength{\rightskip}{0pt plus 5cm}void GrViewport (int {\em x}, \/  int {\em y}, \/  int {\em width}, \/  int {\em height})}}
+\label{_gr_util_8h_547285e99c507990bed34ef0ec1c7b7d}
+
+
+
+
+Definition at line 984 of file GrUtil.cpp.
