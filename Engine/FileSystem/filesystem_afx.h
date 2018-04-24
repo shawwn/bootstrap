@@ -6,6 +6,14 @@
 #include <windows.h>
 #endif
 
+#ifdef _M_IX86
+#define _X86_
+#endif
+
+#ifdef _M_X64
+#define _AMD64_
+#endif
+
 // function prototypes to ease the reading of this file.
 inline int _FS_Swap( volatile int* gate, int value );
 inline int _FS_CompareAndSwap( volatile int* gate, int value, int compare );
@@ -49,7 +57,13 @@ typedef __int64 FSsize;
 #  define _FS_PADPTR
 # endif
 #else
-# error Add defines for the native pointer size!
+# if defined( _X86_ )
+#  define _FS_P32
+#  define _FS_PADPTR		unsigned int _FS_NAME_MANGLE( _pad, __LINE__ )
+# elif defined( _AMD64_ ) || defined( _IA64_ )
+#  define _FS_P64
+#  define _FS_PADPTR
+# endif
 #endif
 #if defined _FS_P32
 # if defined _MSC_VER
