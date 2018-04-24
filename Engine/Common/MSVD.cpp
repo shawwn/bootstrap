@@ -18,7 +18,7 @@
 // C++ includes.
 #include <algorithm>
 
-inline float hypot( float a, float b )
+inline float Hypot( float a, float b )
 {
 	// if a is 0.0, then simply return b.
 	if ( a == 0.0f )
@@ -81,7 +81,7 @@ MSVD::MSVD( const MVec3* matrixMx3, unsigned int rowCount )
 			// Compute 2-norm of k-th column without under/overflow.
 			_s[ k ] = 0.0f;
 			for (i = k; i < m; i++) {
-				_s[ k ] = hypot( _s[ k ], A[ i ][ k ] );
+				_s[ k ] = Hypot( _s[ k ], A[ i ][ k ] );
 			}
 			if ( _s[ k ] != 0.0f )
 			{
@@ -129,7 +129,7 @@ MSVD::MSVD( const MVec3* matrixMx3, unsigned int rowCount )
 			e[ k ] = 0;
 			for ( i = k+1; i < n; ++i )
 			{
-				e[ k ] = hypot( e[ k ], e[ i ] );
+				e[ k ] = Hypot( e[ k ], e[ i ] );
 			}
             if ( e[ k ] != 0.0f )
 			{
@@ -320,7 +320,7 @@ MSVD::MSVD( const MVec3* matrixMx3, unsigned int rowCount )
 					e[ p-2 ] = 0.0;
 					for ( j = p-2; j >= k; --j )
 					{
-						float t = hypot( _s[ j ], f );
+						float t = Hypot( _s[ j ], f );
 						float cs = _s[ j ] / t;
 						float sn = f / t;
 						_s[ j ] = t;
@@ -348,7 +348,7 @@ MSVD::MSVD( const MVec3* matrixMx3, unsigned int rowCount )
 					e[ k - 1 ] = 0.0f;
 					for ( j = k; j < p; ++j )
 					{
-						float t = hypot( _s[ j ], f );
+						float t = Hypot( _s[ j ], f );
 						float cs = _s[ j ] / t;
 						float sn = f / t;
 						_s[ j ] = t;
@@ -395,7 +395,7 @@ MSVD::MSVD( const MVec3* matrixMx3, unsigned int rowCount )
 					// Chase zeros.
 					for ( j = k; j < p-1; ++j )
 					{
-						float t = hypot( f, g );
+						float t = Hypot( f, g );
 						float cs = f / t;
 						float sn = g / t;
 						if ( j != k )
@@ -415,7 +415,7 @@ MSVD::MSVD( const MVec3* matrixMx3, unsigned int rowCount )
 								_V( i, j ) = t;
 							}
 						}
-						t = hypot( f, g );
+						t = Hypot( f, g );
 						cs = f / t;
 						sn = g / t;
 						_s[ j ] = t;
