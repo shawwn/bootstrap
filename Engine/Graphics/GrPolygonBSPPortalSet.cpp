@@ -309,7 +309,7 @@ GrPolygonBSPPortalSet::GenCullPlaneSet( std::vector< MPlane >& cullPlanes, const
 	const MPlane& toPortalPlane = GetPlane();
 
 #ifdef _CACHE_CULL_PLANES
-	std::vector< MPlane >* planeCache;
+	std::vector< MPlane >* planeCache = 0;
 	if ( cache )
 		planeCache = &_cullPlaneCache[ toPortalIdx ];
 #endif
