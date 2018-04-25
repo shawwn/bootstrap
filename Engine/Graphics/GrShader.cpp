@@ -800,8 +800,6 @@ GrShader::PostError( const char* fmt, ... )
 	// clean up after ourselves.
 	delete buf;
 
-	PrintF( errorMsg.c_str() );
-
 	// post the error.
 	B_ERROR( errorMsg.c_str() );
 }
