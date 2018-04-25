@@ -19,8 +19,9 @@ void ( *HandleError )( const char *fmt, ... ) = HandleError_Default;
 #ifdef _MSC_VER
 void BootstrapDebugBreak()
 {
-	PrintF( "\nDebug break!\n" );
-	//__asm { int 3 };
+#if 0
+	__asm { int 3 };
+#endif
 }
 #endif
 #endif
@@ -258,6 +259,7 @@ HandleError_Default( const char *fmt, ... )
 #ifdef _MSC_VER
 	int bufSize = _vscprintf( fmt, marker );
 	char *buf = ( char * )alloca( bufSize + 1 );
+	buf[bufSize] = 0;
 	vsprintf_s( buf, bufSize + 1, fmt, marker );
 #else
 	//// more portable version, should work on linux with glibc >= 2.1
@@ -282,11 +284,16 @@ HandleError_Default( const char *fmt, ... )
 #endif
 	va_end( marker );
 
+#if 0
 	// display the error message.
 	MessageBox( NULL, buf, "Error!", MB_OK | MB_ICONERROR );
 
 	// exit.
 	exit( -1 );
+#else
+	PrintF("\nError!\n------\n%s\n--\n\n", buf);
+#endif
+
 }
 
 //==========================================================
