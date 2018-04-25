@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{02853198-D1AD-4A57-9D25-997EEFC78123}</ProjectGuid>
+    <RootNamespace>engine</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\Engine\Common;$(SolutionDir)\..\Engine\FileSystem;$(SolutionDir)\..\Engine\Graphics</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\Engine\Common;$(SolutionDir)\..\Engine\FileSystem;$(SolutionDir)\..\Engine\Graphics</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Common\BscArrayTable.cpp" />
+    <ClCompile Include="..\Common\BscExprLib.cpp" />
+    <ClCompile Include="..\Common\BscLexer.cpp" />
+    <ClCompile Include="..\Common\BscParseLib.cpp" />
+    <ClCompile Include="..\Common\BscVarTable.cpp" />
+    <ClCompile Include="..\Common\common_afx.cpp" />
+    <ClCompile Include="..\Common\IrrXML\irrXML.cpp" />
+    <ClCompile Include="..\Common\MAABox.cpp" />
+    <ClCompile Include="..\Common\MCone.cpp" />
+    <ClCompile Include="..\Common\MLine.cpp" />
+    <ClCompile Include="..\Common\MLineSegment.cpp" />
+    <ClCompile Include="..\Common\MMat3x3.cpp" />
+    <ClCompile Include="..\Common\MMat4x4.cpp" />
+    <ClCompile Include="..\Common\MMat4x4Array.cpp" />
+    <ClCompile Include="..\Common\MOBox.cpp" />
+    <ClCompile Include="..\Common\MPlane.cpp" />
+    <ClCompile Include="..\Common\MQuat.cpp" />
+    <ClCompile Include="..\Common\MRay.cpp" />
+    <ClCompile Include="..\Common\MSphere.cpp" />
+    <ClCompile Include="..\Common\MSVD.cpp" />
+    <ClCompile Include="..\Common\MTransform.cpp" />
+    <ClCompile Include="..\Common\MVec2.cpp" />
+    <ClCompile Include="..\Common\MVec3.cpp" />
+    <ClCompile Include="..\Common\MVec4.cpp" />
+    <ClCompile Include="..\Common\RFile.cpp" />
+    <ClCompile Include="..\Common\RFileMgr.cpp" />
+    <ClCompile Include="..\Common\RFilePipe.cpp" />
+    <ClCompile Include="..\Common\RRsrc.cpp" />
+    <ClCompile Include="..\Common\RRsrcMgr.cpp" />
+    <ClCompile Include="..\Common\ThArray.cpp" />
+    <ClCompile Include="..\Common\ThBuffer.cpp" />
+    <ClCompile Include="..\Common\ThPipe.cpp" />
+    <ClCompile Include="..\Common\ThPipeReader.cpp" />
+    <ClCompile Include="..\Common\ThPipeWriter.cpp" />
+    <ClCompile Include="..\Common\ThPrim.cpp" />
+    <ClCompile Include="..\Common\ThQueue.cpp" />
+    <ClCompile Include="..\Common\ThRingBuffer.cpp" />
+    <ClCompile Include="..\Common\ThSection.cpp" />
+    <ClCompile Include="..\Common\ThSignal.cpp" />
+    <ClCompile Include="..\Common\ThThread.cpp" />
+    <ClCompile Include="..\Common\UBitArray.cpp" />
+    <ClCompile Include="..\Common\UBitReader.cpp" />
+    <ClCompile Include="..\Common\UBitWriter.cpp" />
+    <ClCompile Include="..\Common\UBlockAllocator.cpp" />
+    <ClCompile Include="..\Common\UBuffer.cpp" />
+    <ClCompile Include="..\Common\UExpr.cpp" />
+    <ClCompile Include="..\Common\UExprArray.cpp" />
+    <ClCompile Include="..\Common\UExprArrayRef.cpp" />
+    <ClCompile Include="..\Common\UExprCallback.cpp" />
+    <ClCompile Include="..\Common\UExprMgr.cpp" />
+    <ClCompile Include="..\Common\UExprNumber.cpp" />
+    <ClCompile Include="..\Common\UExprTerm.cpp" />
+    <ClCompile Include="..\Common\UFixed.cpp" />
+    <ClCompile Include="..\Common\UHuffman.cpp" />
+    <ClCompile Include="..\Common\ULexer.cpp" />
+    <ClCompile Include="..\Common\UObjectPool.cpp" />
+    <ClCompile Include="..\Common\UPath.cpp" />
+    <ClCompile Include="..\Common\URand.cpp" />
+    <ClCompile Include="..\Common\UReader.cpp" />
+    <ClCompile Include="..\Common\URect.cpp" />
+    <ClCompile Include="..\Common\URefArray.cpp" />
+    <ClCompile Include="..\Common\URefCount.cpp" />
+    <ClCompile Include="..\Common\URefCountMT.cpp" />
+    <ClCompile Include="..\Common\URLE.cpp" />
+    <ClCompile Include="..\Common\UTable.cpp" />
+    <ClCompile Include="..\Common\UTime.cpp" />
+    <ClCompile Include="..\Common\UTimer.cpp" />
+    <ClCompile Include="..\Common\UUTF8.cpp" />
+    <ClCompile Include="..\Common\UValue.cpp" />
+    <ClCompile Include="..\Common\UWriter.cpp" />
+    <ClCompile Include="..\Common\UXMLTree.cpp" />
+    <ClCompile Include="..\FileSystem\filesystem_afx.cpp" />
+    <ClCompile Include="..\FileSystem\FSDiskServ_W32.cpp" />
+    <ClCompile Include="..\Graphics\GLSubsys.cpp" />
+    <ClCompile Include="..\Graphics\GrAfterEffect.cpp" />
+    <ClCompile Include="..\Graphics\GrAnim.cpp" />
+    <ClCompile Include="..\Graphics\GrAnimPlayer.cpp" />
+    <ClCompile Include="..\Graphics\GrAnimXForm.cpp" />
+    <ClCompile Include="..\Graphics\GrAnimXFormCache.cpp" />
+    <ClCompile Include="..\Graphics\graphics_afx.cpp" />
+    <ClCompile Include="..\Graphics\GrBounds.cpp" />
+    <ClCompile Include="..\Graphics\GrBSPArea.cpp" />
+    <ClCompile Include="..\Graphics\GrBSPSplit.cpp" />
+    <ClCompile Include="..\Graphics\GrBSPTree.cpp" />
+    <ClCompile Include="..\Graphics\GrCalcTangents.cpp" />
+    <ClCompile Include="..\Graphics\GrCamera.cpp" />
+    <ClCompile Include="..\Graphics\GrColor.cpp" />
+    <ClCompile Include="..\Graphics\GrCoplanarPolygonGroup.cpp" />
+    <ClCompile Include="..\Graphics\GrDebug.cpp" />
+    <ClCompile Include="..\Graphics\GrDebugSwitches.cpp" />
+    <ClCompile Include="..\Graphics\GrDeformer.cpp" />
+    <ClCompile Include="..\Graphics\GrDeformMorph.cpp" />
+    <ClCompile Include="..\Graphics\GrDeformWave.cpp" />
+    <ClCompile Include="..\Graphics\GrDXT.cpp" />
+    <ClCompile Include="..\Graphics\GrFramebuffer.cpp" />
+    <ClCompile Include="..\Graphics\GrFrustum.cpp" />
+    <ClCompile Include="..\Graphics\GrFrustumSet.cpp" />
+    <ClCompile Include="..\Graphics\GrImage.cpp" />
+    <ClCompile Include="..\Graphics\GrKFAnim.cpp" />
+    <ClCompile Include="..\Graphics\GrKFAnimData.cpp" />
+    <ClCompile Include="..\Graphics\GrKFAnimMgr.cpp" />
+    <ClCompile Include="..\Graphics\GrKFInterpolator.cpp" />
+    <ClCompile Include="..\Graphics\GrLight.cpp" />
+    <ClCompile Include="..\Graphics\GrLightMgr.cpp" />
+    <ClCompile Include="..\Graphics\GrLightSet.cpp" />
+    <ClCompile Include="..\Graphics\GrMaterial.cpp" />
+    <ClCompile Include="..\Graphics\GrMaterialMgr.cpp" />
+    <ClCompile Include="..\Graphics\GrMaterialPass.cpp" />
+    <ClCompile Include="..\Graphics\GrMaterialUserParams.cpp" />
+    <ClCompile Include="..\Graphics\GrMesh.cpp" />
+    <ClCompile Include="..\Graphics\GrMeshBufferMgr.cpp" />
+    <ClCompile Include="..\Graphics\GrMeshCombiner.cpp" />
+    <ClCompile Include="..\Graphics\GrMeshIB.cpp" />
+    <ClCompile Include="..\Graphics\GrMeshInst.cpp" />
+    <ClCompile Include="..\Graphics\GrMeshVB.cpp" />
+    <ClCompile Include="..\Graphics\GrModel.cpp" />
+    <ClCompile Include="..\Graphics\GrModelMgr.cpp" />
+    <ClCompile Include="..\Graphics\GrModelNode.cpp" />
+    <ClCompile Include="..\Graphics\GrModelSkinController.cpp" />
+    <ClCompile Include="..\Graphics\GrNodeController.cpp" />
+    <ClCompile Include="..\Graphics\GrParse.cpp" />
+    <ClCompile Include="..\Graphics\GrPixelBuffer.cpp" />
+    <ClCompile Include="..\Graphics\GrPixelBufferMgr.cpp" />
+    <ClCompile Include="..\Graphics\GrPolygon.cpp" />
+    <ClCompile Include="..\Graphics\GrPolygonBINode.cpp" />
+    <ClCompile Include="..\Graphics\GrPolygonBITree.cpp" />
+    <ClCompile Include="..\Graphics\GrPolygonBSPArea.cpp" />
+    <ClCompile Include="..\Graphics\GrPolygonBSPPortal.cpp" />
+    <ClCompile Include="..\Graphics\GrPolygonBSPPortalSet.cpp" />
+    <ClCompile Include="..\Graphics\GrPolygonBSPSplit.cpp" />
+    <ClCompile Include="..\Graphics\GrPolygonBSPTree.cpp" />
+    <ClCompile Include="..\Graphics\GrPolygonEdgeList.cpp" />
+    <ClCompile Include="..\Graphics\GrPolygonGroup.cpp" />
+    <ClCompile Include="..\Graphics\GrPolygonMesh.cpp" />
+    <ClCompile Include="..\Graphics\GrPolygonNode.cpp" />
+    <ClCompile Include="..\Graphics\GrPolygonUberMapping.cpp" />
+    <ClCompile Include="..\Graphics\GrPolygonUberPatch.cpp" />
+    <ClCompile Include="..\Graphics\GrPolygonUberPatchGroup.cpp" />
+    <ClCompile Include="..\Graphics\GrPolygonUberUVMapper.cpp" />
+    <ClCompile Include="..\Graphics\GrPolygonUVAtlas.cpp" />
+    <ClCompile Include="..\Graphics\GrProjection.cpp" />
+    <ClCompile Include="..\Graphics\GrQuery.cpp" />
+    <ClCompile Include="..\Graphics\GrQueryMgr.cpp" />
+    <ClCompile Include="..\Graphics\GrRenderAmbience.cpp" />
+    <ClCompile Include="..\Graphics\GrRenderbuffer.cpp" />
+    <ClCompile Include="..\Graphics\GrRenderer.cpp" />
+    <ClCompile Include="..\Graphics\GrRenderInteraction.cpp" />
+    <ClCompile Include="..\Graphics\GrRenderLight.cpp" />
+    <ClCompile Include="..\Graphics\GrRenderList.cpp" />
+    <ClCompile Include="..\Graphics\GrRenderPostProcess.cpp" />
+    <ClCompile Include="..\Graphics\GrRenderShadow.cpp" />
+    <ClCompile Include="..\Graphics\grrendertarget.cpp" />
+    <ClCompile Include="..\Graphics\GrRenderTargetMgr.cpp" />
+    <ClCompile Include="..\Graphics\GrRenderUtil.cpp" />
+    <ClCompile Include="..\Graphics\GrScene.cpp" />
+    <ClCompile Include="..\Graphics\GrSceneRender.cpp" />
+    <ClCompile Include="..\Graphics\GrSceneTraverser.cpp" />
+    <ClCompile Include="..\Graphics\GrShader.cpp" />
+    <ClCompile Include="..\Graphics\GrShaderMgr.cpp" />
+    <ClCompile Include="..\Graphics\GrShadowBuffer.cpp" />
+    <ClCompile Include="..\Graphics\GrSkin.cpp" />
+    <ClCompile Include="..\Graphics\GrSkinInst.cpp" />
+    <ClCompile Include="..\Graphics\GrSoftwareRasterizer.cpp" />
+    <ClCompile Include="..\Graphics\GrSoftwareRTBase.cpp" />
+    <ClCompile Include="..\Graphics\GrSoftwareRTBuffer.cpp" />
+    <ClCompile Include="..\Graphics\GrSoftwareSampler.cpp" />
+    <ClCompile Include="..\Graphics\GrSoftwareTexture.cpp" />
+    <ClCompile Include="..\Graphics\GrSoftwareTextureMgr.cpp" />
+    <ClCompile Include="..\Graphics\GrStreamingIB.cpp" />
+    <ClCompile Include="..\Graphics\GrSubsys.cpp" />
+    <ClCompile Include="..\Graphics\grtexgen.cpp" />
+    <ClCompile Include="..\Graphics\GrTexture.cpp" />
+    <ClCompile Include="..\Graphics\GrTexture3D.cpp" />
+    <ClCompile Include="..\Graphics\GrTextureBase.cpp" />
+    <ClCompile Include="..\Graphics\GrTextureCube.cpp" />
+    <ClCompile Include="..\Graphics\GrTextureMgr.cpp" />
+    <ClCompile Include="..\Graphics\GrTextureRect.cpp" />
+    <ClCompile Include="..\Graphics\GrTextureSet.cpp" />
+    <ClCompile Include="..\Graphics\GrTextureStage.cpp" />
+    <ClCompile Include="..\Graphics\GrTSGen.cpp" />
+    <ClCompile Include="..\Graphics\GrTypes.cpp" />
+    <ClCompile Include="..\Graphics\GrUberDetailCache.cpp" />
+    <ClCompile Include="..\Graphics\GrUberPatchSet.cpp" />
+    <ClCompile Include="..\Graphics\GrUberTexture.cpp" />
+    <ClCompile Include="..\Graphics\GrUberTextureMgr.cpp" />
+    <ClCompile Include="..\Graphics\GrUberTileAtlas.cpp" />
+    <ClCompile Include="..\Graphics\GrUTAtlas.cpp" />
+    <ClCompile Include="..\Graphics\GrUTCompress.cpp" />
+    <ClCompile Include="..\Graphics\GrUtil.cpp" />
+    <ClCompile Include="..\Graphics\GrUTLoader.cpp" />
+    <ClCompile Include="..\Graphics\GrUTSysTileCache.cpp" />
+    <ClCompile Include="..\Graphics\GrVirtualShadowPage.cpp" />
+    <ClCompile Include="..\Graphics\GrVirtualShadowSegmentSet.cpp" />
+    <ClCompile Include="..\Graphics\NVTriStrip\NvTriStrip.cpp" />
+    <ClCompile Include="..\Graphics\NVTriStrip\NvTriStripObjects.cpp" />
+    <ClCompile Include="..\Test\Compress.cpp" />
+    <ClCompile Include="..\Test\test_afx.cpp" />
+    <ClCompile Include="..\Test\TGeomCompress.cpp" />
+    <ClCompile Include="..\Test\TMain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Common\BscArrayTable.h" />
+    <ClInclude Include="..\Common\BscExprLib.h" />
+    <ClInclude Include="..\Common\BscLexer.h" />
+    <ClInclude Include="..\Common\BscParseLib.h" />
+    <ClInclude Include="..\Common\BscVarTable.h" />
+    <ClInclude Include="..\Common\common_afx.h" />
+    <ClInclude Include="..\Common\IrrXML\CXMLReaderImpl.h" />
+    <ClInclude Include="..\Common\IrrXML\fast_atof.h" />
+    <ClInclude Include="..\Common\IrrXML\heapsort.h" />
+    <ClInclude Include="..\Common\IrrXML\irrArray.h" />
+    <ClInclude Include="..\Common\IrrXML\irrString.h" />
+    <ClInclude Include="..\Common\IrrXML\irrTypes.h" />
+    <ClInclude Include="..\Common\IrrXML\irrXML.h" />
+    <ClInclude Include="..\Common\MAABox.h" />
+    <ClInclude Include="..\Common\MCone.h" />
+    <ClInclude Include="..\Common\MLine.h" />
+    <ClInclude Include="..\Common\MLineSegment.h" />
+    <ClInclude Include="..\Common\MMat3x3.h" />
+    <ClInclude Include="..\Common\MMat4x4.h" />
+    <ClInclude Include="..\Common\MMat4x4Array.h" />
+    <ClInclude Include="..\Common\MOBox.h" />
+    <ClInclude Include="..\Common\MPlane.h" />
+    <ClInclude Include="..\Common\MQuat.h" />
+    <ClInclude Include="..\Common\MRay.h" />
+    <ClInclude Include="..\Common\MSphere.h" />
+    <ClInclude Include="..\Common\MSVD.h" />
+    <ClInclude Include="..\Common\MTransform.h" />
+    <ClInclude Include="..\Common\MVec2.h" />
+    <ClInclude Include="..\Common\MVec3.h" />
+    <ClInclude Include="..\Common\MVec4.h" />
+    <ClInclude Include="..\Common\RConfig.h" />
+    <ClInclude Include="..\Common\RFile.h" />
+    <ClInclude Include="..\Common\RFileMgr.h" />
+    <ClInclude Include="..\Common\RFilePipe.h" />
+    <ClInclude Include="..\Common\RRsrc.h" />
+    <ClInclude Include="..\Common\RRsrcMgr.h" />
+    <ClInclude Include="..\Common\ThArray.h" />
+    <ClInclude Include="..\Common\ThBuffer.h" />
+    <ClInclude Include="..\Common\ThConfig.h" />
+    <ClInclude Include="..\Common\ThPipe.h" />
+    <ClInclude Include="..\Common\ThPipeReader.h" />
+    <ClInclude Include="..\Common\ThPipeWriter.h" />
+    <ClInclude Include="..\Common\ThPrim.h" />
+    <ClInclude Include="..\Common\ThQueue.h" />
+    <ClInclude Include="..\Common\ThRingBuffer.h" />
+    <ClInclude Include="..\Common\ThSection.h" />
+    <ClInclude Include="..\Common\ThSignal.h" />
+    <ClInclude Include="..\Common\ThThread.h" />
+    <ClInclude Include="..\Common\UBitArray.h" />
+    <ClInclude Include="..\Common\UBitReader.h" />
+    <ClInclude Include="..\Common\UBitWriter.h" />
+    <ClInclude Include="..\Common\UBlockAllocator.h" />
+    <ClInclude Include="..\Common\UBuffer.h" />
+    <ClInclude Include="..\Common\UConstRef.h" />
+    <ClInclude Include="..\Common\UExpr.h" />
+    <ClInclude Include="..\Common\UExprArray.h" />
+    <ClInclude Include="..\Common\UExprArrayRef.h" />
+    <ClInclude Include="..\Common\UExprCallback.h" />
+    <ClInclude Include="..\Common\UExprMgr.h" />
+    <ClInclude Include="..\Common\UExprNumber.h" />
+    <ClInclude Include="..\Common\UExprTerm.h" />
+    <ClInclude Include="..\Common\UFastArray.h" />
+    <ClInclude Include="..\Common\UFixed.h" />
+    <ClInclude Include="..\Common\UHuffman.h" />
+    <ClInclude Include="..\Common\ULexer.h" />
+    <ClInclude Include="..\Common\ULRUHash.h" />
+    <ClInclude Include="..\Common\ULRUList.h" />
+    <ClInclude Include="..\Common\UObjectPool.h" />
+    <ClInclude Include="..\Common\UPath.h" />
+    <ClInclude Include="..\Common\URand.h" />
+    <ClInclude Include="..\Common\UReader.h" />
+    <ClInclude Include="..\Common\URect.h" />
+    <ClInclude Include="..\Common\URef.h" />
+    <ClInclude Include="..\Common\URefArray.h" />
+    <ClInclude Include="..\Common\URefCount.h" />
+    <ClInclude Include="..\Common\URefCountMT.h" />
+    <ClInclude Include="..\Common\URLE.h" />
+    <ClInclude Include="..\Common\UStateMachine.h" />
+    <ClInclude Include="..\Common\UTable.h" />
+    <ClInclude Include="..\Common\UTime.h" />
+    <ClInclude Include="..\Common\UTimer.h" />
+    <ClInclude Include="..\Common\UUTF8.h" />
+    <ClInclude Include="..\Common\UValue.h" />
+    <ClInclude Include="..\Common\UWriter.h" />
+    <ClInclude Include="..\Common\UXMLTree.h" />
+    <ClInclude Include="..\FileSystem\filesystem_afx.h" />
+    <ClInclude Include="..\FileSystem\FSConfig.h" />
+    <ClInclude Include="..\FileSystem\FSDiskServ.h" />
+    <ClInclude Include="..\Graphics\enums.h" />
+    <ClInclude Include="..\Graphics\GL.h" />
+    <ClInclude Include="..\Graphics\GLAux.h" />
+    <ClInclude Include="..\Graphics\glext.h" />
+    <ClInclude Include="..\Graphics\glext_bak.h" />
+    <ClInclude Include="..\Graphics\GLSubsys.h" />
+    <ClInclude Include="..\Graphics\GLU.h" />
+    <ClInclude Include="..\Graphics\GrAfterEffect.h" />
+    <ClInclude Include="..\Graphics\GrAnim.h" />
+    <ClInclude Include="..\Graphics\GrAnimPlayer.h" />
+    <ClInclude Include="..\Graphics\GrAnimXForm.h" />
+    <ClInclude Include="..\Graphics\GrAnimXFormCache.h" />
+    <ClInclude Include="..\Graphics\graphics_afx.h" />
+    <ClInclude Include="..\Graphics\GrBounds.h" />
+    <ClInclude Include="..\Graphics\GrBSPArea.h" />
+    <ClInclude Include="..\Graphics\GrBSPSplit.h" />
+    <ClInclude Include="..\Graphics\GrBSPTree.h" />
+    <ClInclude Include="..\Graphics\GrCalcTangents.h" />
+    <ClInclude Include="..\Graphics\GrCamera.h" />
+    <ClInclude Include="..\Graphics\GrColor.h" />
+    <ClInclude Include="..\Graphics\GrConfig.h" />
+    <ClInclude Include="..\Graphics\GrCoplanarPolygonGroup.h" />
+    <ClInclude Include="..\Graphics\GrDebug.h" />
+    <ClInclude Include="..\Graphics\GrDebugSwitches.h" />
+    <ClInclude Include="..\Graphics\GrDeformer.h" />
+    <ClInclude Include="..\Graphics\GrDeformMorph.h" />
+    <ClInclude Include="..\Graphics\GrDeformWave.h" />
+    <ClInclude Include="..\Graphics\GrDXT.h" />
+    <ClInclude Include="..\Graphics\GrFramebuffer.h" />
+    <ClInclude Include="..\Graphics\GrFrustum.h" />
+    <ClInclude Include="..\Graphics\GrFrustumSet.h" />
+    <ClInclude Include="..\Graphics\GrImage.h" />
+    <ClInclude Include="..\Graphics\GrKFAnim.h" />
+    <ClInclude Include="..\Graphics\GrKFAnimData.h" />
+    <ClInclude Include="..\Graphics\GrKFAnimMgr.h" />
+    <ClInclude Include="..\Graphics\GrKFInterpolator.h" />
+    <ClInclude Include="..\Graphics\GrLight.h" />
+    <ClInclude Include="..\Graphics\GrLightMgr.h" />
+    <ClInclude Include="..\Graphics\GrLightSet.h" />
+    <ClInclude Include="..\Graphics\GrMaterial.h" />
+    <ClInclude Include="..\Graphics\GrMaterialMgr.h" />
+    <ClInclude Include="..\Graphics\GrMaterialPass.h" />
+    <ClInclude Include="..\Graphics\GrMaterialUserParams.h" />
+    <ClInclude Include="..\Graphics\GrMesh.h" />
+    <ClInclude Include="..\Graphics\GrMeshBufferMgr.h" />
+    <ClInclude Include="..\Graphics\GrMeshCombiner.h" />
+    <ClInclude Include="..\Graphics\GrMeshIB.h" />
+    <ClInclude Include="..\Graphics\GrMeshInst.h" />
+    <ClInclude Include="..\Graphics\GrMeshVB.h" />
+    <ClInclude Include="..\Graphics\GrModel.h" />
+    <ClInclude Include="..\Graphics\GrModelMgr.h" />
+    <ClInclude Include="..\Graphics\GrModelNode.h" />
+    <ClInclude Include="..\Graphics\GrModelSkinController.h" />
+    <ClInclude Include="..\Graphics\GrNodeController.h" />
+    <ClInclude Include="..\Graphics\GrParse.h" />
+    <ClInclude Include="..\Graphics\GrPixelBuffer.h" />
+    <ClInclude Include="..\Graphics\GrPixelBufferMgr.h" />
+    <ClInclude Include="..\Graphics\GrPolygon.h" />
+    <ClInclude Include="..\Graphics\GrPolygonBINode.h" />
+    <ClInclude Include="..\Graphics\GrPolygonBITree.h" />
+    <ClInclude Include="..\Graphics\GrPolygonBSPArea.h" />
+    <ClInclude Include="..\Graphics\GrPolygonBSPPortal.h" />
+    <ClInclude Include="..\Graphics\GrPolygonBSPPortalSet.h" />
+    <ClInclude Include="..\Graphics\GrPolygonBSPSplit.h" />
+    <ClInclude Include="..\Graphics\GrPolygonBSPTree.h" />
+    <ClInclude Include="..\Graphics\GrPolygonEdgeList.h" />
+    <ClInclude Include="..\Graphics\GrPolygonGroup.h" />
+    <ClInclude Include="..\Graphics\GrPolygonMesh.h" />
+    <ClInclude Include="..\Graphics\GrPolygonNode.h" />
+    <ClInclude Include="..\Graphics\GrPolygonUberMapping.h" />
+    <ClInclude Include="..\Graphics\GrPolygonUberPatch.h" />
+    <ClInclude Include="..\Graphics\GrPolygonUberPatchGroup.h" />
+    <ClInclude Include="..\Graphics\GrPolygonUberUVMapper.h" />
+    <ClInclude Include="..\Graphics\GrPolygonUVAtlas.h" />
+    <ClInclude Include="..\Graphics\GrProjection.h" />
+    <ClInclude Include="..\Graphics\GrQuery.h" />
+    <ClInclude Include="..\Graphics\GrQueryMgr.h" />
+    <ClInclude Include="..\Graphics\GrRenderAmbience.h" />
+    <ClInclude Include="..\Graphics\GrRenderbuffer.h" />
+    <ClInclude Include="..\Graphics\GrRenderer.h" />
+    <ClInclude Include="..\Graphics\GrRenderInteraction.h" />
+    <ClInclude Include="..\Graphics\GrRenderLight.h" />
+    <ClInclude Include="..\Graphics\GrRenderList.h" />
+    <ClInclude Include="..\Graphics\GrRenderPostProcess.h" />
+    <ClInclude Include="..\Graphics\GrRenderShadow.h" />
+    <ClInclude Include="..\Graphics\GrRenderTarget.h" />
+    <ClInclude Include="..\Graphics\GrRenderTargetMgr.h" />
+    <ClInclude Include="..\Graphics\GrRenderUtil.h" />
+    <ClInclude Include="..\Graphics\GrScene.h" />
+    <ClInclude Include="..\Graphics\GrSceneRender.h" />
+    <ClInclude Include="..\Graphics\GrSceneTraverser.h" />
+    <ClInclude Include="..\Graphics\GrShader.h" />
+    <ClInclude Include="..\Graphics\GrShaderMgr.h" />
+    <ClInclude Include="..\Graphics\GrShadowBuffer.h" />
+    <ClInclude Include="..\Graphics\GrSkin.h" />
+    <ClInclude Include="..\Graphics\GrSkinInst.h" />
+    <ClInclude Include="..\Graphics\GrSoftwareRasterizer.h" />
+    <ClInclude Include="..\Graphics\GrSoftwareRTBase.h" />
+    <ClInclude Include="..\Graphics\GrSoftwareRTBuffer.h" />
+    <ClInclude Include="..\Graphics\GrSoftwareSampler.h" />
+    <ClInclude Include="..\Graphics\GrSoftwareTexture.h" />
+    <ClInclude Include="..\Graphics\GrSoftwareTextureMgr.h" />
+    <ClInclude Include="..\Graphics\GrStreamingIB.h" />
+    <ClInclude Include="..\Graphics\GrSubsys.h" />
+    <ClInclude Include="..\Graphics\GrTexGen.h" />
+    <ClInclude Include="..\Graphics\GrTexture.h" />
+    <ClInclude Include="..\Graphics\GrTexture3D.h" />
+    <ClInclude Include="..\Graphics\GrTextureBase.h" />
+    <ClInclude Include="..\Graphics\GrTextureCube.h" />
+    <ClInclude Include="..\Graphics\GrTextureMgr.h" />
+    <ClInclude Include="..\Graphics\GrTextureRect.h" />
+    <ClInclude Include="..\Graphics\GrTextureSet.h" />
+    <ClInclude Include="..\Graphics\GrTextureStage.h" />
+    <ClInclude Include="..\Graphics\GrTSGen.h" />
+    <ClInclude Include="..\Graphics\GrTypes.h" />
+    <ClInclude Include="..\Graphics\GrUberDetailCache.h" />
+    <ClInclude Include="..\Graphics\GrUberPatchSet.h" />
+    <ClInclude Include="..\Graphics\GrUberTexture.h" />
+    <ClInclude Include="..\Graphics\GrUberTextureMgr.h" />
+    <ClInclude Include="..\Graphics\GrUberTileAtlas.h" />
+    <ClInclude Include="..\Graphics\GrUTAtlas.h" />
+    <ClInclude Include="..\Graphics\GrUTCompress.h" />
+    <ClInclude Include="..\Graphics\GrUtil.h" />
+    <ClInclude Include="..\Graphics\GrUTLoader.h" />
+    <ClInclude Include="..\Graphics\GrUTSysTileCache.h" />
+    <ClInclude Include="..\Graphics\GrVirtualShadowPage.h" />
+    <ClInclude Include="..\Graphics\GrVirtualShadowSegmentSet.h" />
+    <ClInclude Include="..\Graphics\NVTriStrip\NvTriStrip.h" />
+    <ClInclude Include="..\Graphics\NVTriStrip\NvTriStripObjects.h" />
+    <ClInclude Include="..\Graphics\NVTriStrip\VertexCache.h" />
+    <ClInclude Include="..\Graphics\wglext.h" />
+    <ClInclude Include="..\Test\Compress.h" />
+    <ClInclude Include="..\Test\test_afx.h" />
+    <ClInclude Include="..\Test\TGeomCompress.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
