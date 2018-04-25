@@ -1,4 +1,4 @@
-#include "engine_afx.h"
+#include "graphics_afx.h"
 
 // class header.
 #include "GrNodeController.h"

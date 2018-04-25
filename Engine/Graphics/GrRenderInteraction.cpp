@@ -4,7 +4,7 @@
 // Created:		11-14-05
 // Copyright © 2004 Bootstrap Games
 //----------------------------------------------------------
-#include "engine_afx.h"
+#include "graphics_afx.h"
 
 // class header.
 #include "GrRenderInteraction.h"
