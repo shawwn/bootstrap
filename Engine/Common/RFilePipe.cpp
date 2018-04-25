@@ -13,6 +13,7 @@
 #include "RFile.h"
 #include "FSDiskServ.h"
 
+#include <cassert>
 
 //**********************************************************
 // class RFilePipe
