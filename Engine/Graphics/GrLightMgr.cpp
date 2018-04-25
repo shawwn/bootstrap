@@ -262,7 +262,7 @@ GrLightMgr::GetScriptName( tstring& scriptName, const tstring& lightName )
 		scriptName = scriptName.substr( 0, scriptPathEnd );
 	}
 
-	scriptName += "/"GR_LIGHTS_FILENAME;
+	scriptName += "/" GR_LIGHTS_FILENAME;
 }
 
 
