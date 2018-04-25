@@ -53,7 +53,8 @@ GrSoftwareTextureMgr::GetTexture( const UPath& filePath )
 	unsigned int fileSize = ( unsigned int )file->GetSize();
 
 	// read in the image data.
-	GrImage* image = new GrImage( filePath, UReader( fileData, fileSize, false ) );
+	UReader reader( fileData, fileSize, false );
+	GrImage* image = new GrImage( filePath, reader );
 
 	// purge the data from the file so that we don't keep it loaded.
 	file->Purge();
