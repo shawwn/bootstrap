@@ -11,8 +11,10 @@
 
 // standard C includes.
 #include <process.h>
+#include <cassert>
 
 // Win32 includes.
+#include <Windows.h>
 #include <WinIoCtl.h>
 #include <tchar.h>
 
@@ -144,6 +146,7 @@ static SFileOp _ops[ MAX_DRIVE_COUNT ][ MAX_PENDING_IO ];
 static volatile int _queuePushLock[ MAX_DRIVE_COUNT ];
 static volatile int _queuePushIdx[ MAX_DRIVE_COUNT ];
 static volatile int _queuePopIdx[ MAX_DRIVE_COUNT ];
+static bool _started = false;
 
 
 //**********************************************************
@@ -490,14 +493,20 @@ bool FS_IsWriteComplete( SFSFileWriteBuffer* writeBuffer )
 //----------------------------------------------------------
 TCHAR* ConvertString( const FSchar* string )
 {
-#if !defined FS_USE_WIDECHAR
+#ifdef FS_USE_WIDECHAR
 	size_t len = strlen( string );
 	TCHAR* tstr = ( TCHAR* )FSmalloc( ( len + 1 ) * sizeof( TCHAR ) );
 	MultiByteToWideChar( CP_UTF8, 0, string, -1, tstr, ( int )len );
 	tstr[ len ] = L'\0';
 	return tstr;
 #else
-	return string;
+	size_t len = strlen( string );
+	TCHAR* tstr = ( TCHAR* )FSmalloc( ( len + 1 ) * sizeof( TCHAR ) );
+	for ( size_t i = 0; i < len; i++ ) {
+		tstr[ i ] = string[ i ];
+	}
+	tstr[ len ] = L'\0';
+	return tstr;
 #endif
 }
 
@@ -512,6 +521,9 @@ void FreeString( TCHAR* string )
 //----------------------------------------------------------
 void Start()
 {
+	if ( _started )
+		return;
+
 	// register our cleanup function.
 	atexit( Stop );
 
@@ -524,6 +536,8 @@ void Start()
 
 	// start the worker thread.
 	_workerThread = _beginthread( ThreadMain, 1024, 0 );
+
+	_started = true;
 }
 
 //----------------------------------------------------------
@@ -561,6 +575,7 @@ void InitDrive( char letter )
 
 	// convert the name to unicode.
 	TCHAR driveName[ 7 ];
+#ifdef FS_USE_WIDECHAR
 	int result = MultiByteToWideChar( CP_UTF8, 0, buffer, -1, driveName, 7 );
 	if ( result == 0 )
 	{
@@ -569,6 +584,11 @@ void InitDrive( char letter )
 		DWORD error = GetLastError();
 		return;
 	}
+#else
+	for (int i = 0; i < sizeof(buffer); i++) {
+		driveName[i] = buffer[i];
+	}
+#endif
 
 	// open the volume.
 	HANDLE volume = CreateFile( driveName, GENERIC_READ | GENERIC_WRITE,
