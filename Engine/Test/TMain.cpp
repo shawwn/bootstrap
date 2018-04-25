@@ -27,9 +27,6 @@
 #include "GrUTLoader.h"
 #include "GrUTAtlas.h"
 
-// EditLib includes.
-#include "EdImportDAE.h"
-
 #define WINDOW_CLASS_NAME		"TestApp_GLWindow"
 #define WINDOW_TITLE			"TestApp v1.0"
 
@@ -46,6 +43,7 @@ static HINSTANCE	_instance = 0;
 // miscellaneous state.
 static float		_windowAspect = 0.0f;
 static unsigned int	_keyDown = 0;	// combination of MOVE_KEY_xxx flags.
+static bool			_running = false;
 
 static void Startup( const char* rootPath, unsigned int width = 1024, unsigned int height = 768 );
 static void Shutdown();
@@ -59,6 +57,10 @@ static void TestDiskServ();
 //**********************************************************
 // Main function
 //**********************************************************
+
+#pragma comment(lib, "OpenGL32.lib")
+#pragma comment(lib, "glu32.lib")
+#pragma comment(lib, "winmm.lib")
 
 //----------------------------------------------------------
 int
@@ -127,7 +129,8 @@ WinMain( HINSTANCE hInst, HINSTANCE hPrev, LPSTR lpCmdLine, int nCmdShow )
 	// load the test scene.
 	tstring errors;
 //	gGrScene->LoadScene( "data/ubertest", errors );
-	gGrScene->LoadScene( "data/metalroom", errors );
+//	gGrScene->LoadScene( "data/metalroom", errors );
+	gGrScene->LoadScene( "data/plane_playground", errors );
 
 	// TODO: compress and decompress geometry.
 //	T_CompressGeometryTest(  );
@@ -156,8 +159,8 @@ WinMain( HINSTANCE hInst, HINSTANCE hPrev, LPSTR lpCmdLine, int nCmdShow )
 
 	// run.
 	unsigned int time = timeGetTime();
-	bool running = true;
-	while ( running )
+	_running = true;
+	while ( _running )
 	{
 		int mouseDeltaX = 0;
 		int mouseDeltaY = 0;
@@ -190,7 +193,7 @@ WinMain( HINSTANCE hInst, HINSTANCE hPrev, LPSTR lpCmdLine, int nCmdShow )
 			// handle the current message.
 			if ( GetMessage( &msg, NULL, 0, 0 ) != TRUE )
 			{
-				running = false;
+				_running = false;
 				break;
 			}
 			TranslateMessage( &msg );
@@ -255,6 +258,11 @@ WindowProc( HWND window, UINT message, WPARAM wparam, LPARAM lparam )
 {
 	switch ( message )
 	{
+	case WM_CLOSE:
+	case WM_QUIT:
+		_running = false;
+		break;
+
 	case WM_KEYDOWN:
 		if ( wparam == VK_ESCAPE )
 			PostQuitMessage( 0 );
