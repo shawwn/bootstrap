@@ -61,7 +61,7 @@ GrSubsys::GrSubsys( unsigned int screenWidth, unsigned int screenHeight, bool ub
 , _brightness( 1.0f )
 , _textureQuality( EGQ_HIGH /*EGQ_ULTRA*/ )
 , _shadingQuality( EGQ_HIGH /*EGQ_ULTRA*/ )
-, _hdrQuality( EGQ_ULTRA )
+, _hdrQuality( EGQ_LOW /*EGQ_ULTRA*/ )
 , _parallaxEnable( true )
 , _hdrEnable( true )
 , _colorTableDirty( false )
