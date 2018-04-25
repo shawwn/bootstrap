@@ -13,6 +13,7 @@
 #include "GrScene.h"
 #include "GrMaterialMgr.h"
 #include "GrMeshInst.h"
+#include "GrMeshVB.h"
 #include "GrModel.h"
 #include "GrModelNode.h"
 #include "GrBSPTree.h"
