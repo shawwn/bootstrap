@@ -125,7 +125,7 @@ GrMaterialPass::Init( unsigned int passNumber, const SMaterialPassInfo& passInfo
 	_lightBlendStates = passInfo.lightBlendStates;
 	_cullMode = passInfo.cullMode;
 	_alphaTestMode = passInfo.alphaTestMode;
-	_alphaTestRef = ( passInfo.alphaTestRef != 0 ) ? passInfo.alphaTestRef : gUExprMgr->CreateNumber( 0.5f );
+	_alphaTestRef = ( passInfo.alphaTestRef != 0 ) ? passInfo.alphaTestRef : URef< UExprTerm >( gUExprMgr->CreateNumber( 0.5f ) );
 	_receiveShadow = passInfo.receiveShadow;
 	_castShadow = passInfo.castShadow;
 	_firstPass = ( passNumber == 0 );
