@@ -19,7 +19,8 @@ void ( *HandleError )( const char *fmt, ... ) = HandleError_Default;
 #ifdef _MSC_VER
 void BootstrapDebugBreak()
 {
-	__asm { int 3 };
+	PrintF( "\nDebug break!\n" );
+	//__asm { int 3 };
 }
 #endif
 #endif
