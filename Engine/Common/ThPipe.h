@@ -19,7 +19,7 @@ class ThSignal;
 class ThPipe
 {
 public:
-	virtual ~ThPipe() = 0;
+	//virtual ~ThPipe() = 0;
 
 	// read/write buffer size.
 	virtual unsigned int	GetRegionSize() const = 0;
