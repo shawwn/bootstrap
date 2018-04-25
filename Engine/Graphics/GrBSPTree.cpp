@@ -215,6 +215,9 @@ GrBSPTree::GetLitObjectsAndMarkVisible( GrRenderList& lightReceivers, const GrFr
 	GrBSPArea::IndexArray::const_iterator end = visibleAreas.end();
 	for ( ; iter != end; ++iter )
 	{
+		if ( *iter >= _areas.size() )
+			continue;
+
 		// get the current area.
 		GrBSPArea* curArea = _areas[ *iter ];
 		if ( frustum.IsAABoxInside( curArea->GetBoundingBox() ) )
