@@ -173,29 +173,56 @@ GrBSPArea::Load( UReader& reader )
 	// clear out the list of visible areas.
 	Clean();
 
-	// read in PVS info.
-	unsigned int visibleAreaCount = reader.ReadUInt();
-	for ( unsigned int i = 0; i < visibleAreaCount; ++i )
-		_visibleAreas.push_back( reader.ReadInt() );
-
-	// read in all mesh instance info.
-	_meshInstCount = reader.ReadUInt();
-	_meshInsts = new SMeshInstInfo[ _meshInstCount ];
-	for ( unsigned int i = 0; i < _meshInstCount; ++i )
+	if ( majorVer == 0x0001 && minorVer == 0x0000 )
 	{
-		_meshInsts[ i ].meshInstIdx = reader.ReadUInt();
-		_meshInsts[ i ].rangeStart = reader.ReadUInt();
-		_meshInsts[ i ].rangeCount = reader.ReadUInt();
-		_meshInsts[ i ].lastVisibleFrameId = 0;
+		// read in PVS info.
+		unsigned int visibleAreaCount = reader.ReadUInt();
+		for ( unsigned int i = 0; i < visibleAreaCount; ++i )
+			_visibleAreas.push_back( reader.ReadInt() );
+
+		// read in all mesh instance info.
+		_meshInstCount = reader.ReadUInt();
+		_meshInsts = new SMeshInstInfo[ _meshInstCount ];
+		for ( unsigned int i = 0; i < _meshInstCount; ++i )
+		{
+			_meshInsts[ i ].meshInstIdx = reader.ReadUInt();
+			_meshInsts[ i ].rangeStart = reader.ReadUInt();
+			_meshInsts[ i ].rangeCount = reader.ReadUInt();
+			_meshInsts[ i ].lastVisibleFrameId = 0;
+		}
+
+		// read in the ubertexture data.
+		unsigned int uberPatchFlags = reader.ReadUInt();
+		if ( uberPatchFlags & 1 )
+			_uberPatches = new GrUberPatchSet( reader );
+
+		// read in our bounding volume.
+		_boundingBox.Load( reader );
 	}
+	else if ( majorVer == 0x0000 && minorVer == 0x0000 ) // SHAWN: Not sure this branch is correct.
+	{
+		// read in PVS info.
+		unsigned short visibleAreaCount = reader.ReadUShort();
+		for ( unsigned short i = 0; i < visibleAreaCount; ++i )
+			_visibleAreas.push_back( reader.ReadInt() );
 
-	// read in the ubertexture data.
-	unsigned int uberPatchFlags = reader.ReadUInt();
-	if ( uberPatchFlags & 1 )
-		_uberPatches = new GrUberPatchSet( reader );
+		// read in all mesh instance info.
+		_meshInstCount = reader.ReadUShort();
+		_meshInsts = new SMeshInstInfo[ _meshInstCount ];
+		for ( unsigned int i = 0; i < _meshInstCount; ++i )
+		{
+			_meshInsts[ i ].meshInstIdx = reader.ReadUShort();
+			_meshInsts[ i ].rangeStart = reader.ReadUInt();
+			_meshInsts[ i ].rangeCount = reader.ReadUInt();
+			_meshInsts[ i ].lastVisibleFrameId = 0;
+		}
 
-	// read in our bounding volume.
-	_boundingBox.Load( reader );
+		// read in our bounding volume.
+		_boundingBox.Load( reader );
+	}
+	else {
+		B_ERROR("Bad BSPArea version");
+	}
 }
 
 //----------------------------------------------------------
