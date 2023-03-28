@@ -1,0 +1,26 @@
+//----------------------------------------------------------
+// File:		materials.mtr
+// Author:		BootEdit DAE Importer (: Kevin Bray's proxy :)
+// 
+//----------------------------------------------------------
+data/plane_playground/textures/stones01_c
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		UberTexture				data/plane_playground/uber/plane_tex.utx
+	}
+}
+
+data/plane_playground/textures/floorplate01_c
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		BumpMap					data/plane_playground/textures/floorplate01_n.tga
+		NormalMap				data/plane_playground/textures/floorplate01_n.tga
+		DiffuseMap				data/plane_playground/textures/floorplate01_c.tga
+		SpecularMap				data/plane_playground/textures/floorplate01_s.tga
+	}
+}
+

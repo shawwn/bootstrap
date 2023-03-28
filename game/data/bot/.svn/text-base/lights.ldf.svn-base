@@ -1,0 +1,82 @@
+//----------------------------------------------------------
+// File:		lights.ldf
+// Author:		DAE Importer (: Kevin Bray's proxy :)
+// Copyright © 2005 Bootstrap Games
+//----------------------------------------------------------
+data/bot/fr
+{
+	Name			data/bot/fr
+	Position		-3.580506, 487.273468, 7.781236
+	Color			1.000000, 1.000000, 1.000000, 1.000000
+	Intensity		0.000000
+	Range			1000.000000
+	Atten			1.000000, 0.000000, 0.000000
+	Width			0.200000
+	Haziness		0.000000
+	Projection
+	{
+		FOV				15.686275
+		Aspect			1.000000
+		Near			1.000000
+		RotationMatrix	0.998312, 0.000000, 0.000000, 0.000000, 0.998312, 0.000000, 0.000000, 0.000000, 0.998312
+	}
+}
+
+data/bot/lb
+{
+	Name			data/bot/lb
+	Position		0.000000, 0.000000, 0.000000
+	Color			1.000000, 1.000000, 1.000000, 1.000000
+	Intensity		0.000000
+	Range			16.000000
+	Atten			1.000000, 0.000000, 0.000000
+	Width			0.020000
+	Haziness		0.000000
+	Projection
+	{
+		FOV				0.000000
+		Aspect			1.000000
+		Near			1.000000
+		RotationMatrix	0.998312, 0.000000, 0.000000, 0.000000, 0.998312, 0.000000, 0.000000, 0.000000, 0.998312
+	}
+}
+
+data/bot/fr1
+{
+	Name			data/bot/fr1
+	Position		6.042570, -0.392334, 5.127177
+	Color			1.000000, 1.000000, 1.000000, 1.000000
+	Intensity		1.631373
+	Range			1000.000000
+	Atten			1.000000, 0.000000, 0.000000
+	Width			0.200000
+	Haziness		0.000000
+	SpotTexture		spotlinear
+	Projection
+	{
+		FOV				90.000000
+		Aspect			1.000000
+		Near			1.000000
+		RotationMatrix	0.998312, 0.000000, 0.000000, 0.000000, 0.998312, 0.000000, 0.000000, 0.000000, 0.998312
+	}
+}
+
+data/bot/fr2
+{
+	Name			data/bot/fr2
+	Position		0.000000, 0.000000, 0.000000
+	Color			1.000000, 1.000000, 1.000000, 1.000000
+	Intensity		0.000000
+	Range			517.647095
+	Atten			1.000000, 0.000000, 0.000000
+	Width			0.020000
+	Haziness		0.000000
+	Projection
+	{
+		FOV				0.000000
+		Aspect			1.000000
+		Near			1.000000
+		RotationMatrix	0.998312, 0.000000, 0.000000, 0.000000, 0.998312, 0.000000, 0.000000, 0.000000, 0.998312
+	}
+}
+

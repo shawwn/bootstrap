@@ -1,0 +1,33 @@
+//----------------------------------------------------------
+// File:		materials.mtr
+// Author:		BootEdit DAE Importer (: Kevin Bray's proxy :)
+// Copyright (C) 2004 Bootstrap Games.  All rights reserved.
+//----------------------------------------------------------
+
+data/bot/textures/bot_c
+{
+	{
+		Shader			blinn
+		EmissiveMap		data/bot/textures/bot_e.tga
+		BumpMap			data/bot/textures/bot_h.tga
+		NormalMap		data/bot/textures/bot_n.tga [normalmap]
+		DiffuseMap		data/bot/textures/bot_c.tga
+		SpecularMap		data/bot/textures/bot_s.tga
+	}
+}
+
+data/bot/textures/floorplate01_c
+{
+	{
+		Shader			blinn
+		Bump
+		{
+			Map			data/bot/textures/floorplate01_h.tga
+			ColorMod		0.04
+			ColorAdd		-0.020
+		}
+		NormalMap		data/bot/textures/floorplate01_n.tga [normalmap]
+		DiffuseMap		data/bot/textures/floorplate01_c.tga
+		SpecularMap		data/bot/textures/floorplate01_s.tga
+	}
+}

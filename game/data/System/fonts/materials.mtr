@@ -1,0 +1,53 @@
+//----------------------------------------------------------
+// File:		Materials.mtr
+// Author:		Kevin Bray
+// Copyright © 2005	Bootstrap Games
+//----------------------------------------------------------
+
+data/system/fonts/textures/default
+{
+	{
+		Shader			Blinn
+		SrcBlend		gl_one
+		DstBlend		gl_one_minus_src_alpha
+		Emissive
+		{
+			map				data/system/fonts/textures/default.tga [ intensity8, nomipmap ]
+			colorMod		0, 1, 0, 1
+			colorAdd		0, 0, 0, 0
+			nearest
+		}
+	}
+}
+
+data/system/fonts/textures/default_small
+{
+	{
+		Shader			Blinn
+		SrcBlend		gl_one
+		DstBlend		gl_one_minus_src_alpha
+		Emissive
+		{
+			map				data/system/fonts/textures/default_small.tga [ intensity8, nomipmap ]
+			colorMod		1, 1, 1, 1
+			colorAdd		0, 0, 0, 0
+			nearest
+		}
+	}
+}
+
+data/system/fonts/textures/default_tiny
+{
+	{
+		Shader			Blinn
+		SrcBlend		gl_one
+		DstBlend		gl_one_minus_src_alpha
+		Emissive
+		{
+			map				data/system/fonts/textures/default_tiny.tga [ intensity8, nomipmap ]
+			colorMod		1, 1, 1, 1
+			colorAdd		0, 0, 0, 0
+			nearest
+		}
+	}
+}

@@ -1,0 +1,65 @@
+default/badass_brush
+{
+	Diffuse			"data/bot/textures/floorplate01_c.tga"
+	Emissive		"data/bot/textures/floorplate01_h.tga"
+	Mask			"data/metalroomnew/textures/circular_mask.tga"
+}
+
+default/badass_brush4u
+{
+	Normal			"data/bot/textures/bot_h.tga"
+	Diffuse			"data/bot/textures/bot_s.tga"
+	Specular		"data/bot/textures/bot_n.tga"
+}
+
+default/badass_brush2
+{
+}
+
+default/lollersk8er
+{
+	Diffuse			"data/bot/textures/bot_h.tga"
+}
+
+default/circular
+{
+	Diffuse			"data/bot/textures/bot_c.tga"
+	Mask			"data/metalroomnew/textures/circular_mask.tga"
+}
+
+default/black_guy
+{
+	Diffuse			"data/metalroomnew/textures/portrait.tga"
+	Mask			"data/metalroomnew/textures/circular_mask.tga"
+}
+
+default/google
+{
+	Diffuse			"data/metalroomnew/textures/google.tga"
+	Mask			"data/metalroomnew/textures/circular_mask.tga"
+}
+
+default/hilarity
+{
+	Diffuse			"data/metalroomnew/textures/hilarity.tga"
+	Mask			"data/metalroomnew/textures/circular_mask.tga"
+}
+
+default/badass_brush3
+{
+}
+
+default/badass_brush4
+{
+}
+
+default/badass_brush5
+{
+}
+
+default/lolz
+{
+	Normal			"data/metalroomnew/textures/floorplate01_n.tga"
+	Diffuse			"data/bot/textures/floorplate01_c.tga"
+}
+

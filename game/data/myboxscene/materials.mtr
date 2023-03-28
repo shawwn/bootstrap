@@ -1,0 +1,15 @@
+//----------------------------------------------------------
+// File:		materials.mtr
+// Author:		BootEdit DAE Importer (: Kevin Bray's proxy :)
+// Copyright (C) 2004 Bootstrap Games.  All rights reserved.
+//----------------------------------------------------------
+data/myboxscene/textures/wallplate01_c
+{
+	{
+		Shader					blinn
+		AmbientShader			defambient
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		DiffuseMap				data/myboxscene/textures/wallplate01_c.tga
+	}
+}
+

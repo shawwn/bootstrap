@@ -1,0 +1,317 @@
+//----------------------------------------------------------
+// File:		materials.mtr
+// Author:		BootEdit DAE Importer (: Kevin Bray's proxy :)
+// Copyright (C) 2004 Bootstrap Games.  All rights reserved.
+//----------------------------------------------------------
+data/metalroomnew/textures/borders02_c
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		EmissiveMap				data/metalroomnew/textures/borders02_e.tga
+		BumpMap					data/metalroomnew/textures/borders02_h.tga
+		NormalMap				data/metalroomnew/textures/borders02_n.tga
+		DiffuseMap				data/metalroomnew/textures/borders02_c.tga
+		SpecularMap				data/metalroomnew/textures/borders02_s.tga
+	}
+}
+
+data/metalroomnew/textures/borders03_c
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		EmissiveMap				data/metalroomnew/textures/borders03_e.tga
+		BumpMap					data/metalroomnew/textures/borders03_h.tga
+		NormalMap				data/metalroomnew/textures/borders03_n.tga
+		DiffuseMap				data/metalroomnew/textures/borders03_c.tga
+		SpecularMap				data/metalroomnew/textures/borders03_s.tga
+	}
+}
+
+data/metalroomnew/textures/borders04_c
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		BumpMap					data/metalroomnew/textures/borders04_h.tga
+		NormalMap				data/metalroomnew/textures/borders04_n.tga
+		DiffuseMap				data/metalroomnew/textures/borders04_c.tga
+		SpecularMap				data/metalroomnew/textures/borders04_s.tga
+	}
+}
+
+data/metalroomnew/textures/borders06_c
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		BumpMap					data/metalroomnew/textures/borders06_h.tga
+		NormalMap				data/metalroomnew/textures/borders06_n.tga
+		DiffuseMap				data/metalroomnew/textures/borders06_c.tga
+		SpecularMap				data/metalroomnew/textures/borders06_s.tga
+	}
+}
+
+data/metalroomnew/textures/borders07_c
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		BumpMap					data/metalroomnew/textures/borders07_h.tga
+		NormalMap				data/metalroomnew/textures/borders07_n.tga
+		DiffuseMap				data/metalroomnew/textures/borders07_c.tga
+		SpecularMap				data/metalroomnew/textures/borders07_s.tga
+	}
+}
+
+data/metalroomnew/textures/door01_c
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		UberTexture				data/metalroomnew/uber/small_door.utx
+	}
+}
+
+data/metalroomnew/textures/grate03_c
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		BumpMap					data/metalroomnew/textures/grate03_h.tga
+		NormalMap				data/metalroomnew/textures/grate03_n.tga
+		DiffuseMap				data/metalroomnew/textures/grate03_c.tga
+		SpecularMap				data/metalroomnew/textures/grate03_s.tga
+	}
+}
+
+data/metalroomnew/textures/pipes_c
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		BumpMap					data/metalroomnew/textures/pipes_h.tga
+		NormalMap				data/metalroomnew/textures/pipes_n.tga
+		DiffuseMap				data/metalroomnew/textures/pipes_c.tga
+		SpecularMap				data/metalroomnew/textures/pipes_s.tga
+	}
+}
+
+data/metalroomnew/textures/plate_c
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		EmissiveMap				data/metalroomnew/textures/plate_e.tga
+		BumpMap					data/metalroomnew/textures/plate_h.tga
+		NormalMap				data/metalroomnew/textures/plate_n.tga
+		DiffuseMap				data/metalroomnew/textures/plate_c.tga
+		SpecularMap				data/metalroomnew/textures/plate_s.tga
+	}
+}
+
+data/metalroomnew/textures/screens_c
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		EmissiveMap				data/metalroomnew/textures/screens_e.tga
+		BumpMap					data/metalroomnew/textures/screens_h.tga
+		NormalMap				data/metalroomnew/textures/screens_n.tga
+		DiffuseMap				data/metalroomnew/textures/screens_c.tga
+		SpecularMap				data/metalroomnew/textures/screens_s.tga
+	}
+}
+
+data/metalroomnew/textures/skidplate_c
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		BumpMap					data/metalroomnew/textures/skidplate_h.tga
+		NormalMap				data/metalroomnew/textures/skidplate_n.tga
+		DiffuseMap				data/metalroomnew/textures/skidplate_c.tga
+		SpecularMap				data/metalroomnew/textures/skidplate_s.tga
+	}
+}
+
+data/metalroomnew/textures/tank_c
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		EmissiveMap				data/metalroomnew/textures/tank_e.tga
+		BumpMap					data/metalroomnew/textures/tank_h.tga
+		NormalMap				data/metalroomnew/textures/tank_n.tga
+		DiffuseMap				data/metalroomnew/textures/tank_c.tga
+		SpecularMap				data/metalroomnew/textures/tank_s.tga
+	}
+}
+
+data/metalroomnew/textures/tile01_c
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		BumpMap					data/metalroomnew/textures/tile01_h.tga
+		NormalMap				data/metalroomnew/textures/tile01_n.tga
+		DiffuseMap				data/metalroomnew/textures/tile01_c.tga
+		SpecularMap				data/metalroomnew/textures/tile01_s.tga
+	}
+}
+
+data/metalroomnew/textures/tile02_c
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		BumpMap					data/metalroomnew/textures/tile02_h.tga
+		NormalMap				data/metalroomnew/textures/tile02_n.tga
+		DiffuseMap				data/metalroomnew/textures/tile02_c.tga
+		SpecularMap				data/metalroomnew/textures/tile02_s.tga
+	}
+}
+
+data/metalroomnew/textures/wallplate01_c
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		BumpMap					data/metalroomnew/textures/wallplate01_h.tga
+		NormalMap				data/metalroomnew/textures/wallplate01_n.tga
+		DiffuseMap				data/metalroomnew/textures/wallplate01_c.tga
+		SpecularMap				data/metalroomnew/textures/wallplate01_s.tga
+	}
+}
+
+data/metalroomnew/textures/domelight_c
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		EmissiveMap				data/metalroomnew/textures/domelight_e.tga
+		BumpMap					data/metalroomnew/textures/domelight_h.tga
+		NormalMap				data/metalroomnew/textures/domelight_n.tga
+		DiffuseMap				data/metalroomnew/textures/domelight_c.tga
+		SpecularMap				data/metalroomnew/textures/domelight_s.tga
+	}
+}
+
+data/metalroomnew/textures/bot_c
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		BumpMap					data/metalroomnew/textures/bot_h.tga
+		NormalMap				data/metalroomnew/textures/bot_n.tga
+		DiffuseMap				data/metalroomnew/textures/bot_c.tga
+		SpecularMap				data/metalroomnew/textures/bot_s.tga
+	}
+}
+
+data/metalroomnew/textures/door_c
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		EmissiveMap				data/metalroomnew/textures/door_e.tga
+		BumpMap					data/metalroomnew/textures/door_h.tga
+		NormalMap				data/metalroomnew/textures/door_n.tga
+		DiffuseMap				data/metalroomnew/textures/door_c.tga
+		SpecularMap				data/metalroomnew/textures/door_s.tga
+	}
+}
+
+data/metalroomnew/textures/metalpipe_c
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		BumpMap					data/metalroomnew/textures/metalpipe_h.tga
+		NormalMap				data/metalroomnew/textures/metalpipe_n.tga
+		DiffuseMap				data/metalroomnew/textures/metalpipe_c.tga
+		SpecularMap				data/metalroomnew/textures/metalpipe_s.tga
+	}
+}
+
+data/metalroomnew/textures/glass01_c
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		DiffuseMap				data/metalroomnew/textures/glass01_c.tga
+		SpecularMap				data/metalroomnew/textures/glass01_s.tga
+	}
+}
+
+data/metalroomnew/textures/glass02_c
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		DiffuseMap				data/metalroomnew/textures/glass02_c.tga
+		SpecularMap				data/metalroomnew/textures/glass02_s.tga
+	}
+}
+
+data/metalroomnew/textures/floorplate01_c
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		BumpMap					data/metalroomnew/textures/floorplate01_h.tga
+		NormalMap				data/metalroomnew/textures/floorplate01_n.tga
+		DiffuseMap				data/metalroomnew/textures/floorplate01_c.tga
+		SpecularMap				data/metalroomnew/textures/floorplate01_s.tga
+	}
+}
+
+data/metalroomnew/textures/flatgrey_c
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		DiffuseMap				data/metalroomnew/textures/flatgrey_c.tga
+		SpecularMap				data/metalroomnew/textures/flatgrey_s.tga
+	}
+}
+
+data/metalroomnew/textures/box_c
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		EmissiveMap				data/metalroomnew/textures/box_e.tga
+		BumpMap					data/metalroomnew/textures/box_h.tga
+		NormalMap				data/metalroomnew/textures/box_n.tga
+		DiffuseMap				data/metalroomnew/textures/box_c.tga
+		SpecularMap				data/metalroomnew/textures/box_s.tga
+	}
+}
+
+/*
+data/metalroomnew/textures/test2
+{
+	NoCastShadow
+	NoReceiveShadow
+	{
+		Shader					blinn
+		NoReceiveShadow
+		NoCastShadow
+		LightSrcBlendAlpha		gl_one
+		AlphaTestRef			0.000000
+		VertexColorAdd			0.000000, 0.000000, 0.000000, 0.000000
+		UberTextureSet
+		{
+			AmbientMap				data/metalroomnew/textures/test2_a.utx
+			EmissiveMap				data/metalroomnew/textures/test2_e.utx
+			BumpMap					data/metalroomnew/textures/test2_h.utx
+			NormalMap				data/metalroomnew/textures/test2_n.utx
+			DiffuseMap				data/metalroomnew/textures/test2_c.utx
+			SpecularMap				data/metalroomnew/textures/test2_s.utx
+		}
+	}
+}
+
+*/

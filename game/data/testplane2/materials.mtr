@@ -1,0 +1,25 @@
+//----------------------------------------------------------
+// File:		materials.mtr
+// Author:		BootEdit DAE Importer (: Kevin Bray's proxy :)
+// Copyright (C) 2004 Bootstrap Games.  All rights reserved.
+//----------------------------------------------------------
+data/testplane2/textures/crackeddriedmud_c
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		BumpMap					data/testplane2/textures/crackeddriedmud_h.tga
+		NormalMap				data/testplane2/textures/crackeddriedmud_n.tga
+		DiffuseMap				data/testplane2/textures/crackeddriedmud_c.tga
+		SpecularMap				data/testplane2/textures/crackeddriedmud_s.tga
+	}
+}
+
+data/testplane2/textures/crackeddriedmud_c_uberized
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+	}
+}
+

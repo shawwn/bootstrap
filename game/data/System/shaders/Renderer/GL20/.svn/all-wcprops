@@ -1,0 +1,149 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/s_kevinb/codesafe/!svn/ver/369/Trunk/ProjectBX/Shaders/Renderer/GL20
+END
+DepthPeelAlpha.vsh
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/s_kevinb/codesafe/!svn/ver/279/Trunk/ProjectBX/Shaders/Renderer/GL20/DepthPeelAlpha.vsh
+END
+UberHash.fsh
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/s_kevinb/codesafe/!svn/ver/292/Trunk/ProjectBX/Shaders/Renderer/GL20/UberHash.fsh
+END
+Depth.fsh
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/s_kevinb/codesafe/!svn/ver/279/Trunk/ProjectBX/Shaders/Renderer/GL20/Depth.fsh
+END
+DepthMerge.vsh
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/s_kevinb/codesafe/!svn/ver/279/Trunk/ProjectBX/Shaders/Renderer/GL20/DepthMerge.vsh
+END
+VSM.fsh
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/s_kevinb/codesafe/!svn/ver/279/Trunk/ProjectBX/Shaders/Renderer/GL20/VSM.fsh
+END
+UberDownSample.vsh
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/s_kevinb/codesafe/!svn/ver/279/Trunk/ProjectBX/Shaders/Renderer/GL20/UberDownSample.vsh
+END
+Simple.vsh
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/s_kevinb/codesafe/!svn/ver/279/Trunk/ProjectBX/Shaders/Renderer/GL20/Simple.vsh
+END
+DepthPeel.fsh
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/s_kevinb/codesafe/!svn/ver/279/Trunk/ProjectBX/Shaders/Renderer/GL20/DepthPeel.fsh
+END
+VSMAlphaTest.fsh
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/s_kevinb/codesafe/!svn/ver/279/Trunk/ProjectBX/Shaders/Renderer/GL20/VSMAlphaTest.fsh
+END
+Uber.vsh
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/279/Trunk/ProjectBX/Shaders/Renderer/GL20/Uber.vsh
+END
+Ambient.fsh
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/s_kevinb/codesafe/!svn/ver/284/Trunk/ProjectBX/Shaders/Renderer/GL20/Ambient.fsh
+END
+Copy of Ambient.vsh
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/s_kevinb/codesafe/!svn/ver/279/Trunk/ProjectBX/Shaders/Renderer/GL20/Copy%20of%20Ambient.vsh
+END
+DepthPeelAlpha.fsh
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/s_kevinb/codesafe/!svn/ver/279/Trunk/ProjectBX/Shaders/Renderer/GL20/DepthPeelAlpha.fsh
+END
+UberHash.vsh
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/s_kevinb/codesafe/!svn/ver/292/Trunk/ProjectBX/Shaders/Renderer/GL20/UberHash.vsh
+END
+Depth.vsh
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/s_kevinb/codesafe/!svn/ver/279/Trunk/ProjectBX/Shaders/Renderer/GL20/Depth.vsh
+END
+DepthMerge.fsh
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/s_kevinb/codesafe/!svn/ver/279/Trunk/ProjectBX/Shaders/Renderer/GL20/DepthMerge.fsh
+END
+VSM.vsh
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/s_kevinb/codesafe/!svn/ver/279/Trunk/ProjectBX/Shaders/Renderer/GL20/VSM.vsh
+END
+UberDownSample.fsh
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/s_kevinb/codesafe/!svn/ver/305/Trunk/ProjectBX/Shaders/Renderer/GL20/UberDownSample.fsh
+END
+Simple.fsh
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/s_kevinb/codesafe/!svn/ver/279/Trunk/ProjectBX/Shaders/Renderer/GL20/Simple.fsh
+END
+DepthPeel.vsh
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/s_kevinb/codesafe/!svn/ver/279/Trunk/ProjectBX/Shaders/Renderer/GL20/DepthPeel.vsh
+END
+VSMAlphaTest.vsh
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/s_kevinb/codesafe/!svn/ver/279/Trunk/ProjectBX/Shaders/Renderer/GL20/VSMAlphaTest.vsh
+END
+Uber.fsh
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/279/Trunk/ProjectBX/Shaders/Renderer/GL20/Uber.fsh
+END
+Copy of Ambient.fsh
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/s_kevinb/codesafe/!svn/ver/279/Trunk/ProjectBX/Shaders/Renderer/GL20/Copy%20of%20Ambient.fsh
+END
+Ambient.vsh
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/s_kevinb/codesafe/!svn/ver/369/Trunk/ProjectBX/Shaders/Renderer/GL20/Ambient.vsh
+END

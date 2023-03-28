@@ -1,0 +1,21 @@
+metals/metal_tile
+{
+	Diffuse			"data/bot/textures/bot_c.tga"
+	Specular		"data/bot/textures/floorplate01_h.tga"
+	Mask			"data/metalroomnew/textures/circular_mask.tga"
+}
+
+metals/metal_bot
+{
+	Normal			"data/bot/textures/floorplate01_n.tga"
+	Diffuse			"data/bot/textures/floorplate01_c.tga"
+	Specular		"data/bot/textures/floorplate01_c.tga"
+}
+
+metals/metal_test
+{
+	Diffuse			"data/metalroomnew/textures/plate_e.tga"
+	Emissive		"data/metalroomnew/textures/plate_e.tga"
+	Mask			"data/metalroomnew/textures/circular_mask.tga"
+}
+

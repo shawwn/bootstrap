@@ -1,0 +1,121 @@
+8
+
+dir
+371
+https://secure.svnrepository.com/s_kevinb/codesafe/Trunk/ProjectBX/Shaders
+https://secure.svnrepository.com/s_kevinb/codesafe
+
+
+
+2008-10-16T04:37:28.560263Z
+369
+kbray
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+38bc38f1-ad32-0410-a363-b5f83eb29ce1
+
+Blinn.fsh
+file
+
+
+
+
+2008-08-13T00:14:19.546875Z
+d94e7835b8337d437ffa0b06b634a9a5
+2008-08-11T08:29:24.162533Z
+297
+kbray
+
+Blinn.vsh
+file
+
+
+
+
+2008-10-16T04:42:57.328125Z
+67a3082db3d73d976fc30d9aa4cd30d8
+2008-10-16T04:37:28.560263Z
+369
+kbray
+
+PostProcess
+dir
+
+Renderer
+dir
+
+Metal.gls
+file
+
+
+
+
+2008-07-29T00:25:56.140625Z
+9d172a352db72d09beaafbea115203e7
+2008-07-25T03:52:46.184803Z
+279
+kbray
+
+Glass_amb.fsh
+file
+
+
+
+
+2008-07-29T00:25:56.140625Z
+163faac649ed1c85efe97dbc269c6b23
+2008-07-25T03:52:46.184803Z
+279
+kbray
+
+Glass_amb.vsh
+file
+
+
+
+
+2008-10-16T04:42:57.703125Z
+454bed0384a90dcccc0384f2eb013c07
+2008-10-16T04:37:28.560263Z
+369
+kbray
+
+Glass.fsh
+file
+
+
+
+
+2008-08-13T00:14:19.578125Z
+6e635155aa38fb87bd14f29f25b9351a
+2008-08-11T08:36:22.805745Z
+298
+kbray
+
+Glass.vsh
+file
+
+
+
+
+2008-10-16T04:42:57.718750Z
+70590c0eb17d39c42578fb206f5544b0
+2008-10-16T04:37:28.560263Z
+369
+kbray
+
+HDR
+dir
+

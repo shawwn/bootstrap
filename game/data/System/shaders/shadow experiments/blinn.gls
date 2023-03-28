@@ -1,0 +1,359 @@
+//----------------------------------------------------------
+// File:		blinn.shd
+// Author:		Kevin Bray
+// Created:		02-07-06
+// Copyright © 2004 Bootstrap Games.  All rights reserved.
+//----------------------------------------------------------
+
+#ifndef __GLSL_CG_DATA_TYPES
+#define half float
+#define half4 vec4
+#define half3 vec3
+#define half2 vec2
+#endif
+
+// constants.
+const int kShadowSampleCount = 8;
+const float kShadowInvSampleCount = 1.0 / float( kShadowSampleCount );
+const vec3 kShadowJitterTexScale = vec3( 0.03125, 0.03125, 0.0 );
+const half kMaxShadowPCFWidth = 0.4;
+
+// vertex outputs.
+varying vec3 v_LocalEyeVec;
+varying vec3 v_LocalLightVec;
+varying vec4 v_ProjTexCoord;
+varying vec4 v_ShadowTexCoord;
+varying vec2 v_BumpTexCoord;
+varying vec2 v_NormalTexCoord;
+varying vec2 v_DiffuseTexCoord;
+varying vec2 v_SpecularTexCoord;
+
+// uniforms.
+uniform vec4 u_ViewPos;				// X,Y,Z,undef
+uniform vec4 u_LightPos;			// X,Y,Z,undef
+uniform vec4 u_LightDirOverride;	// X,Y,Z,[0=override;1=no override]
+uniform vec4 u_LightProjS;
+uniform vec4 u_LightProjT;
+uniform vec4 u_LightProjQ;
+uniform vec4 u_ShadowTexGenS;
+uniform vec4 u_ShadowTexGenT;
+uniform vec4 u_ShadowTexGenR;
+uniform vec4 u_ShadowTexGenQ;
+uniform vec4 u_BumpTexMatS;
+uniform vec4 u_BumpTexMatT;
+uniform vec4 u_NormalTexMatS;
+uniform vec4 u_NormalTexMatT;
+uniform vec4 u_DiffuseTexMatS;
+uniform vec4 u_DiffuseTexMatT;
+uniform vec4 u_SpecularTexMatS;
+uniform vec4 u_SpecularTexMatT;
+uniform vec4 u_LightColor;			// R,G,B,undef
+uniform vec4 u_LightRange;			// range, range, range, 1/range
+uniform vec4 u_LightAtten;			// squared atten, linear atten, 0, constant atten
+uniform vec4 u_LightWidth;			// width, width, 0, 0
+uniform vec4 u_LightHaze;			// haze, 1.0-haze, 0, 0
+uniform vec4 u_BumpMod;
+uniform vec4 u_BumpAdd;
+uniform vec4 u_DiffuseMod;
+uniform vec4 u_DiffuseAdd;
+uniform vec4 u_SpecularMod;
+uniform vec4 u_SpecularAdd;
+uniform vec4 u_ShadowNear;
+
+// samplers.
+uniform samplerCube s_NormalizeTexCube;
+uniform sampler3D s_NoiseTableTex3D;
+uniform sampler2D s_LightProjTex;
+uniform sampler2D s_LightShadowTex;
+uniform sampler2D s_BumpTex;
+uniform sampler2D s_NormalTex;
+uniform sampler2D s_DiffuseTex;
+uniform sampler2D s_SpecularTex;
+
+void vpMain()
+{
+	gl_Position = ftransform();
+
+	// calculate the eye vector.
+	vec3 localEyeVec = u_ViewPos.xyz - gl_Vertex.xyz;
+
+	// calculate the light vector.
+	vec3 localLightVec = u_LightPos.xyz - gl_Vertex.xyz;
+	localLightVec = u_LightDirOverride.w * localLightVec + u_LightDirOverride.xyz;
+
+	// transform the eye vector into tangent space.
+	v_LocalEyeVec.x = dot( localEyeVec, gl_MultiTexCoord2.xyz );
+	v_LocalEyeVec.y = dot( localEyeVec, gl_MultiTexCoord3.xyz );
+	v_LocalEyeVec.z = dot( localEyeVec, gl_Normal.xyz );
+
+	// transform the light vector into tangent space.
+	v_LocalLightVec.x = dot( localLightVec, gl_MultiTexCoord2.xyz );
+	v_LocalLightVec.y = dot( localLightVec, gl_MultiTexCoord3.xyz );
+	v_LocalLightVec.z = dot( localLightVec, gl_Normal.xyz );
+
+	// evaluate the projected texture texgens.
+	v_ProjTexCoord.x = dot( gl_Vertex, u_LightProjS );
+	v_ProjTexCoord.y = dot( gl_Vertex, u_LightProjT );
+	v_ProjTexCoord.z = 0.0;
+	v_ProjTexCoord.w = dot( gl_Vertex, u_LightProjQ );
+
+	// evaluate the shadow texture texgens.
+	v_ShadowTexCoord.x = dot( gl_Vertex, u_ShadowTexGenS );
+	v_ShadowTexCoord.y = dot( gl_Vertex, u_ShadowTexGenT );
+	v_ShadowTexCoord.z = dot( gl_Vertex, u_ShadowTexGenR );
+	v_ShadowTexCoord.w = dot( gl_Vertex, u_ShadowTexGenQ );
+	
+	// calculate the bump map lookup.
+	v_BumpTexCoord.x = dot( gl_MultiTexCoord0, u_BumpTexMatS );
+	v_BumpTexCoord.y = dot( gl_MultiTexCoord0, u_BumpTexMatT );
+
+	// calculate the normal map lookup.
+	v_NormalTexCoord.x = dot( gl_MultiTexCoord0, u_NormalTexMatS );
+	v_NormalTexCoord.y = dot( gl_MultiTexCoord0, u_NormalTexMatT );
+
+	// calculate the diffuse map lookup.
+	v_DiffuseTexCoord.x = dot( gl_MultiTexCoord0, u_DiffuseTexMatS );
+	v_DiffuseTexCoord.y = dot( gl_MultiTexCoord0, u_DiffuseTexMatT );
+
+	// calculate the specular map lookup.
+	v_SpecularTexCoord.x = dot( gl_MultiTexCoord0, u_SpecularTexMatS );
+	v_SpecularTexCoord.y = dot( gl_MultiTexCoord0, u_SpecularTexMatT );
+}
+
+void fpMain()
+{
+	//----------------------------------------------------
+	// normalize incoming vectors.
+	//----------------------------------------------------
+	// normalize the eye vector using a texture lookup.
+	half3 localEyeVec = 2.0 * textureCube( s_NormalizeTexCube, v_LocalEyeVec ).xyz - 1.0;
+
+	// normalize the light vector with math and calculate both it's length, and it's
+	// squared length.
+	half localLightDistSqr = dot( v_LocalLightVec, v_LocalLightVec );
+	half invLightDist = inversesqrt( localLightDistSqr );
+	half localLightDist = invLightDist * localLightDistSqr;
+	half3 localLightVec = invLightDist * v_LocalLightVec;
+
+//	half localLightDist = length( v_LocalLightVec );
+//	half3 localLightVec = normalize( v_LocalLightVec );
+
+	// calculate the half angle and normalize with math.
+	half3 localHalfVec = normalize( localLightVec + localEyeVec );
+
+	//----------------------------------------------------
+	// calculate attenuated light color as a combination of the light color and the
+	// projected texture lookup.  Then scale by the attenuation terms.
+	//----------------------------------------------------
+	half3 light = u_LightColor.rgb;
+	light *= texture2DProj( s_LightProjTex, v_ProjTexCoord ).rgb;
+	light = v_ProjTexCoord.w <= 0.0 ? vec3( 0.0, 0.0, 0.0 ) : light;
+
+	// calculate attenuation and scale the light color accordingly.
+	half linAtten = clamp( -localLightDist * u_LightRange.w + 1.0, 0.0, 1.0 );	// 1-(d/r)
+	light *= dot( vec4( linAtten * linAtten, linAtten, linAtten, 1.0 ), u_LightAtten );
+
+	//----------------------------------------------------
+	// Calculate the shadow PCF size.
+	//----------------------------------------------------
+#define _SHADOW_METHOD 2
+#if _SHADOW_METHOD == 0
+	half3 jitterSTQ = kShadowJitterTexScale * gl_FragCoord.xyz;
+	vec4 shadowFilterWidth = vec4( 0.01 ) * u_LightWidth;
+	half4 shadowTexCoord = v_ShadowTexCoord + vec4( -0.2, -0.2, 0.0, 0.0 );
+	half shadowEdge = v_ShadowTexCoord.z / v_ShadowTexCoord.w;
+	half blockerCount = 0.0;
+	half totalShadow = 0.0;
+	for ( int i = 0; i < kShadowSampleCount; ++i )
+	{
+		shadowTexCoord.xyz = 2.0 * texture3D( s_NoiseTableTex3D, jitterSTQ ).xyz - 1.0;
+		shadowTexCoord.w = 0.0;
+		shadowTexCoord = /*v_ShadowTexCoord.z / 100.0f */ kMaxShadowPCFWidth * shadowTexCoord + v_ShadowTexCoord;
+		half sample = texture2DProj( s_LightShadowTex, shadowTexCoord ).r;
+		if ( sample < shadowEdge )
+		{
+			// convert the depth value into a real world distance.
+			half lightBlockerDist = min( -u_ShadowNear.x / ( sample - 1.0f ), -10.0 );
+			half localBlockerDist = ( ( -v_ShadowTexCoord.z + 0.5 * u_ShadowNear.x ) - lightBlockerDist );
+			half pcfRatio = max( localBlockerDist / lightBlockerDist, 0.02 );
+			half shadowFilterWidth = min( pcfRatio * half4( 1.0, 1.0, 0.0, 0.0 ) * u_LightWidth, kMaxShadowPCFWidth );
+
+			// calculate the shadow for the current blocker.
+			half3 jitter2STQ = kShadowJitterTexScale * gl_FragCoord.xyz;
+			half blockerShadow = half( 0.0 );
+			for ( int j = 0; j < (kShadowSampleCount); ++j )
+			{
+				shadowTexCoord.xyz = 2.0 * texture3D( s_NoiseTableTex3D, jitter2STQ ).xyz - 1.0;
+				shadowTexCoord.w = 0.0;
+				shadowTexCoord = shadowFilterWidth * shadowTexCoord + v_ShadowTexCoord;
+				blockerShadow += step( shadowTexCoord.z / shadowTexCoord.w, texture2DProj( s_LightShadowTex, shadowTexCoord ).r );
+				jitter2STQ.z += kShadowInvSampleCount;
+			}
+			blockerShadow *= kShadowInvSampleCount;
+			totalShadow += blockerShadow;
+			blockerCount += 1.0;
+		}
+		jitterSTQ.z += kShadowInvSampleCount;
+	}
+
+	if ( blockerCount > 0.0 )
+	{
+		totalShadow /= blockerCount;
+		light *= totalShadow;
+	}
+#elif _SHADOW_METHOD == 1
+	half3 jitterSTQ = kShadowJitterTexScale * gl_FragCoord.xyz;
+	vec4 shadowFilterWidth = vec4( 0.01 ) * u_LightWidth;
+	half4 shadowTexCoord = v_ShadowTexCoord + vec4( -0.2, -0.2, 0.0, 0.0 );
+	half least = 0.99999;
+	for ( int i = 0; i < kShadowSampleCount/2; ++i )
+	{
+		shadowTexCoord.xyz = 2.0 * texture3D( s_NoiseTableTex3D, jitterSTQ ).xyz - 1.0;
+		shadowTexCoord.w = 0.0;
+		shadowTexCoord = /*v_ShadowTexCoord.z / 100.0f */ kMaxShadowPCFWidth * shadowTexCoord + v_ShadowTexCoord;
+		half sample = texture2DProj( s_LightShadowTex, shadowTexCoord ).r;
+		if ( sample < least )
+			least = sample;
+	}
+
+	least = clamp( least, 0.0, 0.99999 );
+
+	// convert the depth value into a real world distance.
+	half leastDist = min( -u_ShadowNear / ( least - 1.0f ), -10.0 );
+	half pcfRatio = max( ( ( -v_ShadowTexCoord.z + 0.5 * u_ShadowNear ) - leastDist ) / leastDist, 0.02 );
+	shadowFilterWidth = min( pcfRatio * half4( 1.0, 1.0, 0.0, 0.0 ) * u_LightWidth, kMaxShadowPCFWidth );
+
+	//----------------------------------------------------
+	// Calculate shadowing by performing the noise and shadow texture lookups.
+	//----------------------------------------------------
+	half shadow = half( 0.0 );	
+	for ( int i = 0; i < kShadowSampleCount; ++i )
+	{
+		shadowTexCoord.xyz = 2.0 * texture3D( s_NoiseTableTex3D, jitterSTQ ).xyz - 1.0;
+		shadowTexCoord = shadowFilterWidth * shadowTexCoord + v_ShadowTexCoord;
+		float shadowTap = step( shadowTexCoord.z / shadowTexCoord.w, texture2DProj( s_LightShadowTex, shadowTexCoord ).r );
+		shadow = kShadowInvSampleCount * shadowTap + shadow;
+		jitterSTQ.z += kShadowInvSampleCount;
+	}
+	light *= shadow;
+
+#elif _SHADOW_METHOD == 2
+//	half shadowEdge = v_ShadowTexCoord.z / v_ShadowTexCoord.w;
+//	half sample = texture2DProj( s_LightShadowTex, v_ShadowTexCoord ).r;
+//	half shadow = step( shadowEdge, sample );
+	half sample = 0.0;
+	half shadow = 1.0;
+
+//	if ( shadow < 0.1 )
+//	{
+		// calculate the z value for the fragment currently being shaded.  Note
+		// that this can be optimized by moving to the vertex shader.
+		vec3 localShadowPos;
+		localShadowPos.xy = 2.0 * v_ShadowTexCoord.xy - 15.0f;
+		localShadowPos.z = -v_ShadowTexCoord.z + 0.5 * u_ShadowNear.x;
+		localShadowPos.z *= -1.0;
+
+		// jitter.
+		half3 jitterSTQ = kShadowJitterTexScale * gl_FragCoord.xyz;
+
+		// do jittered shadow samples while we're not entirely in shadow.
+		bool set = false;
+		for ( int i = 0; i < kShadowSampleCount /*&& shadow > 0.001*/; ++i )
+		{
+			// calculate the jittered shadow sample.
+			half4 shadowTexCoord = v_ShadowTexCoord;
+			shadowTexCoord.xyz += kMaxShadowPCFWidth * ( 2.0 * texture3D( s_NoiseTableTex3D, jitterSTQ ).xyz - 1.0 );
+
+			// do a jittered sample from the shadow map.
+			sample = min( texture2DProj( s_LightShadowTex, shadowTexCoord ).r, 0.99 );
+
+			vec3 sampleShadowPos;
+			sampleShadowPos.xy = 2.0 * shadowTexCoord.xy - 15.0f;
+			sampleShadowPos.z = -u_ShadowNear.x / ( sample - 1.0f );
+			sampleShadowPos.z *= -1.0;
+
+			// if the current sample is in front of the current pixel, then we
+			// need to determine where (if at all) in it's penumbra the fragment
+			// being shadedg lies.
+//			if ( ( localShadowPos.z - sampleShadowPos.z ) > 0.5 )
+//			{
+				// now that we have a z-value, build a ray from the light to the
+				// sample.
+				vec3 sampleDir = normalize( sampleShadowPos );
+
+				// calculate the width of the penumbra at the location of the
+				// current fragment.
+				float penumbraWidth = max( 0.5 * u_LightWidth.x * ( localShadowPos.z - sampleShadowPos.z ) / sampleShadowPos.z, 0.1 );
+
+				// take the distance from the current point to the ray and
+				// calculate how illuminated we are by the light.
+				vec3 hyp = localShadowPos - sampleShadowPos;
+				float t = dot( sampleDir, hyp ) /* length( hyp )*/;
+				float dist = distance( t * sampleDir, hyp );
+				float curPenumbra = max( dist / penumbraWidth, 0.0 );
+//				if ( dist < 1.0 )
+//					set = true;
+
+				// do a shadow sample.
+				shadow = min( shadow, curPenumbra );
+//				shadow = max( shadow, dist );
+//				shadow = max( shadow, penumbraWidth );
+				set = true;
+//			}
+
+			// next jitter sample.
+			jitterSTQ.z += kShadowInvSampleCount;
+		}
+/*
+		if ( set )
+		{
+			light *= shadow;
+//			light = vec3( 0.0, 1.0, 0.0 );
+		}
+		else
+		{
+//			light *= shadow * vec3( 1.0, 0.0, 0.0 );
+			light *= vec3( 1.0, 0.0, 0.0 );
+		}
+*/
+	light *= shadow;
+//	}
+//	light *= shadow + vec3( 1.0, 0.0, 0.0 );
+	//	light *= mix( vec3( 1.0, 0.0, 0.0 ), vec3( 1.0, 1.0, 0.0 ), shadow );
+#endif
+
+	//----------------------------------------------------
+	// lookup the bump and normal values.
+	//----------------------------------------------------
+	half bump = texture2D( s_BumpTex, v_BumpTexCoord ).a;
+	bump = u_BumpMod.x * bump + u_BumpAdd.x;
+	half2 uvOffset = bump * localEyeVec.xy;
+	
+	half3 normal = 2.0 * texture2D( s_NormalTex, v_NormalTexCoord + uvOffset ).wyz - 1.0;
+	normal = normalize( normal );
+
+	//----------------------------------------------------
+	// Calculate the diffuse component.
+	//----------------------------------------------------
+	half4 diffuse = texture2D( s_DiffuseTex, v_DiffuseTexCoord + uvOffset );
+	diffuse = u_DiffuseMod * diffuse + u_DiffuseAdd;
+	diffuse *= clamp( dot( localLightVec, normal ), 0.0, 1.0 );
+	diffuse.xyz *= light;
+
+	//----------------------------------------------------
+	// Calculate the specular component.
+	//----------------------------------------------------
+	half specularDP = clamp( dot( localHalfVec, normal ), 0.0, 1.0 );
+	specularDP = clamp( 4.0 * specularDP - 3.0, 0.0, 1.0 );
+	specularDP = pow( specularDP, 20.0 );
+
+	half4 specular = texture2D( s_SpecularTex, v_SpecularTexCoord + uvOffset );
+	specular = u_SpecularMod * specular + u_SpecularAdd;
+	specular *= specularDP;
+	specular.xyz *= light;
+
+	light *= u_LightHaze.y;
+
+	// output the result.
+	gl_FragColor = u_LightHaze.y * vec4( diffuse.rgb + specular.rgb, diffuse.a ) + u_LightHaze.x * half4( light, 1.0 );
+}

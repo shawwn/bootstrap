@@ -1,0 +1,13 @@
+//----------------------------------------------------------
+// File:		Scene.sdf
+// Author:		Kevin Bray
+// Copyright © 2005 Bootstrap Games
+//----------------------------------------------------------
+
+data/bot
+{
+	BSPPath				data/bot/bsps/scene.bsp
+	ModelPath			data/bot/models/scene.mdl
+	GlobalAmbience		0.2, 0.2, 0.2, 1.0
+	UpAxis				Y
+}

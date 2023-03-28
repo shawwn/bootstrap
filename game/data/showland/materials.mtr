@@ -1,0 +1,180 @@
+//----------------------------------------------------------
+// File:		materials.mtr
+// Author:		BootEdit DAE Importer (: Kevin Bray's proxy :)
+// Copyright (C) 2004 Bootstrap Games.  All rights reserved.
+//----------------------------------------------------------
+data/showland/textures/check2048_01
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		UberTexture				data/showland/uber/uber01.utx
+	}
+}
+
+data/showland/textures/check2048_02
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		Diffuse
+		{
+			ColorMod				1.000000, 0.031250, 0.326416, 1.000000
+		}
+		UberTexture				data/showland/uber/uber02.utx
+	}
+}
+
+data/showland/textures/check2048_03
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		DiffuseMap				data/showland/textures/check2048_03.tga
+	}
+}
+
+data/showland/textures/check2048_04
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		DiffuseMap				data/showland/textures/check2048_04.tga
+	}
+}
+
+data/showland/textures/check2048_05
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		DiffuseMap				data/showland/textures/check2048_05.tga
+	}
+}
+
+data/showland/textures/check2048_06
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		DiffuseMap				data/showland/textures/check2048_06.tga
+	}
+}
+
+data/showland/textures/check2048_07
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		DiffuseMap				data/showland/textures/check2048_07.tga
+	}
+}
+
+data/showland/textures/check2048_08
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		DiffuseMap				data/showland/textures/check2048_08.tga
+	}
+}
+
+data/showland/textures/check2048_09
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		DiffuseMap				data/showland/textures/check2048_09.tga
+	}
+}
+
+data/showland/textures/check2048_10
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		DiffuseMap				data/showland/textures/check2048_10.tga
+	}
+}
+
+data/showland/textures/check2048_11
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		DiffuseMap				data/showland/textures/check2048_11.tga
+	}
+}
+
+data/showland/textures/check2048_12
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		DiffuseMap				data/showland/textures/check2048_12.tga
+	}
+}
+
+data/showland/textures/check2048_13
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		DiffuseMap				data/showland/textures/check2048_13.tga
+	}
+}
+
+data/showland/textures/check2048_14
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		DiffuseMap				data/showland/textures/check2048_14.tga
+	}
+}
+
+data/showland/textures/check2048_15
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		DiffuseMap				data/showland/textures/check2048_15.tga
+	}
+}
+
+data/showland/textures/check2048_16
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		DiffuseMap				data/showland/textures/check2048_16.tga
+	}
+}
+
+data/showland/textures/skyplaceholder
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		DiffuseMap				data/showland/textures/skyplaceholder.tga
+	}
+}
+
+data/showland/textures/grasssand_c
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		DiffuseMap				data/showland/textures/grasssand_c.tga
+	}
+}
+
+data/showland/textures/grasssandloewres_c
+{
+	{
+		Shader					blinn
+		MaxLightResponse		4.000000, 4.000000, 4.000000, 4.000000
+		DiffuseMap				data/showland/textures/grasssandloewres_c.tga
+	}
+}
+
